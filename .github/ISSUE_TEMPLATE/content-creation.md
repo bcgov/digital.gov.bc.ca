@@ -7,6 +7,14 @@ assignees: ''
 
 ---
 
+Target audience (_Who is this content for?_):
+
+Desired outcome (_What do we want this content to help the reader understand or do?_):
+
+#### Acceptance Criteria
+
+- Add any specific acceptance criteria here, or delete this heading.
+
 #### Definition of Done
 
 - [ ] Content template completed in Google Drive; link included 
