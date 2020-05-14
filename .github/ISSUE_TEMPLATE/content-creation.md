@@ -23,5 +23,5 @@ Desired outcome (_What do we want this content to help the reader understand or 
 
 #### Process
 
-* **Assignee** - After 1 and 2 of DOD are complete, move Issue to the 'For PO to Review' column
+* **Assignee** - In the Google Drive [Content folder](https://drive.google.com/drive/u/2/folders/1YezB6ZLpTqun9Gb8tSf3bU81vhB5MZtL), make a new document from the document called ****Content Writing Template**** (right click > Make a Copy). After 1 and 2 of DOD are complete, move Issue to the 'For PO to Review' column
 * **Product Owner** - If content is approved with no revisions necessary, move Issue to the 'Closed' column. If revision required, make comments in the Google Doc and move Issue back into the 'In Progress' column, and @tag the assignee.
