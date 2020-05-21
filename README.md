@@ -1,5 +1,5 @@
 # digital.gov.bc.ca
-Helping the digital government community deliver better digital services for the people and priorities of British Columbia.
+Learn how the Government of British Columbia is building teams and using modern technology to deliver better services.
 
 ## What is happening here?
 We are building the next version of [Digital.gov.bc.ca](https://digital.gov.bc.ca/) based on user research and in alignment with directives to support the BC Public Service to improve service delivery using digital methods and tools.
