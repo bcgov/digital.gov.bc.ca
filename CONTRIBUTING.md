@@ -12,24 +12,26 @@ All contributors retain the original copyright to their stuff, but by contributi
 
 ### Creating a Pull Request
 
-* Branch new features off the `develop` branch.
-* Naming convention based off the git issue number in Zenhub.  (i.e. Feature-78, Bug-44, Documentation-54, Order-66 )
-* Before pushing your new feature up to prod make sure to pull in the latest develop and fix any merge conflicts that might happen.
+- Branch new features off the `develop` branch.
+- Naming convention based off the git issue number in Zenhub.  (i.e. Feature-78, Bug-44, Documentation-54, Order-66 )
+- Before pushing your new feature up to prod make sure to pull in the latest develop and fix any merge conflicts that might happen.
 `git pull origin develop`
-* Push your branch up to github.
+- Push your branch up to github.
 `git push origin <branchname>`
-* open a pull request against develop and request a team member review it.
+- open a pull request against develop and request a team member review it.
 
 
 ### Merging your code into develop.
 
-* Github will not let you merge code that has not passed the following checks
-** The pipeline builds correctly (all unit tests pass)
-** Another developer has prefformed code review and you have implemented requested changes
-** Your branch is not behind develop in terms of commits.  If it is, pull the changes into your branch and resolve any merg conflicts.
-* Once these conditions are met Github will allow you to merge in your code.
-* After merge is complete besure to delete the feature branch so that it doesn't clutter the github site.
+- Github will not let you merge code that has not passed the following checks
+  - The pipeline builds correctly (all unit tests pass)
+
+  - Another developer has prefformed code review and you have implemented requested changes
+
+  -Your branch is not behind develop in terms of commits.  If it is, pull the changes into your branch and resolve any merg conflicts.
+- Once these conditions are met Github will allow you to merge in your code.
+- After merge is complete besure to delete the feature branch so that it doesn't clutter the github site.
 
 ### Deploying to test and prod
 
-* When we wish to deploy to test and prod, make a PR from develop -> master.
+- When we wish to deploy to test and prod, make a PR from develop -> master.
