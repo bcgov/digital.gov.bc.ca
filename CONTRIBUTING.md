@@ -26,12 +26,13 @@ All contributors retain the original copyright to their stuff, but by contributi
 - Github will not let you merge code that has not passed the following checks
   - The pipeline builds correctly (all unit tests pass)
 
-  - Another developer has prefformed code review and you have implemented requested changes
+  - Another developer has performed code review and you have implemented requested changes
 
-  - Your branch is not behind develop in terms of commits.  If it is, pull the changes into your branch and resolve any merg conflicts.
+  - Your branch is not behind develop in terms of commits.  If it is, pull the changes into your branch and resolve any merge conflicts.
 - Once these conditions are met Github will allow you to merge in your code.
 - After merge is complete besure to delete the feature branch so that it doesn't clutter the github site.
 
 ### Deploying to test and prod
 
 - When we wish to deploy to test and prod, make a PR from develop -> master.
+- Master will be updated on a regular basis by the repos admin.
