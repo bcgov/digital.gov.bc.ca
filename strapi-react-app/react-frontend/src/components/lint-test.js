@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 
 function LintTest() {
-    const constant = 50;
+    const constant = 5;
     return(
         <div className="LinterTest"></div> 
     )
