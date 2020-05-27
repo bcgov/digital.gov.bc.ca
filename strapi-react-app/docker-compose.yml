@@ -4,20 +4,20 @@ services:
   reactexample:
     container_name: frontend
     build: 
-      context: ./testreact
+      context: ./react-frontend
       dockerfile: Dockerfile
     networks:
       - strapi-app-network
     volumes:
-      - '.:/testreact/app'
-      - '/testreact/app/node_modules'
+      - '.:/react-frontend/app'
+      - '/react-frontend/app/node_modules'
     ports:
       - "3000:3000"
     tty: true
     
   strapiexample:
     image: strapi/strapi:3.0.0
-    container_name: strapiexample
+    container_name: strapi
     restart: unless-stopped
     env_file: .env
     environment:
@@ -38,7 +38,7 @@ services:
 
   mongoexample:
     image: mongo:3.6.18-xenial
-    container_name: mongoexample
+    container_name: mongo
     restart: unless-stopped
     env_file: .env
     environment:
