@@ -16,7 +16,7 @@ services:
     tty: true
     
   strapiexample:
-    image: strapi/strapi
+    image: strapi/strapi:3.0.0
     container_name: strapiexample
     restart: unless-stopped
     env_file: .env
@@ -37,7 +37,7 @@ services:
       - "1337:1337"
 
   mongoexample:
-    image: mongo
+    image: mongo:4.0.4
     container_name: mongoexample
     restart: unless-stopped
     env_file: .env
