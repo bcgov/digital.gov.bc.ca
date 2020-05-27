@@ -37,7 +37,7 @@ services:
       - "1337:1337"
 
   mongoexample:
-    image: mongo:4.0.4
+    image: mongo:3.6.18-xenial
     container_name: mongoexample
     restart: unless-stopped
     env_file: .env
