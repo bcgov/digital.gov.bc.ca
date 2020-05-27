@@ -33,14 +33,15 @@
   },
   "devDependencies": {
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.6"
+    "lint-staged": "^10.2.6",
+    "typescript": "^3.9.3"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "eslint . --fix", "git add"
+      "eslint . --fix"
     ],
     "src/**/*.scss": [
-      "stylelint --syntaxscss --fix", "git add"
+      "stylelint --syntaxscss --fix"
     ]
   },
   "husky": {
