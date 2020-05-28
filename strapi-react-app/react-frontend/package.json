@@ -28,7 +28,16 @@
       "semi": ["error", "always"],
       "no-cond-assign": ["error", "always"],
       "react/no-set-state": "off",
-      "sort-imports": "off"
+      "sort-imports": "off",
+      "func-style": "off",
+      "require-unicode-regexp": "off",
+      "max-len": "off",
+      "no-process-env": "off",
+      "no-console": "off",
+      "max-lines-per-function" : "off",
+      "no-eq-null": "off",
+      "no-magic-numbers": "off",
+      "no-mixed-operators": "off"
     }
   },
   "browserslist": {
@@ -50,7 +59,8 @@
   },
   "lint-staged": {
     "src/components/*.{js,jsx}": [
-      "eslint . --fix"
+      "eslint . --fix",
+      "prettier --check"
     ],
     "src/**/*.scss": [
       "stylelint --syntaxscss --fix"
