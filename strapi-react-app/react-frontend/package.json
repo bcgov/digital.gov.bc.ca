@@ -25,8 +25,14 @@
       "eslint:all"
     ],
     "rules": {
-      "semi": ["error", "always"],
-      "no-cond-assign": ["error", "always"],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-cond-assign": [
+        "error",
+        "always"
+      ],
       "react/no-set-state": "off",
       "sort-imports": "off",
       "func-style": "off",
@@ -34,7 +40,7 @@
       "max-len": "off",
       "no-process-env": "off",
       "no-console": "off",
-      "max-lines-per-function" : "off",
+      "max-lines-per-function": "off",
       "no-eq-null": "off",
       "no-magic-numbers": "off",
       "no-mixed-operators": "off"
@@ -55,6 +61,7 @@
   "devDependencies": {
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5",
     "typescript": "^3.9.3"
   },
   "lint-staged": {
