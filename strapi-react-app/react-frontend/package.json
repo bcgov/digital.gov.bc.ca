@@ -49,7 +49,7 @@
     "typescript": "^3.9.3"
   },
   "lint-staged": {
-    "components/*.{js,jsx}": [
+    "src/components/*.{js,jsx}": [
       "eslint . --fix"
     ],
     "src/**/*.scss": [
