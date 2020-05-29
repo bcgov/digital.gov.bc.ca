@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  digital.gov-frontend:
+  reactexample:
     container_name: frontend
     build: 
       context: ./react-frontend
@@ -9,13 +9,13 @@ services:
     networks:
       - strapi-app-network
     volumes:
-      - '.:/react-frontend/app'
-      - '/react-frontend/app/node_modules'
+      - './react-frontend:/react-frontend/app'
+      - './react-frontend/app/node_modules'
     ports:
       - "3000:3000"
     tty: true
     
-  digital.gov-strapi:
+  strapiexample:
     image: strapi/strapi:3.0.0
     container_name: strapi
     restart: unless-stopped
@@ -32,11 +32,11 @@ services:
     networks:
       - strapi-app-network
     volumes:
-      - ./strapi-app:/srv/strapi-app
+      - ./strapi-app:/srv/app
     ports:
       - "1337:1337"
 
-  digital.gov-mongo:
+  mongoexample:
     image: mongo:3.6.18-xenial
     container_name: mongo
     restart: unless-stopped
