@@ -62,12 +62,12 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "typescript": "^3.9.3"
   },
   "lint-staged": {
     "src/components/*.{js,jsx}": [
-      "eslint . --fix",
-      "prettier --check"
+      "eslint . --fix"
     ],
     "src/**/*.scss": [
       "stylelint --syntaxscss --fix"
@@ -75,7 +75,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": [
+        "lint-staged",
+        "pretty-quick --staged"
+      ]
     }
   }
 }
