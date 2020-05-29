@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function LintTest() {
-    var hi = 200;
-    return (
-        <div>Hello.</div>
-    )
+  return <div>Hello.</div>;
 }
+
+export default LintTest;

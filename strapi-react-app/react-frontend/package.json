@@ -66,8 +66,9 @@
     "typescript": "^3.9.3"
   },
   "lint-staged": {
-    "src/components/*.{js,jsx}": [
-      "eslint . --fix"
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix",
+      "prettier --write"
     ],
     "src/**/*.scss": [
       "stylelint --syntaxscss --fix"
@@ -76,8 +77,7 @@
   "husky": {
     "hooks": {
       "pre-commit": [
-        "lint-staged",
-        "pretty-quick --staged"
+        "lint-staged"
       ]
     }
   }
