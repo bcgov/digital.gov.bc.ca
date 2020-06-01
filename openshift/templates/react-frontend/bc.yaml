@@ -1,0 +1,147 @@
+kind: Template
+apiVersion: v1
+objects:
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    spec:
+      failedBuildsHistoryLimit: 5
+      nodeSelector: null
+      output:
+        to:
+          kind: ImageStreamTag
+          name: 'digital-gov-frontend:latest'
+      postCommit: {}
+      resources: {}
+      runPolicy: Serial
+      source:
+        contextDir: react-frontend
+        git:
+          ref: Feature-38/react-app-deploy
+          uri: 'https://github.com/bcgov/digital.gov.bc.ca'
+        type: Git
+      strategy:
+        sourceStrategy:
+          pullSecret: 
+            name: redhat-container-catalog-sa
+          from:
+            kind: ImageStreamTag
+            name: 'nodejs-12-rhel7:stable'
+        type: Source
+      successfulBuildsHistoryLimit: 5
+      triggers:
+        - type: ConfigChange
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewBuild
+      labels:
+        build: digital-gov-frontend
+      name: digital-gov-frontend
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    spec:
+      lookupPolicy:
+        local: false
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewBuild
+      generation: 1
+      labels:
+        build: digital-gov-frontend
+      name: digital-gov-frontend
+      apiVersion: image.openshift.io/v1
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    spec:
+      lookupPolicy:
+        local: false
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewBuild
+      generation: 1
+      labels:
+        build: digital-gov-frontend
+      name: digital-gov-frontend-static
+      apiVersion: image.openshift.io/v1
+  - kind: ImageStream
+    apiVersion: image.openshift.io/v1
+    metadata:
+      annotations:
+        openshift.io/image.dockerRepositoryCheck: 2020-05-28T21:57:10Z
+      creationTimestamp: 2020-05-28T21:57:10Z
+      generation: 2
+      labels:
+        build: digital-gov-frontend
+      name: nodejs-12-rhel7
+    spec:
+      lookupPolicy:
+        local: false
+      tags:
+      - annotations: null
+        from:
+          kind: DockerImage
+          name: registry.redhat.io/rhscl/nodejs-12-rhel7
+        # please note this required you to reference the rh-container-catalog sa
+        # this imagestream was created with an oc import-image command
+        generation: 1
+        importPolicy: {}
+        name: latest
+        referencePolicy:
+          type: Source
+      - annotations: null
+        from:
+          kind: ImageStreamImage
+          name: nodejs-12-rhel7@sha256:645f1dfcf7e07de4d8101fae60f0275c68fa09209706edd4c94197f236c014d2
+        generation: 2
+        importPolicy: {}
+        name: stable
+        referencePolicy:
+          type: Source
+  - apiVersion: v1
+    kind: BuildConfig
+    metadata:
+      creationTimestamp: null
+      labels:
+        build: digital-gov-frontend-static
+      name: digital-gov-frontend-static
+    spec:
+      runPolicy: SerialLatestOnly
+      nodeSelector: null
+      output:
+        to:
+          kind: ImageStreamTag
+          name: digital-gov-frontend-static:latest
+      postCommit: {}
+      resources:
+        requests:
+          cpu: 250m
+          memory: 500Mi
+        limits:
+          cpu: 400m
+          memory: 750Mi
+      source:
+        dockerfile: |-
+          FROM nodejs/build-output:latest
+          COPY html/* /var/www/html/
+        images:
+          - from:
+              kind: ImageStreamTag
+              name: digital-gov-frontend:latest
+            paths:
+              - destinationDir: html
+                sourcePath: /opt/app-root/src/public/
+        type: Dockerfile
+      strategy:
+        dockerStrategy:
+          from:
+            kind: ImageStreamTag
+            name: 'caddy:2.0.0'
+        type: Docker
+      triggers:
+      - imageChange:
+          from:
+            kind: ImageStreamTag
+            name: digital-gov-frontend:latest
+        type: ImageChange
+      - type: ConfigChange
+      - imageChange: {}
+        type: ImageChange

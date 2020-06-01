@@ -1,0 +1,97 @@
+kind: Template
+apiVersion: v1
+objects:
+  - apiVersion: apps.openshift.io/v1
+    kind: DeploymentConfig
+    spec:
+      replicas: 1
+      selector:
+        app: digital-gov-frontend-static
+        deploymentconfig: digital-gov-frontend-sta
+      strategy:
+        activeDeadlineSeconds: 21600
+        resources: {}
+        rollingParams:
+          intervalSeconds: 1
+          maxSurge: 25%
+          maxUnavailable: 25%
+          timeoutSeconds: 600
+          updatePeriodSeconds: 1
+        type: Rolling
+      template:
+        metadata:
+          annotations:
+            openshift.io/generated-by: OpenShiftWebConsole
+          creationTimestamp: null
+          labels:
+            app: digital-gov-frontend-static
+            deploymentconfig: digital-gov-frontend-sta
+        spec:
+          volumes:
+            - configMap:
+                name: caddyfile
+              name: caddyfile-volume
+          containers:
+            - image: >-
+                docker-registry.default.svc:5000/xdwiwd-tools/digital-gov-frontend-static@sha256:4c4b23f85a193ca6c66510dc5d1a95ac89873afe5df70d2bd22f89957ea57340
+              imagePullPolicy: Always
+              name: digital-gov-frontend-static
+              resources: {}
+              terminationMessagePath: /dev/termination-log
+              terminationMessagePolicy: File
+              volumeMounts:
+                - name: caddyfile-volume
+                   # as instructed from https://hub.docker.com/_/caddy?tab=description
+                  mountPath: /etc/caddy/Caddyfile
+                  readOnly: true
+                  subPath: Caddyfile
+          dnsPolicy: ClusterFirst
+          restartPolicy: Always
+          schedulerName: default-scheduler
+          securityContext: {}
+          terminationGracePeriodSeconds: 30
+      test: false
+      triggers:
+        - type: ConfigChange
+        - imageChangeParams:
+            automatic: true
+            containerNames:
+              - digital-gov-frontend-sta
+            from:
+              kind: ImageStreamTag
+              name: 'digital-gov-frontend-static:latest'
+              namespace: xdwiwd-tools
+            lastTriggeredImage: >-
+              docker-registry.default.svc:5000/xdwiwd-tools/digital-gov-frontend-static@sha256:4c4b23f85a193ca6c66510dc5d1a95ac89873afe5df70d2bd22f89957ea57340
+          type: ImageChange
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftWebConsole
+      generation: 6
+      labels:
+        app: digital-gov-frontend-static
+      name: digital-gov-frontend-static
+  - apiVersion: v1
+    data:
+      Caddyfile: |
+        :4000
+
+        # for app
+        root * /var/www/html
+
+        file_server 
+        encode gzip
+
+        log stdout
+        log stderr
+
+        header / {
+          # prevent any static html from being cached
+          Cache-Control "public, max-age=0, must-revalidate"
+        }
+    kind: ConfigMap
+    metadata:
+      labels:
+        build: digital-gov-frontend
+        app: digital-gov-frontend-static
+      name: caddyfile
