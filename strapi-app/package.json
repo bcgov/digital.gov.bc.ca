@@ -9,10 +9,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.6"
-  },
   "dependencies": {
     "strapi": "3.0.0-beta.20.3",
     "strapi-admin": "3.0.0-beta.20.3",
