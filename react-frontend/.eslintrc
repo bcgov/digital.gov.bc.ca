@@ -16,6 +16,10 @@
       "error",
       "always"
     ],
+    "prefer-double": [
+      "error",
+      "always"
+    ],
     "react/no-set-state": "off",
     "sort-imports": "off",
     "func-style": "off",
