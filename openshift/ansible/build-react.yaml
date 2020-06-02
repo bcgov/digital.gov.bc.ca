@@ -1,0 +1,17 @@
+---
+  - hosts: localhost
+    tasks:
+      - name: check pr exists and is open
+        uri:
+          url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
+          return_content: yes
+        register: pull_request
+
+      - fail: 
+          msg: PR {{ PR }} does not exist or is closed
+        when: "'closed' in pull_request.json.state"
+      
+      - name: create build tools name space using head/pulls/{{ PR }} as ref 
+        shell: >
+          oc process -f "../templates/react-frontend/bc.yaml" --param-file="../templates/react-frontend/build.param" -p GIT_REF="pull/{{ PR }}/head" -p  IMAGE_TAG="pr-{{ PR }}" | 
+          oc apply -n "{{ tools_namespace }}" -f -
