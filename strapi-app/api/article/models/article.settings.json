@@ -20,9 +20,9 @@
     "published_at": {
       "type": "date"
     },
-    "catagory": {
-      "model": "catagory",
-      "via": "articles"
+    "categories": {
+      "collection": "category",
+      "via": "article"
     }
   }
 }

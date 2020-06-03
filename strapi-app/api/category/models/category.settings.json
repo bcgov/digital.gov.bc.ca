@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "catagories",
+  "collectionName": "categories",
   "info": {
-    "name": "catagory"
+    "name": "category"
   },
   "options": {
     "increments": true,
@@ -12,9 +12,9 @@
     "name": {
       "type": "string"
     },
-    "articles": {
-      "via": "catagory",
-      "collection": "article"
+    "article": {
+      "via": "categories",
+      "model": "article"
     }
   }
 }
