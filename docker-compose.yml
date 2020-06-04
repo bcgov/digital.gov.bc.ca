@@ -6,9 +6,6 @@ services:
     build: 
       context: ./react-frontend
       dockerfile: Dockerfile
-    env_file: .env
-    environment:
-      STRAPI_BACKEND_URL: ${STRAPI_BACKEND_URL}
     networks:
       - strapi-app-network
     volumes:
