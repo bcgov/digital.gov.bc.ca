@@ -9,8 +9,8 @@ services:
     networks:
       - strapi-app-network
     volumes:
-      - './react-frontend:/react-frontend/app'
-      - './react-frontend/node_modules:/react-frontend/app/node_modules'
+      - './react-frontend:/app'
+      - './react-frontend/node_modules:/app/node_modules'
     ports:
       - "3000:3000"
     tty: true
