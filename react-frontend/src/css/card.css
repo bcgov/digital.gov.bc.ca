@@ -1,0 +1,18 @@
+.cardText {
+    text-align: left;
+}
+
+.cardTitle {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.cardDescription {
+    font-weight: normal;
+}
+
+.cardLink {
+    font-weight: bold;
+    bottom: 50px;
+    position: absolute;
+}
