@@ -6,6 +6,7 @@ import '../../css/card.css';
 function InfoCard(props) {
   return (
     <Card
+      className="cardBody"
       hoverable
       style={{ height: '575px' }}
       cover={<img className="cardImage" alt="example" src={props.img} />}

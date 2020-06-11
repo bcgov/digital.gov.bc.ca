@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import InfoCard from './infocard';
 import { Col, Row } from 'antd';
 import '../../css/home.css';
@@ -29,64 +29,144 @@ const linkTexts = [
   'Learn more',
 ];
 function CardList() {
-  return (
-    <div className="cardContainer">
-      <Row gutter={[0, 24]} justify={'space-around'}>
-        <Col span={11}>
-          <InfoCard
-            title={'Digital Framework'}
-            img={imgLinks[0]}
-            description={descriptions[0]}
-            linkText={linkTexts[0]}
-          />
-        </Col>
-        <Col span={11}>
-          <InfoCard
-            title={'Digital Principles'}
-            img={imgLinks[1]}
-            description={descriptions[1]}
-            linkText={linkTexts[1]}
-          />
-        </Col>
-      </Row>
-      <Row gutter={[0, 24]} justify={'space-around'}>
-        <Col span={11}>
-          <InfoCard
-            title={'Digital Policy'}
-            img={imgLinks[2]}
-            description={descriptions[2]}
-            linkText={linkTexts[2]}
-          />
-        </Col>
-        <Col span={11}>
-          <InfoCard
-            title={'Resources'}
-            img={imgLinks[3]}
-            description={descriptions[3]}
-            linkText={linkTexts[3]}
-          />
-        </Col>
-      </Row>
-      <Row gutter={[0, 24]} justify={'space-around'}>
-        <Col span={11}>
-          <InfoCard
-            title={'Community'}
-            img={imgLinks[4]}
-            description={descriptions[4]}
-            linkText={linkTexts[4]}
-          />
-        </Col>
-        <Col span={11}>
-          <InfoCard
-            title={'Case Studies'}
-            img={imgLinks[5]}
-            description={descriptions[5]}
-            linkText={linkTexts[5]}
-          />
-        </Col>
-      </Row>
-    </div>
-  );
+  const [isMobile, setMobile] = useState(window.innerWidth <= 800);
+
+  React.useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 800) {
+        setMobile(false);
+      } else {
+        setMobile(true);
+      }
+    }
+    window.addEventListener('resize', handleResize);
+  });
+
+  if (isMobile) {
+    return (
+      <div className="cardContainer">
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={24}>
+            <InfoCard
+              title={'Digital Framework'}
+              img={imgLinks[0]}
+              description={descriptions[0]}
+              linkText={linkTexts[0]}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={24}>
+            <InfoCard
+              title={'Digital Principles'}
+              img={imgLinks[1]}
+              description={descriptions[1]}
+              linkText={linkTexts[1]}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={24}>
+            <InfoCard
+              title={'Digital Policy'}
+              img={imgLinks[2]}
+              description={descriptions[2]}
+              linkText={linkTexts[2]}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={24}>
+            <InfoCard
+              title={'Resources'}
+              img={imgLinks[3]}
+              description={descriptions[3]}
+              linkText={linkTexts[3]}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={24}>
+            <InfoCard
+              title={'Community'}
+              img={imgLinks[4]}
+              description={descriptions[4]}
+              linkText={linkTexts[4]}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col span={24}>
+            <InfoCard
+              title={'Case Studies'}
+              img={imgLinks[5]}
+              description={descriptions[5]}
+              linkText={linkTexts[5]}
+            />
+          </Col>
+        </Row>
+      </div>
+    );
+  } else {
+    return (
+      <div className="cardContainer">
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={11}>
+            <InfoCard
+              title={'Digital Framework'}
+              img={imgLinks[0]}
+              description={descriptions[0]}
+              linkText={linkTexts[0]}
+            />
+          </Col>
+          <Col span={11}>
+            <InfoCard
+              title={'Digital Principles'}
+              img={imgLinks[1]}
+              description={descriptions[1]}
+              linkText={linkTexts[1]}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={11}>
+            <InfoCard
+              title={'Digital Policy'}
+              img={imgLinks[2]}
+              description={descriptions[2]}
+              linkText={linkTexts[2]}
+            />
+          </Col>
+          <Col span={11}>
+            <InfoCard
+              title={'Resources'}
+              img={imgLinks[3]}
+              description={descriptions[3]}
+              linkText={linkTexts[3]}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col span={11}>
+            <InfoCard
+              title={'Community'}
+              img={imgLinks[4]}
+              description={descriptions[4]}
+              linkText={linkTexts[4]}
+            />
+          </Col>
+          <Col span={11}>
+            <InfoCard
+              title={'Case Studies'}
+              img={imgLinks[5]}
+              description={descriptions[5]}
+              linkText={linkTexts[5]}
+            />
+          </Col>
+        </Row>
+      </div>
+    );
+  }
 }
 
 export default CardList;

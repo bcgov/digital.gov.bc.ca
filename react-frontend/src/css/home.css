@@ -52,3 +52,35 @@
 .cardImage {
     height: 330px;
 }
+
+@media only screen and (max-width: 800px) {
+    .homeHeader {
+        height: 530px;
+    }
+
+    .homeTitle {
+
+    }
+
+    .homeText {
+        width: 336px;
+        bottom: 0%;
+    }
+
+    .homeDescription {
+
+    }
+
+    .homeContainer {
+
+    }
+
+    .cardContainer {
+        width: 330px;
+        margin: auto;
+    }
+
+    .cardImage {
+
+    }
+}
