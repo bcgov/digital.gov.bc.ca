@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import InfoCard from './infocard';
-import { Col, Row } from 'antd';
+import { Col, Row, Grid } from 'react-flexbox-grid';
+
 import '../../css/home.css';
 
 const descriptions = [
@@ -29,24 +30,11 @@ const linkTexts = [
   'Learn more',
 ];
 function CardList() {
-  const [isMobile, setMobile] = useState(window.innerWidth <= 800);
-
-  React.useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth >= 800) {
-        setMobile(false);
-      } else {
-        setMobile(true);
-      }
-    }
-    window.addEventListener('resize', handleResize);
-  });
-
-  if (isMobile) {
-    return (
-      <div className="cardContainer">
+  return (
+    <div className="cardContainer">
+      <Grid>
         <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={24}>
+          <Col xs={12} sm={12} md={6} lg={6}>
             <InfoCard
               title={'Digital Framework'}
               img={imgLinks[0]}
@@ -54,9 +42,7 @@ function CardList() {
               linkText={linkTexts[0]}
             />
           </Col>
-        </Row>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={24}>
+          <Col xs={12} sm={12} md={6} lg={6}>
             <InfoCard
               title={'Digital Principles'}
               img={imgLinks[1]}
@@ -66,7 +52,7 @@ function CardList() {
           </Col>
         </Row>
         <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={24}>
+          <Col xs={12} sm={12} md={6} lg={6}>
             <InfoCard
               title={'Digital Policy'}
               img={imgLinks[2]}
@@ -74,9 +60,7 @@ function CardList() {
               linkText={linkTexts[2]}
             />
           </Col>
-        </Row>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={24}>
+          <Col xs={12} sm={12} md={6} lg={6}>
             <InfoCard
               title={'Resources'}
               img={imgLinks[3]}
@@ -86,7 +70,7 @@ function CardList() {
           </Col>
         </Row>
         <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={24}>
+          <Col xs={12} sm={12} md={6} lg={6}>
             <InfoCard
               title={'Community'}
               img={imgLinks[4]}
@@ -94,9 +78,7 @@ function CardList() {
               linkText={linkTexts[4]}
             />
           </Col>
-        </Row>
-        <Row>
-          <Col span={24}>
+          <Col xs={12} sm={12} md={6} lg={6}>
             <InfoCard
               title={'Case Studies'}
               img={imgLinks[5]}
@@ -105,68 +87,9 @@ function CardList() {
             />
           </Col>
         </Row>
-      </div>
-    );
-  } else {
-    return (
-      <div className="cardContainer">
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={11}>
-            <InfoCard
-              title={'Digital Framework'}
-              img={imgLinks[0]}
-              description={descriptions[0]}
-              linkText={linkTexts[0]}
-            />
-          </Col>
-          <Col span={11}>
-            <InfoCard
-              title={'Digital Principles'}
-              img={imgLinks[1]}
-              description={descriptions[1]}
-              linkText={linkTexts[1]}
-            />
-          </Col>
-        </Row>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={11}>
-            <InfoCard
-              title={'Digital Policy'}
-              img={imgLinks[2]}
-              description={descriptions[2]}
-              linkText={linkTexts[2]}
-            />
-          </Col>
-          <Col span={11}>
-            <InfoCard
-              title={'Resources'}
-              img={imgLinks[3]}
-              description={descriptions[3]}
-              linkText={linkTexts[3]}
-            />
-          </Col>
-        </Row>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col span={11}>
-            <InfoCard
-              title={'Community'}
-              img={imgLinks[4]}
-              description={descriptions[4]}
-              linkText={linkTexts[4]}
-            />
-          </Col>
-          <Col span={11}>
-            <InfoCard
-              title={'Case Studies'}
-              img={imgLinks[5]}
-              description={descriptions[5]}
-              linkText={linkTexts[5]}
-            />
-          </Col>
-        </Row>
-      </div>
-    );
-  }
+      </Grid>
+    </div>
+  );
 }
 
 export default CardList;

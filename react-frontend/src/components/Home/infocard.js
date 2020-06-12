@@ -4,22 +4,36 @@ import { Card } from 'antd';
 import '../../css/card.css';
 
 function InfoCard(props) {
-  return (
-    <Card
-      className="cardBody"
-      hoverable
-      style={{ height: '575px' }}
-      cover={<img className="cardImage" alt="example" src={props.img} />}
-    >
-      <div className="cardText">
-        <div className="cardTitle">{props.title}</div>
-        <div className="cardDescription">{props.description}</div>
-        <div className="cardLink">
-          <a>{props.linkText}</a>
+  if (props.img != null) {
+    return (
+      <Card
+        className="cardBody"
+        hoverable
+        style={{ height: '575px' }}
+        cover={<img className="cardImage" alt="example" src={props.img} />}
+      >
+        <div className="cardText">
+          <div className="cardTitle">{props.title}</div>
+          <div className="cardDescription">{props.description}</div>
+          <div className="cardLink">
+            <a href="/#">{props.linkText}</a>
+          </div>
         </div>
-      </div>
-    </Card>
-  );
+      </Card>
+    );
+  } else {
+    return (
+      <Card className="cardBody" hoverable style={{ height: '300px' }}>
+        <div className="cardText">
+          <div className="cardTitle">{props.title}</div>
+          <div className="cardDescription">{props.description}</div>
+          <div className="cardLink">
+            <a href="/#">{props.linkText}</a>
+          </div>
+        </div>
+      </Card>
+    );
+  }
 }
 
 export default InfoCard;
