@@ -17,10 +17,12 @@ WORKDIR /app
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
+# add bash to the image
+RUN apk add --no-cache bash
+
 RUN yarn install
 
-# add bash to the image
-# RUN apk add --no-cache bash
+
 
 # add app
 COPY . ./
