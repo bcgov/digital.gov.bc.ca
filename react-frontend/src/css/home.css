@@ -49,10 +49,6 @@
     margin: auto;
 }
 
-.cardImage {
-    height: 330px;
-}
-
 @media only screen and (max-width: 800px) {
     .homeHeader {
         height: 530px;
