@@ -4,12 +4,12 @@ import '../../css/pageheader.css';
 
 const HomeHeader = () => {
   return (
-    <div className="homeHeader">
-      <div className="homeText">
-        <div className="homeTitle">
+    <div className="pageHeader">
+      <div className="pageText">
+        <div className="pageTitle">
           <p>Digital Government</p>
         </div>
-        <div className="homeDescription">
+        <div className="pageDescription">
           <p>
             In this digital age, people expect fast and easy access to
             information and services.
