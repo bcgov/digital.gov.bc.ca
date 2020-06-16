@@ -15,7 +15,7 @@ function NavBar() {
               alt="Go to the Government of British Columbia website"
             />
           </a>
-          <h1 className="titleText">Hello British Columbia</h1>
+          <h1 className="titleText">Digital Government</h1>
         </div>
         <div class="other">
           <a class="nav-btn" href=".">
@@ -32,23 +32,17 @@ function NavBar() {
           <ul>
             <li>
               <a href="." class="active">
-                Link 1
+                Home
               </a>
             </li>
             <li>
-              <a href=".">Link 2</a>
+              <a href=".">Resources</a>
             </li>
             <li>
-              <a href=".">Link 3</a>
+              <a href=".">Products & Services</a>
             </li>
             <li>
-              <a href=".">Link 4</a>
-            </li>
-            <li>
-              <a href=".">Link 5</a>
-            </li>
-            <li>
-              <a href=".">Link 6</a>
+              <a href=".">Blog</a>
             </li>
           </ul>
         </div>
