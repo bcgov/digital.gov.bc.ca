@@ -9,7 +9,17 @@
           msg: Image Tag pr-{{ PR }} does not exist
         when: "'No resources found' in ist.stdout"
       
+      - name: create deploy param template temporarily
+        template:
+          src: ./templates/deploy.param.j2
+          dest: './templates/deploy.param'
+        vars:
+          IMAGE_TAG: 'pr-{{ PR }}'
       - name: deploy a dev instance of {{ PR }} in {{ dev_namespace }} namespace
         shell: >
-          oc process -f "../templates/react-frontend/dc.yaml" --param-file="../templates/react-frontend/deploy.param" -p IMAGE_TAG="pr-{{ PR }}" | 
+          oc process -f "../templates/react-frontend/dc.yaml" --param-file="./templates/deploy.param" -p IMAGE_TAG="pr-{{ PR }}" | 
           oc apply -n "{{ dev_namespace }}" -f -
+      - name: cleanup run (delete temp files)
+        file:
+          path: ./templates/deploy.param
+          state: absent
