@@ -17,6 +17,8 @@ WORKDIR /app
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
+COPY yarn.lock ./
+
 # add bash to the image
 RUN apk add --no-cache bash
 
