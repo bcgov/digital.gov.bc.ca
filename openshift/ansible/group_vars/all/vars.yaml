@@ -1,0 +1,8 @@
+---
+tools_namespace: xdwiwd-tools
+dev_namespace: xdwiwd-dev
+test_namespace: xdwiwd-test
+prod_namespace: xdwiwd-tools
+github_repo: digital.gov.bc.ca
+github_owner: bcgov
+dev_imagestream: digital-gov-frontend-dev
