@@ -18,4 +18,14 @@ Run a build against a PR
 
 ## Running Images
 
-`ansible-playbook ansible-deploy-react.yaml -e PR=<pr num>`
+`ansible-playbook ansible/deploy-react.yaml -e PR=<pr num>`
+
+## Promoting Images to Test or Production
+
+`ansible-playbook ansible/promote-environment.yaml -e ENV=test|prod -e IMAGE_TAG=<image tag>`
+
+If you deployed a PR, then the image tag will follow the pattern `pr-<pr num>`.
+
+If you want to see what image tags are available to promote you can run 
+
+`oc -n xdwidw-tools get imagestreamtag`
