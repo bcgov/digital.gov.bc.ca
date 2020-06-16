@@ -1,7 +1,7 @@
 .pageHeader {
     height: 600px;
     width: 100%;
-    background-image: url("https://images.squarespace-cdn.com/content/v1/515d020be4b0bca14d771121/1509248973895-EF4RRDSAMM3GMRW7BQ7F/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/robbthompson_2017-08-24_3096.jpg?format=2500w");
+    background-image: url(https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: lightblue;
@@ -27,7 +27,7 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    color: white;
+    color: black;
 
 }
 
