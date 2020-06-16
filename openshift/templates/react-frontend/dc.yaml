@@ -118,6 +118,9 @@ objects:
   - apiVersion: route.openshift.io/v1
     kind: Route
     spec:
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
       port:
         targetPort: 4000-4000
       to:
