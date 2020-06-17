@@ -35,7 +35,7 @@ function CardList() {
       <div className="cardGrid">
         <Grid>
           <Row gutter={[0, 24]} justify={'space-around'}>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Framework'}
                 img={imgLinks[0]}
@@ -43,7 +43,7 @@ function CardList() {
                 linkText={linkTexts[0]}
               />
             </Col>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Principles'}
                 img={imgLinks[1]}
@@ -53,7 +53,7 @@ function CardList() {
             </Col>
           </Row>
           <Row gutter={[0, 24]} justify={'space-around'}>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Policy'}
                 img={imgLinks[2]}
@@ -61,7 +61,7 @@ function CardList() {
                 linkText={linkTexts[2]}
               />
             </Col>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Resources'}
                 img={imgLinks[3]}
@@ -71,7 +71,7 @@ function CardList() {
             </Col>
           </Row>
           <Row gutter={[0, 24]} justify={'space-around'}>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Community'}
                 img={imgLinks[4]}
@@ -79,7 +79,7 @@ function CardList() {
                 linkText={linkTexts[4]}
               />
             </Col>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Case Studies'}
                 img={imgLinks[5]}
