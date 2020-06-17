@@ -1,0 +1,15 @@
+---  
+  - name: create deploy param template temporarily
+    template:
+      src: ./templates/deploy.param.j2
+      dest: './templates/deploy.param'
+    vars:
+      IMAGE_TAG: '{{ version }}'
+  - name: deploy {{ react_infra_name }} of {{ PR }} in {{ namespace }} namespace
+    shell: >
+      oc process -f "../templates/react-frontend/dc.yaml" --param-file="./templates/deploy.param" | 
+      oc apply -n "{{ namespace }}" -f -
+  - name: cleanup run (delete temp files)
+    file:
+      path: ./templates/deploy.param
+      state: absent
