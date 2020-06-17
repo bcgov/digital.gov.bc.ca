@@ -4,6 +4,9 @@
       version: "{{ lookup('template', './templates/pr_tag.j2') }}"
       deploy: yes
     tasks:
+      - name: Pre checks
+        include: ./tasks/check_pr_exists.yaml
+
       - name: Build React Project
         include: ./tasks/build_react.yaml
 
@@ -16,6 +19,6 @@
         when: deploy
 
       - name: deploying to {{ dev_namespace}}
-        include: ./tasks/deploy_react_to_dev.yaml
+        include: ./tasks/deploy_react.yaml
         when: deploy
 

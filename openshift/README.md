@@ -14,6 +14,8 @@ The workflow is a hybrid between Github and git flow. The ansible playbooks allo
 
 You can create builds from a PR by running `ansible-playbook ansible/build-react.yaml -e PR=<pr num>`.
 
+This will only build for __PRs that are open__. This is to prevent the inadvertent promotion of closed or erroneous PR's.
+
 By default this will also create a Deployment in the __dev namespace__. To __prevent automatic deployment__ run
 the playbook with `-e deploy=no`
 
@@ -34,3 +36,12 @@ If you want to see what image tags are available to promote you can run
 
 
 The promotion strategy is to retag an image from tools namespace and stick it into test or prod namespaces with the `test` or `prod` tags respectively
+
+## Rolling Back to a Stable PR
+
+> Warning!! This may not work if there have been stateful configuration changes to things like databases!
+
+As a bailout you can build and deploy a dev instance of a PR. This is essentially the `build-react` script
+minus the preflight checks
+
+run `ansible-playbook ansible/rollback-react.yaml -e PR=<>`
