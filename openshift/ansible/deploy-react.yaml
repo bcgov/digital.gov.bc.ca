@@ -1,12 +1,18 @@
 ---
   - hosts: localhost
+    vars:
+      IMAGE_TAG: "{{ lookup('template', './templates/pr_tag.j2') }}"
     tasks:
       - name: check pr exists in tools 
-        shell: oc -n {{ tools_namespace }} get imagestreamtag/{{ dev_imagestream }}:pr-{{ PR }}
+        shell: oc -n {{ tools_namespace }} get imagestreamtag/{{ dev_imagestream }}:{{ IMAGE_TAG }}
         register: ist
-
-      - fail: 
-          msg: Image Tag pr-{{ PR }} does not exist
+      
+      - debug: 
+          msg: 
+            - Image Tag {{ IMAGE_TAG }} does not exist in {{ tools_namespace }}. 
+            - This is because either you have not run ansible-playbook build-react.yaml -e PR={{ PR }}
+            - Or the buildconfig has been run but isn't complete
+            - OR the build failed
         when: "'No resources found' in ist.stdout"
       
       - name: create deploy param template temporarily
@@ -14,10 +20,10 @@
           src: ./templates/deploy.param.j2
           dest: './templates/deploy.param'
         vars:
-          IMAGE_TAG: 'pr-{{ PR }}'
+          IMAGE_TAG: '{{ IMAGE_TAG }}'
       - name: deploy a dev instance of {{ PR }} in {{ dev_namespace }} namespace
         shell: >
-          oc process -f "../templates/react-frontend/dc.yaml" --param-file="./templates/deploy.param" -p IMAGE_TAG="pr-{{ PR }}" | 
+          oc process -f "../templates/react-frontend/dc.yaml" --param-file="./templates/deploy.param" -p IMAGE_TAG="{{ IMAGE_TAG }}" | 
           oc apply -n "{{ dev_namespace }}" -f -
       - name: cleanup run (delete temp files)
         file:

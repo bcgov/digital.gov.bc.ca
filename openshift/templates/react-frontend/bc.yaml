@@ -7,9 +7,14 @@ objects:
       failedBuildsHistoryLimit: 5
       nodeSelector: null
       output:
+        imageLabels: 
+          - value: ${NAME}-${SUFFIX}
+            name: build
+          - value: ${PULL_REQUEST_NUMBER}
+            name: pr 
         to:
           kind: ImageStreamTag
-          name: '${NAME}${SUFFIX}:${IMAGE_TAG}'
+          name: '${NAME}:${IMAGE_TAG}'
       postCommit: {}
       resources: 
         requests:
@@ -18,7 +23,7 @@ objects:
         limits:
           memory: 850Mi
           cpu: 300m
-      runPolicy: Serial
+      runPolicy: SerialLatestOnly
       source:
         contextDir: react-frontend
         git:
@@ -42,8 +47,11 @@ objects:
       annotations:
         openshift.io/generated-by: OpenShiftNewBuild
       labels:
-        build: ${NAME}${SUFFIX}
-      name: ${NAME}${SUFFIX}
+        build: ${NAME}-${SUFFIX}
+        pr: ${PULL_REQUEST_NUMBER}
+        version: ${IMAGE_TAG}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
   - apiVersion: image.openshift.io/v1
     kind: ImageStream
     spec:
@@ -54,8 +62,9 @@ objects:
         openshift.io/generated-by: OpenShiftNewBuild
       generation: 1
       labels:
-        build: ${NAME}${SUFFIX}
-      name: ${NAME}${SUFFIX}
+        build: ${NAME}
+        group: ${NAME}
+      name: ${NAME}
       apiVersion: image.openshift.io/v1
 parameters:
 - name: IMAGE_TAG
@@ -63,6 +72,11 @@ parameters:
   required: true 
   description: The output image tag for the buildconfig
   displayName: Image tag
+- name: PULL_REQUEST_NUMBER
+  default: 0
+  required: false 
+  description: The pull request number associated with this object
+  displayName: Pull Request Number
 - name: GIT_REF
   required: true
   description: The git branch the buildconfig is based off of 
