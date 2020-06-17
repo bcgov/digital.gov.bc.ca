@@ -1,0 +1,30 @@
+---
+  - name: check pr exists and is open
+    uri:
+      url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
+      return_content: yes
+    register: pull_request
+
+  - fail: 
+      msg: PR {{ PR }} does not exist or is closed
+    when: "'closed' in pull_request.json.state"
+
+  - name: create build param template temporarily
+    template:
+      src: ./templates/build.param.j2
+      dest: './templates/build.param'
+    vars:
+      GIT_REF: 'pull/{{ PR }}/head'
+
+  - name: create build in tools namespace using head/pulls/{{ PR }} as ref 
+    shell: >
+      oc process -n "{{ tools_namespace }}" -f "../templates/react-frontend/bc.yaml" --param-file="./templates/build.param" | 
+      oc apply -n "{{ tools_namespace }}" -f -
+
+  - name: start build
+    shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }}
+
+  - name: cleanup run (delete temp files)
+    file:
+      path: ./templates/build.param
+      state: absent
