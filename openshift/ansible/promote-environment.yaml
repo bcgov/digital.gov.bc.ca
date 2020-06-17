@@ -6,7 +6,7 @@
       # in test and prod namespaces they only house one tag: prod | test
       new_imagetag: "{% if 'prod' in ENV %}{{ prod_image_tag }}{% elif 'test' in ENV %}{{ test_image_tag }}{% endif %}"
       suffix: "{{ ENV }}"
-      version: "{{ IMAGE_TAG }}"
+      version: "{{ new_imagetag }}"
       PR: null
       ## the deploy_react subtasks takes in a var for image namespace to create the deploy.param file
       ## in this playbook we want to pull images from the same namespace that it is being promoted too
