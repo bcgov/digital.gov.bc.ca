@@ -22,6 +22,9 @@ COPY yarn.lock ./
 # add bash to the image
 RUN apk add --no-cache bash
 
+# remove yarn proxy to enable package install
+RUN npm config rm proxy
+RUN npm config rm https-proxy
 RUN yarn install
 
 
