@@ -17,6 +17,9 @@ parameters:
     value: 'mongodb-backup'
   - name: MONGODB_ADMIN_PASSWORD
     description: 'MongoDB admin user''s password. Required.'
+  - name: MONGODB_IMAGE_TAG
+    description: Name of the MongoDB tag that should be used
+    value: "3.6"
 objects:
   - apiVersion: batch/v1beta1
     kind: CronJob
@@ -35,7 +38,7 @@ objects:
                     claimName: ${MONGODB_BACKUP_VOLUME_CLAIM}
               containers:
                 - name: mongodb-backup
-                  image: 'docker-registry.default.svc:5000/openshift/mongodb:latest'
+                  image: 'docker-registry.default.svc:5000/openshift/mongodb:{MONGODB_IMAGE_TAG}'
                   command:
                     - 'bash'
                     - '-c'
