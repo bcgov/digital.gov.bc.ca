@@ -3,6 +3,8 @@
     vars:
       version: "{{ lookup('template', './templates/pr_tag.j2') }}"
       deploy: yes
+      image_namespace: "{{ tools_namespace }}"
+      suffix: "{{ version }}"
     tasks:
       - name: Pre checks
         include: ./tasks/check_pr_exists.yaml
@@ -16,9 +18,11 @@
             - remember the deployment will hang until the build is complete you can monitor deployments/builds inside the console or
             - oc describe -n {{ tools_namespace }} bc/{{ react_infra_name }}-{{ version }}
             - oc describe -n {{ dev_namespace }} dc/{{ react_infra_name }}-{{ version }}
-        when: deploy
+        when: deploy is true
 
       - name: deploying to {{ dev_namespace}}
         include: ./tasks/deploy_react.yaml
-        when: deploy
+        when: deploy is true
+        vars:
+          namespace: "{{ dev_namespace }}"
 
