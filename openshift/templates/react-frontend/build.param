@@ -1,5 +1,0 @@
-IMAGE_TAG=dev
-GIT_REF=develop
-NAME=digital-gov-frontend
-SUFFIX=-dev
-GIT_REPO=https://github.com/bcgov/digital.gov.bc.ca

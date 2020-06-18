@@ -1,7 +1,7 @@
 Kind: Template
 apiVersion: v1
 metadata:
-  name: rocket-chat-mongodb
+  name: digital-gov-mongodb
   annotations:
     description: "MongoDB database running as replicate set"
     iconClass: "icon-nodejs"
@@ -63,7 +63,7 @@ parameters:
   - name: MONGODB_DATABASE
     displayName: "MongoDB Database Name"
     description: "Name of the MongoDB database accessed."
-    value: rocketdb
+    value: digitalgovdb
     required: true
 
   - name: MONGODB_ADMIN_PASSWORD

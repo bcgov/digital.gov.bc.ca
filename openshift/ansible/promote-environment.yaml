@@ -1,0 +1,36 @@
+---
+  - hosts: localhost
+    vars:
+      # decide what namespace to promote to based on the ENV variable
+      namespace: "{% if 'prod' in ENV %}{{ prod_namespace }}{% elif 'test' in ENV %}{{ test_namespace }}{% else %}invalid{% endif %}"
+      # in test and prod namespaces they only house one tag: prod | test
+      new_imagetag: "{% if 'prod' in ENV %}{{ prod_image_tag }}{% elif 'test' in ENV %}{{ test_image_tag }}{% endif %}"
+      suffix: "{{ ENV }}"
+      version: "{{ new_imagetag }}"
+      PR: null
+      ## the deploy_react subtasks takes in a var for image namespace to create the deploy.param file
+      ## in this playbook we want to pull images from the same namespace that it is being promoted too
+      image_namespace: "{{ namespace }}"
+    tasks:
+      - fail:
+          msg: "{{ ENV }} is not valid. Must be either 'prod' or 'test'"
+        when: namespace == 'invalid'
+        name: Check if namespace is valid
+
+      - name: check if imagetag exists in tools 
+        shell: oc -n {{ tools_namespace }} get imagestreamtag/{{ react_infra_name }}:{{ IMAGE_TAG }}
+        register: ist
+
+      - fail: 
+          msg: Image Tag {{ IMAGE TAG }} does not exist
+        when: "'No resources found' in ist.stdout"
+      
+      - name: Retag image to {{ namespace }}
+        shell: >
+          oc -n {{ namespace }} tag "{{ tools_namespace }}/{{ react_infra_name }}:{{ IMAGE_TAG }}" {{ react_infra_name }}:{{ new_imagetag }}
+
+      - name: Reconfiguring deployment config in environment {{ namespace }}
+        include: ./tasks/deploy_react.yaml
+
+    # TODO this task needs to sync up with github. We should not allow a PR to be promoted if it is out of sync with master
+    # in addition we should not allow multiple rollouts to test or prod at the same time

@@ -1,17 +1,28 @@
 ---
   - hosts: localhost
+    vars:
+      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      deploy: false
+      image_namespace: "{{ tools_namespace }}"
+      suffix: "{{ version }}"
     tasks:
-      - name: check pr exists and is open
-        uri:
-          url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
-          return_content: yes
-        register: pull_request
+      - name: Pre checks
+        include: ./tasks/check_pr_exists.yaml
 
-      - fail: 
-          msg: PR {{ PR }} does not exist or is closed
-        when: "'closed' in pull_request.json.state"
-      
-      - name: create build in tools namespace using head/pulls/{{ PR }} as ref 
-        shell: >
-          oc process -f "../templates/react-frontend/bc.yaml" --param-file="../templates/react-frontend/build.param" -p GIT_REF="pull/{{ PR }}/head" -p  IMAGE_TAG="pr-{{ PR }}" | 
-          oc apply -n "{{ tools_namespace }}" -f -
+      - name: Build React Project
+        include: ./tasks/build_react.yaml
+
+      - name: Deploying to dev
+        debug:
+          msg:
+            - remember the deployment will hang until the build is complete you can monitor deployments/builds inside the console or
+            - oc describe -n {{ tools_namespace }} bc/{{ react_infra_name }}-{{ version }}
+            - oc describe -n {{ dev_namespace }} dc/{{ react_infra_name }}-{{ version }}
+        when: deploy is true
+
+      - name: deploying to {{ dev_namespace}}
+        include: ./tasks/deploy_react.yaml
+        when: deploy is true
+        vars:
+          namespace: "{{ dev_namespace }}"
+

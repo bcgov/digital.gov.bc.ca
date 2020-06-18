@@ -22,3 +22,7 @@ strapidata
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+openshift/ansible/templates/build.param
+openshift/ansible/templates/deploy.param

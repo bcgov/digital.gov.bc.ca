@@ -6,8 +6,11 @@ objects:
     spec:
       replicas: 3
       selector:
-        app: ${NAME}${SUFFIX}
-        deploymentconfig: ${NAME}${SUFFIX}
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+        deploymentconfig: ${NAME}-${SUFFIX}
       strategy:
         activeDeadlineSeconds: 21600
         resources: {}
@@ -24,8 +27,11 @@ objects:
             openshift.io/generated-by: OpenShiftWebConsole
           creationTimestamp: null
           labels:
-            app: ${NAME}${SUFFIX}
-            deploymentconfig: ${NAME}${SUFFIX}
+            app: ${NAME}-${SUFFIX}
+            version: ${IMAGE_TAG}
+            pr: ${PULL_REQUEST_NUMBER}
+            group: ${NAME}
+            deploymentconfig: ${NAME}-${SUFFIX}
         spec:
           volumes:
             - configMap:
@@ -36,7 +42,7 @@ objects:
             - image: >-
                 ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: Always
-              name: ${NAME}${SUFFIX}
+              name: ${NAME}-${SUFFIX}
               resources: 
                 requests:
                   memory: ${MEMORY_REQUEST}
@@ -62,7 +68,7 @@ objects:
         - imageChangeParams:
             automatic: true
             containerNames:
-              - ${NAME}${SUFFIX}
+              - ${NAME}-${SUFFIX}
             from:
               kind: ImageStreamTag
               name: '${IMAGE_STREAM}:${IMAGE_TAG}'
@@ -73,8 +79,11 @@ objects:
         openshift.io/generated-by: OpenShiftWebConsole
       generation: 6
       labels:
-        app: ${NAME}${SUFFIX}
-      name: ${NAME}${SUFFIX}
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
   - apiVersion: v1
     data:
       Caddyfile: |
@@ -97,7 +106,10 @@ objects:
     metadata:
       labels:
         build: digital-gov-frontend
-        app: ${NAME}${SUFFIX}
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
       name: caddyfile
   - apiVersion: v1
     kind: Service
@@ -108,13 +120,19 @@ objects:
           protocol: TCP
           targetPort: 4000
       selector:
-        app: ${NAME}${SUFFIX}
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
       sessionAffinity: None
       type: ClusterIP
     metadata:
       labels:
-        app: ${NAME}${SUFFIX}
-      name: ${NAME}${SUFFIX}
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
   - apiVersion: route.openshift.io/v1
     kind: Route
     spec:
@@ -125,15 +143,18 @@ objects:
         targetPort: 4000-4000
       to:
         kind: Service
-        name: ${NAME}${SUFFIX}
+        name: ${NAME}-${SUFFIX}
         weight: 100
       wildcardPolicy: None
     metadata:
       annotations:
         openshift.io/host.generated: 'true'
       labels:
-        app: ${NAME}${SUFFIX}
-      name: ${NAME}${SUFFIX}
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
   
 parameters:
 - name: IMAGE_NAMESPACE
@@ -165,3 +186,8 @@ parameters:
   required: true
   description: a suffix used in conjunction with NAME to further isolate different instances of these components
   displayName: suffix
+- name: PULL_REQUEST_NUMBER
+  default: 0
+  required: false 
+  description: The pull request number associated with this object
+  displayName: Pull Request Number

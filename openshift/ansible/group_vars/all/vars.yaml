@@ -5,4 +5,7 @@ test_namespace: xdwiwd-test
 prod_namespace: xdwiwd-tools
 github_repo: digital.gov.bc.ca
 github_owner: bcgov
-dev_imagestream: digital-gov-frontend-dev
+react_infra_name: digital-gov-frontend
+dev_imagestream: digital-gov-frontend
+prod_image_tag: prod 
+test_image_tag: test 
