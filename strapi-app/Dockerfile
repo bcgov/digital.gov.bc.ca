@@ -16,7 +16,9 @@ WORKDIR /app
 
 # install app dependencies
 COPY package.json ./
-COPY package-lock.json ./
+
+
+# COPY package-lock.json ./
 
 # COPY yarn.lock ./
 
@@ -27,8 +29,8 @@ RUN apk add --no-cache bash
 # RUN npm config rm proxy
 # RUN npm config rm https-proxy
 # RUN cache clean
-RUN npm install
-# RUN yarn install --network-timeout=60000
+# RUN npm install
+RUN yarn install --network-timeout=600000
 
 
 
