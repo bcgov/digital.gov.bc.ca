@@ -2,7 +2,7 @@
   - hosts: localhost
     vars:
       version: "{{ lookup('template', './templates/pr_tag.j2') }}"
-      deploy: yes
+      deploy: false
       image_namespace: "{{ tools_namespace }}"
       suffix: "{{ version }}"
     tasks:
