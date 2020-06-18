@@ -23,9 +23,9 @@ COPY yarn.lock ./
 RUN apk add --no-cache bash
 
 # remove yarn proxy to enable package install
-# RUN npm config rm proxy
-# RUN npm config rm https-proxy
-RUN yarn install --network-timeout=30000
+RUN npm config rm proxy
+RUN npm config rm https-proxy
+RUN yarn install --network-timeout=60000
 
 
 
