@@ -1,13 +1,19 @@
 name: Deploy to dev
-on: [pull_request]
+on: [ pull_request]
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
-    - name: OpenShift Action
-      uses: redhat-developer/openshift-actions@v1.1
-      with: 
-        version: '3.11'
-        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
-      run: oc version
+    - name: check
+      run: echo $(pwd)
+    - name: install oc
+      run: |
+
+        curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
+        tar xvzf oc.tar.gz 
+        ls -l
+        sudo mv oc /usr/local/bin
+        rm oc.tar.gz
+        oc version
+    

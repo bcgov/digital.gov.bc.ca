@@ -1,0 +1,104 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  name: github-cicd-credentials
+objects:
+  - apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: ${NAME}
+      labels:
+        app: ${NAME}
+  - apiVersion: authorization.openshift.io/v1
+    kind: Role
+    metadata:
+      name: ${NAME}
+      labels:
+        app: ${NAME}
+    rules:
+      - apiGroups:
+          - apps.openshift.io 
+        resources:
+          - deploymentconfigs/instantiate
+        verbs:
+          - create
+      - apiGroups:
+          - apps.openshift.io 
+        resources:
+          - replicationcontrollers
+        verbs:
+          - create
+          - get
+          - list 
+      - apiGroups:
+          - build.openshift.io
+          - ""
+        resources:
+          - buildconfigs/instantiate
+        verbs:
+          - create
+      - apiGroups:
+          - build.openshift.io
+          - ""
+        resources:
+          - buildconfigs
+          - builds
+        verbs:
+          - create
+          - get
+          - list
+      - apiGroups:
+          - image.openshift.io
+          - ""
+        resources:
+          - imagestreamimages
+          - imagestreamtags
+        verbs:
+          - create
+          - get
+          - list
+      - apiGroups:
+          - image.openshift.io
+          - ""
+        resources:
+          - imagestreams
+        verbs:
+          - get
+          - list
+      - apiGroups:
+          - build.openshift.io
+          - ""
+        resources:
+          - builds/log
+        verbs:
+          - get
+          - list
+          - watch
+  - apiVersion: authorization.openshift.io/v1
+    kind: RoleBinding
+    metadata:
+      name: ${NAME}
+      labels:
+        app: ${NAME}
+    subjects:
+      - kind: ServiceAccount
+        name: ${NAME}
+    roleRef:
+      kind: Role
+      name: ${NAME}
+      namespace: ${NAMESPACE}
+      apiGroup: authorization.openshift.io
+parameters:
+  - displayName: Namespace
+    description: |
+      The namespace where all of components of the
+      credentials are stored.
+    name: NAMESPACE
+    required: true
+  - displayName: Credentials Name
+    description: |
+      The name used for all components of the 
+      credentials.
+    name: NAME
+    required: true
+    value: github-cicd
