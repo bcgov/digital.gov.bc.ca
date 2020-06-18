@@ -6,7 +6,8 @@
 
 
 # pull official base image
-FROM node:12.17.0-alpine
+FROM bucharestgold/centos7-s2i-nodejs
+# FROM node:12.17.0-alpine
 
 # set working directory
 WORKDIR /app
@@ -17,7 +18,7 @@ WORKDIR /app
 # install app dependencies
 COPY package.json ./
 # COPY package-lock.json ./
-# COPY yarn.lock ./
+COPY yarn.lock ./
 
 # add bash to the image
 RUN apk add --no-cache bash
