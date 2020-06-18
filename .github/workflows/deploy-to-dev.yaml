@@ -1,0 +1,13 @@
+name: Deploy to dev
+on: [pull_request]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: OpenShift Action
+      uses: redhat-developer/openshift-actions@v1.1
+      with: 
+        version: '3.11'
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+      run: oc version
