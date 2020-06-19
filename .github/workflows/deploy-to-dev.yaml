@@ -32,6 +32,6 @@ jobs:
         rm oc.tar.gz
         oc version
     - name: login to oc client
-      run: ansible-playbook openshift/ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
+      run: ansible-playbook ../../openshift/ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     # TODO include ansible build and deploy play books as well as the creation of a github deployment on success
     
