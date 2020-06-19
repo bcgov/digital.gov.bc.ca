@@ -19,11 +19,11 @@
             - remember the deployment will hang until the build is complete you can monitor deployments/builds inside the console or
             - oc describe -n {{ tools_namespace }} bc/{{ react_infra_name }}-{{ version }}
             - oc describe -n {{ dev_namespace }} dc/{{ react_infra_name }}-{{ version }}
-        when: deploy is true
+        when: deploy
 
       - name: deploying to {{ dev_namespace}}
         include: ./tasks/deploy_react.yaml
-        when: deploy is true
+        when: deploy
         vars:
           namespace: "{{ dev_namespace }}"
 
