@@ -8,8 +8,10 @@ jobs:
     - name: check
       run: echo $(pwd)
     - name: install oc
+      # manually installing oc, i've opened up an issue with  github actions to include this since they
+      # already have kubectl https://github.com/actions/virtual-environments/issues/1083
       run: |
-
+        
         curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
         tar xvzf oc.tar.gz 
         ls -l
