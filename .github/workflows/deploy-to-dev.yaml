@@ -1,5 +1,8 @@
-name: Deploy to dev
-on: [ pull_request]
+name: Deploy React To Dev
+on: 
+  pull_request:
+    paths:
+      - 'react-frontend'
 jobs:
   run:
     runs-on: ubuntu-18.04
