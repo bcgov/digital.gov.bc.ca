@@ -53,3 +53,10 @@ The technology is __Github Actions__, __Github Apps__, __Ansible__, and of cours
   - if the PR was closed and it was __not deployed into production__
      - delete the dev instance of the app in the dev namespace
     - delete the build config of the app in tools namespace
+
+
+## Service Account Roles
+
+The service account that is responsible for building and deploying has __very specific__ roles for each
+namespace, this provides it with the minimum amount of access it needs to do its work. The template `cicd.yaml` provides
+insight into what `Role` is created for each namespace.
