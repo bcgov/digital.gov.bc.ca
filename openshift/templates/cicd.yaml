@@ -205,6 +205,24 @@ objects:
       name: ${NAME}-builder
       namespace: ${TOOLS_NAMESPACE}
       apiGroup: authorization.openshift.io
+    # dev deployer rolebinding
+  - apiVersion: authorization.openshift.io/v1
+    kind: RoleBinding
+    metadata:
+      name: ${NAME}-deployer-dev
+      labels:
+        app: ${NAME}
+      namespace: ${DEV_NAMESPACE}
+    subjects:
+      - kind: ServiceAccount
+        name: ${NAME}
+        namespace: ${TOOLS_NAMESPACE}
+    roleRef:
+      kind: Role
+      name: ${NAME}-deployer-dev
+      namespace: ${DEV_NAMESPACE}
+      apiGroup: authorization.openshift.io
+
 parameters:
   - displayName: Tools Namespace
     description: |
