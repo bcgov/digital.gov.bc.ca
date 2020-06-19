@@ -17,19 +17,18 @@ objects:
         app: ${NAME}
     rules:
       - apiGroups:
-          - apps.openshift.io 
+          - template.openshift.io 
         resources:
-          - deploymentconfigs/instantiate
+          - processedtemplates
         verbs:
           - create
       - apiGroups:
           - apps.openshift.io 
         resources:
-          - replicationcontrollers
+          - deploymentconfigs/instantiate
         verbs:
           - create
-          - get
-          - list 
+   
       - apiGroups:
           - build.openshift.io
           - ""
@@ -37,6 +36,7 @@ objects:
           - buildconfigs/instantiate
         verbs:
           - create
+   
       - apiGroups:
           - build.openshift.io
           - ""
@@ -65,6 +65,7 @@ objects:
         verbs:
           - get
           - list
+          - patch
       - apiGroups:
           - build.openshift.io
           - ""

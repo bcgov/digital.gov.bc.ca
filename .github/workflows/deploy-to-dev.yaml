@@ -16,4 +16,3 @@ jobs:
         sudo mv oc /usr/local/bin
         rm oc.tar.gz
         oc version
-    

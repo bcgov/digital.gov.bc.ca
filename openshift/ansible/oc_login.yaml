@@ -1,0 +1,5 @@
+---
+  - hosts: localhost
+    tasks:
+      - name: login to oc
+        shell: oc login {{ OPENSHIFT_SERVER_URL }} --token={{ SA_ACCOUNT_TOKEN }}
