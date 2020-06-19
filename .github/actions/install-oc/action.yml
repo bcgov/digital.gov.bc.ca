@@ -1,6 +1,0 @@
-# action.yml
-name: 'Install OC'
-description: 'Installs oc 3.11'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
