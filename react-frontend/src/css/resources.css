@@ -1,3 +1,6 @@
+.resourceContainer {
+    padding-top: 100px;
+}
 .resourceHeader {
     height: 600px;
     width: 100%;
@@ -102,7 +105,12 @@
     margin: auto;
 }
 
-@media only screen and (max-width: 990px) {
+.guidesImg {
+    height: 300px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
 
     .digitalCards {
         width: 330px;
@@ -140,6 +148,14 @@
 
     .resourceInfo {
         margin-left: -7px;
+    }
+
+    .resourceContainer {
+        padding-top: 65px;
+    }
+
+    .guidesImg {
+        width: 330px;
     }
 
 }

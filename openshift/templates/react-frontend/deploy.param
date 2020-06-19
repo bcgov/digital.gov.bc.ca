@@ -1,0 +1,5 @@
+NAME=digital-gov-frontend
+IMAGE_NAMESPACE=xdwiwd-tools
+IMAGE_STREAM=digital-gov-frontend-dev
+IMAGE_TAG=dev
+SUFFIX=-dev

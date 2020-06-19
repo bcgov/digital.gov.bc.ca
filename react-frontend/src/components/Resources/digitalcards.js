@@ -10,9 +10,9 @@ const descriptions = [
 ];
 
 const imgLinks = [
-  'https://emasuvajac.com/wp-content/uploads/2017/06/DSC_2210a.jpg',
-  'https://theculturetrip.com/wp-content/uploads/2017/01/garibaldi-lake.jpg',
-  'https://www.naturallywood.com/sites/default/files/styles/inside_banner/public/coastalforest_04_0.jpg?itok=uF5QgK-Q',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
 ];
 const linkTexts = [
   'Read the framework',

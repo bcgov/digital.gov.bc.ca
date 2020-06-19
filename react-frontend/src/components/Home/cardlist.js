@@ -14,12 +14,12 @@ const descriptions = [
 ];
 
 const imgLinks = [
-  'https://emasuvajac.com/wp-content/uploads/2017/06/DSC_2210a.jpg',
-  'https://theculturetrip.com/wp-content/uploads/2017/01/garibaldi-lake.jpg',
-  'https://www.naturallywood.com/sites/default/files/styles/inside_banner/public/coastalforest_04_0.jpg?itok=uF5QgK-Q',
-  'https://upload.wikimedia.org/wikipedia/commons/6/67/Vancouver%2C_BC%2C_Canada_landscape.jpg',
-  'https://i.cbc.ca/1.4486747.1515895578!/fileImage/httpImage/coastal-douglas-fir-ecosystem-southern-vancouver-island.jpg',
-  'https://upload.wikimedia.org/wikipedia/commons/5/5f/Howesound.JPG',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
+  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
 ];
 const linkTexts = [
   'Read the framework',
@@ -32,62 +32,64 @@ const linkTexts = [
 function CardList() {
   return (
     <div className="cardContainer">
-      <Grid>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <InfoCard
-              title={'Digital Framework'}
-              img={imgLinks[0]}
-              description={descriptions[0]}
-              linkText={linkTexts[0]}
-            />
-          </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <InfoCard
-              title={'Digital Principles'}
-              img={imgLinks[1]}
-              description={descriptions[1]}
-              linkText={linkTexts[1]}
-            />
-          </Col>
-        </Row>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <InfoCard
-              title={'Digital Policy'}
-              img={imgLinks[2]}
-              description={descriptions[2]}
-              linkText={linkTexts[2]}
-            />
-          </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <InfoCard
-              title={'Resources'}
-              img={imgLinks[3]}
-              description={descriptions[3]}
-              linkText={linkTexts[3]}
-            />
-          </Col>
-        </Row>
-        <Row gutter={[0, 24]} justify={'space-around'}>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <InfoCard
-              title={'Community'}
-              img={imgLinks[4]}
-              description={descriptions[4]}
-              linkText={linkTexts[4]}
-            />
-          </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <InfoCard
-              title={'Case Studies'}
-              img={imgLinks[5]}
-              description={descriptions[5]}
-              linkText={linkTexts[5]}
-            />
-          </Col>
-        </Row>
-      </Grid>
+      <div className="cardGrid">
+        <Grid>
+          <Row gutter={[0, 24]} justify={'space-around'}>
+            <Col sm={12} md={6}>
+              <InfoCard
+                title={'Digital Framework'}
+                img={imgLinks[0]}
+                description={descriptions[0]}
+                linkText={linkTexts[0]}
+              />
+            </Col>
+            <Col sm={12} md={6}>
+              <InfoCard
+                title={'Digital Principles'}
+                img={imgLinks[1]}
+                description={descriptions[1]}
+                linkText={linkTexts[1]}
+              />
+            </Col>
+          </Row>
+          <Row gutter={[0, 24]} justify={'space-around'}>
+            <Col sm={12} md={6}>
+              <InfoCard
+                title={'Digital Policy'}
+                img={imgLinks[2]}
+                description={descriptions[2]}
+                linkText={linkTexts[2]}
+              />
+            </Col>
+            <Col sm={12} md={6}>
+              <InfoCard
+                title={'Resources'}
+                img={imgLinks[3]}
+                description={descriptions[3]}
+                linkText={linkTexts[3]}
+              />
+            </Col>
+          </Row>
+          <Row gutter={[0, 24]} justify={'space-around'}>
+            <Col sm={12} md={6}>
+              <InfoCard
+                title={'Community'}
+                img={imgLinks[4]}
+                description={descriptions[4]}
+                linkText={linkTexts[4]}
+              />
+            </Col>
+            <Col sm={12} md={6}>
+              <InfoCard
+                title={'Case Studies'}
+                img={imgLinks[5]}
+                description={descriptions[5]}
+                linkText={linkTexts[5]}
+              />
+            </Col>
+          </Row>
+        </Grid>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeHeader from './homeheader';
 import CardList from './cardlist';
+import '../../css/home.css';
 
 function Home() {
   return (

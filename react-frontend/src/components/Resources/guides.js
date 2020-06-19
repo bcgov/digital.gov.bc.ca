@@ -10,7 +10,16 @@ function Guides() {
       <div className="resourceInfo">
         <Grid>
           <Row>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
+              <div className="guidesInfo">
+                <img
+                  className="guidesImg"
+                  src="https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg"
+                  alt="example"
+                />
+              </div>
+            </Col>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'Video Communication Platforms'}
                 description={
@@ -18,13 +27,6 @@ function Guides() {
                 }
                 linkText={'More'}
               />
-            </Col>
-            <Col xs={12} sm={12} md={6} lg={6}>
-              <div className="guidesInfo">
-                <div className="resourceLink">
-                  <a href="/#">Social Media Guidelines</a>
-                </div>
-              </div>
             </Col>
           </Row>
         </Grid>
