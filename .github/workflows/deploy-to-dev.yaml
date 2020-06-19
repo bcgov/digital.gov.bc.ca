@@ -8,8 +8,14 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
-    - name: check
-      run: echo $(pwd)
+    - name: Store PR Num in env
+      uses: actions/github-script@0.3.0
+      with:
+        github-token: ${{github.token}}
+        script: |
+          const core = require('@actions/core')
+          const prNumber = context.payload.number;
+          core.exportVariable('PULL_NUMBER', prNumber);
     - name: install oc
       # manually installing oc, i've opened up an issue with  github actions to include this since they
       # already have kubectl https://github.com/actions/virtual-environments/issues/1083
@@ -21,4 +27,7 @@ jobs:
         sudo mv oc /usr/local/bin
         rm oc.tar.gz
         oc version
+    - name: login to oc client
+      run: ansible-playbook openshift/ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     # TODO include ansible build and deploy play books as well as the creation of a github deployment on success
+    

@@ -2,4 +2,5 @@
   - hosts: localhost
     tasks:
       - name: login to oc
-        shell: oc login {{ OPENSHIFT_SERVER_URL }} --token={{ SA_ACCOUNT_TOKEN }}
+        shell: oc login {{ OPENSHIFT_SERVER_URL }} --token={{ CICD_SA_ACCOUNT_TOKEN }}
+        
