@@ -13,7 +13,8 @@
     vars:
       GIT_REF: 'pull/{{ PR }}/head'
       build_params: "{{ lookup('template', './templates/build.param.j2') }}"
-
+  - name: cancel any existing builds
+    shell: oc n "{{ tools_namespace }}" cancel-build bc/{{ react_infra_name }}-{{ version }}
   - name: start build
     shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }}
 
