@@ -16,3 +16,4 @@ jobs:
         sudo mv oc /usr/local/bin
         rm oc.tar.gz
         oc version
+    # TODO include ansible build and deploy play books as well as the creation of a github deployment on success
