@@ -1,5 +1,6 @@
 ---
   - hosts: localhost
+    gather_facts: no
     vars:
       version: "{{ lookup('template', './templates/pr_tag.j2') }}"
       deploy: false

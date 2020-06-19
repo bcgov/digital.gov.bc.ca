@@ -38,7 +38,14 @@ objects:
           - buildconfigs/instantiate
         verbs:
           - create
-   
+      - apiGroups:
+          - build.openshift.io
+          - ""
+        resources:
+          - buildconfigs
+        verbs:
+          - patch
+    
       - apiGroups:
           - build.openshift.io
           - ""
