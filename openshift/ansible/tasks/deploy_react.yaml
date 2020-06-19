@@ -1,8 +1,11 @@
 ---  
-  - name: deploy {{ react_infra_name }} of {{ PR }} in {{ namespace }} namespace
+  - name: deploy {{ react_infra_name }} of PR {{ PR }} in {{ namespace }} namespace
     shell: >
       oc process -n "{{ namespace }}" -f "../templates/react-frontend/dc.yaml" {{ deploy_params }} | 
       oc apply -n "{{ namespace }}" -f -
     vars:
       IMAGE_TAG: '{{ version }}'
       deploy_params: "{{ lookup('template', './templates/deploy.param.j2') }}"
+  - name: Rolling Out
+    shell: oc rollout latest -n {{ namespace }}-{{ version }} 
+      
