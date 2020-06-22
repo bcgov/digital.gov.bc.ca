@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../../css/nav.css';
 import { Link, useLocation, useHistory } from 'react-router-dom';
-import '../../font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
   const history = useHistory();
@@ -58,7 +59,7 @@ function NavBar() {
         </div>
         <div className="other">
           <div className="nav-btn" onClick={toggleMenu} href=".">
-            <i className="fa fa-bars" id="menu"></i>
+            <FontAwesomeIcon icon={faBars} />
           </div>
           {/* <!-- 
                 This place is for anything that needs to be right aligned

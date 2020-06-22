@@ -9,7 +9,7 @@ function ForDevelopers() {
       <div className="resourceInfo">
         <Grid>
           <Row>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'BCGov on Github'}
                 description={
@@ -18,7 +18,7 @@ function ForDevelopers() {
                 linkText={'Explore'}
               />
             </Col>
-            <Col xs={12} sm={12} md={6} lg={6}>
+            <Col sm={12} md={6}>
               <InfoCard
                 title={'DevHub'}
                 description={

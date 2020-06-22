@@ -9,7 +9,7 @@ function Standards() {
       <div className="resourceInfo">
         <Grid>
           <Row>
-            <Col xs={12} sm={12} md={12} lg={4}>
+            <Col md={12} lg={4}>
               <div className="standardInfo">
                 <div className="standardInfoTitle">
                   <p>Standards</p>
@@ -22,7 +22,7 @@ function Standards() {
                 </div>
               </div>
             </Col>
-            <Col xs={12} sm={12} md={12} lg={4}>
+            <Col md={12} lg={4}>
               <div className="standardInfo">
                 <div className="standardInfoTitle">
                   <p>Privacy</p>
@@ -38,7 +38,7 @@ function Standards() {
                 </div>
               </div>
             </Col>
-            <Col xs={12} sm={12} md={12} lg={4}>
+            <Col md={12} lg={4}>
               <div className="standardInfo">
                 <div className="standardInfoTitle">
                   <p>Security</p>

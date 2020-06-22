@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
-import InfoCard from '../Home/infocard.js';
+import InfoCard from '../Home/infocard';
 
 function Guides() {
   return (

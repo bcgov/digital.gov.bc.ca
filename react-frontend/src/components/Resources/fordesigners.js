@@ -8,7 +8,7 @@ function ForDesigners() {
       <div className="resourceInfoTitle">For Designers</div>
       <Grid>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={4}>
+          <Col md={12} lg={4}>
             <div className="forDesignersInfo">
               <div className="resourceLink">
                 <a href="/#">B.C. Visual Identity Program (Gov Mark)</a>
@@ -24,7 +24,7 @@ function ForDesigners() {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={12} md={12} lg={4}>
+          <Col md={12} lg={4}>
             <div className="forDesignersInfo">
               <div className="resourceLink">
                 <a href="/#">Design System</a>
@@ -37,7 +37,7 @@ function ForDesigners() {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={12} md={12} lg={4}>
+          <Col md={12} lg={4}>
             <div className="forDesignersInfo">
               <div className="resourceLink">
                 <a href="/#">Service Writing Guide</a>

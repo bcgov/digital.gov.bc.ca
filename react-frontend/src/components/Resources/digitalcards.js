@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCard from '../Home/infocard.js';
+import InfoCard from '../Home/infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
 
@@ -25,7 +25,7 @@ function DigitalCards() {
     <div className="digitalCards">
       <Grid className="cardGrid">
         <Row>
-          <Col xs={12} sm={12} md={12} lg={4}>
+          <Col md={12} lg={4}>
             <InfoCard
               title={'Digital Framework'}
               img={imgLinks[0]}
@@ -33,7 +33,7 @@ function DigitalCards() {
               linkText={linkTexts[0]}
             />
           </Col>
-          <Col xs={12} sm={12} md={12} lg={4}>
+          <Col md={12} lg={4}>
             <InfoCard
               title={'Digital Principles'}
               img={imgLinks[1]}
@@ -41,7 +41,7 @@ function DigitalCards() {
               linkText={linkTexts[1]}
             />
           </Col>
-          <Col xs={12} sm={12} md={12} lg={4}>
+          <Col md={12} lg={4}>
             <InfoCard
               title={'Digital Framework'}
               img={imgLinks[2]}
