@@ -5,7 +5,6 @@ import { ApolloProvider } from 'react-apollo';
 import client from './utils/apolloClient';
 
 import App from './containers/App';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 /*
  * If you want your app to work offline and load faster, you can change
@@ -15,10 +14,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 //serviceWorker.unregister();
 
 ReactDOM.render(
-  <Router>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </Router>,
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+
   document.getElementById('root')
 );

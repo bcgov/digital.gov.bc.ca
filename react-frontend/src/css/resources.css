@@ -1,0 +1,161 @@
+.resourceContainer {
+    padding-top: 100px;
+}
+.resourceHeader {
+    height: 600px;
+    width: 100%;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/515d020be4b0bca14d771121/1509248973895-EF4RRDSAMM3GMRW7BQ7F/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/robbthompson_2017-08-24_3096.jpg?format=2500w");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: lightblue;
+    margin-bottom: 50px;
+}
+
+.resourceTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 37px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.resourceText {
+    bottom: 20%;
+    text-align: center;
+    width: 1124px;
+    position: absolute;
+    font-family: 'BC Sans';
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+
+}
+
+.resourceDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 11pt;
+    line-height: 12pt;
+}
+
+.resourceInfo {
+    margin-left: -7px;
+}
+
+.resourceInfoTitle {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.standardInfo {
+    margin-bottom: 15px;
+}
+
+.standardInfoTitle {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resourceLink {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resourceContainer {
+    width: 100%;
+}
+
+.digitalCards {
+    width: 1124px;
+    margin: auto;
+    margin-bottom: 40px;
+    align-content: left;
+}
+
+.cardGrid {
+    margin-left: -7px;
+}
+
+.forDesigners {
+    width: 1124px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.forDevelopers {
+    width: 1124px;
+    margin-bottom: 40px;
+    margin: auto;
+}
+
+.guides {
+    width: 1124px;
+    margin: auto;
+    margin-bottom: 40px; 
+}
+
+.standards {
+    width: 1124px;
+    margin-bottom: 40px; 
+    margin: auto;
+}
+
+.guidesImg {
+    height: 300px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .digitalCards {
+        width: 330px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .forDesigners {
+        width: 330px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .forDevelopers {
+        width: 330px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .guides {
+        width: 330px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .standards {
+        width: 330px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .standardInfoTitle {
+        margin-bottom: -15px;
+    }
+
+    .resourceInfo {
+        margin-left: -7px;
+    }
+
+    .resourceContainer {
+        padding-top: 65px;
+    }
+
+    .guidesImg {
+        width: 330px;
+    }
+
+}
