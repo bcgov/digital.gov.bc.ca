@@ -1,0 +1,9 @@
+{  
+  "ref": "{{ ref }}", 
+  "payload": { 
+    "deploy": "migrate" 
+  },
+  "environment": "{{ ENV }}", 
+  "transient_environment": {% if 'development' in ENV %}true{% else %}false{% endif %}, 
+  "description": "Deployment to {{ ENV }}" 
+}

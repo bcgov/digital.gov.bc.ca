@@ -1,0 +1,36 @@
+---
+  - hosts: localhost
+    vars:
+      dev_image_tag: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      # decide what namespace to create gh deployment based on the ENV variable
+      namespace: "{% if 'prod' in ENV %}{{ prod_namespace }}{% elif 'test' in ENV %}{{ test_namespace }}{% elif 'development' in ENV %}{{ dev_namespace }}{% endif %}"
+      # in test and prod namespaces they only house one tag: prod | test
+      new_image_tag: "{% if 'prod' in ENV %}{{ prod_image_tag }}{% elif 'test' in ENV %}{{ test_image_tag }}{% elif 'development' in ENV %}{{ dev_image_tag }}{% endif %}"
+      suffix: "{{ new_image_tag }}"
+      version: "{{ new_image_tag }}"
+      ref: refs/pull/{{ PR }}/head
+      # the amount of replicas to look for when considered ready!
+      ready_status: 3
+
+    tasks:
+      - name: Creating Pending Deployment for {{ ENV }}
+        uri: 
+          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments
+          method: POST
+          body: "{{ lookup('template', './templates/github_deployment.json.j2') }}"
+          body_format: json
+          headers:
+            Authorization: token {{ GITHUB_TOKEN }}
+        register: response
+      
+      - name: waiting for deployment
+        include: ./tasks/wait_for_rollout.yaml
+        vars:
+          kind: DeploymentConfig
+          name: "{{ react_infra_name }}-{{ suffix }}"
+      - name: Failing Deployment
+        shell: echo "FAILED"
+        when: not object_ready
+      - name: Succeeding Deployment
+        shell: echo "SUCCESS"
+        when: object_ready
