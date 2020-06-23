@@ -198,6 +198,7 @@ objects:
           - create
           - patch
           - delete
+          - update
   - apiVersion: authorization.openshift.io/v1
     kind: RoleBinding
     metadata:
