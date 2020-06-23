@@ -1,12 +1,13 @@
 import React from 'react';
 import '../../css/footer.css';
+import { Link } from 'react-router-dom';
 function Footer() {
   return (
-    <footer class="footer">
-      <div class="container">
+    <footer>
+      <div className="container">
         <ul>
           <li>
-            <a href=".">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <a href=".">Disclaimer</a>

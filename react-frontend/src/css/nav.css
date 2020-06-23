@@ -12,6 +12,7 @@ header {
     -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
     -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
     box-shadow: 0 6px 8px -4px #b3b1b3;
+    font-family: 'Open Sans', sans-serif;
   }
   
   header h1 {
@@ -37,6 +38,7 @@ header {
   
   header .other {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
     /* border-style: dotted;
@@ -61,6 +63,7 @@ header {
     width: auto;
     margin: 0 0 0 auto;
     cursor: pointer;
+    font-size: 18pt;
   }
 
   .navigation-main {
@@ -86,7 +89,6 @@ header {
     margin: 0;
     color: #fff;
     list-style: none;
-    margin-left: -25px;
     /* border-style: dotted;
     border-width: 1px;
     border-color: red; */
@@ -128,7 +130,7 @@ header {
     size: phone, tablet, full. 
   */
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 800px) {
     .navigation-main {
       display: block;
     }
@@ -145,10 +147,19 @@ header {
       border-right: 1px solid #9b9b9b;
     }
 
+    header .banner {
+      margin: 0 0px 0 0;
+    }
+
+    header .other {
+      margin-left: 0px;
+    }
+
     header .nav-btn {
       display: none;
       width: auto;
       margin: 0 0 0 auto;
+      padding-right: 25px;
       cursor: pointer;
     }
   }
