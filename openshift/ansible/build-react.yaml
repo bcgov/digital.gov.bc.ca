@@ -10,8 +10,17 @@
       - name: Pre checks
         include: ./tasks/check_pr_exists.yaml
 
+      - name: Check if should build 
+        include: ./tasks/check_if_should_build.yaml
+
+      - debug:
+          msg:
+            - not rebuilding react project, the commits match
+        when: not should_build
+
       - name: Build React Project
         include: ./tasks/build_react.yaml
+        when: should_build
 
       - name: Deploying to dev
         debug:
