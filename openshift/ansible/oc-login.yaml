@@ -4,5 +4,6 @@
     tasks:
       - name: login to oc
         k8s_auth:
-          api_key: "{{ CICD_SA_ACCOUNT_TOKEN }}"
+          password: "{{ CICD_SA_ACCOUNT_TOKEN }}"
           host: "{{ OPENSHIFT_SERVER_URL }}"
+          username: system:serviceaccount:xdwiwd-tools:digital-gov-github-cicd
