@@ -17,4 +17,9 @@ describe('Cypress', () => {
         cy.visit('/');
         cy.get('.pageHeader').get('.pageText').get('.pageTitle').should('have.text','Digital Government');
       });
+
+    it('visits the app and checks for the card count', () => {
+        cy.visit('/');
+        cy.get('.cardContainer').get('.cardGrid').find('.cardBody').should('have.length', 6);
+      });
   })
