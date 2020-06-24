@@ -1,4 +1,5 @@
 ---
+
 - name: Wait for "{{ kind }}" object {{ name }} pods to get into ready state in {{ namespace }} 
   k8s_info:
     api_version: v1
@@ -6,7 +7,7 @@
     name: "{{ name }}"
     namespace: "{{ namespace }}"
   register: result
-  until: (result.resources[0].status.readyReplicas is defined) and (result.resources[0].status.readyReplicas == ready_status)
+  until: (result.resources[0].status.readyReplicas is defined) and (result.resources[0].status.readyReplicas == result.resources[0].spec.replicas)
   delay: 15
   retries: 20
   ignore_errors: True
