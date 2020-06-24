@@ -1,0 +1,10 @@
+{  
+  "ref": "{{ ref }}", 
+  "payload": { 
+    "deploy": "migrate" 
+  },
+  "environment": "{{ gh_env }}", 
+  "required_contexts": [],
+  "transient_environment": {% if 'development' in gh_env  %}true{% else %}false{% endif %}, 
+  "description": "Deployment to {{ ENV }}" 
+}
