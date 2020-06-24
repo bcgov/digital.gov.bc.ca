@@ -16,5 +16,9 @@
     object_ready: "{{ (result.resources[0].status.readyReplicas is defined) and (result.resources[0].status.readyReplicas == ready_status) }}"
     is_dc: "{{ kind == 'dc' }}"
 
-- debug: msg="--------- Failed deployment of {{ kind }}/{{ name }} ---------"
+- debug: 
+    msg:
+      - "--------- Failed deployment of {{ kind }}/{{ name }}  ---------"
+      - "result.resources[0].status.readyReplicas ready replicas"
+      - "result.resources[0].spec.replicas configured replicas"
   when: not object_ready
