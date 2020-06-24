@@ -7,7 +7,7 @@
       IMAGE_TAG: '{{ version }}'
       deploy_params: "{{ lookup('template', './templates/deploy.param.j2') }}"
   - name: Cancel existing rollout
-    shell: oc rollout cancel {{ react_infra_name }}-{{ version }} -n {{ namespace }}
+    shell: oc rollout cancel dc/{{ react_infra_name }}-{{ version }} -n {{ namespace }}
   - name: Rolling Out
     shell: oc rollout latest {{ react_infra_name }}-{{ version }} -n {{ namespace }}
       
