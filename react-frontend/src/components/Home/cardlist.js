@@ -41,6 +41,7 @@ function CardList() {
                 img={imgLinks[0]}
                 description={descriptions[0]}
                 linkText={linkTexts[0]}
+                routePath="/digital-framework"
               />
             </Col>
             <Col sm={12} md={6}>

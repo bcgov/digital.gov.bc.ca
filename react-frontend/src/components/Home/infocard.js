@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
 
 function InfoCard(props) {
+  var isRouteCard = false;
+  if (props.routePath != null) {
+    isRouteCard = true;
+  }
+
   if (props.img != null) {
     return (
       <Card
@@ -16,7 +22,11 @@ function InfoCard(props) {
           <div className="cardTitle">{props.title}</div>
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
-            <a href="/#">{props.linkText}</a>
+            {isRouteCard ? (
+              <Link to="/digital-framework">{props.linkText}</Link>
+            ) : (
+              <a href="/#">{props.linkText}</a>
+            )}
           </div>
         </div>
       </Card>
@@ -28,7 +38,11 @@ function InfoCard(props) {
           <div className="cardTitle">{props.title}</div>
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
-            <a href="/#">{props.linkText}</a>
+            {isRouteCard ? (
+              <Link to="/digital-framework">{props.linkText}</Link>
+            ) : (
+              <a href="/#">{props.linkText}</a>
+            )}
           </div>
         </div>
       </Card>

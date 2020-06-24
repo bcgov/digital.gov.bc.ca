@@ -31,6 +31,7 @@ function DigitalCards() {
               img={imgLinks[0]}
               description={descriptions[0]}
               linkText={linkTexts[0]}
+              routePath="/digital-framework"
             />
           </Col>
           <Col md={12} lg={4}>
