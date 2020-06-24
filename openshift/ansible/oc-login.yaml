@@ -3,7 +3,5 @@
     gather_facts: no
     tasks:
       - name: login to oc
-        k8s_auth:
-          password: "{{ CICD_SA_ACCOUNT_TOKEN }}"
-          host: "{{ OPENSHIFT_SERVER_URL }}"
-          username: system:serviceaccount:xdwiwd-tools:digital-gov-github-cicd
+        shell: oc login {{ OPENSHIFT_SERVER_URL }} --token={{ CICD_SA_ACCOUNT_TOKEN }}
+        
