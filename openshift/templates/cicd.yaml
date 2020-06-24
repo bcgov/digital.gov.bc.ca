@@ -116,6 +116,7 @@ objects:
           - list
           - update
           - watch
+          - patch
       - apiGroups:
           - ""
         attributeRestrictions: null
@@ -195,6 +196,7 @@ objects:
           - deploymentconfigs
         verbs:
           - get
+          - list
           - create
           - patch
           - delete
