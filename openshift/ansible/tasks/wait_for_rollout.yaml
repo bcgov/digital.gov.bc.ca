@@ -19,6 +19,6 @@
 - debug: 
     msg:
       - "--------- Failed deployment of {{ kind }}/{{ name }}  ---------"
-      - "result.resources[0].status.readyReplicas ready replicas"
-      - "result.resources[0].spec.replicas configured replicas"
+      - "{{ result.resources[0].status.readyReplicas }} ready replicas"
+      - "{{ result.resources[0].spec.replicas }} configured replicas"
   when: not object_ready
