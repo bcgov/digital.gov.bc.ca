@@ -31,13 +31,18 @@
       # if a build is cancelled the commit field is undefined inside of the build
       build_commit: "{% if build.resources[0].spec.revision is defined and build.resources[0].spec.revision.git.commit is defined  %}{{ build.resources[0].spec.revision.git.commit }}{% else %}''{% endif %}"
       build_phase: "{{ build.resources[0].status.phase }}"
+    when: bc.resources|length > 0
+
+    
 
   - name: Get last commit from PR {{ PR }}
     uri:
       url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/commits/refs/pull/{{ PR }}/head
       method: GET
     register: response
-  
+    when: bc.resources|length > 0
+
   - name: Check if should build by comparing Build commit with PR Commit
     set_fact:
       should_build: "{% if response.json.sha == build_commit and build_phase != 'Cancelled'%}false{% else %}true{% endif %}"
+    when: bc.resources|length > 0
