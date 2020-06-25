@@ -4,8 +4,8 @@ on:
     paths:
       - 'react-frontend'
       - openshift/templates/react-frontend
-      - ansible/build-react.yaml
-      - ansible/deploy-react.yaml
+      - openshift/ansible/build-react.yaml
+      - openshift/ansible/deploy-react.yaml
 jobs:
   run:
     runs-on: ubuntu-18.04
