@@ -9,3 +9,7 @@ react_infra_name: digital-gov-frontend
 dev_imagestream: digital-gov-frontend
 prod_image_tag: prod 
 test_image_tag: test 
+github_environments:
+  prod: production
+  test: test
+  dev: development

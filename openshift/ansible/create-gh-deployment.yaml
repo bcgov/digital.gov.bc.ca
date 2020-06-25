@@ -1,0 +1,83 @@
+---
+  - hosts: localhost
+    vars:
+      dev_image_tag: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      gh_env: "{{ github_environments[ENV] }}"
+      # decide what namespace to create gh deployment based on the ENV variable
+      namespace: "{% if 'prod' in gh_env %}{{ prod_namespace }}{% elif 'test' in gh_env %}{{ test_namespace }}{% elif 'dev' in gh_env %}{{ dev_namespace }}{% endif %}"
+      # in test and prod namespaces they only house one tag: prod | test
+      new_image_tag: "{% if 'prod' in gh_env %}{{ prod_image_tag }}{% elif 'test' in gh_env %}{{ test_image_tag }}{% elif 'dev' in gh_env %}{{ dev_image_tag }}{% endif %}"
+      suffix: "{{ new_image_tag }}"
+      version: "{{ new_image_tag }}"
+      ref: refs/pull/{{ PR }}/head
+      # the amount of replicas to look for when considered ready!
+
+    tasks:
+      - name: Checking PR existence
+        include: ./tasks/check_pr_exists.yaml
+
+      - name: Canceling previous deployments
+        include: ./tasks/cancel_previous_gh_deployments.yaml
+
+      - name: Creating Deployment for {{ gh_env }} for {{ ref }}
+        uri: 
+          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments
+          method: POST
+          body: "{{ lookup('template', './templates/github_deployment.json.j2') }}"
+          body_format: json
+          status_code: 201, 200
+          headers:
+            Authorization: token {{ GITHUB_TOKEN }}
+            Accept: application/vnd.github.ant-man-preview+json
+        register: deployment
+
+      - name: "Setting deployment status of deployment {{ deployment.json.id }} to pending"
+        uri:
+          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses
+          method: POST
+          body: 
+            description: "Deployment of {{ ref }} is now pending, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            state: pending
+            environment: "{{ gh_env }}"
+          status_code: 201
+          body_format: json
+          headers:
+            Authorization: token {{ GITHUB_TOKEN }}
+            Accept: application/vnd.github.ant-man-preview+json
+
+      - name: waiting for deployment
+        include: ./tasks/wait_for_rollout.yaml
+        vars:
+          kind: DeploymentConfig
+          name: "{{ react_infra_name }}-{{ suffix }}"
+
+      - name: "Setting deployment status of deployment {{ deployment.json.id }} to failed"
+        uri:
+          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses
+          method: POST
+          body: 
+            description: "Deployment of {{ ref }} has failed, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            state: failure
+            environment: "{{ gh_env }}"
+          status_code: 201
+          body_format: json
+          headers:
+            Authorization: token {{ GITHUB_TOKEN }}
+            Accept: application/vnd.github.ant-man-preview+json
+        when: not object_ready
+
+      - name: "Setting deployment status of deployment {{ deployment.json.id }} to success"
+        uri:
+          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses
+          method: POST
+          body: 
+            description: "Deployment of {{ ref }} is now succeeded, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            state: success
+            environment: "{{ gh_env }}"
+            environment_url: "https://{{ react_infra_name }}-{{ suffix }}-{{ namespace }}.pathfinder.gov.bc.ca"
+          status_code: 201
+          body_format: json
+          headers:
+            Authorization: token {{ GITHUB_TOKEN }}
+            Accept: application/vnd.github.ant-man-preview+json
+        when: object_ready

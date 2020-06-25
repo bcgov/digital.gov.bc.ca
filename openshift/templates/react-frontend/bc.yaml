@@ -23,7 +23,7 @@ objects:
         limits:
           memory: 850Mi
           cpu: 300m
-      runPolicy: SerialLatestOnly
+      runPolicy: Serial
       source:
         contextDir: react-frontend
         git:
