@@ -1,11 +1,15 @@
 ---
 name: 'Issue: Code'
-about: 'Issue template for Task: DevOps'
+about: 'Issue template for Task: Dev'
 title: ''
 labels: 'task: dev'
 assignees: ''
 
 ---
+
+#### Description of Task 
+
+- Explain what is involved in completing this task
 
 #### Acceptance Criteria (_What does the content need to include to be accepted by the PO?_)
 
