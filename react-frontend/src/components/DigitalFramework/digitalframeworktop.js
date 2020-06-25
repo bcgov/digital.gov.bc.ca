@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/pageheader.css';
-function DigitalHeader() {
+
+const DigitalFrameworkTop = () => {
   return (
     <div className="pageHeader">
       <div className="pageText">
@@ -19,6 +20,6 @@ function DigitalHeader() {
       </div>
     </div>
   );
-}
+};
 
-export default DigitalHeader;
+export default DigitalFrameworkTop;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
-function DigitalTable(props) {
+const DigitalFrameworkTable = (props) => {
   const initial = window.innerWidth < 800;
   const [isMobile, setIsMobile] = useState(initial);
 
@@ -64,6 +64,6 @@ function DigitalTable(props) {
       </Grid>
     </div>
   );
-}
+};
 
-export default DigitalTable;
+export default DigitalFrameworkTable;
