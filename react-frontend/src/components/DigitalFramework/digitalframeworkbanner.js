@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../css/pageheader.css';
+import '../../css/pagetop.css';
 
-const DigitalFrameworkTop = () => {
+const DigitalFrameworkBanner = () => {
   return (
-    <div className="pageHeader">
+    <div className="pageTop">
       <div className="pageText">
         <div className="pageTitle">
           <p>Digital Framework</p>
@@ -22,4 +22,4 @@ const DigitalFrameworkTop = () => {
   );
 };
 
-export default DigitalFrameworkTop;
+export default DigitalFrameworkBanner;

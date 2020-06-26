@@ -1,6 +1,6 @@
 import React from 'react';
 import DigitalFrameworkBlock from './digitalframeworkblock';
-import DigitalFrameworkTop from './digitalframeworktop';
+import DigitalFrameworkBanner from './digitalframeworkbanner';
 import DigitalFrameworkTable from './digitalframeworktable';
 import '../../css/digital.css';
 
@@ -155,7 +155,7 @@ for (var i = 0; i < titles.length; i++) {
 const DigitalFramework = () => {
   return (
     <div className="digitalContainer">
-      <DigitalFrameworkTop />
+      <DigitalFrameworkBanner />
       <div className="digitalBody">{digitalBody}</div>
     </div>
   );

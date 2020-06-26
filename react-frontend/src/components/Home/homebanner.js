@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../css/home.css';
-import '../../css/pageheader.css';
+import '../../css/pagetop.css';
 
-const HomeHeader = () => {
+const HomeBanner = () => {
   return (
-    <div className="pageHeader">
+    <div className="pageTop">
       <div className="pageText">
         <div className="pageTitle">
           <p>Digital Government</p>
@@ -25,4 +25,4 @@ const HomeHeader = () => {
   );
 };
 
-export default HomeHeader;
+export default HomeBanner;

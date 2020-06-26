@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../../css/pageheader.css';
+import '../../css/pagetop.css';
 
-function ResourceHeader() {
+function ResourceBanner() {
   return (
-    <div className="pageHeader">
+    <div className="pageTop">
       <div className="pageText">
         <div className="pageTitle">
           <p>Resources</p>
@@ -20,4 +20,4 @@ function ResourceHeader() {
   );
 }
 
-export default ResourceHeader;
+export default ResourceBanner;
