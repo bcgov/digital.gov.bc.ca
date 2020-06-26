@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import DigitalFramework from '../DigitalFramework/digitalframework';
+import Products from '../products/products';
 
 function Routes() {
   return (
@@ -10,6 +11,9 @@ function Routes() {
       <Switch>
         <Route path="/digital-framework">
           <DigitalFramework />
+        </Route>
+        <Route path="/products-services">
+          <Products />
         </Route>
         <Route path="/resources">
           <Resources />

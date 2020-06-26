@@ -87,7 +87,14 @@ function NavBar() {
               </Link>
             </li>
             <li>
-              <a href=".">Products & Services</a>
+              <Link
+                to="/products-services"
+                className={
+                  activePage === '/products-services' ? 'active' : 'notactive'
+                }
+              >
+                Products & Services
+              </Link>
             </li>
             <li>
               <a href=".">Blog</a>

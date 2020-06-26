@@ -1,0 +1,34 @@
+.productsContainer {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.productsBody {
+    width: 85%;
+    margin: auto;
+}
+
+.instructionsFirst {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.productsTitle {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 24pt;
+}
+
+.productsParagraph {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 12pt;
+    line-height: 16pt;
+}
+
+.productsLink {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 12pt;
+}
