@@ -86,12 +86,12 @@ function NavBar() {
                 Resources
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a href=".">Products & Services</a>
             </li>
             <li>
               <a href=".">Blog</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

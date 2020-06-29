@@ -77,6 +77,13 @@
     align-content: left;
 }
 
+.digitalSubtitle {
+    font-weight: bold;
+    font-size: 16pt;
+    margin: auto;
+    text-align: center;
+}
+
 .cardGrid {
     margin-left: -7px;
 }

@@ -84,73 +84,74 @@ const objectives = [
   ],
 ];
 
-var j = 0;
-
-const digitalBody = titles.map((title, i) => {
-  if (i > 5) {
-    j++;
-  }
-  return (
-    <div>
-      <DigitalFrameworkBlock
-        key={i}
-        title={titles[i]}
-        paragraph={descriptions[i]}
-      />
-      {i === 4 && (
-        <div key={i + (j + 1) * 10} className="someLinks">
-          <ul>
-            <li>
-              <a className="digitalLink" href=".">
-                Service delivery
-              </a>
-              <br />
-            </li>
-            <li>
-              <a className="digitalLink" href=".">
-                Data and information
-              </a>
-              <br />
-            </li>
-            <li>
-              <a className="digitalLink" href=".">
-                Tools, processes and practices
-              </a>
-              <br />
-            </li>
-            <li>
-              <a className="digitalLink" href=".">
-                External Partners
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-      {i === 5 && (
-        <div key={42} style={{ marginTop: '-20px' }}>
-          <ul>
-            <li>Based on user needs (as identified by users themselves)</li>
-            <li>Designed and tested with the people who will be using them</li>
-            <li>Accessible and inclusive for all British Columbians</li>
-            <li>Designed to work end-to-end</li>
-            <li>
-              Joined across all channels (online, phone, mail, face-to-face)
-            </li>
-          </ul>
-        </div>
-      )}
-      {i > 4 && (
-        <DigitalFrameworkTable
-          key={i + (j + 1) * 10}
-          priorityActions={priorityActions[j]}
-          objectives={objectives[j]}
-        />
-      )}
-    </div>
-  );
-});
-
 const DigitalFramework = () => {
+  var j = 0;
+  const digitalBody = titles.map((title, i) => {
+    if (i > 5) {
+      j++;
+    }
+    return (
+      <div key={title.id}>
+        <DigitalFrameworkBlock
+          key={i}
+          title={titles[i]}
+          paragraph={descriptions[i]}
+        />
+        {i === 4 && (
+          <div key={i + (j + 1) * 10} className="someLinks">
+            <ul>
+              <li>
+                <div className="digitalLink" href=".">
+                  Service delivery
+                </div>
+                <br />
+              </li>
+              <li>
+                <div className="digitalLink" href=".">
+                  Data and information
+                </div>
+                <br />
+              </li>
+              <li>
+                <div className="digitalLink" href=".">
+                  Tools, processes and practices
+                </div>
+                <br />
+              </li>
+              <li>
+                <div className="digitalLink" href=".">
+                  External Partners
+                </div>
+              </li>
+            </ul>
+          </div>
+        )}
+        {i === 5 && (
+          <div key={42} style={{ marginTop: '-20px' }}>
+            <ul>
+              <li>Based on user needs (as identified by users themselves)</li>
+              <li>
+                Designed and tested with the people who will be using them
+              </li>
+              <li>Accessible and inclusive for all British Columbians</li>
+              <li>Designed to work end-to-end</li>
+              <li>
+                Joined across all channels (online, phone, mail, face-to-face)
+              </li>
+            </ul>
+          </div>
+        )}
+        {i > 4 && (
+          <DigitalFrameworkTable
+            key={i + (j + 1) * 10}
+            priorityActions={priorityActions[j]}
+            objectives={objectives[j]}
+          />
+        )}
+      </div>
+    );
+  });
+
   return (
     <div className="digitalContainer">
       <DigitalFrameworkBanner />
