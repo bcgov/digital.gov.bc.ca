@@ -13,8 +13,22 @@
     margin-bottom: 25px;
 }
 
+.instructionCol {
+    margin-bottom: 25px;
+}
 .productsTitle {
     font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 24pt;
+}
+
+.definingContainer {
+    margin-top: 20px;
+}
+
+.productsSubtitle {
+    font-size: 18pt;
     font-weight: bold;
     margin-bottom: 5px;
     line-height: 24pt;
