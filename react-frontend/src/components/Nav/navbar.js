@@ -86,19 +86,12 @@ function NavBar() {
                 Resources
               </Link>
             </li>
-            <li>
-              <Link
-                to="/products-services"
-                className={
-                  activePage === '/products-services' ? 'active' : 'notactive'
-                }
-              >
-                Products & Services
-              </Link>
+            {/* <li>
+              <a href=".">Products & Services</a>
             </li>
             <li>
               <a href=".">Blog</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

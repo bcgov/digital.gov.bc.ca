@@ -5,25 +5,20 @@ import Resources from '../../components/Resources/resources';
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
 
-function Routes() {
+const Routes = () => {
   return (
-    <div>
-      <Switch>
-        <Route path="/digital-framework">
-          <DigitalFramework />
-        </Route>
-        <Route path="/products-services">
-          <Products />
-        </Route>
-        <Route path="/resources">
-          <Resources />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/digital-framework">
+        <DigitalFramework />
+      </Route>
+      <Route path="/resources">
+        <Resources />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
   );
-}
+};
 
 export default Routes;

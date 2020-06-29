@@ -2,10 +2,10 @@ name: Deploy React To Dev
 on: 
   pull_request:
     paths:
-      - 'react-frontend'
-      - openshift/templates/react-frontend
-      - openshift/ansible/build-react.yaml
-      - openshift/ansible/deploy-react.yaml
+      - 'react-frontend/**'
+      - 'openshift/templates/react-frontend'
+      - 'openshift/ansible/build-react.yaml'
+      - 'openshift/ansible/deploy-react.yaml'
 jobs:
   run:
     runs-on: ubuntu-18.04

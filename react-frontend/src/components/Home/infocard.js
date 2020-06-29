@@ -23,9 +23,9 @@ function InfoCard(props) {
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
             {isRouteCard ? (
-              <Link to="/digital-framework">{props.linkText}</Link>
+              <Link to={props.routePath}>{props.linkText}</Link>
             ) : (
-              <a href="/#">{props.linkText}</a>
+              <a href={props.linkPath}>{props.linkText}</a>
             )}
           </div>
         </div>
@@ -39,9 +39,9 @@ function InfoCard(props) {
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
             {isRouteCard ? (
-              <Link to="/digital-framework">{props.linkText}</Link>
+              <Link to={props.routePath}>{props.linkText}</Link>
             ) : (
-              <a href="/#">{props.linkText}</a>
+              <a href={props.linkPath}>{props.linkText}</a>
             )}
           </div>
         </div>

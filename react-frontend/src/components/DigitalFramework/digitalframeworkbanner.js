@@ -1,8 +1,9 @@
 import React from 'react';
-import '../../css/pageheader.css';
-function DigitalHeader() {
+import '../../css/pagetop.css';
+
+const DigitalFrameworkBanner = () => {
   return (
-    <div className="pageHeader">
+    <div className="pageTop">
       <div className="pageText">
         <div className="pageTitle">
           <p>Digital Framework</p>
@@ -19,6 +20,6 @@ function DigitalHeader() {
       </div>
     </div>
   );
-}
+};
 
-export default DigitalHeader;
+export default DigitalFrameworkBanner;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
-function DigitalTable(props) {
+const DigitalFrameworkTable = (props) => {
   const initial = window.innerWidth < 800;
   const [isMobile, setIsMobile] = useState(initial);
 
@@ -21,24 +21,20 @@ function DigitalTable(props) {
   //create list of rows using props
   const entries = props.priorityActions.length;
   //jsut use row col again but have title show up when screensize is less than a certain height
-  let body = [];
 
-  for (var i = 0; i < entries; i++) {
-    let row = (
-      <Row key={i} className={i === entries - 1 ? 'lastRow' : 'contentRow'}>
-        <Col sm={12} md={6}>
-          {isMobile && <div className="digitalTableTitle">Priority Action</div>}
-          <div className="digitalParagraph">{props.priorityActions[i]}</div>
-        </Col>
-        <Col sm={12} md={6}>
-          {isMobile && <div className="digitalTableTitle">Objective</div>}
-          <div className="digitalParagraph">{props.objectives[i]}</div>
-        </Col>
-      </Row>
-    );
+  const body = props.priorityActions.map((priorityAction, i) => (
+    <Row key={i} className={i === entries - 1 ? 'lastRow' : 'contentRow'}>
+      <Col sm={12} md={6}>
+        {isMobile && <div className="digitalTableTitle">Priority Action</div>}
+        <div className="digitalParagraph">{priorityAction}</div>
+      </Col>
+      <Col sm={12} md={6}>
+        {isMobile && <div className="digitalTableTitle">Objective</div>}
+        <div className="digitalParagraph">{props.objectives[i]}</div>
+      </Col>
+    </Row>
+  ));
 
-    body.push(row);
-  }
   return (
     <div>
       <Grid className="digitalTable">
@@ -64,6 +60,6 @@ function DigitalTable(props) {
       </Grid>
     </div>
   );
-}
+};
 
-export default DigitalTable;
+export default DigitalFrameworkTable;

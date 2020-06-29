@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../css/digital.css';
 
-function DigitalBlock(props) {
+const DigitalFrameworkBlock = (props) => {
   return (
     <div className="digitalBlock">
-      <div className="digitalTitle">{props.title}</div>
+      <h2 className="digitalTitle">{props.title}</h2>
       <div className="digitalParagraph">{props.paragraph}</div>
     </div>
   );
-}
+};
 
-export default DigitalBlock;
+export default DigitalFrameworkBlock;
