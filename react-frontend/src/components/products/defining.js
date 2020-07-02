@@ -6,9 +6,11 @@ const Defining = () => {
   let cardOne = (
     <div className="cardContent">
       <p>
-        <a href=".">The Service Design team</a> can help you discover and
-        understand problems that currently exist with your service and where the
-        best opportunities for improvement might lie.
+        <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design">
+          The Service Design team
+        </a>{' '}
+        can help you discover and understand problems that currently exist with
+        your service and where the best opportunities for improvement might lie.
       </p>
     </div>
   );
@@ -16,8 +18,11 @@ const Defining = () => {
   let cardTwo = (
     <div className="cardContent">
       <p>
-        Consider if there are <a href=".">data and data services</a> that can
-        enhance your research, analysis, and decision-making.
+        Consider if there are{' '}
+        <a href="https://www2.gov.bc.ca/gov/content/data">
+          data and data services
+        </a>{' '}
+        that can enhance your research, analysis, and decision-making.
       </p>
     </div>
   );
@@ -25,7 +30,10 @@ const Defining = () => {
   let cardThree = (
     <div className="cardContent">
       <p>
-        If you are trying to improve a <b>process</b>, <a href=".">Lean BC</a>{' '}
+        If you are trying to improve a <b>process</b>,{' '}
+        <a href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/lean-bc">
+          Lean BC
+        </a>{' '}
         can help you identify areas for improvement as you apply the Lean
         continuous improvement philosophy.
       </p>
@@ -38,7 +46,7 @@ const Defining = () => {
         To truly improve something for people, it’s critical to take time to
         understand them and be clear about what you want to achieve.
       </p>
-      <Grid>
+      <Grid className="cardAdjustment">
         <Row>
           <Col sm={12} md={4}>
             <ProductsCard content={cardOne} />

@@ -49,7 +49,6 @@ function CardList() {
                 title={'Digital Principles'}
                 img={imgLinks[1]}
                 description={descriptions[1]}
-                // linkText={linkTexts[1]}
               />
             </Col>
           </Row>
@@ -59,7 +58,6 @@ function CardList() {
                 title={'Digital Policy'}
                 img={imgLinks[2]}
                 description={descriptions[2]}
-                // linkText={linkTexts[2]}
               />
             </Col>
             <Col sm={12} md={6}>
@@ -78,7 +76,6 @@ function CardList() {
                 title={'Community'}
                 img={imgLinks[4]}
                 description={descriptions[4]}
-                // linkText={linkTexts[4]}
               />
             </Col>
             <Col sm={12} md={6}>
@@ -86,7 +83,6 @@ function CardList() {
                 title={'Case Studies'}
                 img={imgLinks[5]}
                 description={descriptions[5]}
-                // linkText={linkTexts[5]}
               />
             </Col>
           </Row>

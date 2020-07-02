@@ -8,6 +8,9 @@ import Products from '../products/products';
 const Routes = () => {
   return (
     <Switch>
+      <Route path="/products-services">
+        <Products />
+      </Route>
       <Route path="/digital-framework">
         <DigitalFramework />
       </Route>

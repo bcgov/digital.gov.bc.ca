@@ -6,9 +6,10 @@ const Assembling = () => {
   let cardOne = (
     <div className="cardContent">
       <p>
-        <a href=".">The Exchange Lab</a> provides training, community, and
-        digital service delivery residency programs that apply Agile and DevOps
-        methods that can help you build your team.
+        <a href="https://bcdevexchange.org/ExchangeLab">The Exchange Lab</a>{' '}
+        provides training, community, and digital service delivery residency
+        programs that apply Agile and DevOps methods that can help you build
+        your team.
       </p>
     </div>
   );
@@ -17,7 +18,8 @@ const Assembling = () => {
     <div className="cardContent">
       <p>
         If you need to contract a team and want them to follow an Agile process,
-        you can use the <a href=".">Digital Marketplace.</a>
+        you can use the{' '}
+        <a href="https://digital.gov.bc.ca/marketplace">Digital Marketplace.</a>
       </p>
     </div>
   );
@@ -26,9 +28,11 @@ const Assembling = () => {
     <div className="cardContent">
       <p>
         By requesting access to the B.C. Government’s{' '}
-        <a href=".">DevOps Container Platform</a>, you can empower your
-        developers to deploy digital applications quickly, securely, and at
-        scale.
+        <a href="https://www.bcdevexchange.org/DevOpsPlatform">
+          DevOps Container Platform
+        </a>
+        , you can empower your developers to deploy digital applications
+        quickly, securely, and at scale.
       </p>
     </div>
   );
@@ -36,8 +40,11 @@ const Assembling = () => {
   let cardFour = (
     <div className="cardContent">
       <p>
-        Learn about <a href=".">IM/IT Capital Investment</a> that you may
-        require to build your service.
+        Learn about{' '}
+        <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment">
+          IM/IT Capital Investment
+        </a>{' '}
+        that you may require to build your service.
       </p>
     </div>
   );
@@ -53,7 +60,7 @@ const Assembling = () => {
         for success.
       </p>
       <p>Here are some services that might help you at this stage.</p>
-      <Grid>
+      <Grid className="cardAdjustment">
         <Row>
           <Col sm={12} md={3}>
             <ProductsCard content={cardOne} />

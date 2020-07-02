@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../css/pageheader.css';
+import '../../css/pagetop.css';
 
 const ProductsBanner = () => {
   return (
-    <div className="pageHeader">
+    <div className="pageTop">
       <div className="pageText">
         <div className="pageTitle">
           <p>Products and Services</p>

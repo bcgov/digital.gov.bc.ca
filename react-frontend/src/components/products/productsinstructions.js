@@ -23,7 +23,7 @@ const ProductsInstructions = () => {
         Before you’re ready to create or improve a digital service, you will
         need to:
       </div>
-      <Grid>
+      <Grid className="cardAdjustment">
         <Row>{cols}</Row>
       </Grid>
     </div>
