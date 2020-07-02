@@ -5,19 +5,23 @@ describe('Cypress', () => {
     //     cy.visit('/')
     //   });
 
+    // Simple test which just runs an assertion
     it('is working', () => {
       expect(true).to.equal(true);
     });
 
+    // Simple test which opens up the web site
     it('visits the app', () => {
         cy.visit('/');
       });
 
-    it('visits the app and checks for some elements', () => {
+    // Simple test which visits the app and checks for the home page title = Digital Government
+    it('visits the app and checks for page title', () => {
         cy.visit('/');
         cy.get('.pageHeader').get('.pageText').get('.pageTitle').should('have.text','Digital Government');
       });
 
+    // Simple test which visits the app and checks the number of cards on the home page
     it('visits the app and checks for the card count', () => {
         cy.visit('/');
         cy.get('.cardContainer').get('.cardGrid').find('.cardBody').should('have.length', 6);
