@@ -1,7 +1,7 @@
 import React from 'react';
-import DigitalFrameworkBlock from './digitalframeworkblock';
-import DigitalFrameworkBanner from './digitalframeworkbanner';
-import DigitalFrameworkTable from './digitalframeworktable';
+import DigitalBlock from './digitalframeworkblock';
+import DigitalHeader from './digitalframeworkbanner';
+import DigitalTable from './digitalframeworktable';
 import '../../css/digital.css';
 
 const titles = [
@@ -84,81 +84,77 @@ const objectives = [
   ],
 ];
 
-const digitalBody = [];
-var j = 0;
-for (var i = 0; i < titles.length; i++) {
-  digitalBody.push(
-    <DigitalFrameworkBlock
-      key={i}
-      title={titles[i]}
-      paragraph={descriptions[i]}
-    />
-  );
-  if (i === 4) {
-    digitalBody.push(
-      <div key={i + (j + 1) * 10} className="someLinks">
-        <ul>
-          <li>
-            <a className="digitalLink" href=".">
-              Service delivery
-            </a>
-            <br />
-          </li>
-          <li>
-            <a className="digitalLink" href=".">
-              Data and information
-            </a>
-            <br />
-          </li>
-          <li>
-            <a className="digitalLink" href=".">
-              Tools, processes and practices
-            </a>
-            <br />
-          </li>
-          <li>
-            <a className="digitalLink" href=".">
-              External Partners
-            </a>
-          </li>
-        </ul>
-      </div>
-    );
-  }
-  if (i === 5) {
-    digitalBody.push(
-      <div key={42} style={{ marginTop: '-20px' }}>
-        <ul>
-          <li>Based on user needs (as identified by users themselves)</li>
-          <li>Designed and tested with the people who will be using them</li>
-          <li>Accessible and inclusive for all British Columbians</li>
-          <li>Designed to work end-to-end</li>
-          <li>
-            Joined across all channels (online, phone, mail, face-to-face)
-          </li>
-        </ul>
-      </div>
-    );
-  }
-  if (i > 4) {
-    digitalBody.push(
-      <DigitalFrameworkTable
-        key={i + (j + 1) * 10}
-        priorityActions={priorityActions[j]}
-        objectives={objectives[j]}
-      />
-    );
-    j++;
-  }
-}
-
-const DigitalFramework = () => {
+function DigitalFramework() {
   return (
     <div className="digitalContainer">
-      <DigitalFrameworkBanner />
-      <div className="digitalBody">{digitalBody}</div>
+      <DigitalHeader />
+      <div className="digitalBody">
+        <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
+        <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
+        <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
+        <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
+        <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
+        <div className="someLinks">
+          <ul>
+            <li>
+              <a className="digitalLink" href=".">
+                Service delivery
+              </a>
+              <br />
+            </li>
+            <li>
+              <a className="digitalLink" href=".">
+                Data and information
+              </a>
+              <br />
+            </li>
+            <li>
+              <a className="digitalLink" href=".">
+                Tools, processes and practices
+              </a>
+              <br />
+            </li>
+            <li>
+              <a className="digitalLink" href=".">
+                External Partners
+              </a>
+            </li>
+          </ul>
+        </div>
+        <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
+        <div style={{ marginTop: '-20px' }}>
+          <ul>
+            <li>Based on user needs (as identified by users themselves)</li>
+            <li>Designed and tested with the people who will be using them</li>
+            <li>Accessible and inclusive for all British Columbians</li>
+            <li>Designed to work end-to-end</li>
+            <li>
+              Joined across all channels (online, phone, mail, face-to-face)
+            </li>
+          </ul>
+        </div>
+        <DigitalTable
+          priorityActions={priorityActions[0]}
+          objectives={objectives[0]}
+        />
+        <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
+        <DigitalTable
+          priorityActions={priorityActions[1]}
+          objectives={objectives[1]}
+        />
+        <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
+        <DigitalTable
+          priorityActions={priorityActions[2]}
+          objectives={objectives[2]}
+        />
+        <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
+        <DigitalTable
+          priorityActions={priorityActions[3]}
+          objectives={objectives[3]}
+        />
+      </div>
     </div>
   );
-};
+}
 
 export default DigitalFramework;
