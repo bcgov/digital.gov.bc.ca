@@ -1,11 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/nav.css';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
+  const history = useHistory();
+  const routeLocation = useLocation();
+  const [activePage, setActivePage] = useState(routeLocation.pathname);
+  const [openMenu, setOpenMenu] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 800) {
+        const nav = document.getElementById('navbar');
+        nav.style.display = 'none';
+        setOpenMenu(false);
+      } else {
+        const nav = document.getElementById('navbar');
+        nav.style.display = 'block';
+        setOpenMenu(true);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    return history.listen((location) => {
+      setActivePage(location.pathname);
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    });
+  });
+
+  const toggleMenu = () => {
+    if (openMenu === false) {
+      const nav = document.getElementById('navbar');
+      nav.style.display = 'block';
+      setOpenMenu(true);
+    } else {
+      const nav = document.getElementById('navbar');
+      nav.style.display = 'none';
+      setOpenMenu(false);
+    }
+  };
+
   return (
     <div className="navBar">
       <header>
-        <div class="banner">
+        <div className="banner">
           <a
             href="https://gov.bc.ca"
             alt="Go to the Government of British Columbia website"
@@ -17,26 +57,34 @@ function NavBar() {
           </a>
           <h1 className="titleText">Digital Government</h1>
         </div>
-        <div class="other">
-          <a class="nav-btn" href=".">
-            <i class="fas fa-bars" id="menu"></i>
-          </a>
+        <div className="other">
+          <div className="nav-btn" onClick={toggleMenu} href=".">
+            <FontAwesomeIcon icon={faBars} />
+          </div>
           {/* <!-- 
                 This place is for anything that needs to be right aligned
                 beside the logo.
                 --> */}
         </div>
       </header>
-      <nav class="navigation-main" id="navbar">
-        <div class="container">
+      <nav className="navigation-main" id="navbar">
+        <div className="container">
           <ul>
             <li>
-              <a href="." class="active">
+              <Link
+                to="/"
+                className={activePage === '/' ? 'active' : 'notactive'}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href=".">Resources</a>
+              <Link
+                to="/resources"
+                className={activePage === '/resources' ? 'active' : 'notactive'}
+              >
+                Resources
+              </Link>
             </li>
             <li>
               <a href=".">Products & Services</a>

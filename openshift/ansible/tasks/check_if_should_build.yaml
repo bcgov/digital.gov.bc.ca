@@ -1,0 +1,48 @@
+---
+  - name: Get BuildConfig {{ react_infra_name }}-{{ version }}
+    k8s_info:
+      api_version: v1
+      kind: "BuildConfig"
+      name: "{{ react_infra_name }}-{{ version }}"
+      namespace: "{{ tools_namespace }}"
+    register: bc
+
+  - name: Check if BuildConfig exists
+    set_fact:
+      should_build: true
+    when: bc.resources|length == 0
+
+  - name: setting last build
+    set_fact:
+      latest_build_version: "{{ bc.resources[0].status.lastVersion }}"
+    when: bc.resources|length > 0
+
+  - name: Get Build {{ react_infra_name }}-{{ version }}-{{ latest_build_version }}
+    k8s_info:
+      api_version: v1
+      kind: "Build"
+      name: "{{ react_infra_name }}-{{ version }}-{{ latest_build_version }}"
+      namespace: "{{ tools_namespace }}"
+    when: bc.resources|length > 0
+    register: build
+
+  - name: Setting Facts from Build
+    set_fact:
+      # if a build is cancelled the commit field is undefined inside of the build
+      build_commit: "{% if build.resources[0].spec.revision is defined and build.resources[0].spec.revision.git.commit is defined  %}{{ build.resources[0].spec.revision.git.commit }}{% else %}''{% endif %}"
+      build_phase: "{{ build.resources[0].status.phase }}"
+    when: bc.resources|length > 0
+
+    
+
+  - name: Get last commit from PR {{ PR }}
+    uri:
+      url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/commits/refs/pull/{{ PR }}/head
+      method: GET
+    register: response
+    when: bc.resources|length > 0
+
+  - name: Check if should build by comparing Build commit with PR Commit
+    set_fact:
+      should_build: "{% if response.json.sha == build_commit and build_phase != 'Cancelled'%}false{% else %}true{% endif %}"
+    when: bc.resources|length > 0

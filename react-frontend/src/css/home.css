@@ -58,10 +58,6 @@
     margin: auto;
 }
 
-.cardImage {
-    height: 330px;
-}
-
 @media only screen and (max-width: 800px) {
     .homeContainer {
         z-index: 0;
@@ -88,7 +84,8 @@
         margin-left: -7px;
     }
 
-    .cardImage {
-
+    .homeContainer {
+        z-index: 0;
+        padding-top: 65px;
     }
 }
