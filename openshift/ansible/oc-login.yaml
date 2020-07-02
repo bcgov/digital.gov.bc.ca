@@ -1,0 +1,7 @@
+---
+  - hosts: localhost
+    gather_facts: no
+    tasks:
+      - name: login to oc
+        shell: oc login {{ OPENSHIFT_SERVER_URL }} --token={{ CICD_SA_ACCOUNT_TOKEN }}
+        

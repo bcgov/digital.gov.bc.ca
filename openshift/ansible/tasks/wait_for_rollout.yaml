@@ -1,0 +1,28 @@
+---
+- name: get token
+  shell: oc whoami -t 
+  register: token
+- name: Wait for "{{ kind }}" object {{ name }} pods to get into ready state in {{ namespace }} 
+  uri:
+    url: "{{ OPENSHIFT_SERVER_URL }}/apis/apps.openshift.io/v1/namespaces/{{ namespace }}/deploymentconfigs/{{ name }}"
+    method: GET
+    headers:
+      Authorization: "Bearer {{ token.stdout }}"
+      Accept: 'application/json'
+  register: result
+  until: (result.json.status.readyReplicas is defined) and (result.json.status.readyReplicas == result.json.spec.replicas)
+  delay: 15
+  retries: 20
+  ignore_errors: True
+
+- name: Decide on rolling back
+  set_fact:
+    object_ready: "{{ (result.json.status.readyReplicas is defined) and (result.json.status.readyReplicas == result.json.spec.replicas) }}"
+    is_dc: "{{ kind == 'dc' }}"
+
+- debug: 
+    msg:
+      - "--------- Failed deployment of {{ kind }}/{{ name }}  ---------"
+      - "{{ result.json.status.readyReplicas }} ready replicas"
+      - "{{ result.json.spec.replicas }} configured replicas"
+  when: not object_ready
