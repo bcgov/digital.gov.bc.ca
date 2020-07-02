@@ -11,12 +11,16 @@ WORKDIR /app
 COPY package.json ./
 
 COPY yarn.lock ./
+# create a .cache folder and give it read and write permission
+RUN mkdir -p /.cache && chmod 666 -R /.cache
+
 
 # add bash to the image
 RUN apk add --no-cache bash
 
 # The default time out is far to short for openshift to install dependancies properly
 RUN yarn install --network-timeout=600000
+
 
 # add app
 COPY . ./

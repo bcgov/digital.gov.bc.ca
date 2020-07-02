@@ -1,0 +1,72 @@
+apiVersion: v1
+objects:
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewBuild
+    labels:
+      build: ${NAME}
+    name: ${NAME}
+    namespace: xdwiwd-tools
+  spec:
+    failedBuildsHistoryLimit: 5
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: ${NAME}:${IMAGE_TAG}
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      contextDir: strapi-app
+      git:
+        ref: dep-63-stapi
+        uri: https://github.com/bcgov/digital.gov.bc.ca
+      type: Git
+    strategy:
+      dockerStrategy:
+        from:
+          kind: ImageStreamTag
+          name: node:12.17.0-alpine
+          namespace: xdwiwd-tools
+      type: Docker
+    successfulBuildsHistoryLimit: 5
+    triggers:
+    - github:
+        secret: YW9tss7Bya-t8fJGXvU1
+      type: GitHub
+    - generic:
+        secret: D2eHz-yln9hxejZUj9Hx
+      type: Generic
+    - type: ConfigChange
+    - imageChange:
+        lastTriggeredImageID: node@sha256:a79c15f7c8140854751302930e1282c361efb8a1c7f2cf99477992f975b80950
+      type: ImageChange
+  status:
+    lastVersion: 1
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewBuild
+    generation: 1
+    labels:
+      build: ${NAME}
+    name: ${NAME}
+    namespace: xdwiwd-tools
+  spec:
+    lookupPolicy:
+      local: false
+kind: Template
+metadata:
+  resourceVersion: ""
+  selfLink: ""
+parameters:  
+- name: NAME
+  required: true
+  description: the name of the components
+- name: IMAGE_TAG
+  required: true
+  description: the output image stream tag
