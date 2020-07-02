@@ -14,6 +14,9 @@ COPY yarn.lock ./
 # create a .cache folder and give it read and write permission
 RUN mkdir -p /.cache && chmod 666 -R /.cache
 
+# attempt to remove access permissions 
+RUN chmod 777 -R ./
+
 
 # add bash to the image
 RUN apk add --no-cache bash
@@ -26,4 +29,4 @@ RUN yarn install --network-timeout=600000
 COPY . ./
 
 # start app
-CMD ["yarn","start"]
+CMD ["yarn","start"]  

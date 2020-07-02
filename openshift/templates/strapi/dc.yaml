@@ -36,7 +36,7 @@ objects:
               env:
                 # One of these two configs should work
                 - name: DATABASE_HOST
-                  value: mongodb  
+                  value: mongodb-internal  
                 - name: DATABASE_PORT
                   value: "27017"
                 - name: DATABASE_NAME
