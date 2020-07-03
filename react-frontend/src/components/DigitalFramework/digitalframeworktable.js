@@ -26,11 +26,15 @@ const DigitalFrameworkTable = (props) => {
     <Row key={i} className={i === entries - 1 ? 'lastRow' : 'contentRow'}>
       <Col sm={12} md={6}>
         {isMobile && <div className="digitalTableTitle">Priority Action</div>}
-        <div className="digitalParagraph">{priorityAction}</div>
+        <div className="digitalParagraph">
+          <p>{priorityAction}</p>
+        </div>
       </Col>
       <Col sm={12} md={6}>
         {isMobile && <div className="digitalTableTitle">Objective</div>}
-        <div className="digitalParagraph">{props.objectives[i]}</div>
+        <div className="digitalParagraph">
+          <p>{props.objectives[i]}</p>
+        </div>
       </Col>
     </Row>
   ));
@@ -41,17 +45,23 @@ const DigitalFrameworkTable = (props) => {
         {!isMobile ? (
           <Row className="firstRow">
             <Col md={6} lg={6}>
-              <div className="digitalTitle">Priority Actions</div>
+              <div>
+                <h2 className="digitalTitle">Priority Actions</h2>
+              </div>
             </Col>
             <Col md={6} lg={6}>
-              <div className="digitalTitle">Objectives</div>
+              <div>
+                <h2 className="digitalTitle">Objectives</h2>
+              </div>
             </Col>
           </Row>
         ) : (
           <Row className="firstRow">
             <Col sm={12}>
-              <div className="digitalTitle">
-                Priority Actions and Objectives
+              <div>
+                <h2 className="digitalTitle">
+                  Priority Actions and Objectives
+                </h2>
               </div>
             </Col>
           </Row>

@@ -5,7 +5,9 @@ const DigitalFrameworkBlock = (props) => {
   return (
     <div className="digitalBlock">
       <h2 className="digitalTitle">{props.title}</h2>
-      <div className="digitalParagraph">{props.paragraph}</div>
+      <div className="digitalParagraph">
+        <p>{props.paragraph}</p>
+      </div>
     </div>
   );
 };

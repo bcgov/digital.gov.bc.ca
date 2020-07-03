@@ -3,8 +3,11 @@
 }
 
 .cardTitle {
+    font-family: 'BC Sans';
+    position: relative;
+    font-size: 31px;
+    line-height: 44px;
     font-weight: bold;
-    font-size: 30px;
 }
 
 .cardDescription {
@@ -12,6 +15,7 @@
 }
 
 .cardLink {
+    font-family: 'BC Sans';
     font-weight: bold;
     bottom: 50px;
     position: absolute;

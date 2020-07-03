@@ -10,8 +10,8 @@ function Standards() {
           <Row>
             <Col md={12} lg={4}>
               <div className="standardInfo">
-                <div className="standardInfoTitle">
-                  <p>Standards</p>
+                <div>
+                  <p className="standardInfoTitle">Standards</p>
                 </div>
                 <div className="resourceLink">
                   <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/im-it-standards/ministry-standards?keyword=im/it&keyword=ministry&keyword=standards">
@@ -27,8 +27,8 @@ function Standards() {
             </Col>
             <Col md={12} lg={4}>
               <div className="standardInfo">
-                <div className="standardInfoTitle">
-                  <p>Privacy</p>
+                <div>
+                  <p className="standardInfoTitle">Privacy</p>
                 </div>
                 <div className="resourceLink">
                   <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/privacy-policy?keyword=privacy&keyword=management">
@@ -49,8 +49,8 @@ function Standards() {
             </Col>
             <Col md={12} lg={4}>
               <div className="standardInfo">
-                <div className="standardInfoTitle">
-                  <p>Security</p>
+                <div>
+                  <p className="standardInfoTitle">Security</p>
                 </div>
                 <div className="resourceLink">
                   <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines">

@@ -35,7 +35,9 @@ function InfoCard(props) {
     return (
       <Card className="cardBody" hoverable style={{ height: '300px' }}>
         <div className="cardText">
-          <div className="cardTitle">{props.title}</div>
+          <div>
+            <h2 className="cardTitle">{props.title}</h2>
+          </div>
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
             {isRouteCard ? (

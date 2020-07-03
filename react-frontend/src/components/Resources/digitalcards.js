@@ -23,7 +23,9 @@ const descriptions = [
 function DigitalCards() {
   return (
     <div className="guides">
-      <div className="resourceInfoTitle">Standards and Policy</div>
+      <div>
+        <h2 className="resourceInfoTitle">Standards and Policy</h2>
+      </div>
       <div className="resourceInfo">
         <Grid>
           <Row>
@@ -45,12 +47,14 @@ function DigitalCards() {
             </Col>
           </Row>
         </Grid>
-        <div className="digitalSubtitle">
-          See how we are working in the open on the next IM/IT Policy Framework
-          -{' '}
-          <a href="https://github.com/bcgov/digital-policy">
-            view the alpha version on Github
-          </a>
+        <div>
+          <p className="digitalSubtitle">
+            See how we are working in the open on the next IM/IT Policy
+            Framework -{' '}
+            <a href="https://github.com/bcgov/digital-policy">
+              view the alpha version on Github
+            </a>
+          </p>
         </div>
       </div>
     </div>

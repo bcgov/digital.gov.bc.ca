@@ -6,8 +6,8 @@ const HomeBanner = () => {
   return (
     <div className="pageTop">
       <div className="pageText">
-        <div className="pageTitle">
-          <p>Digital Government</p>
+        <div>
+          <p className="pageTitle">Digital Government</p>
         </div>
         <div className="pageDescription">
           <p>

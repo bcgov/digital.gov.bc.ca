@@ -6,11 +6,11 @@ function ResourceBanner() {
   return (
     <div className="pageTop">
       <div className="pageText">
-        <div className="pageTitle">
-          <p>Resources</p>
+        <div>
+          <h2 className="pageTitle">Resources</h2>
         </div>
-        <div className="pageDescription">
-          <p>
+        <div>
+          <p className="pageDescription">
             Find standards, guides, and tools for using digital technology and
             building digital services.
           </p>

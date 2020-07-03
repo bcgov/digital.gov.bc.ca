@@ -1,5 +1,4 @@
 .digitalContainer {
-    font-family: Arial, Helvetica, sans-serif;
     padding-top: 100px;
 }
 
@@ -64,6 +63,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+
+    .digitalContainer {
+        padding-top: 65px;
+    }
     .contentRow {
         padding-top: 15px;
     }
