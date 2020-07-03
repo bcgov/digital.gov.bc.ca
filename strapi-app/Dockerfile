@@ -7,22 +7,24 @@ WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
 # ENV PATH /app/node_modules/.bin:$PATH
 
+# add bash to the image
+RUN apk add --no-cache bash
+
 # install app dependencies
 COPY package.json ./
 
 COPY yarn.lock ./
 # create a .cache folder and give it read and write permission
-RUN mkdir -p /.cache && chmod 666 -R /.cache
-
-# attempt to remove access permissions 
-RUN chmod 777 -R ./
+RUN yarn config set cache-folder ./  && yarn install --network-timeout=600000
 
 
-# add bash to the image
-RUN apk add --no-cache bash
+# mkdir -p /.cache && chmod 666 -R /.cache
 
-# The default time out is far to short for openshift to install dependancies properly
-RUN yarn install --network-timeout=600000
+# # attempt to remove access permissions 
+# RUN chmod 777 -R ./
+
+# # The default time out is far to short for openshift to install dependancies properly
+# RUN yarn install --network-timeout=600000
 
 
 # add app
