@@ -47,5 +47,12 @@ footer {
     footer ul li a {
       padding-left: 5px;
       padding-right: 5px;
+      font-size: 11px;
     }
+
+    footer .container {
+      height: 70px;
+    }
+
+    
   }

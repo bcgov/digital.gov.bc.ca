@@ -1,5 +1,7 @@
 .digitalContainer {
     padding-top: 100px;
+    background-color: #F2F2F2;
+    padding-bottom: 70px;
 }
 
 .digitalBody {
@@ -67,6 +69,7 @@
     .digitalContainer {
         padding-top: 65px;
     }
+
     .contentRow {
         padding-top: 15px;
     }
@@ -74,5 +77,15 @@
     .lastRow {
         height: 200px;
         padding-top: 20px;
+    }
+
+
+    .digitalBlock {
+        margin-bottom: 25px;
+
+    }
+
+    .digitalTable {
+        margin-bottom: 100px;
     }
 }

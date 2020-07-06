@@ -25,13 +25,21 @@ const DigitalFrameworkTable = (props) => {
   const body = props.priorityActions.map((priorityAction, i) => (
     <Row key={i} className={i === entries - 1 ? 'lastRow' : 'contentRow'}>
       <Col sm={12} md={6}>
-        {isMobile && <div className="digitalTableTitle">Priority Action</div>}
+        {isMobile && (
+          <div>
+            <h3 className="digitalTableTitle">Priority Action</h3>
+          </div>
+        )}
         <div className="digitalParagraph">
           <p>{priorityAction}</p>
         </div>
       </Col>
       <Col sm={12} md={6}>
-        {isMobile && <div className="digitalTableTitle">Objective</div>}
+        {isMobile && (
+          <div>
+            <h3 className="digitalTableTitle">Objective</h3>
+          </div>
+        )}
         <div className="digitalParagraph">
           <p>{props.objectives[i]}</p>
         </div>

@@ -9,8 +9,8 @@ function ResourceBanner() {
         <div>
           <h2 className="pageTitle">Resources</h2>
         </div>
-        <div>
-          <p className="pageDescription">
+        <div className="pageDescription">
+          <p>
             Find standards, guides, and tools for using digital technology and
             building digital services.
           </p>

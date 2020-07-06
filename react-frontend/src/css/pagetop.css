@@ -17,10 +17,9 @@
 }
 
 .pageText {
-    bottom: 35%;
+    padding-top: 250px;
     text-align: center;
     width: 1124px;
-    position: absolute;
     font-family: 'BC Sans';
     left: 0;
     right: 0;
@@ -43,6 +42,11 @@
     }
 
     .pageText {
+        padding-top: 100px;
         width: 336px;
+    }
+
+    .pageTop {
+        height: 400px;
     }
 }
