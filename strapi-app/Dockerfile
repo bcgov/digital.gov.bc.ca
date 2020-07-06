@@ -8,7 +8,14 @@ WORKDIR /app
 # ENV PATH /app/node_modules/.bin:$PATH
 
 # add bash to the image
-RUN apk add --no-cache bash  && apk add --no-cache curl && apk add mongodb=3.4.4-r0
+RUN apk add --no-cache bash  && apk add --no-cache curl 
+
+# Try adding the mongo tools here
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories
+RUN apk update
+RUN apk add mongodb=3.4.4-r0
+
 
 # install app dependencies
 COPY package.json ./
