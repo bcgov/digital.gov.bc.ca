@@ -1,6 +1,6 @@
 # pull official base image
-# FROM node:12.17.0-alpine
-FROM alpine:edge
+FROM node:12.17.0-alpine
+
 # set working directory
 WORKDIR /app
 
@@ -8,7 +8,7 @@ WORKDIR /app
 # ENV PATH /app/node_modules/.bin:$PATH
 
 # add bash to the image
-RUN apk add --no-cache bash  && apk add --no-cache curl && apk add --no-cache mongodb
+RUN apk add --no-cache bash  && apk add --no-cache curl && apk add mongodb=3.4.4-r0
 
 # install app dependencies
 COPY package.json ./
