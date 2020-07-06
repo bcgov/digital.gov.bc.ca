@@ -8,7 +8,7 @@ WORKDIR /app
 # ENV PATH /app/node_modules/.bin:$PATH
 
 # add bash to the image
-RUN apk add --no-cache bash  && apk --no-cache add curl
+RUN apk add --no-cache bash  && apk --no-cache add curl && apk --no-cache mongodb
 
 # install app dependencies
 COPY package.json ./
