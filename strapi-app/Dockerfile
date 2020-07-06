@@ -8,15 +8,16 @@ WORKDIR /app
 # ENV PATH /app/node_modules/.bin:$PATH
 
 # add bash to the image
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash  && apk --no-cache add curl
 
 # install app dependencies
 COPY package.json ./
 
 COPY yarn.lock ./
 # create a .cache folder and give it read and write permission
-RUN yarn config set cache-folder ./  && yarn install --network-timeout=600000
+# RUN yarn config set cache-folder ./  && yarn install --network-timeout=600000
 
+RUN yarn install --network-timeout=600000
 
 # mkdir -p /.cache && chmod 666 -R /.cache
 
