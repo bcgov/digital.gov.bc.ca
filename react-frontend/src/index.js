@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { ApolloProvider } from 'react-apollo';
 import client from './utils/apolloClient';
-
+import './index.css';
 import App from './containers/App';
 
 /*
@@ -15,7 +15,9 @@ import App from './containers/App';
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <body>
+      <App />
+    </body>
   </ApolloProvider>,
 
   document.getElementById('root')

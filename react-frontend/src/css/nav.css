@@ -12,24 +12,24 @@ header {
     -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
     -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
     box-shadow: 0 6px 8px -4px #b3b1b3;
-    font-family: 'Open Sans', sans-serif;
   }
   
   header h1 {
-    font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: normal;  /* 400 */
-    margin: 5px 5px 0 18px;
+    margin: 0px 5px 0px 25px;
     visibility: hidden;
   }
   
   .titleText {
       color: white;
   }
+
   header .banner {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 10px 0 0;
+    margin: 0 -10px 0 0;
     color: #fff;
     /* border-style: dotted;
     border-width: 1px;
@@ -38,7 +38,7 @@ header {
   
   header .other {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
     /* border-style: dotted;
@@ -124,6 +124,11 @@ header {
     outline-offset: 1px;
   }
 
+  .navOption {
+    color: white;
+    margin-bottom: -1px;
+  }
+
   /*
     These are sample media queries only. Media queries are quite subjective
     but, in general, should be made for the three different classes of screen
@@ -152,7 +157,7 @@ header {
     }
 
     header .other {
-      margin-left: 0px;
+      margin-left: -10px;
     }
 
     header .nav-btn {
@@ -169,6 +174,7 @@ header {
       font-size: calc(7px + 2.2vw);
       visibility: visible;
     }
+
   }
   
   @media screen and (min-width: 900px) {
@@ -176,4 +182,5 @@ header {
       font-size: 2.0em;
       visibility: visible;
     }
+
   }

@@ -5,8 +5,8 @@ const DigitalFrameworkBanner = () => {
   return (
     <div className="pageTop">
       <div className="pageText">
-        <div className="pageTitle">
-          <p>Digital Framework</p>
+        <div className>
+          <p className="pageTitle">Digital Framework</p>
         </div>
         <div className="pageDescription">
           <p>

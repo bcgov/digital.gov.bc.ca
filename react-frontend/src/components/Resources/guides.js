@@ -6,7 +6,9 @@ import InfoCard from '../Home/infocard';
 function Guides() {
   return (
     <div className="guides">
-      <div className="resourceInfoTitle">Guides</div>
+      <div>
+        <h2 className="resourceInfoTitle">Guides</h2>
+      </div>
       <div className="resourceInfo">
         <Grid>
           <Row>

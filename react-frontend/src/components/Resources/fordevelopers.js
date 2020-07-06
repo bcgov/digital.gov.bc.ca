@@ -5,7 +5,9 @@ import InfoCard from '../Home/infocard';
 function ForDevelopers() {
   return (
     <div className="forDevelopers">
-      <div className="resourceInfoTitle">For Developers</div>
+      <div>
+        <h2 className="resourceInfoTitle">For Developers</h2>
+      </div>
       <div className="resourceInfo">
         <Grid>
           <Row>

@@ -5,7 +5,9 @@ import '../../css/resources.css';
 function ForDesigners() {
   return (
     <div className="forDesigners">
-      <div className="resourceInfoTitle">For Designers</div>
+      <div>
+        <h2 className="resourceInfoTitle">For Designers</h2>
+      </div>
       <Grid>
         <Row>
           <Col md={12} lg={4}>

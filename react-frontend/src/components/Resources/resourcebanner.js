@@ -6,8 +6,8 @@ function ResourceBanner() {
   return (
     <div className="pageTop">
       <div className="pageText">
-        <div className="pageTitle">
-          <p>Resources</p>
+        <div>
+          <h2 className="pageTitle">Resources</h2>
         </div>
         <div className="pageDescription">
           <p>
