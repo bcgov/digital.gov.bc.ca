@@ -7,22 +7,49 @@ function Footer() {
       <div className="container">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="footerLink">
+              Home
+            </Link>
           </li>
           <li>
-            <a href=".">Disclaimer</a>
+            <a
+              className="footerLink"
+              href="https://www2.gov.bc.ca/gov/content/home/disclaimer"
+            >
+              Disclaimer
+            </a>
           </li>
           <li>
-            <a href=".">Privacy</a>
+            <a
+              className="footerLink"
+              href="https://www2.gov.bc.ca/gov/content/home/privacy"
+            >
+              Privacy
+            </a>
           </li>
           <li>
-            <a href=".">Accessibility</a>
+            <a
+              className="footerLink"
+              href="https://www2.gov.bc.ca/gov/content/home/accessible-government"
+            >
+              Accessibility
+            </a>
           </li>
           <li>
-            <a href=".">Copyright</a>
+            <a
+              className="footerLink"
+              href="https://www2.gov.bc.ca/gov/content/home/copyright"
+            >
+              Copyright
+            </a>
           </li>
           <li>
-            <a href=".">Contact Us</a>
+            <a
+              className="footerLink"
+              href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services"
+            >
+              Contact Us
+            </a>
           </li>
         </ul>
       </div>

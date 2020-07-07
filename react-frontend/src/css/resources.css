@@ -1,5 +1,6 @@
 .resourceContainer {
     padding-top: 100px;
+    background-color: #F2F2F2;
 }
 .resourceHeader {
     height: 600px;
@@ -12,9 +13,9 @@
 }
 
 .resourceTitle {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'BC Sans';
     position: relative;
-    font-size: 37px;
+    font-size: 31px;
     line-height: 44px;
     text-align: center;
     font-weight: bold;
@@ -63,6 +64,7 @@
 
 .resourceLink {
     font-weight: bold;
+    font-family: 'BC Sans';
     margin-bottom: 10px;
 }
 
@@ -75,6 +77,13 @@
     margin: auto;
     margin-bottom: 40px;
     align-content: left;
+}
+
+.digitalSubtitle {
+    font-weight: bold;
+    font-size: 16pt;
+    margin: auto;
+    text-align: center;
 }
 
 .cardGrid {
@@ -156,6 +165,12 @@
 
     .guidesImg {
         width: 330px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .standardInfoTitle {
+            margin-bottom: 0px;
+        }
     }
 
 }

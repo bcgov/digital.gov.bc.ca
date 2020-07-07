@@ -6,7 +6,9 @@ import InfoCard from '../Home/infocard';
 function Guides() {
   return (
     <div className="guides">
-      <div className="resourceInfoTitle">Guides</div>
+      <div>
+        <h2 className="resourceInfoTitle">Guides</h2>
+      </div>
       <div className="resourceInfo">
         <Grid>
           <Row>
@@ -25,7 +27,7 @@ function Guides() {
                 description={
                   'When you can’t meet with your coworkers or clients face-to-face, communicating with them by video can be the next best thing. There are many options available for video communication platforms or tools, many of which can also be used for instant messaging or chat, screen sharing and transferring files.'
                 }
-                linkText={'More'}
+                // linkText={'More'}
               />
             </Col>
           </Row>

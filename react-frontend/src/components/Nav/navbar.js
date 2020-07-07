@@ -75,7 +75,7 @@ function NavBar() {
                 to="/"
                 className={activePage === '/' ? 'active' : 'notactive'}
               >
-                Home
+                <p className="navOption">Home</p>
               </Link>
             </li>
             <li>
@@ -83,15 +83,15 @@ function NavBar() {
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
               >
-                Resources
+                <p className="navOption">Resources</p>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a href=".">Products & Services</a>
             </li>
             <li>
               <a href=".">Blog</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

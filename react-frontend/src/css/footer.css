@@ -24,13 +24,14 @@ footer {
     height: 100%;
   }
   
-  footer ul li a {
+  .footerLink {
     font-size: 0.813em;
     font-weight: normal;  /* 400 */
     color: #fff;
     border-right: 1px solid #4b5e7e;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none;
   }
   
   a:hover {
@@ -41,4 +42,19 @@ footer {
   :focus {
     outline: 4px solid #3B99FC;
     outline-offset: 1px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .footerLink {
+      color: white;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 11px;
+    }
+
+    footer .container {
+      height: 70px;
+    }
+
+    
   }
