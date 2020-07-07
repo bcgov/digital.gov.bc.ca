@@ -93,7 +93,7 @@ function NavBar() {
                   activePage === '/products-services' ? 'active' : 'notactive'
                 }
               >
-                Products & Services
+                <p className="navOption">Products & Services</p>
               </Link>
             </li>
             {/* 

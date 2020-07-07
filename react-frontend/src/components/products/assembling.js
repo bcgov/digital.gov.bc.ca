@@ -50,8 +50,8 @@ const Assembling = () => {
   );
   return (
     <div className="definingContainer">
-      <div className="productsSubtitle">
-        Assembling and supporting your team
+      <div>
+        <p className="productsSubtitle">Assembling and supporting your team</p>
       </div>
       <p>
         Whatever technology solution you decide to pursue, you will need a team
@@ -63,16 +63,16 @@ const Assembling = () => {
       <Grid className="cardAdjustment">
         <Row>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardOne} />
+            <ProductsCard content={cardOne} height="220px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardTwo} />
+            <ProductsCard content={cardTwo} height="220px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardThree} />
+            <ProductsCard content={cardThree} height="220px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardFour} />
+            <ProductsCard content={cardFour} height="220px" />
           </Col>
         </Row>
       </Grid>

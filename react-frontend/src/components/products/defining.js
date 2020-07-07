@@ -4,8 +4,8 @@ import ProductsCard from './productscard';
 
 const Defining = () => {
   let cardOne = (
-    <div className="cardContent">
-      <p>
+    <div>
+      <p className="cardContent">
         <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design">
           The Service Design team
         </a>{' '}
@@ -16,8 +16,8 @@ const Defining = () => {
   );
 
   let cardTwo = (
-    <div className="cardContent">
-      <p>
+    <div>
+      <p className="cardContent">
         Consider if there are{' '}
         <a href="https://www2.gov.bc.ca/gov/content/data">
           data and data services
@@ -28,8 +28,8 @@ const Defining = () => {
   );
 
   let cardThree = (
-    <div className="cardContent">
-      <p>
+    <div>
+      <p className="cardContent">
         If you are trying to improve a <b>process</b>,{' '}
         <a href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/lean-bc">
           Lean BC
@@ -39,9 +39,10 @@ const Defining = () => {
       </p>
     </div>
   );
+
   return (
     <div className="definingContainer">
-      <div className="productsSubtitle">Defining problems, outcomes, value</div>
+      <p className="productsSubtitle">Defining problems, outcomes, value</p>
       <p>
         To truly improve something for people, it’s critical to take time to
         understand them and be clear about what you want to achieve.

@@ -12,16 +12,19 @@ const ProductsInstructions = () => {
   var cols = [];
   for (var i = 0; i < 4; i++) {
     cols.push(
-      <Col className="instructionCol" sm={12} md={3} key={i}>
-        {instructions[i]}
+      <Col sm={12} md={3} key={i}>
+        <p className="instructionCol">{instructions[i]}</p>
       </Col>
     );
   }
+
   return (
     <div className="instructions">
-      <div className="instructionsFirst">
-        Before you’re ready to create or improve a digital service, you will
-        need to:
+      <div>
+        <p className="instructionsFirst">
+          Before you’re ready to create or improve a digital service, you will
+          need to:
+        </p>
       </div>
       <Grid className="cardAdjustment">
         <Row>{cols}</Row>

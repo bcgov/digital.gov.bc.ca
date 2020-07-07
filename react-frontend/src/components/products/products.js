@@ -12,8 +12,10 @@ const Products = () => {
       <ProductsBanner />
       <div className="productsBody">
         <ProductsInstructions />
-        <div className="productsTitle">
-          Here are some services to help you along this journey:
+        <div>
+          <p className="productsTitle">
+            Here are some services to help you along this journey:
+          </p>
         </div>
         <Defining />
         <Considering />

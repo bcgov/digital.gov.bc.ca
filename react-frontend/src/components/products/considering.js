@@ -55,8 +55,10 @@ const Considering = () => {
   );
   return (
     <div className="definingContainer">
-      <div className="productsSubtitle">
-        Considering different technology approaches
+      <div>
+        <p className="productsSubtitle">
+          Considering different technology approaches
+        </p>
       </div>
       <p>
         Depending on the complexity of your problem, you may apply a variety of
@@ -74,16 +76,16 @@ const Considering = () => {
       <Grid className="cardAdjustment">
         <Row>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardOne} />
+            <ProductsCard content={cardOne} height="220px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardTwo} />
+            <ProductsCard content={cardTwo} height="220px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardThree} />
+            <ProductsCard content={cardThree} height="220px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardFour} />
+            <ProductsCard content={cardFour} height="220px" />
           </Col>
         </Row>
       </Grid>
