@@ -6,6 +6,7 @@ const routeDisplayNames = {
   resources: 'Resources',
   'products-services': 'Products and Services',
   'digital-framework': 'Digital Framework',
+  'case-studies': 'Case Studies',
 };
 const BreadCrumbs = () => {
   const history = useHistory();
