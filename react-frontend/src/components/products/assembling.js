@@ -6,7 +6,12 @@ const Assembling = () => {
   let cardOne = (
     <div className="cardContent">
       <p>
-        <a href="https://bcdevexchange.org/ExchangeLab">The Exchange Lab</a>{' '}
+        <a
+          className="productCardLink"
+          href="https://bcdevexchange.org/ExchangeLab"
+        >
+          The Exchange Lab
+        </a>{' '}
         provides training, community, and digital service delivery residency
         programs that apply Agile and DevOps methods that can help you build
         your team.
@@ -19,7 +24,12 @@ const Assembling = () => {
       <p>
         If you need to contract a team and want them to follow an Agile process,
         you can use the{' '}
-        <a href="https://digital.gov.bc.ca/marketplace">Digital Marketplace.</a>
+        <a
+          className="productCardLink"
+          href="https://digital.gov.bc.ca/marketplace"
+        >
+          Digital Marketplace.
+        </a>
       </p>
     </div>
   );
@@ -28,7 +38,10 @@ const Assembling = () => {
     <div className="cardContent">
       <p>
         By requesting access to the B.C. Government’s{' '}
-        <a href="https://www.bcdevexchange.org/DevOpsPlatform">
+        <a
+          className="productCardLink"
+          href="https://www.bcdevexchange.org/DevOpsPlatform"
+        >
           DevOps Container Platform
         </a>
         , you can empower your developers to deploy digital applications
@@ -41,7 +54,10 @@ const Assembling = () => {
     <div className="cardContent">
       <p>
         Learn about{' '}
-        <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment">
+        <a
+          className="productCardLink"
+          href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
+        >
           IM/IT Capital Investment
         </a>{' '}
         that you may require to build your service.

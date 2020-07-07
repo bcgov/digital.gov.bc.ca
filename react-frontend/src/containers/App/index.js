@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '../../components/Nav/navbar';
 import Footer from '../../components/Nav/footer';
 import Routes from '../../components/Nav/routes';
+import BreadCrumbs from '../../components/Nav/breadcrumbs';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       {/* <Nav /> */}
       <Router>
         <NavBar />
+        <BreadCrumbs />
         <Routes />
         <Footer />
       </Router>

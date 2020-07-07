@@ -58,6 +58,8 @@ function CardList() {
                 title={'Digital Policy'}
                 img={imgLinks[2]}
                 description={descriptions[2]}
+                // TODO uncomment these when pages are made
+                // linkText={linkTexts[2]}
               />
             </Col>
             <Col sm={12} md={6}>

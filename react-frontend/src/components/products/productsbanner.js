@@ -8,10 +8,8 @@ const ProductsBanner = () => {
         <div>
           <p className="pageTitle">Products and Services</p>
         </div>
-        <div>
-          <p className="pageDescription">
-            Supports to help you create or improve a digital service.
-          </p>
+        <div className="pageDescription">
+          <p>Supports to help you create or improve a digital service.</p>
         </div>
       </div>
     </div>

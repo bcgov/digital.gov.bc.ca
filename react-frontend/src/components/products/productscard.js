@@ -6,7 +6,7 @@ import '../../css/card.css';
 function ProductsCard(props) {
   let cardHeight = 0;
   if (props.height == null) {
-    cardHeight = '170px';
+    cardHeight = '200px';
   } else {
     cardHeight = props.height;
   }

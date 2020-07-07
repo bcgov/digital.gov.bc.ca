@@ -1,0 +1,35 @@
+.breadCrumbs {
+    position: absolute;
+    top: 150px;
+    left: 5%;
+    width: 100%;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    color: #fff;
+    list-style: none;
+}
+
+.listOption {
+    display: flex;
+    font-size: 16px;
+    font-weight: normal;  /* 400 */
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .breadCrumbs {
+        top: 80px;
+        left: 0px;
+        margin-left: -15px;
+    }
+
+    .listOption {
+        font-size: 14px;
+    }
+}

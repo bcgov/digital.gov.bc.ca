@@ -2,10 +2,26 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
 const instructions = [
-  'Clearly define the problems you’re trying to solve, the outcomes you want to improve, or the value you want to deliver for the users of your service',
-  'Identify and consider different technology approaches you might pursue — for example, licensing and customizing a commercial digital product or building a custom application from scratch',
-  'Confirm support and funding to pursue your solution',
-  'Assemble a team with the skills and capacity to deliver, test, improve, and maintain your digital service into the future',
+  <p>
+    Clearly define the <span className="bolder">problems</span> you’re trying to
+    solve, the <span className="bolder">outcomes</span> you want to improve, or
+    the <span className="bolder">values</span> you want to deliver for the users
+    of your service
+  </p>,
+  <p>
+    Identify and consider{' '}
+    <span className="bolder">different technology approaches</span> you might
+    pursue — for example, licensing and customizing a commercial digital product
+    or building a custom application from scratch
+  </p>,
+  <p>
+    Confirm <span className="bolder">support and funding</span> to pursue your
+    solution
+  </p>,
+  <p>
+    <span className="bolder">Assemble a team</span> with the skills and capacity
+    to deliver, test, improve, and maintain your digital service into the future
+  </p>,
 ];
 
 const ProductsInstructions = () => {
@@ -13,7 +29,7 @@ const ProductsInstructions = () => {
   for (var i = 0; i < 4; i++) {
     cols.push(
       <Col sm={12} md={3} key={i}>
-        <p className="instructionCol">{instructions[i]}</p>
+        <div className="instructionCol">{instructions[i]}</div>
       </Col>
     );
   }

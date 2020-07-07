@@ -152,7 +152,7 @@
     }
 
     .standardInfoTitle {
-        margin-bottom: -15px;
+        margin-bottom: 0px;
     }
 
     .resourceInfo {
@@ -165,12 +165,6 @@
 
     .guidesImg {
         width: 330px;
-    }
-
-    @media only screen and (max-width: 800px) {
-        .standardInfoTitle {
-            margin-bottom: 0px;
-        }
     }
 
 }

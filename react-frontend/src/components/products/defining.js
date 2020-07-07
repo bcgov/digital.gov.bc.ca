@@ -6,7 +6,10 @@ const Defining = () => {
   let cardOne = (
     <div>
       <p className="cardContent">
-        <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design">
+        <a
+          className="productCardLink"
+          href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
+        >
           The Service Design team
         </a>{' '}
         can help you discover and understand problems that currently exist with
@@ -19,7 +22,10 @@ const Defining = () => {
     <div>
       <p className="cardContent">
         Consider if there are{' '}
-        <a href="https://www2.gov.bc.ca/gov/content/data">
+        <a
+          className="productCardLink"
+          href="https://www2.gov.bc.ca/gov/content/data"
+        >
           data and data services
         </a>{' '}
         that can enhance your research, analysis, and decision-making.
@@ -31,7 +37,10 @@ const Defining = () => {
     <div>
       <p className="cardContent">
         If you are trying to improve a <b>process</b>,{' '}
-        <a href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/lean-bc">
+        <a
+          className="productCardLink"
+          href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/lean-bc"
+        >
           Lean BC
         </a>{' '}
         can help you identify areas for improvement as you apply the Lean
