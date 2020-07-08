@@ -4,6 +4,8 @@ import { Card } from 'antd';
 import '../../css/card.css';
 
 function InfoCard(props) {
+  const linkAdress = props.linkAdress ? '/'.concat(props.linkAdress) : '/#';
+
   if (props.img != null) {
     return (
       <Card
@@ -16,7 +18,7 @@ function InfoCard(props) {
           <div className="cardTitle">{props.title}</div>
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
-            <a href="/#">{props.linkText}</a>
+            <a href={linkAdress}>{props.linkText}</a>
           </div>
         </div>
       </Card>
@@ -28,7 +30,7 @@ function InfoCard(props) {
           <div className="cardTitle">{props.title}</div>
           <div className="cardDescription">{props.description}</div>
           <div className="cardLink">
-            <a href="/#">{props.linkText}</a>
+            <a href={linkAdress}>{props.linkText}</a>
           </div>
         </div>
       </Card>
