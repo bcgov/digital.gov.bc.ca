@@ -5,14 +5,12 @@ import '../../css/card.css';
 
 function ProductsCard(props) {
   let cardHeight = 0;
-  if (props.height == null) {
-    cardHeight = '200px';
-  } else {
-    cardHeight = props.height;
-  }
+
+  cardHeight = props.height == null ? '200px' : props.height;
+
   return (
-    <Card className="cardBody" hoverable style={{ height: cardHeight }}>
-      {props.content}
+    <Card className="cardBody" style={{ height: cardHeight }}>
+      <div className="cardText">{props.content}</div>
     </Card>
   );
 }

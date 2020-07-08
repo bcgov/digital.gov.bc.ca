@@ -3,7 +3,7 @@ import '../../css/pagetop.css';
 
 const DigitalFrameworkBanner = () => {
   return (
-    <div className="pageTop">
+    <div className="pageTop digitalTop">
       <div className="pageText">
         <div className>
           <p className="pageTitle">Digital Framework</p>

@@ -2,59 +2,13 @@
     background-color: #F2F2F2;
     z-index: 0;
     padding-top: 100px;
-}
-
-.contentSpacer {
-    width: 100%;
-    height: 65px;
-}
-
-.homeHeader {
-    height: 600px;
-    width: 100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-color: lightblue;
-    margin-bottom: 50px;
-}
-
-.homeTitle {
-    font-family: 'BC Sans';
-    position: relative;
-    font-size: 37px;
-    line-height: 44px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.homeText {
-    bottom: 20%;
-    text-align: center;
-    width: 1124px;
-    position: relative;
-    font-family: 'BC Sans';
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-
-}
-
-.homeDescription {
-    position: relative;
-    font-size: 11pt;
-    line-height: 12pt;
-}
-
-.homeContainer {
     width: 100%;
     align-content: center;
     text-align: center;
 }
 
 .cardContainer {
-    width: 1124px;
+    width: 85%;
     margin: auto;
 }
 

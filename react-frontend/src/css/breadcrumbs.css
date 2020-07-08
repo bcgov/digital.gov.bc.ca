@@ -1,8 +1,9 @@
 .breadCrumbs {
     position: absolute;
-    top: 150px;
+    top: 133px;
     left: 5%;
     width: 100%;
+    margin-left: -10px;
 }
 
 .options {
@@ -17,16 +18,15 @@
     display: flex;
     font-size: 16px;
     font-weight: normal;  /* 400 */
-    padding: 0 5px 0 5px;
-    text-decoration: none;
-    
+    padding: 0 6px 0 6px;
+    text-decoration: none;  
 }
 
 @media only screen and (max-width: 800px) {
     .breadCrumbs {
         top: 80px;
         left: 0px;
-        margin-left: -15px;
+        margin-left: -13px;
     }
 
     .listOption {

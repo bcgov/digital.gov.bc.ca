@@ -13,12 +13,13 @@ header {
     -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
     box-shadow: 0 6px 8px -4px #b3b1b3;
   }
+
+ 
   
   header h1 {
     font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: normal;  /* 400 */
     margin: 0px 5px 0px 25px;
-    visibility: hidden;
   }
   
   .titleText {
@@ -31,6 +32,7 @@ header {
     align-items: center;
     margin: 0 -10px 0 0;
     color: #fff;
+    height: 65px;
     /* border-style: dotted;
     border-width: 1px;
     border-color: lightgrey; */
@@ -87,6 +89,7 @@ header {
     display: flex;
     flex-direction: column;
     margin: 0;
+    margin-left: -76px;
     color: #fff;
     list-style: none;
     /* border-style: dotted;
@@ -167,14 +170,20 @@ header {
       padding-right: 25px;
       cursor: pointer;
     }
+
+    .navImage {
+      height: 100%;
+      margin-left: 77px;
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 899px) {
     header h1 {
-      font-size: calc(7px + 2.2vw);
+      font-size: 18px;
       visibility: visible;
     }
 
+    
   }
   
   @media screen and (min-width: 900px) {
@@ -183,4 +192,34 @@ header {
       visibility: visible;
     }
 
+  }
+
+  @media screen and (max-width: 800px) {
+    .navImage {
+      height: 60px;
+      margin-left: -15px;
+      margin-top: -5px;
+      margin-right: 0px;
+    }
+
+    header h1 {
+      font-size: 18px;
+      visibility: visible;
+    }
+
+    .navigation-main .container ul {
+      margin-left: -28px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    header h1 {
+      margin: 0px 5px 0px -5%;
+      font-size: 12pt;
+    }
+
+    .navImage {
+      margin-left: -15px;
+      margin-right: 25px;
+    }
   }

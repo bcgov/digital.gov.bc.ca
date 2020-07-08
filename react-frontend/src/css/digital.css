@@ -70,6 +70,9 @@
         padding-top: 65px;
     }
 
+    .digitalTop {
+        padding-top: 25px;
+    }
     .contentRow {
         padding-top: 15px;
     }
@@ -87,5 +90,15 @@
 
     .digitalTable {
         margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .digitalBlock {
+        margin-bottom: 40px;
+    }
+
+    .digitalTable {
+        margin-bottom: 150px;
     }
 }

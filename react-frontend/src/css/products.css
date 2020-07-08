@@ -8,15 +8,20 @@
     margin: auto;
 }
 
+.instructions {
+    margin-left: -3px;
+}
 .instructionsFirst {
     text-align: center;
     margin: auto;
     margin-bottom: 25px;
+
 }
 
 .instructionCol {
     margin-bottom: 25px;
 }
+
 .productsTitle {
     font-size: 22pt;
     font-weight: bold;
@@ -26,6 +31,7 @@
 
 .definingContainer {
     margin-top: 20px;
+
 }
 
 .cardAdjustment {
@@ -46,6 +52,7 @@
     font-size: 12pt;
     line-height: 16pt;
 }
+
 
 .productCardLink {
     text-decoration: underline;
@@ -69,5 +76,13 @@
 
     .definingContainer {
         margin-left: -5px;
+    }
+
+    .productsTitle {
+        margin-left: -4px;
+    }
+
+    .productTop {
+        padding-top: 75px;
     }
 }

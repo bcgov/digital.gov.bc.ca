@@ -23,10 +23,10 @@
     "require-unicode-regexp": "off",
     "max-len": "off",
     "no-process-env": "off",
-    "no-console": "off",
+    "no-console": "warn",
     "max-lines-per-function": "off",
     "no-eq-null": "off",
-    "no-magic-numbers": "off",
+    "no-magic-numbers": "warn",
     "no-mixed-operators": "off"
   }
 }

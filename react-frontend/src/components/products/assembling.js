@@ -2,68 +2,60 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
 
+const cards = [
+  <div className="cardContent">
+    <p>
+      <a
+        className="productCardLink"
+        href="https://bcdevexchange.org/ExchangeLab"
+      >
+        The Exchange Lab
+      </a>{' '}
+      provides training, community, and digital service delivery residency
+      programs that apply Agile and DevOps methods that can help you build your
+      team.
+    </p>
+  </div>,
+  <div className="cardContent">
+    <p>
+      If you need to contract a team and want them to follow an Agile process,
+      you can use the{' '}
+      <a
+        className="productCardLink"
+        href="https://digital.gov.bc.ca/marketplace"
+      >
+        Digital Marketplace.
+      </a>
+    </p>
+  </div>,
+  <div className="cardContent">
+    <p>
+      By requesting access to the B.C. Government’s{' '}
+      <a
+        className="productCardLink"
+        href="https://www.bcdevexchange.org/DevOpsPlatform"
+      >
+        DevOps Container Platform
+      </a>
+      , you can empower your developers to deploy digital applications quickly,
+      securely, and at scale.
+    </p>
+  </div>,
+  <div className="cardContent">
+    <p>
+      Learn about{' '}
+      <a
+        className="productCardLink"
+        href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
+      >
+        IM/IT Capital Investment
+      </a>{' '}
+      that you may require to build your service.
+    </p>
+  </div>,
+];
+
 const Assembling = () => {
-  let cardOne = (
-    <div className="cardContent">
-      <p>
-        <a
-          className="productCardLink"
-          href="https://bcdevexchange.org/ExchangeLab"
-        >
-          The Exchange Lab
-        </a>{' '}
-        provides training, community, and digital service delivery residency
-        programs that apply Agile and DevOps methods that can help you build
-        your team.
-      </p>
-    </div>
-  );
-
-  let cardTwo = (
-    <div className="cardContent">
-      <p>
-        If you need to contract a team and want them to follow an Agile process,
-        you can use the{' '}
-        <a
-          className="productCardLink"
-          href="https://digital.gov.bc.ca/marketplace"
-        >
-          Digital Marketplace.
-        </a>
-      </p>
-    </div>
-  );
-
-  let cardThree = (
-    <div className="cardContent">
-      <p>
-        By requesting access to the B.C. Government’s{' '}
-        <a
-          className="productCardLink"
-          href="https://www.bcdevexchange.org/DevOpsPlatform"
-        >
-          DevOps Container Platform
-        </a>
-        , you can empower your developers to deploy digital applications
-        quickly, securely, and at scale.
-      </p>
-    </div>
-  );
-
-  let cardFour = (
-    <div className="cardContent">
-      <p>
-        Learn about{' '}
-        <a
-          className="productCardLink"
-          href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
-        >
-          IM/IT Capital Investment
-        </a>{' '}
-        that you may require to build your service.
-      </p>
-    </div>
-  );
   return (
     <div className="definingContainer">
       <div>
@@ -79,16 +71,16 @@ const Assembling = () => {
       <Grid className="cardAdjustment">
         <Row>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardOne} height="220px" />
+            <ProductsCard content={cards[0]} height="300px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardTwo} height="220px" />
+            <ProductsCard content={cards[1]} height="300px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardThree} height="220px" />
+            <ProductsCard content={cards[2]} height="300px" />
           </Col>
           <Col sm={12} md={3}>
-            <ProductsCard content={cardFour} height="220px" />
+            <ProductsCard content={cards[3]} height="300px" />
           </Col>
         </Row>
       </Grid>

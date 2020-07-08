@@ -13,19 +13,24 @@ function InfoCard(props) {
   if (props.img != null) {
     return (
       <Card
+        style={{ height: '600px' }}
         className="cardBody"
-        hoverable
-        style={{ height: '575px' }}
         cover={<img className="cardImage" alt="example" src={props.img} />}
       >
         <div className="cardText">
-          <div className="cardTitle">{props.title}</div>
-          <div className="cardDescription">{props.description}</div>
+          <div>
+            <h2 className="cardTitle">{props.title}</h2>
+          </div>
+          <div className="cardDescription">
+            <p>{props.description}</p>
+          </div>
           <div className="cardLink">
             {isRouteCard ? (
               <Link to={props.routePath}>{props.linkText}</Link>
             ) : (
-              <a href={props.linkPath}>{props.linkText}</a>
+              <p>
+                <a href={props.linkPath}>{props.linkText}</a>
+              </p>
             )}
           </div>
         </div>
@@ -33,17 +38,21 @@ function InfoCard(props) {
     );
   } else {
     return (
-      <Card className="cardBody" hoverable style={{ height: '300px' }}>
+      <Card className="cardBody" style={{ height: '300px' }}>
         <div className="cardText">
           <div>
             <h2 className="cardTitle">{props.title}</h2>
           </div>
-          <div className="cardDescription">{props.description}</div>
+          <div className="cardDescription">
+            <p>{props.description}</p>
+          </div>
           <div className="cardLink">
             {isRouteCard ? (
               <Link to={props.routePath}>{props.linkText}</Link>
             ) : (
-              <a href={props.linkPath}>{props.linkText}</a>
+              <p>
+                <a href={props.linkPath}>{props.linkText}</a>
+              </p>
             )}
           </div>
         </div>

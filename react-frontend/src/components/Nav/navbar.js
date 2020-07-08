@@ -9,6 +9,7 @@ function NavBar() {
   const routeLocation = useLocation();
   const [activePage, setActivePage] = useState(routeLocation.pathname);
   const [openMenu, setOpenMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
 
   useEffect(() => {
     function handleResize() {
@@ -16,10 +17,12 @@ function NavBar() {
         const nav = document.getElementById('navbar');
         nav.style.display = 'none';
         setOpenMenu(false);
+        setIsMobile(false);
       } else {
         const nav = document.getElementById('navbar');
         nav.style.display = 'block';
         setOpenMenu(true);
+        setIsMobile(true);
       }
     }
 
@@ -42,6 +45,10 @@ function NavBar() {
     }
   };
 
+  let logoPath = isMobile
+    ? require('../../images/logo-banner.png')
+    : require('../../images/logo.png');
+
   return (
     <div className="navBar">
       <header>
@@ -51,7 +58,8 @@ function NavBar() {
             alt="Go to the Government of British Columbia website"
           >
             <img
-              src={require('../../images/logo-banner.png')}
+              className="navImage"
+              src={logoPath}
               alt="Go to the Government of British Columbia website"
             />
           </a>
@@ -96,10 +104,6 @@ function NavBar() {
                 <p className="navOption">Products & Services</p>
               </Link>
             </li>
-            {/* 
-            // <li>
-            //   <a href=".">Blog</a>
-            // </li> */}
           </ul>
         </div>
       </nav>
