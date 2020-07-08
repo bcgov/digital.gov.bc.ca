@@ -43,7 +43,7 @@ objects:
                   valueFrom:
                     secretKeyRef:
                       name: mongodb 
-                      key: database
+                      key: mongo-url
                 - name: DATABASE_USERNAME
                   valueFrom:
                     secretKeyRef:
