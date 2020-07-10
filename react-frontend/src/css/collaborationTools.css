@@ -7,3 +7,7 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.collaborationToolContainer .pageTitle {
+    text-align: left;
+}

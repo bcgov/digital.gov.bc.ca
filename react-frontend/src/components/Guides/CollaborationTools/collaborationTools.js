@@ -8,9 +8,13 @@ import '../../../css/collaborationTools.css';
 function CollaborationTools() {
   return (
     <div className="collaborationToolContainer">
+      <div className="pageTitle">
+        Video Communication Platforms – Information for the Broader Public
+        Sector
+      </div>
       <strong>
         <i>
-           Note: This guidance is intended primarily to provide broader public
+          Note: This guidance is intended primarily to provide broader public
           sector entities with information on video communications platforms
           during the COVID-19 pandemic. This information should not be
           considered exhaustive. Information for government ministries can be

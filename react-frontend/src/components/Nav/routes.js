@@ -14,7 +14,10 @@ const Routes = () => {
       <Route path="/resources">
         <Resources />
       </Route>
-      <Route path="/guides">
+      <Route path="/guides/communication-platforms">
+        <CollaborationTools />
+      </Route>
+      <Route path="/communication-platforms">
         <CollaborationTools />
       </Route>
       <Route path="/">
