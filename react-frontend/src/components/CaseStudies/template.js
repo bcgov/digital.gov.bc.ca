@@ -42,6 +42,7 @@ const Template = ({
             {resources}
           </div>
         )}
+        <p className="pageSubtitle">Other Case Studies</p>
       </div>
     </div>
   );

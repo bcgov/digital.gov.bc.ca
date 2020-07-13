@@ -29,7 +29,8 @@ const linkTexts = [
   'Connect',
   'Learn more',
 ];
-function CardList() {
+
+const CardList = () => {
   return (
     <div className="cardContainer">
       <div className="cardGrid">
@@ -92,6 +93,6 @@ function CardList() {
       </div>
     </div>
   );
-}
+};
 
 export default CardList;
