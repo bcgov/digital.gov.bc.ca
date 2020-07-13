@@ -36,7 +36,7 @@ objects:
           volumes:
             - configMap:
                 defaultMode: 420
-                name: caddyfile
+                name: caddyfile-${SUFFIX}
               name: caddyfile-volume
           containers:
             - image: >-
@@ -95,6 +95,7 @@ objects:
         file_server 
         encode gzip
 
+        try_files {path} /index.html
         log stdout
         log stderr
 
@@ -110,7 +111,7 @@ objects:
         version: ${IMAGE_TAG}
         pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
-      name: caddyfile
+      name: caddyfile-${SUFFIX}
   - apiVersion: v1
     kind: Service
     spec:
