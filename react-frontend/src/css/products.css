@@ -27,6 +27,7 @@
     font-weight: bold;
     margin-bottom: 5px;
     line-height: 24pt;
+    margin-left: -1px;
 }
 
 .definingContainer {

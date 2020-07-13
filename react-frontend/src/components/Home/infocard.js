@@ -5,10 +5,14 @@ import { Card } from 'antd';
 import '../../css/card.css';
 
 function InfoCard(props) {
+  let cardHeight = 0;
+
   var isRouteCard = false;
   if (props.routePath != null) {
     isRouteCard = true;
   }
+
+  cardHeight = props.height == null ? '300px' : props.height;
 
   if (props.img != null) {
     return (
@@ -38,7 +42,7 @@ function InfoCard(props) {
     );
   } else {
     return (
-      <Card className="cardBody" style={{ height: '300px' }}>
+      <Card className="cardBody" style={{ height: cardHeight }}>
         <div className="cardText">
           <div>
             <h2 className="cardTitle">{props.title}</h2>

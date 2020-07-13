@@ -4,6 +4,16 @@ import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
+import Farmers from '../CaseStudies/farmers';
+import Mining from '../CaseStudies/mining';
+import MedicalServices from '../CaseStudies/medicalservices';
+
+const DisplayNames = {
+  resources: 'Resources',
+  'products-services': 'Products and Services',
+  'digital-framework': 'Digital Framework',
+  'case-studies': 'Case Studies',
+};
 
 const Routes = () => {
   return (
@@ -18,10 +28,11 @@ const Routes = () => {
         <Resources />
       </Route>
       <Route path="/">
-        <Home />
+        <MedicalServices />
       </Route>
     </Switch>
   );
 };
 
 export default Routes;
+export { DisplayNames };

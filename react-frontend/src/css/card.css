@@ -45,12 +45,16 @@
     }
 
     .cardTitle {
-        font-size: 24px;
+        font-size: 22px;
+        text-align: center;
+        margin-top: -10px;
     }
 
     .cardDescription {
         font-weight: normal;
         overflow-y: scroll;
-        height: 125px;
+        text-align: justify;
+        height: 120px;
+        font-size: 10px;
     }
 }

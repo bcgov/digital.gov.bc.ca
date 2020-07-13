@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import '../../css/breadcrumbs.css';
+import { DisplayNames as routeDisplayNames } from '../Nav/routes';
 
-const routeDisplayNames = {
-  resources: 'Resources',
-  'products-services': 'Products and Services',
-  'digital-framework': 'Digital Framework',
-  'case-studies': 'Case Studies',
-};
 const BreadCrumbs = () => {
   const history = useHistory();
   const routeLocation = useLocation();
@@ -17,7 +12,7 @@ const BreadCrumbs = () => {
     return history.listen((location) => {
       setPathName(location.pathname);
     });
-  });
+  }, [history, pathName]);
 
   if (pathName === '/') {
     return null;

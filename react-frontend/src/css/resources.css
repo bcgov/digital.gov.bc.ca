@@ -3,18 +3,17 @@
     background-color: #F2F2F2;
 }
 
-.resourceBody {
+.resourcesBody {
     width: 85%;
-}
-.resourceInfo {
-    margin-left: -7px;
+    margin: auto;
 }
 
 .resourceInfoTitle {
     font-size: 22pt;
     font-weight: bold;
     margin-bottom: 24px;
-    margin-left: 9%;
+    padding-left: 27px;
+    
 }
 
 .standardInfo {
@@ -81,38 +80,12 @@
 
 @media only screen and (max-width: 800px) {
 
-    .resourceBody {
-        width: 330px;
-    }
-
-    .digitalCards {
-        width: 330px;
-        margin: auto;
+    .resourceBlock {
         margin-bottom: 10px;
     }
-
-    .forDesigners {
+    .resourcesBody {
         width: 330px;
         margin: auto;
-        margin-bottom: 10px;
-    }
-
-    .forDevelopers {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-
-    .guides {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-
-    .standards {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
     }
 
     .standardInfoTitle {
@@ -124,7 +97,7 @@
     }
 
     .resourceInfoTitle {
-        margin-left: 3px;
+        padding-left: 0px;
     }
 
     .resourceContainer {

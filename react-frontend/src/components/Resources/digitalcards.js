@@ -22,7 +22,7 @@ const descriptions = [
 
 function DigitalCards() {
   return (
-    <div className="guides">
+    <div className="resourceBlock">
       <div>
         <h2 className="resourceInfoTitle">Standards and Policy</h2>
       </div>

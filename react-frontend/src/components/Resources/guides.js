@@ -5,11 +5,11 @@ import InfoCard from '../Home/infocard';
 
 function Guides() {
   return (
-    <div className="guides">
-      <div>
-        <h2 className="resourceInfoTitle">Guides</h2>
-      </div>
+    <div className="resourceBlock">
       <div className="resourceInfo">
+        <div>
+          <h2 className="resourceInfoTitle">Guides</h2>
+        </div>
         <Grid>
           <Row>
             <Col sm={12} md={6}>
