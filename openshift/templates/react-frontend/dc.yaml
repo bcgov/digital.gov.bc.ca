@@ -95,7 +95,7 @@ objects:
         file_server 
         encode gzip
 
-        try_files {path} /index.html
+        try_files {path} {path}/ /index.html
         log stdout
         log stderr
 
