@@ -583,7 +583,7 @@ function CollaborationTools() {
           disclosure of personal information, is appropriate and lawful.
         </li>
       </ul>
-      <p>You can find training and tutorials on Zoom’s website in </p>
+      <p>You can find training and tutorials on Zoom’s website in </p>{' '}
       <a href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
         A Message to Our Users
       </a>
@@ -596,17 +596,17 @@ function CollaborationTools() {
         enterprise version of Zoom for all K-12 public and independent schools
         in B.C. This version of Zoom has many features to enable secure
         meetings. Find more information and resources for teachers and school
-        administrators on the ministry’s
+        administrators on the ministry’s{' '}
         <a href="https://www.openschool.bc.ca/keeplearning/#sections">
           Keep Learning
-        </a>
+        </a>{' '}
         website.
       </p>
       <h2>
         <strong>Contact Information for Broader Public Sector Entities</strong>
       </h2>
       <p>
-        Privacy and Access Helpline 250-356-1851
+        Privacy and Access Helpline 250-356-1851{' '}
         <a href="mailto:privacy.helpline@gov.bc.ca">
           privacy.helpline@gov.bc.ca
         </a>
