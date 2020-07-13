@@ -31,8 +31,8 @@
 
 .pageDescription {
     position: relative;
-    font-size: 11pt;
-    line-height: 12pt;
+    font-size: 12pt;
+    line-height: 16pt;
 }
 
 @media only screen and (max-width: 800px) {
@@ -60,7 +60,7 @@
     }
 
     .pageDescription {
-        font-size: 8pt;
+        font-size: 10pt;
         text-align: justify;
         width: 100%;
     }

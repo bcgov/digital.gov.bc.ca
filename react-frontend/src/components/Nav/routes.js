@@ -5,6 +5,10 @@ import Resources from '../../components/Resources/resources';
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
 
+//delete on commit, just used for testing
+import MedicalServices from '../CaseStudies/medicalservices';
+import Mining from '../CaseStudies/mining';
+
 const Routes = () => {
   return (
     <Switch>
