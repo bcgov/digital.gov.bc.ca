@@ -8,30 +8,34 @@ import '../../../css/collaborationTools.css';
 function CollaborationTools() {
   return (
     <div className="collaborationToolContainer">
-      <div className="pageTitle">
+      <h1>
         Video Communication Platforms – Information for the Broader Public
         Sector
-      </div>
-      <strong>
-        <i>
-          Note: This guidance is intended primarily to provide broader public
-          sector entities with information on video communications platforms
-          during the COVID-19 pandemic. This information should not be
-          considered exhaustive. Information for government ministries can be
-          found under the heading “Video Communications Platforms – Information
-          for Government Ministries” below. This is a rapidly changing space,
-          and you are encouraged to research the latest updates to ensure
-          protection of information.
-        </i>
-      </strong>
+      </h1>
+      <p>
+        <strong>
+          <i>
+            Note: This guidance is intended primarily to provide broader public
+            sector entities with information on video communications platforms
+            during the COVID-19 pandemic. This information should not be
+            considered exhaustive. Information for government ministries can be
+            found under the heading “Video Communications Platforms –
+            Information for Government Ministries” below. This is a rapidly
+            changing space, and you are encouraged to research the latest
+            updates to ensure protection of information.
+          </i>
+        </strong>
+      </p>
       <h2>
         <strong>Getting started</strong>
       </h2>
-      When you can’t meet with your coworkers or clients face-to-face,
-      communicating with them by video can be the next best thing. Fortunately,
-      there are many options available for video communication platforms or
-      tools, many of which can also be used for instant messaging or chat,
-      screen sharing and transferring files. These options vary by:
+      <p>
+        When you can’t meet with your coworkers or clients face-to-face,
+        communicating with them by video can be the next best thing.
+        Fortunately, there are many options available for video communication
+        platforms or tools, many of which can also be used for instant messaging
+        or chat, screen sharing and transferring files. These options vary by:
+      </p>
       <ul>
         <li>Cost</li>
         <li>
@@ -44,10 +48,12 @@ function CollaborationTools() {
       <h3>
         <strong>Video Communication Options</strong>
       </h3>
-      Options with a star (*) have strong privacy and security features. (Please
-      note this information was current as of May 2020. Service providers may be
-      modifying their service plans and features based on increased demand and
-      changing user needs.)
+      <p>
+        Options with a star (*) have strong privacy and security features.
+        (Please note this information was current as of May 2020. Service
+        providers may be modifying their service plans and features based on
+        increased demand and changing user needs.)
+      </p>
       <CollaborationTool
         url="http://www.skype.com/"
         name="Skype"
@@ -123,65 +129,80 @@ function CollaborationTools() {
       <h2>
         <strong>Privacy and Security</strong>
       </h2>
-      Video communication platforms are crucial to working remotely, but it is
-      important to ensure that use of these tools addresses privacy, security
-      and legal risks. Here we provide some general considerations and
-      information  to assist broader public sector entities in determining which
-      platforms may be suitable for their particular needs.  Broader public
-      sector entities are encouraged to consult their privacy and security
-      experts and to seek legal advice as appropriate based on their intended
-      use of a particular tool.
+      <p>
+        Video communication platforms are crucial to working remotely, but it is
+        important to ensure that use of these tools addresses privacy, security
+        and legal risks. Here we provide some general considerations and
+        information  to assist broader public sector entities in determining
+        which platforms may be suitable for their particular needs.  Broader
+        public sector entities are encouraged to consult their privacy and
+        security experts and to seek legal advice as appropriate based on their
+        intended use of a particular tool.
+      </p>
       <h3>
         <strong>B.C. legislation and data residency</strong>
       </h3>
-      Since many video communication platforms store data in the United States,
-      using these platforms in B.C. may not comply with{' '}
-      <a href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
-        section 30.1 of the Freedom of Information and Protection of Privacy Act
-      </a>{' '}
-      (the data residency provision). However,{' '}
-      <a href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
-        Ministerial Order 085
-      </a>{' '}
-      – issued during the COVID-19 public health emergency – allows disclosure
-      of personal information outside Canada in specific circumstances. One of
-      these circumstances allows public bodies to use third-party tools or
-      applications such as video communication platforms, which may be hosted
-      outside Canada, to support and maintain the operation of programs or
-      activities of the public body where such use supports public health
-      recommendations or requirements related to minimizing transition of
-      COVID-19 (e.g., social distancing, working from home, etc.). Ministerial
-      Order 085 also outlines conditions for the use of these tools or
-      applications, including that:  they are reasonably secure; the public body
-      make all reasonable efforts to remove personal information from the tools
-      or applications as soon as possible when the order expires (June 30, 2020,
-      unless rescinded or extended); and  records created using these tools or
-      applications are managed appropriately. For more information, please read
-      the{' '}
-      <a href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
-        Guidance on Ministerial Order 085: Respecting Disclosures During
-        COVID-19 Emergency
-      </a>
-      .<h3>Security measures</h3>
-      Security measures should be proportional to the sensitivity of
-      information. The more sensitive the information, the more secure it should
-      be. For example, your health information is more sensitive than your
-      opinion of the weather, so it would be reasonable to expect your health
-      information be protected to a higher degree. If you are an employee of a
-      broader public sector entity and your job includes sharing potentially
-      personal, sensitive or confidential information, you are encouraged to
-      consult your organization for specific guidance on which tools to use. The
-      information provided below is for general informational purposes only and
-      does not replace the need for broader public sector organizations to
-      conduct their own due diligence, including seeking legal advice, where
-      appropriate, on video communication platform use within their
-      organization.
+      <p>
+        Since many video communication platforms store data in the United
+        States, using these platforms in B.C. may not comply with{' '}
+        <a href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
+          section 30.1 of the Freedom of Information and Protection of Privacy
+          Act
+        </a>{' '}
+        (the data residency provision). However,{' '}
+        <a href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
+          Ministerial Order 085
+        </a>{' '}
+        – issued during the COVID-19 public health emergency – allows disclosure
+        of personal information outside Canada in specific circumstances. One of
+        these circumstances allows public bodies to use third-party tools or
+        applications such as video communication platforms, which may be hosted
+        outside Canada, to support and maintain the operation of programs or
+        activities of the public body where such use supports public health
+        recommendations or requirements related to minimizing transition of
+        COVID-19 (e.g., social distancing, working from home, etc.).
+      </p>
+      <p>
+        Ministerial Order 085 also outlines conditions for the use of these
+        tools or applications, including that:  they are reasonably secure; the
+        public body make all reasonable efforts to remove personal information
+        from the tools or applications as soon as possible when the order
+        expires (June 30, 2020, unless rescinded or extended); and  records
+        created using these tools or applications are managed appropriately. For
+        more information, please read the{' '}
+        <a href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
+          Guidance on Ministerial Order 085: Respecting Disclosures During
+          COVID-19 Emergency
+        </a>
+        .
+      </p>
+      <h3>Security measures</h3>
+      <p>
+        Security measures should be proportional to the sensitivity of
+        information. The more sensitive the information, the more secure it
+        should be. For example, your health information is more sensitive than
+        your opinion of the weather, so it would be reasonable to expect your
+        health information be protected to a higher degree. If you are an
+        employee of a broader public sector entity and your job includes sharing
+        potentially personal, sensitive or confidential information, you are
+        encouraged to consult your organization for specific guidance on which
+        tools to use.
+      </p>
+      <p>
+        The information provided below is for general informational purposes
+        only and does not replace the need for broader public sector
+        organizations to conduct their own due diligence, including seeking
+        legal advice, where appropriate, on video communication platform use
+        within their organization.
+      </p>
       <h2>Security best practices and tips</h2>
-      <strong>
-        Determine whether you will be sharing personal/sensitive/confidential or
-        public information.{' '}
-      </strong>
-      Some questions to ask:
+      <p>
+        <strong>
+          Determine whether you will be sharing personal/sensitive/confidential
+          or public information.{' '}
+        </strong>
+      </p>
+      <p>Some questions to ask:</p>
       <ul>
         <li>
           How sensitive is the information that I will be sharing or processing
@@ -202,13 +223,17 @@ function CollaborationTools() {
           with legislative requirements?
         </li>
       </ul>
-      If your information is personal/sensitive/confidential, ensure the tool
-      you are using has sufficient security controls in place to protect the
-      information.
-      <strong>
-        Choose a service provider with strong security and privacy policies and
-        features.{' '}
-      </strong>
+      <p>
+        If your information is personal/sensitive/confidential, ensure the tool
+        you are using has sufficient security controls in place to protect the
+        information.
+      </p>
+      <p>
+        <strong>
+          Choose a service provider with strong security and privacy policies
+          and features.{' '}
+        </strong>
+      </p>
       <ul>
         <li>
           Consider how the service provider responds to privacy breaches and
@@ -251,7 +276,9 @@ function CollaborationTools() {
           offers better security than a free one.
         </li>
       </ul>
-      <strong>Set up a secure video conference or meeting.</strong>
+      <p>
+        <strong>Set up a secure video conference or meeting.</strong>
+      </p>
       <ul>
         <li>
           Modify the meeting’s settings when the default settings do not meet
@@ -267,7 +294,9 @@ function CollaborationTools() {
           uninvited guests at your future meetings.
         </li>
       </ul>
-      <strong>Choose a secure physical setting.</strong>
+      <p>
+        <strong>Choose a secure physical setting.</strong>
+      </p>
       <ul>
         <li>
           Host your video conference from a private location. If you can’t find
@@ -289,7 +318,9 @@ function CollaborationTools() {
           setting and devices.
         </li>
       </ul>
-      <strong>Limit and monitor meeting participants.</strong>
+      <p>
+        <strong>Limit and monitor meeting participants.</strong>
+      </p>
       <ul>
         <li>
           Consider who you allow to join your meeting. You can restrict access
@@ -315,10 +346,12 @@ function CollaborationTools() {
           faster.
         </li>
       </ul>
-      <strong>
-        Provide a collection notice, if required, and conduct due diligence
-        whenever personal information will be collected or disclosed.{' '}
-      </strong>
+      <p>
+        <strong>
+          Provide a collection notice, if required, and conduct due diligence
+          whenever personal information will be collected or disclosed.{' '}
+        </strong>
+      </p>
       <ul>
         <li>
           If a public body is using a video communication tool{' '}
@@ -350,7 +383,9 @@ function CollaborationTools() {
           based in the U.S.
         </li>
       </ul>
-      <strong>Only share what is appropriate and necessary.</strong>
+      <p>
+        <strong>Only share what is appropriate and necessary.</strong>
+      </p>
       <ul>
         <li>
           Review your settings for screen sharing, annotation or private
@@ -384,24 +419,33 @@ function CollaborationTools() {
       <h3>
         <strong>Free Zoom and security </strong>
       </h3>
-      During the COVID-19 public health emergency, many of you across the B.C.
-      public sector may be using the free version of Zoom to communicate with
-      colleagues and clients. Please be aware of the privacy and security
-      vulnerabilities – primarily, weak encryption that generally falls short of
-      B.C. government standards. This vulnerability means information is not
-      adequately protected. If you are sharing confidential information, do not
-      use Zoom if you have access to a secure alternative. Other vulnerabilities
-      include the ability for hackers to steal your Windows login credentials,
-      and for uninvited participants to join and disrupt your Zoom meetings –
-      called “Zoombombing.” It is up to each broader public sector entity to
-      determine whether Zoom is appropriate for use within that organization.
-      Broader public sector entities are encouraged to consult with their
-      privacy and security experts and legal advisors to assess the risks
-      associated with their intended use of Zoom. Where a broader public sector
-      entity has determined that the use of Zoom is appropriate within its
-      organization, the following steps can be taken  to improve the security of
-      the free version of Zoom.
-      <strong>General tips</strong>
+      <p>
+        During the COVID-19 public health emergency, many of you across the B.C.
+        public sector may be using the free version of Zoom to communicate with
+        colleagues and clients. Please be aware of the privacy and security
+        vulnerabilities – primarily, weak encryption that generally falls short
+        of B.C. government standards. This vulnerability means information is
+        not adequately protected. If you are sharing confidential information,
+        do not use Zoom if you have access to a secure alternative.
+      </p>
+      <p>
+        Other vulnerabilities include the ability for hackers to steal your
+        Windows login credentials, and for uninvited participants to join and
+        disrupt your Zoom meetings – called “Zoombombing.”
+      </p>
+      <p>
+        It is up to each broader public sector entity to determine whether Zoom
+        is appropriate for use within that organization. Broader public sector
+        entities are encouraged to consult with their privacy and security
+        experts and legal advisors to assess the risks associated with their
+        intended use of Zoom. Where a broader public sector entity has
+        determined that the use of Zoom is appropriate within its organization,
+        the following steps can be taken  to improve the security of the free
+        version of Zoom.
+      </p>
+      <p>
+        <strong>General tips</strong>
+      </p>
       <ul>
         <li>
           <strong>Use the web version of Zoom </strong>on your desktop or
@@ -453,7 +497,9 @@ function CollaborationTools() {
           <strong>Password protect your meeting when possible.</strong>
         </li>
       </ul>
-      <strong>Setting up a meeting</strong>
+      <p>
+        <strong>Setting up a meeting</strong>
+      </p>
       <ul>
         <li>
           <strong>Set screen sharing to “Host Only.</strong>” This allows you,
@@ -472,7 +518,9 @@ function CollaborationTools() {
           (e.g., family photos, sensitive documents).
         </li>
       </ul>
-      <strong>During a meeting</strong>
+      <p>
+        <strong>During a meeting</strong>
+      </p>
       <ul>
         <li>
           <strong>Verify participants </strong>by comparing names against the
@@ -518,7 +566,9 @@ function CollaborationTools() {
           meeting (in Zoom Settings) to protect your privacy.
         </li>
       </ul>
-      <strong>Miscellaneous</strong>
+      <p>
+        <strong>Miscellaneous</strong>
+      </p>
       <ul>
         <li>
           Zoom collects account information, including IP addresses, usage
@@ -533,7 +583,7 @@ function CollaborationTools() {
           disclosure of personal information, is appropriate and lawful.
         </li>
       </ul>
-      You can find training and tutorials on Zoom’s website in{' '}
+      <p>You can find training and tutorials on Zoom’s website in </p>
       <a href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
         A Message to Our Users
       </a>
@@ -541,34 +591,45 @@ function CollaborationTools() {
       <h4>
         <strong>Use of Zoom in B.C. schools</strong>
       </h4>
-      The B.C. Ministry of Education has secured and funded licences for the
-      enterprise version of Zoom for all K-12 public and independent schools in
-      B.C. This version of Zoom has many features to enable secure meetings.
-      Find more information and resources for teachers and school administrators
-      on the ministry’s{' '}
-      <a href="https://www.openschool.bc.ca/keeplearning/#sections">
-        Keep Learning
-      </a>{' '}
-      website.
+      <p>
+        The B.C. Ministry of Education has secured and funded licences for the
+        enterprise version of Zoom for all K-12 public and independent schools
+        in B.C. This version of Zoom has many features to enable secure
+        meetings. Find more information and resources for teachers and school
+        administrators on the ministry’s
+        <a href="https://www.openschool.bc.ca/keeplearning/#sections">
+          Keep Learning
+        </a>
+        website.
+      </p>
       <h2>
         <strong>Contact Information for Broader Public Sector Entities</strong>
       </h2>
-      Privacy and Access Helpline 250-356-1851
-      <a href="mailto:privacy.helpline@gov.bc.ca">privacy.helpline@gov.bc.ca</a>
+      <p>
+        Privacy and Access Helpline 250-356-1851
+        <a href="mailto:privacy.helpline@gov.bc.ca">
+          privacy.helpline@gov.bc.ca
+        </a>
+      </p>
       <h2>
         <strong>
           Video Communication Platforms – Information for Government Ministries
         </strong>
       </h2>
-      The video communication platforms that have been approved at a corporate
-      level for use within government are:
+      <p>
+        The video communication platforms that have been approved at a corporate
+        level for use within government are:
+      </p>
       <ul>
         <li>Skype</li>
         <li>Microsoft Teams</li>
       </ul>
-      If the intended use case involves sensitive information, Ministries should
-      seek internal legal advice. Other tools may become available, and
-      employees are encouraged to check here regularly for updated information.
+      <p>
+        If the intended use case involves sensitive information, Ministries
+        should seek internal legal advice. Other tools may become available, and
+        employees are encouraged to check here regularly for updated
+        information.
+      </p>
       <h2>
         <strong>Contact Information for Government Ministries</strong>
       </h2>
