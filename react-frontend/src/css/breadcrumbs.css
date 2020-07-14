@@ -1,7 +1,7 @@
 .breadCrumbs {
     position: absolute;
-    top: 133px;
-    left: 5%;
+    padding-top: 133px;
+    padding-left: 5%;
     width: 100%;
     margin-left: -10px;
 }
@@ -24,8 +24,8 @@
 
 @media only screen and (max-width: 800px) {
     .breadCrumbs {
-        top: 80px;
-        left: 0px;
+        padding-top: 80px;
+        padding-left: 0px;
         margin-left: -13px;
     }
 

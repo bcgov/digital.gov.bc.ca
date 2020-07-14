@@ -56,6 +56,14 @@ const cards = [
 ];
 
 const Assembling = () => {
+  let cardsList = [];
+  for (var i = 0; i < 4; i++) {
+    cardsList.push(
+      <Col sm={12} md={3}>
+        <ProductsCard content={cards[i]} height="300px" />
+      </Col>
+    );
+  }
   return (
     <div className="definingContainer">
       <div>
@@ -69,20 +77,7 @@ const Assembling = () => {
       </p>
       <p>Here are some services that might help you at this stage.</p>
       <Grid className="cardAdjustment">
-        <Row>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[0]} height="300px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[1]} height="300px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[2]} height="300px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[3]} height="300px" />
-          </Col>
-        </Row>
+        <Row>{cardsList}</Row>
       </Grid>
     </div>
   );

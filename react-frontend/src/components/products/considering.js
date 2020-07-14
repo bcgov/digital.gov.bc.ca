@@ -57,6 +57,15 @@ const cards = [
 ];
 
 const Considering = () => {
+  let cardsList = [];
+  for (var i = 0; i < 4; i++) {
+    cardsList.push(
+      <Col sm={12} md={3}>
+        <ProductsCard content={cards[i]} height="320px" />
+      </Col>
+    );
+  }
+
   return (
     <div className="definingContainer">
       <div>
@@ -81,20 +90,7 @@ const Considering = () => {
         may meet your needs..
       </p>
       <Grid className="cardAdjustment">
-        <Row>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[0]} height="320px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[1]} height="320px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[2]} height="320px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[3]} height="320px" />
-          </Col>
-        </Row>
+        <Row>{cardsList}</Row>
       </Grid>
     </div>
   );
