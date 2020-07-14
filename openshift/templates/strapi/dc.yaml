@@ -1,60 +1,96 @@
 kind: Template
 apiVersion: v1
 objects:
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      annotations:
+        openshift.io/host.generated: "true"
+      labels:
+        app: ${NAME}-${SUFFIX}
+        pr: ${PULL_REQUEST_NUMBER}
+        version: ${IMAGE_TAG}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
+    spec:
+      port:
+        targetPort: 1337-1337
+      to:
+        kind: Service
+        name: ${NAME}-${SUFFIX}
+        weight: 100
+      wildcardPolicy: None
+    status: {}
+
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      labels:
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
+    spec:
+      ports:
+      - name: 1337-1337
+        port: 1337
+        protocol: TCP
+        targetPort: 1337
+      selector:
+        app: ${NAME}-${SUFFIX}
+      sessionAffinity: None
+      type: ClusterIP
+    status:
+      loadBalancer: {}
+
   - apiVersion: apps.openshift.io/v1
     kind: DeploymentConfig
     spec:
-      replicas: 1
+      replicas: 3
       revisionHistoryLimit: 10
       selector:
-        app: digital-strapi
-        deploymentconfig: digital-strapi
+        app: ${NAME}-${SUFFIX}
       strategy:
         activeDeadlineSeconds: 21600
-        resources: {}
-        rollingParams:
-          intervalSeconds: 1
-          maxSurge: 25%
-          maxUnavailable: 25%
-          timeoutSeconds: 600
-          updatePeriodSeconds: 1
-        type: Rolling
+        resources:
+          cpu:
+            requests: 250m
+            limits: 500m
+          memory:
+            request: 150Mi
+            limits: 250Mi
+        type: Recreate
       template:
         metadata:
           annotations:
             openshift.io/generated-by: OpenShiftNewApp
           creationTimestamp: null
           labels:
-            app: digital-strapi
-            deploymentconfig: digital-strapi
+            app: ${NAME}-${SUFFIX}
         spec:
+          volumes:
+            - configMap:
+                defaultMode: 420
+                name: caddyfile-${SUFFIX}
+              name: caddyfile-volume
           containers:
-            - image: >-
-                docker-registry.default.svc:5000/xdwiwd-tools/digital-strapi@sha256:cf3813e27bf4b26ee0db4fec39253ba88aa8cee1e6bf3ada20ce7aefa42b1e01
+            - image: ${IMAGE_REGISTRY}/${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: IfNotPresent
-              name: digital-strapi
+              name: ${NAME}-${SUFFIX}
               env:
-                # One of these two configs should work
-                - name: DATABASE_HOST
-                  value: mongodb-internal  
-                - name: DATABASE_PORT
-                  value: "27017"
-                - name: DATABASE_NAME
+                - name: DATABASE_URI
                   valueFrom:
                     secretKeyRef:
-                      name: mongodb 
-                      key: mongo-url
-                - name: DATABASE_USERNAME
-                  valueFrom:
-                    secretKeyRef:
-                      name: mongodb 
-                      key: username
-                - name: DATABASE_PASSWORD
-                  valueFrom:
-                    secretKeyRef:
-                      name: mongodb 
-                      key: password
-              resources: {}
+                      name: ${MONGO_SECRET_NAME} 
+                      key: ${MONGO_SECRET_URL_KEY_REF}
+              resources: 
+                cpu:
+                  requests: ${CPU_REQUEST}
+                  limits: ${CPU_LIMIT}
+                memory:
+                  requests: ${MEMORY_REQUEST}
+                  limits: ${MEMORY_LIMIT}
               terminationMessagePath: /dev/termination-log
               terminationMessagePolicy: File
           dnsPolicy: ClusterFirst
@@ -65,21 +101,101 @@ objects:
       test: false
       triggers:
         - type: ConfigChange
-        - imageChangeParams:
-            automatic: true
-            containerNames:
-              - digital-strapi
-            from:
-              kind: ImageStreamTag
-              name: 'digital-strapi:dev'
-              namespace: xdwiwd-tools
-            lastTriggeredImage: >-
-              docker-registry.default.svc:5000/xdwiwd-tools/digital-strapi@sha256:cf3813e27bf4b26ee0db4fec39253ba88aa8cee1e6bf3ada20ce7aefa42b1e01
-          type: ImageChange
     metadata:
       annotations:
         openshift.io/generated-by: OpenShiftNewApp
       generation: 2
       labels:
-        app: digital-strapi
-      name: digital-strapi
+        app: ${NAME}-${SUFFIX}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
+  - apiVersion: v1
+    data:
+      Caddyfile: |
+        :4000
+
+        # for app
+        root * /opt/app-root/src
+
+        file_server 
+        encode gzip
+
+        try_files {path} {path}/ /index.html
+        log stdout
+        log stderr
+
+        header / {
+          # prevent any static html from being cached
+          Cache-Control "public, max-age=0, must-revalidate"
+        }
+    kind: ConfigMap
+    metadata:
+      labels:
+        build: digital-gov-frontend
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: caddyfile-${SUFFIX}
+  - apiVersion: v1
+    kind: Service
+    spec:
+      ports:
+        - name: 4000-4000
+          port: 4000
+          protocol: TCP
+          targetPort: 4000
+      selector:
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+      name: ${NAME}-${SUFFIX}
+parameters:
+- name: IMAGE_REGISTRY
+  value: docker-registry.default.svc:5000
+  description: the image registry to find the docker image
+- name: IMAGE_NAMESPACE
+  required: true
+  description: the namespace to pull the image from 
+  displayName: Image Namespace
+- name: IMAGE_STREAM
+  required: true
+  displayName: Image Stream 
+  description: the name of the image stream the image is pulled from 
+- name: IMAGE_TAG
+  required: true
+  displayName: Image Tag 
+  description: the tag for the image to deploy
+- name: MONGO_SECRET_NAME
+  required: true
+  displayName: Database Secret Name
+  description: The secret name that is uses in the valueFrom in spec.template.spec.containers.env
+- name: MONGO_SECRET_URL_KEY_REF
+  required: true
+  displayName: Database Secret Key Reference 
+  description: The key that is used as the reference for the mongo url
+  value: mongo-url
+- name: NAME
+  required: true
+  displayName: name
+  description: the name for the dc and container
+  value: strapi
+- name: CPU_REQUEST
+  value: 50m 
+- name: MEMORY_REQUEST
+  value: 50Mi 
+- name: CPU_LIMIT
+  value: 70m 
+- name: MEMORY_LIMIT
+  value: 75Mi 
+- name: SUFFIX
+  required: true
+  description: a suffix used in conjunction with NAME to further isolate different instances of these components
+  displayName: suffix
+- name: PULL_REQUEST_NUMBER
+  default: 0
+  required: false 
+  description: The pull request number associated with this object
+  displayName: Pull Request Number
+
+
