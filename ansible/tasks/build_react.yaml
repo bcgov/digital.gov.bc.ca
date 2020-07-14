@@ -2,7 +2,7 @@
 
   - name: create build in tools namespace using head/pulls/{{ PR }} as ref 
     shell: >
-      oc process -n "{{ tools_namespace }}" -f "../templates/react-frontend/bc.yaml" {{ build_params }} | 
+      oc process -n "{{ tools_namespace }}" -f "../openshift/templates/react-frontend/bc.yaml" {{ build_params }} | 
       oc apply -n "{{ tools_namespace }}" -f -
     vars:
       GIT_REF: 'pull/{{ PR }}/head'

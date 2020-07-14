@@ -4,8 +4,8 @@ on:
     paths:
       - 'react-frontend'
       - openshift/templates/react-frontend
-      - openshift/ansible/build-react.yaml
-      - openshift/ansible/deploy-react.yaml
+      - ansible/build-react.yaml
+      - ansible/deploy-react.yaml
 jobs:
   run:
     runs-on: ubuntu-18.04
@@ -32,12 +32,12 @@ jobs:
         oc version
         pip install openshift
     - name: login to oc client
-      run: ansible-playbook openshift/ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
+      run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     - name: build react app
-      run: ansible-playbook openshift/ansible/build-react.yaml -e PR=$PULL_NUMBER
+      run: ansible-playbook ansible/build-react.yaml -e PR=$PULL_NUMBER
     - name: deploy react app
-      run: ansible-playbook openshift/ansible/deploy-react.yaml -e PR=$PULL_NUMBER
+      run: ansible-playbook ansible/deploy-react.yaml -e PR=$PULL_NUMBER
     - name: create github deployment to development
-      run: ansible-playbook openshift/ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=dev -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }}
+      run: ansible-playbook ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=dev -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }}
     # TODO include ansible build and deploy play books as well as the creation of a github deployment on success
     
