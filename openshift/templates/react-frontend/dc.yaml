@@ -1,62 +1,93 @@
 kind: Template
 apiVersion: v1
 objects:
-  - apiVersion: apps.openshift.io/v1
-    kind: DeploymentConfig
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      annotations:
+        openshift.io/host.generated: "true"
+      labels:
+        app: ${NAME}-${SUFFIX}
+        pr: ${PULL_REQUEST_NUMBER}
+        version: ${IMAGE_TAG}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
     spec:
-      replicas: 3
-      selector:
+      port:
+        targetPort: 1337-1337
+      to:
+        kind: Service
+        name: ${NAME}-${SUFFIX}
+        weight: 100
+      wildcardPolicy: None
+    status: {}
+
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      labels:
         app: ${NAME}-${SUFFIX}
         version: ${IMAGE_TAG}
         pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
-        deploymentconfig: ${NAME}-${SUFFIX}
+      name: ${NAME}-${SUFFIX}
+    spec:
+      ports:
+      - name: 1337-1337
+        port: 1337
+        protocol: TCP
+        targetPort: 1337
+      selector:
+        app: ${NAME}-${SUFFIX}
+      sessionAffinity: None
+      type: ClusterIP
+    status:
+      loadBalancer: {}
+
+  - apiVersion: apps.openshift.io/v1
+    kind: DeploymentConfig
+    spec:
+      replicas: 3
+      revisionHistoryLimit: 10
+      selector:
+        app: ${NAME}-${SUFFIX}
       strategy:
         activeDeadlineSeconds: 21600
-        resources: {}
-        rollingParams:
-          intervalSeconds: 1
-          maxSurge: 25%
-          maxUnavailable: 25%
-          timeoutSeconds: 600
-          updatePeriodSeconds: 1
-        type: Rolling
+        resources:
+          cpu:
+            requests: 250m
+            limits: 500m
+          memory:
+            request: 150Mi
+            limits: 250Mi
+        type: Recreate
       template:
         metadata:
           annotations:
-            openshift.io/generated-by: OpenShiftWebConsole
+            openshift.io/generated-by: OpenShiftNewApp
           creationTimestamp: null
           labels:
             app: ${NAME}-${SUFFIX}
-            version: ${IMAGE_TAG}
-            pr: ${PULL_REQUEST_NUMBER}
-            group: ${NAME}
-            deploymentconfig: ${NAME}-${SUFFIX}
         spec:
-          volumes:
-            - configMap:
-                defaultMode: 420
-                name: caddyfile
-              name: caddyfile-volume
           containers:
-            - image: >-
-                ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
-              imagePullPolicy: Always
+            - image: ${IMAGE_REGISTRY}/${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
+              imagePullPolicy: IfNotPresent
               name: ${NAME}-${SUFFIX}
+              env:
+                - name: DATABASE_URI
+                  valueFrom:
+                    secretKeyRef:
+                      name: ${MONGO_SECRET_NAME} 
+                      key: ${MONGO_SECRET_URL_KEY_REF}
               resources: 
-                requests:
-                  memory: ${MEMORY_REQUEST}
-                  cpu: ${CPU_REQUEST}
-                limits:
-                  memory: ${MEMORY_LIMIT}
-                  cpu: ${CPU_LIMIT}
+                cpu:
+                  requests: ${CPU_REQUEST}
+                  limits: ${CPU_LIMIT}
+                memory:
+                  requests: ${MEMORY_REQUEST}
+                  limits: ${MEMORY_LIMIT}
               terminationMessagePath: /dev/termination-log
               terminationMessagePolicy: File
-              volumeMounts:
-                - mountPath: /opt/app-root/etc/Caddyfile
-                  name: caddyfile-volume
-                  readOnly: true
-                  subPath: Caddyfile
           dnsPolicy: ClusterFirst
           restartPolicy: Always
           schedulerName: default-scheduler
@@ -65,98 +96,20 @@ objects:
       test: false
       triggers:
         - type: ConfigChange
-        - imageChangeParams:
-            automatic: true
-            containerNames:
-              - ${NAME}-${SUFFIX}
-            from:
-              kind: ImageStreamTag
-              name: '${IMAGE_STREAM}:${IMAGE_TAG}'
-              namespace: ${IMAGE_NAMESPACE}
-          type: ImageChange
     metadata:
       annotations:
-        openshift.io/generated-by: OpenShiftWebConsole
-      generation: 6
+        openshift.io/generated-by: OpenShiftNewApp
+      generation: 2
       labels:
         app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
+        pr: ${PULL_REQUEST_NUMBER}
+        version: ${IMAGE_TAG}
       name: ${NAME}-${SUFFIX}
-  - apiVersion: v1
-    data:
-      Caddyfile: |
-        :4000
-
-        # for app
-        root * /opt/app-root/src
-
-        file_server 
-        encode gzip
-
-        log stdout
-        log stderr
-
-        header / {
-          # prevent any static html from being cached
-          Cache-Control "public, max-age=0, must-revalidate"
-        }
-    kind: ConfigMap
-    metadata:
-      labels:
-        build: digital-gov-frontend
-        app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${NAME}
-      name: caddyfile
-  - apiVersion: v1
-    kind: Service
-    spec:
-      ports:
-        - name: 4000-4000
-          port: 4000
-          protocol: TCP
-          targetPort: 4000
-      selector:
-        app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${NAME}
-      sessionAffinity: None
-      type: ClusterIP
-    metadata:
-      labels:
-        app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${NAME}
-      name: ${NAME}-${SUFFIX}
-  - apiVersion: route.openshift.io/v1
-    kind: Route
-    spec:
-      tls:
-        termination: edge
-        insecureEdgeTerminationPolicy: Redirect
-      port:
-        targetPort: 4000-4000
-      to:
-        kind: Service
-        name: ${NAME}-${SUFFIX}
-        weight: 100
-      wildcardPolicy: None
-    metadata:
-      annotations:
-        openshift.io/host.generated: 'true'
-      labels:
-        app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${NAME}
-      name: ${NAME}-${SUFFIX}
-  
 parameters:
+- name: IMAGE_REGISTRY
+  value: docker-registry.default.svc:5000
+  description: the image registry to find the docker image
 - name: IMAGE_NAMESPACE
   required: true
   description: the namespace to pull the image from 
@@ -169,11 +122,20 @@ parameters:
   required: true
   displayName: Image Tag 
   description: the tag for the image to deploy
+- name: MONGO_SECRET_NAME
+  required: true
+  displayName: Database Secret Name
+  description: The secret name that is uses in the valueFrom in spec.template.spec.containers.env
+- name: MONGO_SECRET_URL_KEY_REF
+  required: true
+  displayName: Database Secret Key Reference 
+  description: The key that is used as the reference for the mongo url
+  value: mongo-url
 - name: NAME
   required: true
   displayName: name
   description: the name for the dc and container
-  value: digital-gov-frontend
+  value: strapi
 - name: CPU_REQUEST
   value: 50m 
 - name: MEMORY_REQUEST
@@ -191,3 +153,5 @@ parameters:
   required: false 
   description: The pull request number associated with this object
   displayName: Pull Request Number
+
+

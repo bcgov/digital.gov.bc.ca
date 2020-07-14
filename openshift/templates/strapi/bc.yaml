@@ -1,14 +1,41 @@
 apiVersion: v1
 objects:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: ${NAME}-${SUFFIX}
+    name: node
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations:
+        openshift.io/imported-from: node:12.17.0-alpine
+      from:
+        kind: DockerImage
+        name: node:12.17.0-alpine
+      generation: null
+      importPolicy: {}
+      name: node:12.17.0-alpine
+      referencePolicy:
+        type: ""
+  status:
+    dockerImageRepository: ""
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
   metadata:
     annotations:
       openshift.io/generated-by: OpenShiftNewBuild
     labels:
-      build: ${NAME}
-    name: ${NAME}
-    namespace: xdwiwd-tools
+      build: ${NAME}-${SUFFIX}
+      pr: ${PULL_REQUEST_NUMBER}
+      version: ${IMAGE_TAG}
+      group: ${NAME}
+    name: ${NAME}-${SUFFIX}
   spec:
     failedBuildsHistoryLimit: 5
     nodeSelector: null
@@ -17,33 +44,29 @@ objects:
         kind: ImageStreamTag
         name: ${NAME}:${IMAGE_TAG}
     postCommit: {}
-    resources: {}
+    resources: 
+      requests:
+        memory: 1Gi
+        cpu: 850m
+      limits:
+        memory: 2Gi
+        cpu: 1500m
     runPolicy: Serial
     source:
       contextDir: strapi-app
       git:
-        ref: dep-63-stapi
-        uri: https://github.com/bcgov/digital.gov.bc.ca
+        ref: ${GIT_REF}
+        uri: ${GIT_REPO}
       type: Git
     strategy:
       dockerStrategy:
         from:
           kind: ImageStreamTag
           name: node:12.17.0-alpine
-          namespace: xdwiwd-tools
       type: Docker
     successfulBuildsHistoryLimit: 5
     triggers:
-    - github:
-        secret: YW9tss7Bya-t8fJGXvU1
-      type: GitHub
-    - generic:
-        secret: D2eHz-yln9hxejZUj9Hx
-      type: Generic
     - type: ConfigChange
-    - imageChange:
-        lastTriggeredImageID: node@sha256:a79c15f7c8140854751302930e1282c361efb8a1c7f2cf99477992f975b80950
-      type: ImageChange
   status:
     lastVersion: 1
 - apiVersion: image.openshift.io/v1
@@ -54,8 +77,8 @@ objects:
     generation: 1
     labels:
       build: ${NAME}
+      group: ${NAME}
     name: ${NAME}
-    namespace: xdwiwd-tools
   spec:
     lookupPolicy:
       local: false
@@ -70,3 +93,19 @@ parameters:
 - name: IMAGE_TAG
   required: true
   description: the output image stream tag
+- name: GIT_REF
+  value: master 
+  description: the git branch
+  requireD: true
+- name: GIT_REPO
+  description: the github repo
+  required: true
+- name: PULL_REQUEST_NUMBER
+  default: 0
+  required: false 
+  description: The pull request number associated with this object
+  displayName: Pull Request Number
+- name: SUFFIX
+  required: true
+  description: a suffix used in conjunction with NAME to further isolate different instances of these components
+  displayName: suffix
