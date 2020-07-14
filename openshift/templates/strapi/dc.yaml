@@ -13,6 +13,9 @@ objects:
         group: ${NAME}
       name: ${NAME}-${SUFFIX}
     spec:
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
       port:
         targetPort: 1337-1337
       to:
