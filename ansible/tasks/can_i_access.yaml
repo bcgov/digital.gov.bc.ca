@@ -1,0 +1,13 @@
+---
+  # Check is user has required access on managing objects
+  
+  - name: get access level
+    command: oc auth can-i create "{{ item }}"
+    register: access
+  
+  - debug: msg="--------- You do not have enough access to create {{ item }} in namespace {{ namesapce }}.. ---------"
+    when: access.stdout != 'yes'
+  
+  - name: End the play for all
+    meta: end_play
+    when: access.stdout != 'yes'

@@ -1,0 +1,7 @@
+---
+  - name: Pre-install packages
+    pip:
+      name:
+        - kubernetes
+        - openshift
+      extra_args: --user
