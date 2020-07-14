@@ -3,7 +3,7 @@ import DigitalCards from './digitalcards';
 import ForDesigners from './fordesigners';
 import ForDevelopers from './fordevelopers';
 import Guides from './guides';
-import ResourceHeader from './resourceheader';
+import ResourceBanner from './resourcebanner';
 import Standards from './standards';
 
 import '../../css/resources.css';
@@ -11,7 +11,7 @@ import '../../css/resources.css';
 function Resources() {
   return (
     <div className="resourceContainer">
-      <ResourceHeader />
+      <ResourceBanner />
       <div className="resourcesBody">
         <DigitalCards />
         <Standards />

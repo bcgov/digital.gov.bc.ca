@@ -69,6 +69,11 @@ objects:
           labels:
             app: ${NAME}-${SUFFIX}
         spec:
+          volumes:
+            - configMap:
+                defaultMode: 420
+                name: caddyfile-${SUFFIX}
+              name: caddyfile-volume
           containers:
             - image: ${IMAGE_REGISTRY}/${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: IfNotPresent
@@ -103,8 +108,47 @@ objects:
       labels:
         app: ${NAME}-${SUFFIX}
         group: ${NAME}
-        pr: ${PULL_REQUEST_NUMBER}
+      name: ${NAME}-${SUFFIX}
+  - apiVersion: v1
+    data:
+      Caddyfile: |
+        :4000
+
+        # for app
+        root * /opt/app-root/src
+
+        file_server 
+        encode gzip
+
+        try_files {path} {path}/ /index.html
+        log stdout
+        log stderr
+
+        header / {
+          # prevent any static html from being cached
+          Cache-Control "public, max-age=0, must-revalidate"
+        }
+    kind: ConfigMap
+    metadata:
+      labels:
+        build: digital-gov-frontend
+        app: ${NAME}-${SUFFIX}
         version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: caddyfile-${SUFFIX}
+  - apiVersion: v1
+    kind: Service
+    spec:
+      ports:
+        - name: 4000-4000
+          port: 4000
+          protocol: TCP
+          targetPort: 4000
+      selector:
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
       name: ${NAME}-${SUFFIX}
 parameters:
 - name: IMAGE_REGISTRY

@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run: :)
 
 ### `npm start`
 
@@ -26,6 +26,20 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run cy:open`
+
+Launches the cypress test runner in the interactive watch mode.<br />
+For more information visit the page [Cypress Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview).
+
+Note: You need to run the app in a separate terminal for the tests to pass.
+
+### `npm run cy:test`
+
+Launches the cypress test runner in silent mode for CI/CD purpose.<br />
+For more information visit the page [Cypress CLI commands](https://docs.cypress.io/guides/guides/command-line.html#cypress-run).
+
+This command runs the app, waits for the website to come up by continuously pinging for the localhost:3000 url and then runs the cypress tests in silent mode. The cypress run creates videos per test file in the cypress/videos folder. These videos can be used to view/debug test failures in the CI/CD environment. 
 
 ### `npm run eject`
 
