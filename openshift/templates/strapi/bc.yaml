@@ -1,0 +1,111 @@
+apiVersion: v1
+objects:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: ${NAME}-${SUFFIX}
+    name: node
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations:
+        openshift.io/imported-from: node:12.17.0-alpine
+      from:
+        kind: DockerImage
+        name: node:12.17.0-alpine
+      generation: null
+      importPolicy: {}
+      name: node:12.17.0-alpine
+      referencePolicy:
+        type: ""
+  status:
+    dockerImageRepository: ""
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewBuild
+    labels:
+      build: ${NAME}-${SUFFIX}
+      pr: ${PULL_REQUEST_NUMBER}
+      version: ${IMAGE_TAG}
+      group: ${NAME}
+    name: ${NAME}-${SUFFIX}
+  spec:
+    failedBuildsHistoryLimit: 5
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: ${NAME}:${IMAGE_TAG}
+    postCommit: {}
+    resources: 
+      requests:
+        memory: 1Gi
+        cpu: 850m
+      limits:
+        memory: 2Gi
+        cpu: 1500m
+    runPolicy: Serial
+    source:
+      contextDir: strapi-app
+      git:
+        ref: ${GIT_REF}
+        uri: ${GIT_REPO}
+      type: Git
+    strategy:
+      dockerStrategy:
+        from:
+          kind: ImageStreamTag
+          name: node:12.17.0-alpine
+      type: Docker
+    successfulBuildsHistoryLimit: 5
+    triggers:
+    - type: ConfigChange
+  status:
+    lastVersion: 1
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewBuild
+    generation: 1
+    labels:
+      build: ${NAME}
+      group: ${NAME}
+    name: ${NAME}
+  spec:
+    lookupPolicy:
+      local: false
+kind: Template
+metadata:
+  resourceVersion: ""
+  selfLink: ""
+parameters:  
+- name: NAME
+  required: true
+  description: the name of the components
+- name: IMAGE_TAG
+  required: true
+  description: the output image stream tag
+- name: GIT_REF
+  value: master 
+  description: the git branch
+  requireD: true
+- name: GIT_REPO
+  description: the github repo
+  required: true
+- name: PULL_REQUEST_NUMBER
+  default: 0
+  required: false 
+  description: The pull request number associated with this object
+  displayName: Pull Request Number
+- name: SUFFIX
+  required: true
+  description: a suffix used in conjunction with NAME to further isolate different instances of these components
+  displayName: suffix
