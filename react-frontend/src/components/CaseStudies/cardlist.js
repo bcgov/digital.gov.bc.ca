@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import InfoCard from '../Home/infocard';
+import HorizontalInfoCard from './horizontalinfocard';
 
 import '../../css/home.css';
 
@@ -23,7 +24,7 @@ function CardList() {
         <Grid>
           <Row gutter={[0, 24]} justify={'space-around'}>
             <Col sm={12} md={6}>
-              <InfoCard
+              <HorizontalInfoCard
                 title={'Mines Digital Service'}
                 img={imgLinks[0]}
                 description={descriptions[0]}
