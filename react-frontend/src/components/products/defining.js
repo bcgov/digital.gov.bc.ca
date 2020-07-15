@@ -52,15 +52,11 @@ const Defining = () => {
       </p>
       <Grid className="cardAdjustment">
         <Row>
-          <Col sm={12} md={4}>
-            <ProductsCard content={cards[0]} height="250px" />
-          </Col>
-          <Col sm={12} md={4}>
-            <ProductsCard content={cards[1]} height="250px" />
-          </Col>
-          <Col sm={12} md={4}>
-            <ProductsCard content={cards[2]} height="250px" />
-          </Col>
+          {cards.map((element, i) => (
+            <Col key={i} sm={12} md={4}>
+              <ProductsCard content={element} height="200px" />
+            </Col>
+          ))}
         </Row>
       </Grid>
     </div>

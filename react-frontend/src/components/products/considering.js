@@ -82,18 +82,11 @@ const Considering = () => {
       </p>
       <Grid className="cardAdjustment">
         <Row>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[0]} height="320px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[1]} height="320px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[2]} height="320px" />
-          </Col>
-          <Col sm={12} md={3}>
-            <ProductsCard content={cards[3]} height="320px" />
-          </Col>
+          {cards.map((element, i) => (
+            <Col key={i} sm={12} md={3}>
+              <ProductsCard content={element} height="250px" />
+            </Col>
+          ))}
         </Row>
       </Grid>
     </div>

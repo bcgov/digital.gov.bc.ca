@@ -1,6 +1,6 @@
 .cardText {
     text-align: left;
-    padding: 16px 24px
+    padding: 16px auto;
 }
 
 .cardTitle {
@@ -45,12 +45,14 @@
     }
 
     .cardTitle {
-        font-size: 24px;
+        font-size: 22px;
+        margin-top: -10px;
     }
 
     .cardDescription {
         font-weight: normal;
         overflow-y: scroll;
-        height: 125px;
+        height: 120px;
+        font-size: 10px;
     }
 }

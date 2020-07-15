@@ -1,38 +1,46 @@
 .pageTop {
-    height: 600px;
+    height: 550px;
     width: 100%;
-    background-image: url(https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg);
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
+    background-position: center;
     background-color: lightblue;
     margin-bottom: 50px;
+    padding-top: 200px;
 }
 
 .pageTitle {
     position: relative;
-    font-size: 31px;
-    line-height: 44px;
+    font-size: 37px;
+    line-height: 37px;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pageTextBanner {
+    width: 100%;
+    font-family: 'BC Sans';
+    color: white;
+    background-color: rgba(0, 51, 102, 0.7);
+    padding: 25px;
 }
 
 .pageText {
-    padding-top: 250px;
     text-align: center;
-    width: 1124px;
-    font-family: 'BC Sans';
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-
+    width: 85%;
+    margin: auto;
 }
 
-.pageDescription {
+.pageText p {
+    color: white;
+    font-weight: bold;
+}
+
+.pageDescription p {
     position: relative;
-    font-size: 12pt;
     line-height: 16pt;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -56,13 +64,29 @@
         padding-top: 40px;
         width: 84%;
         margin-left: 8%;
-        
     }
 
     .pageDescription {
         font-size: 10pt;
         text-align: justify;
+    }
+    
+    .pageTop {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .pageDescription p {
+        font-size: 16px;
         width: 100%;
+    }
+
+    .pageTextBanner {
+        padding: 10px;
+    }
+
+    .pageTitle {
+        margin-top: -30px;
     }
 
 }

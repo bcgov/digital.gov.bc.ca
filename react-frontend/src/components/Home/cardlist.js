@@ -4,6 +4,9 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import '../../css/home.css';
 
+const communityImg = require('../../images/community.png');
+const caseStudiesImg = require('../../images/case-studies.png');
+
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
@@ -13,14 +16,6 @@ const descriptions = [
   'See examples of how teams are improving digital services for British Columbians.',
 ];
 
-const imgLinks = [
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-];
 const linkTexts = [
   'Read the framework',
   'Read the principals',
@@ -39,7 +34,6 @@ const CardList = () => {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Framework'}
-                img={imgLinks[0]}
                 description={descriptions[0]}
                 linkText={linkTexts[0]}
                 routePath="/digital-framework"
@@ -48,17 +42,19 @@ const CardList = () => {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Principles'}
-                img={imgLinks[1]}
                 description={descriptions[1]}
+                linkText={linkTexts[1]}
+                linkPath={'https://github.com/bcgov/digital-principles'}
               />
             </Col>
           </Row>
           <Row gutter={[0, 24]} justify={'space-around'}>
             <Col sm={12} md={6}>
               <InfoCard
-                title={'Digital Policy'}
-                img={imgLinks[2]}
+                title={'Products and Services'}
                 description={descriptions[2]}
+                linkText="Find support"
+                routePath={'/products-services'}
                 // TODO uncomment these when pages are made
                 // linkText={linkTexts[2]}
               />
@@ -66,7 +62,6 @@ const CardList = () => {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Resources'}
-                img={imgLinks[3]}
                 description={descriptions[3]}
                 linkText={linkTexts[3]}
                 routePath="/resources"
@@ -77,14 +72,16 @@ const CardList = () => {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Community'}
-                img={imgLinks[4]}
+                img={communityImg}
                 description={descriptions[4]}
+                linkText={'Connect'}
+                linkPath={'https://bcdevexchange.org/'}
               />
             </Col>
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Case Studies'}
-                img={imgLinks[5]}
+                img={caseStudiesImg}
                 description={descriptions[5]}
               />
             </Col>

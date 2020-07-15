@@ -15,9 +15,7 @@ import App from './containers/App';
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <body>
-      <App />
-    </body>
+    <App />
   </ApolloProvider>,
 
   document.getElementById('root')

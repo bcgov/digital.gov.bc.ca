@@ -6,6 +6,8 @@ prod_namespace: xdwiwd-tools
 github_repo: digital.gov.bc.ca
 github_owner: bcgov
 react_infra_name: digital-gov-frontend
+strapi_infra_name: strapi
+mongo_infra_name: mongo-ha
 dev_imagestream: digital-gov-frontend
 prod_image_tag: prod 
 test_image_tag: test 

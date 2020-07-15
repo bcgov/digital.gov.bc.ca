@@ -3,16 +3,16 @@ import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
 
-function ProductsCard(props) {
+const ProductsCard = ({ height, content }) => {
   let cardHeight = 0;
 
-  cardHeight = props.height == null ? '200px' : props.height;
+  cardHeight = height == null ? '200px' : height;
 
   return (
     <Card className="cardBody" style={{ height: cardHeight }}>
-      <div className="cardText">{props.content}</div>
+      <div className="cardText">{content}</div>
     </Card>
   );
-}
+};
 
 export default ProductsCard;

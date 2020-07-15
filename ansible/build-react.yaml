@@ -6,6 +6,7 @@
       deploy: false
       image_namespace: "{{ tools_namespace }}"
       suffix: "{{ version }}"
+      infra_name: "{{ react_infra_name }}"
     tasks:
       - name: Pre checks
         include: ./tasks/check_pr_exists.yaml

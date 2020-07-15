@@ -4,6 +4,9 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+const mobileImg = require('../../images/logo-banner.png');
+const desktopImg = require('../../images/logo.png');
+
 function NavBar() {
   const history = useHistory();
   const routeLocation = useLocation();
@@ -45,9 +48,7 @@ function NavBar() {
     }
   };
 
-  let logoPath = isMobile
-    ? require('../../images/logo-banner.png')
-    : require('../../images/logo.png');
+  let logoPath = isMobile ? mobileImg : desktopImg;
 
   return (
     <div className="navBar">
