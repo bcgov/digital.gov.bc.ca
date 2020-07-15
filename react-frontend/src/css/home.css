@@ -25,8 +25,7 @@
     .homeText {
         width: 336px;
         bottom: 0%;
-        z-index: 0;
-
+        z-index: 0;    
     }
 
     .cardContainer {

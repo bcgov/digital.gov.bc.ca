@@ -86,7 +86,7 @@ header {
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-left: -76px;
+    margin-left: -75px;
     color: #fff;
     list-style: none;
     /* border-style: dotted;
@@ -153,7 +153,7 @@ header {
     }
 
     header .banner {
-      margin: 0 0px 0 0;
+      padding: 13px 0;
     }
 
     header .other {

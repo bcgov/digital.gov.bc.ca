@@ -43,15 +43,6 @@ const cards = [
 ];
 
 const Defining = () => {
-  let cardsList = [];
-  for (var i = 0; i < 3; i++) {
-    cardsList.push(
-      <Col sm={12} md={4}>
-        <ProductsCard content={cards[i]} height="250px" />
-      </Col>
-    );
-  }
-
   return (
     <div className="definingContainer">
       <p className="productsSubtitle">Defining problems, outcomes, value</p>
@@ -60,7 +51,13 @@ const Defining = () => {
         understand them and be clear about what you want to achieve.
       </p>
       <Grid className="cardAdjustment">
-        <Row>{cardsList}</Row>
+        <Row>
+          {cards.map((element, i) => (
+            <Col key={i} sm={12} md={4}>
+              <ProductsCard content={element} height="200px" />
+            </Col>
+          ))}
+        </Row>
       </Grid>
     </div>
   );

@@ -4,6 +4,9 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import '../../css/home.css';
 
+const communityImg = require('../../images/community.png');
+const caseStudiesImg = require('../../images/case-studies.png');
+
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
@@ -13,10 +16,6 @@ const descriptions = [
   'See examples of how teams are improving digital services for British Columbians.',
 ];
 
-const imgLinks = [
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-];
 const linkTexts = [
   'Read the framework',
   'Read the principals',
@@ -25,6 +24,7 @@ const linkTexts = [
   'Connect',
   'Learn more',
 ];
+
 function CardList() {
   return (
     <div className="cardContainer">
@@ -43,6 +43,8 @@ function CardList() {
               <InfoCard
                 title={'Digital Principles'}
                 description={descriptions[1]}
+                linkText={linkTexts[1]}
+                linkPath={'https://github.com/bcgov/digital-principles'}
               />
             </Col>
           </Row>
@@ -70,14 +72,16 @@ function CardList() {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Community'}
-                img={imgLinks[0]}
+                img={communityImg}
                 description={descriptions[4]}
+                linkText={'Connect'}
+                linkPath={'https://bcdevexchange.org/'}
               />
             </Col>
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Case Studies'}
-                img={imgLinks[1]}
+                img={caseStudiesImg}
                 description={descriptions[5]}
               />
             </Col>

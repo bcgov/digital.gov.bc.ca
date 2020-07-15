@@ -9,10 +9,11 @@ const BreadCrumbs = () => {
   const [pathName, setPathName] = useState(routeLocation.pathname);
 
   useEffect(() => {
-    return history.listen((location) => {
+    history.listen((location) => {
+      console.log('change');
       setPathName(location.pathname);
     });
-  }, [history, pathName]);
+  }, [history]);
 
   if (pathName === '/') {
     return null;
