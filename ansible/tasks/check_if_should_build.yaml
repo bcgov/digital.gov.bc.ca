@@ -1,9 +1,9 @@
 ---
-  - name: Get BuildConfig {{ react_infra_name }}-{{ version }}
+  - name: Get BuildConfig {{ infra_name }}-{{ version }}
     k8s_info:
       api_version: v1
       kind: "BuildConfig"
-      name: "{{ react_infra_name }}-{{ version }}"
+      name: "{{ infra_name }}-{{ version }}"
       namespace: "{{ tools_namespace }}"
     register: bc
 
@@ -17,11 +17,11 @@
       latest_build_version: "{{ bc.resources[0].status.lastVersion }}"
     when: bc.resources|length > 0
 
-  - name: Get Build {{ react_infra_name }}-{{ version }}-{{ latest_build_version }}
+  - name: Get Build {{ infra_name }}-{{ version }}-{{ latest_build_version }}
     k8s_info:
       api_version: v1
       kind: "Build"
-      name: "{{ react_infra_name }}-{{ version }}-{{ latest_build_version }}"
+      name: "{{ infra_name }}-{{ version }}-{{ latest_build_version }}"
       namespace: "{{ tools_namespace }}"
     when: bc.resources|length > 0
     register: build
@@ -37,7 +37,7 @@
 
   - name: Get last commit from PR {{ PR }}
     uri:
-      url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/commits/refs/pull/{{ PR }}/head
+      url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/commits/refs/pull/{{ PR }}/head
       method: GET
     register: response
     when: bc.resources|length > 0

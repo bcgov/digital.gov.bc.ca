@@ -1,0 +1,13 @@
+-p MEMORY_REQUEST=256Mi \
+-p MEMORY_LIMIT=512Mi \
+-p CPU_REQUEST=500m \
+-p CPU_LIMIT=1 \
+-p VOLUME_CAPACITY=512Mi \
+-p SC_MONGO=netapp-file-standard \
+-p MONGODB_SERVICE_NAME={{ infra_name }} \
+-p MONGODB_SECRET_NAME={{ infra_name }} \
+-p MONGODB_REPLICAS=3 \
+-p MONGODB_IMAGE=docker-registry.default.svc:5000/openshift/mongodb \
+-p MONGODB_IMAGE_TAG=3.6 \
+-p SUFFIX={{ suffix }} \
+-p PULL_REQUEST_NUMBER={{ PR }}

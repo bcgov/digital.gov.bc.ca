@@ -1,16 +1,5 @@
-## Building and Deploying
-
-The build and deploy are controlled by ansible play books
-
-
-## The workflow
-
-The workflow is a hybrid between Github and git flow. The ansible playbooks allow developers to build and deploy their PR's to Dev and then subsequent playbooks will promote by retagging their images to the _git flow_ dev/test/prod instances 
-
-
-## Building and Deploying Images
-
-> requires ansible
+## Building and Deploying the frontend on Openshift
+Check out the [ansible docs](ansible/README.md) for all available playbooks. 
 
 You can create builds from a PR by running `ansible-playbook ansible/build-react.yaml -e PR=<pr num>`.
 
@@ -44,3 +33,4 @@ As a bailout you can build and deploy a dev instance of a PR. This is essentiall
 minus the preflight checks
 
 run `ansible-playbook ansible/rollback-react.yaml -e PR=<>`
+
