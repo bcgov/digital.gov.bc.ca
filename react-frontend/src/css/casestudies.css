@@ -72,78 +72,11 @@
     width: 100%;
 }
 
-.digitalCards {
-    width: 1124px;
-    margin: auto;
-    margin-bottom: 40px;
-    align-content: left;
-}
-
-.digitalSubtitle {
-    font-weight: bold;
-    font-size: 16pt;
-    margin: auto;
-    text-align: center;
-}
-
 .cardGrid {
     margin-left: -7px;
 }
 
-.forDesigners {
-    width: 1124px;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-.forDevelopers {
-    width: 1124px;
-    margin-bottom: 40px;
-    margin: auto;
-}
-
-.guides {
-    width: 1124px;
-    margin: auto;
-    margin-bottom: 40px; 
-}
-
-.standards {
-    width: 1124px;
-    margin-bottom: 40px; 
-    margin: auto;
-}
-
-.guidesImg {
-    height: 300px;
-    width: 100%;
-}
-
 @media only screen and (max-width: 800px) {
-
-    .digitalCards {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-
-    .forDesigners {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-
-    .forDevelopers {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-
-    .guides {
-        width: 330px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
 
     .standards {
         width: 330px;
@@ -161,10 +94,6 @@
 
     .caseStudyContainer {
         padding-top: 65px;
-    }
-
-    .guidesImg {
-        width: 330px;
     }
 
     @media only screen and (max-width: 800px) {

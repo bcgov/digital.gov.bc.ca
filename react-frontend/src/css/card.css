@@ -17,7 +17,7 @@
 .cardLink {
     font-family: 'BC Sans';
     font-weight: bold;
-    bottom: 50px;
+    bottom: 30px;
     position: absolute;
 }
 
@@ -28,6 +28,42 @@
 .cardImage {
     height: 330px;
 }
+
+.cardTextHorizontal {
+    text-align: left;
+    align-self: center;
+}
+
+.cardTitleHorizontal {
+    font-family: 'BC Sans';
+    position: relative;
+    font-size: 31px;
+    line-height: 44px;
+    font-weight: bold;
+}
+
+.cardDescriptionHorizontal {
+    font-weight: normal;
+}
+
+.cardLinkHorizontal {
+    font-family: 'BC Sans';
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.cardBodyHorizontal {
+    margin-bottom: 20px;
+    height: 330px;
+}
+
+.cardImageHorizontal {
+    height: 330px;
+    margin-right: 30px;
+    width: 50%;
+    float: left;
+}
+
 
 @media only screen and (max-width: 800px) {
     .cardBody {
@@ -41,6 +77,35 @@
     .cardDescription {
         font-weight: normal;
         overflow-y: scroll;
+        height: 100px;
+    }
+
+    .cardLink {
+        bottom: 10px;
+    }
+
+    .cardBodyHorizontal {
+        width: 330px;
+        height: 575px;
+    }
+
+    .cardImageHorizontal {
+        height: 330px;
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .cardTitleHorizontal {
+        font-size: 24px;
+    }
+
+    .cardDescriptionHorizontal {
+        font-weight: normal;
+        overflow-y: scroll;
         height: 125px;
+    }
+
+    .cardLinkHorizontal {
+        bottom: 10px;
     }
 }

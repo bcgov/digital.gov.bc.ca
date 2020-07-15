@@ -10,42 +10,28 @@ function HorizontalInfoCard(props) {
     isRouteCard = true;
   }
 
-  if (props.img != null) {
-    return (
-      <Card className="cardBody" hoverable style={{ height: '575px' }}>
-        <img className="cardImage" alt="example" src={props.img} />
-        <div className="cardText">
-          <div className="cardTitle">{props.title}</div>
-          <div className="cardDescription">{props.description}</div>
-          <div className="cardLink">
-            {isRouteCard ? (
-              <Link to={props.routePath}>{props.linkText}</Link>
-            ) : (
-              <a href={props.linkPath}>{props.linkText}</a>
-            )}
-          </div>
+  return (
+    <Card
+      className="cardBodyHorizontal"
+      hoverable
+      bordered={false}
+      cover={
+        <img className="cardImageHorizontal" alt="example" src={props.img} />
+      }
+    >
+      <div className="cardTextHorizontal">
+        <div className="cardTitleHorizontal">{props.title}</div>
+        <div className="cardDescriptionHorizontal">{props.description}</div>
+        <div className="cardLinkHorizontal">
+          {isRouteCard ? (
+            <Link to={props.routePath}>{props.linkText}</Link>
+          ) : (
+            <a href={props.linkPath}>{props.linkText}</a>
+          )}
         </div>
-      </Card>
-    );
-  } else {
-    return (
-      <Card className="cardBody" hoverable style={{ height: '300px' }}>
-        <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{props.title}</h2>
-          </div>
-          <div className="cardDescription">{props.description}</div>
-          <div className="cardLink">
-            {isRouteCard ? (
-              <Link to={props.routePath}>{props.linkText}</Link>
-            ) : (
-              <a href={props.linkPath}>{props.linkText}</a>
-            )}
-          </div>
-        </div>
-      </Card>
-    );
-  }
+      </div>
+    </Card>
+  );
 }
 
 export default HorizontalInfoCard;

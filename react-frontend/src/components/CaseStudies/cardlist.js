@@ -23,7 +23,7 @@ function CardList() {
       <div className="cardGrid">
         <Grid>
           <Row gutter={[0, 24]} justify={'space-around'}>
-            <Col sm={12} md={6}>
+            <Col sm={24} md={12}>
               <HorizontalInfoCard
                 title={'Mines Digital Service'}
                 img={imgLinks[0]}
