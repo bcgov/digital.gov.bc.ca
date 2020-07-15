@@ -9,3 +9,6 @@
         - Or the buildconfig has been run but isn't complete
         - OR the build failed
     when: "imagestreamtag|length == 0"
+  - name: Setting image exists
+    set_fact:
+      image_exists: "imagestreamtag|length > 0"
