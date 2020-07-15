@@ -2,23 +2,20 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
 import InfoCard from '../Home/infocard';
+import VideoImg from '../../images/videocomms.png';
 
 function Guides() {
   return (
-    <div className="guides">
-      <div>
-        <h2 className="resourceInfoTitle">Guides</h2>
-      </div>
+    <div className="resourceBlock">
       <div className="resourceInfo">
+        <div>
+          <h2 className="resourceInfoTitle">Guides</h2>
+        </div>
         <Grid>
           <Row>
             <Col sm={12} md={6}>
               <div className="guidesInfo">
-                <img
-                  className="guidesImg"
-                  src="https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg"
-                  alt="example"
-                />
+                <img className="guidesImg" src={VideoImg} alt="example" />
               </div>
             </Col>
             <Col sm={12} md={6}>

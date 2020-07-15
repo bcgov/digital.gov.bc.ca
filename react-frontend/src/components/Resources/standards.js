@@ -4,7 +4,7 @@ import '../../css/resources.css';
 
 function Standards() {
   return (
-    <div className="standards">
+    <div className="resourceBlock">
       <div className="resourceInfo">
         <Grid>
           <Row>
