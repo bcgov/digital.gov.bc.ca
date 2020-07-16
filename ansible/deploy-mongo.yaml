@@ -1,0 +1,24 @@
+---
+  - hosts: localhost
+    gather_facts: no
+    connection: local
+    vars:
+      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      namespace: "{{ dev_namespace }}"
+      suffix: "{{ version }}"
+      image_namespace: "{{ tools_namespace }}"
+      infra_name: "{{ mongo_infra_name }}"
+      # mongo operation settings
+      first_mongo_pod: "{{ mongo_infra_name }}-0"
+    tasks:
+      - name: Clearing stateful set objects
+        include_tasks: tasks/delete_objects.yaml
+        vars:
+          label: "app={{ infra_name }}-{{ suffix }}"
+
+      - name: deploy {{ infra_name }} of PR {{ PR }} in {{ namespace }} namespace
+        shell: >
+          oc process -n "{{ namespace }}" -f "../openshift/templates/mongo/stateful-set.yaml" {{ deploy_params }} | 
+          oc apply -n "{{ namespace }}" -f -
+        vars:
+          deploy_params: "{{ lookup('template', './templates/deploy_mongo.param.j2') }}"

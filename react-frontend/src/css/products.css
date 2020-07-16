@@ -1,0 +1,89 @@
+.productsContainer {
+    padding-top: 100px;
+    background-color: #F2F2F2;
+}
+
+.productsBody {
+    width: 85%;
+    margin: auto;
+}
+
+.instructions {
+    margin-left: -3px;
+}
+.instructionsFirst {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 25px;
+
+}
+
+.instructionCol {
+    margin-bottom: 25px;
+}
+
+.productsTitle {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 24pt;
+    margin-left: -1px;
+}
+
+.definingContainer {
+    margin-top: 20px;
+
+}
+
+.cardAdjustment {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.productsSubtitle {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 24pt;
+}
+
+.productsParagraph {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 12pt;
+    line-height: 16pt;
+}
+
+
+.productCardLink {
+    text-decoration: underline;
+}
+
+.productsLink {
+    font-family: 'BC Sans';
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-size: 12pt;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+    .productsContainer {
+        padding-top: 65px;
+    }
+
+    .definingContainer {
+        margin-left: -5px;
+    }
+
+    .productsTitle {
+        margin-left: -4px;
+    }
+
+    .productTop {
+        padding-top: 75px;
+    }
+}

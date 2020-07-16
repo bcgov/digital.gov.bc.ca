@@ -4,11 +4,15 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+const mobileImg = require('../../images/logo-banner.png');
+const desktopImg = require('../../images/logo.png');
+
 function NavBar() {
   const history = useHistory();
   const routeLocation = useLocation();
   const [activePage, setActivePage] = useState(routeLocation.pathname);
   const [openMenu, setOpenMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
 
   useEffect(() => {
     function handleResize() {
@@ -16,10 +20,12 @@ function NavBar() {
         const nav = document.getElementById('navbar');
         nav.style.display = 'none';
         setOpenMenu(false);
+        setIsMobile(false);
       } else {
         const nav = document.getElementById('navbar');
         nav.style.display = 'block';
         setOpenMenu(true);
+        setIsMobile(true);
       }
     }
 
@@ -42,6 +48,8 @@ function NavBar() {
     }
   };
 
+  let logoPath = isMobile ? mobileImg : desktopImg;
+
   return (
     <div className="navBar">
       <header>
@@ -51,7 +59,8 @@ function NavBar() {
             alt="Go to the Government of British Columbia website"
           >
             <img
-              src={require('../../images/logo-banner.png')}
+              className="navImage"
+              src={logoPath}
               alt="Go to the Government of British Columbia website"
             />
           </a>
@@ -86,12 +95,16 @@ function NavBar() {
                 <p className="navOption">Resources</p>
               </Link>
             </li>
-            {/* <li>
-              <a href=".">Products & Services</a>
-            </li>
             <li>
-              <a href=".">Blog</a>
-            </li> */}
+              <Link
+                to="/products-services"
+                className={
+                  activePage === '/products-services' ? 'active' : 'notactive'
+                }
+              >
+                <p className="navOption">Products & Services</p>
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -1,5 +1,6 @@
 .cardText {
     text-align: left;
+    padding: 16px auto;
 }
 
 .cardTitle {
@@ -16,13 +17,22 @@
 
 .cardLink {
     font-family: 'BC Sans';
+    color: #1a5a96;
+    text-decoration: underline;
     font-weight: bold;
     bottom: 30px;
     position: absolute;
+    font-size: 16px;
+}
+
+.cardLink:hover {
+    text-decoration: none;
+    color: blue;
 }
 
 .cardBody {
     margin-bottom: 20px;
+    font-size: 16pt;
 }
 
 .cardImage {
@@ -71,7 +81,8 @@
     }
 
     .cardTitle {
-        font-size: 24px;
+        font-size: 22px;
+        margin-top: -10px;
     }
 
     .cardDescription {
