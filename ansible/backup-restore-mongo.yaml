@@ -1,0 +1,49 @@
+---
+  - hosts: localhost
+    gather_facts: no
+    connection: local
+    vars:
+      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      namespace: "{{ dev_namespace }}"
+      suffix: "{{ version }}"
+      image_namespace: "{{ tools_namespace }}"
+      infra_name: "{{ mongo_infra_name }}"
+    tasks:
+      - name: create param file
+        template:
+          src: ./templates/deploy_backup.param.j2
+          dest: /tmp/deploy_backup.param
+
+      - name: Backup and restore of mongo database at {{ infra_name }}-{{ suffix }}
+        shell: "oc process -n {{ namespace }} -f ../openshift/templates/mongo/backup.yaml --param-file=/tmp/deploy_backup.param | oc apply -n {{ namespace }} -f -"
+
+      - name: delete param file
+        file:
+          state: absent
+          path: /tmp/deploy_backup.param
+
+      - name: Wait for mongod to be ready in pod 
+        k8s_info:
+          api_version: v1
+          kind: "Pod"
+          name: "{{ mongo_backup_infra_name }}-{{ suffix }}"
+          namespace: "{{ namespace }}"
+        register: result
+        until: (result.resources[0].status.containerStatuses[0].ready)
+        delay: 15
+        retries: 20
+        ignore_errors: True
+
+      - name: execute backup and restore in pod {{ mongo_backup_infra_name }}-{{ suffix }}
+        shell: oc -n {{ namespace }} rsh pod/{{ mongo_backup_infra_name }}-{{ suffix }} /var/lib/mongodb/backup-restore-verify.sh
+        register: output
+        # /var/lib/mongodb/backup-restore-verify.sh will exit 0 with the following message  (below) if successful 
+        failed_when: "'==== exiting ====' not in output.stdout"
+
+      - name: Delete Pod
+        k8s:
+          state: absent
+          api_version: v1
+          kind: "Pod"
+          name: "{{ mongo_backup_infra_name }}-{{ suffix }}"
+          namespace: "{{ namespace }}"

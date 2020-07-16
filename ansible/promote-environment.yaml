@@ -11,6 +11,7 @@
       ## the deploy_react subtasks takes in a var for image namespace to create the deploy.param file
       ## in this playbook we want to pull images from the same namespace that it is being promoted too
       image_namespace: "{{ namespace }}"
+      image_exists: false
     tasks:
       - fail:
           msg: "{{ ENV }} is not valid. Must be either 'prod' or 'test'"
