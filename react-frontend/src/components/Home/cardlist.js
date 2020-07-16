@@ -12,7 +12,7 @@ const descriptions = [
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
   'Work is underway to renew policies towards information management and technology.',
   'Find standards, policy, guides, and services to help you work more effectively in the digital age and deliver better services for citizens.',
-  'Connect with people working to improve digital services in British Columbia.',
+  'Join the BCDevExchange, a supportive community working to improve digital services in British Columbia.',
   'See examples of how teams are improving digital services for British Columbians.',
 ];
 
