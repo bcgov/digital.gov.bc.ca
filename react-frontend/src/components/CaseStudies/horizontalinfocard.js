@@ -4,12 +4,7 @@ import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
 
-function HorizontalInfoCard(props) {
-  var isRouteCard = false;
-  if (props.routePath != null) {
-    isRouteCard = true;
-  }
-
+const HorizontalInfoCard = (props) => {
   return (
     <Card
       className="cardBodyHorizontal"
@@ -23,7 +18,7 @@ function HorizontalInfoCard(props) {
         <div className="cardTitleHorizontal">{props.title}</div>
         <div className="cardDescriptionHorizontal">{props.description}</div>
         <div className="cardLinkHorizontal">
-          {isRouteCard ? (
+          {props.routePath ? (
             <Link to={props.routePath}>{props.linkText}</Link>
           ) : (
             <a href={props.linkPath}>{props.linkText}</a>
@@ -32,6 +27,6 @@ function HorizontalInfoCard(props) {
       </div>
     </Card>
   );
-}
+};
 
 export default HorizontalInfoCard;

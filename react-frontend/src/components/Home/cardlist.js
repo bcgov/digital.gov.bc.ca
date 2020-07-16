@@ -88,7 +88,7 @@ function CardList() {
                 img={imgLinks[5]}
                 description={descriptions[5]}
                 linkText={linkTexts[5]}
-                routePath="/casestudies"
+                routePath="/case-studies"
               />
             </Col>
           </Row>

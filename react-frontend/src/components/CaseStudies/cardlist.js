@@ -29,7 +29,7 @@ function CardList() {
                 img={imgLinks[0]}
                 description={descriptions[0]}
                 linkText={'Read more'}
-                routePath="/casestudies"
+                routePath="/case-studies"
               />
             </Col>
           </Row>
@@ -40,7 +40,7 @@ function CardList() {
                 img={imgLinks[1]}
                 description={descriptions[1]}
                 linkText={'Read more'}
-                routePath="/casestudies"
+                routePath="/case-studies"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -49,7 +49,7 @@ function CardList() {
                 img={imgLinks[2]}
                 description={descriptions[2]}
                 linkText={'Read more'}
-                routePath="/casestudies"
+                routePath="/case-studies"
               />
             </Col>
           </Row>
