@@ -4,6 +4,9 @@ import InfoCard from '../Home/infocard';
 import HorizontalInfoCard from './horizontalinfocard';
 
 import '../../css/home.css';
+const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
+const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
+const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
 
 const descriptions = [
   'Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public',
@@ -26,7 +29,7 @@ function CardList() {
             <Col sm={24} md={12}>
               <HorizontalInfoCard
                 title={'Mines Digital Service'}
-                img={imgLinks[0]}
+                img={caseStudiesMiningImg}
                 description={descriptions[0]}
                 linkText={'Read more'}
                 routePath="/case-studies"
@@ -37,7 +40,7 @@ function CardList() {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Helping farmers understand their soil'}
-                img={imgLinks[1]}
+                img={caseStudiesFarmingImg}
                 description={descriptions[1]}
                 linkText={'Read more'}
                 routePath="/case-studies"
@@ -46,7 +49,7 @@ function CardList() {
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Transforming the Medical Services Plan'}
-                img={imgLinks[2]}
+                img={caseStudiesMSPImg}
                 description={descriptions[2]}
                 linkText={'Read more'}
                 routePath="/case-studies"

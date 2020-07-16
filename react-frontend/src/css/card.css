@@ -20,7 +20,7 @@
     color: #1a5a96;
     text-decoration: underline;
     font-weight: bold;
-    bottom: 30px;
+    bottom: 20px;
     position: absolute;
     font-size: 16px;
 }
@@ -58,8 +58,11 @@
 
 .cardLinkHorizontal {
     font-family: 'BC Sans';
+    color: #1a5a96;
+    text-decoration: underline;
     font-weight: bold;
-    margin-top: 50px;
+    bottom: 20px;
+    font-size: 16px;
 }
 
 .cardBodyHorizontal {
