@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 function InfoCard({
   height,
@@ -16,6 +18,7 @@ function InfoCard({
   let cardHeight = 0;
 
   var isRouteCard = false;
+
   if (routePath != null) {
     isRouteCard = true;
   }
@@ -41,7 +44,13 @@ function InfoCard({
               <Link to={routePath}>{linkText}</Link>
             ) : (
               <p>
-                <a href={linkPath}>{linkText}</a>
+                <a href={linkPath}>
+                  {linkText}
+                  <FontAwesomeIcon
+                    icon={faExternalLinkAlt}
+                    style={{ paddingLeft: '5px' }}
+                  />
+                </a>
               </p>
             )}
           </div>
@@ -63,7 +72,13 @@ function InfoCard({
               <Link to={routePath}>{linkText}</Link>
             ) : (
               <p>
-                <a href={linkPath}>{linkText}</a>
+                <a href={linkPath}>
+                  {linkText}
+                  <FontAwesomeIcon
+                    icon={faExternalLinkAlt}
+                    style={{ paddingLeft: '5px' }}
+                  />
+                </a>
               </p>
             )}
           </div>

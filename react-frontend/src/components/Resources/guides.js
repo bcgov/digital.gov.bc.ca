@@ -11,7 +11,7 @@ function Guides() {
         <div>
           <h2 className="resourceInfoTitle">Guides</h2>
         </div>
-        <Grid>
+        <Grid className="cardAdjustment">
           <Row>
             <Col sm={12} md={6}>
               <div className="guidesInfo">

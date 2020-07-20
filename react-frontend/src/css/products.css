@@ -36,8 +36,8 @@
 }
 
 .cardAdjustment {
-    margin-left: -8px;
-    margin-right: -8px;
+    padding-left: -8px;
+    width: 100%;
 }
 
 .productsSubtitle {

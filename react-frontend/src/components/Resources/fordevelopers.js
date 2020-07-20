@@ -6,10 +6,10 @@ function ForDevelopers() {
   return (
     <div className="resourceBlock">
       <div>
-        <h2 className="resourceInfoTitle">For Developers</h2>
+        <h2 className="resourceInfoForTitle">For Developers</h2>
       </div>
       <div className="resourceInfo">
-        <Grid>
+        <Grid className="cardAdjustment">
           <Row>
             <Col sm={12} md={6}>
               <InfoCard
