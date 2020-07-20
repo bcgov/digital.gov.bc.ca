@@ -83,6 +83,8 @@ const CardList = () => {
                 title={'Case Studies'}
                 img={caseStudiesImg}
                 description={descriptions[5]}
+                linkText={linkTexts[5]}
+                routePath="/case-studies"
               />
             </Col>
           </Row>
