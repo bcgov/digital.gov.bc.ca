@@ -8,7 +8,8 @@ const Template = ({
   approach,
   outcomes,
   additional,
-  resources,
+  resourceText,
+  resourceLinks,
   backgroundImage,
   others,
 }) => {
