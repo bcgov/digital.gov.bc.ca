@@ -1,7 +1,10 @@
 import React from 'react';
+
+import CollaborationTool from './collaborationTool';
+
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import CollaborationTool from './collaborationTool';
+import { Title, Title2, Title3, Title4 } from '../../StyleComponents/headings';
 
 const GlobalStyle = createGlobalStyle`
  html {
@@ -16,30 +19,6 @@ const CollabToolContainer = styled.div`
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-`;
-const Title = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 3rem;
-  width: 100%;
-`;
-const Title2 = styled.h2`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 3rem;
-  width: 100%;
-`;
-const Title3 = styled.h3`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 3rem;
-  width: 100%;
-`;
-const Title4 = styled.h4`
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-top: 2.75rem;
-  width: 100%;
 `;
 
 function CollaborationTools() {
