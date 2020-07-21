@@ -8,15 +8,18 @@ const HorizontalInfoCard = (props) => {
   return (
     <Card
       className="cardBodyHorizontal"
-      hoverable
       bordered={false}
       cover={
         <img className="cardImageHorizontal" alt="example" src={props.img} />
       }
     >
       <div className="cardTextHorizontal">
-        <div className="cardTitleHorizontal">{props.title}</div>
-        <div className="cardDescriptionHorizontal">{props.description}</div>
+        <div>
+          <p className="cardTitleHorizontal">{props.title}</p>
+        </div>
+        <div>
+          <p className="cardDescriptionHorizontal">{props.description}</p>
+        </div>
         <div className="cardLinkHorizontal">
           {props.routePath ? (
             <Link to={props.routePath}>{props.linkText}</Link>

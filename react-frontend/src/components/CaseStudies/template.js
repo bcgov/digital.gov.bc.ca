@@ -9,14 +9,20 @@ const Template = ({
   outcomes,
   additional,
   resources,
+  backgroundImage,
   others,
 }) => {
+  const imgStyle = {
+    backgroundImage: 'url(' + backgroundImage + ')',
+  };
   return (
     <div>
-      <div className="pageTop">
-        <div className="pageText">
-          <p className="pageTitle">{headerTitle}</p>
-          <p className="pageDescription">{headerDescription}</p>
+      <div className="pageTop" style={imgStyle}>
+        <div className="pageTextBanner">
+          <div className="pageText">
+            <p className="pageTitle">{headerTitle}</p>
+            <p className="pageDescription">{headerDescription}</p>
+          </div>
         </div>
       </div>
       <div className="pageBody">
@@ -43,6 +49,7 @@ const Template = ({
           </div>
         )}
         <p className="pageSubtitle">Other Case Studies</p>
+        <div>{others}</div>
       </div>
     </div>
   );

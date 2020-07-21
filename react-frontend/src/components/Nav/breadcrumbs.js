@@ -19,7 +19,8 @@ const BreadCrumbs = () => {
     return null;
   }
 
-  let displayName = pathName.replace('/', '');
+  let pathArray = pathName.split('/');
+  let displayName = pathArray[1];
 
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
@@ -31,7 +32,7 @@ const BreadCrumbs = () => {
         </li>
         <li className="listOption">/</li>
         <li className="listOption">
-          <Link to={pathName}>{routeDisplayNames[displayName]}</Link>
+          <Link to={'/' + displayName}>{routeDisplayNames[displayName]}</Link>
         </li>
       </ul>
     </div>

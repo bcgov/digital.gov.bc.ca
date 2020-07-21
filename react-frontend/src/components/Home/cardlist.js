@@ -37,6 +37,7 @@ const CardList = () => {
                 description={descriptions[0]}
                 linkText={linkTexts[0]}
                 routePath="/digital-framework"
+                height="300px"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -45,6 +46,7 @@ const CardList = () => {
                 description={descriptions[1]}
                 linkText={linkTexts[1]}
                 linkPath={'https://github.com/bcgov/digital-principles'}
+                height="300px"
               />
             </Col>
           </Row>
@@ -55,8 +57,7 @@ const CardList = () => {
                 description={descriptions[2]}
                 linkText="Find support"
                 routePath={'/products-services'}
-                // TODO uncomment these when pages are made
-                // linkText={linkTexts[2]}
+                height="300px"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -65,6 +66,7 @@ const CardList = () => {
                 description={descriptions[3]}
                 linkText={linkTexts[3]}
                 routePath="/resources"
+                height="300px"
               />
             </Col>
           </Row>

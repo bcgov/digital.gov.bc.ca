@@ -23,5 +23,11 @@
     .pageBody {
         width: 330px;
     }
+
+    .cardAdjustment {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
 }
 

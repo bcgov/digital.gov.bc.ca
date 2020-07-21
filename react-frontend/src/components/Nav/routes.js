@@ -7,10 +7,6 @@ import CollaborationTools from '../../components/Guides/CollaborationTools/colla
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
 
-//delete on commit, just used for testing
-import MedicalServices from '../CaseStudies/medicalservices';
-import MiningStudy from '../CaseStudies/mining';
-
 const DisplayNames = {
   resources: 'Resources',
   'products-services': 'Products and Services',
@@ -40,7 +36,7 @@ const Routes = () => {
         <CollaborationTools />
       </Route>
       <Route path="/">
-        <MedicalServices />
+        <Home />
       </Route>
     </Switch>
   );

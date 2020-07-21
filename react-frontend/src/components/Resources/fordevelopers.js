@@ -19,6 +19,7 @@ function ForDevelopers() {
                 }
                 linkText={'Explore'}
                 linkPath={'https://github.com/bcgov'}
+                height="300px"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -29,6 +30,7 @@ function ForDevelopers() {
                 }
                 linkText={'Visit Site'}
                 linkPath={'https://developer.gov.bc.ca/'}
+                height="300px"
               />
             </Col>
           </Row>

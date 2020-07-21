@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import InfoCard from '../Home/infocard';
 import HorizontalInfoCard from './horizontalinfocard';
+import { useRouteMatch } from 'react-router-dom';
 
 import '../../css/home.css';
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
@@ -14,13 +15,8 @@ const descriptions = [
   'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...',
 ];
 
-const imgLinks = [
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-  'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-];
-
 function CardList() {
+  let { path, url } = useRouteMatch();
   return (
     <div className="cardContainer">
       <div className="cardGrid">
@@ -32,7 +28,7 @@ function CardList() {
                 img={caseStudiesMiningImg}
                 description={descriptions[0]}
                 linkText={'Read more'}
-                routePath="/case-studies"
+                routePath={url + '/mining-study'}
               />
             </Col>
           </Row>
@@ -43,7 +39,7 @@ function CardList() {
                 img={caseStudiesFarmingImg}
                 description={descriptions[1]}
                 linkText={'Read more'}
-                routePath="/case-studies"
+                routePath={url + '/farming-study'}
               />
             </Col>
             <Col sm={12} md={6}>
@@ -52,7 +48,7 @@ function CardList() {
                 img={caseStudiesMSPImg}
                 description={descriptions[2]}
                 linkText={'Read more'}
-                routePath="/case-studies"
+                routePath={url + '/medical-study'}
               />
             </Col>
           </Row>
