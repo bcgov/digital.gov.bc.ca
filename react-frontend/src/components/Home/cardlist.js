@@ -25,7 +25,7 @@ const linkTexts = [
   'Learn more',
 ];
 
-function CardList() {
+const CardList = () => {
   return (
     <div className="cardContainer">
       <div className="cardGrid">
@@ -37,6 +37,7 @@ function CardList() {
                 description={descriptions[0]}
                 linkText={linkTexts[0]}
                 routePath="/digital-framework"
+                height="300px"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -45,6 +46,7 @@ function CardList() {
                 description={descriptions[1]}
                 linkText={linkTexts[1]}
                 linkPath={'https://github.com/bcgov/digital-principles'}
+                height="300px"
               />
             </Col>
           </Row>
@@ -55,8 +57,7 @@ function CardList() {
                 description={descriptions[2]}
                 linkText="Find support"
                 routePath={'/products-services'}
-                // TODO uncomment these when pages are made
-                // linkText={linkTexts[2]}
+                height="300px"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -65,6 +66,7 @@ function CardList() {
                 description={descriptions[3]}
                 linkText={linkTexts[3]}
                 routePath="/resources"
+                height="300px"
               />
             </Col>
           </Row>
@@ -83,6 +85,8 @@ function CardList() {
                 title={'Case Studies'}
                 img={caseStudiesImg}
                 description={descriptions[5]}
+                linkText={linkTexts[5]}
+                routePath="/case-studies"
               />
             </Col>
           </Row>
@@ -90,6 +94,6 @@ function CardList() {
       </div>
     </div>
   );
-}
+};
 
 export default CardList;

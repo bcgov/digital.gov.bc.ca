@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
+import CaseStudies from '../../components/CaseStudies/casestudies';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
@@ -24,6 +25,9 @@ const Routes = () => {
       </Route>
       <Route path="/resources">
         <Resources />
+      </Route>
+      <Route path="/case-studies">
+        <CaseStudies />
       </Route>
       <Route path="/guides/communication-platforms">
         <CollaborationTools />
