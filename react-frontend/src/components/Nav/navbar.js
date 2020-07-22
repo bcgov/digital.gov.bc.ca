@@ -33,9 +33,7 @@ function NavBar() {
 
     history.listen((location) => {
       setActivePage(location.pathname);
-      const nav = document.getElementById('navbar');
-      nav.style.display = 'none';
-      setOpenMenu(false);
+      handleResize();
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
   }, [history]);

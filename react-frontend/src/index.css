@@ -14,13 +14,6 @@ p, h1, h2, h3, h4, li {
     font-size: 16px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 36px;
-    color: #313132;
-}
-
 h1, h2, h3, h4 {
     font-weight: bold;
 }

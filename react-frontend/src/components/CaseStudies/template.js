@@ -39,8 +39,12 @@ const Template = ({
       <div className="pageTop" style={imgStyle}>
         <div className="pageTextBanner">
           <div className="pageText">
-            <p className="pageTitle">{headerTitle}</p>
-            <p className="pageDescription">{headerDescription}</p>
+            <p className="pageTitle" style={{ color: 'white' }}>
+              {headerTitle}
+            </p>
+            <div className="pageDescription">
+              <p style={{ color: 'white' }}> {headerDescription} </p>
+            </div>
           </div>
         </div>
       </div>

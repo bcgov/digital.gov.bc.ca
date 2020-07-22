@@ -19,8 +19,6 @@
 
 .pageTextBanner {
     width: 100%;
-    font-family: 'BC Sans';
-    color: white;
     background-color: rgba(0, 51, 102, 0.7);
     padding: 25px;
 }
@@ -34,6 +32,11 @@
 .pageText p {
     color: white;
     font-weight: bold;
+}
+
+.pageDescription p {
+    position: relative;
+    font-size: 22px;
 }
 
 .pageDescription p {

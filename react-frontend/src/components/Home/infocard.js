@@ -46,10 +46,12 @@ function InfoCard({
               <p>
                 <a href={linkPath}>
                   {linkText}
-                  <FontAwesomeIcon
-                    icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px' }}
-                  />
+                  {linkPath && (
+                    <FontAwesomeIcon
+                      icon={faExternalLinkAlt}
+                      style={{ paddingLeft: '5px' }}
+                    />
+                  )}
                 </a>
               </p>
             )}
@@ -74,10 +76,12 @@ function InfoCard({
               <p>
                 <a href={linkPath}>
                   {linkText}
-                  <FontAwesomeIcon
-                    icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px' }}
-                  />
+                  {linkPath && (
+                    <FontAwesomeIcon
+                      icon={faExternalLinkAlt}
+                      style={{ paddingLeft: '5px' }}
+                    />
+                  )}
                 </a>
               </p>
             )}
