@@ -50,7 +50,8 @@ const Farmers = () => {
         context={FarmerContent.context}
         approach={FarmerContent.approach}
         outcomes={FarmerContent.outcomes}
-        resources={FarmerContent.resources}
+        resourceLinks={FarmerContent.resourceLinks}
+        resourceText={FarmerContent.resourceText}
         backgroundImage={bannerImage}
         others={others}
       />

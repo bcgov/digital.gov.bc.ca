@@ -8,7 +8,37 @@ import bannerImage from '../../images/case-study-mining.jpg';
 
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
+const jill = require('../../images/jill.png');
+const aaron = require('../../images/aaron.png');
 
+const contacts = (
+  <div>
+    <Grid className="cardAdjustment">
+      <Row>
+        <Col sm={12} md={6}>
+          <InfoCard
+            title={'Aaron Unger'}
+            description={
+              'Product Owner, Mines Digital Services - Aaron.Unger@gov.bc.ca'
+            }
+            img={aaron}
+            height="550px"
+          />
+        </Col>
+        <Col sm={12} md={6}>
+          <InfoCard
+            title={'Jillian Carruthers'}
+            description={
+              'Director, Digital Services - Jillian.Carruthers@gov.bc.ca'
+            }
+            img={jill}
+            height="550px"
+          />
+        </Col>
+      </Row>
+    </Grid>
+  </div>
+);
 const others = (
   <div>
     <Grid className="cardAdjustment">
@@ -51,8 +81,10 @@ const MiningStudy = () => {
         context={MiningContent.context}
         approach={MiningContent.approach}
         outcomes={MiningContent.solution}
-        resources={MiningContent.resources}
+        resourceLinks={MiningContent.resourceLinks}
+        resourceText={MiningContent.resourceText}
         backgroundImage={bannerImage}
+        contacts={contacts}
         others={others}
       />
     </div>
