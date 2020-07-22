@@ -162,8 +162,8 @@ const FarmerContent = {
       </p>
     </div>
   ),
-  resourceText: 'Nutrient Management Calculator',
-  resourceLinks: '.',
+  resourceText: ['Nutrient Management Calculator'],
+  resourceLinks: ['.'],
 };
 
 const MedicalContent = {

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../css/pagetop.css';
+import '../../css/case-study-template.css';
 
 const Template = ({
   headerTitle,
@@ -11,11 +12,28 @@ const Template = ({
   resourceText,
   resourceLinks,
   backgroundImage,
+  contacts,
   others,
 }) => {
   const imgStyle = {
     backgroundImage: 'url(' + backgroundImage + ')',
   };
+
+  const resources = [];
+
+  if (resourceText) {
+    for (var i = 0; i < resourceText.length; i++) {
+      const insert = (
+        <li key={i}>
+          <a className="resourceLink" href={resourceLinks[i]}>
+            {resourceText[i]}
+          </a>
+        </li>
+      );
+      resources.push(insert);
+    }
+  }
+
   return (
     <div>
       <div className="pageTop" style={imgStyle}>
@@ -46,7 +64,13 @@ const Template = ({
         {resources != null && (
           <div className="contentBlock">
             <p className="pageSubtitle">Resources and Related Information</p>
-            {resources}
+            <ul className="resourceLinkBox">{resources}</ul>
+          </div>
+        )}
+        {contacts && (
+          <div className="contentBlock">
+            <p className="pageSubtitle">For more information</p>
+            {contacts}
           </div>
         )}
         <p className="pageSubtitle">Other Case Studies</p>
