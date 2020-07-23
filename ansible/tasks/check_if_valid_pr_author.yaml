@@ -26,3 +26,6 @@
       is_valid_author: "{% if collaborator_response.status == 204 %}true{% else %}false{% endif %}"
       when: 
         - is_valid_author 
+  - fail: 
+      msg: Invalid author {{ pr_author }} for repo {{ github_owner }}/{{ github_repo }}
+    when: not is_valid_author
