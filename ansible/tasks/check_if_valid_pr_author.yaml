@@ -4,15 +4,12 @@
       url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
       method: GET
     register: pr_request
-    set_fact:
-      is_valid_author: true
 
   - name: Set PR author for PR {{ PR }}
     set_fact: 
       pr_author: "{{ pr_request.json.user.login }}"
-    when:
-      - is_valid_author
-  
+      is_valid_author: true
+    
   - name: Check if PR author {{ pr_author }} for PR {{ PR }} is one of the collaborators in {{ github_owner }}/{{ github_repo }}
     uri:
       url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/collaborators/{{ pr_author }}
