@@ -24,10 +24,11 @@ Builds the React Image from an open pull request. The Build is optimized to not 
 
 Options: 
 - `PR` <number> this should be an open Pull Request number
+- `GITHUB_TOKEN` <string> a token that has permissions to query for repo collaborators
  
 Usage:
 
-`ansible-playbook build-react.yaml -e PR=<pr num>`
+`ansible-playbook build-react.yaml -e PR=<pr num> -e GITHUB_TOKEN=<secret>`
 
 
 ### Deploy React

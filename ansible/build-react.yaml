@@ -16,6 +16,7 @@
 
       - name: Check if should build 
         include: ./tasks/check_if_should_build.yaml
+        when: is_valid_author
 
       - debug:
           msg:
