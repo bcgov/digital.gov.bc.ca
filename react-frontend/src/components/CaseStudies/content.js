@@ -1,7 +1,47 @@
 import React from 'react';
+import { Grid, Col, Row } from 'react-flexbox-grid';
+import InfoCard from '../Home/infocard';
+import MiningBannerImage from '../../images/case-study-mining.jpg';
+import MedicalBannerImage from '../../images/case-study-msp.jpg';
+import FarmingBannerImage from '../../images/case-study-farming.jpg';
+
+const jill = require('../../images/jill.png');
+const aaron = require('../../images/aaron.png');
+const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
+const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
+const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
 
 const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',
+  backgroundImage: MiningBannerImage,
+  contacts: (
+    <div>
+      <Grid className="cardAdjustment">
+        <Row>
+          <Col sm={12} md={6}>
+            <InfoCard
+              title={'Aaron Unger'}
+              description={
+                'Product Owner, Mines Digital Services - Aaron.Unger@gov.bc.ca'
+              }
+              img={aaron}
+              height="550px"
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              title={'Jillian Carruthers'}
+              description={
+                'Director, Digital Services - Jillian.Carruthers@gov.bc.ca'
+              }
+              img={jill}
+              height="550px"
+            />
+          </Col>
+        </Row>
+      </Grid>
+    </div>
+  ),
   description:
     'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.',
   approach: (
@@ -40,7 +80,39 @@ const MiningContent = {
       </ol>
     </div>
   ),
-  solution: (
+  others: (
+    <div>
+      <Grid className="cardAdjustment">
+        <Row>
+          <Col sm={12} md={6}>
+            <InfoCard
+              routePath={'/case-studies/farming-study'}
+              linkText={'Read more'}
+              title={'Helping farmers understand their soil'}
+              description={
+                'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
+              }
+              img={caseStudiesFarmingImg}
+              height="650px"
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              routePath={'/case-studies/medical-study'}
+              linkText={'Read more'}
+              title={'Transforming the medical services plan'}
+              description={
+                'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
+              }
+              img={caseStudiesMSPImg}
+              height="650px"
+            />
+          </Col>
+        </Row>
+      </Grid>
+    </div>
+  ),
+  outcomes: (
     <div>
       <ol>
         <li>
@@ -92,6 +164,7 @@ const MiningContent = {
 
 const FarmerContent = {
   title: 'Helping farmers understand their soil',
+  backgroundImage: FarmingBannerImage,
   description:
     'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.',
   context:
@@ -132,6 +205,38 @@ const FarmerContent = {
       </ol>
     </div>
   ),
+  others: (
+    <div>
+      <Grid className="cardAdjustment">
+        <Row>
+          <Col sm={12} md={6}>
+            <InfoCard
+              routePath={'/case-studies/mining-study'}
+              linkText={'Read more'}
+              title={'Mines Digital Service'}
+              description={
+                'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
+              }
+              img={caseStudiesMiningImg}
+              height="650px"
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              routePath={'/case-studies/medical-study'}
+              linkText={'Read more'}
+              title={'Transforming the medical services plan'}
+              description={
+                'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
+              }
+              img={caseStudiesMSPImg}
+              height="650px"
+            />
+          </Col>
+        </Row>
+      </Grid>
+    </div>
+  ),
   outcomes: (
     <div>
       <p>
@@ -168,6 +273,7 @@ const FarmerContent = {
 
 const MedicalContent = {
   title: 'Transforming the Medical Services Plan',
+  backgroundImage: MedicalBannerImage,
   description:
     'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the Ministry of Health wanted to introduce a digital self-serve product, an online enrolment form.',
   context: (
@@ -209,6 +315,38 @@ const MedicalContent = {
           </p>
         </li>
       </ul>
+    </div>
+  ),
+  others: (
+    <div>
+      <Grid className="cardAdjustment">
+        <Row>
+          <Col sm={12} md={6}>
+            <InfoCard
+              routePath={'/case-studies/mining-study'}
+              linkText={'Read more'}
+              title={'Mines Digital Service'}
+              description={
+                'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
+              }
+              img={caseStudiesMiningImg}
+              height="650px"
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              routePath={'/case-studies/farming-study'}
+              linkText={'Read more'}
+              title={'Helping farmers understand their soil'}
+              description={
+                'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
+              }
+              img={caseStudiesFarmingImg}
+              height="650px"
+            />
+          </Col>
+        </Row>
+      </Grid>
     </div>
   ),
   approach: (

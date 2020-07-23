@@ -20,7 +20,7 @@ function InfoCard({
     isRouteCard = true;
   }
 
-  cardHeight = height == null ? '600px' : height;
+  cardHeight = height ? '600px' : height;
 
   if (img != null) {
     return (

@@ -1,32 +1,21 @@
 import React from 'react';
 import '../../css/pagetop.css';
 import '../../css/case-study-template.css';
+import '../../css/casetemplates.css';
 
-const Template = ({
-  headerTitle,
-  headerDescription,
-  context,
-  approach,
-  outcomes,
-  additional,
-  resourceText,
-  resourceLinks,
-  backgroundImage,
-  contacts,
-  others,
-}) => {
+const Template = ({ content }) => {
   const imgStyle = {
-    backgroundImage: 'url(' + backgroundImage + ')',
+    backgroundImage: 'url(' + content.backgroundImage + ')',
   };
 
   const resources = [];
 
-  if (resourceText) {
-    for (var i = 0; i < resourceText.length; i++) {
+  if (content.resourceText) {
+    for (var i = 0; i < content.resourceText.length; i++) {
       const insert = (
         <li key={i}>
-          <a className="resourceLink" href={resourceLinks[i]}>
-            {resourceText[i]}
+          <a className="resourceLink" href={content.resourceLinks[i]}>
+            {content.resourceText[i]}
           </a>
         </li>
       );
@@ -39,42 +28,44 @@ const Template = ({
       <div className="pageTop" style={imgStyle}>
         <div className="pageTextBanner">
           <div className="pageText">
-            <p className="pageTitle">{headerTitle}</p>
-            <p className="pageDescription">{headerDescription}</p>
+            <p className="pageTitle">{content.title}</p>
+            <p className="pageDescription">{content.description}</p>
           </div>
         </div>
       </div>
       <div className="pageBody">
-        {context != null && (
+        {content.context && (
           <div className="contentBlock">
             {/* just a quick note, but subtitles like this will be handled in global css */}
             <p className="pageSubtitle">Context and Questions</p>
-            {context}
+            <p>{content.context}</p>
           </div>
         )}
         <div className="contentBlock">
           <p className="pageSubtitle">The Approach</p>
-          {approach}
+          {content.approach}
         </div>
         <div className="contentBlock">
           <p className="pageSubtitle">Outcomes that Matter</p>
-          {outcomes}
+          {content.outcomes}
         </div>
-        <div className="contentBlock">{additional}</div>
-        {resources != null && (
+        {content.additional && (
+          <div className="contentBlock">{content.additional}</div>
+        )}
+        {resources.length !== 0 && (
           <div className="contentBlock">
             <p className="pageSubtitle">Resources and Related Information</p>
             <ul className="resourceLinkBox">{resources}</ul>
           </div>
         )}
-        {contacts && (
+        {content.contacts && (
           <div className="contentBlock">
             <p className="pageSubtitle">For more information</p>
-            {contacts}
+            {content.contacts}
           </div>
         )}
         <p className="pageSubtitle">Other Case Studies</p>
-        <div>{others}</div>
+        <div>{content.others}</div>
       </div>
     </div>
   );

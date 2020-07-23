@@ -15,7 +15,7 @@ const descriptions = [
   'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...',
 ];
 
-function CardList() {
+const CardList = () => {
   let { path, url } = useRouteMatch();
   return (
     <div className="cardContainer">
@@ -56,6 +56,6 @@ function CardList() {
       </div>
     </div>
   );
-}
+};
 
 export default CardList;

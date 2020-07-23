@@ -1,15 +1,13 @@
 import React from 'react';
 import CaseStudiesBanner from './casestudiesbanner';
 import CardList from './cardlist';
-import MiningStudy from './mining';
-import FarmingStudy from './farmers';
-import MedicalStudy from './medicalservices';
-
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import Template from './template';
+import { MiningContent, FarmerContent, MedicalContent } from './content';
 
 import '../../css/casestudies.css';
 
-function CaseStudies() {
+const CaseStudies = () => {
   let { path, url } = useRouteMatch();
   return (
     <div>
@@ -22,12 +20,18 @@ function CaseStudies() {
             </div>
           </div>
         </Route>
-        <Route path={path + '/mining-study'} component={MiningStudy} />
-        <Route path={path + '/medical-study'} component={MedicalStudy} />
-        <Route path={path + '/farming-study'} component={FarmingStudy} />
+        <Route path={path + '/mining-study'}>
+          <Template content={MiningContent} />
+        </Route>
+        <Route path={path + '/medical-study'}>
+          <Template content={MedicalContent} />
+        </Route>
+        <Route path={path + '/farming-study'}>
+          <Template content={FarmerContent} />
+        </Route>
       </Switch>
     </div>
   );
-}
+};
 
 export default CaseStudies;
