@@ -3,7 +3,19 @@ import '../../css/pagetop.css';
 import '../../css/case-study-template.css';
 import '../../css/casetemplates.css';
 
-const Template = ({ content }) => {
+import { MiningContent, FarmerContent, MedicalContent } from './content';
+import { useParams } from 'react-router-dom';
+
+const routeMatch = {
+  'farming-study': FarmerContent,
+  'medical-study': MedicalContent,
+  'mining-study': MiningContent,
+};
+
+const Template = () => {
+  const endPoint = useParams().caseStudyId;
+  const content = routeMatch[endPoint];
+
   const imgStyle = {
     backgroundImage: 'url(' + content.backgroundImage + ')',
   };
@@ -26,9 +38,9 @@ const Template = ({ content }) => {
   return (
     <div>
       <div className="pageTop" style={imgStyle}>
-        <div className="pageTextBanner">
+        <div className="pageTextBanner transparent">
           <div className="pageText">
-            <p className="pageTitle">{content.title}</p>
+            <p className="pageTitle shrink">{content.title}</p>
             <p className="pageDescription">{content.description}</p>
           </div>
         </div>
@@ -38,7 +50,7 @@ const Template = ({ content }) => {
           <div className="contentBlock">
             {/* just a quick note, but subtitles like this will be handled in global css */}
             <p className="pageSubtitle">Context and Questions</p>
-            <p>{content.context}</p>
+            {content.context}
           </div>
         )}
         <div className="contentBlock">

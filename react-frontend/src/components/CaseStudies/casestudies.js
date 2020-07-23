@@ -3,7 +3,6 @@ import CaseStudiesBanner from './casestudiesbanner';
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Template from './template';
-import { MiningContent, FarmerContent, MedicalContent } from './content';
 
 import '../../css/casestudies.css';
 
@@ -20,15 +19,7 @@ const CaseStudies = () => {
             </div>
           </div>
         </Route>
-        <Route path={path + '/mining-study'}>
-          <Template content={MiningContent} />
-        </Route>
-        <Route path={path + '/medical-study'}>
-          <Template content={MedicalContent} />
-        </Route>
-        <Route path={path + '/farming-study'}>
-          <Template content={FarmerContent} />
-        </Route>
+        <Route path={path + '/:caseStudyId'} component={Template} />
       </Switch>
     </div>
   );
