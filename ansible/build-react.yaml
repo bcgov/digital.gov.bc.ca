@@ -9,7 +9,9 @@
       infra_name: "{{ react_infra_name }}"
     tasks:
       - name: Pre checks
-        include: ./tasks/check_pr_exists.yaml
+        include:
+          - ./tasks/check_pr_exists.yaml
+          - ./tasks/check_pr_exists
 
       - name: Check if should build 
         include: ./tasks/check_if_should_build.yaml
@@ -21,7 +23,9 @@
 
       - name: Build React Project
         include: ./tasks/build_react.yaml
-        when: should_build
+        when: 
+          - should_build
+          - is_valid_author
 
       - name: Deploying to dev
         debug:
