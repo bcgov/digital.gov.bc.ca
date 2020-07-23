@@ -20,22 +20,22 @@ const CollabToolContainer = styled.div`
 const Title = styled.h1`
   font-size: 3rem;
   font-weight: 700;
-  margin-top: 3rem;
+  margin-top: 30px;
 `;
 const Title2 = styled.h2`
   font-size: 3rem;
   font-weight: 700;
-  margin-top: 3rem;
+  margin-top: 30px;
 `;
 const Title3 = styled.h3`
   font-size: 2.5rem;
   font-weight: 700;
-  margin-top: 3rem;
+  margin-top: 30px;
 `;
 const Title4 = styled.h4`
   font-size: 2.25rem;
   font-weight: 700;
-  margin-top: 2.75rem;
+  margin-top: 28px;
 `;
 
 function CollaborationTools() {
