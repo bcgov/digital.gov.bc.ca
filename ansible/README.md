@@ -20,7 +20,7 @@ The workflow is a hybrid between Github and git flow. The ansible playbooks allo
 
 ## Available Playbooks 
 ### Build React
-Builds the React Image from an open pull request. The Build is optimized to not retrigger builds of the buildconfig `git commit` matches the PR `head commit`. This is so that this script may be utilized in a ci/cd pipeline. 
+Builds the React Image from an open pull request. The Build is optimized to not retrigger builds of the buildconfig `git commit` matches the PR `head commit`. This is so that this script may be utilized in a ci/cd pipeline. The build also checks that the PR is raised by a valid user (one of the collaborators on the repo).
 
 Options: 
 - `PR` <number> this should be an open Pull Request number
