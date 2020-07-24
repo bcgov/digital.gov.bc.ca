@@ -20,12 +20,12 @@ function InfoCard({
     isRouteCard = true;
   }
 
-  cardHeight = height == null ? '300px' : height;
+  cardHeight = height ? '600px' : height;
 
   if (img != null) {
     return (
       <Card
-        style={{ height: '600px' }}
+        style={{ height: cardHeight }}
         className="cardBody"
         cover={<img className="cardImage" alt="example" src={img} />}
       >
