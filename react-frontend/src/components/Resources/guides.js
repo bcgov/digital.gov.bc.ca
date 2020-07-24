@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
-import VideoImg from '../../images/videocomms.png';
 import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
 
 const videoCommsImg = require('../../images/videocomms.png');
