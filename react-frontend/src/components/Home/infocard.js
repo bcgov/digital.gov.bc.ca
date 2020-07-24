@@ -29,7 +29,7 @@ function InfoCard({
     return (
       <Card
         style={{ height: cardHeight }}
-        className="cardBody"
+        className="cardBody overFlowHidden"
         cover={<img className="cardImage" alt="example" src={img} />}
       >
         <div className="cardText">
@@ -44,7 +44,7 @@ function InfoCard({
               <Link to={routePath}>{linkText}</Link>
             ) : (
               <p>
-                <a href={linkPath}>
+                <a href={linkPath} target="_blank">
                   {linkText}
                   {linkPath && (
                     <FontAwesomeIcon
@@ -74,7 +74,7 @@ function InfoCard({
               <Link to={routePath}>{linkText}</Link>
             ) : (
               <p>
-                <a href={linkPath}>
+                <a href={linkPath} target="_blank">
                   {linkText}
                   {linkPath && (
                     <FontAwesomeIcon

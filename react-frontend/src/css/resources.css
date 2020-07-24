@@ -26,7 +26,7 @@
 .resourceInfoForTitle {
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .standardInfo {
@@ -36,13 +36,14 @@
 .standardInfoTitle {
     font-size: 16pt;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
-.resourceLink {
+.resourceLink a {
     font-weight: bold;
     font-family: 'BC Sans';
     margin-bottom: 16px;
+    font-size: 16px;
 }
 
 .resourceLink a {
@@ -101,6 +102,10 @@
     font-weight: bold;
 }
 
+.forDesignersInfo {
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
 .forDesignersInfo .resourceLink {
     font-weight: bold;
 }
