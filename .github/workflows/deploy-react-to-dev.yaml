@@ -34,7 +34,7 @@ jobs:
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     - name: build react app
-      run: ansible-playbook ansible/build-react.yaml -e PR=$PULL_NUMBER
+      run: ansible-playbook ansible/build-react.yaml -e PR=$PULL_NUMBER -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
     - name: deploy react app
       run: ansible-playbook ansible/deploy-react.yaml -e PR=$PULL_NUMBER
     - name: create github deployment to development
