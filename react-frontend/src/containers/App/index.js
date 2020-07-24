@@ -12,11 +12,12 @@ import '../../css/global.css';
 function App() {
   return (
     <div className="App">
-      {/* <Nav /> */}
       <Router>
         <NavBar />
-        <BreadCrumbs />
-        <Routes />
+        <div style={{ paddingTop: '131px' }}>
+          <BreadCrumbs />
+          <Routes />
+        </div>
         <Footer />
       </Router>
     </div>

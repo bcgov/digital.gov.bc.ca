@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import '../../css/breadcrumbs.css';
-import { DisplayNames as routeDisplayNames } from '../Nav/routes';
+import { displayNames as routeDisplayNames } from '../Nav/routes';
+import { Breadcrumb } from 'antd';
 
-const BreadCrumbs = () => {
+/**
+ * Gets a crumb label from a bread crumb by either referencing a preset crumb label
+ * or auto generating one
+ * @param {String} crumb ie 'self-service'
+ * @param {Object} crumbLabels ie { 'self-service': 'Self & Service' }
+ * @returns {String}
+ */
+export const getCrumbLabel = (crumb, crumbLabels) => {
+  if (Object.prototype.hasOwnProperty.call(crumbLabels, crumb)) {
+    return crumbLabels[crumb];
+  } else {
+    return crumb.replace('-', '').toLowerCase();
+  }
+};
+
+const BreadCrumbs = ({ crumbLabels, ...rest }) => {
   const history = useHistory();
   const routeLocation = useLocation();
   const [pathName, setPathName] = useState(routeLocation.pathname);
@@ -19,26 +35,25 @@ const BreadCrumbs = () => {
     return null;
   }
 
-  let pathArray = pathName.split('/');
-  let displayName = pathArray[1];
+  // dont include the root page or current page as apart of the crumbs
+  const crumbs = pathName.split('/').slice(1, -1);
 
-  //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
-
-  let crumbs = (
-    <div>
-      <ul className="options">
-        <li className="listOption">
+  return (
+    <div {...rest}>
+      <Breadcrumb separator=">">
+        <Breadcrumb.Item>
           <Link to="/">Home</Link>
-        </li>
-        <li className="listOption">/</li>
-        <li className="listOption">
-          <Link to={'/' + displayName}>{routeDisplayNames[displayName]}</Link>
-        </li>
-      </ul>
+        </Breadcrumb.Item>
+        {crumbs.map((crumb, index, array) => (
+          <Breadcrumb.Item>
+            <Link to={array.slice(0, index)}>
+              {getCrumbLabel(crumb, routeDisplayNames)}
+            </Link>
+          </Breadcrumb.Item>
+        ))}
+      </Breadcrumb>
     </div>
   );
-
-  return <div className="breadCrumbs">{crumbs}</div>;
 };
 
 export default BreadCrumbs;

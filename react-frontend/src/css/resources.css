@@ -1,5 +1,5 @@
 .resourceContainer {
-    padding-top: 100px;
+
     background-color: #F2F2F2;
 }
 
@@ -107,9 +107,4 @@
     .guidesImg {
         width: 330px;
     }
-
-    .resourceTop {
-        padding-top: 100px;
-    }
-
 }

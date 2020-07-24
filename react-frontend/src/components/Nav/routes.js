@@ -7,7 +7,7 @@ import CollaborationTools from '../../components/Guides/CollaborationTools/colla
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
 
-const DisplayNames = {
+export const displayNames = {
   resources: 'Resources',
   'products-services': 'Products and Services',
   'digital-framework': 'Digital Framework',
@@ -43,4 +43,3 @@ const Routes = () => {
 };
 
 export default Routes;
-export { DisplayNames };
