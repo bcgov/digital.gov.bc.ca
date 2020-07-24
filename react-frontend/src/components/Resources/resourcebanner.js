@@ -5,7 +5,7 @@ import '../../css/pagetop.css';
 function ResourceBanner() {
   return (
     <div className="pageTop resourceTop">
-      <div className="pageTextBanner">
+      <div className="pageTextBanner plain">
         <div className="pageText">
           <div>
             <p className="pageTitle">Resources</p>
