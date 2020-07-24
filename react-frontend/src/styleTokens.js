@@ -18,6 +18,8 @@ export const BREAKPOINT_VALUES = {
 export const mediaQuery = (value, unit = 'px', mediaType = 'screen') =>
   `@media ${mediaType} and (min-width: ${value}${unit})`;
 
+// enum of breakpoint values that are embeddable in a styled component
+// BREAKPOINTS.sm => @media screen and (min-width: ${value}${unit})
 export const BREAKPOINTS = Object.keys(BREAKPOINT_VALUES).reduce(
   (breakpoints, key) => {
     // get media query for breakpoint value
