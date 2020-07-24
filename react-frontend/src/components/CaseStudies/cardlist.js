@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
+import { useRouteMatch } from 'react-router-dom';
 import InfoCard from '../Home/infocard';
 import HorizontalInfoCard from './horizontalinfocard';
-import { useRouteMatch } from 'react-router-dom';
 
 import '../../css/home.css';
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
