@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import CollaborationTool from './collaborationTool';
 
+import { Title, Title2, Title3, Title4 } from '../../StyleComponents/headings';
+
 const GlobalStyle = createGlobalStyle`
  html {
   font-size: 10px;
  }
 `;
+
 const CollabToolContainer = styled.div`
   padding-top: 120px;
   font-size: 2rem;
@@ -16,26 +19,6 @@ const CollabToolContainer = styled.div`
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-`;
-const Title = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 30px;
-`;
-const Title2 = styled.h2`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 30px;
-`;
-const Title3 = styled.h3`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 30px;
-`;
-const Title4 = styled.h4`
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-top: 28px;
 `;
 
 function CollaborationTools() {
