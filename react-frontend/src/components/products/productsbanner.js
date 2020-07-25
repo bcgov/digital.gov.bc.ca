@@ -3,7 +3,7 @@ import '../../css/pagetop.css';
 
 const ProductsBanner = () => {
   return (
-    <div className="pageTop productTop">
+    <div className="pageTop">
       <div className="pageTextBanner plain">
         <div className="pageText">
           <div>

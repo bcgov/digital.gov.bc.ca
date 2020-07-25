@@ -12,10 +12,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .homeContainer {
-        z-index: 0;
-        padding-top: 65px;
-    }
+    
     .homeHeader {
         height: 530px;
         z-index: 0;
@@ -37,8 +34,5 @@
         margin-left: -7px;
     }
 
-    .homeContainer {
-        z-index: 0;
-        padding-top: 65px;
-    }
+
 }

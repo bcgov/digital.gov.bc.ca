@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import '../../css/breadcrumbs.css';
 import { displayNames as routeDisplayNames } from '../Nav/routes';
 import { Breadcrumb } from 'antd';
+import { StyledLink } from '../StyleComponents/link';
 
 /**
  * Gets a crumb label from a bread crumb by either referencing a preset crumb label
@@ -42,13 +43,13 @@ const BreadCrumbs = ({ crumbLabels, ...rest }) => {
     <div {...rest}>
       <Breadcrumb separator=">">
         <Breadcrumb.Item>
-          <Link to="/">Home</Link>
+          <StyledLink to="/">Home</StyledLink>
         </Breadcrumb.Item>
         {crumbs.map((crumb, index, array) => (
           <Breadcrumb.Item>
-            <Link to={array.slice(0, index)}>
+            <StyledLink to={array.slice(0, index)}>
               {getCrumbLabel(crumb, routeDisplayNames)}
-            </Link>
+            </StyledLink>
           </Breadcrumb.Item>
         ))}
       </Breadcrumb>

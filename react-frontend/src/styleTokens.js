@@ -28,3 +28,7 @@ export const BREAKPOINTS = Object.keys(BREAKPOINT_VALUES).reduce(
   },
   {}
 );
+
+export const CUSTOM_BREAKPOINTS = {
+  headerToMobileTransition: mediaQuery(800),
+};
