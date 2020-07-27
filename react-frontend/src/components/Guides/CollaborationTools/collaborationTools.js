@@ -1,17 +1,34 @@
 import React from 'react';
-
+import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import CollaborationTool from './collaborationTool';
-// import ResourceHeader from './resourceheader';
-// import '@bcgov/bc-sans/css/BCSans.css'
-import '../../../css/collaborationTools.css';
+
+import { Title, Title2, Title3, Title4 } from '../../StyleComponents/headings';
+
+const GlobalStyle = createGlobalStyle`
+ html {
+  font-size: 10px;
+ }
+`;
+
+const CollabToolContainer = styled.div`
+  padding-top: 120px;
+  font-size: 2rem;
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+`;
 
 function CollaborationTools() {
   return (
-    <div className="collaborationToolContainer">
-      <h1>
+    <CollabToolContainer>
+      <GlobalStyle />
+      <Title>
         Video Communication Platforms – Information for the Broader Public
         Sector
-      </h1>
+      </Title>
       <p>
         <strong>
           <i>
@@ -26,9 +43,9 @@ function CollaborationTools() {
           </i>
         </strong>
       </p>
-      <h2>
+      <Title2>
         <strong>Getting started</strong>
-      </h2>
+      </Title2>
       <p>
         When you can’t meet with your coworkers or clients face-to-face,
         communicating with them by video can be the next best thing.
@@ -45,9 +62,9 @@ function CollaborationTools() {
         <li>Capacity (the maximum number of people who can join a meeting)</li>
         <li>Privacy and security.</li>
       </ul>
-      <h3>
+      <Title3>
         <strong>Video Communication Options</strong>
-      </h3>
+      </Title3>
       <p>
         Options with a star (*) have strong privacy and security features.
         (Please note this information was current as of May 2020. Service
@@ -126,9 +143,9 @@ function CollaborationTools() {
         capacity="Up to 100 participants (Basic), 150 (Business), or 250 (Enterprise)"
         features="Screensharing, instant messaging, document sharing, recording, integration"
       />
-      <h2>
+      <Title2>
         <strong>Privacy and Security</strong>
-      </h2>
+      </Title2>
       <p>
         Video communication platforms are crucial to working remotely, but it is
         important to ensure that use of these tools addresses privacy, security
@@ -139,9 +156,9 @@ function CollaborationTools() {
         security experts and to seek legal advice as appropriate based on their
         intended use of a particular tool.
       </p>
-      <h3>
+      <Title3>
         <strong>B.C. legislation and data residency</strong>
-      </h3>
+      </Title3>
       <p>
         Since many video communication platforms store data in the United
         States, using these platforms in B.C. may not comply with{' '}
@@ -176,7 +193,7 @@ function CollaborationTools() {
         </a>
         .
       </p>
-      <h3>Security measures</h3>
+      <Title3>Security measures</Title3>
       <p>
         Security measures should be proportional to the sensitivity of
         information. The more sensitive the information, the more secure it
@@ -195,7 +212,7 @@ function CollaborationTools() {
         legal advice, where appropriate, on video communication platform use
         within their organization.
       </p>
-      <h2>Security best practices and tips</h2>
+      <Title2>Security best practices and tips</Title2>
       <p>
         <strong>
           Determine whether you will be sharing personal/sensitive/confidential
@@ -416,9 +433,9 @@ function CollaborationTools() {
           may have access to chat logs.
         </li>
       </ul>
-      <h3>
+      <Title3>
         <strong>Free Zoom and security </strong>
-      </h3>
+      </Title3>
       <p>
         During the COVID-19 public health emergency, many of you across the B.C.
         public sector may be using the free version of Zoom to communicate with
@@ -583,14 +600,16 @@ function CollaborationTools() {
           disclosure of personal information, is appropriate and lawful.
         </li>
       </ul>
-      <p>You can find training and tutorials on Zoom’s website in </p>{' '}
-      <a href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
-        A Message to Our Users
-      </a>
-      .<h4></h4>
-      <h4>
+      <p>
+        You can find training and tutorials on Zoom’s website in{' '}
+        <a href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
+          A Message to Our Users
+        </a>
+        .
+      </p>
+      <Title4>
         <strong>Use of Zoom in B.C. schools</strong>
-      </h4>
+      </Title4>
       <p>
         The B.C. Ministry of Education has secured and funded licences for the
         enterprise version of Zoom for all K-12 public and independent schools
@@ -602,20 +621,20 @@ function CollaborationTools() {
         </a>{' '}
         website.
       </p>
-      <h2>
+      <Title2>
         <strong>Contact Information for Broader Public Sector Entities</strong>
-      </h2>
+      </Title2>
       <p>
         Privacy and Access Helpline 250-356-1851{' '}
         <a href="mailto:privacy.helpline@gov.bc.ca">
           privacy.helpline@gov.bc.ca
         </a>
       </p>
-      <h2>
+      <Title2>
         <strong>
           Video Communication Platforms – Information for Government Ministries
         </strong>
-      </h2>
+      </Title2>
       <p>
         The video communication platforms that have been approved at a corporate
         level for use within government are:
@@ -630,15 +649,15 @@ function CollaborationTools() {
         employees are encouraged to check here regularly for updated
         information.
       </p>
-      <h2>
+      <Title2>
         <strong>Contact Information for Government Ministries</strong>
-      </h2>
+      </Title2>
       <strong>
         <a href="mailto:OCIO.Communications@gov.bc.ca">
           OCIO.Communications@gov.bc.ca
         </a>
       </strong>
-    </div>
+    </CollabToolContainer>
   );
 }
 
