@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import DigitalBlock from './digitalframeworkblock';
 import DigitalHeader from './digitalframeworkbanner';
 import DigitalTable from './digitalframeworktable';
+import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
 import '../../css/global.css';
 
@@ -86,6 +87,9 @@ const objectives = [
 ];
 
 const DigitalFramework = () => {
+  var ScrollLink = Scroll.Link;
+  var ScrollElement = Scroll.Element;
+
   return (
     <div className="pageContainer">
       <DigitalHeader />
@@ -98,24 +102,57 @@ const DigitalFramework = () => {
         <div className="someLinks">
           <ul>
             <li>
-              <span className="digitalLink">Service delivery</span>
+              <ScrollLink
+                activeClass="active"
+                to="blockOne"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                <span className="digitalLink">Service delivery</span>
+              </ScrollLink>
               <br />
             </li>
             <li>
-              <span className="digitalLink">Data and information</span>
+              <ScrollLink
+                activeClass="active"
+                to="blockTwo"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                <span className="digitalLink">Data and information</span>
+              </ScrollLink>
               <br />
             </li>
             <li>
-              <span className="digitalLink">
-                Tools, processes and practices
-              </span>
+              <ScrollLink
+                activeClass="active"
+                to="blockThree"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                <span className="digitalLink">
+                  Tools, processes and practices
+                </span>
+              </ScrollLink>
               <br />
             </li>
             <li>
-              <span className="digitalLink">External Partners</span>
+              <ScrollLink
+                activeClass="active"
+                to="blockFour"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                <span className="digitalLink">External Partners</span>
+              </ScrollLink>
             </li>
           </ul>
         </div>
+        <ScrollElement name="blockOne" className="element" />
         <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
         <div style={{ marginTop: '-20px' }}>
           <ul>
@@ -132,16 +169,19 @@ const DigitalFramework = () => {
           priorityActions={priorityActions[0]}
           objectives={objectives[0]}
         />
+        <ScrollElement name="blockTwo" className="element" />
         <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
         <DigitalTable
           priorityActions={priorityActions[1]}
           objectives={objectives[1]}
         />
+        <ScrollElement name="blockThree" className="element" />
         <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
         <DigitalTable
           priorityActions={priorityActions[2]}
           objectives={objectives[2]}
         />
+        <ScrollElement name="blockFour" className="element" />
         <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
         <DigitalTable
           priorityActions={priorityActions[3]}
