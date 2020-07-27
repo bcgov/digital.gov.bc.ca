@@ -7,10 +7,11 @@ import ResourceBanner from './resourcebanner';
 import Standards from './standards';
 
 import '../../css/resources.css';
+import '../../css/global.css';
 
 function Resources() {
   return (
-    <div className="resourceContainer">
+    <div className="pageContainer">
       <ResourceBanner />
       <div className="resourcesBody">
         <DigitalCards />

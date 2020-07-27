@@ -3,6 +3,7 @@ footer {
     border-top: 2px solid #fcba19;
     color: #fff;
     font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif; 
+    
   }
   
   footer .container {
@@ -36,6 +37,7 @@ footer {
   
   footer a:hover {
     text-decoration: underline;
+    color: white;
   }
   
   :focus {

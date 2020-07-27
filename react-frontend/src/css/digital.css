@@ -58,6 +58,8 @@
 .digitalLink {
     font-weight: bold;
     font-size: 12pt;
+    color: blue;
+    cursor: pointer;
 }
 
 .someLinks {

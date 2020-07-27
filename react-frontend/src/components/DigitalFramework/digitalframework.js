@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import DigitalBlock from './digitalframeworkblock';
 import DigitalHeader from './digitalframeworkbanner';
 import DigitalTable from './digitalframeworktable';
 import '../../css/digital.css';
+import '../../css/global.css';
 
 const titles = [
   'Our Vision',
@@ -84,9 +85,9 @@ const objectives = [
   ],
 ];
 
-function DigitalFramework() {
+const DigitalFramework = () => {
   return (
-    <div className="digitalContainer">
+    <div className="pageContainer">
       <DigitalHeader />
       <div className="digitalBody">
         <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
@@ -97,27 +98,21 @@ function DigitalFramework() {
         <div className="someLinks">
           <ul>
             <li>
-              <a className="digitalLink" href=".">
-                Service delivery
-              </a>
+              <span className="digitalLink">Service delivery</span>
               <br />
             </li>
             <li>
-              <a className="digitalLink" href=".">
-                Data and information
-              </a>
+              <span className="digitalLink">Data and information</span>
               <br />
             </li>
             <li>
-              <a className="digitalLink" href=".">
+              <span className="digitalLink">
                 Tools, processes and practices
-              </a>
+              </span>
               <br />
             </li>
             <li>
-              <a className="digitalLink" href=".">
-                External Partners
-              </a>
+              <span className="digitalLink">External Partners</span>
             </li>
           </ul>
         </div>
@@ -155,6 +150,6 @@ function DigitalFramework() {
       </div>
     </div>
   );
-}
+};
 
 export default DigitalFramework;
