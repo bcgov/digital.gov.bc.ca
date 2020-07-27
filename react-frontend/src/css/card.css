@@ -41,6 +41,7 @@
 
 .cardImage {
     height: 330px;
+    width: 100%;
 }
 
 .cardTextHorizontal {

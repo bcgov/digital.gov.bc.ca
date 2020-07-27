@@ -30,7 +30,11 @@ function InfoCard({
       <Card
         style={{ height: cardHeight }}
         className="cardBody overFlowHidden"
-        cover={<img className="cardImage" alt="example" src={img} />}
+        cover={
+          <div style={{ width: '100%', textAlign: 'center' }}>
+            <img className="cardImage" alt="example" src={img} />
+          </div>
+        }
       >
         <div className="cardText">
           <div>

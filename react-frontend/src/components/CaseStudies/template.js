@@ -40,11 +40,17 @@ const Template = () => {
       <div className="pageTop" style={imgStyle}>
         <div className="pageTextBanner transparent">
           <div className="pageText">
-            <p className="pageTitle shrink" style={{ color: 'white' }}>
+            <p className="pageTitle titleShrink" style={{ color: 'white' }}>
               {content.title}
             </p>
-            <div className="pageDescription">
-              <p style={{ color: 'white' }}> {content.description} </p>
+            <div>
+              <p
+                className="pageDescription descriptionShrink"
+                style={{ color: 'white' }}
+              >
+                {' '}
+                {content.description}{' '}
+              </p>
             </div>
           </div>
         </div>
