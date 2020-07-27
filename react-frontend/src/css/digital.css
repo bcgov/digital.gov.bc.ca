@@ -66,6 +66,10 @@
     margin-top: -15px;
 }
 
+.digitalSection {
+    padding-bottom: 120px;
+}
+
 @media only screen and (max-width: 800px) {
 
     .digitalContainer {
@@ -92,6 +96,10 @@
 
     .digitalTable {
         margin-bottom: 100px;
+    }
+
+    .digitalSection {
+        padding-bottom: 60px;
     }
 }
 

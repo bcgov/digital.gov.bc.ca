@@ -62,7 +62,7 @@ const cards = [
 
 const Considering = () => {
   return (
-    <div className="definingContainer">
+    <div className="definingContainer productBlock">
       <div>
         <p className="productsSubtitle">
           Considering different technology approaches

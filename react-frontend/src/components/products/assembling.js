@@ -57,7 +57,7 @@ const cards = [
 
 const Assembling = () => {
   return (
-    <div className="definingContainer">
+    <div className="definingContainer productBlock">
       <div>
         <p className="productsSubtitle">Assembling and supporting your team</p>
       </div>

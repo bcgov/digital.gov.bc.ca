@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../css/pagetop.css';
-import '../../css/case-study-template.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
@@ -86,8 +85,10 @@ const Template = () => {
             {content.contacts}
           </div>
         )}
-        <p className="pageSubtitle">Other Case Studies</p>
-        <div>{content.others}</div>
+        <div className="contentBlock">
+          <p className="pageSubtitle">Other Case Studies</p>
+          <div>{content.others}</div>
+        </div>
       </div>
     </div>
   );

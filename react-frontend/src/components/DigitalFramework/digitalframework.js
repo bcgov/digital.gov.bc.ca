@@ -94,99 +94,119 @@ const DigitalFramework = () => {
     <div className="pageContainer">
       <DigitalHeader />
       <div className="digitalBody">
-        <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
-        <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
-        <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
-        <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
-        <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
-        <div className="someLinks">
-          <ul>
-            <li>
-              <ScrollLink
-                activeClass="active"
-                to="blockOne"
-                spy={true}
-                smooth={true}
-                offset={-120}
-              >
-                <span className="digitalLink">Service delivery</span>
-              </ScrollLink>
-              <br />
-            </li>
-            <li>
-              <ScrollLink
-                activeClass="active"
-                to="blockTwo"
-                spy={true}
-                smooth={true}
-                offset={-120}
-              >
-                <span className="digitalLink">Data and information</span>
-              </ScrollLink>
-              <br />
-            </li>
-            <li>
-              <ScrollLink
-                activeClass="active"
-                to="blockThree"
-                spy={true}
-                smooth={true}
-                offset={-120}
-              >
-                <span className="digitalLink">
-                  Tools, processes and practices
-                </span>
-              </ScrollLink>
-              <br />
-            </li>
-            <li>
-              <ScrollLink
-                activeClass="active"
-                to="blockFour"
-                spy={true}
-                smooth={true}
-                offset={-120}
-              >
-                <span className="digitalLink">External Partners</span>
-              </ScrollLink>
-            </li>
-          </ul>
+        <div className="digitalSection">
+          <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
         </div>
-        <ScrollElement name="blockOne" className="element" />
-        <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
-        <div style={{ marginTop: '-20px' }}>
-          <ul>
-            <li>Based on user needs (as identified by users themselves)</li>
-            <li>Designed and tested with the people who will be using them</li>
-            <li>Accessible and inclusive for all British Columbians</li>
-            <li>Designed to work end-to-end</li>
-            <li>
-              Joined across all channels (online, phone, mail, face-to-face)
-            </li>
-          </ul>
+        <div className="digitalSection">
+          <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
         </div>
-        <DigitalTable
-          priorityActions={priorityActions[0]}
-          objectives={objectives[0]}
-        />
-        <ScrollElement name="blockTwo" className="element" />
-        <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
-        <DigitalTable
-          priorityActions={priorityActions[1]}
-          objectives={objectives[1]}
-        />
-        <ScrollElement name="blockThree" className="element" />
-        <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
-        <DigitalTable
-          priorityActions={priorityActions[2]}
-          objectives={objectives[2]}
-        />
-        <ScrollElement name="blockFour" className="element" />
-        <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
-        <DigitalTable
-          priorityActions={priorityActions[3]}
-          objectives={objectives[3]}
-        />
+        <div className="digitalSection">
+          <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
+        </div>
+        <div className="digitalSection">
+          <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
+        </div>
+        <div className="digitalSection">
+          <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
+          <div className="someLinks">
+            <ul>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="blockOne"
+                  spy={true}
+                  smooth={true}
+                  offset={-120}
+                >
+                  <span className="digitalLink">Service delivery</span>
+                </ScrollLink>
+                <br />
+              </li>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="blockTwo"
+                  spy={true}
+                  smooth={true}
+                  offset={-120}
+                >
+                  <span className="digitalLink">Data and information</span>
+                </ScrollLink>
+                <br />
+              </li>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="blockThree"
+                  spy={true}
+                  smooth={true}
+                  offset={-120}
+                >
+                  <span className="digitalLink">
+                    Tools, processes and practices
+                  </span>
+                </ScrollLink>
+                <br />
+              </li>
+              <li>
+                <ScrollLink
+                  activeClass="active"
+                  to="blockFour"
+                  spy={true}
+                  smooth={true}
+                  offset={-120}
+                >
+                  <span className="digitalLink">External Partners</span>
+                </ScrollLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="digitalSection">
+          <ScrollElement name="blockOne" className="element" />
+          <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
+          <div style={{ marginTop: '-20px' }}>
+            <ul>
+              <li>Based on user needs (as identified by users themselves)</li>
+              <li>
+                Designed and tested with the people who will be using them
+              </li>
+              <li>Accessible and inclusive for all British Columbians</li>
+              <li>Designed to work end-to-end</li>
+              <li>
+                Joined across all channels (online, phone, mail, face-to-face)
+              </li>
+            </ul>
+          </div>
+          <DigitalTable
+            priorityActions={priorityActions[0]}
+            objectives={objectives[0]}
+          />
+        </div>
+        <div className="digitalSection">
+          <ScrollElement name="blockTwo" className="element" />
+          <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
+          <DigitalTable
+            priorityActions={priorityActions[1]}
+            objectives={objectives[1]}
+          />
+        </div>
+        <div className="digitalSection">
+          <ScrollElement name="blockThree" className="element" />
+          <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
+          <DigitalTable
+            priorityActions={priorityActions[2]}
+            objectives={objectives[2]}
+          />
+        </div>
+        <div className="digitalSection">
+          <ScrollElement name="blockFour" className="element" />
+          <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
+          <DigitalTable
+            priorityActions={priorityActions[3]}
+            objectives={objectives[3]}
+          />
+        </div>
       </div>
     </div>
   );
