@@ -91,7 +91,7 @@
     .cardDescription {
         font-weight: normal;
         overflow-y: scroll;
-        height: 100px;
+        height: 150px;
     }
 
     .cardLink {

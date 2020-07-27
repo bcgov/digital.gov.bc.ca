@@ -37,6 +37,7 @@ function DigitalCards() {
                 description={descriptions[1]}
                 linkText={linkTexts[0]}
                 linkPath={links[0]}
+                height="300px"
               />
             </Col>
             <Col sm={12} md={6}>
@@ -45,6 +46,7 @@ function DigitalCards() {
                 description={descriptions[2]}
                 linkText={linkTexts[1]}
                 linkPath={links[1]}
+                height="300px"
               />
             </Col>
           </Row>
