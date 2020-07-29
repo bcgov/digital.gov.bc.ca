@@ -15,6 +15,21 @@
     margin-bottom: 24px;
 }
 
+.resourceLink {
+    font-size: 20px;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+.resourceLinkBox {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.contentBlock {
+    padding-bottom: 120px;
+}
+
 @media only screen and (max-width: 800px) {
 
     .pageContainer {
@@ -27,6 +42,10 @@
     .cardAdjustment {
         margin-left: -8px;
         margin-right: -8px;
+    }
+
+    .contentBlock {
+        padding-bottom: 60px;
     }
     
 }

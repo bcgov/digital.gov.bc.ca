@@ -8,6 +8,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://bcdevexchange.org/ExchangeLab"
+        target="_blank"
       >
         The Exchange Lab
       </a>{' '}
@@ -20,10 +21,7 @@ const cards = [
     <p>
       If you need to contract a team and want them to follow an Agile process,
       you can use the{' '}
-      <a
-        className="productCardLink"
-        href="https://digital.gov.bc.ca/marketplace"
-      >
+      <a className="productCardLink" target="_blank">
         Digital Marketplace.
       </a>
     </p>
@@ -34,6 +32,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://www.bcdevexchange.org/DevOpsPlatform"
+        target="_blank"
       >
         DevOps Container Platform
       </a>
@@ -47,6 +46,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
+        target="_blank"
       >
         IM/IT Capital Investment
       </a>{' '}

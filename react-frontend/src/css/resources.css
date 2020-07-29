@@ -3,17 +3,30 @@
     background-color: #F2F2F2;
 }
 
+.resourceTop {
+    height: auto;
+    background: none;
+}
 .resourcesBody {
     width: 85%;
     margin: auto;
 }
 
+.resourcesBanner {
+    background: none;
+	padding: 120px 0;
+}
+
 .resourceInfoTitle {
-    font-size: 22pt;
+    font-size: 31px;
     font-weight: bold;
     margin-bottom: 24px;
-    padding-left: 27px;
-    
+}
+
+.resourceInfoForTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 
 .standardInfo {
@@ -23,13 +36,23 @@
 .standardInfoTitle {
     font-size: 16pt;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
-.resourceLink {
+.resourceLink a {
     font-weight: bold;
     font-family: 'BC Sans';
     margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.resourceLink a {
+    color: #1a5a96;
+}
+
+.resourceLink a:hover {
+    text-decoration: none;
+    color: blue;
 }
 
 .resourceContainer {
@@ -58,30 +81,55 @@
     margin-bottom: 10px;
 }
 
+.pageText p {
+    color: #313132;
+}
+
 .forDevelopers {
     margin-bottom: 40px;
     margin: auto;
 }
 
 .guides {
-    margin: auto;
     margin-bottom: 40px; 
 }
 
 .standards {
     margin-bottom: 40px; 
-    margin: auto;
 }
 
+.standards a {
+    font-weight: bold;
+}
+
+.forDesignersInfo {
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+.forDesignersInfo .resourceLink {
+    font-weight: bold;
+}
 .guidesImg {
-    height: 300px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.cardAdjustment {
+    margin-left: -8px;
+    margin-right: -8px;
     width: 100%;
+}
+
+.resourceBlock {
+    padding-bottom: 120px;
 }
 
 @media only screen and (max-width: 800px) {
 
     .resourceBlock {
-        margin-bottom: 10px;
+        padding-bottom: 60px;
     }
     .resourcesBody {
         width: 330px;

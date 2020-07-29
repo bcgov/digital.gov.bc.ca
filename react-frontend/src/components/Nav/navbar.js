@@ -30,11 +30,13 @@ function NavBar() {
     }
 
     window.addEventListener('resize', handleResize);
-    return history.listen((location) => {
+
+    history.listen((location) => {
       setActivePage(location.pathname);
+      handleResize();
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     });
-  });
+  }, [history]);
 
   const toggleMenu = () => {
     if (openMenu === false) {

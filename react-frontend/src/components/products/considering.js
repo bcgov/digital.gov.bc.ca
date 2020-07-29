@@ -10,6 +10,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/overdose/mobile-response-team"
+        target="_blank"
       >
         Digital Response Unit
       </a>
@@ -22,6 +23,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
+        target="_blank"
       >
         The Service Design team{' '}
       </a>
@@ -37,6 +39,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://procurementconcierge.gov.bc.ca/"
+        target="_blank"
       >
         Procurement Concierge.
       </a>
@@ -49,6 +52,7 @@ const cards = [
       <a
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/secure-cloud"
+        target="_blank"
       >
         Cloud services.
       </a>
@@ -58,7 +62,7 @@ const cards = [
 
 const Considering = () => {
   return (
-    <div className="definingContainer">
+    <div className="definingContainer productBlock">
       <div>
         <p className="productsSubtitle">
           Considering different technology approaches
@@ -71,6 +75,7 @@ const Considering = () => {
         <a
           className="productCardLink"
           href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
+          target="_blank"
         >
           Agile
         </a>{' '}

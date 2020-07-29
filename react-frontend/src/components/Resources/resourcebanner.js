@@ -12,8 +12,8 @@ function ResourceBanner() {
           </div>
           <div className="pageDescription">
             <p>
-              Find standards, guides, and tools for using digital technology and
-              building digital services.
+              Policy, standards, guides, and tools you can use right now to
+              deliver excellent digital services.
             </p>
           </div>
         </div>

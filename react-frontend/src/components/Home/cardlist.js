@@ -10,9 +10,9 @@ const caseStudiesImg = require('../../images/case-studies.png');
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
-  'Work is underway to renew policies towards information management and technology.',
-  'Find standards, policy, guides, and services to help you work more effectively in the digital age and deliver better services for citizens.',
-  'Connect with people working to improve digital services in British Columbia.',
+  'Supports to help you create or improve a digital service.',
+  'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.',
+  'Join the BCDevExchange, a supportive community working to improve digital services in British Columbia.',
   'See examples of how teams are improving digital services for British Columbians.',
 ];
 
@@ -30,7 +30,11 @@ const CardList = () => {
     <div className="cardContainer">
       <div className="cardGrid">
         <Grid>
-          <Row gutter={[0, 24]} justify={'space-around'}>
+          <Row
+            gutter={[0, 24]}
+            justify={'space-around'}
+            style={{ minHeight: '250px' }}
+          >
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Framework'}
@@ -53,7 +57,7 @@ const CardList = () => {
           <Row gutter={[0, 24]} justify={'space-around'}>
             <Col sm={12} md={6}>
               <InfoCard
-                title={'Products and Services'}
+                title={'Products & Services'}
                 description={descriptions[2]}
                 linkText="Find support"
                 routePath={'/products-services'}

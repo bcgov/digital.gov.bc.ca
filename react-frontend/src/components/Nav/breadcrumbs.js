@@ -21,20 +21,28 @@ const BreadCrumbs = () => {
 
   let pathArray = pathName.split('/');
   let displayName = pathArray[1];
+  let listEntry = [];
+
+  listEntry.push(
+    <li className="listOption">
+      <Link to="/">Home</Link>
+    </li>
+  );
+  for (var i = 1; i < pathArray.length - 1; i++) {
+    displayName = pathArray[i];
+    listEntry.push(<li className="listOption">{'>'}</li>);
+    listEntry.push(
+      <li className="listOption">
+        <Link to={'/' + displayName}>{routeDisplayNames[displayName]}</Link>
+      </li>
+    );
+  }
 
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
   let crumbs = (
     <div>
-      <ul className="options">
-        <li className="listOption">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="listOption">/</li>
-        <li className="listOption">
-          <Link to={'/' + displayName}>{routeDisplayNames[displayName]}</Link>
-        </li>
-      </ul>
+      <ul className="options">{listEntry}</ul>
     </div>
   );
 

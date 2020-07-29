@@ -1,11 +1,11 @@
 .pageTop {
-    height: 550px;
     width: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 50px;
-    padding-top: 200px;
+    padding-top: 260px;
+    padding-bottom: 120px;
 }
 
 .pageTitle {
@@ -19,8 +19,6 @@
 
 .pageTextBanner {
     width: 100%;
-    font-family: 'BC Sans';
-    color: white;
     background-color: rgba(0, 51, 102, 0.7);
     padding: 25px;
 }
@@ -38,7 +36,11 @@
 
 .pageDescription p {
     position: relative;
-    line-height: 16pt;
+    font-size: 22px;
+}
+
+.pageDescription p {
+    position: relative;
     font-size: 22px;
 }
 
@@ -54,12 +56,16 @@
     color: #313132;
 }
 
+.descriptionShrink {
+    font-size: 22px;
+}
+
 @media only screen and (max-width: 800px) {
     .pageHeader {
         height: 530px;
     }
 
-    .shrink {
+    .titleShrink {
         font-size: 16px;
     }
 
@@ -70,13 +76,20 @@
 
     .pageTop {
         height: 400px;
+        padding-top: 200px;
     }
+
+    .descriptionShrink {
+        font-size: 12px;
+    }
+
+    
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
     
     .pageText {
-        padding-top: 40px;
+        padding-top: 80px;
         width: 84%;
         margin-left: 8%;
     }
@@ -94,6 +107,7 @@
     .pageDescription p {
         font-size: 16px;
         width: 100%;
+        text-align: center;
     }
 
     .pageTextBanner {

@@ -1,14 +1,16 @@
 import React from 'react';
 import ProductsBanner from './productsbanner';
 import ProductsInstructions from './productsinstructions';
-import '../../css/products.css';
 import Defining from './defining';
 import Considering from './considering';
 import Assembling from './assembling';
 
+import '../../css/products.css';
+import '../../css/global.css';
+
 const Products = () => {
   return (
-    <div className="productsContainer">
+    <div className="pageContainer">
       <ProductsBanner />
       <div className="productsBody">
         <ProductsInstructions />

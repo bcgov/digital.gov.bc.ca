@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../css/pagetop.css';
-import '../../css/case-study-template.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
@@ -38,10 +37,20 @@ const Template = () => {
   return (
     <div>
       <div className="pageTop" style={imgStyle}>
-        <div className="pageTextBanner transparent">
+        <div className="pageTextBanner transparent caseTop">
           <div className="pageText">
-            <p className="pageTitle shrink">{content.title}</p>
-            <p className="pageDescription">{content.description}</p>
+            <p className="pageTitle titleShrink" style={{ color: 'white' }}>
+              {content.title}
+            </p>
+            <div>
+              <p
+                className="pageDescription descriptionShrink"
+                style={{ color: 'white' }}
+              >
+                {' '}
+                {content.description}{' '}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -76,8 +85,10 @@ const Template = () => {
             {content.contacts}
           </div>
         )}
-        <p className="pageSubtitle">Other Case Studies</p>
-        <div>{content.others}</div>
+        <div>
+          <p className="pageSubtitle">Other Case Studies</p>
+          <div>{content.others}</div>
+        </div>
       </div>
     </div>
   );

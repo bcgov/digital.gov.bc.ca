@@ -1,10 +1,7 @@
 .homeContainer {
     background-color: #F2F2F2;
-    z-index: 0;
     padding-top: 100px;
     width: 100%;
-    align-content: center;
-    text-align: center;
 }
 
 .cardContainer {

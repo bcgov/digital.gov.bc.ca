@@ -44,7 +44,7 @@ const cards = [
 
 const Defining = () => {
   return (
-    <div className="definingContainer">
+    <div className="definingContainer productBlock">
       <p className="productsSubtitle">Defining problems, outcomes, value</p>
       <p>
         To truly improve something for people, it’s critical to take time to

@@ -30,14 +30,10 @@
     margin-left: -1px;
 }
 
-.definingContainer {
-    margin-top: 20px;
-
-}
 
 .cardAdjustment {
-    margin-left: -8px;
-    margin-right: -8px;
+    padding-left: -8px;
+    width: 100%;
 }
 
 .productsSubtitle {
@@ -70,13 +66,18 @@
     font-weight: bold;
 }
 
+.productBlock {
+    padding-bottom: 120px;
+}
+
 @media only screen and (max-width: 800px) {
     .productsContainer {
         padding-top: 65px;
     }
 
-    .definingContainer {
+    .productBlock {
         margin-left: -5px;
+        padding-bottom: 60px;
     }
 
     .productsTitle {

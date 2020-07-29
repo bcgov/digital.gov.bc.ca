@@ -16,7 +16,9 @@ function App() {
       <Router>
         <NavBar />
         <BreadCrumbs />
-        <Routes />
+        <div className="routeBody">
+          <Routes />
+        </div>
         <Footer />
       </Router>
     </div>

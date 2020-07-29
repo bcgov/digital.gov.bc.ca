@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 function InfoCard({
   height,
@@ -16,18 +18,21 @@ function InfoCard({
   let cardHeight = 0;
 
   var isRouteCard = false;
+
   if (routePath != null) {
     isRouteCard = true;
   }
 
-  cardHeight = height ? '600px' : height;
-
   if (img != null) {
     return (
       <Card
-        style={{ height: cardHeight }}
-        className="cardBody"
-        cover={<img className="cardImage" alt="example" src={img} />}
+        style={{ height: '95%', width: '100%' }}
+        className="cardBody overFlowHidden"
+        cover={
+          <div className="cardImageContainer">
+            <img className="cardImage" alt="example" src={img} />
+          </div>
+        }
       >
         <div className="cardText">
           <div>
@@ -40,9 +45,15 @@ function InfoCard({
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <p>
-                <a href={linkPath}>{linkText}</a>
-              </p>
+              <a href={linkPath} target="_blank">
+                {linkText}
+                {linkPath && (
+                  <FontAwesomeIcon
+                    icon={faExternalLinkAlt}
+                    style={{ paddingLeft: '5px' }}
+                  />
+                )}
+              </a>
             )}
           </div>
         </div>
@@ -50,7 +61,7 @@ function InfoCard({
     );
   } else {
     return (
-      <Card className="cardBody" style={{ height: cardHeight }}>
+      <Card className="cardBody" style={{ height: '95%', width: '100%' }}>
         <div className="cardText">
           <div>
             <h2 className="cardTitle">{title}</h2>
@@ -62,9 +73,15 @@ function InfoCard({
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <p>
-                <a href={linkPath}>{linkText}</a>
-              </p>
+              <a href={linkPath} target="_blank">
+                {linkText}
+                {linkPath && (
+                  <FontAwesomeIcon
+                    icon={faExternalLinkAlt}
+                    style={{ paddingLeft: '5px' }}
+                  />
+                )}
+              </a>
             )}
           </div>
         </div>

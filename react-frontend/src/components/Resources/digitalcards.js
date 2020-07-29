@@ -6,16 +6,10 @@ import '../../css/resources.css';
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
-  'Work is underway to renew policies towards information management and technology.',
   'See how we are working in the open on the next IM/IT Policy Framework.',
 ];
 
-// const imgLinks = [
-//   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-//   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-//   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-// ];
-const linkTexts = ['Read the principles', 'view the alpha version on github'];
+const linkTexts = ['Read the principles', 'View the alpha version on GitHub'];
 
 const links = [
   '/resources/digital-principles',
@@ -26,10 +20,10 @@ function DigitalCards() {
   return (
     <div className="resourceBlock">
       <div>
-        <h2 className="resourceInfoTitle">Standards and Policy</h2>
+        <h2 className="resourceInfoTitle">Standards & Policy</h2>
       </div>
       <div className="resourceInfo">
-        <Grid>
+        <Grid className="cardAdjustment">
           <Row>
             <Col sm={12} md={6}>
               <InfoCard
@@ -51,15 +45,6 @@ function DigitalCards() {
             </Col>
           </Row>
         </Grid>
-        <div>
-          <p className="digitalSubtitle" style={{ marginBottom: '20px' }}>
-            See how we are working in the open on the next IM/IT Policy
-            Framework -{' '}
-            <a href="https://github.com/bcgov/digital-policy">
-              view the alpha version on Github
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );

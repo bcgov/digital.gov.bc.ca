@@ -13,14 +13,18 @@ const HomeBanner = () => {
       <div className="pageTextBanner">
         <div className="pageText">
           <div>
-            <p className="pageTitle">Digital Government</p>
+            <p className="pageTitle" style={{ color: 'white' }}>
+              Digital Government
+            </p>
           </div>
           <div className="pageDescription">
-            <p>
+            <p style={{ color: 'white' }}>
               In this digital age, people expect fast and easy access to
-              information and services. Learn how the British Columbia Public
-              Service is building teams and using modern technology to meet
-              those expectations and deliver better government services.
+              information and services.
+              <br />
+              Learn how the British Columbia Public Service is building teams
+              and using modern technology to meet those expectations and deliver
+              better government services.
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/footer.css';
 import { Link } from 'react-router-dom';
-function Footer() {
+const Footer = () => {
   return (
     <footer>
       <div className="container">
@@ -15,6 +15,7 @@ function Footer() {
             <a
               className="footerLink"
               href="https://www2.gov.bc.ca/gov/content/home/disclaimer"
+              target="_blank"
             >
               Disclaimer
             </a>
@@ -23,6 +24,7 @@ function Footer() {
             <a
               className="footerLink"
               href="https://www2.gov.bc.ca/gov/content/home/privacy"
+              target="_blank"
             >
               Privacy
             </a>
@@ -31,6 +33,7 @@ function Footer() {
             <a
               className="footerLink"
               href="https://www2.gov.bc.ca/gov/content/home/accessible-government"
+              target="_blank"
             >
               Accessibility
             </a>
@@ -39,6 +42,7 @@ function Footer() {
             <a
               className="footerLink"
               href="https://www2.gov.bc.ca/gov/content/home/copyright"
+              target="_blank"
             >
               Copyright
             </a>
@@ -47,6 +51,7 @@ function Footer() {
             <a
               className="footerLink"
               href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services"
+              target="_blank"
             >
               Contact Us
             </a>
@@ -55,6 +60,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
