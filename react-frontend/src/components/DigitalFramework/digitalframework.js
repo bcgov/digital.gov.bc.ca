@@ -199,7 +199,7 @@ const DigitalFramework = () => {
             objectives={objectives[2]}
           />
         </div>
-        <div className="digitalSection">
+        <div>
           <ScrollElement name="blockFour" className="element" />
           <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
           <DigitalTable

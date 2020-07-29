@@ -10,9 +10,17 @@ a:hover{
   background-color: #F2F2F2;
 }
 
+.routeBody {
+  padding-bottom: 120px;
+  background-color: #F2F2F2;
+}
+
 @media only screen and (max-width: 800px) {
   .pageContainer {
     padding-top: 65px;
+  }
+
+  .routeBody {
     padding-bottom: 60px;
   }
 }

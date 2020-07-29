@@ -85,7 +85,7 @@ const Template = () => {
             {content.contacts}
           </div>
         )}
-        <div className="contentBlock">
+        <div>
           <p className="pageSubtitle">Other Case Studies</p>
           <div>{content.others}</div>
         </div>

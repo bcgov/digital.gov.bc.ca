@@ -101,9 +101,9 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
-                  href="https://bcgov.github.io/user-research-guide/"
+                  href="https://bcgov.github.io/design-research-guide/"
                 >
-                  User Research Guide
+                  Design Research Guide
                   {linkIcon}
                 </a>
               </div>

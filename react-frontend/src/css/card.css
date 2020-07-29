@@ -40,8 +40,15 @@
 }
 
 .cardImage {
+    min-width: 100%;
+    min-height: 330px;
+    height: auto;
+    max-width: 100%;
+}
+
+.cardImageContainer {
     height: 330px;
-    width: 100%;
+    overflow: hidden;
 }
 
 .cardTextHorizontal {
@@ -130,7 +137,14 @@
     }
 
     .cardImage {
+        height: 330px;
+        max-width: none;
         width: auto;
+        margin-left: -45%;
+    }
+
+    .cardImageContainer {
+        max-height: 330px;
     }
 
     .cardImageHorizontal {

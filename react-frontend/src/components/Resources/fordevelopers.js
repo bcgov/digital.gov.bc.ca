@@ -4,7 +4,7 @@ import InfoCard from '../Home/infocard';
 
 function ForDevelopers() {
   return (
-    <div className="resourceBlock">
+    <div className>
       <div>
         <h2 className="resourceInfoForTitle">For Developers</h2>
       </div>
