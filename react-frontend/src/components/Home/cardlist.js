@@ -18,7 +18,7 @@ const descriptions = [
 
 const linkTexts = [
   'Read the framework',
-  'Read the principals',
+  'Read the principles',
   'Read the policy',
   'Find resources',
   'Connect',

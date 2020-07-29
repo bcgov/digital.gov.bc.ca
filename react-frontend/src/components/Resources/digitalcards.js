@@ -15,7 +15,7 @@ const descriptions = [
 //   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
 //   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
 // ];
-const linkTexts = ['Read the principals', 'view the alpha version on github'];
+const linkTexts = ['Read the principles', 'view the alpha version on github'];
 
 const links = [
   '/resources/digital-principles',
