@@ -30,7 +30,11 @@ const CardList = () => {
     <div className="cardContainer">
       <div className="cardGrid">
         <Grid>
-          <Row gutter={[0, 24]} justify={'space-around'}>
+          <Row
+            gutter={[0, 24]}
+            justify={'space-around'}
+            style={{ minHeight: '250px' }}
+          >
             <Col sm={12} md={6}>
               <InfoCard
                 title={'Digital Framework'}

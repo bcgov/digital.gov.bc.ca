@@ -37,7 +37,7 @@ const Template = () => {
   return (
     <div>
       <div className="pageTop" style={imgStyle}>
-        <div className="pageTextBanner transparent">
+        <div className="pageTextBanner transparent caseTop">
           <div className="pageText">
             <p className="pageTitle titleShrink" style={{ color: 'white' }}>
               {content.title}

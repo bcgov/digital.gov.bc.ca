@@ -13,6 +13,7 @@
 
 .cardDescription {
     font-weight: normal;
+    padding-bottom: 25px;
 }
 
 .overFlowHidden {
@@ -24,7 +25,7 @@
     color: #1a5a96;
     text-decoration: underline;
     font-weight: bold;
-    bottom: 20px;
+    bottom: 25px;
     position: absolute;
     font-size: 16px;
 }
@@ -37,6 +38,7 @@
 .cardBody {
     margin-bottom: 20px;
     font-size: 16pt;
+    width: 330px;
 }
 
 .cardImage {
@@ -53,15 +55,14 @@
 
 .cardTextHorizontal {
     text-align: left;
-    align-self: center;
-    padding: 5px;
+    padding: 16px auto;
 }
 
 .cardTitleHorizontal {
     font-family: 'BC Sans';
     position: relative;
     font-size: 31px;
-    line-height: 30px;
+    line-height: 41px;
     font-weight: bold;
 }
 
@@ -94,6 +95,7 @@
 @media only screen and (max-width: 800px) {
     .cardBody {
         width: 330px;
+        height: 95%;
     }
 
     .cardTitle {
@@ -101,19 +103,21 @@
         margin-top: -10px;
     }
 
+    .cardTitleHorizontal {
+        font-size: 22px;
+    }
+
     .cardDescription {
         font-weight: normal;
-        overflow-y: scroll;
-        height: 150px;
     }
 
     .cardLink {
-        bottom: 10px;
+        bottom: 20px;
     }
 
     .cardBodyHorizontal {
         width: 330px;
-        height: 575px;
+        height: 95%;
     }
 
     .cardImageHorizontal {
@@ -123,13 +127,11 @@
     }
 
     .cardTitleHorizontal {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .cardDescriptionHorizontal {
         font-weight: normal;
-        overflow-y: scroll;
-        height: 100px;
     }
 
     .cardLinkHorizontal {
