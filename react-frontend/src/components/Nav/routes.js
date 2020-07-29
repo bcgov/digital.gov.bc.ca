@@ -6,7 +6,7 @@ import CaseStudies from '../../components/CaseStudies/casestudies';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
-
+import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
 const DisplayNames = {
   resources: 'Resources',
   'products-services': 'Products and Services',
@@ -22,6 +22,9 @@ const Routes = () => {
       </Route>
       <Route path="/digital-framework">
         <DigitalFramework />
+      </Route>
+      <Route path="/resources/digital-principles">
+        <DigitalPrinciples />
       </Route>
       <Route path="/resources">
         <Resources />

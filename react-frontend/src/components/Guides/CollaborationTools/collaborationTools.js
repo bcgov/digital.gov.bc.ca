@@ -1,30 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
 import CollaborationTool from './collaborationTool';
 
 import { Title, Title2, Title3, Title4 } from '../../StyleComponents/headings';
-
-const GlobalStyle = createGlobalStyle`
- html {
-  font-size: 10px;
- }
-`;
-
-const CollabToolContainer = styled.div`
-  padding-top: 120px;
-  font-size: 2rem;
-  max-width: 80rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-`;
+import {
+  SimpleTextContainer,
+  GlobaStyleSize,
+} from '../../StyleComponents/pageContent';
 
 function CollaborationTools() {
   return (
-    <CollabToolContainer>
-      <GlobalStyle />
+    <SimpleTextContainer>
+      <GlobaStyleSize />
       <Title>
         Video Communication Platforms – Information for the Broader Public
         Sector
@@ -657,7 +643,7 @@ function CollaborationTools() {
           OCIO.Communications@gov.bc.ca
         </a>
       </strong>
-    </CollabToolContainer>
+    </SimpleTextContainer>
   );
 }
 

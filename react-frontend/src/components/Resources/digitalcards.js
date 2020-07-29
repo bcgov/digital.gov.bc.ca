@@ -9,15 +9,10 @@ const descriptions = [
   'See how we are working in the open on the next IM/IT Policy Framework.',
 ];
 
-// const imgLinks = [
-//   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-//   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-//   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
-// ];
 const linkTexts = ['Read the principles', 'View the alpha version on GitHub'];
 
 const links = [
-  'https://github.com/bcgov/digital-principles/blob/master/README.md',
+  '/resources/digital-principles',
   'https://github.com/bcgov/digital-policy',
 ];
 
@@ -35,7 +30,7 @@ function DigitalCards() {
                 title={'Digital Principles'}
                 description={descriptions[1]}
                 linkText={linkTexts[0]}
-                linkPath={links[0]}
+                routePath={links[0]}
                 height="300px"
               />
             </Col>
