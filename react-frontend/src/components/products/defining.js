@@ -51,10 +51,10 @@ const Defining = () => {
         understand them and be clear about what you want to achieve.
       </p>
       <Grid className="cardAdjustment">
-        <Row>
+        <Row style={{ minHeight: '200px' }}>
           {cards.map((element, i) => (
             <Col key={i} sm={12} md={4}>
-              <ProductsCard content={element} height="200px" />
+              <ProductsCard content={element} />
             </Col>
           ))}
         </Row>

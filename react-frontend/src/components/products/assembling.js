@@ -69,10 +69,10 @@ const Assembling = () => {
       </p>
       <p>Here are some services that might help you at this stage.</p>
       <Grid className="cardAdjustment">
-        <Row>
+        <Row style={{ minHeight: '250px' }}>
           {cards.map((element, i) => (
             <Col key={i} sm={12} md={3}>
-              <ProductsCard content={element} height="250px" />
+              <ProductsCard content={element} />
             </Col>
           ))}
         </Row>
