@@ -18,7 +18,7 @@ const descriptions = [
 
 const linkTexts = [
   'Read the framework',
-  'Read the principals',
+  'Read the principles',
   'Read the policy',
   'Find resources',
   'Connect',
@@ -45,7 +45,7 @@ const CardList = () => {
                 title={'Digital Principles'}
                 description={descriptions[1]}
                 linkText={linkTexts[1]}
-                linkPath={'https://github.com/bcgov/digital-principles'}
+                routePath={'/resources/digital-principles'}
                 height="300px"
               />
             </Col>

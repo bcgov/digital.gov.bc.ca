@@ -15,10 +15,10 @@ const descriptions = [
 //   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
 //   'https://dalehartery.files.wordpress.com/2015/05/light-grey-background-pattern.jpg',
 // ];
-const linkTexts = ['Read the principals', 'view the alpha version on github'];
+const linkTexts = ['Read the principles', 'view the alpha version on github'];
 
 const links = [
-  'https://github.com/bcgov/digital-principles/blob/master/README.md',
+  '/resources/digital-principles',
   'https://github.com/bcgov/digital-policy',
 ];
 
@@ -36,7 +36,7 @@ function DigitalCards() {
                 title={'Digital Principles'}
                 description={descriptions[1]}
                 linkText={linkTexts[0]}
-                linkPath={links[0]}
+                routePath={links[0]}
                 height="300px"
               />
             </Col>
