@@ -4,6 +4,7 @@
     padding-left: 5%;
     width: 100%;
     margin-left: -10px;
+    z-index: 5;
 }
 
 .options {

@@ -1,15 +1,13 @@
 import React from 'react';
 import '../../css/home.css';
 import '../../css/pagetop.css';
-import homeImage from '../../images/home-banner.png';
 
-const imgStyle = {
-  backgroundImage: 'url(' + homeImage + ')',
-};
+const homeImage = require('../../images/home-banner.png');
 
 const HomeBanner = () => {
   return (
-    <div className="pageTop" style={imgStyle}>
+    <div className="pageTop">
+      <img className="bannerImage" alt="example" src={homeImage} />
       <div className="pageTextBanner">
         <div className="pageText">
           <div>

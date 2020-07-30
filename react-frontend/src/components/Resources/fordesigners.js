@@ -1,8 +1,10 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
-import '../../css/resources.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
+import '../../css/resources.css';
+import '../../css/global.css';
 
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
@@ -10,7 +12,7 @@ const linkIcon = (
 
 function ForDesigners() {
   return (
-    <div className="resourceBlock">
+    <div className="contentBlock">
       <div>
         <h2 className="resourceInfoForTitle">For Designers</h2>
       </div>

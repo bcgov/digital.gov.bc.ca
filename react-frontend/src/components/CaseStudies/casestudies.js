@@ -5,6 +5,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Template from './template';
 
 import '../../css/casestudies.css';
+import '../../css/global.css';
 
 const CaseStudies = () => {
   let { path, url } = useRouteMatch();
@@ -19,7 +20,9 @@ const CaseStudies = () => {
             </div>
           </div>
         </Route>
-        <Route path={path + '/:caseStudyId'} component={Template} />
+        <div className="pageContainer">
+          <Route path={path + '/:caseStudyId'} component={Template} />
+        </div>
       </Switch>
     </div>
   );

@@ -4,6 +4,7 @@ import '../../css/pagetop.css';
 const DigitalFrameworkBanner = () => {
   return (
     <div className="pageTop digitalTop">
+      <img src=""></img>
       <div className="pageTextBanner plain">
         <div className="pageText">
           <div className>

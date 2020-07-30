@@ -30,7 +30,6 @@
     margin-left: -1px;
 }
 
-
 .cardAdjustment {
     padding-left: -8px;
     width: 100%;
@@ -66,18 +65,9 @@
     font-weight: bold;
 }
 
-.productBlock {
-    padding-bottom: 120px;
-}
-
 @media only screen and (max-width: 800px) {
     .productsContainer {
         padding-top: 65px;
-    }
-
-    .productBlock {
-        margin-left: -5px;
-        padding-bottom: 60px;
     }
 
     .productsTitle {

@@ -1,11 +1,9 @@
 .pageTop {
     width: 100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 50px;
-    padding-top: 260px;
-    padding-bottom: 120px;
+    position: relative;
+    margin-bottom: 120px;
+    height: 600px;
+    overflow: hidden;
 }
 
 .pageTitle {
@@ -18,8 +16,12 @@
 }
 
 .pageTextBanner {
+    z-index: 1;
     width: 100%;
-    background-color: rgba(0, 51, 102, 0.7);
+    position: absolute;
+    margin-top: 260px;
+    margin-bottom: 120px;
+    background: rgba(0, 51, 102, 0.7);
     padding: 25px;
 }
 
@@ -27,6 +29,7 @@
     text-align: center;
     width: 85%;
     margin: auto;
+    padding-top: 10px;
 }
 
 .pageText p {
@@ -60,49 +63,45 @@
     font-size: 22px;
 }
 
-@media only screen and (max-width: 800px) {
-    .pageHeader {
-        height: 530px;
-    }
-
-    .titleShrink {
-        font-size: 16px;
-    }
-
-    .pageText {
-        padding-top: 100px;
-        width: 330px;
-    }
-
-    .pageTop {
-        height: 400px;
-        padding-top: 200px;
-    }
-
-    .descriptionShrink {
-        font-size: 12px;
-    }
-
-    
+.bannerImage {
+    pointer-events: none;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 110%;
+    margin-left: -10%;
 }
 
 @media only screen and (max-width: 800px) {
-    
+
+    .pageTop {
+        height: 520px;
+        margin-bottom: 60px;
+    }
+
+    .titleShrink {
+        font-size: 20px;
+    }
+
     .pageText {
-        padding-top: 80px;
+        padding-top: 40px;
+        width: 330px;
         width: 84%;
         margin-left: 8%;
     }
 
-    .pageDescription {
-        font-size: 10pt;
-        text-align: justify;
+    .descriptionShrink {
+        font-size: 16px;
     }
-    
-    .pageTop {
-        padding-top: 40px;
-        padding-bottom: 40px;
+
+    .pageTextBanner {
+        margin-top: 60px;
     }
+
+    .pageTitle {
+        font-size: 31px;
+    }
+
 
     .pageDescription p {
         font-size: 16px;
@@ -111,11 +110,11 @@
     }
 
     .pageTextBanner {
-        padding: 10px;
+        padding-top: 0px;
     }
 
-    .pageTitle {
-        margin-top: -30px;
+    .bannerImage {
+        max-width: 150%;
     }
 
 }

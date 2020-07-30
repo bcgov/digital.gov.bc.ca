@@ -8,11 +8,17 @@ a:hover{
 
 .pageContainer {
   background-color: #F2F2F2;
+  z-index: -2;
 }
 
 .routeBody {
   padding-bottom: 120px;
   background-color: #F2F2F2;
+  z-index: -2;
+}
+
+.contentBlock {
+  padding-bottom: 120px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -21,6 +27,10 @@ a:hover{
   }
 
   .routeBody {
+    padding-bottom: 60px;
+  }
+
+  .contentBlock {
     padding-bottom: 60px;
   }
 }

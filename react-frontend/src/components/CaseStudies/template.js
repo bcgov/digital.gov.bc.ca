@@ -36,17 +36,20 @@ const Template = () => {
 
   return (
     <div>
-      <div className="pageTop" style={imgStyle}>
-        <div className="pageTextBanner transparent caseTop">
+      <div className="pageTop">
+        <img
+          className="bannerImage"
+          style={{ marginTop: '-50px' }}
+          alt="not found"
+          src={content.backgroundImage}
+        />
+        <div className="pageTextBanner caseTextBanner">
           <div className="pageText">
-            <p className="pageTitle titleShrink" style={{ color: 'white' }}>
+            <p className="pageTitle" style={{ color: 'white' }}>
               {content.title}
             </p>
             <div>
-              <p
-                className="pageDescription descriptionShrink"
-                style={{ color: 'white' }}
-              >
+              <p className="pageDescription" style={{ color: 'white' }}>
                 {' '}
                 {content.description}{' '}
               </p>

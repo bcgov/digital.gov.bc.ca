@@ -122,15 +122,9 @@
     width: 100%;
 }
 
-.resourceBlock {
-    padding-bottom: 120px;
-}
 
 @media only screen and (max-width: 800px) {
 
-    .resourceBlock {
-        padding-bottom: 60px;
-    }
     .resourcesBody {
         width: 330px;
         margin: auto;
