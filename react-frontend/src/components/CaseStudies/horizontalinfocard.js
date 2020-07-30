@@ -10,7 +10,7 @@ const HorizontalInfoCard = (props) => {
       className="cardBodyHorizontal overFlowHidden"
       bordered={false}
       cover={
-        <div>
+        <div className="cardImageContainer">
           <img className="cardImageHorizontal" alt="example" src={props.img} />
         </div>
       }
