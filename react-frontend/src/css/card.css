@@ -95,7 +95,6 @@
 @media only screen and (max-width: 800px) {
     .cardBody {
         width: 330px;
-        height: 95%;
     }
 
     .cardTitle {

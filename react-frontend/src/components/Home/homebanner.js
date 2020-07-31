@@ -7,7 +7,11 @@ const homeImage = require('../../images/home-banner.png');
 const HomeBanner = () => {
   return (
     <div className="pageTop">
-      <img className="bannerImage" alt="example" src={homeImage} />
+      <img
+        className="bannerImage homeBannerImage"
+        alt="example"
+        src={homeImage}
+      />
       <div className="pageTextBanner">
         <div className="pageText">
           <div>

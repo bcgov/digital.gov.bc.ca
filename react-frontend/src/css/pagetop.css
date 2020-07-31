@@ -63,13 +63,23 @@
     font-size: 22px;
 }
 
-.bannerImage {
+.caseBannerImage {
     pointer-events: none;
     position: absolute;
     min-width: 100%;
     min-height: 100%;
     max-width: 110%;
     margin-left: -10%;
+    margin-top: -50px;
+}
+
+.homeBannerImage {
+    pointer-events: none;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin-left: -10%;
+    max-width: auto;
 }
 
 @media only screen and (max-width: 800px) {
@@ -113,8 +123,14 @@
         padding-top: 0px;
     }
 
-    .bannerImage {
-        max-width: 150%;
+    .caseBannerImage {
+        height: 600px;
+        max-width: 200%;
+    }
+
+    .homeBannerImage {
+        max-width: auto;
+        margin-left: -50%;
     }
 
 }
