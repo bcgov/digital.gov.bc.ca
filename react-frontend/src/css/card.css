@@ -85,10 +85,17 @@
 }
 
 .cardImageHorizontal {
-    height: 400px;
+    height: auto;
     margin-right: 30px;
+    width: auto;
+    max-width: 110%;
+}
+
+.cardImageContainerHorizontal {
     width: 50%;
     float: left;
+    overflow: hidden;
+    margin-right: 25px;
 }
 
 
@@ -120,8 +127,8 @@
     }
 
     .cardImageHorizontal {
-        height: 330px;
-        width: 100%;
+        height: auto;
+        max-width: 100%;
         margin-right: 0px;
     }
 
@@ -148,7 +155,8 @@
         max-height: 330px;
     }
 
-    .cardImageHorizontal {
-        width: auto;
+    .cardImageContainerHorizontal {
+        width: 100%;
+        overflow: hidden;
     }
 }
