@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
     - 'react-frontend/**'
+    - 'react-frontend/package.json'
 jobs:
   run:
     runs-on: ubuntu-latest
