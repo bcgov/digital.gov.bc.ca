@@ -1,9 +1,12 @@
 name: Run jest tests
-on: pull_request
-  jobs:
-    run:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v1
-      - name: Run tests
-        run: yarn test
+on: 
+  pull_request:
+    paths:
+    - 'react-frontend/**'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run tests
+      run: yarn test
