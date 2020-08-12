@@ -11,6 +11,9 @@ jobs:
       working-directory: ./react-frontend
     steps:
     - uses: actions/checkout@v1
+    - name: build tests
+      run: yarn
+      working-directory: ${{env.working-directory}}
     - name: Run tests
       run: yarn test
       working-directory: ${{env.working-directory}}
