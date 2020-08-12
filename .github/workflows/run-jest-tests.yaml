@@ -13,3 +13,4 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run tests
       run: yarn test
+      working-directory: ${{env.working-directory}}
