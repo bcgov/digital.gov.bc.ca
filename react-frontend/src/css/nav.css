@@ -1,16 +1,16 @@
 header {
-    z-index: 1000;
+    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
     background-color: #036;
     border-bottom: 2px solid #fcba19;
-    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 8px -4px #b3b1b3;
     color: #fff;
     display: flex;
-    top: 0;
+    padding: 0 30px 0 30px;
     position: fixed;
+    top: 0;
     width: 100%;
-    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
-    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
-    box-shadow: 0 6px 8px -4px #b3b1b3;
+    z-index: 1000;
   }
   
   header h1 {
@@ -24,58 +24,49 @@ header {
   }
 
   header .banner {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    margin: 0 -10px 0 0;
     color: #fff;
+    display: flex;
     height: 65px;
-    /* border-style: dotted;
-    border-width: 1px;
-    border-color: lightgrey; */
+    justify-content: flex-start;
+    margin: 0 -10px 0 0;
   }
   
   header .other {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
+    display: flex;
     flex-grow: 1;
-    /* border-style: dotted;
-    border-width: 1px;
-    border-color: lightgrey; */
+    justify-content: flex-start;
   }
 
   header a [class^="fas fa-"] {
+    -webkit-font-smoothing: antialiased;
     color: white;
     font-size: 1.4em;
     font-style: bold;
     line-height: 1;
-    /* border-style: solid;
-    border-width: 1px;
-    border-color: #fcba19; */
     padding: 5px;
-    -webkit-font-smoothing: antialiased;
   }
   
   header .nav-btn {
-    display: block;
-    width: auto;
-    margin: 0 0 0 auto;
     cursor: pointer;
+    display: block;
     font-size: 18pt;
+    margin: 0 0 0 auto;
+    width: auto;
   }
 
   .navigation-main {
+    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
+    background-color: #38598a;
+    box-shadow: 0 6px 8px -4px #b3b1b3;
+    color: #fcba19;
     display: none;
     position: fixed;
-    z-index: 1000;
     top: 67px;
-    color: #fcba19;
-    background-color: #38598a;
     width: 100%;
-    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
-    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
-    box-shadow: 0 6px 8px -4px #b3b1b3;
+    z-index: 1000;
   }
 
   .navigation-main .container {
@@ -83,15 +74,12 @@ header {
   }
   
   .navigation-main .container ul {
+    color: #fff;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    margin-left: -75px;
-    color: #fff;
     list-style: none;
-    /* border-style: dotted;
-    border-width: 1px;
-    border-color: red; */
+    margin-left: -75px;
+    margin: 0;
   }
 
   .navigation-main .container ul li {
@@ -99,15 +87,12 @@ header {
   }
 
   .navigation-main .container ul li a {
+    color: #fff;
     display: flex;
     font-size: 0.813em;
     font-weight: normal;  /* 400 */
-    color: #fff;
     padding: 0 15px 0 15px;
     text-decoration: none;
-    /* border-style: dotted;
-    border-width: 1px;
-    border-color: green; */
   }
 
   .navigation-main .container ul li a:hover {
@@ -115,13 +100,13 @@ header {
   }
 
   .navigation-main .container ul .active {
-    text-decoration: underline;
     font-weight: bold;
+    text-decoration: underline;
   }
 
   :focus {
-    outline: 4px solid #3B99FC;
     outline-offset: 1px;
+    outline: 4px solid #3B99FC;
   }
 
   .navOption {
@@ -161,11 +146,11 @@ header {
     }
 
     header .nav-btn {
+      cursor: pointer;
       display: none;
-      width: auto;
       margin: 0 0 0 auto;
       padding-right: 25px;
-      cursor: pointer;
+      width: auto;
     }
 
     .navImage {
@@ -195,8 +180,8 @@ header {
     .navImage {
       height: 60px;
       margin-left: -15px;
-      margin-top: -5px;
       margin-right: 0px;
+      margin-top: -5px;
     }
 
     header h1 {
@@ -211,8 +196,8 @@ header {
 
   @media screen and (max-width: 400px) {
     header h1 {
-      margin: 0px 5px 0px -5%;
       font-size: 12pt;
+      margin: 0px 5px 0px -5%;
     }
 
     .navImage {

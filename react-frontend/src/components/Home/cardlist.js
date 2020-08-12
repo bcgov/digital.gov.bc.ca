@@ -22,7 +22,7 @@ const linkTexts = [
   'Read the policy',
   'Find resources',
   'Connect',
-  'Learn more and more',
+  'Learn more',
 ];
 
 const CardList = () => {
