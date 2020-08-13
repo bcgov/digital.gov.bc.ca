@@ -32,7 +32,7 @@ export const issueComment = {
         events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
         received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
         type: 'User',
-        site_admin: false
+        site_admin: false,
       },
       labels: [],
       state: 'open',
@@ -47,7 +47,7 @@ export const issueComment = {
       author_association: 'OWNER',
       active_lock_reason: null,
       body: 'If the strapi deployment was just triggered. Running it again will cause the error:\r\n\r\n```\r\nfatal: [localhost]: FAILED! => {"changed": true, "cmd": "oc rollout latest strapi-pr-6 -n va3azs-patricksimonian-ocp201-tst-dev", "delta": "0:00:00.370958", "end": "2020-07-13 11:37:38.516262", "msg": "non-zero return code", "rc": 1, "start": "2020-07-13 11:37:38.145304", "stderr": "error: #1 is already in progress (Pending).", "stderr_lines": ["error: #1 is already in progress (Pending)."], "stdout": "", "stdout_lines": []}\r\n``` \r\n\r\nbecause it attempts to cancel the first rollout',
-      performed_via_github_app: null
+      performed_via_github_app: null,
     },
     comment: {
       url: 'https://api.github.com/repos/patricksimonian/strapi-demo/issues/comments/673622509',
@@ -73,13 +73,13 @@ export const issueComment = {
         events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
         received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
         type: 'User',
-        site_admin: false
+        site_admin: false,
       },
       created_at: '2020-08-13T17:52:56Z',
       updated_at: '2020-08-13T17:52:56Z',
       author_association: 'OWNER',
       body: 'yarg',
-      performed_via_github_app: null
+      performed_via_github_app: null,
     },
     repository: {
       id: 278504039,
@@ -105,7 +105,7 @@ export const issueComment = {
         events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
         received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
         type: 'User',
-        site_admin: false
+        site_admin: false,
       },
       html_url: 'https://github.com/patricksimonian/strapi-demo',
       description: 'A demonstration of Strapi in Openshift with a HA mongo replica set',
@@ -173,7 +173,7 @@ export const issueComment = {
       forks: 0,
       open_issues: 4,
       watchers: 0,
-      default_branch: 'master'
+      default_branch: 'master',
     },
     sender: {
       login: 'patricksimonian',
@@ -193,12 +193,12 @@ export const issueComment = {
       events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
       received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
       type: 'User',
-      site_admin: false
+      site_admin: false,
     },
     installation: {
       id: 11217370,
-      node_id: 'MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uMTEyMTczNzA='
-    }
+      node_id: 'MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uMTEyMTczNzA=',
+    },
   },
   github: {
     log: {},
@@ -227,6 +227,6 @@ export const issueComment = {
     search: {},
     teams: {},
     users: {},
-    retry: {}
-  }
-}
+    retry: {},
+  },
+};

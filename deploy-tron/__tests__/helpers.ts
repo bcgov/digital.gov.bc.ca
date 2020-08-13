@@ -21,17 +21,17 @@ export const github = {
   apps: {
     listRepos: {
       endpoint: {
-        merge: jest.fn()
-      }
-    }
+        merge: jest.fn(),
+      },
+    },
   },
   git: {
     createRef: jest.fn(),
-    getRef: jest.fn()
+    getRef: jest.fn(),
   },
   gitdata: {
     createRef: jest.fn(),
-    getRef: jest.fn()
+    getRef: jest.fn(),
   },
   issues: {
     addAssignees: jest.fn(),
@@ -39,20 +39,20 @@ export const github = {
     createComment: jest.fn(),
     listLabelsForRepo: jest.fn(),
     update: jest.fn(),
-    create: jest.fn()
+    create: jest.fn(),
   },
   orgs: {
-    checkMembership: jest.fn()
+    checkMembership: jest.fn(),
   },
   pullRequests: {
     create: jest.fn(),
     getAll: jest.fn(),
-    list: jest.fn()
+    list: jest.fn(),
   },
   pulls: {
     create: jest.fn(),
     getAll: jest.fn(),
-    list: jest.fn()
+    list: jest.fn(),
   },
   repos: {
     createFile: jest.fn(),
@@ -61,9 +61,9 @@ export const github = {
     listCollaborators: jest.fn(),
     listCommits: jest.fn(),
     listTopics: jest.fn(),
-    getCollaboratorPermissionLevel: jest.fn()
+    getCollaboratorPermissionLevel: jest.fn(),
   },
   search: {
-    issuesAndPullRequests: jest.fn()
-  }
-}
+    issuesAndPullRequests: jest.fn(),
+  },
+};

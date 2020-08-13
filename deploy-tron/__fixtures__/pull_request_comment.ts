@@ -32,7 +32,7 @@ export const pullRequestComment = {
         events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
         received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
         type: 'User',
-        site_admin: false
+        site_admin: false,
       },
       labels: [],
       state: 'open',
@@ -50,10 +50,10 @@ export const pullRequestComment = {
         url: 'https://api.github.com/repos/patricksimonian/strapi-demo/pulls/10',
         html_url: 'https://github.com/patricksimonian/strapi-demo/pull/10',
         diff_url: 'https://github.com/patricksimonian/strapi-demo/pull/10.diff',
-        patch_url: 'https://github.com/patricksimonian/strapi-demo/pull/10.patch'
+        patch_url: 'https://github.com/patricksimonian/strapi-demo/pull/10.patch',
       },
       body: 'The pr is kept open to sample the anisble scripts\r\n> follow pre requisites as described in the `ansible/README.md`\r\n\r\n1. build strapi `ansible-playbook build-strapi.yaml -e PR=10`\r\n2. deploy mongo `ansible-playbook deploy-mongo.yaml -e PR=10`\r\n> wait for mongo to be ready by viewing logs `oc logs pod/mongo-ha-pr-10-0` and look for readiness of replicas\r\n> you will be looking for messages like `Member mongo-ha-pr-10-2.mongo-ha-pr-10-internal.<namespace>.svc.cluster.local:27017 is now in state SECONDARY` and\r\n> `Member mongo-ha-pr-10-1.mongo-ha-pr-10-internal.va3azs-patricksimonian-ocp201-tst-dev.svc.cluster.local:27017 is now in state SECONDARY`\r\n> when ready\r\n3. deploy strapi `ansible-playbook deploy-strapi.yaml -e PR=10`\r\n> when strapi is ready\r\n4. backup restore check `ansible-playbook backup-restore-mongo.yaml -e PR=10`\r\n> if there is no thrown errors the backup and restore was succesful\r\n\r\n\r\nFixes #8 ',
-      performed_via_github_app: null
+      performed_via_github_app: null,
     },
     comment: {
       url: 'https://api.github.com/repos/patricksimonian/strapi-demo/issues/comments/673622186',
@@ -79,13 +79,13 @@ export const pullRequestComment = {
         events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
         received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
         type: 'User',
-        site_admin: false
+        site_admin: false,
       },
       created_at: '2020-08-13T17:52:18Z',
       updated_at: '2020-08-13T17:52:18Z',
       author_association: 'OWNER',
       body: 'blarb',
-      performed_via_github_app: null
+      performed_via_github_app: null,
     },
     repository: {
       id: 278504039,
@@ -111,7 +111,7 @@ export const pullRequestComment = {
         events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
         received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
         type: 'User',
-        site_admin: false
+        site_admin: false,
       },
       html_url: 'https://github.com/patricksimonian/strapi-demo',
       description: 'A demonstration of Strapi in Openshift with a HA mongo replica set',
@@ -179,7 +179,7 @@ export const pullRequestComment = {
       forks: 0,
       open_issues: 4,
       watchers: 0,
-      default_branch: 'master'
+      default_branch: 'master',
     },
     sender: {
       login: 'patricksimonian',
@@ -199,12 +199,12 @@ export const pullRequestComment = {
       events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
       received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
       type: 'User',
-      site_admin: false
+      site_admin: false,
     },
     installation: {
       id: 11217370,
-      node_id: 'MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uMTEyMTczNzA='
-    }
+      node_id: 'MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uMTEyMTczNzA=',
+    },
   },
   github: {
     log: {},
@@ -233,6 +233,6 @@ export const pullRequestComment = {
     search: {},
     teams: {},
     users: {},
-    retry: {}
-  }
-}
+    retry: {},
+  },
+};

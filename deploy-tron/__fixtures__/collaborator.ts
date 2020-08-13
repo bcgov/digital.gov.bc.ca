@@ -18,9 +18,9 @@ export const adminUser = {
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
     received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
-    site_admin: false
-  }
-}
+    site_admin: false,
+  },
+};
 
 export const readUser = {
   permission: 'read',
@@ -42,9 +42,9 @@ export const readUser = {
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
     received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
-    site_admin: false
-  }
-}
+    site_admin: false,
+  },
+};
 
 export const triageUser = {
   permission: 'triage',
@@ -66,9 +66,9 @@ export const triageUser = {
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
     received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
-    site_admin: false
-  }
-}
+    site_admin: false,
+  },
+};
 
 export const writeUser = {
   permission: 'write',
@@ -90,9 +90,9 @@ export const writeUser = {
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
     received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
-    site_admin: false
-  }
-}
+    site_admin: false,
+  },
+};
 
 export const maintainUser = {
   permission: 'maintain',
@@ -114,6 +114,6 @@ export const maintainUser = {
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
     received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
-    site_admin: false
-  }
-}
+    site_admin: false,
+  },
+};
