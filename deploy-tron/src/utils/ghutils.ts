@@ -1,10 +1,21 @@
 import { Context } from 'probot';
 
-// export const getRoleFromCommenter = (context: Context): boolean => {
-//   // get user name and see if they are a member
-//   const { login: user } = context.payload.comment.user;
 
-// }
+/**
+ * checks if commenter can perform action
+ * @param context 
+ * @param allowedRoles 
+ */
+export const isCommenterAllowedToAction = async (context: Context, allowedRoles: String[]): Promise<boolean> => {
+  // get user name and see if they are a member
+  const {  user: username } = context.payload.comment.user;
+  const { repository } = context.payload;
+  const { name: repo, owner: { login: owner } } = repository;
+  // get their permissions for this repo 
+  const { data } = await context.github.repos.getCollaboratorPermissionLevel({ username, repo, owner });
+  // get allowable permissions to perform the action
+  return allowedRoles.includes(data.permission);
+}
 
 
 /**

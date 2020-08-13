@@ -60,7 +60,8 @@ export const github = {
     getContents: jest.fn(),
     listCollaborators: jest.fn(),
     listCommits: jest.fn(),
-    listTopics: jest.fn()
+    listTopics: jest.fn(),
+    getCollaboratorPermissionLevel: jest.fn()
   },
   search: {
     issuesAndPullRequests: jest.fn()
