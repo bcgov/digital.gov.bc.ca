@@ -1,3 +1,4 @@
 {
-  "validGithubRoles": ["maintain", "admin", "write"]
+  "validGithubRoles": ["maintain", "admin", "write"],
+  "botCommand": "/deploy-tron"
 }

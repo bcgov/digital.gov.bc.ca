@@ -1,4 +1,4 @@
-import {isCommentFromPr, isCommenterAllowedToAction} from '../src/utils/ghutils';
+import { isCommentFromPr, isCommenterAllowedToAction, isBotCommand } from '../src/utils/ghutils';
 import {Context} from 'probot';
 import {pullRequestComment} from '../__fixtures__/pull_request_comment';
 import {issueComment} from '../__fixtures__/issue_comment';
@@ -17,7 +17,7 @@ describe('Gh Utilities', () => {
     expect(isCommentFromPr(context)).toBe(false);
   });
 
-  test('return true if user permission is allowable', async () => {
+  test('returns true if user permission is allowable', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: adminUser}));
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: writeUser}));
@@ -27,9 +27,19 @@ describe('Gh Utilities', () => {
     expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(true);
   });
 
-  test('return false if user permission is not allowable', async () => {
+  test('returns false if user permission is not allowable', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: readUser}));
     expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(false);
+  });
+  
+  test('returns true if the pull request comment starts with expected bot command', () => {
+    const context = new Context(pullRequestComment, github as any, {} as any);
+    expect(isBotCommand(context, config.botCommand)).toBe(true);
+  });
+
+  test('returns false if the pull request comment starts with not expected bot command', () => {
+    const context = new Context({...pullRequestComment, payload: {...pullRequestComment.payload, comment: {...pullRequestComment.payload.comment, body: 'foo'}}}, github as any, {} as any);
+    expect(isBotCommand(context, config.botCommand)).toBe(false);
   });
 });

@@ -1,6 +1,5 @@
 import { Context } from 'probot';
 
-
 /**
  * checks if commenter can perform action
  * @param context 
@@ -27,4 +26,17 @@ export const isCommentFromPr = (context: Context): boolean => {
   const { issue } = context.payload;
 
   return Object.prototype.hasOwnProperty.call(issue, 'pull_request');
+}
+
+
+/**
+ * checks if comment is a bot command
+ * @param context 
+ * @returns {Boolean}
+ */
+export const isBotCommand = (context: Context, botCommand: String): boolean => {
+  const { body } = context.payload.comment;
+  const re = new RegExp(`^${botCommand}`);
+
+  return re.test(body.trim());
 }

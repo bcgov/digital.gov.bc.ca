@@ -84,7 +84,7 @@ export const pullRequestComment = {
       created_at: '2020-08-13T17:52:18Z',
       updated_at: '2020-08-13T17:52:18Z',
       author_association: 'OWNER',
-      body: 'blarb',
+      body: '/test deploy blarb to test',
       performed_via_github_app: null,
     },
     repository: {
