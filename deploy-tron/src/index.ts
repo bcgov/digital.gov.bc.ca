@@ -4,7 +4,7 @@ import path from 'path'
 export = (app: Application) => {
   app.on('issue_comment.created', async (context) => {
     // app.log("FOOFOO", context.payload);
-    writeFileSync(path.join(__dirname, './index.json'), JSON.stringify(context.payload, null, 2))
+    writeFileSync(path.join(__dirname, './issue_comment.json'), JSON.stringify(context, null, 2))
   })
   // For more information on building apps:
   // https://probot.github.io/docs/

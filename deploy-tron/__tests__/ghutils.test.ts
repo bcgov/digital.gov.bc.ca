@@ -1,11 +1,17 @@
 import { isCommentFromPr } from '../src/utils/ghutils'
-import { pullRequestComment, issueComment } from '../__fixtures__/comment'
+import { Context } from 'probot'
+import { pullRequestComment } from '../__fixtures__/pull_request_comment'
+import { issueComment } from '../__fixtures__/issue_comment'
+import { github } from './helpers'
 
 describe('Gh Utilities', () => {
   test('returns true if comment came from pr', () => {
-    expect(isCommentFromPr({ payload: pullRequestComment })).toBe(true)
+    const context = new Context(pullRequestComment, github as any, {} as any)
+    expect(isCommentFromPr(context)).toBe(true)
   })
+
   test('returns false if comment came from issue', () => {
-    expect(isCommentFromPr({ payload: issueComment })).toBe(false)
+    const context = new Context(issueComment, github as any, {} as any)
+    expect(isCommentFromPr(context)).toBe(false)
   })
 })
