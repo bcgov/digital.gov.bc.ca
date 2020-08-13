@@ -2,8 +2,8 @@ export const adminUser = {
   permission: 'admin',
   user: {
     login: 'patricksimonian',
-    id: 21046727,
-    node_id: 'MDQ6VXNlcjIxMDQ2NzI3',
+    id: 233,
+    node_id: '13123',
     avatar_url: 'https://avatars1.githubusercontent.com/u/21046727?v=4',
     gravatar_id: '',
     url: 'https://api.github.com/users/patricksimonian',
