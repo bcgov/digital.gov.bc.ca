@@ -6,13 +6,13 @@ const cards = [
   <div className="cardContent">
     <p>
       If you are facing an urgent service delivery challenge due to COVID-19,
-      connect with the{' '}
+      connect with the Digital Response Unit through the{' '}
       <a
         className="productCardLink"
-        href="https://www2.gov.bc.ca/gov/content/overdose/mobile-response-team"
+        href="mailto: exchangelab@gov.bc.ca"
         target="_blank"
       >
-        Digital Response Unit
+        Exchange Lab
       </a>
       , a community of digital experts who are working together to address
       urgent challenges.
