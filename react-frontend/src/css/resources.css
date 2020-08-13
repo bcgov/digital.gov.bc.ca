@@ -1,20 +1,20 @@
 .resourceContainer {
-    padding-top: 100px;
     background-color: #F2F2F2;
+    padding-top: 100px;
 }
 
 .resourceTop {
-    height: auto;
     background: none;
+    height: auto;
 }
 .resourcesBody {
-    width: 85%;
     margin: auto;
+    width: 85%;
 }
 
 .resourcesBanner {
-    background: none;
 	padding: 120px 0;
+    background: none;
 }
 
 .resourceInfoTitle {
@@ -40,10 +40,10 @@
 }
 
 .resourceLink a {
-    font-weight: bold;
     font-family: 'BC Sans';
-    margin-bottom: 16px;
     font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 
 .resourceLink a {
@@ -51,8 +51,8 @@
 }
 
 .resourceLink a:hover {
-    text-decoration: none;
     color: blue;
+    text-decoration: none;
 }
 
 .resourceContainer {
@@ -60,14 +60,14 @@
 }
 
 .digitalCards {
-    margin: auto;
-    margin-bottom: 40px;
     align-content: left;
+    margin-bottom: 40px;
+    margin: auto;
 }
 
 .digitalSubtitle {
-    font-weight: bold;
     font-size: 16pt;
+    font-weight: bold;
     margin: auto;
     text-align: center;
 }
@@ -77,8 +77,8 @@
 }
 
 .forDesigners {
-    margin: auto;
     margin-bottom: 10px;
+    margin: auto;
 }
 
 .pageText p {
@@ -111,9 +111,9 @@
 }
 .guidesImg {
     height: auto;
-    width: auto;
     max-width: 100%;
     overflow: hidden;
+    width: auto;
 }
 
 .cardAdjustment {
@@ -132,8 +132,8 @@
         padding-bottom: 60px;
     }
     .resourcesBody {
-        width: 330px;
         margin: auto;
+        width: 330px;
     }
 
     .standardInfoTitle {
@@ -159,5 +159,4 @@
     .resourceTop {
         padding-top: 100px;
     }
-
 }

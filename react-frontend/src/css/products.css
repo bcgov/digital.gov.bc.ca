@@ -1,21 +1,20 @@
 .productsContainer {
-    padding-top: 100px;
     background-color: #F2F2F2;
+    padding-top: 100px;
 }
 
 .productsBody {
-    width: 85%;
     margin: auto;
+    width: 85%;
 }
 
 .instructions {
     margin-left: -3px;
 }
 .instructionsFirst {
-    text-align: center;
-    margin: auto;
     margin-bottom: 25px;
-
+    margin: auto;
+    text-align: center;
 }
 
 .instructionCol {
@@ -25,8 +24,8 @@
 .productsTitle {
     font-size: 22pt;
     font-weight: bold;
-    margin-bottom: 5px;
     line-height: 24pt;
+    margin-bottom: 5px;
     margin-left: -1px;
 }
 

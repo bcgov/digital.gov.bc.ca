@@ -1,13 +1,17 @@
-.pageContainer {
-    padding-top: 100px;
-    background-color: #F2F2F2;
-    padding-bottom: 70px;
-}   
+.contentBlock {
+    padding-bottom: 120px;
+}
 
 .pageBody {
-    width: 85%;
     margin: auto;
+    width: 85%;
 }
+
+.pageContainer {
+    background-color: #F2F2F2;
+    padding-bottom: 70px;
+    padding-top: 100px;
+}   
 
 .pageSubtitle {
     font-size: 22pt;
@@ -22,22 +26,11 @@
 }
 
 .resourceLinkBox {
-    margin-top: -20px;
     margin-bottom: 20px;
-}
-
-.contentBlock {
-    padding-bottom: 120px;
+    margin-top: -20px;
 }
 
 @media only screen and (max-width: 800px) {
-
-    .pageContainer {
-        padding-top: 65px;
-    }
-    .pageBody {
-        width: 330px;
-    }
 
     .cardAdjustment {
         margin-left: -8px;
@@ -47,6 +40,13 @@
     .contentBlock {
         padding-bottom: 60px;
     }
-    
+
+    .pageBody {
+        width: 330px;
+    }
+
+    .pageContainer {
+        padding-top: 65px;
+    }
 }
 
