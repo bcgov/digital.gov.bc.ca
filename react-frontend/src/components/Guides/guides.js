@@ -3,15 +3,17 @@ import Query from '../Query';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import InfoCard from '../Home/infocard';
-
+import SimpleBanner from '../SimpleBanner/simpleBanner';
 import GUIDES_QUERY from '../../queries/guide/guides';
 
 const GuidePage = () => {
   return (
     <div className="pageContainer">
-      <div className="pageBannerSimple">
-        <h1>Useful Guides</h1>
-      </div>
+      <SimpleBanner
+        title="Useful Guides"
+        description="It's dangerous to go it alone, take these."
+      />
+
       <div className="guides">
         <Grid className="cardAdjustment">
           <Query query={GUIDES_QUERY} id={null}>
