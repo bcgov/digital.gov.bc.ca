@@ -1,14 +1,12 @@
-.cardText {
-    text-align: left;
-    padding: 16px auto;
+.cardBody {
+    font-size: 16pt;
+    margin-bottom: 20px;
+    width: 330px;
 }
 
-.cardTitle {
-    font-family: 'BC Sans';
-    position: relative;
-    font-size: 31px;
-    line-height: 44px;
-    font-weight: bold;
+.cardBodyHorizontal {
+    height: 330px;
+    margin-bottom: 20px;
 }
 
 .cardDescription {
@@ -16,36 +14,15 @@
     padding-bottom: 25px;
 }
 
-.overFlowHidden {
-    overflow: hidden;
-}
-
-.cardLink {
-    font-family: 'BC Sans';
-    color: #1a5a96;
-    text-decoration: underline;
-    font-weight: bold;
-    bottom: 25px;
-    position: absolute;
-    font-size: 16px;
-}
-
-.cardLink:hover {
-    text-decoration: none;
-    color: blue;
-}
-
-.cardBody {
-    margin-bottom: 20px;
-    font-size: 16pt;
-    width: 330px;
+.cardDescriptionHorizontal {
+    font-weight: normal;
 }
 
 .cardImage {
-    min-width: 100%;
-    min-height: 330px;
     height: auto;
     max-width: 100%;
+    min-height: 330px;
+    min-width: 100%;
 }
 
 .cardImageContainer {
@@ -53,49 +30,109 @@
     overflow: hidden;
 }
 
-.cardTextHorizontal {
+.cardImageHorizontal {
+    float: left;
+    height: 400px;
+    margin-right: 30px;
+    width: 50%;
+}
+
+.cardLink {
+    bottom: 25px;
+    color: #1a5a96;
+    font-family: 'BC Sans';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: underline;
+}
+
+.cardLinkHorizontal {
+    bottom: 20px;
+    color: #1a5a96;
+    font-family: 'BC Sans';
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cardLink:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.cardText {
+    padding: 16px;
     text-align: left;
-    padding: 16px auto;
+}
+
+.cardTextHorizontal {
+    padding: 16px;
+    text-align: left;
+}
+
+.cardTitle {
+    font-family: 'BC Sans';
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 44px;
+    position: relative;
 }
 
 .cardTitleHorizontal {
     font-family: 'BC Sans';
-    position: relative;
     font-size: 31px;
+    font-weight: bold;
     line-height: 41px;
-    font-weight: bold;
+    position: relative;
 }
 
-.cardDescriptionHorizontal {
-    font-weight: normal;
+.overFlowHidden {
+    overflow: hidden;
 }
-
-.cardLinkHorizontal {
-    font-family: 'BC Sans';
-    color: #1a5a96;
-    text-decoration: underline;
-    font-weight: bold;
-    bottom: 20px;
-    font-size: 16px;
-}
-
-.cardBodyHorizontal {
-    margin-bottom: 20px;
-    height: 330px;
-}
-
-.cardImageHorizontal {
-    height: 400px;
-    margin-right: 30px;
-    width: 50%;
-    float: left;
-}
-
 
 @media only screen and (max-width: 800px) {
     .cardBody {
-        width: 330px;
         height: 95%;
+        width: 330px;
+    }
+
+    .cardBodyHorizontal {
+        height: 95%;
+        width: 330px;
+    }
+
+    .cardDescription {
+        font-weight: normal;
+    } 
+
+    .cardDescriptionHorizontal {
+        font-weight: normal;
+    }
+
+    .cardImage {
+        height: 330px;
+        margin-left: -45%;
+        max-width: none;
+        width: auto;
+    }
+
+    .cardImageContainer {
+        max-height: 330px;
+    }
+
+    .cardImageHorizontal {
+        height: 330px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .cardLink {
+        bottom: 20px;
+    }
+
+    .cardLinkHorizontal {
+        bottom: 10px;
     }
 
     .cardTitle {
@@ -105,51 +142,5 @@
 
     .cardTitleHorizontal {
         font-size: 22px;
-    }
-
-    .cardDescription {
-        font-weight: normal;
-    }
-
-    .cardLink {
-        bottom: 20px;
-    }
-
-    .cardBodyHorizontal {
-        width: 330px;
-        height: 95%;
-    }
-
-    .cardImageHorizontal {
-        height: 330px;
-        width: 100%;
-        margin-right: 0px;
-    }
-
-    .cardTitleHorizontal {
-        font-size: 22px;
-    }
-
-    .cardDescriptionHorizontal {
-        font-weight: normal;
-    }
-
-    .cardLinkHorizontal {
-        bottom: 10px;
-    }
-
-    .cardImage {
-        height: 330px;
-        max-width: none;
-        width: auto;
-        margin-left: -45%;
-    }
-
-    .cardImageContainer {
-        max-height: 330px;
-    }
-
-    .cardImageHorizontal {
-        width: auto;
-    }
+    }   
 }

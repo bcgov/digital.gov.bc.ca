@@ -1,32 +1,32 @@
 .pageTop {
-    width: 100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     margin-bottom: 50px;
-    padding-top: 260px;
     padding-bottom: 120px;
+    padding-top: 260px;
+    width: 100%;
 }
 
 .pageTitle {
-    position: relative;
     font-size: 37px;
-    line-height: 37px;
-    text-align: center;
     font-weight: bold;
+    line-height: 37px;
     margin-bottom: 10px;
+    position: relative;
+    text-align: center;
 }
 
 .pageTextBanner {
-    width: 100%;
     background-color: rgba(0, 51, 102, 0.7);
     padding: 25px;
+    width: 100%;
 }
 
 .pageText {
+    margin: auto;
     text-align: center;
     width: 85%;
-    margin: auto;
 }
 
 .pageText p {
@@ -35,13 +35,13 @@
 }
 
 .pageDescription p {
-    position: relative;
     font-size: 22px;
+    position: relative;
 }
 
 .pageDescription p {
-    position: relative;
     font-size: 22px;
+    position: relative;
 }
 
 .plain {
@@ -89,9 +89,9 @@
 @media only screen and (max-width: 800px) {
     
     .pageText {
+        margin-left: 8%;
         padding-top: 80px;
         width: 84%;
-        margin-left: 8%;
     }
 
     .pageDescription {
@@ -100,14 +100,14 @@
     }
     
     .pageTop {
-        padding-top: 40px;
         padding-bottom: 40px;
+        padding-top: 40px;
     }
 
     .pageDescription p {
         font-size: 16px;
-        width: 100%;
         text-align: center;
+        width: 100%;
     }
 
     .pageTextBanner {
@@ -117,5 +117,4 @@
     .pageTitle {
         margin-top: -30px;
     }
-
 }
