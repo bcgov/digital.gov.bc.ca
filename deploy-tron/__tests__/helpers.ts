@@ -56,6 +56,7 @@ export const github = {
     list: jest.fn(),
   },
   repos: {
+    createDeployment: jest.fn(),
     createFile: jest.fn(),
     createOrUpdateFile: jest.fn(),
     getContents: jest.fn(),

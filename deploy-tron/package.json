@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "handlebars": "^4.7.6",
     "minimist": "^1.2.5",
     "probot": "^9.5.3"
   },

@@ -3,10 +3,12 @@ import { extractDeployCommandValues } from '../utils/stringutils';
 import { getRepoAndOwnerFromContext } from '../utils/ghutils';
 import { createDeployment } from '../utils/deployment';
 import { DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
+import { MESSAGES } from '../constants/messages';
 import config from '../config/index.json';
 
 export const deploy = (context: Context): void => {
   const commentBody = context.payload.comment.body;
+  const commentOwner = context.payload.comment.user.login;
   const deployValues = extractDeployCommandValues(commentBody);
   if (deployValues !== null) {
     interface synonyms {
@@ -36,5 +38,7 @@ export const deploy = (context: Context): void => {
       deployValues.microservice,
       [],
     );
+  } else {
+    context.log(MESSAGES.badDeployCommand(commentOwner, commentBody));
   }
 };

@@ -1,4 +1,5 @@
 import { Context } from 'probot';
+import { MESSAGES } from '../constants/messages';
 
 export const createDeployment = (
   context: Context,
@@ -8,13 +9,22 @@ export const createDeployment = (
   microservice: string,
   requiredContexts = [],
 ) => {
-  context;
-  console.log(
-    'DEPLOYING',
+  const ref = `pull/${context.payload.issue.number}/head`;
+  const user = context.payload.issue.user.login;
+  context.log(MESSAGES.deploying(user, microservice, environment, ref));
+
+  return context.github.repos.createDeployment({
     repo,
     owner,
-    microservice,
+    ref, 
     environment,
-    requiredContexts,
-  );
+    description: 'deploy request from ci-cd',
+    payload: JSON.stringify({
+      microservice,
+      pr: context.payload.issue.number,
+      user ,
+    }),
+    required_contexts: requiredContexts,
+    auto_merge: false,
+  })
 };
