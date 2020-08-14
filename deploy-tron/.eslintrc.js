@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
     'jest/globals': true,
+    'jest': true,
   },
   extends: [ 'prettier'],
   globals: {

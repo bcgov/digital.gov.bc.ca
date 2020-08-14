@@ -5,6 +5,7 @@ import { pullRequestComment } from '../../__fixtures__/pull_request_comment';
 import { github, replaceCommentBodyWithCommand } from '../helpers';
 import { handlePrComment } from '../../src/handlers';
 import { adminUser } from '../../__fixtures__/collaborator';
+
 describe('As a user I can ask the bot for help', () => {
   test('When I ask for help, I get the help documentation', async () => {
     const buffer = readFileSync(path.join(__dirname, '../../content/help.md'));
