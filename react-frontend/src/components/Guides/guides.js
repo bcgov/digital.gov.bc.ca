@@ -8,30 +8,35 @@ import GUIDES_QUERY from '../../queries/guide/guides';
 
 const GuidePage = () => {
   return (
-    <div className="resourceInfo">
-      <Grid className="cardAdjustment">
-        <Query query={GUIDES_QUERY} id={null}>
-          {({ data: { guides } }) => {
-            return (
-              <Row>
-                {guides.map((guide, i) => {
-                  return (
-                    <Col sm={12} md={6}>
-                      <InfoCard
-                        title={guide.Title}
-                        description={guide.Summary}
-                        linkText={'Explore'}
-                        linkPath={'https://github.com/bcgov'}
-                        height="300px"
-                      />
-                    </Col>
-                  );
-                })}
-              </Row>
-            );
-          }}
-        </Query>
-      </Grid>
+    <div className="pageContainer">
+      <div className="pageBannerSimple">
+        <h1>Useful Guides</h1>
+      </div>
+      <div className="guides">
+        <Grid className="cardAdjustment">
+          <Query query={GUIDES_QUERY} id={null}>
+            {({ data: { guides } }) => {
+              return (
+                <Row>
+                  {guides.map((guide, i) => {
+                    return (
+                      <Col sm={12} md={6}>
+                        <InfoCard
+                          title={guide.Title}
+                          description={guide.Summary}
+                          linkText={'Explore'}
+                          linkPath={'https://github.com/bcgov'}
+                          height="300px"
+                        />
+                      </Col>
+                    );
+                  })}
+                </Row>
+              );
+            }}
+          </Query>
+        </Grid>
+      </div>
     </div>
   );
 };
