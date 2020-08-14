@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import DigitalBlock from './digitalframeworkblock';
-import DigitalHeader from './digitalframeworkbanner';
+// import DigitalHeader from './digitalframeworkbanner';
+import SimpleBanner from '../BannerSimple/bannerSimple';
 import DigitalTable from './digitalframeworktable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
@@ -92,7 +93,13 @@ const DigitalFramework = () => {
 
   return (
     <div className="pageContainer">
-      <DigitalHeader />
+      {/* <DigitalHeader /> */}
+      <SimpleBanner
+        title="Digital Framework"
+        description="This is the Digital Framework: our plan for becoming a digital
+        government. We consider it a draft – an “alpha” version – that
+        reserves the flexibility to learn and adapt as we go."
+      />
       <div className="digitalBody">
         <div className="digitalSection">
           <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
