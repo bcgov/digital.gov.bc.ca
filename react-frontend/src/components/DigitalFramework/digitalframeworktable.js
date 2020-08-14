@@ -7,7 +7,6 @@ const DigitalFrameworkTable = (props) => {
 
   useEffect(() => {
     function handleResize() {
-      console.log(window.innerWidth);
       if (window.innerWidth < 800) {
         setIsMobile(true);
       } else {
