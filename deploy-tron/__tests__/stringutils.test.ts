@@ -16,8 +16,11 @@ describe('String Utilities', () => {
     // trailing and leading white spaces should be okay
     expect(extractCommandValues(` ${config.botCommand} deploy ${config.microservices[0]} to ${config.environments[0]}   `)).not.toBe(null);
   });
-
+  
   test('returns object of values for environment and microservice when parsed', () => {
-
+    expect(extractCommandValues(`${config.botCommand} deploy ${config.microservices[0]} to ${config.environments[0]}`)).toEqual({
+      microservice: config.microservices[0],
+      environment: config.environments[0]
+    });
   });
 });
