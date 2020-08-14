@@ -9,14 +9,18 @@ export const adminUser = {
     url: 'https://api.github.com/users/patricksimonian',
     html_url: 'https://github.com/patricksimonian',
     followers_url: 'https://api.github.com/users/patricksimonian/followers',
-    following_url: 'https://api.github.com/users/patricksimonian/following{/other_user}',
+    following_url:
+      'https://api.github.com/users/patricksimonian/following{/other_user}',
     gists_url: 'https://api.github.com/users/patricksimonian/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/patricksimonian/subscriptions',
+    starred_url:
+      'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
+    subscriptions_url:
+      'https://api.github.com/users/patricksimonian/subscriptions',
     organizations_url: 'https://api.github.com/users/patricksimonian/orgs',
     repos_url: 'https://api.github.com/users/patricksimonian/repos',
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
+    received_events_url:
+      'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
     site_admin: false,
   },
@@ -33,14 +37,18 @@ export const readUser = {
     url: 'https://api.github.com/users/patricksimonian',
     html_url: 'https://github.com/patricksimonian',
     followers_url: 'https://api.github.com/users/patricksimonian/followers',
-    following_url: 'https://api.github.com/users/patricksimonian/following{/other_user}',
+    following_url:
+      'https://api.github.com/users/patricksimonian/following{/other_user}',
     gists_url: 'https://api.github.com/users/patricksimonian/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/patricksimonian/subscriptions',
+    starred_url:
+      'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
+    subscriptions_url:
+      'https://api.github.com/users/patricksimonian/subscriptions',
     organizations_url: 'https://api.github.com/users/patricksimonian/orgs',
     repos_url: 'https://api.github.com/users/patricksimonian/repos',
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
+    received_events_url:
+      'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
     site_admin: false,
   },
@@ -57,14 +65,18 @@ export const triageUser = {
     url: 'https://api.github.com/users/patricksimonian',
     html_url: 'https://github.com/patricksimonian',
     followers_url: 'https://api.github.com/users/patricksimonian/followers',
-    following_url: 'https://api.github.com/users/patricksimonian/following{/other_user}',
+    following_url:
+      'https://api.github.com/users/patricksimonian/following{/other_user}',
     gists_url: 'https://api.github.com/users/patricksimonian/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/patricksimonian/subscriptions',
+    starred_url:
+      'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
+    subscriptions_url:
+      'https://api.github.com/users/patricksimonian/subscriptions',
     organizations_url: 'https://api.github.com/users/patricksimonian/orgs',
     repos_url: 'https://api.github.com/users/patricksimonian/repos',
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
+    received_events_url:
+      'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
     site_admin: false,
   },
@@ -81,14 +93,18 @@ export const writeUser = {
     url: 'https://api.github.com/users/patricksimonian',
     html_url: 'https://github.com/patricksimonian',
     followers_url: 'https://api.github.com/users/patricksimonian/followers',
-    following_url: 'https://api.github.com/users/patricksimonian/following{/other_user}',
+    following_url:
+      'https://api.github.com/users/patricksimonian/following{/other_user}',
     gists_url: 'https://api.github.com/users/patricksimonian/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/patricksimonian/subscriptions',
+    starred_url:
+      'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
+    subscriptions_url:
+      'https://api.github.com/users/patricksimonian/subscriptions',
     organizations_url: 'https://api.github.com/users/patricksimonian/orgs',
     repos_url: 'https://api.github.com/users/patricksimonian/repos',
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
+    received_events_url:
+      'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
     site_admin: false,
   },
@@ -105,14 +121,18 @@ export const maintainUser = {
     url: 'https://api.github.com/users/patricksimonian',
     html_url: 'https://github.com/patricksimonian',
     followers_url: 'https://api.github.com/users/patricksimonian/followers',
-    following_url: 'https://api.github.com/users/patricksimonian/following{/other_user}',
+    following_url:
+      'https://api.github.com/users/patricksimonian/following{/other_user}',
     gists_url: 'https://api.github.com/users/patricksimonian/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/patricksimonian/subscriptions',
+    starred_url:
+      'https://api.github.com/users/patricksimonian/starred{/owner}{/repo}',
+    subscriptions_url:
+      'https://api.github.com/users/patricksimonian/subscriptions',
     organizations_url: 'https://api.github.com/users/patricksimonian/orgs',
     repos_url: 'https://api.github.com/users/patricksimonian/repos',
     events_url: 'https://api.github.com/users/patricksimonian/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/patricksimonian/received_events',
+    received_events_url:
+      'https://api.github.com/users/patricksimonian/received_events',
     type: 'User',
     site_admin: false,
   },

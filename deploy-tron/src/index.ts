@@ -8,6 +8,6 @@ export = (app: Application) => {
 
   // To get your app running against GitHub, see:
   // https://probot.github.io/docs/development/
-}
+};
 
 //

@@ -1,27 +1,19 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es6': true,
+  env: {
+    browser: true,
+    es6: true,
     'jest/globals': true,
   },
-  'extends': [
-    'google',
-    'prettier',
-  ],
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly',
+  extends: [ 'prettier'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaVersion': 2018,
-    'sourceType': 'module',
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
-  'plugins': [
-    '@typescript-eslint',
-    'jest',
-    'prettier',
-  ],
-  'rules': {
-  },
+  plugins: [ 'jest', 'prettier', '@typescript-eslint'],
+  rules: {},
 };

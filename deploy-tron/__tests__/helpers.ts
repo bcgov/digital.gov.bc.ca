@@ -15,6 +15,7 @@
 //
 // Created by Jason Leach on 2020-02-26.
 //
+import config from '../__fixtures__/config.json';
 
 export const github = {
   paginate: jest.fn().mockReturnValue([]),
@@ -66,4 +67,25 @@ export const github = {
   search: {
     issuesAndPullRequests: jest.fn(),
   },
+};
+
+/**
+ * for testing it is useful to take the pr comment payload and modify the comment
+ * @param {Object} commentEvent  the json payload
+ * @param {String} command the actual command you want to replace with
+ * @return {Object}
+ */
+export const replaceCommentBodyWithCommand = (
+  commentEvent: any,
+  command: string,
+) => {
+  const fullCommand = `${config.botCommand} ${command}`;
+
+  return {
+    ...commentEvent,
+    payload: {
+      ...commentEvent.payload,
+      comment: { ...commentEvent.payload.comment, body: fullCommand },
+    },
+  };
 };
