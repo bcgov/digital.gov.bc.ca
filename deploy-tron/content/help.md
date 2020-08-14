@@ -1,0 +1,7 @@
+## Help
+
+| command | description                                                                                                                                        | example usage                                                                                           |   |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---|
+| help    | posts this message                                                                                                                                 | `/deploy-tron help`                                                                                     |   |
+| deploy  | Creates a deployment for a microservice to a particular environment. <br /> This is based on several factors that are configurable on my runtime.  | `/deploy-tron deploy <microservice> to <environment>` <br /> __eg__  <br /> `/deploy-tron deploy react to prod` |   |
+|         |                                                                                                                                                    |                                                                                                         |   |

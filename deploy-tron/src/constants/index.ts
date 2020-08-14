@@ -1,6 +1,7 @@
 export const COMMANDS = {
   'help': 'help',
-  'deploy': 'deploy'
+  'deploy': 'deploy',
+  'knockknock': 'knockknock',
 }
 
 export const ENVIRONMENTS = {

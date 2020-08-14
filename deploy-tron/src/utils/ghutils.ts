@@ -28,7 +28,8 @@ export const isCommenterAllowedToAction = async (context: Context): Promise<bool
   // get their permissions for this repo 
   const { data } = await context.github.repos.getCollaboratorPermissionLevel({ username, repo, owner });
   // get allowable permissions to perform the action
-  return config.validGithubRoles.includes(data.permission);
+  // no matter what, read users should never be allowed to trigger changes
+  return config.validGithubRoles.includes(data.permission) && data.permission !== 'read';
 }
 
 
