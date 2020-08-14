@@ -6,6 +6,7 @@ module.exports = {
   },
   'extends': [
     'google',
+    'prettier',
   ],
   'globals': {
     'Atomics': 'readonly',
@@ -19,6 +20,7 @@ module.exports = {
   'plugins': [
     '@typescript-eslint',
     'jest',
+    'prettier',
   ],
   'rules': {
   },

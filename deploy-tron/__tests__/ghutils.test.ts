@@ -1,4 +1,4 @@
-import { isCommentFromPr, isCommenterAllowedToAction, isBotCommand } from '../src/utils/ghutils';
+import {isCommentFromPr, isCommenterAllowedToAction, isBotCommand} from '../src/utils/ghutils';
 import {Context} from 'probot';
 import {pullRequestComment} from '../__fixtures__/pull_request_comment';
 import {issueComment} from '../__fixtures__/issue_comment';
@@ -32,7 +32,7 @@ describe('Gh Utilities', () => {
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: readUser}));
     expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(false);
   });
-  
+
   test('returns true if the pull request comment starts with expected bot command', () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     expect(isBotCommand(context, config.botCommand)).toBe(true);
