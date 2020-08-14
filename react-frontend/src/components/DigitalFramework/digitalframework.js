@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import DigitalBlock from './digitalframeworkblock';
-import SimpleBanner from '../BannerSimple/bannerSimple';
+import SimpleBanner from '../SimpleBanner/simpleBanner';
 import DigitalTable from './digitalframeworktable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';

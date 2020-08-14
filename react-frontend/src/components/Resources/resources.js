@@ -3,7 +3,7 @@ import DigitalCards from './digitalcards';
 import ForDesigners from './fordesigners';
 import ForDevelopers from './fordevelopers';
 import Guides from './guides';
-import SimpleBanner from '../BannerSimple/bannerSimple';
+import SimpleBanner from '../SimpleBanner/simpleBanner';
 import Standards from './standards';
 
 import '../../css/resources.css';

@@ -1,5 +1,5 @@
 import React from 'react';
-import SimpleBanner from '../BannerSimple/bannerSimple';
+import SimpleBanner from '../SimpleBanner/simpleBanner';
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Template from './template';
