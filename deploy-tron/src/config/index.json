@@ -7,5 +7,11 @@
     "dev": "development",
     "test": "qa"
   },
+  "requiredEnvironments": {
+    "dev": [],
+    "test": ["dev"],
+    "prod": ["dev", "test"]
+  },
+  "environmentsThatAllowConcurrentDeploys": ["dev"],
   "environments": ["prod", "test", "dev"]
 }

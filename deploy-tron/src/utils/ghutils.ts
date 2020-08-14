@@ -1,19 +1,34 @@
 import { Context } from 'probot';
+import config from '../config/index.json';
 
+interface repoOwner {
+  repo: string;
+  owner: string;
+} 
+/**
+ * returns the repo and owner from the context
+ * @param context 
+ * @returns {Object}
+ */
+export const getRepoAndOwnerFromContext = (context: Context): repoOwner => {
+  const { repository } = context.payload;
+  const { name: repo, owner: { login: owner } } = repository;
+
+  return { repo, owner };
+}
 /**
  * checks if commenter can perform action
  * @param context 
  * @param allowedRoles 
  */
-export const isCommenterAllowedToAction = async (context: Context, allowedRoles: String[]): Promise<boolean> => {
+export const isCommenterAllowedToAction = async (context: Context): Promise<boolean> => {
+  const { repo, owner } = getRepoAndOwnerFromContext(context);
   // get user name and see if they are a member
-  const {  user: username } = context.payload.comment.user;
-  const { repository } = context.payload;
-  const { name: repo, owner: { login: owner } } = repository;
+  const {  login: username } = context.payload.comment.user;
   // get their permissions for this repo 
   const { data } = await context.github.repos.getCollaboratorPermissionLevel({ username, repo, owner });
   // get allowable permissions to perform the action
-  return allowedRoles.includes(data.permission);
+  return config.validGithubRoles.includes(data.permission);
 }
 
 

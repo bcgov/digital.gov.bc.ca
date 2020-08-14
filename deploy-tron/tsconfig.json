@@ -69,6 +69,6 @@
     "pretty": false,
     "skipLibCheck": true
   },
-  "include": ["src/", "__tests__", "__fixtures__"],
+  "include": ["src/"],
   "compileOnSave": false
 }

@@ -22,15 +22,15 @@ describe('Gh Utilities', () => {
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: adminUser}));
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: writeUser}));
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: maintainUser}));
-    expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(true);
-    expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(true);
-    expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(true);
+    expect(await isCommenterAllowedToAction(context)).toBe(true);
+    expect(await isCommenterAllowedToAction(context)).toBe(true);
+    expect(await isCommenterAllowedToAction(context)).toBe(true);
   });
 
   test('returns false if user permission is not allowable', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     github.repos.getCollaboratorPermissionLevel.mockReturnValueOnce(Promise.resolve({data: readUser}));
-    expect(await isCommenterAllowedToAction(context, config.validGithubRoles)).toBe(false);
+    expect(await isCommenterAllowedToAction(context)).toBe(false);
   });
 
   test('returns true if the pull request comment starts with expected bot command', () => {
