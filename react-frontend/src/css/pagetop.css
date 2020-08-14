@@ -79,7 +79,7 @@
     min-width: 100%;
     min-height: 100%;
     margin-left: -10%;
-    max-width: auto;
+    max-width: 200%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -120,7 +120,7 @@
     }
 
     .pageTextBanner {
-        padding-top: 0px;
+        padding-top: 0;
     }
 
     .caseBannerImage {
@@ -129,7 +129,7 @@
     }
 
     .homeBannerImage {
-        max-width: auto;
+        max-width: 500%;
         margin-left: -50%;
     }
 
