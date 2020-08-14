@@ -7,6 +7,8 @@ import CollaborationTools from '../../components/Guides/CollaborationTools/colla
 import DigitalFramework from '../DigitalFramework/digitalframework';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
+import GuidePage from '../../components/Guides/guides';
+
 const DisplayNames = {
   resources: 'Resources',
   'products-services': 'Products and Services',
@@ -31,6 +33,9 @@ const Routes = () => {
       </Route>
       <Route path="/case-studies">
         <CaseStudies />
+      </Route>
+      <Route path="/guides">
+        <GuidePage />
       </Route>
       <Route path="/guides/communication-platforms">
         <CollaborationTools />
