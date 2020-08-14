@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductsBanner from './productsbanner';
+import SimpleBanner from '../BannerSimple/bannerSimple';
 import ProductsInstructions from './productsinstructions';
 import Defining from './defining';
 import Considering from './considering';
@@ -11,7 +11,10 @@ import '../../css/global.css';
 const Products = () => {
   return (
     <div className="pageContainer">
-      <ProductsBanner />
+      <SimpleBanner
+        title="Products and Services"
+        description="Supports to help you create or improve a digital service."
+      />
       <div className="productsBody">
         <ProductsInstructions />
         <div>
