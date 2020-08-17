@@ -6,7 +6,7 @@ import InfoCard from '../Home/infocard';
 import SimpleBanner from '../SimpleBanner/simpleBanner';
 import GUIDES_QUERY from '../../queries/guide/guides';
 
-const GuidePage = () => {
+const GuidesPage = () => {
   return (
     <div className="pageContainer">
       <SimpleBanner
@@ -27,7 +27,7 @@ const GuidePage = () => {
                           title={guide.Title}
                           description={guide.Summary}
                           linkText={'Explore'}
-                          linkPath={'https://github.com/bcgov'}
+                          linkPath={`guides/${guide.UID}`}
                           height="300px"
                         />
                       </Col>
@@ -43,4 +43,4 @@ const GuidePage = () => {
   );
 };
 
-export default GuidePage;
+export default GuidesPage;

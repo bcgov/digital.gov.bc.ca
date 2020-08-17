@@ -5,6 +5,7 @@ const GUIDES_QUERY = gql`
     guides {
       Title
       Summary
+      UID
       createdAt
       updatedAt
     }

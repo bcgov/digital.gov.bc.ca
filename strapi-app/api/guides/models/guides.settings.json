@@ -26,10 +26,12 @@
     },
     "UID": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "Title",
+      "required": true
     },
     "Summary": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }
