@@ -10,7 +10,7 @@ We are building the next version of [Digital.gov.bc.ca](https://digital.gov.bc.c
 
 The Exchange Lab Operations team has been deployed to build this website and associated resources, in collaboration with partners across the public service. We are taking an Agile Scrum product delivery approach.
 
-You can see our backlog in the open by clicking on the issues tab above, or visiting our [ZenHub](https://app.zenhub.com/workspaces/digitalgovbcca-5c586bed93a5605cab276e9c/board?repos=223664506).
+You can see our backlog in the open by clicking on the issues tab above.
 
 Contact the product owner, Heather.Remacle@gov.bc.ca, if you have questions.
 
