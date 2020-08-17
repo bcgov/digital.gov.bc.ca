@@ -18,6 +18,7 @@
 import config from '../__fixtures__/config.json';
 
 export const github = {
+  graphql: jest.fn(),
   paginate: jest.fn().mockReturnValue([]),
   apps: {
     listRepos: {
@@ -51,6 +52,7 @@ export const github = {
     list: jest.fn(),
   },
   pulls: {
+    get: jest.fn(),
     create: jest.fn(),
     getAll: jest.fn(),
     list: jest.fn(),

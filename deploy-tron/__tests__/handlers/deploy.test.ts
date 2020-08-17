@@ -43,6 +43,6 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
     
     await probot.receive(prComment)
     // the deployments api should have not been called
-    expect(mock.activeMocks()[0]).toBe(`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`)
+    expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
   });
 });

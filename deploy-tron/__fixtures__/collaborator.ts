@@ -30,8 +30,8 @@ export const readUser = {
   permission: 'read',
   user: {
     login: 'patricksimonian',
-    id: 21046727,
-    node_id: 'MDQ6VXNlcjIxMDQ2NzI3',
+    id: 123,
+    node_id: '3411',
     avatar_url: 'https://avatars1.githubusercontent.com/u/21046727?v=4',
     gravatar_id: '',
     url: 'https://api.github.com/users/patricksimonian',
@@ -58,8 +58,8 @@ export const triageUser = {
   permission: 'triage',
   user: {
     login: 'patricksimonian',
-    id: 21046727,
-    node_id: 'MDQ6VXNlcjIxMDQ2NzI3',
+    id: 44,
+    node_id: '3411',
     avatar_url: 'https://avatars1.githubusercontent.com/u/21046727?v=4',
     gravatar_id: '',
     url: 'https://api.github.com/users/patricksimonian',
@@ -87,7 +87,7 @@ export const writeUser = {
   user: {
     login: 'patricksimonian',
     id: 21046727,
-    node_id: 'MDQ6VXNlcjIxMDQ2NzI3',
+    node_id: '3411',
     avatar_url: 'https://avatars1.githubusercontent.com/u/21046727?v=4',
     gravatar_id: '',
     url: 'https://api.github.com/users/patricksimonian',
@@ -114,8 +114,8 @@ export const maintainUser = {
   permission: 'maintain',
   user: {
     login: 'patricksimonian',
-    id: 21046727,
-    node_id: 'MDQ6VXNlcjIxMDQ2NzI3',
+    id: 4454,
+    node_id: '3411',
     avatar_url: 'https://avatars1.githubusercontent.com/u/21046727?v=4',
     gravatar_id: '',
     url: 'https://api.github.com/users/patricksimonian',

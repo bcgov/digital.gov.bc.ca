@@ -5,13 +5,13 @@ export const COMMANDS = {
 };
 
 export const ENVIRONMENTS = {
-  uat: 'uat',
+  staging: 'staging',
   production: 'production',
   development: 'development',
 };
 
 export const DEFAULT_SYNONYMS = {
-  test: ENVIRONMENTS.uat,
+  test: ENVIRONMENTS.staging,
   prod: ENVIRONMENTS.production,
   dev: ENVIRONMENTS.development,
 };

@@ -14,6 +14,7 @@ export const handlePrComment = async (context: Context): Promise<any> => {
   const isFromPR = isCommentFromPr(context);
   const command = getCommandFromComment(commentBody);
   const commandIsValid = isCommandValid(command);
+  
 
   if (!context.isBot && commenterCanAction && isFromPR && commandIsValid) {
     switch (command) {

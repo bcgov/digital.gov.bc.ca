@@ -1,5 +1,7 @@
 import { Context } from 'probot';
 import { MESSAGES } from '../constants/messages';
+import { ENVIRONMENTS } from '../constants';
+import config from '../config/index.json';
 
 export const createDeployment = (
   context: Context,
@@ -25,6 +27,45 @@ export const createDeployment = (
       user ,
     }),
     required_contexts: requiredContexts,
-    auto_merge: false,
+    transient_environment: environment !== ENVIRONMENTS.production,
+    headers: {
+      'Accept': 'application/vnd.github.ant-man-preview+json',
+    }
   })
 };
+
+
+interface latestStatus {
+  node: {
+    latestStatus: string
+  }
+}
+
+export const isTherePendingDeploymentForEnvironment = async (context: Context, env: string, repo: string, owner: string): Promise<boolean> => {
+
+  const data = await context.github.graphql(`
+  query latestStatus($owner: String!, $repo: String!, $env: String!, $maxLookup: Int = 10) 
+  {
+    repository(name:$repo, owner:$owner) {
+      deployments(orderBy: {field: CREATED_AT, direction: DESC}, first:$maxLookup, environments:[$env]) {
+        edges {
+          node {
+            latestStatus {
+              state
+            }
+          }
+        }
+      }
+    }
+  }  
+  `,
+  {
+    repo,
+    owner,
+    maxLookup: config.maxDeploymentsToLookupForPending,
+    env
+  });
+
+  // @ts-ignore
+  return data.repository.deployments.edges.findIndex((edge: latestStatus) => edge.node.latestStatus === 'PENDING') > -1;
+}

@@ -13,5 +13,11 @@
     "prod": ["dev", "test"]
   },
   "environmentsThatAllowConcurrentDeploys": ["dev"],
-  "environments": ["prod", "test", "dev"]
+  "environments": ["prod", "test", "dev"],
+  "requiredContexts": {
+    "dev": [],
+    "test": [],
+    "prod": []
+  },
+  "maxDeploymentsToLookupForPending": 10
 }

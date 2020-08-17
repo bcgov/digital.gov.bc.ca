@@ -19,6 +19,17 @@ export const getRepoAndOwnerFromContext = (context: Context): repoOwner => {
 
   return { repo, owner };
 };
+
+export const getHeadRefFromPr = async (context: Context): Promise<string> => {
+  const { repo, owner } = getRepoAndOwnerFromContext(context);
+
+  const res = await context.github.pulls.get({owner,
+    repo,
+    pull_number: context.payload.issue.number
+  });
+
+  return res.data.head.ref;
+}
 /**
  * checks if commenter can perform action
  * @param context

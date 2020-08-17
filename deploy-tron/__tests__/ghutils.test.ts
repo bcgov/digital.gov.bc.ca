@@ -2,6 +2,7 @@ import {
   isCommentFromPr,
   isCommenterAllowedToAction,
   isBotCommand,
+  getHeadRefFromPr,
 } from '../src/utils/ghutils';
 import { Context } from 'probot';
 import { pullRequestComment } from '../__fixtures__/pull_request_comment';
@@ -14,6 +15,7 @@ import {
   maintainUser,
 } from '../__fixtures__/collaborator';
 import config from '../__fixtures__/config.json';
+import { pullRequest } from '../__fixtures__/pull_request';
 
 describe('Gh Utilities', () => {
   test('returns true if comment came from pr', () => {
@@ -69,4 +71,16 @@ describe('Gh Utilities', () => {
     );
     expect(isBotCommand(context, config.botCommand)).toBe(false);
   });
+
+  test('returns head ref from pull request', async () => {
+    const context = new Context(
+      pullRequestComment,
+      github as any,
+      {} as any,
+    );
+
+    github.pulls.get.mockReturnValue(Promise.resolve({data: pullRequest}));
+
+    expect(await getHeadRefFromPr(context)).toBe(pullRequest.head.ref);
+  })
 });

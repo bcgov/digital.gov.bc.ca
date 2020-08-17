@@ -2,6 +2,7 @@ import { Application } from 'probot'; // eslint-disable-line no-unused-vars
 import { handlePrComment } from './handlers';
 
 export = (app: Application) => {
+
   app.on('issue_comment.created', handlePrComment);
   // For more information on building apps:
   // https://probot.github.io/docs/
