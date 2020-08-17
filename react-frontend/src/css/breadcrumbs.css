@@ -1,7 +1,8 @@
 .breadCrumbs {
-    position: absolute;
-    padding-top: 133px;
+    margin-left: -10px;
     padding-left: 5%;
+    padding-top: 133px;
+    position: absolute;
     width: 100%;
     margin-left: -10px;
     z-index: 5;
@@ -23,11 +24,19 @@
     text-decoration: none;  
 }
 
+.options {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+}
+
 @media only screen and (max-width: 800px) {
     .breadCrumbs {
-        padding-top: 80px;
-        padding-left: 0px;
         margin-left: -13px;
+        padding-left: 0;
+        padding-top: 80px;
     }
 
     .listOption {

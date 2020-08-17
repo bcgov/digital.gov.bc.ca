@@ -3,7 +3,7 @@ import DigitalCards from './digitalcards';
 import ForDesigners from './fordesigners';
 import ForDevelopers from './fordevelopers';
 import Guides from './guides';
-import ResourceBanner from './resourcebanner';
+import SimpleBanner from '../SimpleBanner/simpleBanner';
 import Standards from './standards';
 
 import '../../css/resources.css';
@@ -12,7 +12,11 @@ import '../../css/global.css';
 function Resources() {
   return (
     <div className="pageContainer">
-      <ResourceBanner />
+      <SimpleBanner
+        title="Resources"
+        description=" Policy, standards, guides, and tools you can use right now to
+        deliver excellent digital services."
+      />
       <div className="resourcesBody">
         <DigitalCards />
         <Standards />
