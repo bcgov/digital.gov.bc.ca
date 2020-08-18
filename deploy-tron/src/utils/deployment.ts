@@ -1,6 +1,7 @@
 import { Context } from 'probot';
 import { MESSAGES } from '../constants/messages';
 import { ENVIRONMENTS } from '../constants';
+import { LATEST_STATUS_QL_QUERY } from '../constants/queries';
 import config from '../config/index.json';
 
 
@@ -55,25 +56,7 @@ interface latestStatus {
  */
 export const isTherePendingDeploymentForEnvironment = async (context: Context, ref: string, env: string, repo: string, owner: string): Promise<boolean> => {
 
-  const data = await context.github.graphql(`
-  query latestStatus($owner: String!, $repo: String!, $env: String!, $maxLookup: Int = 10) 
-  {
-    repository(name:$repo, owner:$owner) {
-      deployments(orderBy: {field: CREATED_AT, direction: DESC}, first:$maxLookup, environments:[$env]) {
-        edges {
-          node {
-            latestStatus {
-              state
-            }
-            ref {
-              name
-            }
-          }
-        }
-      }
-    }
-  }  
-  `,
+  const data = await context.github.graphql(LATEST_STATUS_QL_QUERY,
   {
     repo,
     owner,

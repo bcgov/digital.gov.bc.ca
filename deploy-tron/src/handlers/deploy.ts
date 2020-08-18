@@ -58,7 +58,7 @@ export const deploy = async (context: Context): Promise<void> => {
       } else {
         const body = `
           Unable to create a deployment :(
-          Deploying to ${environment} requires ${requiredEnvironments.join()} to be deployed for this ref.
+          Deploying to ${environment} requires **${requiredEnvironments.join()}** to be deployed for this ref before you can deploy to **${environment}**.
         `
         const params = context.issue({ body });
         context.github.issues.createComment(params);
