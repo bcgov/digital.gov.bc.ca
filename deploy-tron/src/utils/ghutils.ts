@@ -1,4 +1,4 @@
-import { Context, Octokit } from 'probot';
+import { Context } from 'probot';
 import config from '../config/index.json';
 
 interface repoOwner {
@@ -71,7 +71,7 @@ export const isCommentFromPr = (context: Context): boolean => {
  * @param context
  * @returns {Boolean}
  */
-export const isBotCommand = (context: Context, botCommand: String): boolean => {
+export const isBotCommand = (context: Context, botCommand: string): boolean => {
   const { body } = context.payload.comment;
   const re = new RegExp(`^${botCommand}`);
 

@@ -5,7 +5,7 @@ module.exports = {
     'jest/globals': true,
     'jest': true,
   },
-  extends: [ 'prettier'],
+  extends: [ 'plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -15,6 +15,6 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [ 'jest', 'prettier', '@typescript-eslint'],
+  plugins: [ 'jest', 'prettier'],
   rules: {},
 };

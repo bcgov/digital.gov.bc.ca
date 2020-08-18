@@ -30,16 +30,18 @@ export const deploy = async (context: Context): Promise<void> => {
     // get head ref from pr
     const ref = await getHeadRefFromPr(context);
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys.findIndex(env => env === environment) > -1;
-
+    
     const pendingDeploymentsExist = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
     if(!pendingDeploymentsExist || allowsMultipleDeploysToEnv) {
       const deploymentStatuses = await getLatestEnvironmentStatusesForRef(context, ref, repo, owner);
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       const requiredEnvironments = config.requiredEnvironments[environment]
       const canDeploy = isEnvironmentAllowedToDeploy(requiredEnvironments, deploymentStatuses);
-
+      
       if(canDeploy) {
         // check if previous deployments in train have completed
         await createDeployment(
@@ -49,6 +51,7 @@ export const deploy = async (context: Context): Promise<void> => {
           environment,
           deployValues.microservice,
           ref,
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           config.requiredContexts[environment] || [],
         );

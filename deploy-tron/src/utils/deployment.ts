@@ -4,7 +4,6 @@ import { ENVIRONMENTS } from '../constants';
 import { LATEST_STATUS_QL_QUERY } from '../constants/queries';
 import config from '../config/index.json';
 
-
 export const createDeployment = (
   context: Context,
   repo: string,
@@ -13,7 +12,8 @@ export const createDeployment = (
   microservice: string,
   ref: string,
   requiredContexts = [],
-) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+): Promise<any>  => {
 
   const user = context.payload.issue.user.login;
   context.log(MESSAGES.deploying(user, microservice, environment, ref));
@@ -41,6 +41,9 @@ export const createDeployment = (
 interface latestStatus {
   node: {
     latestStatus: string
+    ref: {
+      name: string
+    }
   }
 }
 
@@ -63,7 +66,8 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
     maxLookup: config.maxDeploymentsToLookupForPending,
     env
   });
-  // @ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
   const index = data.repository.deployments.edges.findIndex((edge: latestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref));
   
   return index !== -1;
@@ -71,15 +75,21 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
 
 
 interface deployment {
-  id: any;
+  id: string|number;
   environment: string;
 }
 
+interface deploymentStatusGroup {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+}
 interface deploymentGroup {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
-export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: string, repo: string, owner:string): Promise<object> => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: string, repo: string, owner:string): Promise<any> => {
   const response = await context.github.repos.listDeployments({
     repo,
     owner,
@@ -114,7 +124,7 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
  * @param deploymentStatuses 
  * @returns {boolean}
  */
-export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], deploymentStatuses: deploymentGroup) => {
+export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], deploymentStatuses: deploymentStatusGroup): boolean => {
   if(!requiredEnvironments || requiredEnvironments.length === 0) return true;
   return requiredEnvironments.every((env:string) => deploymentStatuses[env].state === 'success' );
 }

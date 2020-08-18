@@ -13,14 +13,12 @@ describe('Deployment Helpers', () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPending))
-    
-    let isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar')
+    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar')
     expect(isPending).toBe(true);
   });
 
   test('isTherePendingDeploymentForEnvironment returns false when there is a pending deployent and ref is the same', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
-
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPendingWithSameRef))
     const isPending = await isTherePendingDeploymentForEnvironment(context, deploymentStatusesPendingWithSameRef.repository.deployments.edges[0].node.ref.name, 'development', 'bar', 'owner');
@@ -29,7 +27,6 @@ describe('Deployment Helpers', () => {
 
   test('isTherePendingDeploymentForEnvironment returns false when there is a non pending deployent', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
-
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesSuccess))
     const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar')
@@ -58,6 +55,7 @@ describe('Deployment Helpers', () => {
       staging: { state: 'success' },
       development: { state: 'success' },
     };
+
     expect(isEnvironmentAllowedToDeploy(environments, statuses)).toBe(true);
   });
 });

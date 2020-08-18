@@ -44,9 +44,12 @@ export const extractDeployCommandValues = (
   };
 };
 
+interface synonyms {
+  [any: string]: string
+}
 
-export const getEnvFromSynonym = (env: string) => {
-  const synonyms = { ...DEFAULT_SYNONYMS, ...config.environmentSynonyms };
-  // @ts-ignore
+export const getEnvFromSynonym = (env: string): string => {
+  const synonyms: synonyms = { ...DEFAULT_SYNONYMS, ...config.environmentSynonyms };
+
   return synonyms[env];
 }
