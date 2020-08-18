@@ -15,3 +15,11 @@ export const DEFAULT_SYNONYMS = {
   prod: ENVIRONMENTS.production,
   dev: ENVIRONMENTS.development,
 };
+
+export const BASE_CONFIG = {
+  requiredContexts: {},
+  environmentSynonyms: {},
+  maxDeploymentsToLookupForPending: 10,
+  validGithubRoles: ["maintain", "admin", "write"],
+  environmentsThatAllowConcurrentDeploys: [],
+}

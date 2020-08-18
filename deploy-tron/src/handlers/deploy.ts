@@ -31,7 +31,7 @@ export const deploy = async (context: Context): Promise<void> => {
     const ref = await getHeadRefFromPr(context);
 
     // @ts-ignore
-    const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys[environment];
+    const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys.findIndex(env => env === environment) > -1;
 
     const pendingDeploymentsExist = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
     if(!pendingDeploymentsExist || allowsMultipleDeploysToEnv) {
@@ -49,15 +49,9 @@ export const deploy = async (context: Context): Promise<void> => {
           environment,
           deployValues.microservice,
           ref,
-          [],
+          // @ts-ignore
+          config.requiredContexts[environment] || [],
         );
-        
-        await context.github.repos.createDeploymentStatus({
-          deployment_id: deployment.data.id,
-          state: 'pending',
-          owner,
-          repo,
-        });
 
         const params = context.issue({ body: 'Deployment successfully created!' });
         context.github.issues.createComment(params);
