@@ -126,6 +126,76 @@ export const deploymentsForRef = [
   }
 ]
 
+export const deploymentStatusForDeploymentWhereAllSuccessful = [
+  {
+    "url": "https://api.github.com/repos/bcgov/devhub-app-web/deployments/123/statuses/23434",
+    "id": 1312,
+    "node_id": "MDE2OkRlcGxveW1lbnRTdGF0dXMzNjMzOTA1MzQ=",
+    "state": "success",
+    "creator": {
+      "login": "patricksimonian",
+      "id": 3434,
+      "node_id": "MDQ6VXNlcjIxMDQ2NzI3",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/21046727?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/patricksimonian",
+      "html_url": "https://github.com/patricksimonian",
+      "followers_url": "https://api.github.com/users/patricksimonian/followers",
+      "following_url": "https://api.github.com/users/patricksimonian/following{/other_user}",
+      "gists_url": "https://api.github.com/users/patricksimonian/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/patricksimonian/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/patricksimonian/subscriptions",
+      "organizations_url": "https://api.github.com/users/patricksimonian/orgs",
+      "repos_url": "https://api.github.com/users/patricksimonian/repos",
+      "events_url": "https://api.github.com/users/patricksimonian/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/patricksimonian/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "description": "",
+    "environment": "production",
+    "target_url": "",
+    "created_at": "2020-08-07T22:24:20Z",
+    "updated_at": "2020-08-07T22:24:20Z",
+    "deployment_url": "https://api.github.com/repos/bcgov/devhub-app-web/deployments/3434",
+    "repository_url": "https://api.github.com/repos/bcgov/devhub-app-web",
+    "performed_via_github_app": null
+  },
+  {
+    "url": "https://api.github.com/repos/bcgov/devhub-app-web/deployments/3434/statuses/34434",
+    "id": 34434,
+    "node_id": "MDE2OkRlcGxveW1lbnRTdGF0dXMzNjMzOTA1MjA=",
+    "state": "success",
+    "creator": {
+      "login": "patricksimonian",
+      "id": 123,
+      "node_id": "MDQ6VXNlcjIxMDQ2NzI3",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/21046727?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/patricksimonian",
+      "html_url": "https://github.com/patricksimonian",
+      "followers_url": "https://api.github.com/users/patricksimonian/followers",
+      "following_url": "https://api.github.com/users/patricksimonian/following{/other_user}",
+      "gists_url": "https://api.github.com/users/patricksimonian/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/patricksimonian/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/patricksimonian/subscriptions",
+      "organizations_url": "https://api.github.com/users/patricksimonian/orgs",
+      "repos_url": "https://api.github.com/users/patricksimonian/repos",
+      "events_url": "https://api.github.com/users/patricksimonian/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/patricksimonian/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "description": "",
+    "environment": "staging",
+    "target_url": "",
+    "created_at": "2020-08-07T22:24:16Z",
+    "updated_at": "2020-08-07T22:24:16Z",
+    "deployment_url": "https://api.github.com/repos/bcgov/devhub-app-web/deployments/343",
+    "repository_url": "https://api.github.com/repos/bcgov/devhub-app-web",
+    "performed_via_github_app": null
+  }
+]
 
 export const deploymentStatusForDeployment = [
   {

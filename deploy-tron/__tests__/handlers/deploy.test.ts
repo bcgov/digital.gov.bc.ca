@@ -1,7 +1,7 @@
 import {  Probot, Octokit } from 'probot';
 import nock from 'nock';
 import { pullRequestComment } from '../../__fixtures__/pull_request_comment';
-import { deploymentStatusesPending } from '../../__fixtures__/deployments';
+import { deploymentStatusesPending, deploymentStatusesSuccess, deploymentsForRef, deploymentStatusForDeploymentWhereAllSuccessful } from '../../__fixtures__/deployments';
 import { pullRequest } from '../../__fixtures__/pull_request';
 import {  replaceCommentBodyWithCommand } from '../helpers';
 import { adminUser } from '../../__fixtures__/collaborator';
@@ -74,4 +74,39 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
     expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
   });
   
+  test('It can create a deployment', async () => {
+    const prComment = replaceCommentBodyWithCommand(pullRequestComment, 'deploy postgres to test');
+    const {
+      issue: {
+        user: { login: user },
+        number,
+      },
+      repository: { name: repo, owner: {login: owner}},
+    } = prComment.payload;
+
+
+    const statusesRegExp = new RegExp(`/repos/${owner}/${repo}/deployments/[0-9]+/statuses`);
+    const mock = nock('https://api.github.com')
+      .get(`/repos/${owner}/${repo}/collaborators/${user}/permission`)
+      .reply(200, adminUser)
+      .get(`/repos/${owner}/${repo}/pulls/${number}`)
+      .reply(200, pullRequest)
+      .post(`/graphql`)
+      .reply(200, {data: deploymentStatusesSuccess})
+      .post(`/repos/${owner}/${repo}/issues/${number}/comments`)
+      .reply(200)
+      .persist()
+      .get(`/repos/${owner}/${repo}/deployments\?ref=${deploymentsForRef[0].ref}`)
+      .reply(201, deploymentsForRef)
+      .get(statusesRegExp)
+      .reply(201, deploymentStatusForDeploymentWhereAllSuccessful)
+      .post(`/repos/${owner}/${repo}/deployments`)
+      .reply(200, deploymentsForRef[0])
+      .post(`/repos/${owner}/${repo}/deployments/${deploymentsForRef[0].id}/statuses`)
+      .reply(200)
+
+    await probot.receive(prComment)
+
+    expect(mock.pendingMocks()).toEqual([]);
+  })
 });
