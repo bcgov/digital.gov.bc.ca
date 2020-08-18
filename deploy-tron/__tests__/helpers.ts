@@ -60,6 +60,8 @@ export const github = {
   repos: {
     createDeployment: jest.fn(),
     createFile: jest.fn(),
+    listDeployments: jest.fn(),
+    listDeploymentStatuses: jest.fn(),
     createOrUpdateFile: jest.fn(),
     getContents: jest.fn(),
     listCollaborators: jest.fn(),

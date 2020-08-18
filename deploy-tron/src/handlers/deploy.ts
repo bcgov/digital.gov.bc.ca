@@ -1,7 +1,7 @@
 import { Context } from 'probot';
 import { extractDeployCommandValues } from '../utils/stringutils';
 import { getRepoAndOwnerFromContext, getHeadRefFromPr } from '../utils/ghutils';
-import { createDeployment, isTherePendingDeploymentForEnvironment } from '../utils/deployment';
+import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef } from '../utils/deployment';
 import { DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
 import { MESSAGES } from '../constants/messages';
 import config from '../config/index.json';
@@ -33,8 +33,20 @@ export const deploy = async (context: Context): Promise<void> => {
     console.log(
       'is there a pending deployment to this environement for another ref and do we allow multiple deploys there',
     );
-      await isTherePendingDeploymentForEnvironment(context, environment, repo, owner);
+    // @ts-ignore
+    const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys[environment];
+
+    const pendingDeploymentsExist = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
+    if(!pendingDeploymentsExist || allowsMultipleDeploysToEnv) {
+      const deploymentStatuses = await getLatestEnvironmentStatusesForRef(context, ref, repo, owner);
+      // @ts-ignore
+      const canDeploy = config.requiredEnvironments[environment].every((env:string) => deploymentStatuses[env].state === 'success' ) || config.requiredEnvironments[environment].length === 0;
+
+      // checks to see if deployments for that ref to environment succeeded if configured to do so.
+    }
+    
     // check if previous deployments in train have completed
+
     console.log('check if previous environments in train have succeeded');
     createDeployment(
       context,
@@ -42,6 +54,7 @@ export const deploy = async (context: Context): Promise<void> => {
       owner,
       environment,
       deployValues.microservice,
+      ref,
       [],
     );
   } else {
