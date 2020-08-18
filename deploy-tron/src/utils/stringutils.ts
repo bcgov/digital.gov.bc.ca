@@ -1,5 +1,5 @@
 import config from '../config/index.json';
-import { COMMANDS, DEFAULT_SYNONYMS } from '../constants';
+import { COMMANDS, DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
 
 export interface parsedDeployCommand {
   microservice: string;
@@ -49,7 +49,7 @@ interface synonyms {
 }
 
 export const getEnvFromSynonym = (env: string): string => {
-  const synonyms: synonyms = { ...DEFAULT_SYNONYMS, ...config.environmentSynonyms };
+  const synonyms: synonyms = { ...DEFAULT_SYNONYMS,  ...ENVIRONMENTS, ...config.environmentSynonyms };
 
   return synonyms[env];
 }

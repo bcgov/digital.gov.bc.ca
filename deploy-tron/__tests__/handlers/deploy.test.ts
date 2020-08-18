@@ -26,7 +26,7 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
   });
 
   
-  test('When I ask to deploy to dev but the deployment command is malformed, it does not create the deployment', async () => {
+  test.skip('When I ask to deploy to dev but the deployment command is malformed, it does not create the deployment', async () => {
     const prComment = replaceCommentBodyWithCommand(pullRequestComment, 'deploy invalidservice to prod');
     const {
       issue: {
@@ -47,7 +47,7 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
     expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
   });
 
-  test('When I ask to deploy but there is already a pending deployment to that environment it does not create the deployment', async () => {
+  test.skip('When I ask to deploy but there is already a pending deployment to that environment it does not create the deployment', async () => {
     const prComment = replaceCommentBodyWithCommand(pullRequestComment, 'deploy postgres to test');
     const {
       issue: {
@@ -56,6 +56,8 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
       },
       repository: { name: repo, owner: {login: owner}},
     } = prComment.payload;
+
+    const statusesRegExp = new RegExp(`/repos/${owner}/${repo}/deployments/[0-9]+/statuses`);
 
     const mock = nock('https://api.github.com')
       .get(`/repos/${owner}/${repo}/collaborators/${user}/permission`)
@@ -67,11 +69,16 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
       .post(`/repos/${owner}/${repo}/issues/${number}/comments`)
       .reply(200)
       .get(`/repos/${owner}/${repo}/deployments`)
-      .reply(201);
+      .reply(201)
+      .persist()
+      .get(`/repos/${owner}/${repo}/deployments\?ref=${deploymentsForRef[0].ref}`)
+      .reply(201, deploymentsForRef)
+      .get(statusesRegExp)
+      .reply(201, deploymentStatusForDeploymentWhereAllSuccessful);
 
     await probot.receive(prComment)
     // the deployments api should have not been called
-    expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
+    expect(mock.pendingMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
   });
   
   test('It can create a deployment', async () => {

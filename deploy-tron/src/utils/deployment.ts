@@ -27,7 +27,7 @@ export const createDeployment = (
     payload: JSON.stringify({
       microservice,
       pr: context.payload.issue.number,
-      user ,
+      user,
     }),
     required_contexts: requiredContexts,
     transient_environment: environment !== ENVIRONMENTS.production,
@@ -112,7 +112,8 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
   const resolvedStatuses = await Promise.all(latestStatuses);
   // organize statuses against grouped environments
   return  resolvedStatuses.reduce((groupedStatuses: deploymentGroup, state) => {
-    groupedStatuses[state.env] = state.status.data[0];
+    // if there is not pending deployment status ie status.data === [] sub in a pending status
+    groupedStatuses[state.env] = state.status.data[0] || { state: 'pending'};
     return groupedStatuses
   }, {});
 }
@@ -126,5 +127,6 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
  */
 export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], deploymentStatuses: deploymentStatusGroup): boolean => {
   if(!requiredEnvironments || requiredEnvironments.length === 0) return true;
+  console.log(deploymentStatuses);
   return requiredEnvironments.every((env:string) => deploymentStatuses[env].state === 'success' );
 }
