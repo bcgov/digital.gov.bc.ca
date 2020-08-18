@@ -1,4 +1,4 @@
-import { Context } from 'probot';
+import { Context, Octokit } from 'probot';
 import config from '../config/index.json';
 
 interface repoOwner {
@@ -77,3 +77,9 @@ export const isBotCommand = (context: Context, botCommand: String): boolean => {
 
   return re.test(body.trim());
 };
+
+
+export const createComment = (context: Context, body: string): Promise<unknown> => {
+  const params = context.issue({ body });
+  return context.github.issues.createComment(params);
+}

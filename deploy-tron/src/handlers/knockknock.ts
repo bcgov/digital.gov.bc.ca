@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { Context } from 'probot';
+import { createComment } from '../utils/ghutils';
 
 export const knockknock = async (context: Context): Promise<any> => {
   try {
@@ -7,8 +8,7 @@ export const knockknock = async (context: Context): Promise<any> => {
       headers: { Accept: 'application/json' },
     });
 
-    const params = context.issue({ body: res.data.joke });
-    return context.github.issues.createComment(params);
+    return createComment(context, res.data.joke )
   } catch (e) {
     return;
   }

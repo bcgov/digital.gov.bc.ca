@@ -1,6 +1,6 @@
 import { Context } from 'probot';
 import { extractDeployCommandValues } from '../utils/stringutils';
-import { getRepoAndOwnerFromContext, getHeadRefFromPr } from '../utils/ghutils';
+import { getRepoAndOwnerFromContext, getHeadRefFromPr, createComment } from '../utils/ghutils';
 import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef, isEnvironmentAllowedToDeploy } from '../utils/deployment';
 import { DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
 import { MESSAGES } from '../constants/messages';
@@ -42,7 +42,7 @@ export const deploy = async (context: Context): Promise<void> => {
 
       if(canDeploy) {
         // check if previous deployments in train have completed
-        const deployment = await createDeployment(
+        await createDeployment(
           context,
           repo,
           owner,
@@ -53,19 +53,16 @@ export const deploy = async (context: Context): Promise<void> => {
           config.requiredContexts[environment] || [],
         );
 
-        const params = context.issue({ body: 'Deployment successfully created!' });
-        context.github.issues.createComment(params);
+        await createComment(context, 'Deployment successfully created!');
       } else {
         const body = `
           Unable to create a deployment :(
           Deploying to ${environment} requires **${requiredEnvironments.join()}** to be deployed for this ref before you can deploy to **${environment}**.
         `
-        const params = context.issue({ body });
-        context.github.issues.createComment(params);
+        await createComment(context, body);
       }
     } else {
-      const params = context.issue({ body: 'There is already a pending deployment to this environment, unable to deploy until that one completes' });
-      context.github.issues.createComment(params);
+      await createComment(context, 'There is already a pending deployment to this environment, unable to deploy until that one completes');
     }
     
   } else {
