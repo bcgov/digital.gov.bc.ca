@@ -1,7 +1,7 @@
 import { Context } from 'probot';
 import { extractDeployCommandValues } from '../utils/stringutils';
 import { getRepoAndOwnerFromContext, getHeadRefFromPr } from '../utils/ghutils';
-import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef } from '../utils/deployment';
+import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef, isEnvironmentAllowedToDeploy } from '../utils/deployment';
 import { DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
 import { MESSAGES } from '../constants/messages';
 import config from '../config/index.json';
@@ -24,15 +24,12 @@ export const deploy = async (context: Context): Promise<void> => {
     };
 
     const environment: string = deploymentEnvSynonyms[deployValues.environment];
+
     const { repo, owner } = getRepoAndOwnerFromContext(context);
     // check for pending deployments in that environment for another ref
     // get head ref from pr
     const ref = await getHeadRefFromPr(context);
 
-    console.log('ref', ref);
-    console.log(
-      'is there a pending deployment to this environement for another ref and do we allow multiple deploys there',
-    );
     // @ts-ignore
     const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys[environment];
 
@@ -40,23 +37,40 @@ export const deploy = async (context: Context): Promise<void> => {
     if(!pendingDeploymentsExist || allowsMultipleDeploysToEnv) {
       const deploymentStatuses = await getLatestEnvironmentStatusesForRef(context, ref, repo, owner);
       // @ts-ignore
-      const canDeploy = config.requiredEnvironments[environment].every((env:string) => deploymentStatuses[env].state === 'success' ) || config.requiredEnvironments[environment].length === 0;
+      const requiredEnvironments = config.requiredEnvironments[environment]
+      const canDeploy = isEnvironmentAllowedToDeploy(requiredEnvironments, deploymentStatuses);
 
-      // checks to see if deployments for that ref to environment succeeded if configured to do so.
+      if(canDeploy) {
+        // check if previous deployments in train have completed
+        const deployment = await createDeployment(
+          context,
+          repo,
+          owner,
+          environment,
+          deployValues.microservice,
+          ref,
+          [],
+        );
+        
+        await context.github.repos.createDeploymentStatus({
+          deployment_id: deployment.data.id,
+          state: 'pending',
+          owner,
+          repo,
+        });
+
+        const params = context.issue({ body: 'Deployment successfully created!' });
+        context.github.issues.createComment(params);
+      } else {
+        const body = `
+          Unable to create a deployment :(
+          Deploying to ${environment} requires ${requiredEnvironments.join()} to be deployed for this ref.
+        `
+        const params = context.issue({ body });
+        context.github.issues.createComment(params);
+      }
     }
     
-    // check if previous deployments in train have completed
-
-    console.log('check if previous environments in train have succeeded');
-    createDeployment(
-      context,
-      repo,
-      owner,
-      environment,
-      deployValues.microservice,
-      ref,
-      [],
-    );
   } else {
     context.log(MESSAGES.badDeployCommand(commentOwner, commentBody));
   }

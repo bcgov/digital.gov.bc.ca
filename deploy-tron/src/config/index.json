@@ -5,19 +5,19 @@
   "environmentSynonyms": {
     "prod": "production",
     "dev": "development",
-    "test": "qa"
+    "test": "staging"
   },
   "requiredEnvironments": {
-    "dev": [],
-    "test": ["dev"],
-    "prod": ["dev", "test"]
+    "development": [],
+    "staging": ["development"],
+    "production": ["development", "staging"]
   },
-  "environmentsThatAllowConcurrentDeploys": ["dev"],
-  "environments": ["prod", "test", "dev"],
+  "environmentsThatAllowConcurrentDeploys": ["development"],
+  "environments": ["production", "staging", "development"],
   "requiredContexts": {
-    "dev": [],
-    "test": [],
-    "prod": []
+    "development": [],
+    "staging": [],
+    "production": []
   },
   "maxDeploymentsToLookupForPending": 10
 }

@@ -32,7 +32,7 @@ export const extractDeployCommandValues = (
   const re = new RegExp(
     `^${config.botCommand} deploy (${microServicesString}) to (${environmentsString})$`,
   );
-    console.log(re);
+
   // if the command does not match the pattern return null
   if (!re.test(cmd)) return null;
 
