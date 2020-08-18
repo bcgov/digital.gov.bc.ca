@@ -69,6 +69,9 @@ export const deploy = async (context: Context): Promise<void> => {
         const params = context.issue({ body });
         context.github.issues.createComment(params);
       }
+    } else {
+      const params = context.issue({ body: 'There is already a pending deployment to this environment, unable to deploy until that one completes' });
+      context.github.issues.createComment(params);
     }
     
   } else {

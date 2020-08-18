@@ -80,7 +80,6 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
     maxLookup: config.maxDeploymentsToLookupForPending,
     env
   });
-
   // @ts-ignore
   const index = data.repository.deployments.edges.findIndex((edge: latestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref));
   
