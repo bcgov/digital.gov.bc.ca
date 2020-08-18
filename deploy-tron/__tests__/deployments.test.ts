@@ -13,7 +13,7 @@ describe('Deployment Helpers', () => {
   test('isTherePendingDeploymentForEnvironment returns true when there is a pending deployent', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
-    github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPending))
+    github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPending));
     const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar')
     expect(isPending).toBe(true);
   });
@@ -21,7 +21,7 @@ describe('Deployment Helpers', () => {
   test('isTherePendingDeploymentForEnvironment returns false when there is a pending deployent and ref is the same', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     
-    github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPendingWithSameRef))
+    github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPendingWithSameRef));
     const isPending = await isTherePendingDeploymentForEnvironment(context, deploymentStatusesPendingWithSameRef.repository.deployments.edges[0].node.ref.name, 'development', 'bar', 'owner');
     expect(isPending).toBe(false);
   });
@@ -29,7 +29,7 @@ describe('Deployment Helpers', () => {
   test('isTherePendingDeploymentForEnvironment returns false when there is a non pending deployent', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     
-    github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesSuccess))
+    github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesSuccess));
     const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar')
     expect(isPending).toBe(false);
   });
@@ -37,7 +37,7 @@ describe('Deployment Helpers', () => {
   test('getLatestEnvironmentStatusesForRef returns statuses grouped by env', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
-    github.repos.listDeployments.mockReturnValue(Promise.resolve({data: deploymentsForRef}))
+    github.repos.listDeployments.mockReturnValue(Promise.resolve({data: deploymentsForRef}));
     github.repos.listDeploymentStatuses.mockReturnValue(Promise.resolve({data: deploymentStatusForDeployment}))
 
     const statuses = await getLatestEnvironmentStatusesForRef(context, 'foo', 'bar', 'baz');
@@ -52,7 +52,7 @@ describe('Deployment Helpers', () => {
   test('isEnvironmentAllowedToDeploy returns true when required env are met', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    const environments = config.requiredEnvironments['prod']
+    const environments = config.requiredEnvironments['prod'];
     const statuses = { 
       production: { state: 'success' },
       staging: { state: 'success' },
