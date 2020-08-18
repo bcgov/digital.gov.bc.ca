@@ -99,19 +99,19 @@ const DigitalFramework = () => {
         reserves the flexibility to learn and adapt as we go."
       />
       <div className="digitalBody">
-        <div className="contentBlock">
+        <div className="digitalSection">
           <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
           <div className="someLinks">
             <ul>
@@ -167,7 +167,7 @@ const DigitalFramework = () => {
             </ul>
           </div>
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <ScrollElement name="blockOne" className="element" />
           <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
           <div style={{ marginTop: '-20px' }}>
@@ -188,7 +188,7 @@ const DigitalFramework = () => {
             objectives={objectives[0]}
           />
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <ScrollElement name="blockTwo" className="element" />
           <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
           <DigitalTable
@@ -196,7 +196,7 @@ const DigitalFramework = () => {
             objectives={objectives[1]}
           />
         </div>
-        <div className="contentBlock">
+        <div className="digitalSection">
           <ScrollElement name="blockThree" className="element" />
           <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
           <DigitalTable

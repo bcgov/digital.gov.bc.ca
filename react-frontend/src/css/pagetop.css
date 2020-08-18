@@ -29,7 +29,7 @@
 .pageText {
     margin: auto;
     text-align: center;
-    width: 85%;
+    width: 975px;
     margin: auto;
     padding-top: 10px;
 }
@@ -89,6 +89,7 @@
     .pageTop {
         height: 520px;
         margin-bottom: 60px;
+        margin-top: -50px;
     }
 
     .titleShrink {

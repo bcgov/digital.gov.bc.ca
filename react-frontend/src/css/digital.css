@@ -9,7 +9,7 @@
 }
 
 .digitalBody {
-    width: 1124px;
+    width: 960px;
     margin: auto;
 }
 
@@ -28,13 +28,13 @@
 
 .digitalParagraph {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    line-height: 16pt;
+    font-size: 16px;
+    line-height: 24px;
     position: relative;
 }
 
 .digitalSection {
-    padding-bottom: 120px;
+    padding-bottom: 60px;
 }
 
 .digitalTable {
