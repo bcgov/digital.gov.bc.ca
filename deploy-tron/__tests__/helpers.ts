@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 //
 // Copyright © 2020 Province of British Columbia
 //
@@ -81,9 +82,10 @@ export const github = {
  * @return {Object}
  */
 export const replaceCommentBodyWithCommand = (
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   commentEvent: any,
   command: string,
-) => {
+): any => {
   const fullCommand = `${config.botCommand} ${command}`;
 
   return {

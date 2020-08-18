@@ -8,6 +8,7 @@ import { deploy } from './handlers/deploy';
 import { knockknock } from './handlers/knockknock';
 import { help } from './handlers/help';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const handlePrComment = async (context: Context): Promise<any> => {
   const commentBody = context.payload.comment.body;
   const commenterCanAction = await isCommenterAllowedToAction(context);

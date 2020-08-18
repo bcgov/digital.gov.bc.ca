@@ -1,7 +1,7 @@
 import { Application } from 'probot'; // eslint-disable-line no-unused-vars
 import { handlePrComment } from './handlers';
 
-export = (app: Application) => {
+export = (app: Application): void => {
 
   app.on('issue_comment.created', handlePrComment);
   // For more information on building apps:

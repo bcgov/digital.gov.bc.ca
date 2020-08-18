@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {  Context } from 'probot';
 import { pullRequestComment } from '../__fixtures__/pull_request_comment';
 import { github } from './helpers';
