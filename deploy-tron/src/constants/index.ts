@@ -24,6 +24,7 @@ export const BASE_CONFIG = {
   maxDeploymentsToLookupForPending: 10,
   validGithubRoles: ["maintain", "admin", "write"],
   environmentsThatAllowConcurrentDeploys: [],
+  botCommand: '/deploy-tron'
 }
 
 export const CONFIG = {
