@@ -49,6 +49,10 @@
     margin-top: 5px;
 }
 
+.tableSpacer {
+    padding-top: 60px;
+}
+
 .digitalTitle {
     font-size: 22pt;
     font-weight: bold;
