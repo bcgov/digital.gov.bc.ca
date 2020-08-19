@@ -3,6 +3,7 @@ import { MESSAGES } from '../constants/messages';
 import { ENVIRONMENTS } from '../constants';
 import { LATEST_STATUS_QL_QUERY } from '../constants/queries';
 import { CONFIG as config } from '../constants';;
+import type { latestStatus, deploymentStatusGroup, deploymentGroup, deployment } from '../constants/types';
 
 export const createDeployment = (
   context: Context,
@@ -38,14 +39,7 @@ export const createDeployment = (
 };
 
 
-interface latestStatus {
-  node: {
-    latestStatus: string
-    ref: {
-      name: string
-    }
-  }
-}
+
 
 /**
  * checks to see if there are already pending deployments to this enviornment that are not the current ref
@@ -73,20 +67,6 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
   return index !== -1;
 }
 
-
-interface deployment {
-  id: string|number;
-  environment: string;
-}
-
-interface deploymentStatusGroup {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-}
-interface deploymentGroup {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: string, repo: string, owner:string): Promise<any> => {
