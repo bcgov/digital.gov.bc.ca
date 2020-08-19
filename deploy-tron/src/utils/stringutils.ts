@@ -1,10 +1,6 @@
-import config from '../config/index.json';
+import { CONFIG as config } from '../constants';
 import { COMMANDS, DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
-
-export interface parsedDeployCommand {
-  microservice: string;
-  environment: string;
-}
+import type { parsedDeployCommand } from '../constants/types';
 
 /**
  * returns the command from the comment
@@ -44,12 +40,10 @@ export const extractDeployCommandValues = (
   };
 };
 
-interface synonyms {
-  [any: string]: string
-}
+
 
 export const getEnvFromSynonym = (env: string): string => {
-  const synonyms: synonyms = { ...DEFAULT_SYNONYMS,  ...ENVIRONMENTS, ...config.environmentSynonyms };
+  const synonyms: { [any: string]: string} = { ...DEFAULT_SYNONYMS,  ...ENVIRONMENTS, ...config.environmentSynonyms };
 
   return synonyms[env];
 }

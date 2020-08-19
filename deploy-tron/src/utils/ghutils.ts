@@ -1,5 +1,5 @@
 import { Context } from 'probot';
-import config from '../config/index.json';
+import { CONFIG as config } from '../constants';;
 
 interface repoOwner {
   repo: string;

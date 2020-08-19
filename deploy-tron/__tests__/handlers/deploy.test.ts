@@ -26,7 +26,7 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
   });
 
   
-  test.skip('When I ask to deploy to dev but the deployment command is malformed, it does not create the deployment', async () => {
+  test('When I ask to deploy to dev but the deployment command is malformed, it does not create the deployment', async () => {
     const prComment = replaceCommentBodyWithCommand(pullRequestComment, 'deploy invalidservice to prod');
     const {
       issue: {
@@ -47,7 +47,7 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
     expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
   });
 
-  test.skip('When I ask to deploy but there is already a pending deployment to that environment it does not create the deployment', async () => {
+  test('When I ask to deploy but there is already a pending deployment to that environment it does not create the deployment', async () => {
     const prComment = replaceCommentBodyWithCommand(pullRequestComment, 'deploy postgres to test');
     const {
       issue: {
@@ -108,9 +108,7 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
       .get(statusesRegExp)
       .reply(201, deploymentStatusForDeploymentWhereAllSuccessful)
       .post(`/repos/${owner}/${repo}/deployments`)
-      .reply(200, deploymentsForRef[0])
-      .post(`/repos/${owner}/${repo}/deployments/${deploymentsForRef[0].id}/statuses`)
-      .reply(200)
+      .reply(200, deploymentsForRef[0]);
 
     await probot.receive(prComment)
 

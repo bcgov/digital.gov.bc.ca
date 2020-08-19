@@ -1,3 +1,5 @@
+import config from '../config/index.json';
+
 export const COMMANDS = {
   help: 'help',
   deploy: 'deploy',
@@ -23,3 +25,8 @@ export const BASE_CONFIG = {
   validGithubRoles: ["maintain", "admin", "write"],
   environmentsThatAllowConcurrentDeploys: [],
 }
+
+export const CONFIG = {
+  ...BASE_CONFIG,
+  ...config,
+};

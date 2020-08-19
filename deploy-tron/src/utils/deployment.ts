@@ -2,7 +2,7 @@ import { Context } from 'probot';
 import { MESSAGES } from '../constants/messages';
 import { ENVIRONMENTS } from '../constants';
 import { LATEST_STATUS_QL_QUERY } from '../constants/queries';
-import config from '../config/index.json';
+import { CONFIG as config } from '../constants';;
 
 export const createDeployment = (
   context: Context,
@@ -108,8 +108,8 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
   const latestStatuses = Object.keys(groupedDeployments).map(async (env: string) => {
     return {env, status: await context.github.repos.listDeploymentStatuses({repo, owner, deployment_id: groupedDeployments[env].id, per_page: 1})};
   }, {});
-
   const resolvedStatuses = await Promise.all(latestStatuses);
+
   // organize statuses against grouped environments
   return  resolvedStatuses.reduce((groupedStatuses: deploymentGroup, state) => {
     // if there is not pending deployment status ie status.data === [] sub in a pending status
@@ -127,6 +127,6 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
  */
 export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], deploymentStatuses: deploymentStatusGroup): boolean => {
   if(!requiredEnvironments || requiredEnvironments.length === 0) return true;
-  console.log(deploymentStatuses);
-  return requiredEnvironments.every((env:string) => deploymentStatuses[env].state === 'success' );
+
+  return requiredEnvironments.every(env => deploymentStatuses[env].state === 'success' );
 }

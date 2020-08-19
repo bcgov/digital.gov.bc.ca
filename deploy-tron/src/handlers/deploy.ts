@@ -3,7 +3,7 @@ import { extractDeployCommandValues, getEnvFromSynonym } from '../utils/stringut
 import { getRepoAndOwnerFromContext, getHeadRefFromPr, createComment } from '../utils/ghutils';
 import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef, isEnvironmentAllowedToDeploy } from '../utils/deployment';
 import { MESSAGES } from '../constants/messages';
-import config from '../config/index.json';
+import { CONFIG as config } from '../constants';
 
 export const deploy = async (context: Context): Promise<void> => {
   const commentBody = context.payload.comment.body;
