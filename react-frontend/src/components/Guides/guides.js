@@ -27,7 +27,7 @@ const GuidesPage = () => {
                           title={guide.Title}
                           description={guide.Summary}
                           linkText={'Explore'}
-                          linkPath={`guides/${guide.UID}`}
+                          routePath={`guides/${guide.UID}`}
                           height="300px"
                         />
                       </Col>

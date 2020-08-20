@@ -1,7 +1,7 @@
 import React from 'react';
 import Query from '../Query';
 import { Col, Row, Grid } from 'react-flexbox-grid';
-
+import ReactMarkdown from 'react-markdown';
 import InfoCard from '../Home/infocard';
 import SimpleBanner from '../SimpleBanner/simpleBanner';
 import GUIDE_QUERY from '../../queries/guide/guide';
@@ -23,7 +23,7 @@ const GuidePage = ({ UID }) => {
               return (
                 <div>
                   <h1>{guides[0].Title}</h1>
-                  <h3>This is a test page </h3>
+                  <ReactMarkdown source={guides[0].Content} />
                 </div>
               );
             }}
