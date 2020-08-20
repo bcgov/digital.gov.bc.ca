@@ -43,6 +43,12 @@ objects:
                 ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: Always
               name: ${NAME}-${SUFFIX}
+              env:
+                - name: STRAPI_URI
+                  valueFrom:
+                    secretKeyRef:
+                      name: ${STRAPI_SECRET_NAME} 
+                      key: ${STRAPI_SECRET_URL_KEY_REF}
               resources: 
                 requests:
                   memory: ${MEMORY_REQUEST}
@@ -175,6 +181,11 @@ parameters:
   displayName: name
   description: the name for the dc and container
   value: digital-gov-frontend
+- name: STRAPI_SECRET_URL_KEY_REF
+  required: true
+  displayName: Strapi Secret Key Reference 
+  description: The key that is used as the reference for the strapi url
+  value: strapi-url
 - name: CPU_REQUEST
   value: 50m 
 - name: MEMORY_REQUEST
