@@ -45,12 +45,7 @@ objects:
               name: ${NAME}-${SUFFIX}
               env:
                 - name: REACT_APP_STRAPI_BACKEND_URL
-                  valueFrom:
-                    secretKeyRef:
-                      name: STRAPI_SERVICE_EXPERIMENT 
-                      key: strapi-${SUFFIX}
-                - name: REACT_APP_STRAPI_BACKEND_URL
-                  value: strapi-${SUFFIX}
+                  value: strapi2-${SUFFIX}
               resources: 
                 requests:
                   memory: ${MEMORY_REQUEST}
