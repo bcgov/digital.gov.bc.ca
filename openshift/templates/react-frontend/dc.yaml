@@ -44,11 +44,8 @@ objects:
               imagePullPolicy: Always
               name: ${NAME}-${SUFFIX}
               env:
-                - name: STRAPI_URI
-                  valueFrom:
-                    secretKeyRef:
-                      name: ${STRAPI_SECRET_NAME} 
-                      key: ${STRAPI_SECRET_URL_KEY_REF}
+                - name: REACT_APP_STRAPI_BACKEND_URL
+                  value: strapi-pr-235
               resources: 
                 requests:
                   memory: ${MEMORY_REQUEST}
@@ -181,15 +178,6 @@ parameters:
   displayName: name
   description: the name for the dc and container
   value: digital-gov-frontend
-- name: STRAPI_SECRET_NAME
-  required: true
-  displayName: Strapi Secret Name
-  description: RENAME Based on mongo
-- name: STRAPI_SECRET_URL_KEY_REF
-  required: true
-  displayName: Strapi Secret Key Reference 
-  description: The key that is used as the reference for the strapi url
-  value: strapi-url
 - name: CPU_REQUEST
   value: 50m 
 - name: MEMORY_REQUEST
