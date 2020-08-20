@@ -39,8 +39,7 @@ objects:
                 name: caddyfile-${SUFFIX}
               name: caddyfile-volume
           containers:
-            - image: >-
-                ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
+            - image: ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: Always
               name: ${NAME}-${SUFFIX}
               env:
@@ -183,8 +182,8 @@ parameters:
   value: digital-gov-frontend
 - name: STRAPI_SECRET_NAME
   required: true
-  displayName: Database Secret Name
-  description: RENAMEThe secret name that is uses in the valueFrom in spec.template.spec.containers.env
+  displayName: Strapi Secret Name
+  description: RENAME Based on mongo
 - name: STRAPI_SECRET_URL_KEY_REF
   required: true
   displayName: Strapi Secret Key Reference 
