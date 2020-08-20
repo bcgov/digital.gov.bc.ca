@@ -39,7 +39,8 @@ objects:
                 name: caddyfile-${SUFFIX}
               name: caddyfile-volume
           containers:
-            - image: ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
+            - image: >-
+                ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: Always
               name: ${NAME}-${SUFFIX}
               env:
