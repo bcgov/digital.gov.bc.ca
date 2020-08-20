@@ -45,7 +45,7 @@ objects:
               name: ${NAME}-${SUFFIX}
               env:
                 - name: REACT_APP_STRAPI_BACKEND_URL
-                  value: strapi-pr-235
+                  value: strapi-pr-234
               resources: 
                 requests:
                   memory: ${MEMORY_REQUEST}
