@@ -3,10 +3,10 @@ import Handlebars from 'handlebars';
 import { readFileSync } from 'fs';
 import path from 'path';
 import { extractPrsThatArePendingForComment, getRepoAndOwnerFromContext, createComment } from './ghutils';
-import {  deploymentStatus } from '../constants/types';
+import {  DeploymentStatus } from '../constants/types';
 import { CONFIG } from '../constants';
 
-export const pendingDeploymentsExistMessage = (context: Context, deployments: deploymentStatus[]): Promise<unknown> => {
+export const pendingDeploymentsExistMessage = (context: Context, deployments: DeploymentStatus[]): Promise<unknown> => {
   const pullRequests = extractPrsThatArePendingForComment(deployments);
   const prStatusContent = readFileSync(path.join(__dirname, '../../content/prStatus.md.handlebars')).toString();
   const cannotDeployContent = readFileSync(path.join(__dirname, '../../content/cannotDeploy.md.handlebars')).toString();
@@ -35,7 +35,6 @@ export const dependantDeploymentsMessage = (context: Context, environment: strin
   const template = Handlebars.compile(buffer.toString());
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  console.log('ENVI', environment, CONFIG.requiredEnvironments[environment]);
   return createComment(context, template({environment, requiredEnvironments: CONFIG.requiredEnvironments[environment] }))
 }
 

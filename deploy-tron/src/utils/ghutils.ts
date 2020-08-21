@@ -1,13 +1,13 @@
 import { Context } from 'probot';
 import { CONFIG as config } from '../constants';
-import {  prStatusMessage, deploymentStatus, repoOwner } from '../constants/types';
+import {  PrStatusMessage, DeploymentStatus, RepoOwner } from '../constants/types';
 
 /**
  * returns the repo and owner from the context
  * @param context
  * @returns {Object}
  */
-export const getRepoAndOwnerFromContext = (context: Context): repoOwner => {
+export const getRepoAndOwnerFromContext = (context: Context): RepoOwner => {
   const { repository } = context.payload;
   const {
     name: repo,
@@ -82,7 +82,7 @@ export const createComment = (context: Context, body: string): Promise<unknown> 
 }
 
 
-export const extractPrsThatArePendingForComment = (deployments: deploymentStatus[]): prStatusMessage[] => {
+export const extractPrsThatArePendingForComment = (deployments: DeploymentStatus[]): PrStatusMessage[] => {
   // group deployment by ref
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const prs = deployments.reduce((group: any, deployment) => {

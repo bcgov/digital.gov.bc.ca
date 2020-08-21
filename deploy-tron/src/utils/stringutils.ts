@@ -1,6 +1,6 @@
 import { CONFIG as config } from '../constants';
 import { COMMANDS, DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
-import type { parsedDeployCommand, prStatusMessage } from '../constants/types';
+import type { ParsedDeployCommand, PrStatusMessage } from '../constants/types';
 import { getRepoAndOwnerFromContext } from './ghutils';
 import { Context } from 'probot';
 
@@ -23,7 +23,7 @@ export const isCommandValid = (command: string): boolean =>
  */
 export const extractDeployCommandValues = (
   command: string,
-): parsedDeployCommand | null => {
+): ParsedDeployCommand | null => {
   const cmd = command.trim();
   const microServicesString = config.microservices.join('|');
   const environmentsString = config.environments.concat(Object.keys(config.environmentSynonyms)).join('|');
@@ -52,7 +52,7 @@ export const getEnvFromSynonym = (env: string): string => {
 
 
 
-export const formlatestStatusTable = (context: Context, statuses: prStatusMessage[]): string => {
+export const formlatestStatusTable = (context: Context, statuses: PrStatusMessage[]): string => {
   const { repo, owner } = getRepoAndOwnerFromContext(context)
   const head = `
   | pr   | state | branch |

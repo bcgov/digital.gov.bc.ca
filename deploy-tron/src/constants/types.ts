@@ -5,12 +5,12 @@ export type synonyms = {
   [any: string]: ENVIRONMENTS
 }
 
-export interface parsedDeployCommand {
+export interface ParsedDeployCommand {
   microservice: string;
   environment: string;
 }
 
-export interface latestStatus {
+export interface LatestStatus {
   node: {
     latestStatus: string
     ref: {
@@ -19,22 +19,22 @@ export interface latestStatus {
   }
 }
 
-export interface deployment {
+export interface Deployment {
   id: string|number;
   environment: string;
 }
 
-export interface deploymentStatusGroup {
+export interface DeploymentStatusGroup {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
-export interface deploymentGroup {
+export interface DeploymentGroup {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
 
-export interface deploymentStatus {
+export interface DeploymentStatus {
   node: {
     payload: string
     latestStatus: {
@@ -48,13 +48,13 @@ export interface deploymentStatus {
   }
 }
 
-export interface prStatusMessage {
+export interface PrStatusMessage {
   state: string
   pr: number
   branch: string
 }
 
-export interface repoOwner {
+export interface RepoOwner {
   repo: string;
   owner: string;
 }
