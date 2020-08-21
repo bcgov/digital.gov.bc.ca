@@ -18,7 +18,7 @@ module.exports = {
   plugins: [ 'jest', 'prettier'],
   rules: {
     'semi': 'error',
-    'eol-last': 'error'
-
+    'eol-last': 'error',
+    'object-shorthand': 'error'
   },
 };

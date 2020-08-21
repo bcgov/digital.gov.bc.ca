@@ -109,7 +109,7 @@ export const extractPrsThatArePendingForComment = (deployments: DeploymentStatus
   return Object.keys(prs).map(branch => {
     return ({
       pr: prs[branch].payload.pr,
-      branch: branch,
+      branch,
       state: prs[branch].latestStatus !== null ? prs[branch].latestStatus.state : 'no status found'
     });
   });
