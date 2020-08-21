@@ -1,11 +1,7 @@
 import { Context } from 'probot';
 import { CONFIG as config } from '../constants';
-import {  prStatusMessage, deploymentStatus } from '../constants/types';
+import {  prStatusMessage, deploymentStatus, repoOwner } from '../constants/types';
 
-interface repoOwner {
-  repo: string;
-  owner: string;
-}
 /**
  * returns the repo and owner from the context
  * @param context
@@ -92,11 +88,10 @@ export const extractPrsThatArePendingForComment = (deployments: deploymentStatus
   const prs = deployments.reduce((group: any, deployment) => {
     const branch = deployment.node.ref.name;
     if(!group[branch]) {
-      // for some reason the graphql api returns the json string with way more \ then is needed. This regex
-      // cleans that up to a valid json string
       let payload;
       try {
-        // for a VERY VERY odd reason this is the only way this works
+        // for some reason the graphql api returns the json string with way more \ then is needed
+        // VERY VERY wierd but this is the only way this works
         payload = JSON.parse(JSON.parse(JSON.parse(deployment.node.payload)));
       } catch (e) {
         payload = {

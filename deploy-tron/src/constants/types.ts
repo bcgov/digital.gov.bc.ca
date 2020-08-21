@@ -53,3 +53,8 @@ export interface prStatusMessage {
   pr: number
   branch: string
 }
+
+export interface repoOwner {
+  repo: string;
+  owner: string;
+}
