@@ -32,17 +32,17 @@ export const deploy = async (context: Context): Promise<void> => {
 
   if(pendingDeploymentsExist && !allowsMultipleDeploysToEnv) {
     await pendingDeploymentsExistMessage(context, pendingDeployments);
-    return 
+    return; 
   }
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const requiredEnvironments = config.requiredEnvironments[environment]
+  const requiredEnvironments = config.requiredEnvironments[environment];
   const canDeploy = isEnvironmentAllowedToDeploy(requiredEnvironments, deploymentStatuses);
     
   if(!canDeploy) {
     await dependantDeploymentsMessage(context, environment);
-    return 
+    return; 
   }
   // check if previous deployments in train have completed
   const response = await createDeployment(

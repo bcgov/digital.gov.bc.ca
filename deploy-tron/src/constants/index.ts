@@ -25,7 +25,7 @@ export const BASE_CONFIG = {
   validGithubRoles: ["maintain", "admin", "write"],
   environmentsThatAllowConcurrentDeploys: [],
   botCommand: '/deploy-tron'
-}
+};
 
 export const CONFIG = {
   ...BASE_CONFIG,

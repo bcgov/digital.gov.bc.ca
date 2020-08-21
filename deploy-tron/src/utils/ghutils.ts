@@ -26,7 +26,7 @@ export const getHeadRefFromPr = async (context: Context): Promise<string> => {
   });
 
   return res.data.head.ref;
-}
+};
 /**
  * checks if commenter can perform action
  * @param context
@@ -79,7 +79,7 @@ export const isBotCommand = (context: Context, botCommand: string): boolean => {
 export const createComment = (context: Context, body: string): Promise<unknown> => {
   const params = context.issue({ body });
   return context.github.issues.createComment(params);
-}
+};
 
 
 export const extractPrsThatArePendingForComment = (deployments: DeploymentStatus[]): PrStatusMessage[] => {
@@ -96,7 +96,7 @@ export const extractPrsThatArePendingForComment = (deployments: DeploymentStatus
       } catch (e) {
         payload = {
           pr: null,
-        }
+        };
       }
       group[branch] = {
         ...deployment.node, 
@@ -111,8 +111,8 @@ export const extractPrsThatArePendingForComment = (deployments: DeploymentStatus
       pr: prs[branch].payload.pr,
       branch: branch,
       state: prs[branch].latestStatus !== null ? prs[branch].latestStatus.state : 'no status found'
-    })
+    });
   });
-}
+};
 
 

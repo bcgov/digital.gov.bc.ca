@@ -13,7 +13,7 @@ export const deploymentStatusesPending = {
       ]
     }
   }
-}
+};
 
 export const deploymentStatusesPendingWithSameRef = {
   "repository": {
@@ -30,7 +30,7 @@ export const deploymentStatusesPendingWithSameRef = {
       ]
     }
   }
-}
+};
 
 export const deploymentStatusesSuccess = {
   "repository": {
@@ -47,7 +47,7 @@ export const deploymentStatusesSuccess = {
       ]
     }
   }
-}
+};
 
 export const deploymentsForRef = [
   {
@@ -124,7 +124,7 @@ export const deploymentsForRef = [
     "repository_url": "https://api.github.com/repos/patricksimonian/strapi-demo",
     "performed_via_github_app": null
   }
-]
+];
 
 export const deploymentStatusForDeploymentWhereAllSuccessful = [
   {
@@ -195,7 +195,7 @@ export const deploymentStatusForDeploymentWhereAllSuccessful = [
     "repository_url": "https://api.github.com/repos/bcgov/devhub-app-web",
     "performed_via_github_app": null
   }
-]
+];
 
 export const deploymentStatusForDeployment = [
   {
@@ -266,4 +266,4 @@ export const deploymentStatusForDeployment = [
     "repository_url": "https://api.github.com/repos/bcgov/devhub-app-web",
     "performed_via_github_app": null
   }
-]
+];

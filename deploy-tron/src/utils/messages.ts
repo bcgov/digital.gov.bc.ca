@@ -17,7 +17,7 @@ export const pendingDeploymentsExistMessage = (context: Context, deployments: De
   const template = Handlebars.compile(cannotDeployContent);
 
   return createComment(context, template({ repo, owner, pullRequests }));
-}
+};
 
 export const helpMessage = (context: Context): Promise<unknown> => {
   const buffer = readFileSync(path.join(__dirname, '../../content/help.md.handlebars'));
@@ -28,15 +28,15 @@ export const helpMessage = (context: Context): Promise<unknown> => {
     microserviceExample: CONFIG.microservices[0],
     environmentExample: Object.keys(CONFIG.environmentSynonyms)[0],
   }));
-}
+};
 
 export const dependantDeploymentsMessage = (context: Context, environment: string): Promise<unknown> => {
   const buffer = readFileSync(path.join(__dirname, '../../content/requiredEnvironments.md.handlebars'));
   const template = Handlebars.compile(buffer.toString());
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  return createComment(context, template({environment, requiredEnvironments: CONFIG.requiredEnvironments[environment] }))
-}
+  return createComment(context, template({environment, requiredEnvironments: CONFIG.requiredEnvironments[environment] }));
+};
 
 export const deploymentCreatedMessage = (context: Context, deployment: any): Promise<unknown> => {
   const buffer = readFileSync(path.join(__dirname, '../../content/deploymentCreated.md.handlebars'));
@@ -44,5 +44,5 @@ export const deploymentCreatedMessage = (context: Context, deployment: any): Pro
   const {environment, id, payload} = deployment;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  return createComment(context, template({ environment, id, payload }))
-}
+  return createComment(context, template({ environment, id, payload }));
+};

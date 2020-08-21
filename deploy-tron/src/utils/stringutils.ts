@@ -48,12 +48,12 @@ export const getEnvFromSynonym = (env: string): string => {
   const synonyms: { [any: string]: string} = { ...DEFAULT_SYNONYMS,  ...ENVIRONMENTS, ...config.environmentSynonyms };
 
   return synonyms[env];
-}
+};
 
 
 
 export const formlatestStatusTable = (context: Context, statuses: PrStatusMessage[]): string => {
-  const { repo, owner } = getRepoAndOwnerFromContext(context)
+  const { repo, owner } = getRepoAndOwnerFromContext(context);
   const head = `
   | pr   | state | branch |
   | ---- | ----  | ---- |`;
@@ -62,4 +62,4 @@ export const formlatestStatusTable = (context: Context, statuses: PrStatusMessag
     | [#${status.pr}](https://github.com/${owner}/${repo}/pull/${status.pr}) | ${status.state} | ${status.branch} |
     `).join('\n');
   return head.concat(body);
-}
+};

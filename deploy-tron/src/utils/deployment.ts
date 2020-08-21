@@ -35,7 +35,7 @@ export const createDeployment = (
     headers: {
       'Accept': 'application/vnd.github.ant-man-preview+json',
     }
-  })
+  });
 };
 
 
@@ -64,7 +64,7 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   return data.repository.deployments.edges.filter((edge: LatestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref || edge.node.latestStatus === null && edge.node.ref.name !== ref));
-}
+};
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -93,9 +93,9 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
   return  resolvedStatuses.reduce((groupedStatuses: DeploymentGroup, state) => {
     // if there is not pending deployment status ie status.data === [] sub in a pending status
     groupedStatuses[state.env] = state.status.data[0] || { state: 'pending'};
-    return groupedStatuses
+    return groupedStatuses;
   }, {});
-}
+};
 
 /**
  * some environments require that previous environments in the train deployed succesffuly
@@ -108,4 +108,4 @@ export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], dep
   if(!requiredEnvironments || requiredEnvironments.length === 0) return true;
 
   return requiredEnvironments.every(env => deploymentStatuses[env].state === 'success' );
-}
+};

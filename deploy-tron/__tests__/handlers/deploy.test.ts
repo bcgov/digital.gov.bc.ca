@@ -16,13 +16,13 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
       id: 1,
       githubToken: 'test',
       Octokit,
-    })
-    probot.load(app)
+    });
+    probot.load(app);
   });
 
   afterEach(() => {
-    nock.cleanAll()
-    nock.enableNetConnect()
+    nock.cleanAll();
+    nock.enableNetConnect();
   });
 
   
@@ -39,12 +39,12 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
     .get(`/repos/${owner}/${repo}/collaborators/${user}/permission`)
     .reply(200, adminUser)
     .get(`/repos/${owner}/${repo}/deployments`)
-    .reply(201)
+    .reply(201);
     
     
-    await probot.receive(prComment)
+    await probot.receive(prComment);
     // the deployments api should have not been called
-    expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
+    expect(mock.activeMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`]);
   });
 
   test('When I ask to deploy but there is already a pending deployment to that environment it does not create the deployment', async () => {
@@ -76,9 +76,9 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
       .get(statusesRegExp)
       .reply(201, deploymentStatusForDeploymentWhereAllSuccessful);
 
-    await probot.receive(prComment)
+    await probot.receive(prComment);
     // the deployments api should have not been called
-    expect(mock.pendingMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`])
+    expect(mock.pendingMocks()).toStrictEqual([`GET https://api.github.com:443/repos/${owner}/${repo}/deployments`]);
   });
   
   test('It can create a deployment', async () => {
@@ -110,8 +110,8 @@ describe('As a user I can ask the bot to deploy my microservice', () => {
       .post(`/repos/${owner}/${repo}/deployments`)
       .reply(200, deploymentsForRef[0]);
 
-    await probot.receive(prComment)
+    await probot.receive(prComment);
 
     expect(mock.pendingMocks()).toEqual([]);
-  })
+  });
 });
