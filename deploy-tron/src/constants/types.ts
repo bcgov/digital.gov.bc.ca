@@ -32,3 +32,24 @@ export interface deploymentGroup {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
+
+
+export interface deploymentStatus {
+  node: {
+    payload: string
+    latestStatus: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      state: string
+    } | string 
+    ref: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      name: string
+    }
+  }
+}
+
+export interface prStatusMessage {
+  state: string
+  pr: number
+  branch: string
+}

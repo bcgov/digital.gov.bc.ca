@@ -1,6 +1,6 @@
 import { Context } from 'probot';
 import { extractDeployCommandValues, getEnvFromSynonym } from '../utils/stringutils';
-import { getRepoAndOwnerFromContext, getHeadRefFromPr, createComment } from '../utils/ghutils';
+import { getRepoAndOwnerFromContext, getHeadRefFromPr, createComment, createPendingDeploymentsComment } from '../utils/ghutils';
 import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef, isEnvironmentAllowedToDeploy } from '../utils/deployment';
 import { MESSAGES } from '../constants/messages';
 import { CONFIG as config } from '../constants';
@@ -25,12 +25,15 @@ export const deploy = async (context: Context): Promise<void> => {
   // @ts-ignore
   const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys.findIndex(env => env === environment) > -1;
   
-  const pendingDeploymentsExist = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
+  const pendingDeployments = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
+  const pendingDeploymentsExist = pendingDeployments.length > 0;
   const deploymentStatuses = await getLatestEnvironmentStatusesForRef(context, ref, repo, owner);
 
   if(pendingDeploymentsExist && !allowsMultipleDeploysToEnv) {
-    await createComment(context, 'There is already a pending deployment to this environment, unable to deploy until that one completes');
-    return;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    return createPendingDeploymentsComment(context, pendingDeployments);
+    
   }
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

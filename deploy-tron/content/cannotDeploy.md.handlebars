@@ -1,0 +1,15 @@
+{{!-- 
+  variables
+  pullRequests {
+    pr: number
+    state: string
+    branch: string
+  }[]
+  repo: string
+  owner: string
+ --}}
+## Uhoh :( I can't compute
+
+There {{#if pullRequests.length > 0 }}are{{#else}}is{{/if}} other pr{{#if pullRequests.length > 0 }}s{{/if}} that are currently deploying to this environment 
+
+{{> prStatus }}

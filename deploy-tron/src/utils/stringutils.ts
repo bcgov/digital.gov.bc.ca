@@ -1,6 +1,8 @@
 import { CONFIG as config } from '../constants';
 import { COMMANDS, DEFAULT_SYNONYMS, ENVIRONMENTS } from '../constants';
-import type { parsedDeployCommand } from '../constants/types';
+import type { parsedDeployCommand, prStatusMessage } from '../constants/types';
+import { getRepoAndOwnerFromContext } from './ghutils';
+import { Context } from 'probot';
 
 /**
  * returns the command from the comment
@@ -46,4 +48,18 @@ export const getEnvFromSynonym = (env: string): string => {
   const synonyms: { [any: string]: string} = { ...DEFAULT_SYNONYMS,  ...ENVIRONMENTS, ...config.environmentSynonyms };
 
   return synonyms[env];
+}
+
+
+
+export const formlatestStatusTable = (context: Context, statuses: prStatusMessage[]): string => {
+  const { repo, owner } = getRepoAndOwnerFromContext(context)
+  const head = `
+  | pr   | state | branch |
+  | ---- | ----  | ---- |`;
+  const body = 
+    statuses.map(status => `
+    | [#${status.pr}](https://github.com/${owner}/${repo}/pull/${status.pr}) | ${status.state} | ${status.branch} |
+    `).join('\n');
+  return head.concat(body);
 }

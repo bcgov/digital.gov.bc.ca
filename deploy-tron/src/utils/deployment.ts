@@ -3,7 +3,7 @@ import { MESSAGES } from '../constants/messages';
 import { ENVIRONMENTS } from '../constants';
 import { LATEST_STATUS_QL_QUERY } from '../constants/queries';
 import { CONFIG as config } from '../constants';;
-import type { latestStatus, deploymentStatusGroup, deploymentGroup, deployment } from '../constants/types';
+import type { latestStatus, deploymentStatusGroup, deploymentGroup, deployment, deploymentStatus } from '../constants/types';
 
 export const createDeployment = (
   context: Context,
@@ -51,7 +51,8 @@ export const createDeployment = (
  * @param repo 
  * @param owner 
  */
-export const isTherePendingDeploymentForEnvironment = async (context: Context, ref: string, env: string, repo: string, owner: string): Promise<boolean> => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const isTherePendingDeploymentForEnvironment = async (context: Context, ref: string, env: string, repo: string, owner: string): Promise<deploymentStatus[]> => {
 
   const data = await context.github.graphql(LATEST_STATUS_QL_QUERY,
   {
@@ -62,9 +63,7 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
   });
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
-  const index = data.repository.deployments.edges.findIndex((edge: latestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref));
-  
-  return index !== -1;
+  return data.repository.deployments.edges.filter((edge: latestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref || edge.node.latestStatus === null && edge.node.ref.name !== ref));
 }
 
 

@@ -1,6 +1,6 @@
 {
   "validGithubRoles": ["maintain", "admin", "write"],
-  "botCommand": "/deploy-tron",
+  "botCommand": "@deploy-mon",
   "microservices": ["react", "strapi"],
   "environmentSynonyms": {
     "prod": "production",
@@ -12,7 +12,7 @@
     "staging": ["development"],
     "production": ["development", "staging"]
   },
-  "environmentsThatAllowConcurrentDeploys": ["development"],
+  "environmentsThatAllowConcurrentDeploys": [],
   "environments": ["production", "staging", "development"],
   "requiredContexts": {
     "development": [],
