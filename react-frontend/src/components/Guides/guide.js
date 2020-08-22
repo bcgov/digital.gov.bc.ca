@@ -9,6 +9,7 @@ import {
   SimpleTextContainer,
   GlobaStyleSize,
 } from '../StyleComponents/pageContent';
+import { MarkdownStyles } from '../StyleComponents/styledMarkdown';
 
 const GuidePage = ({ UID }) => {
   const params = useParams();
@@ -28,7 +29,9 @@ const GuidePage = ({ UID }) => {
                 return (
                   <div>
                     <h1>{guides[0].Title}</h1>
-                    <ReactMarkdown source={guides[0].Content} />
+                    <MarkdownStyles>
+                      <ReactMarkdown source={guides[0].Content} />
+                    </MarkdownStyles>
                   </div>
                 );
               }}
