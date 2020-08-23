@@ -54,8 +54,8 @@ export const architectureMessage = (context: Context): Promise<unknown> => {
 
   return createComment(context, template({
     botCommand: CONFIG.botCommand,
-    microserviceExample: CONFIG.microservices[0],
-    environmentExample: Object.keys(CONFIG.environmentSynonyms)[0],
+    microservice: CONFIG.microservices[0],
+    environment: Object.keys(CONFIG.environmentSynonyms)[0],
   }));
 };
 
