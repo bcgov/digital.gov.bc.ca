@@ -46,3 +46,31 @@ export const deploymentCreatedMessage = (context: Context, deployment: any): Pro
   // @ts-ignore
   return createComment(context, template({ environment, id, payload }));
 };
+
+
+export const architectureMessage = (context: Context): Promise<unknown> => {
+  const buffer = readFileSync(path.join(__dirname, '../../content/architecture.md.handlebars'));
+  const template = Handlebars.compile(buffer.toString());
+
+  return createComment(context, template({
+    botCommand: CONFIG.botCommand,
+    microserviceExample: CONFIG.microservices[0],
+    environmentExample: Object.keys(CONFIG.environmentSynonyms)[0],
+  }));
+};
+
+
+export const configurationMessage = (context: Context): Promise<unknown> => {
+  const buffer = readFileSync(path.join(__dirname, '../../content/configuration.md.handlebars'));
+  const template = Handlebars.compile(buffer.toString());
+
+  return createComment(context, template({}));
+};
+
+
+export const welcomeMessage = (context: Context): Promise<unknown> => {
+  const buffer = readFileSync(path.join(__dirname, '../../content/welcome.md.handlebars'));
+  const template = Handlebars.compile(buffer.toString());
+
+  return createComment(context, template({ botCommand: CONFIG.botCommand }));
+};
