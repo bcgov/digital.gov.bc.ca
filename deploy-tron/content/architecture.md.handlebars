@@ -56,9 +56,9 @@ as a `payload`. The payload contains information on.
 
 Now that you are able to create GH Deployments. You can integrate it into your CI/CD service.
 
-Most CI/CD services are able to pickup webhooks (or in the case of GithubActions) can directly interface with a 
-Github Deployment using the `on: deployment` event. Once you are able to pickup the __deployment events__ created by this bot. You can 
-parse the deployment webhook payload and look for and parse the JSON string `.payload` property inside of the webhook payload.
+Most CI/CD services are able to pickup the Github Deployment Created webhook (or in the case of GithubActions) can directly interface with a 
+Github Deployment using the `on: deployment` event. Once you are able to pickup the __deployment events__ created by this bot, you can 
+parse the deployment webhook payload and look for (and parse) the JSON string `.payload` property inside of the webhook payload.
 
 With that information parsed you have a lot of information to trigger your deployments as you wish :) 
 
