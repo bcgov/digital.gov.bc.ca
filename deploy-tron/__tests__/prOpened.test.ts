@@ -1,7 +1,7 @@
 import {  Probot, Octokit } from 'probot';
 import nock from 'nock';
-import { pullRequestEvent } from '../../__fixtures__/pull_request';
-import app from '../../src';
+import { pullRequestEvent } from '../__fixtures__/pull_request';
+import app from '../src';
 
 describe('As a user I can ask the bot to deploy my microservice', () => {
   let probot: Probot;

@@ -11,6 +11,7 @@ import { architecture } from './handlers/architecture';
 import { welcomeMessage } from './utils/messages';
 
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const handlePrOpened = async (context: Context): Promise<any> => {
 
   return welcomeMessage(context);
