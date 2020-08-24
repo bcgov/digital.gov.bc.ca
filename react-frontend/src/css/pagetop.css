@@ -39,6 +39,15 @@
     font-weight: bold;
 }
 
+.plainPageText {
+    margin: auto;
+    text-align: center;
+    width: 975px;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 110px;
+}
+
 .pageDescription p {
     font-size: 22px;
     position: relative;
