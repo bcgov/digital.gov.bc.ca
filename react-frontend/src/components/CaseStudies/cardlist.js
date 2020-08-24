@@ -18,7 +18,7 @@ const descriptions = [
 //
 
 const CardList = () => {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
   return (
     <div className="cardContainer">
       <div className="cardGrid">

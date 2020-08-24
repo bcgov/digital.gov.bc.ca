@@ -8,7 +8,7 @@ import '../../css/casestudies.css';
 import '../../css/global.css';
 
 const CaseStudies = () => {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   return (
     <div>
       <Switch>

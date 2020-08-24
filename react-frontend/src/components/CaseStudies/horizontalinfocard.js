@@ -26,7 +26,7 @@ const HorizontalInfoCard = (props) => {
           {props.routePath ? (
             <Link to={props.routePath}>{props.linkText}</Link>
           ) : (
-            <a href={props.linkPath} target="_blank">
+            <a href={props.linkPath} target="_blank" rel="noopener noreferrer">
               {props.linkText}
             </a>
           )}

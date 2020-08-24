@@ -11,6 +11,7 @@ const cards = [
         className="productCardLink"
         href="mailto: exchangelab@gov.bc.ca"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Exchange Lab
       </a>
@@ -24,6 +25,7 @@ const cards = [
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
         target="_blank"
+        rel="noopener noreferrer"
       >
         The Service Design team{' '}
       </a>
@@ -40,6 +42,7 @@ const cards = [
         className="productCardLink"
         href="https://procurementconcierge.gov.bc.ca/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Procurement Concierge.
       </a>
@@ -53,6 +56,7 @@ const cards = [
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/secure-cloud"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Cloud services.
       </a>
@@ -76,6 +80,7 @@ const Considering = () => {
           className="productCardLink"
           href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Agile
         </a>{' '}

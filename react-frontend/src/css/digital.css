@@ -19,6 +19,14 @@
     padding-top: 100px;
 }
 
+.digitalPageText {
+    margin: auto;
+    text-align: center;
+    width: 975px;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 110px;
+}
 .digitalLink {
     color: #0000EE;
     cursor: pointer;
@@ -121,6 +129,14 @@
         height: 200px;
         padding-top: 20px;
     }    
+
+    .digitalPageText {
+        padding-top: 140px;
+        padding-bottom: 80px;
+        width: 330px;
+        width: 84%;
+        margin-left: 8%;
+    }
 }
 
 @media only screen and (max-width: 400px) {

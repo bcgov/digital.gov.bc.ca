@@ -23,6 +23,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/bc-visual-identity?keyword=visual&keyword=identity"
                 >
                   B.C. Visual Identity Program (Gov Mark)
@@ -32,6 +33,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/cms-lite-manual"
                 >
                   CMS Lite User's Manual
@@ -41,6 +43,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/content-design?keyword=Content&keyword=Design&keyword=and&keyword=Writing&keyword=Group&keyword=%28CDAWG%29"
                 >
                   Content Design Guide
@@ -50,6 +53,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/web-style-guide"
                 >
                   Web Style Guide
@@ -63,6 +67,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://developer.gov.bc.ca/Design-System/About-the-Design-System"
                 >
                   Design System
@@ -72,6 +77,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/plain-language-guide?keyword=plain&keyword=language&keyword=guide"
                 >
                   Plain Language Guide
@@ -81,6 +87,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design/service-design-phases"
                 >
                   Service Design Phases
@@ -94,6 +101,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/writingforservices?keyword=Service&keyword=writing&keyword=guide"
                 >
                   Service Writing Guide
@@ -103,6 +111,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://bcgov.github.io/design-research-guide/"
                 >
                   Design Research Guide
@@ -112,6 +121,7 @@ function ForDesigners() {
               <div className="resourceLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/visual-design-guide?keyword=visual&keyword=identity"
                 >
                   Visual Design Guide

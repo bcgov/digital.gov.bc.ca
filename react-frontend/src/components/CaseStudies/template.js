@@ -15,10 +15,6 @@ const Template = () => {
   const endPoint = useParams().caseStudyId;
   const content = routeMatch[endPoint];
 
-  const imgStyle = {
-    backgroundImage: 'url(' + content.backgroundImage + ')',
-  };
-
   const resources = [];
 
   if (content.resourceText) {
