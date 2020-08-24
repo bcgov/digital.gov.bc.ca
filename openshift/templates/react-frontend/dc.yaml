@@ -39,13 +39,13 @@ objects:
                 name: caddyfile-${SUFFIX}
               name: caddyfile-volume
           containers:
+            - env:
+              - name: REACT_APP_STRAPI_BACKEND_URL
+                value: https://strapi-pr-235-xdwiwd-dev.pathfinder.gov.bc.ca/
             - image: >-
                 ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: Always
               name: ${NAME}-${SUFFIX}
-              - env:
-                - name: REACT_APP_STRAPI_BACKEND_URL
-                  value: https://strapi-pr-235-xdwiwd-dev.pathfinder.gov.bc.ca/
               resources: 
                 requests:
                   memory: ${MEMORY_REQUEST}
