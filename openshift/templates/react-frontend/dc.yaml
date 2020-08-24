@@ -40,7 +40,7 @@ objects:
               name: caddyfile-volume
           containers:
             - env:
-              - name: REACT_APP_STRAPI_BACKEND_URL_2
+              - name: REACT_APP_STRAPI_BACKEND_URL
                 value: 'https://strapi-pr-235-xdwiwd-dev.pathfinder.gov.bc.ca/'
             - image: >-
                 ${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
