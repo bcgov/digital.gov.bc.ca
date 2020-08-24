@@ -1,16 +1,13 @@
 import { Context } from 'probot';
-import { CONFIG as config } from '../constants';;
+import { CONFIG as config } from '../constants';
+import {  PrStatusMessage, DeploymentStatus, RepoOwner } from '../constants/types';
 
-interface repoOwner {
-  repo: string;
-  owner: string;
-}
 /**
  * returns the repo and owner from the context
  * @param context
  * @returns {Object}
  */
-export const getRepoAndOwnerFromContext = (context: Context): repoOwner => {
+export const getRepoAndOwnerFromContext = (context: Context): RepoOwner => {
   const { repository } = context.payload;
   const {
     name: repo,
@@ -29,7 +26,7 @@ export const getHeadRefFromPr = async (context: Context): Promise<string> => {
   });
 
   return res.data.head.ref;
-}
+};
 /**
  * checks if commenter can perform action
  * @param context
@@ -82,4 +79,40 @@ export const isBotCommand = (context: Context, botCommand: string): boolean => {
 export const createComment = (context: Context, body: string): Promise<unknown> => {
   const params = context.issue({ body });
   return context.github.issues.createComment(params);
-}
+};
+
+
+export const extractPrsThatArePendingForComment = (deployments: DeploymentStatus[]): PrStatusMessage[] => {
+  // group deployment by ref
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const prs = deployments.reduce((group: any, deployment) => {
+    const branch = deployment.node.ref.name;
+    if(!group[branch]) {
+      let payload;
+      try {
+        // for some reason the graphql api returns the json string with way more \ then is needed
+        // VERY VERY wierd but this is the only way this works
+        payload = JSON.parse(JSON.parse(JSON.parse(deployment.node.payload)));
+      } catch (e) {
+        payload = {
+          pr: null,
+        };
+      }
+      group[branch] = {
+        ...deployment.node, 
+        payload
+      };
+    }
+    return group;
+  }, {});
+
+  return Object.keys(prs).map(branch => {
+    return ({
+      pr: prs[branch].payload.pr,
+      branch,
+      state: prs[branch].latestStatus !== null ? prs[branch].latestStatus.state : 'no status found'
+    });
+  });
+};
+
+

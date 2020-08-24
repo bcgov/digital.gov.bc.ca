@@ -1,18 +1,19 @@
 # deploy-tron
 
-> A simplified PR bot that creates github deployments
+> A simplified PR bot that creates github deployments. The github deployments produces a `payload` that contains information about the `service` you want to deploy, the `pr` that you are deploying from, as well as the iniator of the deployment
 
-## Available Commands
+When the bot is up, get started with `<botCommand> help`
 
-The base command are:
-- `<botCommand> help`
-- `<botCommand> deploy <microservice> to <env>`
-
-
-## Future Commands
+## Road Map
 Future development should support:
 - `<botCommand> status` to get the status of environments for a pull request
 - `<botCommand> cancel <microservice> to <env>` to abort a deployment to an environment
+- When checking pending deployments, the bot should filter out deployments that are not for the microservice in question
+
+## Content
+
+The content is managed via handlebars. Every content file found at `/content` has a handlebars comment
+describing the variables required for the template. 
 
 ## Installation
 

@@ -1,11 +1,12 @@
-import { readFileSync } from 'fs';
 import { Context } from 'probot';
-import path from 'path';
-import { createComment } from '../utils/ghutils';
-
+import { helpMessage, configurationMessage } from '../utils/messages';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const help = (context: Context): any => {
-  const buffer = readFileSync(path.join(__dirname, '../../content/help.md'));
-  
-  return createComment(context, buffer.toString());
+  return helpMessage(context);
+};
+
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const configuration = (context: Context): any => {
+  return configurationMessage(context);
 };

@@ -3,6 +3,11 @@ import config from '../config/index.json';
 export const COMMANDS = {
   help: 'help',
   deploy: 'deploy',
+  architecture: 'architecture',
+  configuration: 'configuration'
+};
+
+export const ULTRA_SECRET_COMMANDS = {
   knockknock: 'knockknock',
 };
 
@@ -25,7 +30,7 @@ export const BASE_CONFIG = {
   validGithubRoles: ["maintain", "admin", "write"],
   environmentsThatAllowConcurrentDeploys: [],
   botCommand: '/deploy-tron'
-}
+};
 
 export const CONFIG = {
   ...BASE_CONFIG,

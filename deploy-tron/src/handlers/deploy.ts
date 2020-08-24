@@ -1,9 +1,10 @@
 import { Context } from 'probot';
 import { extractDeployCommandValues, getEnvFromSynonym } from '../utils/stringutils';
-import { getRepoAndOwnerFromContext, getHeadRefFromPr, createComment } from '../utils/ghutils';
+import { getRepoAndOwnerFromContext, getHeadRefFromPr } from '../utils/ghutils';
 import { createDeployment, isTherePendingDeploymentForEnvironment, getLatestEnvironmentStatusesForRef, isEnvironmentAllowedToDeploy } from '../utils/deployment';
 import { MESSAGES } from '../constants/messages';
 import { CONFIG as config } from '../constants';
+import { pendingDeploymentsExistMessage, dependantDeploymentsMessage, deploymentCreatedMessage } from '../utils/messages';
 
 export const deploy = async (context: Context): Promise<void> => {
   const commentBody = context.payload.comment.body;
@@ -25,29 +26,26 @@ export const deploy = async (context: Context): Promise<void> => {
   // @ts-ignore
   const allowsMultipleDeploysToEnv = config.environmentsThatAllowConcurrentDeploys.findIndex(env => env === environment) > -1;
   
-  const pendingDeploymentsExist = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
+  const pendingDeployments = await isTherePendingDeploymentForEnvironment(context, ref, environment, repo, owner);
+  const pendingDeploymentsExist = pendingDeployments.length > 0;
   const deploymentStatuses = await getLatestEnvironmentStatusesForRef(context, ref, repo, owner);
 
   if(pendingDeploymentsExist && !allowsMultipleDeploysToEnv) {
-    await createComment(context, 'There is already a pending deployment to this environment, unable to deploy until that one completes');
-    return;
+    await pendingDeploymentsExistMessage(context, pendingDeployments);
+    return; 
   }
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const requiredEnvironments = config.requiredEnvironments[environment]
+  const requiredEnvironments = config.requiredEnvironments[environment];
   const canDeploy = isEnvironmentAllowedToDeploy(requiredEnvironments, deploymentStatuses);
     
   if(!canDeploy) {
-    const body = `
-      Unable to create a deployment :(
-      Deploying to ${environment} requires **${requiredEnvironments.join()}** to be deployed for this ref before you can deploy to **${environment}**.
-    `
-    await createComment(context, body);
-    return;
+    await dependantDeploymentsMessage(context, environment);
+    return; 
   }
   // check if previous deployments in train have completed
-  await createDeployment(
+  const response = await createDeployment(
     context,
     repo,
     owner,
@@ -59,5 +57,5 @@ export const deploy = async (context: Context): Promise<void> => {
     config.requiredContexts[environment] || [],
   );
 
-  await createComment(context, 'Deployment successfully created!');
+  await deploymentCreatedMessage(context, response.data);
 };

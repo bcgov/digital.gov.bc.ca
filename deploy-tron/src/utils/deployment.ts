@@ -3,7 +3,7 @@ import { MESSAGES } from '../constants/messages';
 import { ENVIRONMENTS } from '../constants';
 import { LATEST_STATUS_QL_QUERY } from '../constants/queries';
 import { CONFIG as config } from '../constants';;
-import type { latestStatus, deploymentStatusGroup, deploymentGroup, deployment } from '../constants/types';
+import type { LatestStatus, DeploymentStatusGroup, DeploymentGroup, Deployment, DeploymentStatus } from '../constants/types';
 
 export const createDeployment = (
   context: Context,
@@ -35,7 +35,7 @@ export const createDeployment = (
     headers: {
       'Accept': 'application/vnd.github.ant-man-preview+json',
     }
-  })
+  });
 };
 
 
@@ -51,7 +51,8 @@ export const createDeployment = (
  * @param repo 
  * @param owner 
  */
-export const isTherePendingDeploymentForEnvironment = async (context: Context, ref: string, env: string, repo: string, owner: string): Promise<boolean> => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const isTherePendingDeploymentForEnvironment = async (context: Context, ref: string, env: string, repo: string, owner: string): Promise<DeploymentStatus[]> => {
 
   const data = await context.github.graphql(LATEST_STATUS_QL_QUERY,
   {
@@ -62,10 +63,8 @@ export const isTherePendingDeploymentForEnvironment = async (context: Context, r
   });
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
-  const index = data.repository.deployments.edges.findIndex((edge: latestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref));
-  
-  return index !== -1;
-}
+  return data.repository.deployments.edges.filter((edge: LatestStatus) => (edge.node.latestStatus === 'PENDING' && edge.node.ref.name !== ref || edge.node.latestStatus === null && edge.node.ref.name !== ref));
+};
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -77,7 +76,7 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
   });
 
   // group deployments by environment and get latest status
-  const groupedDeployments = response.data.reduce((groupedDeployments: deploymentGroup, deployment: deployment) => {
+  const groupedDeployments = response.data.reduce((groupedDeployments: DeploymentGroup, deployment: Deployment) => {
     const { environment } = deployment;
     if(!groupedDeployments[environment]) {
       groupedDeployments[environment] = deployment;
@@ -91,12 +90,12 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
   const resolvedStatuses = await Promise.all(latestStatuses);
 
   // organize statuses against grouped environments
-  return  resolvedStatuses.reduce((groupedStatuses: deploymentGroup, state) => {
+  return  resolvedStatuses.reduce((groupedStatuses: DeploymentGroup, state) => {
     // if there is not pending deployment status ie status.data === [] sub in a pending status
     groupedStatuses[state.env] = state.status.data[0] || { state: 'pending'};
-    return groupedStatuses
+    return groupedStatuses;
   }, {});
-}
+};
 
 /**
  * some environments require that previous environments in the train deployed succesffuly
@@ -105,8 +104,8 @@ export const getLatestEnvironmentStatusesForRef = async (context: Context, ref: 
  * @param deploymentStatuses 
  * @returns {boolean}
  */
-export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], deploymentStatuses: deploymentStatusGroup): boolean => {
+export const isEnvironmentAllowedToDeploy = (requiredEnvironments: string[], deploymentStatuses: DeploymentStatusGroup): boolean => {
   if(!requiredEnvironments || requiredEnvironments.length === 0) return true;
 
   return requiredEnvironments.every(env => deploymentStatuses[env].state === 'success' );
-}
+};

@@ -14,31 +14,31 @@ describe('Deployment Helpers', () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPending));
-    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar')
-    expect(isPending).toBe(true);
+    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar');
+    expect(isPending).toMatchSnapshot();
   });
 
-  test('isTherePendingDeploymentForEnvironment returns false when there is a pending deployent and ref is the same', async () => {
+  test('isTherePendingDeploymentForEnvironment returns [] when there is a pending deployent and ref is the same', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPendingWithSameRef));
     const isPending = await isTherePendingDeploymentForEnvironment(context, deploymentStatusesPendingWithSameRef.repository.deployments.edges[0].node.ref.name, 'development', 'bar', 'owner');
-    expect(isPending).toBe(false);
+    expect(isPending).toEqual([]);
   });
 
   test('isTherePendingDeploymentForEnvironment returns false when there is a non pending deployent', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesSuccess));
-    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar')
-    expect(isPending).toBe(false);
+    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar');
+    expect(isPending).toEqual([]);
   });
 
   test('getLatestEnvironmentStatusesForRef returns statuses grouped by env', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
     github.repos.listDeployments.mockReturnValue(Promise.resolve({data: deploymentsForRef}));
-    github.repos.listDeploymentStatuses.mockReturnValue(Promise.resolve({data: deploymentStatusForDeployment}))
+    github.repos.listDeploymentStatuses.mockReturnValue(Promise.resolve({data: deploymentStatusForDeployment}));
 
     const statuses = await getLatestEnvironmentStatusesForRef(context, 'foo', 'bar', 'baz');
     expect(statuses).toMatchSnapshot();

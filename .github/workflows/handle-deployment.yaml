@@ -1,0 +1,29 @@
+name: On Deployment Created
+on: 
+  deployment
+jobs:
+  run:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - name: Store PR Num in env
+      uses: actions/github-script@0.3.0
+      with:
+        github-token: ${{github.token}}
+        script: |
+          const core = require('@actions/core')
+          const prNumber = context.payload.number;
+          const deployPayload = JSON.parse(context.payload.deployment.payload);
+          core.exportVariable('MICROSERVICE', deployPayload.microservice);
+          core.exportVariable('PULL_NUMBER', deployPayload.pr);
+          core.exportVariable('ENVIRONMENT', context.payload.deployment.environment);
+          core.exportVariable('DEPLOYMENT_ID', context.payload.deployment.id);
+          core.exportVariable('REF', context.payload.deployment.ref);
+
+    # - name: login to oc client
+    #   run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
+    # create handle deployment in master playbook which will delegate tasks based on the deploy microservice and environment
+    # - name: promoting environment
+    #   run: ansible-playbook ansible/master-playbook.yaml -e PR=$PULL_NUMBER -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e MICROSERVICE=$MICROSERVICE -e ENVIRONMENT=$ENVIRONMENT -e DEPLOYMENT_ID=$DEPLOYMENT_ID -e REF=$REF
+
+    

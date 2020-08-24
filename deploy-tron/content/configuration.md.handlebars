@@ -1,0 +1,39 @@
+## Configuration
+
+These are the available properties that are available to configure the bot. If you are not an owner of the bot codebase but are hosting this bot, you 
+can always mount a copy of your config file at bot runtime at the path `<app-root>/lib/config/index.json`. In Kuberenetes based deployments this would be via `ConfigMap`.
+
+
+- `environments: string[]`: This is a list of the valid github deployment environments your app supports. This will prevent deploy commands to unsupported environments from triggering a workflow. The available environments are __production__, __staging__, __qa__, __development__. Take a look at github deployment docs for more info.
+- `environmentSynonyms: object`: To make deploy commands easier to write you can config a table of synonyms that should map to a valid deployment. 
+For example: 
+```json
+{
+  "environmentSynonyms": {
+    "prod": "production"
+  }
+}
+```
+- `validGithubRoles: string[]`: This is a list of valid github permission roles a user can have. This will validate that a command issued by a user __will run__. By __default__ the valid roles are `['maintain', 'admin', 'write']`
+
+- `botCommand: string`: This is the issuing command that the bot will look for to prepend every command. This can be any __single word__. Recommend prepending a `/` to the command to seperate it from english text. __Defaults__ to `/deploy-tron`
+
+- `microservices: string[]`: This is a list of 'microservices' that your repositories codebase supports. This passed into any __create deployment__ as a `payload` which will allow your ci/cd tool of choice to filter github deployments. The microservice list is also used to validate the deploy command `deploy <microservice> to <env>`
+
+- `requiredEnvironments: { [env]: string[] }`: This creates dependencies between environments for a github ref/branch. For example you can configure that the `test` environment is only deployable if the same `ref/branch` was deployed to `dev` first. It's usage:
+```json
+{
+  "requiredEnvironments": {
+    "development": [],
+    "staging": ["development"],
+    "production": ["staging"]
+  }
+}
+```
+> take note that required environments uses the __valid github deployment environment__ nomenclature and not __your synonyms__. 
+
+- `environmentsThatAllowConcurrentDeploys: string[]`: A list of github deployment environments that allow requests from different refs/branches to create deployments to the same environment. For example in a PR based pipeline every PR may deploy code to a development environment. Usage is: `"environmentsThatAllowConcurrentDeploys": ["development"]`
+
+- `maxDeploymentsToLookupForPending: int`: By default when checking for previous pending deployments for a ref/branch. Only the last 10 deployments are checked. The others are assumed to be inactive. This can be configured to look further back if needed.
+
+- `requiredContexts: { [env]: string[] }`: This is a environment mapping to the `required_contexts` property of a github deployment.
