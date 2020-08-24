@@ -9,7 +9,7 @@ const cards = [
       connect with the Digital Response Unit through the{' '}
       <a
         className="productCardLink"
-        href="mailto: exchangelab@gov.bc.ca"
+        href="mailto:exchangelab@gov.bc.ca"
         target="_blank"
         rel="noopener noreferrer"
       >

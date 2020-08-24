@@ -1,0 +1,17 @@
+{
+  "validGithubRoles": ["maintain", "admin", "write"],
+  "botCommand": "/test",
+  "microservices": ["postgres", "redis"],
+  "environments": ["production", "development", "staging"],
+  "environmentSynonyms": {
+    "prod": "production",
+    "dev": "development",
+    "test": "staging"
+  },
+  "requiredEnvironments": {
+    "development": [],
+    "staging": ["development"],
+    "production": ["staging", "development"]
+  },
+  "environmentsThatAllowConcurrentDeploys": ["development"]
+}
