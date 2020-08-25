@@ -14,7 +14,7 @@ describe('Deployment Helpers', () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPending));
-    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar')
+    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar');
     expect(isPending).toBe(true);
   });
 
@@ -30,7 +30,7 @@ describe('Deployment Helpers', () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesSuccess));
-    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar')
+    const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar');
     expect(isPending).toBe(false);
   });
 
@@ -38,7 +38,7 @@ describe('Deployment Helpers', () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
 
     github.repos.listDeployments.mockReturnValue(Promise.resolve({data: deploymentsForRef}));
-    github.repos.listDeploymentStatuses.mockReturnValue(Promise.resolve({data: deploymentStatusForDeployment}))
+    github.repos.listDeploymentStatuses.mockReturnValue(Promise.resolve({data: deploymentStatusForDeployment}));
 
     const statuses = await getLatestEnvironmentStatusesForRef(context, 'foo', 'bar', 'baz');
     expect(statuses).toMatchSnapshot();
