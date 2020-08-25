@@ -1,5 +1,5 @@
 import React from 'react';
-import CaseStudiesBanner from './casestudiesbanner';
+import SimpleBanner from '../SimpleBanner/simpleBanner';
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Template from './template';
@@ -14,7 +14,13 @@ const CaseStudies = () => {
       <Switch>
         <Route exact path={path}>
           <div className="caseStudyContainer">
-            <CaseStudiesBanner />
+            {/* Note the refactor here may conflict with desired styling due to th
+            digitalTop classname added to simple banner*/}
+            <SimpleBanner
+              title="Case Studies"
+              description="Learn how digital approaches are getting results here in British
+            Columbia."
+            />
             <div className="caseStudyBody">
               <CardList />
             </div>

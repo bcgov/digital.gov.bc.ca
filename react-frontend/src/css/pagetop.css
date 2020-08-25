@@ -7,12 +7,12 @@
 }
 
 .pageTitle {
-    position: relative;
     font-size: 37px;
-    line-height: 37px;
-    text-align: center;
     font-weight: bold;
+    line-height: 37px;
     margin-bottom: 10px;
+    position: relative;
+    text-align: center;
 }
 
 .pageTextBanner {
@@ -23,9 +23,11 @@
     margin-bottom: 120px;
     background: rgba(0, 51, 102, 0.7);
     padding: 25px;
+    width: 100%;
 }
 
 .pageText {
+    margin: auto;
     text-align: center;
     width: 85%;
     margin: auto;
@@ -38,13 +40,13 @@
 }
 
 .pageDescription p {
-    position: relative;
     font-size: 22px;
+    position: relative;
 }
 
 .pageDescription p {
-    position: relative;
     font-size: 22px;
+    position: relative;
 }
 
 .plain {
@@ -110,13 +112,32 @@
 
     .pageTitle {
         font-size: 31px;
+    
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .pageText {
+        margin-left: 8%;
+        padding-top: 80px;
+        width: 84%;
+    }
+
+    .pageDescription {
+        font-size: 10pt;
+        text-align: justify;
+    }
+    
+    .pageTop {
+        padding-bottom: 40px;
+        padding-top: 40px;
     }
 
 
     .pageDescription p {
         font-size: 16px;
-        width: 100%;
         text-align: center;
+        width: 100%;
     }
 
     .pageTextBanner {
@@ -132,5 +153,4 @@
         max-width: auto;
         margin-left: -50%;
     }
-
 }

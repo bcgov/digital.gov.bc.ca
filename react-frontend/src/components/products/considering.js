@@ -9,8 +9,9 @@ const cards = [
       connect with the{' '}
       <a
         className="productCardLink"
-        href="https://www2.gov.bc.ca/gov/content/overdose/mobile-response-team"
+        href="mailto:exchangelab@gov.bc.ca"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Digital Response Unit
       </a>

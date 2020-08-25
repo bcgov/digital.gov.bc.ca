@@ -9,7 +9,6 @@
       new_image_tag: "{% if 'prod' in gh_env %}{{ prod_image_tag }}{% elif 'test' in gh_env %}{{ test_image_tag }}{% elif 'dev' in gh_env %}{{ dev_image_tag }}{% endif %}"
       suffix: "{{ new_image_tag }}"
       version: "{{ new_image_tag }}"
-      ref: refs/pull/{{ PR }}/head
       # the amount of replicas to look for when considered ready!
 
     tasks:
@@ -18,10 +17,19 @@
 
       - name: Canceling previous deployments
         include: ./tasks/cancel_previous_gh_deployments.yaml
-
+      - name:
+        uri:
+          url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
+          headers:
+            Authorization: token {{ GITHUB_TOKEN }}
+            Accept: application/vnd.github.ant-man-preview+json
+        register: pull_request
+      - name: setting ref
+        set_fact:
+          ref: pull_request.json.ref.name
       - name: Creating Deployment for {{ gh_env }} for {{ ref }}
         uri: 
-          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments
+          url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/deployments
           method: POST
           body: "{{ lookup('template', './templates/github_deployment.json.j2') }}"
           body_format: json

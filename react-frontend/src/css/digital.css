@@ -1,65 +1,69 @@
-.digitalContainer {
-    padding-top: 100px;
-    background-color: #F2F2F2;
-    padding-bottom: 70px;
-}
-
-.digitalBody {
-    width: 85%;
-    margin: auto;
-}
-
-.digitalTitle {
-    font-size: 22pt;
-    font-weight: bold;
-    margin-bottom: 5px;
-    line-height: 24pt;
-}
-
-.digitalParagraph {
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    font-size: 12pt;
-    line-height: 16pt;
+.contentRow {
+    border-bottom: solid thin black;
+    padding-bottom: 25px;
+    padding-top: 20px;
 }
 
 .digitalBlock {
     margin-bottom: 25px;
 }
 
-.firstRow {
-    border-bottom: solid darkgray;
+.digitalBody {
+    margin: auto;
+    width: 85%;
 }
 
-.contentRow {
-    border-bottom: solid thin black;
-    padding-top: 20px;
-    padding-bottom: 25px;
+.digitalContainer {
+    background-color: #F2F2F2;
+    padding-bottom: 70px;
+    padding-top: 100px;
 }
 
-.lastRow {
-    height: 80px;
-    padding-top: 20px;
-    margin-bottom: 25px;
-}
-
-.digitalTableTitle {
-    font-size: 16pt;
+.digitalLink {
+    color: #0000EE;
+    cursor: pointer;
+    font-size: 12pt;
     font-weight: bold;
-    margin-bottom: 5px;
-    line-height: 24pt;
-    margin-top: 5px;
+}
+
+.digitalParagraph {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    line-height: 16pt;
+    position: relative;
+}
+
+.digitalSection {
+    padding-bottom: 120px;
 }
 
 .digitalTable {
     margin-left: -8px;
 }
 
-.digitalLink {
+.digitalTableTitle {
+    font-size: 16pt;
     font-weight: bold;
-    font-size: 12pt;
-    color: #0000EE;
-    cursor: pointer;
+    line-height: 24pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.digitalTitle {
+    font-size: 22pt;
+    font-weight: bold;
+    line-height: 24pt;
+    margin-bottom: 5px;
+}
+
+.firstRow {
+    border-bottom: solid darkgray;
+}
+
+.lastRow {
+    height: 80px;
+    margin-bottom: 25px;
+    padding-top: 20px;
 }
 
 .someLinks {
@@ -68,31 +72,35 @@
 
 @media only screen and (max-width: 800px) {
 
-    .digitalContainer {
-        padding-top: 65px;
-    }
-
-    .digitalTop {
-        padding-top: 60px;
-    }
     .contentRow {
         padding-top: 15px;
     }
-    
-    .lastRow {
-        height: 200px;
-        padding-top: 20px;
-    }
-
 
     .digitalBlock {
         margin-bottom: 25px;
 
     }
 
+    .digitalContainer {
+        padding-top: 65px;
+    }
+
+    .digitalSection {
+        padding-bottom: 60px;
+    }
+
     .digitalTable {
         margin-bottom: 100px;
     }
+
+    .digitalTop {
+        padding-top: 60px;
+    }
+
+    .lastRow {
+        height: 200px;
+        padding-top: 20px;
+    }    
 }
 
 @media only screen and (max-width: 400px) {
