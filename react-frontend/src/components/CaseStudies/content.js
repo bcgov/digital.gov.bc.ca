@@ -11,6 +11,10 @@ const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
 const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
 
+const contentCheck = () => {
+  return 'test';
+};
+
 const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',
   backgroundImage: MiningBannerImage,
@@ -414,4 +418,4 @@ const MedicalContent = {
   ),
 };
 
-export { MiningContent, FarmerContent, MedicalContent };
+export { MiningContent, FarmerContent, MedicalContent, contentCheck };

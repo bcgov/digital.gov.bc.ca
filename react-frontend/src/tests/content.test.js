@@ -1,5 +1,5 @@
-import { MiningContent } from '../components/CaseStudies/content';
+import content from '../utils/content';
 
 test('Checking correct link', () => {
-  expect(MiningContent.resourceLinks[1]).toBe('https://github.com/bcgov/mds');
+  expect(content.test()).toBe('token');
 });
