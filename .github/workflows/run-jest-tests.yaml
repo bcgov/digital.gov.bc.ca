@@ -1,0 +1,19 @@
+name: Run jest tests
+on: 
+  pull_request:
+    paths:
+    - 'react-frontend/**'
+    - 'react-frontend/package.json'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./react-frontend
+    steps:
+    - uses: actions/checkout@v1
+    - name: build tests
+      run: yarn
+      working-directory: ${{env.working-directory}}
+    - name: Run tests
+      run: yarn test
+      working-directory: ${{env.working-directory}}
