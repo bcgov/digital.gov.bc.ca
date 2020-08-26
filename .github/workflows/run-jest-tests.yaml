@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build tests
-      run: yarn
+      run: yarn install
       working-directory: ${{env.working-directory}}
     - name: Run tests
       run: yarn test
