@@ -9,7 +9,7 @@ export const knockknock = async (context: Context): Promise<any> => {
       headers: { Accept: 'application/json' },
     });
 
-    return createComment(context, res.data.joke )
+    return createComment(context, res.data.joke );
   } catch (e) {
     return;
   }

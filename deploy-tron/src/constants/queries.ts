@@ -5,6 +5,7 @@ query latestStatus($owner: String!, $repo: String!, $env: String!, $maxLookup: I
     deployments(orderBy: {field: CREATED_AT, direction: DESC}, first:$maxLookup, environments:[$env]) {
       edges {
         node {
+          payload
           latestStatus {
             state
           }

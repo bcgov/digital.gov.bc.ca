@@ -16,5 +16,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [ 'jest', 'prettier'],
-  rules: {},
+  rules: {
+    'semi': 'error',
+    'eol-last': 'error',
+    'object-shorthand': 'error'
+  },
 };

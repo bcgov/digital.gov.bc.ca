@@ -1,0 +1,13 @@
+{{!-- 
+  variables
+  pullRequests {
+    pr: number
+    state: string
+    branch: string
+  }[]
+ --}}
+| pr | status | branch |
+| --- | ----- | ------ |
+{{#each pullRequests}}
+| [#pr](http://github.com/{{ owner }}/{{ repo }}/pull/{{ pr }}) | {{ state }} | {{ branch }}
+{{/each}}

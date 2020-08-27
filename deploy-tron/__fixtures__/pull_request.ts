@@ -86,4 +86,4 @@ export const pullRequest = {
   additions: 2,
   deletions: 0,
   changed_files: 1
-}
+};
