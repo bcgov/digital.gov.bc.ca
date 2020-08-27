@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import client from './utils/apolloClient';
 import './index.css';
 import App from './containers/App';
+import { AppConfig } from './providers/AppConfig';
 
 /*
  * If you want your app to work offline and load faster, you can change
@@ -15,7 +16,9 @@ import App from './containers/App';
 
 ReactDOM.render(
   <ApolloProvider client={client}>
+    {/* <AppConfig> */}
     <App />
+    {/* </AppConfig> */}
   </ApolloProvider>,
 
   document.getElementById('root')
