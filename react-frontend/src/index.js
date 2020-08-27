@@ -16,9 +16,9 @@ import { AppConfig } from './providers/AppConfig';
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    {/* <AppConfig> */}
-    <App />
-    {/* </AppConfig> */}
+    <AppConfig>
+      <App />
+    </AppConfig>
   </ApolloProvider>,
 
   document.getElementById('root')
