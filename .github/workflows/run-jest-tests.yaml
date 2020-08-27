@@ -12,8 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build tests
-      run: yarn install
+      run: npm install
       working-directory: ${{env.working-directory}}
     - name: Run tests
-      run: yarn test
+      run: npm run test
       working-directory: ${{env.working-directory}}
