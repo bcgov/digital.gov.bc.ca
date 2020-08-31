@@ -1,14 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 
-// import { AppConfigContext } from '../../providers/AppConfig';
-
 const Query = ({ children, query, id, UID }) => {
-  // if the api isn't defined, and
-  // const config = useContext(AppConfigContext);
-
-  // if
-
   const { data, loading, error } = useQuery(query, {
     variables: { id: id, UID: UID },
   });

@@ -1,36 +1,27 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Query from '../Query';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import InfoCard from '../Home/infocard';
 import SimpleBanner from '../SimpleBanner/simpleBanner';
 import GUIDES_QUERY from '../../queries/guide/guides';
-import { AppConfigContext } from '../../providers/AppConfig';
 
 const GuidesPage = () => {
-  const config = useContext(AppConfigContext);
-  console.log('Guide query WORKING', config['state']['strapiApiUrl']);
-
   return (
     <div className="pageContainer">
       <SimpleBanner
         title="Useful Guides"
         description="It's dangerous to go it alone, take these."
       />
-
       <div className="guides">
         <Grid className="cardAdjustment">
-          <Query
-            query={GUIDES_QUERY}
-            id={null}
-            UID={'http://localhost:1337/graphql'}
-          >
+          <Query query={GUIDES_QUERY} id={null}>
             {({ data: { guides } }) => {
               return (
                 <Row>
                   {guides.map((guide, i) => {
                     return (
-                      <Col sm={12} md={6}>
+                      <Col sm={12} md={6} key={guide.UID}>
                         <InfoCard
                           title={guide.Title}
                           description={guide.Summary}

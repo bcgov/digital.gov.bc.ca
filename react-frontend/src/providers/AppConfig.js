@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import _ from 'lodash';
 
 export const AppConfigContext = React.createContext();
@@ -22,7 +22,6 @@ export class AppConfig extends Component {
         // analyze HTTP status of the xhrs response
         // do something
       } else {
-        // show the xhrsult
         this.setState(JSON.parse(xhr.response));
       }
     };
