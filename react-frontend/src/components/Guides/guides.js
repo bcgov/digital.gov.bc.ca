@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Query from '../Query';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import InfoCard from '../Home/infocard';
 import SimpleBanner from '../SimpleBanner/simpleBanner';
 import GUIDES_QUERY from '../../queries/guide/guides';
+import { AppConfigContext } from '../../providers/AppConfig';
 
 const GuidesPage = () => {
+  const config = useContext(AppConfigContext);
+  console.log('Guide query WORKING', config['state']['strapiApiUrl']);
+
   return (
     <div className="pageContainer">
       <SimpleBanner
@@ -16,7 +20,11 @@ const GuidesPage = () => {
 
       <div className="guides">
         <Grid className="cardAdjustment">
-          <Query query={GUIDES_QUERY} id={null}>
+          <Query
+            query={GUIDES_QUERY}
+            id={null}
+            UID={'http://localhost:1337/graphql'}
+          >
             {({ data: { guides } }) => {
               return (
                 <Row>

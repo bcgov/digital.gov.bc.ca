@@ -12,8 +12,8 @@ import { AppConfigContext } from '../../providers/AppConfig';
 import '../../css/global.css';
 
 function App() {
-  // const config = useContext(AppConfigContext);
-  // console.log('SOMETHING AINT WORKING', config);
+  const config = useContext(AppConfigContext);
+  console.log('SOMETHING AINT WORKING', config['state']['strapiApiUrl']);
   // console.log(config.strapiApiUrl);
   return (
     <div className="App">
