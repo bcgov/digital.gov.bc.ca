@@ -15,7 +15,7 @@ const CollaborationTool = ({
     *
     <ul>
       <li>
-        <strong>Cost</strong>: {cost}
+        <strong>Cost is a lot</strong>: {cost}
       </li>
       <li>
         <strong>Platform</strong>: {platform}
