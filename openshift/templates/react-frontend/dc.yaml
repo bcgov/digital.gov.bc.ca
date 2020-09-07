@@ -124,7 +124,7 @@ objects:
     data:
       StrapiConfig: |
         {
-          "strapiApiUrl": "www.testUrl.edu"
+          "strapiApiUrl": "https://strapi-${SUFFIX}-${IMAGE_NAMESPACE}.pathfinder.gov.bc.ca/graphql"
         }
     kind: ConfigMap
     metadata:
