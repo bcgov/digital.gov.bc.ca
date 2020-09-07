@@ -94,10 +94,6 @@ objects:
       name: ${NAME}-${SUFFIX}
   - apiVersion: v1
     data:
-      StrapiConfig: |
-        {
-          "strapiApiUrl": "www.testUrl.edu"
-        }
       Caddyfile: |
         :4000
 
@@ -124,6 +120,21 @@ objects:
         pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
       name: caddyfile-${SUFFIX}
+  - apiVersion: v1
+    data:
+      StrapiConfig: |
+        {
+          "strapiApiUrl": "www.testUrl.edu"
+        }
+    kind: ConfigMap
+    metadata:
+      labels:
+        build: digital-gov-frontend
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: strapi-config-${SUFFIX}      
   - apiVersion: v1
     kind: Service
     spec:
