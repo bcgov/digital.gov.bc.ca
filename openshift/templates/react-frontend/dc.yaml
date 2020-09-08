@@ -124,7 +124,7 @@ objects:
     data:
       StrapiConfig: |
         {
-          "strapiApiUrl": "https://strapi-${SUFFIX}-${IMAGE_NAMESPACE}.pathfinder.gov.bc.ca/graphql"
+          "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.pathfinder.gov.bc.ca/graphql"
         }
     kind: ConfigMap
     metadata:
@@ -181,6 +181,10 @@ objects:
       name: ${NAME}-${SUFFIX}
   
 parameters:
+- name: NAMESPACE
+  required: true
+  description: the namespace being deployed to. 
+  displayName: Namespace
 - name: IMAGE_NAMESPACE
   required: true
   description: the namespace to pull the image from 
