@@ -1,9 +1,9 @@
 .breadCrumbs {
     padding-top: 133px;
     position: relative;
-    width: 1045px;
     margin: auto;
     margin-bottom: -133px;
+    width: 1045px;
     z-index: 5;
 }
 
