@@ -11,7 +11,7 @@ const HorizontalInfoCard = (props) => {
       bordered={false}
       cover={
         <div className="cardImageContainerHorizontal">
-          <img className="cardImageHorizontal" alt="example" src={props.img} />
+          <img className="cardImageHorizontal" alt="" src={props.img} />
         </div>
       }
     >

@@ -36,7 +36,7 @@ const Template = () => {
         <img
           className="caseBannerImage"
           style={{ marginTop: '-50px' }}
-          alt="not found"
+          alt=""
           src={content.backgroundImage}
         />
         <div className="pageTextBanner caseTextBanner">

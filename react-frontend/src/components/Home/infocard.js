@@ -28,7 +28,7 @@ function InfoCard({
         className="cardBody overFlowHidden"
         cover={
           <div className="cardImageContainer">
-            <img className="cardImage" alt="example" src={img} />
+            <img className="cardImage" alt="" src={img} />
           </div>
         }
       >

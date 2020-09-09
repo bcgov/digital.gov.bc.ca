@@ -17,11 +17,7 @@ const content = (
 const HomeBanner = () => {
   return (
     <div className="pageTop">
-      <img
-        className="bannerImage homeBannerImage"
-        alt="example"
-        src={homeImage}
-      />
+      <img className="bannerImage homeBannerImage" alt="" src={homeImage} />
       <div className="pageTextBanner">
         <div className="pageText">
           <div>
