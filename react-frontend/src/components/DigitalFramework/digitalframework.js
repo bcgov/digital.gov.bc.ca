@@ -3,8 +3,10 @@ import DigitalBlock from './digitalframeworkblock';
 import DigitalTable from './digitalframeworktable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
-import '../../css/global.css';
+
 import SimpleBanner from '../SimpleBanner/simpleBanner';
+
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const titles = [
   'Our Vision',
@@ -91,7 +93,7 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <div className="pageContainer">
+    <PageContainer>
       <SimpleBanner
         title={'Digital Framework'}
         description={
@@ -221,7 +223,7 @@ const DigitalFramework = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

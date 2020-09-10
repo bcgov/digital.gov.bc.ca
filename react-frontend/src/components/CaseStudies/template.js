@@ -1,9 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import '../../css/pagetop.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
-import { useParams } from 'react-router-dom';
+
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const routeMatch = {
   'farming-study': FarmerContent,
@@ -55,34 +57,34 @@ const Template = () => {
       </div>
       <div className="pageBody">
         {content.context && (
-          <div className="contentBlock">
+          <ContentBlock>
             {/* just a quick note, but subtitles like this will be handled in global css */}
             <p className="pageSubtitle">Context and Questions</p>
             {content.context}
-          </div>
+          </ContentBlock>
         )}
-        <div className="contentBlock">
+        <ContentBlock>
           <p className="pageSubtitle">The Approach</p>
           {content.approach}
-        </div>
-        <div className="contentBlock">
+        </ContentBlock>
+        <ContentBlock>
           <p className="pageSubtitle">Outcomes that Matter</p>
           {content.outcomes}
-        </div>
+        </ContentBlock>
         {content.additional && (
-          <div className="contentBlock">{content.additional}</div>
+          <ContentBlock>{content.additional}</ContentBlock>
         )}
         {resources.length !== 0 && (
-          <div className="contentBlock">
+          <ContentBlock>
             <p className="pageSubtitle">Resources and Related Information</p>
             <ul className="resourceLinkBox">{resources}</ul>
-          </div>
+          </ContentBlock>
         )}
         {content.contacts && (
-          <div className="contentBlock">
+          <ContentBlock>
             <p className="pageSubtitle">For more information</p>
             {content.contacts}
-          </div>
+          </ContentBlock>
         )}
         <div>
           <p className="pageSubtitle">Other Case Studies</p>

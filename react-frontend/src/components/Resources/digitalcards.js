@@ -2,7 +2,8 @@ import React from 'react';
 import InfoCard from '../Home/infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
-import '../../css/global.css';
+
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
@@ -19,7 +20,7 @@ const links = [
 
 function DigitalCards() {
   return (
-    <div className="contentBlock">
+    <ContentBlock>
       <div>
         <h2 className="resourceInfoTitle">Standards & Policy</h2>
       </div>
@@ -47,7 +48,7 @@ function DigitalCards() {
           </Row>
         </Grid>
       </div>
-    </div>
+    </ContentBlock>
   );
 }
 

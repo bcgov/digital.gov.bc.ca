@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import '../../css/resources.css';
-import '../../css/global.css';
+
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
@@ -12,7 +13,7 @@ const linkIcon = (
 
 function ForDesigners() {
   return (
-    <div className="contentBlock">
+    <ContentBlock>
       <div>
         <h2 className="resourceInfoForTitle">For Designers</h2>
       </div>
@@ -132,7 +133,7 @@ function ForDesigners() {
           </Col>
         </Row>
       </Grid>
-    </div>
+    </ContentBlock>
   );
 }
 

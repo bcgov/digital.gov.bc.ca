@@ -4,6 +4,7 @@ import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Template from './template';
 
+import { PageContainerCaseStudies } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 import '../../css/global.css';
 
@@ -26,9 +27,9 @@ const CaseStudies = () => {
             </div>
           </div>
         </Route>
-        <div className="pageContainer">
+        <PageContainerCaseStudies>
           <Route path={path + '/:caseStudyId'} component={Template} />
-        </div>
+        </PageContainerCaseStudies>
       </Switch>
     </div>
   );

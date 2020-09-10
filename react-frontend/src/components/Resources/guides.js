@@ -3,13 +3,13 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
 
 import '../../css/resources.css';
-import '../../css/global.css';
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const videoCommsImg = require('../../images/videocomms.png');
 
 function Guides() {
   return (
-    <div className="contentBlock">
+    <ContentBlock>
       <div className="resourceInfo">
         <div>
           <h2 className="resourceInfoTitle">Guides</h2>
@@ -30,7 +30,7 @@ function Guides() {
           </Row>
         </Grid>
       </div>
-    </div>
+    </ContentBlock>
   );
 }
 

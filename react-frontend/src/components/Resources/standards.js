@@ -3,8 +3,9 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-import '../../css/global.css';
 import '../../css/resources.css';
+
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
@@ -12,7 +13,7 @@ const linkIcon = (
 
 function Standards() {
   return (
-    <div className="contentBlock">
+    <ContentBlock>
       <div className="resourceInfo">
         <Grid className="cardAdjustment">
           <Row>
@@ -120,7 +121,7 @@ function Standards() {
           </Row>
         </Grid>
       </div>
-    </div>
+    </ContentBlock>
   );
 }
 

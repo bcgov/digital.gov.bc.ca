@@ -5,31 +5,3 @@ a {
 a:hover{
   color: blue;
 }
-
-.pageContainer {
-  background-color: #F2F2F2;
-  z-index: -2;
-}
-
-.routeBody {
-  background-color: #F2F2F2;
-  z-index: -2;
-}
-
-.contentBlock {
-  padding-bottom: 120px;
-}
-
-@media only screen and (max-width: 800px) {
-  .pageContainer {
-    padding-top: 65px;
-  }
-
-  .routeBody {
-    padding-bottom: 60px;
-  }
-
-  .contentBlock {
-    padding-bottom: 60px;
-  }
-}

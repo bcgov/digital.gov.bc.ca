@@ -4,12 +4,14 @@ import CardList from './cardlist';
 import '../../css/home.css';
 import '../../css/global.css';
 
+import { PageContainer } from '../StyleComponents/pageContent';
+
 function Home() {
   return (
-    <div className="pageContainer">
+    <PageContainer>
       <HomeBanner />
       <CardList />
-    </div>
+    </PageContainer>
   );
 }
 
