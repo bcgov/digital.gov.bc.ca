@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/pagetop.css';
 
+//TODO: Figure out what this file does and delete it if it's nothing JonSharman Sept 2020
 const DigitalFrameworkBanner = () => {
   return (
     <div className="pageTop digitalTop">
