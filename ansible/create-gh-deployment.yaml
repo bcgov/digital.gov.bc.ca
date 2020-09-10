@@ -14,9 +14,6 @@
     tasks:
       - name: Checking PR existence
         include: ./tasks/check_pr_exists.yaml
-
-      - name: Canceling previous deployments
-        include: ./tasks/cancel_previous_gh_deployments.yaml
       - name:
         uri:
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
@@ -27,6 +24,8 @@
       - name: setting ref
         set_fact:
           ref: pull_request.json.ref.name
+      - name: Canceling previous deployments
+        include: ./tasks/cancel_previous_gh_deployments.yaml
       - name: Creating Deployment for {{ gh_env }} for {{ ref }}
         uri: 
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/deployments
