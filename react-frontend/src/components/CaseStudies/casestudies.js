@@ -6,7 +6,6 @@ import Template from './template';
 
 import { PageContainerCaseStudies } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
-import '../../css/global.css';
 
 const CaseStudies = () => {
   let { path } = useRouteMatch();
