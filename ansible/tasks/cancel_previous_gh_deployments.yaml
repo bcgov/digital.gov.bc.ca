@@ -1,5 +1,5 @@
 ---
-  - name: Find an existing deployment for {{ gh_env }}
+  - name: Find an existing deployment for 
     uri:
       url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments?ref={{ ref }}&environment={{ gh_env }}
       method: GET
