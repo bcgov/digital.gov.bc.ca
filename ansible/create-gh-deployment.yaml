@@ -23,7 +23,7 @@
         register: pull_request
       - name: setting ref
         set_fact:
-          ref: pull_request.json.ref.name
+          ref: {{pull_request.json.ref.name}}
       - name: Canceling previous deployments
         include: ./tasks/cancel_previous_gh_deployments.yaml
       - name: Creating Deployment for {{ gh_env }} for {{ ref }}
