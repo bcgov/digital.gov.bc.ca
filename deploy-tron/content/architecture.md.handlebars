@@ -1,0 +1,70 @@
+{{!-- 
+  variables
+  botCommand: string
+  microservice: string
+  environment: string
+ --}}
+## How to design a Github Flow Mono-Repo CI/CD service utilizing this Bot
+
+Before you get started on designing the architecture of how you'd like to perform your CI/CD Flow
+for you and your team it will greatly help to understand the capabilties of this bot. The problems
+it aims to solve, and how it works. 
+
+### Capabilities
+
+This bot's purpose is incredibly simple. It's an interface to create [Github Deployments](https://docs.github.com/en/rest/reference/repos#deployments).
+How you interface with this bot is via public chat commands. This creates a great sense of transparency
+of how your code goes into different environments. It also introduces accountability and traceability (as everything is logged 😉) to PR promotions. 
+
+### The Problems with Mono Repos
+
+Mono Repos (a repository that hold multiple components/microservices inside of it) poses an interesting issue for CI/CD.
+It requires that you must embed some logic to decide what CI/CD flows get triggered based off what portions of the codebase are changed.
+In addition, when performing CD [using Github Flow](https://guides.github.com/introduction/flow/), there are additional challenges managing
+multiple deployments of different environments/microservices (often multiple environments for the same microservice) at any given time. This problem
+is further compounded when there are multiple individuals who are capable of asyncronously triggering deployments at the same time. 
+
+*How can you ensure that your PR's work doesn't overwrite your co-collaboraters work in a shared environment such as test or prod?*
+*How can you ensure that when you are ready to deploy to a shared environment you aren't stepping over someone elses deployment*?
+*How do you provide an easy way of communicating work without required a ton of manual effort, such as @mentioning your co-collaborators, emails, texts etc?*
+*How do you allow deployments to be triggered safely but also remain transparent*?
+
+### How This Bot Helps
+
+This bot exposes a pattern to help developers better manage their mono repos. It does this by storing __as much state as possible__ with regard to your 
+deployment in a Github Deployment. It uses the Github Deployment as the __single source of truth__. Github Deployments (along with Github Statuses) provide
+an excellent framework to constructing your ci/cd flow. 
+
+For example, when you run the command `{{ botCommand}} deploy {{ microservice }} to {{ environment}}`. There are several checks that take place:
+
+1. Are you authorized to request a deployment ?
+2. Are there any ongoing deployments for {{ microservice }} and if so are you allowed to deploy multiple instances of {{ microservice }} to {{ environment }}?
+3. Has {{ microservice }} been deployed to any other dependant environments? 
+> for example if deploying to prod, has it been deployed to test first?
+
+### The Github Deployment
+
+When a GH Deployment is created it is passed several datapoints to perform things like extra CI validations (using [required_contexts](https://docs.github.com/en/rest/reference/repos#create-a-deployment--parameters)) as well
+as a `payload`. The payload contains information on.
+
+1. Who triggered the deployment?
+2. What PR did this deployment belong to?
+3. What microservice are you attempting to deploy? 
+
+
+### Constructing your CI/CD Flow 
+
+Now that you are able to create GH Deployments. You can integrate it into your CI/CD service.
+
+Most CI/CD services are able to pickup the Github Deployment Created webhook (or in the case of GithubActions) can directly interface with a 
+Github Deployment using the `on: deployment` event. Once you are able to pickup the __deployment events__ created by this bot, you can 
+parse the deployment webhook payload and look for (and parse) the JSON string `.payload` property inside of the webhook payload.
+
+With that information parsed you have a lot of information to trigger your deployments as you wish :) 
+
+#### Required Contexts 
+
+You can configure this bot to conditionally pass in `required_contexts` into a github deployment for a given environment. This will allow you
+you to pass or fail a triggered deployment based on other Github Checks. These checks could be anything but some good examples could be a Code Climate Check, a linting Check,
+a security check, a vulnerability check, unit testing check etc. You can customize the required contexts to speed up your development flow. For example you may not want public deployments
+to a development environment to be hindered by failing Code Climate checks. You would, however, want these checks to be ultimately passing prior to deploying into your `staging` environment. 
