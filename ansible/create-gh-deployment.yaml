@@ -34,7 +34,7 @@
           method: POST
           body: "{{ lookup('template', './templates/github_deployment.json.j2') }}"
           body_format: json
-          status_code: 201, 200
+          status_code: 202, 201, 200
           headers:
             Authorization: token {{ GITHUB_TOKEN }}
             Accept: application/vnd.github.ant-man-preview+json
