@@ -21,7 +21,7 @@
             Authorization: token {{ GITHUB_TOKEN }}
             Accept: application/vnd.github.ant-man-preview+json
         register: pull_request
-      - debug: var=pull_request
+      - debug: var=pull_request.json
       - name: setting ref
         set_fact:
           ref: pull_request.json.ref.name
