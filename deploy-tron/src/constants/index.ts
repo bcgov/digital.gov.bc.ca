@@ -3,6 +3,11 @@ import config from '../config/index.json';
 export const COMMANDS = {
   help: 'help',
   deploy: 'deploy',
+  architecture: 'architecture',
+  configuration: 'configuration'
+};
+
+export const ULTRA_SECRET_COMMANDS = {
   knockknock: 'knockknock',
 };
 

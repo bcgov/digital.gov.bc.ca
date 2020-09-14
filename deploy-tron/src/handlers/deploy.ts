@@ -56,6 +56,6 @@ export const deploy = async (context: Context): Promise<void> => {
     // @ts-ignore
     config.requiredContexts[environment] || [],
   );
-  console.log(response);
+
   await deploymentCreatedMessage(context, response.data);
 };
