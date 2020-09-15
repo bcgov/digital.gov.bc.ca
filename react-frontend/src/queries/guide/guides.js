@@ -3,9 +3,9 @@ import gql from 'graphql-tag';
 const GUIDES_QUERY = gql`
   query Guides {
     guides {
-      Title
-      Summary
-      UID
+      title
+      summary
+      uid
       createdAt
       updatedAt
     }

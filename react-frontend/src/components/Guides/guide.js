@@ -11,7 +11,7 @@ import {
 } from '../StyleComponents/pageContent';
 import { MarkdownStyles } from '../StyleComponents/styledMarkdown';
 
-const GuidePage = ({ UID }) => {
+const GuidePage = () => {
   const params = useParams();
   return (
     <div>
@@ -28,9 +28,9 @@ const GuidePage = ({ UID }) => {
               {({ data: { guides } }) => {
                 return (
                   <div>
-                    <h1>{guides[0].Title}</h1>
+                    <h1>{guides[0].title}</h1>
                     <MarkdownStyles>
-                      <ReactMarkdown source={guides[0].Content} />
+                      <ReactMarkdown source={guides[0].content} />
                     </MarkdownStyles>
                   </div>
                 );

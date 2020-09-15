@@ -21,12 +21,12 @@ const GuidesPage = () => {
                 <Row>
                   {guides.map((guide, i) => {
                     return (
-                      <Col sm={12} md={6} key={guide.UID}>
+                      <Col sm={12} md={6} key={guide.uid}>
                         <InfoCard
-                          title={guide.Title}
-                          description={guide.Summary}
+                          title={guide.title}
+                          description={guide.summary}
                           linkText={'Explore'}
-                          routePath={`guides/${guide.UID}`}
+                          routePath={`guides/${guide.uid}`}
                           height="300px"
                         />
                       </Col>
