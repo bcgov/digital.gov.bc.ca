@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 const GUIDE_QUERY = gql`
-  query Guides($UID: String!) {
-    guides(where: { uid: $UID }) {
+  query Guides($uid: String!) {
+    guides(where: { uid: $uid }) {
       title
       content
       createdAt

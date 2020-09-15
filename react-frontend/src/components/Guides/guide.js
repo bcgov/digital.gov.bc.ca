@@ -24,7 +24,7 @@ const GuidePage = () => {
 
         <div className="guide">
           <Grid className="cardAdjustment">
-            <Query query={GUIDE_QUERY} UID={params.uid}>
+            <Query query={GUIDE_QUERY} uid={params.uid}>
               {({ data: { guides } }) => {
                 return (
                   <div>
