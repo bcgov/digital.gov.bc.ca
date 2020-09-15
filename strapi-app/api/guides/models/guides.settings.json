@@ -12,24 +12,24 @@
     ]
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "unique": true,
       "required": true
     },
-    "Content": {
+    "content": {
       "type": "richtext"
     },
-    "guide_categories": {
+    "guideCategories": {
       "collection": "guide-categories",
       "via": "guides"
     },
-    "UID": {
+    "uid": {
       "type": "uid",
-      "targetField": "Title",
-      "required": true
+      "required": true,
+      "targetField": "title"
     },
-    "Summary": {
+    "summary": {
       "type": "richtext",
       "required": true
     }
