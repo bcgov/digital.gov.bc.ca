@@ -11,7 +11,7 @@ const GuidesPage = () => {
     <div className="pageContainer">
       <SimpleBanner
         title="Useful Guides"
-        description="It's dangerous to go it alone, take these."
+        description="Guides to help public sector employees embrace modern digital technology."
       />
       <div className="guides">
         <Grid className="cardAdjustment">
