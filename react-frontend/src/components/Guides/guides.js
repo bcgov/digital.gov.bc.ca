@@ -15,7 +15,7 @@ const GuidesPage = () => {
       />
       <div className="guides">
         <Grid className="cardAdjustment">
-          <Query query={GUIDES_QUERY} id={null}>
+          <Query query={GUIDES_QUERY}>
             {({ data: { guides } }) => {
               return (
                 <Row>
