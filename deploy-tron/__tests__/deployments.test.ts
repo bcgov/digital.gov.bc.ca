@@ -15,15 +15,15 @@ describe('Deployment Helpers', () => {
 
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPending));
     const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', '123123', 'bar');
-    expect(isPending).toBe(true);
+    expect(isPending).toMatchSnapshot();
   });
 
-  test('isTherePendingDeploymentForEnvironment returns false when there is a pending deployent and ref is the same', async () => {
+  test('isTherePendingDeploymentForEnvironment returns [] when there is a pending deployent and ref is the same', async () => {
     const context = new Context(pullRequestComment, github as any, {} as any);
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesPendingWithSameRef));
     const isPending = await isTherePendingDeploymentForEnvironment(context, deploymentStatusesPendingWithSameRef.repository.deployments.edges[0].node.ref.name, 'development', 'bar', 'owner');
-    expect(isPending).toBe(false);
+    expect(isPending).toEqual([]);
   });
 
   test('isTherePendingDeploymentForEnvironment returns false when there is a non pending deployent', async () => {
@@ -31,7 +31,7 @@ describe('Deployment Helpers', () => {
     
     github.graphql.mockReturnValueOnce(Promise.resolve(deploymentStatusesSuccess));
     const isPending = await isTherePendingDeploymentForEnvironment(context,'master', 'development', 'foo', 'bar');
-    expect(isPending).toBe(false);
+    expect(isPending).toEqual([]);
   });
 
   test('getLatestEnvironmentStatusesForRef returns statuses grouped by env', async () => {

@@ -72,3 +72,16 @@ Object {
   },
 }
 `;
+
+exports[`Deployment Helpers isTherePendingDeploymentForEnvironment returns true when there is a pending deployent 1`] = `
+Array [
+  Object {
+    "node": Object {
+      "latestStatus": "PENDING",
+      "ref": Object {
+        "name": "foo",
+      },
+    },
+  },
+]
+`;
