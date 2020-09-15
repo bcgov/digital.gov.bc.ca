@@ -1,52 +1,49 @@
 .contentBlock {
-    padding-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .pageBody {
-    margin: auto;
-    width: 85%;
+  margin: auto;
+  width: 85%;
 }
 
 .pageContainer {
-    background-color: #F2F2F2;
-    padding-bottom: 70px;
-    padding-top: 100px;
-}   
+  background-color: #f2f2f2;
+  padding-bottom: 70px;
+  padding-top: 100px;
+}
 
 .pageSubtitle {
-    font-size: 22pt;
-    font-weight: bold;
-    margin-bottom: 24px;
+  font-size: 22pt;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
 
 .resourceLink {
-    font-size: 20px;
-    padding-top: 20px;
-    text-decoration: underline;
+  font-size: 20px;
+  padding-top: 20px;
 }
 
 .resourceLinkBox {
-    margin-bottom: 20px;
-    margin-top: -20px;
+  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 @media only screen and (max-width: 800px) {
+  .cardAdjustment {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
 
-    .cardAdjustment {
-        margin-left: -8px;
-        margin-right: -8px;
-    }
+  .contentBlock {
+    padding-bottom: 60px;
+  }
 
-    .contentBlock {
-        padding-bottom: 60px;
-    }
+  .pageBody {
+    width: 330px;
+  }
 
-    .pageBody {
-        width: 330px;
-    }
-
-    .pageContainer {
-        padding-top: 65px;
-    }
+  .pageContainer {
+    padding-top: 65px;
+  }
 }
-

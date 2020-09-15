@@ -1,17 +1,19 @@
 a {
   color: #1a5a96;
+  text-decoration: underline;
 }
 
-a:hover{
+a:hover {
   color: blue;
+  text-decoration: none;
 }
 
 .pageContainer {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .routeBody {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-bottom: 120px;
 }
 

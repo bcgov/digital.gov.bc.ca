@@ -15,4 +15,5 @@ export const SimpleTextContainer = styled.div`
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  font-family: BC Sans;
 `;
