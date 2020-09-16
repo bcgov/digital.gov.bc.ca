@@ -36,6 +36,10 @@ objects:
           volumes:
             - configMap:
                 defaultMode: 420
+                name: strapi-config-${SUFFIX}
+              name: strapi-config-volume
+            - configMap:
+                defaultMode: 420
                 name: caddyfile-${SUFFIX}
               name: caddyfile-volume
           containers:
@@ -53,6 +57,10 @@ objects:
               terminationMessagePath: /dev/termination-log
               terminationMessagePolicy: File
               volumeMounts:
+                - mountPath: /opt/app-root/src/config.json
+                  name: strapi-config-volume
+                  readOnly: true
+                  subPath: StrapiConfig
                 - mountPath: /opt/app-root/etc/Caddyfile
                   name: caddyfile-volume
                   readOnly: true
@@ -113,6 +121,21 @@ objects:
         group: ${NAME}
       name: caddyfile-${SUFFIX}
   - apiVersion: v1
+    data:
+      StrapiConfig: |
+        {
+          "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.pathfinder.gov.bc.ca/graphql"
+        }
+    kind: ConfigMap
+    metadata:
+      labels:
+        build: digital-gov-frontend
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: strapi-config-${SUFFIX}      
+  - apiVersion: v1
     kind: Service
     spec:
       ports:
@@ -158,6 +181,10 @@ objects:
       name: ${NAME}-${SUFFIX}
   
 parameters:
+- name: NAMESPACE
+  required: true
+  description: the namespace being deployed to. 
+  displayName: Namespace
 - name: IMAGE_NAMESPACE
   required: true
   description: the namespace to pull the image from 
