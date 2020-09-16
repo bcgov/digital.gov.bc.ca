@@ -3,10 +3,19 @@ import { Context } from 'probot';
 
 import { isCommenterAllowedToAction, isCommentFromPr } from './utils/ghutils';
 import { getCommandFromComment, isCommandValid } from './utils/stringutils';
-import { COMMANDS } from './constants';
+import { COMMANDS, ULTRA_SECRET_COMMANDS } from './constants';
 import { deploy } from './handlers/deploy';
 import { knockknock } from './handlers/knockknock';
-import { help } from './handlers/help';
+import { help, configuration } from './handlers/help';
+import { architecture } from './handlers/architecture';
+import { welcomeMessage } from './utils/messages';
+
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const handlePrOpened = async (context: Context): Promise<any> => {
+
+  return welcomeMessage(context);
+};
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const handlePrComment = async (context: Context): Promise<any> => {
@@ -21,11 +30,13 @@ export const handlePrComment = async (context: Context): Promise<any> => {
     switch (command) {
       case COMMANDS.help:
         return help(context);
-
       case COMMANDS.deploy:
         return deploy(context);
-
-      case COMMANDS.knockknock:
+      case COMMANDS.architecture:
+        return architecture(context);
+      case COMMANDS.configuration:
+          return configuration(context);
+      case ULTRA_SECRET_COMMANDS.knockknock:
         return knockknock(context);
     }
   }
