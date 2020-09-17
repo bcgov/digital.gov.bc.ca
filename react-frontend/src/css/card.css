@@ -90,15 +90,15 @@
 .cardImageHorizontal {
     height: auto;
     margin-right: 30px;
-    width: auto;
     max-width: 110%;
+    width: auto;
 }
 
 .cardImageContainerHorizontal {
-    width: 50%;
     float: left;
     overflow: hidden;
     margin-right: 25px;
+    width: 50%;
 }
 
 .overFlowHidden {
@@ -138,7 +138,7 @@
     .cardImageHorizontal {
         height: auto;
         max-width: 100%;
-        margin-right: 0px;
+        margin-right: 0;
     }
 
     .cardLink {
@@ -155,8 +155,8 @@
     }
 
     .cardImageContainerHorizontal {
-        width: 100%;
         overflow: hidden;
+        width: 100%;
     }
    
 }
