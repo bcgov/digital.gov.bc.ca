@@ -112,12 +112,12 @@
         text-align: center;
         width: 100%;
     }
-/* TODO: Figure out why on earth there were 2 widths declared here */
+    /* TODO: Figure out why on earth there were 2 widths declared here */
     .pageText {
+        margin-left: 8%;
         padding-top: 80px;
         /* width: 330px; */
         width: 84%;
-        margin-left: 8%;
     }
     .pageTextBanner {
         margin-top: 60px;
