@@ -87,18 +87,18 @@
     position: relative;
 }
 
-.cardImageHorizontal {
-    height: auto;
-    margin-right: 30px;
-    max-width: 110%;
-    width: auto;
-}
-
 .cardImageContainerHorizontal {
     float: left;
     overflow: hidden;
     margin-right: 25px;
     width: 50%;
+}
+
+.cardImageHorizontal {
+    height: auto;
+    margin-right: 30px;
+    max-width: 110%;
+    width: auto;
 }
 
 .overFlowHidden {
@@ -135,6 +135,11 @@
         max-height: 330px;
     }
 
+    .cardImageContainerHorizontal {
+        overflow: hidden;
+        width: 100%;
+    }
+    
     .cardImageHorizontal {
         height: auto;
         max-width: 100%;
@@ -154,9 +159,6 @@
         margin-top: -10px;
     }
 
-    .cardImageContainerHorizontal {
-        overflow: hidden;
-        width: 100%;
-    }
+
    
 }
