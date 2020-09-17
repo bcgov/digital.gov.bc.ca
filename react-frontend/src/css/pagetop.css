@@ -40,14 +40,13 @@
 }
 
 .pageTextBanner {
-    z-index: 1;
-    width: 100%;
-    position: absolute;
-    margin-top: 260px;
-    margin-bottom: 120px;
     background: rgba(0, 51, 102, 0.7);
+    margin-bottom: 120px;
+    margin-top: 260px;
     padding: 25px;
+    position: absolute;
     width: 100%;
+    z-index: 1;
 }
 
 .pageTitle {
