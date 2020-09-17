@@ -28,10 +28,9 @@
 
 .pageText {
     margin: auto;
+    padding-top: 10px;
     text-align: center;
     width: 975px;
-    margin: auto;
-    padding-top: 10px;
 }
 
 .pageText p {
@@ -41,11 +40,10 @@
 
 .plainPageText {
     margin: auto;
-    text-align: center;
-    width: 975px;
-    margin: auto;
     padding-top: 120px;
     padding-bottom: 110px;
+    text-align: center;
+    width: 975px;
 }
 
 .pageDescription p {
@@ -77,20 +75,20 @@
 .caseBannerImage {
     pointer-events: none;
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 110%;
     margin-left: -10%;
     margin-top: -50px;
+    max-width: 110%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .homeBannerImage {
     pointer-events: none;
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
     margin-left: -10%;
     max-width: 200%;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -161,7 +159,7 @@
     }
 
     .homeBannerImage {
-        max-width: 500%;
         margin-left: -50%;
+        max-width: 500%;
     }
 }
