@@ -19,13 +19,6 @@
     padding-top: 100px;
 }
 
-.digitalPageText {
-    margin: auto;
-    padding-bottom: 110px;
-    padding-top: 120px;
-    text-align: center;
-    width: 975px;
-}
 .digitalLink {
     color: #0000EE;
     cursor: pointer;
@@ -38,6 +31,14 @@
     font-size: 16px;
     line-height: 24px;
     position: relative;
+}
+
+.digitalPageText {
+    margin: auto;
+    padding-bottom: 110px;
+    padding-top: 120px;
+    text-align: center;
+    width: 975px;
 }
 
 .digitalSection {
@@ -88,6 +89,14 @@
 
 @media only screen and (max-width: 800px) {
 
+    .contentRow {
+        padding-top: 15px;
+    }
+
+    .digitalBlock {
+        margin-bottom: 25px;
+    }
+
     .digitalBody {
         width: 85%;
     }
@@ -96,20 +105,11 @@
         padding-top: 65px;
     }
 
-    .digitalTop {
-        padding-top: 60px;
-    }
-    .contentRow {
-        padding-top: 15px;
-    }
-
-    .digitalBlock {
-        margin-bottom: 25px;
-
-    }
-
-    .digitalContainer {
-        padding-top: 65px;
+    .digitalPageText {
+        margin-left: 8%;
+        padding-bottom: 80px;
+        padding-top: 140px;
+        width: 84%;
     }
 
     .digitalSection {
@@ -129,12 +129,6 @@
         padding-top: 20px;
     }    
 
-    .digitalPageText {
-        margin-left: 8%;
-        padding-bottom: 80px;
-        padding-top: 140px;
-        width: 84%;
-    }
 }
 
 @media only screen and (max-width: 400px) {
