@@ -32,8 +32,8 @@
 
 .cardImageContainerHorizontal {
     float: left;
-    overflow: hidden;
     margin-right: 25px;
+    overflow: hidden;
     width: 50%;
 }
 
