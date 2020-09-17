@@ -30,11 +30,19 @@
     overflow: hidden;
 }
 
+.cardImageContainerHorizontal {
+    float: left;
+    overflow: hidden;
+    margin-right: 25px;
+    width: 50%;
+}
+
 .cardImageHorizontal {
     float: left;
-    height: 400px;
+    height: auto;
     margin-right: 30px;
-    width: 50%;
+    max-width: 110%;
+    width: auto;
 }
 
 .cardLink {
@@ -87,20 +95,6 @@
     position: relative;
 }
 
-.cardImageContainerHorizontal {
-    float: left;
-    overflow: hidden;
-    margin-right: 25px;
-    width: 50%;
-}
-
-.cardImageHorizontal {
-    height: auto;
-    margin-right: 30px;
-    max-width: 110%;
-    width: auto;
-}
-
 .overFlowHidden {
     overflow: hidden;
 }
@@ -139,7 +133,7 @@
         overflow: hidden;
         width: 100%;
     }
-    
+
     .cardImageHorizontal {
         height: auto;
         max-width: 100%;
