@@ -3,6 +3,8 @@ import InfoCard from '../Home/infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
 
+import { ContentBlock } from '../StyleComponents/pageContent';
+
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
@@ -18,7 +20,7 @@ const links = [
 
 function DigitalCards() {
   return (
-    <div className="resourceBlock">
+    <ContentBlock>
       <div>
         <h2 className="resourceInfoTitle">Standards & Policy</h2>
       </div>
@@ -46,7 +48,7 @@ function DigitalCards() {
           </Row>
         </Grid>
       </div>
-    </div>
+    </ContentBlock>
   );
 }
 

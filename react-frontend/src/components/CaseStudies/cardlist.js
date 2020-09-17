@@ -10,13 +10,13 @@ const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
 
 const descriptions = [
-  'Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public',
+  'Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.',
   'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...',
   'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...',
 ];
 
 const CardList = () => {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
   return (
     <div className="cardContainer">
       <div className="cardGrid">

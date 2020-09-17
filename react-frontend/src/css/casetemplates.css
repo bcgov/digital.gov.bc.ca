@@ -1,17 +1,8 @@
-.contentBlock {
-    padding-bottom: 120px;
-}
-
 .pageBody {
     margin: auto;
-    width: 85%;
+    width: 1124px;
 }
 
-.pageContainer {
-    background-color: #F2F2F2;
-    padding-bottom: 70px;
-    padding-top: 100px;
-}   
 
 .pageSubtitle {
     font-size: 22pt;
@@ -37,16 +28,8 @@
         margin-right: -8px;
     }
 
-    .contentBlock {
-        padding-bottom: 60px;
-    }
-
     .pageBody {
         width: 330px;
-    }
-
-    .pageContainer {
-        padding-top: 65px;
     }
 }
 

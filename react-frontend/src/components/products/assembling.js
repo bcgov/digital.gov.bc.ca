@@ -9,6 +9,7 @@ const cards = [
         className="productCardLink"
         href="https://bcdevexchange.org/ExchangeLab"
         target="_blank"
+        rel="noopener noreferrer"
       >
         The Exchange Lab
       </a>{' '}
@@ -33,6 +34,7 @@ const cards = [
         className="productCardLink"
         href="https://www.bcdevexchange.org/DevOpsPlatform"
         target="_blank"
+        rel="noopener noreferrer"
       >
         DevOps Container Platform
       </a>
@@ -47,6 +49,7 @@ const cards = [
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
         target="_blank"
+        rel="noopener noreferrer"
       >
         IM/IT Capital Investment
       </a>{' '}

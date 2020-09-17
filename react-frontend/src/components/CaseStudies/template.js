@@ -1,9 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import '../../css/pagetop.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
-import { useParams } from 'react-router-dom';
+
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const routeMatch = {
   'farming-study': FarmerContent,
@@ -14,10 +16,6 @@ const routeMatch = {
 const Template = () => {
   const endPoint = useParams().caseStudyId;
   const content = routeMatch[endPoint];
-
-  const imgStyle = {
-    backgroundImage: 'url(' + content.backgroundImage + ')',
-  };
 
   const resources = [];
 
@@ -36,17 +34,20 @@ const Template = () => {
 
   return (
     <div>
-      <div className="pageTop" style={imgStyle}>
-        <div className="pageTextBanner transparent caseTop">
+      <div className="pageTop">
+        <img
+          className="caseBannerImage"
+          style={{ marginTop: '-50px' }}
+          alt=""
+          src={content.backgroundImage}
+        />
+        <div className="pageTextBanner caseTextBanner">
           <div className="pageText">
-            <p className="pageTitle titleShrink" style={{ color: 'white' }}>
+            <p className="pageTitle" style={{ color: 'white' }}>
               {content.title}
             </p>
             <div>
-              <p
-                className="pageDescription descriptionShrink"
-                style={{ color: 'white' }}
-              >
+              <p className="pageDescription" style={{ color: 'white' }}>
                 {' '}
                 {content.description}{' '}
               </p>
@@ -56,34 +57,34 @@ const Template = () => {
       </div>
       <div className="pageBody">
         {content.context && (
-          <div className="contentBlock">
+          <ContentBlock>
             {/* just a quick note, but subtitles like this will be handled in global css */}
             <p className="pageSubtitle">Context and Questions</p>
             {content.context}
-          </div>
+          </ContentBlock>
         )}
-        <div className="contentBlock">
+        <ContentBlock>
           <p className="pageSubtitle">The Approach</p>
           {content.approach}
-        </div>
-        <div className="contentBlock">
+        </ContentBlock>
+        <ContentBlock>
           <p className="pageSubtitle">Outcomes that Matter</p>
           {content.outcomes}
-        </div>
+        </ContentBlock>
         {content.additional && (
-          <div className="contentBlock">{content.additional}</div>
+          <ContentBlock>{content.additional}</ContentBlock>
         )}
         {resources.length !== 0 && (
-          <div className="contentBlock">
+          <ContentBlock>
             <p className="pageSubtitle">Resources and Related Information</p>
             <ul className="resourceLinkBox">{resources}</ul>
-          </div>
+          </ContentBlock>
         )}
         {content.contacts && (
-          <div className="contentBlock">
+          <ContentBlock>
             <p className="pageSubtitle">For more information</p>
             {content.contacts}
-          </div>
+          </ContentBlock>
         )}
         <div>
           <p className="pageSubtitle">Other Case Studies</p>

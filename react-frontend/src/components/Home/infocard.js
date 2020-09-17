@@ -15,8 +15,6 @@ function InfoCard({
   title,
   description,
 }) {
-  let cardHeight = 0;
-
   var isRouteCard = false;
 
   if (routePath != null) {
@@ -45,7 +43,7 @@ function InfoCard({
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <a href={linkPath} target="_blank">
+              <a href={linkPath} target="_blank" rel="noopener noreferrer">
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
@@ -73,7 +71,7 @@ function InfoCard({
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <a href={linkPath} target="_blank">
+              <a href={linkPath} target="_blank" rel="noopener noreferrer">
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
