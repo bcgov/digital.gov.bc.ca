@@ -59,11 +59,11 @@
 }
 
 .pageTop {
-    width: 100%;
-    position: relative;
-    margin-bottom: 120px;
     height: 600px;
+    margin-bottom: 120px;
     overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .plain {
