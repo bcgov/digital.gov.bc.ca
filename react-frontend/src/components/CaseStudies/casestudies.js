@@ -4,10 +4,11 @@ import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import Template from './template';
 
+import { PageContainerCaseStudies } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   return (
     <div>
       <Switch>
@@ -25,7 +26,9 @@ const CaseStudies = () => {
             </div>
           </div>
         </Route>
-        <Route path={path + '/:caseStudyId'} component={Template} />
+        <PageContainerCaseStudies>
+          <Route path={path + '/:caseStudyId'} component={Template} />
+        </PageContainerCaseStudies>
       </Switch>
     </div>
   );

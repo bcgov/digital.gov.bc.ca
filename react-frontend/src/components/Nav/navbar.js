@@ -55,27 +55,29 @@ function NavBar() {
   return (
     <div className="navBar">
       <header>
-        <div className="banner">
-          <a
-            href="https://gov.bc.ca"
-            alt="Go to the Government of British Columbia website"
-          >
-            <img
-              className="navImage"
-              src={logoPath}
+        <div className="centerBanner">
+          <div className="banner">
+            <a
+              href="https://gov.bc.ca"
               alt="Go to the Government of British Columbia website"
-            />
-          </a>
-          <h1 className="titleText">Digital Government</h1>
-        </div>
-        <div className="other">
-          <div className="nav-btn" onClick={toggleMenu} href=".">
-            <FontAwesomeIcon icon={faBars} />
+            >
+              <img
+                className="navImage"
+                src={logoPath}
+                alt="Go to the Government of British Columbia website"
+              />
+            </a>
+            <h1 className="titleText">Digital Government</h1>
           </div>
-          {/* <!-- 
-                This place is for anything that needs to be right aligned
-                beside the logo.
-                --> */}
+          <div className="other">
+            <div className="nav-btn" onClick={toggleMenu} href=".">
+              <FontAwesomeIcon icon={faBars} />
+            </div>
+            {/* <!-- 
+                  This place is for anything that needs to be right aligned
+                  beside the logo.
+                  --> */}
+          </div>
         </div>
       </header>
       <nav className="navigation-main" id="navbar">

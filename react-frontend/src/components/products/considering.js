@@ -6,14 +6,14 @@ const cards = [
   <div className="cardContent">
     <p>
       If you are facing an urgent service delivery challenge due to COVID-19,
-      connect with the{' '}
+      connect with the Digital Response Unit through the{' '}
       <a
         className="productCardLink"
         href="mailto:exchangelab@gov.bc.ca"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Digital Response Unit
+        Exchange Lab
       </a>
       , a community of digital experts who are working together to address
       urgent challenges.
@@ -25,6 +25,7 @@ const cards = [
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
         target="_blank"
+        rel="noopener noreferrer"
       >
         The Service Design team{' '}
       </a>
@@ -41,6 +42,7 @@ const cards = [
         className="productCardLink"
         href="https://procurementconcierge.gov.bc.ca/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Procurement Concierge.
       </a>
@@ -54,6 +56,7 @@ const cards = [
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/secure-cloud"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Cloud services.
       </a>
@@ -63,7 +66,7 @@ const cards = [
 
 const Considering = () => {
   return (
-    <div className="definingContainer productBlock">
+    <div className="definingContainer contentBlock">
       <div>
         <p className="productsSubtitle">
           Considering different technology approaches
@@ -77,6 +80,7 @@ const Considering = () => {
           className="productCardLink"
           href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Agile
         </a>{' '}

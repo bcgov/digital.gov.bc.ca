@@ -12,6 +12,11 @@ header {
     width: 100%;
     z-index: 1000;
   }
+
+  .centerBanner {
+    margin: auto;
+    width: 1115px;
+  }
   
   header h1 {
     font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
@@ -29,7 +34,7 @@ header {
     display: flex;
     height: 65px;
     justify-content: flex-start;
-    margin: 0 -10px 0 0;
+    margin: auto;
   }
   
   header .other {
@@ -70,7 +75,9 @@ header {
   }
 
   .navigation-main .container {
-    padding: 10px 0 10px 0;
+    margin: auto;
+    padding: 10px 0 10px 0px;
+    width: 1065px;
   }
   
   .navigation-main .container ul {
@@ -182,6 +189,10 @@ header {
       margin-left: -15px;
       margin-right: 0px;
       margin-top: -5px;
+    }
+
+    .centerBanner {
+      display: flex;
     }
 
     header h1 {

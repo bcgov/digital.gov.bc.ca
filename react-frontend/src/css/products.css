@@ -5,16 +5,16 @@
 
 .productsBody {
     margin: auto;
-    width: 85%;
+    width: 960px;
 }
 
 .instructions {
     margin-left: -3px;
 }
+
 .instructionsFirst {
-    margin-bottom: 25px;
+    padding-bottom: 30px;
     margin: auto;
-    text-align: center;
 }
 
 .instructionCol {
@@ -28,7 +28,6 @@
     margin-bottom: 5px;
     margin-left: -1px;
 }
-
 
 .cardAdjustment {
     padding-left: -8px;
@@ -65,18 +64,13 @@
     font-weight: bold;
 }
 
-.productBlock {
-    padding-bottom: 120px;
-}
-
 @media only screen and (max-width: 800px) {
     .productsContainer {
         padding-top: 65px;
     }
 
-    .productBlock {
-        margin-left: -5px;
-        padding-bottom: 60px;
+    .productsBody {
+        width: 85%;
     }
 
     .productsTitle {

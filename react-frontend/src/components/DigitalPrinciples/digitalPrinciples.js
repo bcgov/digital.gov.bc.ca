@@ -4,7 +4,7 @@ import {
   SimpleTextContainer,
   GlobaStyleSize,
 } from '../StyleComponents/pageContent';
-import { Title, Title2, Title3, Title4 } from '../StyleComponents/headings';
+import { Title, Title3 } from '../StyleComponents/headings';
 
 function DigitalPrinciples() {
   return (

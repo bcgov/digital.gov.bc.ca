@@ -10,7 +10,7 @@ const HorizontalInfoCard = (props) => {
       className="cardBodyHorizontal overFlowHidden"
       bordered={false}
       cover={
-        <div>
+        <div className="cardImageContainerHorizontal">
           <img className="cardImageHorizontal" alt="" src={props.img} />
         </div>
       }
@@ -26,7 +26,7 @@ const HorizontalInfoCard = (props) => {
           {props.routePath ? (
             <Link to={props.routePath}>{props.linkText}</Link>
           ) : (
-            <a href={props.linkPath} target="_blank">
+            <a href={props.linkPath} target="_blank" rel="noopener noreferrer">
               {props.linkText}
             </a>
           )}

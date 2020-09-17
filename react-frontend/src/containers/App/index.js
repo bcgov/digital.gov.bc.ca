@@ -7,6 +7,7 @@ import Routes from '../../components/Nav/routes';
 import BreadCrumbs from '../../components/Nav/breadcrumbs';
 
 import '../../css/global.css';
+import { RouteBody } from '../../components/StyleComponents/pageContent';
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
       <Router>
         <NavBar />
         <BreadCrumbs />
-        <div className="routeBody">
+        <RouteBody>
           <Routes />
-        </div>
+        </RouteBody>
         <Footer />
       </Router>
     </div>
