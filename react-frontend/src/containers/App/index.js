@@ -8,12 +8,14 @@ import BreadCrumbs from '../../components/Nav/breadcrumbs';
 
 import '../../css/global.css';
 import { RouteBody } from '../../components/StyleComponents/pageContent';
+import CovidBanner from '../../components/Nav/covidbanner';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <NavBar />
+        <CovidBanner />
         <BreadCrumbs />
         <RouteBody>
           <Routes />

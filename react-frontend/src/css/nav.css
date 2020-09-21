@@ -8,7 +8,7 @@ header {
     display: flex;
     padding: 0 30px 0 30px;
     position: fixed;
-    top: 0;
+    top: 30px;
     width: 100%;
     z-index: 1000;
   }
@@ -17,7 +17,23 @@ header {
     margin: auto;
     width: 1115px;
   }
-  
+
+  .covidBanner {
+    background-color: #fcba19;
+    top: 0;
+    position: fixed;
+    height: 6%;
+    width: 100%;
+    padding: 0 0 0 200px;
+    z-index: 2000;
+    margin: auto;
+  }
+
+  .covidBanner Button {
+    background-color: #fcba19;
+    border: 0;
+  }
+
   header h1 {
     font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: normal;  /* 400 */
@@ -69,7 +85,7 @@ header {
     color: #fcba19;
     display: none;
     position: fixed;
-    top: 67px;
+    top: 97px;
     width: 100%;
     z-index: 1000;
   }
@@ -171,8 +187,11 @@ header {
       font-size: 18px;
       visibility: visible;
     }
-
-    
+    .covidBanner {
+      margin:auto;
+      padding: 0px 2px 0px 2px;
+      height:9%;
+    }
   }
   
   @media screen and (min-width: 900px) {
@@ -180,9 +199,14 @@ header {
       font-size: 2.0em;
       visibility: visible;
     }
-
   }
 
+  @media screen and (max-width: 1000px) and (min-width: 800px) {
+    .covidBanner
+    {
+      padding: 0px 2px 0px 2px;
+    }
+  }
   @media screen and (max-width: 800px) {
     .navImage {
       height: 60px;
@@ -193,6 +217,11 @@ header {
 
     .centerBanner {
       display: flex;
+    }
+
+    .covidBanner {
+      padding: 0px 10px 0px 10px;
+      height: 9%;
     }
 
     header h1 {
