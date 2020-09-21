@@ -94,8 +94,10 @@ Usage:
 
 Promotes a React PR to the test and production namespaces. This is done by Importing the dev image into the respective namespaces and triggering a rollout. 
 
+Current workflow is to base this on a PR from develop branch to the master branch. Complete the merge when deployment is done, however leave the PR open.
+
 Options:
-- `PR` <number> this should be the open pull request number
+- `IMAGE_TAG` <string> This is the image tag in the tools namespace's digital-gov-frontend image stream.
 - `ENV` <string> (test|prod) used to create the github deployment in a specific environment
 
 Usage:
