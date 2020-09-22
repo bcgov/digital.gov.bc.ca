@@ -1,5 +1,5 @@
 import React from 'react';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import ProductsInstructions from './productsinstructions';
 import Defining from './defining';
 import Considering from './considering';
