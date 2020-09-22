@@ -1,20 +1,6 @@
 import styled from 'styled-components';
 
-// "pageText"
-// "pageTitle" style = {{ color: 'white' }}
-// "pageDescription"
-
-// export const PageContainerCaseStudies = styled.div`
-//   background-color: #f2f2f2;
-//   z-index: -2;
-//   padding-bottom: 70px;
-//   padding-top: 100px;
-//   @media only screen and (max-width: 800px) {
-//     padding-top: 65px;
-//   }
-// `;
-
-export const HomeBannerImage = styled.img`
+export const BannerImage = styled.div`
   margin-left: -10%;
   max-width: 200%;
   min-height: 100%;
@@ -24,6 +10,23 @@ export const HomeBannerImage = styled.img`
   @media only screen and (max-width: 800px) {
     margin-left: -50%;
     max-width: 500%;
+  }
+`;
+
+export const BannerSubTitle = styled.div`
+  p {
+    font-size: 22px;
+    position: relative;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 10pt;
+    text-align: justify;
+    p {
+      font-size: 16px;
+      text-align: center;
+      width: 100%;
+    }
   }
 `;
 
@@ -41,7 +44,32 @@ export const PageTextBanner = styled.div`
   }
 `;
 
-export const PageTop = styled.div`
+export const BannerTextWrapper = styled.div`
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+  width: 975px;
+  @media only screen and (max-width: 800px) {
+    margin-left: 8%;
+    padding-top: 80px;
+    width: 84%;
+  }
+`;
+
+export const BannerTitle = styled.p`
+  color: white;
+  font-size: 37px;
+  font-weight: bold;
+  line-height: 37px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+  @media only screen and (max-width: 800px) {
+    font-size: 31px;
+  }
+`;
+
+export const BannerWithImageWrapper = styled.div`
   height: 600px;
   margin-bottom: 120px;
   overflow: hidden;
