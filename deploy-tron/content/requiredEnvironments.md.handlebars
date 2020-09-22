@@ -1,0 +1,14 @@
+{{!-- 
+  variables
+  environment: string
+  requiredEnvironments: string[]
+ --}}
+### Uh-oh :( I can't compute
+
+This deployment is dependant on other environments being deployed first.
+
+You will not be able to deploy to __{{ environment }}__ until you have deployed first to:
+
+{{#each requiredEnvironments}}
+- {{ this }}
+{{/each}}

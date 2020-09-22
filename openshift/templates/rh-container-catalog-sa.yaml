@@ -1,0 +1,19 @@
+kind: Template
+apiVersion: v1
+objects:
+  - apiVersion: v1
+    kind: Secret
+    data:
+      .dockerconfigjson: >-
+        ${TOKEN}
+    type: kubernetes.io/dockerconfigjson
+    metadata:
+      name: ${NAME}
+parameters:
+- name: NAME
+  displayName: name
+  value: redhat-container-catalog-sa
+- name: TOKEN
+  displayName: token
+  required: true
+  description: the token for your redhat container catalog service account

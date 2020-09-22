@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'BC Sans';
+    font-style: normal;
+    src: local('BC Sans'), local('BCSans'),
+        url(./fonts/BCSans-Regular.woff)format('woff'),
+        url(./fonts/BCSans-BoldItalic.woff)format('woff'),
+        url(./fonts/BCSans-Bold.woff)format('woff'),
+        url(./fonts/BCSans-Italic.woff)format('woff');
+}
+
+p, h1, h2, h3, h4, li {
+    font-family: 'BC Sans';
+    color: #313132;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}

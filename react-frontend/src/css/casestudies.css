@@ -1,0 +1,101 @@
+.cardGrid {
+    margin-left: -7px;
+}
+
+.caseStudyContainer {
+    background-color: #F2F2F2;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.caseStudyDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    line-height: 12pt;
+    position: relative;
+}
+
+.caseStudyHeader {
+    background-color: lightblue;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/515d020be4b0bca14d771121/1509248973895-EF4RRDSAMM3GMRW7BQ7F/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/robbthompson_2017-08-24_3096.jpg?format=2500w");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 600px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.caseStudyInfo {
+    margin-left: -7px;
+}
+
+.caseStudyInfoTitle {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.caseStudyLink {
+    font-family: 'BC Sans';
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.caseStudyText {
+    bottom: 20%;
+    color: white;
+    font-family: 'BC Sans';
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 1124px;
+}
+
+.caseStudyTitle {
+    font-family: 'BC Sans';
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 44px;
+    position: relative;
+    text-align: center;
+}
+
+.standardInfo {
+    margin-bottom: 15px;
+}
+
+.standardInfoTitle {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .caseStudyContainer {
+        padding-top: 65px;
+    }
+
+    .caseStudyInfo {
+        margin-left: -7px;
+    }
+
+    .standardInfoTitle {
+        margin-bottom: -15px;
+    }
+
+    .standards {
+        margin-bottom: 10px;
+        margin: auto;
+        width: 330px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .standardInfoTitle {
+            margin-bottom: 0;
+        }
+    }
+}

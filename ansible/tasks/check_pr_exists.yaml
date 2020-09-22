@@ -1,0 +1,10 @@
+---
+  - name: check pr exists and is open
+    uri:
+      url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
+      return_content: yes
+    register: pull_request
+
+  - fail: 
+      msg: PR {{ PR }} does not exist or is closed
+    when: "'closed' in pull_request.json.state"

@@ -1,0 +1,11 @@
+---
+- name: Setup Mongo query
+  set_fact:
+    check_status: rs.printSlaveReplicationInfo()
+
+- name: Wait for replicas to sync up
+  raw: scl enable rh-mongodb36 'mongo admin -u admin -p $MONGODB_ADMIN_PASSWORD --eval "{{ check_status }}"'
+  register: result
+  until: result.stdout_lines.count("\t0 secs (0 hrs) behind the primary ") == 2
+  delay: 15
+  retries: 20

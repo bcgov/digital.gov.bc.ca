@@ -1,0 +1,13 @@
+---
+  - hosts: localhost
+    vars:
+      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      deploy: yes
+    tasks:
+      - name: Build React Project
+        include: ./tasks/build_react.yaml
+
+      - name: deploying to {{ dev_namespace}}
+        include: ./tasks/deploy_react_to_dev.yaml
+        when: deploy
+

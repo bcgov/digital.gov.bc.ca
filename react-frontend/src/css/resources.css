@@ -1,0 +1,156 @@
+.resourceContainer {
+    background-color: #F2F2F2;
+    padding-top: 100px;
+}
+
+.resourceTop {
+    background: none;
+    height: auto;
+}
+.resourcesBody {
+    margin: auto;
+    width: 960px;
+}
+
+.resourcesBanner {
+	padding: 120px 0;
+    background: none;
+}
+
+.resourceInfoTitle {
+    font-size: 31px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.resourceInfoForTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.standardInfo {
+    margin-bottom: 15px;
+}
+
+.standardInfoTitle {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resourceLink a {
+    font-family: 'BC Sans';
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.resourceLink a {
+    color: #1a5a96;
+}
+
+.resourceLink a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.resourceContainer {
+    width: 100%;
+}
+
+.digitalCards {
+    align-content: left;
+    margin-bottom: 40px;
+    margin: auto;
+}
+
+.digitalSubtitle {
+    font-size: 16pt;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+}
+
+.cardGrid {
+    margin-left: -7px;
+}
+
+.forDesigners {
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.pageText p {
+    color: #313132;
+}
+
+.forDevelopers {
+    margin-bottom: 40px;
+    margin: auto;
+}
+
+.guides {
+    margin-bottom: 40px; 
+}
+
+.standards {
+    margin-bottom: 40px; 
+}
+
+.standards a {
+    font-weight: bold;
+}
+
+.forDesignersInfo {
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+.forDesignersInfo .resourceLink {
+    font-weight: bold;
+}
+.guidesImg {
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    width: auto;
+}
+
+.cardAdjustment {
+    margin-left: -8px;
+    margin-right: -8px;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .resourcesBody {
+        margin: auto;
+        width: 330px;
+    }
+
+    .standardInfoTitle {
+        margin-bottom: 0px;
+    }
+
+    .resourceInfo {
+        margin-left: -7px;
+    }
+
+    .resourceInfoTitle {
+        padding-left: 0px;
+    }
+
+    .resourceContainer {
+        padding-top: 65px;
+    }
+
+    .guidesImg {
+        width: 330px;
+    }
+
+    .resourceTop {
+        padding-top: 100px;
+    }
+}

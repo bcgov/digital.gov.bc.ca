@@ -1,0 +1,23 @@
+---
+# requires env gh_env which is a mapping to github deployment standard environments 
+  - name: Find an existing deployment for {{ gh_env }}
+    uri:
+      url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments?ref={{ ref }}&environment={{ gh_env }}
+      method: GET
+    register: deployment_found
+
+  - name: Setting old deployments to inactive
+    uri:
+      url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ item.id }}/statuses?
+      method: POST
+      body: 
+        description: "This deployment has been canceled in preparation for a new deployment"
+        state: inactive
+        environment: "{{ gh_env }}"
+      status_code: 201
+      body_format: json
+      headers:
+        Authorization: token {{ GITHUB_TOKEN }}
+        Accept: application/vnd.github.ant-man-preview+json
+    loop: "{{ deployment_found.json }}"
+

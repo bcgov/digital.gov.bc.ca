@@ -1,0 +1,97 @@
+kind: Template
+apiVersion: v1
+objects:
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    spec:
+      failedBuildsHistoryLimit: 5
+      nodeSelector: null
+      output:
+        imageLabels: 
+          - value: ${NAME}-${SUFFIX}
+            name: build
+          - value: ${PULL_REQUEST_NUMBER}
+            name: pr 
+        to:
+          kind: ImageStreamTag
+          name: '${NAME}:${IMAGE_TAG}'
+      postCommit: {}
+      resources: 
+        requests:
+          memory: 1Gi
+          cpu: 250m
+        limits:
+          memory: 1280Mi
+          cpu: 300m
+      runPolicy: Serial
+      source:
+        contextDir: react-frontend
+        git:
+          ref: ${GIT_REF}
+          uri: ${GIT_REPO}
+        type: Git
+      strategy:
+        sourceStrategy:
+          env:
+          - name: BUILD_LOGLEVEL
+            value: "5"
+          from:
+            kind: ImageStreamTag
+            name: caddy-s2i-builder:latest
+          incremental: false
+        type: Source
+      successfulBuildsHistoryLimit: 5
+      triggers:
+        - type: ConfigChange
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewBuild
+      labels:
+        build: ${NAME}-${SUFFIX}
+        pr: ${PULL_REQUEST_NUMBER}
+        version: ${IMAGE_TAG}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    spec:
+      lookupPolicy:
+        local: false
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewBuild
+      generation: 1
+      labels:
+        build: ${NAME}
+        group: ${NAME}
+      name: ${NAME}
+      apiVersion: image.openshift.io/v1
+parameters:
+- name: IMAGE_TAG
+  default: dev
+  required: true 
+  description: The output image tag for the buildconfig
+  displayName: Image tag
+- name: PULL_REQUEST_NUMBER
+  default: 0
+  required: false 
+  description: The pull request number associated with this object
+  displayName: Pull Request Number
+- name: GIT_REF
+  required: true
+  description: The git branch the buildconfig is based off of 
+  displayName: git ref
+- name: GIT_REPO
+  required: true
+  value: https://github.com/bcgov/digital.gov.bc.ca
+  description: The git repo the buildconfig is based off of 
+  displayName: git repo
+- name: NAME
+  required: true
+  default: digital-gov-frontend
+  displayName: App name
+  description: name for components (this will also change labels)
+- name: SUFFIX
+  required: true
+  description: a suffix used in conjunction with NAME to further isolate different instances of these components
+  displayName: suffix

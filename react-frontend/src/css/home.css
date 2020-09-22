@@ -1,0 +1,42 @@
+.homeContainer {
+    background-color: #F2F2F2;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.cardContainer {
+    margin: auto;
+    width: 960px;
+}
+
+@media only screen and (max-width: 800px) {
+    .homeContainer {
+        padding-top: 65px;
+        z-index: 0;
+    }
+    .homeHeader {
+        height: 530px;
+        z-index: 0;
+    }
+
+    .homeText {
+        bottom: 0%;
+        width: 336px;
+        z-index: 0;    
+    }
+
+    .cardContainer {
+        margin: auto;
+        width: 330px;
+        z-index: 0;
+    }
+
+    .cardGrid {
+        margin-left: -7px;
+    }
+
+    .homeContainer {
+        padding-top: 65px;
+        z-index: 0;
+    }
+}

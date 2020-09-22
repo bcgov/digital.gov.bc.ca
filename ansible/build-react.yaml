@@ -1,0 +1,45 @@
+---
+  - hosts: localhost
+    gather_facts: no
+    vars:
+      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      deploy: false
+      image_namespace: "{{ tools_namespace }}"
+      suffix: "{{ version }}"
+      infra_name: "{{ react_infra_name }}"
+    tasks:
+      - name: Pre checks
+        include: ./tasks/check_pr_exists.yaml
+
+      - name: Check if valid author
+        include: ./tasks/check_if_valid_pr_author.yaml
+
+      - name: Check if should build 
+        include: ./tasks/check_if_should_build.yaml
+        when: is_valid_author
+
+      - debug:
+          msg:
+            - not rebuilding react project, the commits match
+        when: not should_build
+
+      - name: Build React Project
+        include: ./tasks/build_react.yaml
+        when: 
+          - should_build
+          - is_valid_author
+
+      - name: Deploying to dev
+        debug:
+          msg:
+            - remember the deployment will hang until the build is complete you can monitor deployments/builds inside the console or
+            - oc describe -n {{ tools_namespace }} bc/{{ react_infra_name }}-{{ version }}
+            - oc describe -n {{ dev_namespace }} dc/{{ react_infra_name }}-{{ version }}
+        when: deploy
+
+      - name: deploying to {{ dev_namespace}}
+        include: ./tasks/deploy_react.yaml
+        when: deploy
+        vars:
+          namespace: "{{ dev_namespace }}"
+

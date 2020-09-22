@@ -1,0 +1,75 @@
+{
+  "name": "testreact",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.3.3",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.0.0",
+    "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.13.1",
+    "react-flexbox-grid": "^2.1.2",
+    "react-markdown": "^4.3.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-scroll": "^1.8.0",
+    "styled-components": "^5.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:test": "start-server-and-test start http://localhost:3000 cy:run"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-jest": "^24.9.0",
+    "cypress": "^4.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "react-test-renderer": "^16.13.1",
+    "start-server-and-test": "^1.11.0",
+    "typescript": "^3.9.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": [
+        "lint-staged"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+---
+  - hosts: localhost
+    vars:
+      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
+      namespace: "{{ dev_namespace }}"
+      suffix: "{{ version }}"
+      image_namespace: "{{ tools_namespace }}"
+    tasks:
+      - name: check images
+        include: ./tasks/check_image_exists.yaml
+      - name: Deploying to dev
+        include: ./tasks/deploy_react.yaml
