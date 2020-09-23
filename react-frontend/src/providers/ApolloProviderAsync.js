@@ -25,7 +25,6 @@ function ApolloProviderAsync(props) {
     if (strapiURL) {
       setClient(new ApolloClient({ uri: strapiURL }));
     }
-    console.log('This was called!');
   }, [config, strapiURL]);
 
   return <ApolloProvider client={client}>{props.children}</ApolloProvider>;
