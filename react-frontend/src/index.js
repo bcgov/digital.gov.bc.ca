@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import { ApolloProvider } from 'react-apollo';
-import client from './utils/apolloClient';
 import './index.css';
 import App from './containers/App';
-
+import { AppConfig } from './providers/AppConfig';
+import ApolloProviderAsync from './providers/ApolloProviderAsync';
 /*
  * If you want your app to work offline and load faster, you can change
  * unregister() to register() below. Note this comes with some pitfalls.
@@ -14,9 +12,10 @@ import App from './containers/App';
 //serviceWorker.unregister();
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
-
+  <AppConfig>
+    <ApolloProviderAsync>
+      <App />
+    </ApolloProviderAsync>
+  </AppConfig>,
   document.getElementById('root')
 );
