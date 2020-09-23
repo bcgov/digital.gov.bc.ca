@@ -3,13 +3,13 @@ import Query from '../Query';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import InfoCard from '../Home/infocard';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import BannerSimple from '../PageElements/BannerSimple/bannerSimple';
 import GUIDES_QUERY from '../../queries/guide/guides';
 
 const GuidesPage = () => {
   return (
     <div className="pageContainer">
-      <SimpleBanner
+      <BannerSimple
         title="Useful Guides"
         description="Guides to help public sector employees embrace modern digital technology."
       />

@@ -34,6 +34,20 @@ export const BannerSubTitle = styled.div.attrs({
   }
 `;
 
+export const BannerText = styled.div.attrs({
+  className: 'bannerText',
+})`
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+  width: 975px;
+  @media only screen and (max-width: 800px) {
+    margin-left: 8%;
+    padding-top: 80px;
+    width: 84%;
+  }
+`;
+
 export const BannerTextWrapper = styled.div.attrs({
   className: 'bannerTextWrapper',
 })`
@@ -47,20 +61,6 @@ export const BannerTextWrapper = styled.div.attrs({
   @media only screen and (max-width: 800px) {
     margin-top: 60px;
     padding-top: 0;
-  }
-`;
-
-export const BannerText = styled.div.attrs({
-  className: 'bannerText',
-})`
-  margin: auto;
-  padding-top: 10px;
-  text-align: center;
-  width: 975px;
-  @media only screen and (max-width: 800px) {
-    margin-left: 8%;
-    padding-top: 80px;
-    width: 84%;
   }
 `;
 
