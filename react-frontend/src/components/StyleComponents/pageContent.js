@@ -17,7 +17,9 @@ export const SimpleTextContainer = styled.div`
   padding-right: 15px;
 `;
 
-export const PageContainer = styled.div`
+export const PageContainer = styled.div.attrs({
+  className: 'pageContainer',
+})`
   background-color: #f2f2f2;
   z-index: -2;
   @media only screen and (max-width: 800px) {
@@ -36,7 +38,9 @@ export const PageContainerCaseStudies = styled.div`
   }
 `;
 
-export const RouteBody = styled.div`
+export const RouteBody = styled.div.attrs({
+  className: 'routeBody',
+})`
   background-color: #f2f2f2;
   z-index: -2;
   @media only screen and (max-width: 800px) {

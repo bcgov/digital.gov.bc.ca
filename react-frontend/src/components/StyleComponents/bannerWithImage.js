@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const BannerImage = styled.div`
+export const BannerImage = styled.img.attrs({
+  className: 'bannerImage',
+})`
   margin-left: -10%;
   max-width: 200%;
   min-height: 100%;
@@ -13,7 +15,9 @@ export const BannerImage = styled.div`
   }
 `;
 
-export const BannerSubTitle = styled.div`
+export const BannerSubTitle = styled.div.attrs({
+  className: 'bannerSubTitle',
+})`
   p {
     font-size: 22px;
     position: relative;
@@ -30,7 +34,9 @@ export const BannerSubTitle = styled.div`
   }
 `;
 
-export const PageTextBanner = styled.div`
+export const BannerTextWrapper = styled.div.attrs({
+  className: 'bannerTextWrapper',
+})`
   background: rgba(0, 51, 102, 0.7);
   margin-bottom: 120px;
   margin-top: 260px;
@@ -44,7 +50,9 @@ export const PageTextBanner = styled.div`
   }
 `;
 
-export const BannerTextWrapper = styled.div`
+export const BannerText = styled.div.attrs({
+  className: 'bannerText',
+})`
   margin: auto;
   padding-top: 10px;
   text-align: center;
@@ -56,7 +64,9 @@ export const BannerTextWrapper = styled.div`
   }
 `;
 
-export const BannerTitle = styled.p`
+export const BannerTitle = styled.p.attrs({
+  className: 'bannerTitle',
+})`
   color: white;
   font-size: 37px;
   font-weight: bold;
@@ -69,7 +79,9 @@ export const BannerTitle = styled.p`
   }
 `;
 
-export const BannerWithImageWrapper = styled.div`
+export const BannerWithImageWrapper = styled.div.attrs({
+  className: 'banner',
+})`
   height: 600px;
   margin-bottom: 120px;
   overflow: hidden;
