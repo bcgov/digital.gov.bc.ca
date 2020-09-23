@@ -8,7 +8,7 @@ header {
     display: flex;
     padding: 0 30px 0 30px;
     position: fixed;
-    top: 30px;
+    top: 24px;
     width: 100%;
     z-index: 1000;
   }
@@ -16,22 +16,6 @@ header {
   .centerBanner {
     margin: auto;
     width: 1115px;
-  }
-
-  .covidBanner {
-    background-color: #fcba19;
-    top: 0;
-    position: fixed;
-    height: 6%;
-    width: 100%;
-    padding: 0 0 0 200px;
-    z-index: 2000;
-    margin: auto;
-  }
-
-  .covidBanner Button {
-    background-color: #fcba19;
-    border: 0;
   }
 
   header h1 {
@@ -85,7 +69,7 @@ header {
     color: #fcba19;
     display: none;
     position: fixed;
-    top: 97px;
+    top: 91px;
     width: 100%;
     z-index: 1000;
   }
@@ -187,11 +171,6 @@ header {
       font-size: 18px;
       visibility: visible;
     }
-    .covidBanner {
-      margin:auto;
-      padding: 0px 2px 0px 2px;
-      height:9%;
-    }
   }
   
   @media screen and (min-width: 900px) {
@@ -201,12 +180,15 @@ header {
     }
   }
 
-  @media screen and (max-width: 1000px) and (min-width: 800px) {
-    .covidBanner
-    {
-      padding: 0px 2px 0px 2px;
+  @media screen and (max-width: 840px) {
+    header {
+      top:40px;
+    }
+    .navigation-main {
+      top: 107px;
     }
   }
+
   @media screen and (max-width: 800px) {
     .navImage {
       height: 60px;
@@ -217,11 +199,6 @@ header {
 
     .centerBanner {
       display: flex;
-    }
-
-    .covidBanner {
-      padding: 0px 10px 0px 10px;
-      height: 9%;
     }
 
     header h1 {

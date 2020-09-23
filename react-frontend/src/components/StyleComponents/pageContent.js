@@ -50,3 +50,25 @@ export const ContentBlock = styled.div`
     padding-bottom: 60px;
   }
 `;
+
+export const CovidBannerStyle = styled.div`
+  background-color: #355992;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+`;
+
+export const EmptyBannerStyle = styled.div`
+    height:0%;
+    padding: 0;
+    z-index=0;
+`;
+
+export const CovidButtonStyle = styled.a`
+  background-color: #355992;
+  border: 0;
+  width: 20%;
+  float: right;
+  vertical-align: top;
+`;
