@@ -17,28 +17,6 @@
     position: relative;
 }
 
-.pageText {
-    margin: auto;
-    padding-top: 10px;
-    text-align: center;
-    width: 975px;
-}
-
-.pageText p {
-    color: white;
-    font-weight: bold;
-}
-
-.pageTextBanner {
-    background: rgba(0, 51, 102, 0.7);
-    margin-bottom: 120px;
-    margin-top: 260px;
-    padding: 25px;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
 .pageTitle {
     font-size: 37px;
     font-weight: bold;
@@ -48,13 +26,6 @@
     text-align: center;
 }
 
-.pageTop {
-    height: 600px;
-    margin-bottom: 120px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
 
 .plain {
     background-color: #f2f2f2;
@@ -98,27 +69,8 @@
         width: 100%;
     }
 
-    .pageText {
-        margin-left: 8%;
-        padding-top: 80px;
-        width: 84%;
-    }
-
-    .pageTextBanner {
-        margin-top: 60px;
-        padding-top: 0;
-    }
-
     .pageTitle {
         font-size: 31px;
-    }
-
-    .pageTop {
-        height: 520px;
-        margin-bottom: 60px;
-        margin-top: -50px;
-        padding-bottom: 40px;
-        padding-top: 40px;
     }
 
     .titleShrink {
