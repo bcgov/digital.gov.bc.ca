@@ -1,5 +1,4 @@
 import React from 'react';
-import HomeBanner from './homebanner';
 import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 import CardList from './cardlist';
 import '../../css/home.css';
