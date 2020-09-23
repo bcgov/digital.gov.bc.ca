@@ -24,7 +24,6 @@ const homeImage = require('../../images/home-banner.png');
 function Home() {
   return (
     <PageContainer>
-      {/* <HomeBanner /> */}
       <BannerWithImage
         content={bannerContent}
         title={bannerTitle}
