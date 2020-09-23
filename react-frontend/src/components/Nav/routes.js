@@ -39,7 +39,7 @@ const Routes = () => {
         <CollaborationTools />
       </Route>
       <Route path="/">
-        <Home className="homePage" />
+        <Home />
       </Route>
     </Switch>
   );
