@@ -4,6 +4,7 @@ import '../../css/pagetop.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
+import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
 
@@ -13,7 +14,7 @@ const routeMatch = {
   'mining-study': MiningContent,
 };
 
-const Template = () => {
+const CaseStudy = () => {
   const endPoint = useParams().caseStudyId;
   const content = routeMatch[endPoint];
 
@@ -34,27 +35,11 @@ const Template = () => {
 
   return (
     <div>
-      <div className="pageTop">
-        <img
-          className="caseBannerImage"
-          style={{ marginTop: '-50px' }}
-          alt=""
-          src={content.backgroundImage}
-        />
-        <div className="pageTextBanner caseTextBanner">
-          <div className="pageText">
-            <p className="pageTitle" style={{ color: 'white' }}>
-              {content.title}
-            </p>
-            <div>
-              <p className="pageDescription" style={{ color: 'white' }}>
-                {' '}
-                {content.description}{' '}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BannerWithImage
+        content={content.description}
+        title={content.title}
+        image={content.backgroundImage}
+      />
       <div className="pageBody">
         {content.context && (
           <ContentBlock>
@@ -95,4 +80,4 @@ const Template = () => {
   );
 };
 
-export default Template;
+export default CaseStudy;

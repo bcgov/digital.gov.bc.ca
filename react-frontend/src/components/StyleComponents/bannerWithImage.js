@@ -19,6 +19,7 @@ export const BannerSubTitle = styled.div.attrs({
   className: 'bannerSubTitle',
 })`
   p {
+    color: white;
     font-size: 22px;
     position: relative;
   }
