@@ -4,6 +4,8 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import { NavTitle } from '../StyleComponents/nav';
+
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -67,7 +69,7 @@ function NavBar() {
                 alt="Go to the Government of British Columbia website"
               />
             </a>
-            <h1 className="titleText">Digital Government</h1>
+            <NavTitle>Digital Government</NavTitle>
           </div>
           <div className="other">
             <div className="nav-btn" onClick={toggleMenu} href=".">
