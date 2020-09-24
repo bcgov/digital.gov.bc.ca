@@ -5,7 +5,6 @@ import {
   CovidBannerStyle,
   CovidButtonStyle,
 } from '../StyleComponents/pageContent';
-import '../../css/nav.css';
 
 function CovidBanner() {
   const [showBanner, setShowBanner] = useState(true);
