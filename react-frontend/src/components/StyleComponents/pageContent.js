@@ -68,7 +68,7 @@ export const EmptyBannerStyle = styled.div`
 export const CovidButtonStyle = styled.a`
   background-color: #355992;
   border: 0;
-  width: 20%;
   float: right;
   vertical-align: top;
+  width: 20%;
 `;
