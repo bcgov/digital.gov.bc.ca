@@ -8,6 +8,7 @@ import {
   CovidLinkStyle,
 } from '../StyleComponents/pageContent';
 import { InfoCircleOutlined } from '@ant-design/icons';
+import { CloseOutlined } from '@ant-design/icons';
 
 function CovidBanner() {
   const [showBanner, setShowBanner] = useState(true);
@@ -27,10 +28,11 @@ function CovidBanner() {
               <CovidTextStyle>
                 <table align="center">
                   <tr>
-                    <td width="9%" valign="top" align="right">
+                    <td width="8%" valign="top" align="right">
                       <InfoCircleOutlined />
                     </td>
                     <td width="80%">
+                      {' '}
                       B.C. has declared a state of emergency. Learn about{' '}
                       <CovidLinkStyle href="http://covid-19.bccdc.ca/?utm_campaign=20200323_GCPE_AM_COVID_7_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION">
                         COVID-19 health issues.
@@ -40,7 +42,7 @@ function CovidBanner() {
                         B.C.'s response to COVID-19.{' '}
                       </CovidLinkStyle>
                     </td>
-                    <td width="11%" align="center" valign="top">
+                    <td width="10%" align="center" valign="top">
                       <CovidButtonStyle>
                         <a
                           href=""
