@@ -32,8 +32,8 @@ export const BannerText = styled.div.attrs({
 export const BannerTextWrapper = styled.div.attrs({
   className: 'bannerTextWrapper',
 })`
-  margin-bottom: 200px;
-  padding-top: 100px;
+  margin-bottom: 150px;
+  padding-top: 150px;
   width: 100%;
   z-index: 1;
   @media only screen and (max-width: 800px) {
