@@ -1,16 +1,23 @@
 import React from 'react';
-import '../../../css/pagetop.css';
+
+import {
+  BannerSubTitle,
+  BannerText,
+  BannerTextWrapper,
+  BannerTitle,
+  BannerSimpleWrapper,
+} from '../../StyleComponents/bannerSimple';
 
 const SimpleBanner = ({ title, description }) => {
   return (
-    <div className="plainPageText">
-      <div>
-        <p className="pageTitle">{title}</p>
-      </div>
-      <div className="pageDescription">
-        <p> {description}</p>
-      </div>
-    </div>
+    <BannerSimpleWrapper>
+      <BannerTextWrapper>
+        <BannerText>
+          <BannerTitle>{title}</BannerTitle>
+          <BannerSubTitle>{description}</BannerSubTitle>
+        </BannerText>
+      </BannerTextWrapper>
+    </BannerSimpleWrapper>
   );
 };
 

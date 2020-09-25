@@ -20,7 +20,7 @@ const CaseStudy = () => {
 
   const resources = [];
 
-  if (content.resourceText) {
+  if (content && content.resourceText) {
     for (var i = 0; i < content.resourceText.length; i++) {
       const insert = (
         <li key={i}>
@@ -31,6 +31,8 @@ const CaseStudy = () => {
       );
       resources.push(insert);
     }
+  } else {
+    return <BannerWithImage title={'Case Study Not Found'} />;
   }
 
   return (

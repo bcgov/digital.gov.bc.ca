@@ -29,10 +29,13 @@ export const PageContainer = styled.div.attrs({
 `;
 
 //TODO: Fix padding top maybe
-export const PageContainerCaseStudies = styled.div`
+export const PageContainerCaseStudies = styled.div.attrs({
+  className: 'pageContainerCaseStudy',
+})`
   background-color: #f2f2f2;
   z-index: -2;
   padding-bottom: 70px;
+  width: 100%;
   @media only screen and (max-width: 800px) {
     padding-top: 65px;
   }
