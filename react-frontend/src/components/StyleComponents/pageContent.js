@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobaStyleSize = createGlobalStyle`
@@ -56,7 +57,14 @@ export const CovidBannerStyle = styled.div`
   color: #fff;
   position: fixed;
   width: 100%;
-  z-index: 1001;
+  z-index: 1000;
+`;
+
+export const CovidTextStyle = styled.table`
+  background-color: #355992;
+  color: white;
+  font-size: 18px;
+  width: 100%;
 `;
 
 export const EmptyBannerStyle = styled.div`
@@ -71,4 +79,21 @@ export const CovidButtonStyle = styled.a`
   float: right;
   vertical-align: top;
   width: 20%;
+  font-weight: bold;
+`;
+
+const Link = ({ className, children, href }) => (
+  <a className={className} href={href}>
+    {children}
+  </a>
+);
+
+export const CovidLinkStyle = styled(Link)`
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+  :hover {
+    color: grey;
+  }
+  }
 `;
