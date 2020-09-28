@@ -77,9 +77,9 @@ export const CovidButtonStyle = styled.a`
   background-color: #355992;
   border: 0;
   float: right;
+  font-weight: bold;
   vertical-align: top;
   width: 20%;
-  font-weight: bold;
 `;
 
 const Link = ({ className, children, href }) => (
@@ -91,9 +91,9 @@ const Link = ({ className, children, href }) => (
 export const CovidLinkStyle = styled(Link)`
   color: white;
   font-weight: 700;
-  text-decoration: underline;
   :hover {
     color: grey;
   }
+  text-decoration: underline;
   }
 `;
