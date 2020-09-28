@@ -63,6 +63,7 @@ export const CovidBannerStyle = styled.div`
 export const CovidTextStyle = styled.table`
   background-color: #355992;
   color: white;
+  font-family: 'BC Sans';
   font-size: 18px;
   width: 100%;
 `;

@@ -211,12 +211,18 @@ header {
     }
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (min-width: 280px) and (max-width: 430px) {
     header {
-      top:94px;
+      top:121px;
     }
   }
 
+  @media screen and (min-width: 430px) and (max-width: 596px) {
+    header {
+      top:100px;
+    }
+  }
+  
   @media screen and (max-width: 400px) {
     header h1 {
       font-size: 12pt;

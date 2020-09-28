@@ -7,7 +7,7 @@ import {
   CovidTextStyle,
   CovidLinkStyle,
 } from '../StyleComponents/pageContent';
-import { InfoCircleOutlined } from '@ant-design/icons';
+import { InfoCircleFilled } from '@ant-design/icons';
 import { CloseOutlined } from '@ant-design/icons';
 
 function CovidBanner() {
@@ -29,7 +29,7 @@ function CovidBanner() {
                 <table align="center">
                   <tr>
                     <td width="8%" valign="top" align="right">
-                      <InfoCircleOutlined />
+                      <InfoCircleFilled />
                     </td>
                     <td width="80%">
                       {' '}
