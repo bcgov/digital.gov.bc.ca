@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/pagetop.css';
+import '../../../css/pagetop.css';
 
 const SimpleBanner = ({ title, description }) => {
   return (

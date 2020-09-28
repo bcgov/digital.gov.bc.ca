@@ -1,8 +1,8 @@
 import React from 'react';
 import Query from '../Query';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Grid } from 'react-flexbox-grid';
 import ReactMarkdown from 'react-markdown';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import BannerSimple from '../PageElements/BannerSimple/bannerSimple';
 import GUIDE_QUERY from '../../queries/guide/guide';
 import { useParams } from 'react-router-dom';
 import {
@@ -15,7 +15,7 @@ const GuidePage = () => {
   const params = useParams();
   return (
     <div>
-      <SimpleBanner
+      <BannerSimple
         title="Test guide page"
         description="It's dangerous to go it alone, take these."
       />

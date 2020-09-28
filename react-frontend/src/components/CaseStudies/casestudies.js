@@ -1,10 +1,10 @@
 import React from 'react';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import Template from './template';
+import CaseStudy from './caseStudy';
 
-import { PageContainerCaseStudies } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
@@ -26,9 +26,9 @@ const CaseStudies = () => {
             </div>
           </div>
         </Route>
-        <PageContainerCaseStudies>
-          <Route path={path + '/:caseStudyId'} component={Template} />
-        </PageContainerCaseStudies>
+        <PageContainer>
+          <Route path={path + '/:caseStudyId'} component={CaseStudy} />
+        </PageContainer>
       </Switch>
     </div>
   );
