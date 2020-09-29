@@ -20,6 +20,10 @@ const CaseStudy = () => {
 
   const resources = [];
 
+  if (!content) {
+    return <BannerWithImage title={'Case Study Not Found'} />;
+  }
+
   if (content.resourceText) {
     for (var i = 0; i < content.resourceText.length; i++) {
       const insert = (

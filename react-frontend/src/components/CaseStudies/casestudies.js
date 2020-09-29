@@ -13,9 +13,7 @@ const CaseStudies = () => {
     <div>
       <Switch>
         <Route exact path={path}>
-          <div className="caseStudyContainer">
-            {/* Note the refactor here may conflict with desired styling due to th
-            digitalTop classname added to simple banner*/}
+          <PageContainer>
             <SimpleBanner
               title="Case Studies"
               description="Learn how digital approaches are getting results here in British
@@ -24,7 +22,7 @@ const CaseStudies = () => {
             <div className="caseStudyBody">
               <CardList />
             </div>
-          </div>
+          </PageContainer>
         </Route>
         <PageContainer>
           <Route path={path + '/:caseStudyId'} component={CaseStudy} />

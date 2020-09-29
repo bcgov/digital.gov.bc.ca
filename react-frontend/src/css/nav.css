@@ -1,3 +1,5 @@
+/* TODO: Remove the this file and move content in
+ the nav.js styled component file */
 header {
     -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
     -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
@@ -16,16 +18,6 @@ header {
   .centerBanner {
     margin: auto;
     width: 1115px;
-  }
-
-  header h1 {
-    font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-    font-weight: normal;  /* 400 */
-    margin: 0px 5px 0px 25px;
-  }
-  
-  .titleText {
-      color: white;
   }
 
   header .banner {
@@ -166,20 +158,6 @@ header {
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 899px) {
-    header h1 {
-      font-size: 18px;
-      visibility: visible;
-    }
-  }
-  
-  @media screen and (min-width: 900px) {
-    header h1 {
-      font-size: 2.0em;
-      visibility: visible;
-    }
-  }
-
   @media screen and (max-width: 1120px) {
     header {
       top:64px;
@@ -201,11 +179,6 @@ header {
       display: flex;
     }
 
-    header h1 {
-      font-size: 18px;
-      visibility: visible;
-    }
-
     .navigation-main .container ul {
       margin-left: -28px;
     }
@@ -224,10 +197,6 @@ header {
   }
   
   @media screen and (max-width: 400px) {
-    header h1 {
-      font-size: 12pt;
-      margin: 0px 5px 0px -5%;
-    }
 
     .navImage {
       margin-left: -15px;
