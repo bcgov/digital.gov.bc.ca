@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const CaseStudyHeading = styled.h2.attrs({
+  className: 'caseStudyHeading',
+})`
+  font-size: 22pt;
+  font-weight: bold;
+  margin-bottom: 24px;
+`;
+
 export const DigitalPrinciplesHeading = styled.h2.attrs({
   className: 'digitalPrinciplesHeading',
 })`
