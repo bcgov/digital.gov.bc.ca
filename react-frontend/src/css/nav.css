@@ -10,7 +10,7 @@ header {
     display: flex;
     padding: 0 30px 0 30px;
     position: fixed;
-    top: 0;
+    top: 45px;
     width: 100%;
     z-index: 1000;
   }
@@ -61,7 +61,7 @@ header {
     color: #fcba19;
     display: none;
     position: fixed;
-    top: 67px;
+    top: 111px;
     width: 100%;
     z-index: 1000;
   }
@@ -158,6 +158,15 @@ header {
     }
   }
 
+  @media screen and (max-width: 1120px) {
+    header {
+      top:64px;
+    }
+    .navigation-main {
+      top: 130px;
+    }
+  }
+
   @media screen and (max-width: 800px) {
     .navImage {
       height: 60px;
@@ -175,6 +184,18 @@ header {
     }
   }
 
+  @media screen and (min-width: 280px) and (max-width: 430px) {
+    header {
+      top:121px;
+    }
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 596px) {
+    header {
+      top:100px;
+    }
+  }
+  
   @media screen and (max-width: 400px) {
 
     .navImage {
