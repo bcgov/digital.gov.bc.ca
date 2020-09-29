@@ -18,11 +18,9 @@ const Products = () => {
       />
       <div className="productsBody">
         <ProductsInstructions />
-        <div>
-          <ProductPageHeading>
-            Here are some services to help you along this journey:
-          </ProductPageHeading>
-        </div>
+        <ProductPageHeading>
+          Here are some services to help you along this journey:
+        </ProductPageHeading>
         <Defining />
         <Considering />
         <Assembling />
