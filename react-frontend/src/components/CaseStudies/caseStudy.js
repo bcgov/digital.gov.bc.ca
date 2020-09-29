@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import '../../css/pagetop.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
