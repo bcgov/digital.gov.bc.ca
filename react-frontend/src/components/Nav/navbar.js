@@ -56,7 +56,7 @@ function NavBar() {
 
   return (
     <div className="navBar">
-      <header>
+      <header id="navheader">
         <div className="centerBanner">
           <div className="banner">
             <a
