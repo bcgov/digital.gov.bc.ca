@@ -8,7 +8,7 @@ import Assembling from './assembling';
 import '../../css/products.css';
 
 import { PageContainer } from '../StyleComponents/pageContent';
-
+import { ProductPageSubtitle } from '../StyleComponents/headings';
 const Products = () => {
   return (
     <PageContainer>
@@ -19,9 +19,9 @@ const Products = () => {
       <div className="productsBody">
         <ProductsInstructions />
         <div>
-          <p className="productsTitle">
+          <ProductPageSubtitle>
             Here are some services to help you along this journey:
-          </p>
+          </ProductPageSubtitle>
         </div>
         <Defining />
         <Considering />
