@@ -88,7 +88,12 @@ export const CovidButtonStyle = styled.a`
 `;
 
 const Link = ({ className, children, href }) => (
-  <a className={className} href={href}>
+  <a
+    className={className}
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     {children}
   </a>
 );
