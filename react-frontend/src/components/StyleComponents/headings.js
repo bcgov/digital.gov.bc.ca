@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
-export const DigitalPrinciplesH1 = styled.h1.attrs({
+export const DigitalPrinciplesHeading = styled.h2.attrs({
+  className: 'digitalPrinciplesHeading',
+})`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 30px;
+`;
+
+export const DigitalPrinciplesTitle = styled.h1.attrs({
   className: 'digitalPrinciplesTitle',
 })`
   font-size: 3rem;
@@ -8,16 +16,17 @@ export const DigitalPrinciplesH1 = styled.h1.attrs({
   margin-top: 30px;
 `;
 
-export const DigitalPrinciplesH2 = styled.h2.attrs({
-  className: 'digitalPrinciplesSubTitle',
+export const ProductPageHeading = styled.h2.attrs({
+  className: 'productPageHeading',
 })`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 30px;
+  font-size: 22pt;
+  font-weight: bold;
+  line-height: 24pt;
+  margin-bottom: 5px;
 `;
 
-export const ProductPageSubSubtitle = styled.h3.attrs({
-  className: 'productPageSubSubtitle',
+export const ProductPageSubHeading = styled.h3.attrs({
+  className: 'productPageSubHeading',
 })`
   font-size: 18pt;
   font-weight: bold;
@@ -25,13 +34,20 @@ export const ProductPageSubSubtitle = styled.h3.attrs({
   line-height: 24pt;
 `;
 
-export const ProductPageSubtitle = styled.h2.attrs({
-  className: 'productPageSubtitle',
+export const ResourcePageHeading = styled.h2.attrs({
+  className: 'resourceHeading',
 })`
-  font-size: 22pt;
+  font-size: 31px;
   font-weight: bold;
-  line-height: 24pt;
-  margin-bottom: 5px;
+  margin-bottom: 24px;
+`;
+
+export const ResourcePageSubHeading = styled.h3.attrs({
+  className: 'resourceSubHeading',
+})`
+  font-size: 16pt;
+  font-weight: bold;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.h1`

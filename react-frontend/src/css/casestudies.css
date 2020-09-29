@@ -61,20 +61,10 @@
     margin-bottom: 15px;
 }
 
-.standardInfoTitle {
-    font-size: 16pt;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
 @media only screen and (max-width: 800px) {
 
     .caseStudyInfo {
         margin-left: -7px;
-    }
-
-    .standardInfoTitle {
-        margin-bottom: -15px;
     }
 
     .standards {
@@ -83,9 +73,4 @@
         width: 330px;
     }
 
-    @media only screen and (max-width: 800px) {
-        .standardInfoTitle {
-            margin-bottom: 0;
-        }
-    }
 }

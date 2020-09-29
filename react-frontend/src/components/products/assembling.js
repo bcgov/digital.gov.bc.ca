@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
-import { ProductPageSubSubtitle } from '../StyleComponents/headings';
+import { ProductPageSubHeading } from '../StyleComponents/headings';
 
 const cards = [
   <div className="cardContent">
@@ -62,9 +62,9 @@ const cards = [
 const Assembling = () => {
   return (
     <div className="definingContainer">
-      <ProductPageSubSubtitle>
+      <ProductPageSubHeading>
         Assembling and supporting your team
-      </ProductPageSubSubtitle>
+      </ProductPageSubHeading>
       <p>
         Whatever technology solution you decide to pursue, you will need a team
         of people with all the skills necessary to implement and maintain it.
