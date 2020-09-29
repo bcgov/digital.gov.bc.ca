@@ -1,5 +1,21 @@
 import styled from 'styled-components';
 
+export const DigitalPrinciplesH1 = styled.h1.attrs({
+  className: 'digitalPrinciplesTitle',
+})`
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 30px;
+`;
+
+export const DigitalPrinciplesH2 = styled.h2.attrs({
+  className: 'digitalPrinciplesSubTitle',
+})`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 30px;
+`;
+
 export const ProductPageSubSubtitle = styled.h3.attrs({
   className: 'productPageSubSubtitle',
 })`
