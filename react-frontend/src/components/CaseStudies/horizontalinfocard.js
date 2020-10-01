@@ -4,6 +4,11 @@ import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
 
+import {
+  CardHorizontalTitle,
+  CardHorizontalDescription,
+} from '../StyleComponents/card';
+
 const HorizontalInfoCard = (props) => {
   return (
     <Card
@@ -16,12 +21,10 @@ const HorizontalInfoCard = (props) => {
       }
     >
       <div className="cardTextHorizontal">
-        <div>
-          <p className="cardTitleHorizontal">{props.title}</p>
-        </div>
-        <div>
-          <p className="cardDescriptionHorizontal">{props.description}</p>
-        </div>
+        <CardHorizontalTitle>{props.title}</CardHorizontalTitle>
+        <CardHorizontalDescription>
+          {props.description}
+        </CardHorizontalDescription>
         <div className="cardLinkHorizontal">
           {props.routePath ? (
             <Link to={props.routePath}>{props.linkText}</Link>

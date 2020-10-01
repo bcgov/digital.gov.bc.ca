@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
+import { ProductPageSubHeading } from '../StyleComponents/headings';
 
 const cards = [
   <div className="cardContent">
@@ -67,11 +68,9 @@ const cards = [
 const Considering = () => {
   return (
     <div className="definingContainer contentBlock">
-      <div>
-        <p className="productsSubtitle">
-          Considering different technology approaches
-        </p>
-      </div>
+      <ProductPageSubHeading>
+        Considering different technology approaches
+      </ProductPageSubHeading>
       <p>
         Depending on the complexity of your problem, you may apply a variety of
         methods to discover appropriate solutions. If your challenge is complex,

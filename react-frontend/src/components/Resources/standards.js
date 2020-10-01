@@ -6,6 +6,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import '../../css/resources.css';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
+import { ResourcePageSubHeading } from '../StyleComponents/headings';
 
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
@@ -19,9 +20,7 @@ function Standards() {
           <Row>
             <Col md={12} lg={4}>
               <div className="standardInfo">
-                <div>
-                  <p className="standardInfoTitle">Technical</p>
-                </div>
+                <ResourcePageSubHeading>Technical</ResourcePageSubHeading>
                 <div className="resourceLink">
                   <a
                     target="_blank"
@@ -56,9 +55,7 @@ function Standards() {
             </Col>
             <Col md={12} lg={4}>
               <div className="standardInfo">
-                <div>
-                  <p className="standardInfoTitle">Privacy</p>
-                </div>
+                <ResourcePageSubHeading>Privacy</ResourcePageSubHeading>
                 <div className="resourceLink">
                   <a
                     target="_blank"
@@ -93,9 +90,7 @@ function Standards() {
             </Col>
             <Col md={12} lg={4}>
               <div className="standardInfo">
-                <div>
-                  <p className="standardInfoTitle">Security</p>
-                </div>
+                <ResourcePageSubHeading>Security</ResourcePageSubHeading>
                 <div className="resourceLink">
                   <a
                     target="_blank"

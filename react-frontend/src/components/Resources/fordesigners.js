@@ -6,6 +6,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import '../../css/resources.css';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
+import { ResourcePageSubHeading } from '../StyleComponents/headings';
 
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
@@ -14,9 +15,7 @@ const linkIcon = (
 function ForDesigners() {
   return (
     <ContentBlock>
-      <div>
-        <h2 className="resourceInfoForTitle">For Designers</h2>
-      </div>
+      <ResourcePageSubHeading>For Designers</ResourcePageSubHeading>
       <Grid className="cardAdjustment">
         <Row>
           <Col md={12} lg={4}>

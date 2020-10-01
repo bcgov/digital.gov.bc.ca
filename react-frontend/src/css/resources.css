@@ -17,26 +17,8 @@
     background: none;
 }
 
-.resourceInfoTitle {
-    font-size: 31px;
-    font-weight: bold;
-    margin-bottom: 24px;
-}
-
-.resourceInfoForTitle {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 16px;
-}
-
 .standardInfo {
     margin-bottom: 15px;
-}
-
-.standardInfoTitle {
-    font-size: 16pt;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .resourceLink a {
@@ -126,16 +108,8 @@
         width: 330px;
     }
 
-    .standardInfoTitle {
-        margin-bottom: 0px;
-    }
-
     .resourceInfo {
         margin-left: -7px;
-    }
-
-    .resourceInfoTitle {
-        padding-left: 0px;
     }
 
     .resourceContainer {

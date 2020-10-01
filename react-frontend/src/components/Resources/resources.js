@@ -7,6 +7,7 @@ import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import Standards from './standards';
 
 import { PageContainer } from '../StyleComponents/pageContent';
+
 import '../../css/resources.css';
 
 function Resources() {

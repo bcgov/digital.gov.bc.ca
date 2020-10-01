@@ -6,6 +6,8 @@ import '../../css/card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { CardTitle, CardDescription } from '../StyleComponents/card';
+
 function InfoCard({
   height,
   routePath,
@@ -33,12 +35,8 @@ function InfoCard({
         }
       >
         <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{title}</h2>
-          </div>
-          <div className="cardDescription">
-            <p>{description}</p>
-          </div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
@@ -61,12 +59,8 @@ function InfoCard({
     return (
       <Card className="cardBody" style={{ height: '95%', width: '100%' }}>
         <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{title}</h2>
-          </div>
-          <div className="cardDescription">
-            <p>{description}</p>
-          </div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
