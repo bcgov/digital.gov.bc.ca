@@ -21,3 +21,19 @@ export const NavTitle = styled.p.attrs({
     margin: 0px 5px 0px -5%;
   }
 `;
+
+export const SkipToMainContent = styled.a.attrs({
+  className: 'skipToMainContent',
+})`
+  position: absolute;
+  left: -10000px;
+  width: 120px;
+  color: #fcba19;
+  :hover {
+    color: #fcba19;
+  }
+  :focus {
+    position: static;
+    height: auto;
+  }
+`;

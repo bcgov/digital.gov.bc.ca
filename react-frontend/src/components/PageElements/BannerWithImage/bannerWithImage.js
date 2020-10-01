@@ -15,6 +15,7 @@ const BannerWithImage = ({ content, image, title }) => {
       <BannerImage alt="" src={image} />
       <BannerTextWrapper>
         <BannerText>
+          <a id="main-content-anchor"></a>
           <BannerTitle>{title}</BannerTitle>
           <BannerSubTitle>{content}</BannerSubTitle>
         </BannerText>
