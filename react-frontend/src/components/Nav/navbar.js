@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import '../../css/nav.css';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import { NavTitle, SkipToMainContent } from '../StyleComponents/nav';
-
+import {
+  NavBanner,
+  NavContentOnRight,
+  NavTitle,
+  SkipToMainContent,
+} from '../StyleComponents/nav';
+import {
+  NavBarHeaderLink,
+  NavBarLi,
+  NavBarLink,
+  NavBarUl,
+} from '../StyleComponents/htmlTags';
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -58,8 +68,8 @@ function NavBar() {
     <div className="navBar">
       <header id="navheader">
         <div className="centerBanner">
-          <div className="banner">
-            <a
+          <NavBanner>
+            <NavBarHeaderLink
               href="https://gov.bc.ca"
               alt="Go to the Government of British Columbia website"
             >
@@ -68,17 +78,11 @@ function NavBar() {
                 src={logoPath}
                 alt="Go to the Government of British Columbia website"
               />
-            </a>
-            <SkipToMainContent
-              accesskey="0"
-              href="#main-content-anchor"
-              aria-label="Skip to main content"
-            >
-              Skip to main content
-            </SkipToMainContent>
+            </NavBarHeaderLink>
+            <SkipToMainContent>Skip to main content</SkipToMainContent>
             <NavTitle>Digital Government</NavTitle>
-          </div>
-          <div className="other">
+          </NavBanner>
+          <NavContentOnRight>
             <div className="nav-btn" onClick={toggleMenu} href=".">
               <FontAwesomeIcon icon={faBars} />
             </div>
@@ -86,39 +90,39 @@ function NavBar() {
                   This place is for anything that needs to be right aligned
                   beside the logo.
                   --> */}
-          </div>
+          </NavContentOnRight>
         </div>
       </header>
       <nav className="navigation-main" id="navbar">
         <div className="container">
-          <ul>
-            <li>
-              <Link
+          <NavBarUl>
+            <NavBarLi>
+              <NavBarLink
                 to="/"
                 className={activePage === '/' ? 'active' : 'notactive'}
               >
-                <p className="navOption">Home</p>
-              </Link>
-            </li>
-            <li>
-              <Link
+                Home
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
               >
-                <p className="navOption">Resources</p>
-              </Link>
-            </li>
-            <li>
-              <Link
+                Resources
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
                 to="/products-services"
                 className={
                   activePage === '/products-services' ? 'active' : 'notactive'
                 }
               >
-                <p className="navOption">Products & Services</p>
-              </Link>
-            </li>
-          </ul>
+                Products & Services
+              </NavBarLink>
+            </NavBarLi>
+          </NavBarUl>
         </div>
       </nav>
     </div>

@@ -19,31 +19,6 @@ header {
     margin: auto;
     width: 1115px;
   }
-
-  header .banner {
-    align-items: center;
-    color: #fff;
-    display: flex;
-    height: 65px;
-    justify-content: flex-start;
-    margin: auto;
-  }
-  
-  header .other {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-  }
-
-  header a [class^="fas fa-"] {
-    -webkit-font-smoothing: antialiased;
-    color: white;
-    font-size: 1.4em;
-    font-style: bold;
-    line-height: 1;
-    padding: 5px;
-  }
   
   header .nav-btn {
     cursor: pointer;
@@ -71,41 +46,9 @@ header {
     padding: 10px 0 10px 0px;
     width: 1065px;
   }
-  
-  .navigation-main .container ul {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin-left: -75px;
-    margin: 0;
-  }
 
   .navigation-main .container ul li {
     margin: 5px 0;
-  }
-
-  .navigation-main .container ul li a {
-    color: #fff;
-    display: flex;
-    font-size: 0.813em;
-    font-weight: normal;  /* 400 */
-    padding: 0 15px 0 15px;
-    text-decoration: none;
-  }
-
-  .navigation-main .container ul li a:hover {
-    text-decoration: underline;
-  }
-
-  .navigation-main .container ul .active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  :focus {
-    outline-offset: 1px;
-    outline: 4px solid #3B99FC;
   }
 
   .navOption {
@@ -124,24 +67,8 @@ header {
       display: block;
     }
 
-    .navigation-main .container ul {
-      flex-direction: row;
-    }
-
     .navigation-main .container ul li {
       margin: 0;
-    }
-    
-    .navigation-main .container ul li a {
-      border-right: 1px solid #9b9b9b;
-    }
-
-    header .banner {
-      padding: 13px 0;
-    }
-
-    header .other {
-      margin-left: -10px;
     }
 
     header .nav-btn {
@@ -178,10 +105,7 @@ header {
     .centerBanner {
       display: flex;
     }
-
-    .navigation-main .container ul {
-      margin-left: -28px;
-    }
+    
   }
 
   @media screen and (min-width: 280px) and (max-width: 430px) {
