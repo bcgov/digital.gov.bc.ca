@@ -26,7 +26,7 @@ export const NavBarLink = styled(Link).attrs({
 })`
   color: #fff;
   display: flex;
-  font-family: ‘BC Sans’;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
