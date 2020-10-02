@@ -6,6 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import {
   NavBanner,
+  NavBarHeader,
   NavContentOnRight,
   NavImage,
   NavTitle,
@@ -67,7 +68,7 @@ function NavBar() {
 
   return (
     <div className="navBar">
-      <header id="navheader">
+      <NavBarHeader>
         <div className="centerBanner">
           <NavBanner>
             <NavBarHeaderLink
@@ -88,7 +89,7 @@ function NavBar() {
             </div>
           </NavContentOnRight>
         </div>
-      </header>
+      </NavBarHeader>
       <nav className="navigation-main" id="navbar">
         <div className="container">
           <NavBarUl>

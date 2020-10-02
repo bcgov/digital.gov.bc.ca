@@ -26,6 +26,32 @@ export const NavContentOnRight = styled.div.attrs({
   }
 `;
 
+export const NavBarHeader = styled.header.attrs({
+  id: 'navheader',
+})`
+  -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+  -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
+  background-color: #036;
+  border-bottom: 2px solid #fcba19;
+  box-shadow: 0 6px 8px -4px #b3b1b3;
+  color: #fff;
+  display: flex;
+  padding: 0 30px 0 30px;
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  z-index: 1000;
+  @media screen and (max-width: 1120px) {
+    top: 64px;
+  }
+  @media screen and (min-width: 280px) and (max-width: 430px) {
+    top: 121px;
+  }
+  @media screen and (min-width: 430px) and (max-width: 596px) {
+    top: 100px;
+  }
+`;
+
 export const NavImage = styled.img.attrs({
   className: 'navImage',
 })`
