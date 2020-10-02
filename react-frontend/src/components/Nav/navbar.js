@@ -80,8 +80,8 @@ function NavBar() {
                 alt="Go to the Government of British Columbia website"
               />
             </NavBarHeaderLink>
-            <SkipToMainContent>Skip to main content</SkipToMainContent>
             <NavTitle>Digital Government</NavTitle>
+            <SkipToMainContent>Skip to main content</SkipToMainContent>
           </NavBanner>
           <NavContentOnRight>
             <div className="nav-btn" onClick={toggleMenu} href=".">
