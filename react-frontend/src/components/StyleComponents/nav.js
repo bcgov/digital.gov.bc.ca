@@ -26,6 +26,26 @@ export const NavContentOnRight = styled.div.attrs({
   }
 `;
 
+export const NavImage = styled.img.attrs({
+  className: 'navImage',
+})`
+  @media screen and (min-width: 800px) {
+    height: 100%;
+    margin-left: 77px;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    margin-left: -15px;
+    margin-right: 0px;
+    margin-top: -5px;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-right: 25px;
+  }
+`;
+
 export const NavTitle = styled.p.attrs({
   className: 'navTitle',
 })`

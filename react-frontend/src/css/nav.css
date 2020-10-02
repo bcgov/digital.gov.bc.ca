@@ -47,28 +47,14 @@ header {
     width: 1065px;
   }
 
-  .navigation-main .container ul li {
-    margin: 5px 0;
-  }
-
   .navOption {
     color: white;
     margin-bottom: -1px;
   }
-
-  /*
-    These are sample media queries only. Media queries are quite subjective
-    but, in general, should be made for the three different classes of screen
-    size: phone, tablet, full. 
-  */
   
   @media screen and (min-width: 800px) {
     .navigation-main {
       display: block;
-    }
-
-    .navigation-main .container ul li {
-      margin: 0;
     }
 
     header .nav-btn {
@@ -77,11 +63,6 @@ header {
       margin: 0 0 0 auto;
       padding-right: 25px;
       width: auto;
-    }
-
-    .navImage {
-      height: 100%;
-      margin-left: 77px;
     }
   }
 
@@ -95,17 +76,9 @@ header {
   }
 
   @media screen and (max-width: 800px) {
-    .navImage {
-      height: 60px;
-      margin-left: -15px;
-      margin-right: 0px;
-      margin-top: -5px;
-    }
-
     .centerBanner {
       display: flex;
     }
-    
   }
 
   @media screen and (min-width: 280px) and (max-width: 430px) {
@@ -117,13 +90,5 @@ header {
   @media screen and (min-width: 430px) and (max-width: 596px) {
     header {
       top:100px;
-    }
-  }
-  
-  @media screen and (max-width: 400px) {
-
-    .navImage {
-      margin-left: -15px;
-      margin-right: 25px;
     }
   }

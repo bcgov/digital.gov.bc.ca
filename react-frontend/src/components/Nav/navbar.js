@@ -7,6 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {
   NavBanner,
   NavContentOnRight,
+  NavImage,
   NavTitle,
   SkipToMainContent,
 } from '../StyleComponents/nav';
@@ -73,8 +74,7 @@ function NavBar() {
               href="https://gov.bc.ca"
               alt="Go to the Government of British Columbia website"
             >
-              <img
-                className="navImage"
+              <NavImage
                 src={logoPath}
                 alt="Go to the Government of British Columbia website"
               />
@@ -86,10 +86,6 @@ function NavBar() {
             <div className="nav-btn" onClick={toggleMenu} href=".">
               <FontAwesomeIcon icon={faBars} />
             </div>
-            {/* <!-- 
-                  This place is for anything that needs to be right aligned
-                  beside the logo.
-                  --> */}
           </NavContentOnRight>
         </div>
       </header>
