@@ -30,11 +30,19 @@
   overflow: hidden;
 }
 
+.cardImageContainerHorizontal {
+  float: left;
+  margin-right: 25px;
+  overflow: hidden;
+  width: 50%;
+}
+
 .cardImageHorizontal {
   float: left;
-  height: 400px;
+  height: auto;
   margin-right: 30px;
-  width: 50%;
+  max-width: 110%;
+  width: auto;
 }
 
 .cardLink {
@@ -45,6 +53,11 @@
   font-weight: bold;
   position: absolute;
   text-decoration: underline;
+}
+
+.cardLink:hover {
+  color: blue;
+  text-decoration: none;
 }
 
 .cardLinkHorizontal {
@@ -120,10 +133,15 @@
     max-height: 330px;
   }
 
-  .cardImageHorizontal {
-    height: 330px;
-    margin-right: 0;
+  .cardImageContainerHorizontal {
+    overflow: hidden;
     width: 100%;
+  }
+
+  .cardImageHorizontal {
+    height: auto;
+    max-width: 100%;
+    margin-right: 0;
   }
 
   .cardLink {
@@ -137,9 +155,5 @@
   .cardTitle {
     font-size: 22px;
     margin-top: -10px;
-  }
-
-  .cardTitleHorizontal {
-    font-size: 22px;
   }
 }

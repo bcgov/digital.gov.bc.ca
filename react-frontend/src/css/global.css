@@ -11,22 +11,3 @@ a:hover {
 a:focus {
   outline: 3px solid;
 }
-
-.pageContainer {
-  background-color: #f2f2f2;
-}
-
-.routeBody {
-  background-color: #f2f2f2;
-  padding-bottom: 120px;
-}
-
-@media only screen and (max-width: 800px) {
-  .pageContainer {
-    padding-top: 65px;
-  }
-
-  .routeBody {
-    padding-bottom: 60px;
-  }
-}

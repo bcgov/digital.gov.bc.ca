@@ -6,7 +6,7 @@
 
 .cardContainer {
     margin: auto;
-    width: 85%;
+    width: 960px;
 }
 
 @media only screen and (max-width: 800px) {

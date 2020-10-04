@@ -6,11 +6,12 @@ import Considering from './considering';
 import Assembling from './assembling';
 
 import '../../css/products.css';
-import '../../css/global.css';
+
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const Products = () => {
   return (
-    <div className="pageContainer">
+    <PageContainer>
       <SimpleBanner
         title="Products and Services"
         description="Supports to help you create or improve a digital service."
@@ -26,7 +27,7 @@ const Products = () => {
         <Considering />
         <Assembling />
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

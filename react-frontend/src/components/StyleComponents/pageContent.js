@@ -17,3 +17,37 @@ export const SimpleTextContainer = styled.div`
   padding-right: 15px;
   font-family: BC Sans;
 `;
+
+export const PageContainer = styled.div`
+  background-color: #f2f2f2;
+  z-index: -2;
+  @media only screen and (max-width: 800px) {
+    padding-top: 65px;
+  }
+`;
+
+//TODO: Fix padding top maybe
+export const PageContainerCaseStudies = styled.div`
+  background-color: #f2f2f2;
+  z-index: -2;
+  padding-bottom: 70px;
+  padding-top: 100px;
+  @media only screen and (max-width: 800px) {
+    padding-top: 65px;
+  }
+`;
+
+export const RouteBody = styled.div`
+  background-color: #f2f2f2;
+  z-index: -2;
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 60px;
+  }
+`;
+
+export const ContentBlock = styled.div`
+  padding-bottom: 120px;
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 60px;
+  }
+`;

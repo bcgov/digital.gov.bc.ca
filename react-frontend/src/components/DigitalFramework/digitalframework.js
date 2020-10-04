@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import DigitalBlock from './digitalframeworkblock';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
 import DigitalTable from './digitalframeworktable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
-import '../../css/global.css';
+
+import SimpleBanner from '../SimpleBanner/simpleBanner';
+
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const titles = [
   'Our Vision',
@@ -91,12 +93,12 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <div className="pageContainer">
+    <PageContainer>
       <SimpleBanner
-        title="Digital Framework"
-        description="This is the Digital Framework: our plan for becoming a digital
-        government. We consider it a draft – an “alpha” version – that
-        reserves the flexibility to learn and adapt as we go."
+        title={'Digital Framework'}
+        description={
+          'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
+        }
       />
       <div className="digitalBody">
         <div className="digitalSection">
@@ -183,37 +185,45 @@ const DigitalFramework = () => {
               </li>
             </ul>
           </div>
-          <DigitalTable
-            priorityActions={priorityActions[0]}
-            objectives={objectives[0]}
-          />
+          <div className="tableSpacer">
+            <DigitalTable
+              priorityActions={priorityActions[0]}
+              objectives={objectives[0]}
+            />
+          </div>
         </div>
         <div className="digitalSection">
           <ScrollElement name="blockTwo" className="element" />
           <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
-          <DigitalTable
-            priorityActions={priorityActions[1]}
-            objectives={objectives[1]}
-          />
+          <div className="tableSpacer">
+            <DigitalTable
+              priorityActions={priorityActions[1]}
+              objectives={objectives[1]}
+            />
+          </div>
         </div>
         <div className="digitalSection">
           <ScrollElement name="blockThree" className="element" />
           <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
-          <DigitalTable
-            priorityActions={priorityActions[2]}
-            objectives={objectives[2]}
-          />
+          <div className="tableSpacer">
+            <DigitalTable
+              priorityActions={priorityActions[2]}
+              objectives={objectives[2]}
+            />
+          </div>
         </div>
         <div>
           <ScrollElement name="blockFour" className="element" />
           <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
-          <DigitalTable
-            priorityActions={priorityActions[3]}
-            objectives={objectives[3]}
-          />
+          <div className="tableSpacer">
+            <DigitalTable
+              priorityActions={priorityActions[3]}
+              objectives={objectives[3]}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

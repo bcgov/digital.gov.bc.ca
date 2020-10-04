@@ -1,9 +1,10 @@
 .breadCrumbs {
-    margin-left: -10px;
-    padding-left: 5%;
     padding-top: 133px;
-    position: absolute;
-    width: 100%;
+    position: relative;
+    margin: auto;
+    margin-bottom: -133px;
+    width: 1045px;
+    z-index: 5;
 }
 
 .listOption {
@@ -27,6 +28,7 @@
         margin-left: -13px;
         padding-left: 0;
         padding-top: 80px;
+        width: 100%;
     }
 
     .listOption {

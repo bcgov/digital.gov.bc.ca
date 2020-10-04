@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guides",
+  "info": {
+    "name": "Guides"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "guideCategories": {
+      "collection": "guide-categories",
+      "via": "guides"
+    },
+    "uid": {
+      "type": "uid",
+      "required": true,
+      "targetField": "title"
+    },
+    "summary": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
