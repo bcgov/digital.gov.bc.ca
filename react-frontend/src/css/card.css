@@ -78,6 +78,7 @@
 
 .overFlowHidden {
   overflow: hidden;
+  width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
