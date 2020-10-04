@@ -8,6 +8,10 @@ a:hover {
   text-decoration: none;
 }
 
+a:focus {
+  outline: 3px solid;
+}
+
 .pageContainer {
   background-color: #f2f2f2;
 }
