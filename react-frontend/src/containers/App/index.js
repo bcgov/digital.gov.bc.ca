@@ -13,9 +13,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
-        {/* CovidBanner is moved down so the skip navigation is first tag on the page*/}
         <CovidBanner />
+        <NavBar />
         <BreadCrumbs />
         <RouteBody>
           <Routes />
