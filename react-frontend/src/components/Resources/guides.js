@@ -4,6 +4,7 @@ import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
 
 import '../../css/resources.css';
 import { ContentBlock } from '../StyleComponents/pageContent';
+import { ResourcePageHeading } from '../StyleComponents/headings';
 
 const videoCommsImg = require('../../images/videocomms.png');
 
@@ -11,9 +12,7 @@ function Guides() {
   return (
     <ContentBlock>
       <div className="resourceInfo">
-        <div>
-          <h2 className="resourceInfoTitle">Guides</h2>
-        </div>
+        <ResourcePageHeading>Guides</ResourcePageHeading>
         <Grid className="cardAdjustment">
           <Row>
             <Col sm={24} md={12}>

@@ -4,15 +4,18 @@ import {
   SimpleTextContainer,
   GlobaStyleSize,
 } from '../StyleComponents/pageContent';
-import { Title, Title3 } from '../StyleComponents/headings';
+import {
+  DigitalPrinciplesTitle,
+  DigitalPrinciplesHeading,
+} from '../StyleComponents/headings';
 
 function DigitalPrinciples() {
   return (
     <SimpleTextContainer>
       <GlobaStyleSize />
-      <Title>
+      <DigitalPrinciplesTitle>
         Digital Principles for the Government of British Columbia (Version 1.0)
-      </Title>
+      </DigitalPrinciplesTitle>
 
       <p>
         The Digital Principles are meant to guide the work of individual public
@@ -46,7 +49,9 @@ function DigitalPrinciples() {
       </ul>
       <p>The Province’s Digital Principles are: </p>
 
-      <Title3>1. Deliver value for British Columbians & cultivate trust</Title3>
+      <DigitalPrinciplesHeading>
+        1. Deliver value for British Columbians & cultivate trust
+      </DigitalPrinciplesHeading>
       <p>
         Recognize that government products and services should ultimately
         improve people’s lives. Build products and services for outcomes rather
@@ -55,7 +60,9 @@ function DigitalPrinciples() {
         Build trust in every interaction, using data to make fair, ethical and
         evidence-based decisions.
       </p>
-      <Title3>2. Design with people & embed inclusion</Title3>
+      <DigitalPrinciplesHeading>
+        2. Design with people & embed inclusion
+      </DigitalPrinciplesHeading>
       <p>
         Deliver simple, effective products and services in response to citizens'
         needs. Apply human-centered design practices, working directly with
@@ -65,7 +72,7 @@ function DigitalPrinciples() {
         government’s various digital and physical channels.
       </p>
 
-      <Title3>3. Integrate ethics</Title3>
+      <DigitalPrinciplesHeading>3. Integrate ethics</DigitalPrinciplesHeading>
       <p>
         Take an ethical approach to designing or modifying digital products and
         services. Evaluate the potential ethical, social, cultural and
@@ -74,7 +81,9 @@ function DigitalPrinciples() {
         (e.g. when using artificial intelligence).
       </p>
 
-      <Title3>4. Continuously learn & improve</Title3>
+      <DigitalPrinciplesHeading>
+        4. Continuously learn & improve
+      </DigitalPrinciplesHeading>
       <p>
         Iterate and improve products and services to support learning and
         innovation. Use modern tools and approaches. Be flexible to change, even
@@ -83,7 +92,7 @@ function DigitalPrinciples() {
         opportunities.
       </p>
 
-      <Title3>5. Work in the open</Title3>
+      <DigitalPrinciplesHeading>5. Work in the open</DigitalPrinciplesHeading>
       <p>
         Collaborate, co-design and co-create with product and service users
         transparently. Default towards open licenses, open and interoperable
@@ -91,7 +100,9 @@ function DigitalPrinciples() {
         possible.
       </p>
 
-      <Title3>6. Take an ecosystem approach</Title3>
+      <DigitalPrinciplesHeading>
+        6. Take an ecosystem approach
+      </DigitalPrinciplesHeading>
       <p>
         Think holistically. Design and deliver forward-thinking, adaptable and
         scalable solutions. Support interoperability, common components and
@@ -100,7 +111,9 @@ function DigitalPrinciples() {
         only once, re-using and sharing data whenever possible.
       </p>
 
-      <Title3>7. Take care of information & data</Title3>
+      <DigitalPrinciplesHeading>
+        7. Take care of information & data
+      </DigitalPrinciplesHeading>
       <p>
         Act as a trusted information steward. Manage information, including
         data, as a public asset in accordance with its value and user needs.
@@ -110,7 +123,9 @@ function DigitalPrinciples() {
         their information.
       </p>
 
-      <Title3>8. Manage risks proportionatel</Title3>
+      <DigitalPrinciplesHeading>
+        8. Manage risks proportionatel
+      </DigitalPrinciplesHeading>
       <p>
         Promote a risk-balanced approach that addresses security and privacy by
         design. Recognize risks associated with maintaining the status quo —
@@ -118,7 +133,9 @@ function DigitalPrinciples() {
         risk-mitigation strategies.
       </p>
 
-      <Title3>9. Build diverse teams & internal capacity</Title3>
+      <DigitalPrinciplesHeading>
+        9. Build diverse teams & internal capacity
+      </DigitalPrinciplesHeading>
       <p>
         Empower all public servants and vendor partners to deliver excellent
         products and services. Create and support teams with diverse skillsets
@@ -128,7 +145,9 @@ function DigitalPrinciples() {
         learning and engagement.
       </p>
 
-      <Title3>10. Express cultural & historical awareness & respect</Title3>
+      <DigitalPrinciplesHeading>
+        10. Express cultural & historical awareness & respect
+      </DigitalPrinciplesHeading>
       <p>
         Acknowledge the historical relationships, inequity, trauma, and
         discrimination created by government. Work in the spirit of

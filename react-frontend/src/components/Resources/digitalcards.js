@@ -4,6 +4,7 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 import '../../css/resources.css';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
+import { ResourcePageHeading } from '../StyleComponents/headings';
 
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
@@ -21,9 +22,7 @@ const links = [
 function DigitalCards() {
   return (
     <ContentBlock>
-      <div>
-        <h2 className="resourceInfoTitle">Standards & Policy</h2>
-      </div>
+      <ResourcePageHeading>Standards & Policy</ResourcePageHeading>
       <div className="resourceInfo">
         <Grid className="cardAdjustment">
           <Row>

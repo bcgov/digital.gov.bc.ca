@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import '../../css/pagetop.css';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
+import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
+import { CaseStudyHeading } from '../StyleComponents/headings';
 
 const routeMatch = {
   'farming-study': FarmerContent,
@@ -13,11 +14,15 @@ const routeMatch = {
   'mining-study': MiningContent,
 };
 
-const Template = () => {
+const CaseStudy = () => {
   const endPoint = useParams().caseStudyId;
   const content = routeMatch[endPoint];
 
   const resources = [];
+
+  if (!content) {
+    return <BannerWithImage title={'Case Study Not Found'} />;
+  }
 
   if (content.resourceText) {
     for (var i = 0; i < content.resourceText.length; i++) {
@@ -34,41 +39,24 @@ const Template = () => {
 
   return (
     <div>
-      <div className="pageTop">
-        <img
-          className="caseBannerImage"
-          style={{ marginTop: '-50px' }}
-          alt=""
-          src={content.backgroundImage}
-        />
-        <div className="pageTextBanner caseTextBanner">
-          <div className="pageText">
-            <p className="pageTitle" style={{ color: 'white' }}>
-              {content.title}
-            </p>
-            <div>
-              <p className="pageDescription" style={{ color: 'white' }}>
-                {' '}
-                {content.description}{' '}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BannerWithImage
+        content={content.description}
+        title={content.title}
+        image={content.backgroundImage}
+      />
       <div className="pageBody">
         {content.context && (
           <ContentBlock>
-            {/* just a quick note, but subtitles like this will be handled in global css */}
-            <p className="pageSubtitle">Context and Questions</p>
+            <CaseStudyHeading>Context and Questions</CaseStudyHeading>
             {content.context}
           </ContentBlock>
         )}
         <ContentBlock>
-          <p className="pageSubtitle">The Approach</p>
+          <CaseStudyHeading>The Approach</CaseStudyHeading>
           {content.approach}
         </ContentBlock>
         <ContentBlock>
-          <p className="pageSubtitle">Outcomes that Matter</p>
+          <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
           {content.outcomes}
         </ContentBlock>
         {content.additional && (
@@ -76,18 +64,20 @@ const Template = () => {
         )}
         {resources.length !== 0 && (
           <ContentBlock>
-            <p className="pageSubtitle">Resources and Related Information</p>
+            <CaseStudyHeading>
+              Resources and Related Information
+            </CaseStudyHeading>
             <ul className="resourceLinkBox">{resources}</ul>
           </ContentBlock>
         )}
         {content.contacts && (
           <ContentBlock>
-            <p className="pageSubtitle">For more information</p>
+            <CaseStudyHeading>For more information</CaseStudyHeading>
             {content.contacts}
           </ContentBlock>
         )}
         <div>
-          <p className="pageSubtitle">Other Case Studies</p>
+          <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
           <div>{content.others}</div>
         </div>
       </div>
@@ -95,4 +85,4 @@ const Template = () => {
   );
 };
 
-export default Template;
+export default CaseStudy;

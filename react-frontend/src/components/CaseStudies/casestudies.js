@@ -1,10 +1,10 @@
 import React from 'react';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import Template from './template';
+import CaseStudy from './caseStudy';
 
-import { PageContainerCaseStudies } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
@@ -13,9 +13,7 @@ const CaseStudies = () => {
     <div>
       <Switch>
         <Route exact path={path}>
-          <div className="caseStudyContainer">
-            {/* Note the refactor here may conflict with desired styling due to th
-            digitalTop classname added to simple banner*/}
+          <PageContainer>
             <SimpleBanner
               title="Case Studies"
               description="Learn how digital approaches are getting results here in British
@@ -24,11 +22,11 @@ const CaseStudies = () => {
             <div className="caseStudyBody">
               <CardList />
             </div>
-          </div>
+          </PageContainer>
         </Route>
-        <PageContainerCaseStudies>
-          <Route path={path + '/:caseStudyId'} component={Template} />
-        </PageContainerCaseStudies>
+        <PageContainer>
+          <Route path={path + '/:caseStudyId'} component={CaseStudy} />
+        </PageContainer>
       </Switch>
     </div>
   );

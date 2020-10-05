@@ -4,7 +4,7 @@ import DigitalTable from './digitalframeworktable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
 
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 

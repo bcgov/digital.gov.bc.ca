@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
-
+import { ProductPageSubHeading } from '../StyleComponents/headings';
 const cards = [
   <div>
     <p className="cardContent">
@@ -45,7 +45,9 @@ const cards = [
 const Defining = () => {
   return (
     <div className="definingContainer contentBlock">
-      <p className="productsSubtitle">Defining problems, outcomes, value</p>
+      <ProductPageSubHeading>
+        Defining problems, outcomes, value
+      </ProductPageSubHeading>
       <p>
         To truly improve something for people, it’s critical to take time to
         understand them and be clear about what you want to achieve.

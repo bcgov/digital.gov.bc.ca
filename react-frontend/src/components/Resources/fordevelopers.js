@@ -2,12 +2,12 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import InfoCard from '../Home/infocard';
 
+import { ResourcePageSubHeading } from '../StyleComponents/headings';
+
 function ForDevelopers() {
   return (
     <div>
-      <div>
-        <h2 className="resourceInfoForTitle">For Developers</h2>
-      </div>
+      <ResourcePageSubHeading>For Developers</ResourcePageSubHeading>
       <div className="resourceInfo">
         <Grid className="cardAdjustment">
           <Row>

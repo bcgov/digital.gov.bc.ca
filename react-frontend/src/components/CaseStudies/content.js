@@ -42,8 +42,15 @@ const MiningContent = {
       </Grid>
     </div>
   ),
-  description:
-    'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.',
+  description: (
+    <p>
+      BC’s mining industry is an integral part of the economy, with over $9
+      billion dollars in annual revenue. Following the collapse of a mine
+      tailings dam in 2014, the Ministry of Energy, Mines and Petroleum
+      Resources (EMPR) sought to improve the way it used technology for record
+      management, mine oversight, and to provide information to the public.
+    </p>
+  ),
   approach: (
     <div>
       <p>
@@ -165,8 +172,14 @@ const MiningContent = {
 const FarmerContent = {
   title: 'Helping farmers understand their soil',
   backgroundImage: FarmingBannerImage,
-  description:
-    'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.',
+  description: (
+    <p>
+      The Ministry of Agriculture wanted to understand how farmers monitor and
+      manage their soils. With new environmental regulations around soil
+      management pending, the research aimed to provide farmers with the support
+      and resources they needed.
+    </p>
+  ),
   context:
     'Healthy soil is an important part of farming – crops need the right amount of nutrients to grow. Too few nutrients can contribute to low yields and poor-quality crops, but too many nutrients in the soil can impact water quality and lead to run-off and pollution.\n The Ministry of Agriculture engaged the Service Design Team to help understand how farmers monitor and manage their soils, and to identify opportunities for the Ministry to provide soil management resources and support. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.',
   approach: (
@@ -274,8 +287,14 @@ const FarmerContent = {
 const MedicalContent = {
   title: 'Transforming the Medical Services Plan',
   backgroundImage: MedicalBannerImage,
-  description:
-    'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the Ministry of Health wanted to introduce a digital self-serve product, an online enrolment form.',
+  description: (
+    <p>
+      In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance
+      applications. Thirty percent of application forms were returned due to
+      errors. To improve the process, the Ministry of Health wanted to introduce
+      a digital self-serve product, an online enrolment form.'
+    </p>
+  ),
   context: (
     <div>
       <p>
