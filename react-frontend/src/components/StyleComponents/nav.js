@@ -100,21 +100,20 @@ export const SkipToMainContent = styled.a.attrs({
   href: '#main-content-anchor',
   'aria-label': 'Skip to main content',
 })`
-  margin: 5px 0 0 -5000px;
-  padding: 0 5px;
-  width: 120px;
   color: #fcba19;
-  text-decoration: underline;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  margin: 5px 0 0 -5000px;
+  padding: 0 5px;
+  width: 120px;
   :hover {
     color: #fcba19;
     text-decoration: underline;
   }
   :focus {
     margin-left: 5px;
-    text-decoration: underline;
     outline: 5px auto -webkit-focus-ring-color;
+    text-decoration: underline;
   }
 `;
