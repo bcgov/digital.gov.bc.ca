@@ -12,7 +12,6 @@ export const SimpleTextContainer = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',
 })`
-  // padding-top: 120px;
   font-size: 2rem;
   max-width: 80rem;
   margin-right: auto;
