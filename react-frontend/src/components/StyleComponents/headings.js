@@ -16,14 +16,6 @@ export const DigitalPrinciplesHeading = styled.h2.attrs({
   margin-top: 30px;
 `;
 
-export const DigitalPrinciplesTitle = styled.h1.attrs({
-  className: 'digitalPrinciplesTitle',
-})`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 30px;
-`;
-
 export const ProductPageHeading = styled.h2.attrs({
   className: 'productPageHeading',
 })`
@@ -58,7 +50,8 @@ export const ResourcePageSubHeading = styled.h3.attrs({
   margin-bottom: 10px;
 `;
 
-export const Title = styled.h1`
+export const SimpleTextPageTitle = styled.h1`
+  padding-top: 200px;
   font-size: 3rem;
   font-weight: 700;
   margin-top: 30px;

@@ -13,7 +13,7 @@ const SimpleBanner = ({ title, description }) => {
     <BannerSimpleWrapper>
       <BannerTextWrapper>
         <BannerText>
-          <a id="main-content-anchor"></a>
+          {/* <a id="main-content-anchor"></a> */}
           <BannerTitle>{title}</BannerTitle>
           <BannerSubTitle>{description}</BannerSubTitle>
         </BannerText>

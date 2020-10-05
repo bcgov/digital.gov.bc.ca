@@ -1,7 +1,12 @@
 import React from 'react';
 import CollaborationTool from './collaborationTool';
 
-import { Title, Title2, Title3, Title4 } from '../../StyleComponents/headings';
+import {
+  SimpleTextPageTitle,
+  Title2,
+  Title3,
+  Title4,
+} from '../../StyleComponents/headings';
 import {
   SimpleTextContainer,
   GlobaStyleSize,
@@ -11,10 +16,10 @@ function CollaborationTools() {
   return (
     <SimpleTextContainer>
       <GlobaStyleSize />
-      <Title>
+      <SimpleTextPageTitle>
         Video Communication Platforms – Information for the Broader Public
         Sector
-      </Title>
+      </SimpleTextPageTitle>
       <p>
         <strong>
           <i>
