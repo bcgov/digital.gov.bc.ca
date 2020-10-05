@@ -10,6 +10,7 @@ export const GlobaStyleSize = createGlobalStyle`
 export const SimpleTextContainer = styled.div`
   padding-top: 120px;
   font-size: 2rem;
+  font-family: 'BC Sans';
   max-width: 80rem;
   margin-right: auto;
   margin-left: auto;

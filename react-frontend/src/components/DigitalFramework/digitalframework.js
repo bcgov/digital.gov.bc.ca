@@ -125,7 +125,7 @@ const DigitalFramework = () => {
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">Service delivery</span>
+                  <span>Service delivery</span>
                 </ScrollLink>
                 <br />
               </li>
@@ -137,7 +137,7 @@ const DigitalFramework = () => {
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">Data and information</span>
+                  <span>Data and information</span>
                 </ScrollLink>
                 <br />
               </li>
@@ -149,9 +149,7 @@ const DigitalFramework = () => {
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">
-                    Tools, processes and practices
-                  </span>
+                  <span>Tools, processes and practices</span>
                 </ScrollLink>
                 <br />
               </li>
@@ -163,7 +161,7 @@ const DigitalFramework = () => {
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">External Partners</span>
+                  <span>External Partners</span>
                 </ScrollLink>
               </li>
             </ul>
