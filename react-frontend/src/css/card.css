@@ -1,121 +1,118 @@
 /* TODO: Finish migrating this to the card.js styled components */
 
 .cardBody {
-    font-size: 16pt;
-    margin-bottom: 20px;
-    width: 330px;
+  font-size: 16pt;
+  margin-bottom: 20px;
+  width: 330px;
 }
 
 .cardBodyHorizontal {
-    height: 330px;
-    margin-bottom: 20px;
+  height: 330px;
+  margin-bottom: 20px;
 }
 
 .cardImage {
-    height: auto;
-    max-width: 100%;
-    min-height: 330px;
-    min-width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-height: 330px;
+  min-width: 100%;
 }
 
 .cardImageContainer {
-    height: 330px;
-    overflow: hidden;
+  height: 330px;
+  overflow: hidden;
 }
 
 .cardImageContainerHorizontal {
-    float: left;
-    margin-right: 25px;
-    overflow: hidden;
-    width: 50%;
+  float: left;
+  margin-right: 25px;
+  overflow: hidden;
+  width: 50%;
 }
 
 .cardImageHorizontal {
-    float: left;
-    height: auto;
-    margin-right: 30px;
-    max-width: 110%;
-    width: auto;
+  float: left;
+  height: auto;
+  margin-right: 30px;
+  max-width: 110%;
+  width: auto;
 }
 
 .cardLink {
-    bottom: 25px;
-    color: #1a5a96;
-    font-family: 'BC Sans';
-    font-size: 16px;
-    font-weight: bold;
-    position: absolute;
-    text-decoration: underline;
+  bottom: 25px;
+  color: #1a5a96;
+  font-family: 'BC Sans';
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  text-decoration: underline;
 }
 
 .cardLink:hover {
-    color: blue;
-    text-decoration: none;
+  color: blue;
+  text-decoration: none;
 }
 
 .cardLinkHorizontal {
-    bottom: 20px;
-    color: #1a5a96;
-    font-family: 'BC Sans';
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
+  bottom: 20px;
+  color: #1a5a96;
+  font-family: 'BC Sans';
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .cardText {
-    padding: 16px;
-    text-align: left;
+  padding: 16px;
+  text-align: left;
 }
 
 .cardTextHorizontal {
-    padding: 16px;
-    text-align: left;
+  padding: 16px;
+  text-align: left;
 }
 
 .overFlowHidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 800px) {
-    .cardBody {
-        height: 95%;
-        width: 330px;
-    }
+  .cardBody {
+    height: 95%;
+    width: 330px;
+  }
 
-    .cardBodyHorizontal {
-        height: 95%;
-        width: 330px;
-    }
+  .cardBodyHorizontal {
+    height: 95%;
+    width: 330px;
+  }
 
-    .cardImage {
-        height: 330px;
-        margin-left: -45%;
-        max-width: none;
-        width: auto;
-    }
+  .cardImage {
+    height: 330px;
+    margin-left: -45%;
+    max-width: none;
+    width: auto;
+  }
 
-    .cardImageContainer {
-        max-height: 330px;
-    }
+  .cardImageContainer {
+    max-height: 330px;
+  }
 
-    .cardImageContainerHorizontal {
-        overflow: hidden;
-        width: 100%;
-    }
+  .cardImageContainerHorizontal {
+    overflow: hidden;
+    width: 100%;
+  }
 
-    .cardImageHorizontal {
-        height: auto;
-        max-width: 100%;
-        margin-right: 0;
-    }
+  .cardImageHorizontal {
+    height: auto;
+    max-width: 100%;
+    margin-right: 0;
+  }
 
-    .cardLink {
-        bottom: 20px;
-    }
+  .cardLink {
+    bottom: 20px;
+  }
 
-    .cardLinkHorizontal {
-        bottom: 10px;
-    }
-
-   
+  .cardLinkHorizontal {
+    bottom: 10px;
+  }
 }
