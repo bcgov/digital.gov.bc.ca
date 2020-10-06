@@ -8,8 +8,10 @@ export const GlobaStyleSize = createGlobalStyle`
  }
 `;
 
-export const SimpleTextContainer = styled.div`
-  padding-top: 120px;
+export const SimpleTextContainer = styled.div.attrs({
+  className: 'pageContainer',
+  id: 'main-content-anchor',
+})`
   font-size: 2rem;
   max-width: 80rem;
   margin-right: auto;
@@ -20,6 +22,7 @@ export const SimpleTextContainer = styled.div`
 
 export const PageContainer = styled.div.attrs({
   className: 'pageContainer',
+  id: 'main-content-anchor',
 })`
   background-color: #f2f2f2;
   padding-bottom: 70px;

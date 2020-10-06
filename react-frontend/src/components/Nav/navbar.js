@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import '../../css/nav.css';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import { NavTitle } from '../StyleComponents/nav';
-
+import {
+  NavBanner,
+  NavBarHeader,
+  NavContentOnRight,
+  NavImage,
+  NavTitle,
+  SkipToMainContent,
+} from '../StyleComponents/nav';
+import {
+  NavBarHeaderLink,
+  NavBarLi,
+  NavBarLink,
+  NavBarUl,
+} from '../StyleComponents/htmlTags';
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -56,62 +68,58 @@ function NavBar() {
 
   return (
     <div className="navBar">
-      <header id="navheader">
+      <NavBarHeader>
         <div className="centerBanner">
-          <div className="banner">
-            <a
+          <NavBanner>
+            <NavBarHeaderLink
               href="https://gov.bc.ca"
               alt="Go to the Government of British Columbia website"
             >
-              <img
-                className="navImage"
+              <NavImage
                 src={logoPath}
                 alt="Go to the Government of British Columbia website"
               />
-            </a>
+            </NavBarHeaderLink>
             <NavTitle>Digital Government</NavTitle>
-          </div>
-          <div className="other">
+            <SkipToMainContent>Skip to main content</SkipToMainContent>
+          </NavBanner>
+          <NavContentOnRight>
             <div className="nav-btn" onClick={toggleMenu} href=".">
               <FontAwesomeIcon icon={faBars} />
             </div>
-            {/* <!-- 
-                  This place is for anything that needs to be right aligned
-                  beside the logo.
-                  --> */}
-          </div>
+          </NavContentOnRight>
         </div>
-      </header>
+      </NavBarHeader>
       <nav className="navigation-main" id="navbar">
         <div className="container">
-          <ul>
-            <li>
-              <Link
+          <NavBarUl>
+            <NavBarLi>
+              <NavBarLink
                 to="/"
                 className={activePage === '/' ? 'active' : 'notactive'}
               >
-                <p className="navOption">Home</p>
-              </Link>
-            </li>
-            <li>
-              <Link
+                Home
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
               >
-                <p className="navOption">Resources</p>
-              </Link>
-            </li>
-            <li>
-              <Link
+                Resources
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
                 to="/products-services"
                 className={
                   activePage === '/products-services' ? 'active' : 'notactive'
                 }
               >
-                <p className="navOption">Products & Services</p>
-              </Link>
-            </li>
-          </ul>
+                Products & Services
+              </NavBarLink>
+            </NavBarLi>
+          </NavBarUl>
         </div>
       </nav>
     </div>

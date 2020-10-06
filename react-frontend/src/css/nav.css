@@ -1,48 +1,8 @@
 /* TODO: Remove the this file and move content in
  the nav.js styled component file */
-header {
-    -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
-    -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
-    background-color: #036;
-    border-bottom: 2px solid #fcba19;
-    box-shadow: 0 6px 8px -4px #b3b1b3;
-    color: #fff;
-    display: flex;
-    padding: 0 30px 0 30px;
-    position: fixed;
-    top: 45px;
-    width: 100%;
-    z-index: 1000;
-  }
-
   .centerBanner {
     margin: auto;
     width: 1115px;
-  }
-
-  header .banner {
-    align-items: center;
-    color: #fff;
-    display: flex;
-    height: 65px;
-    justify-content: flex-start;
-    margin: auto;
-  }
-  
-  header .other {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-  }
-
-  header a [class^="fas fa-"] {
-    -webkit-font-smoothing: antialiased;
-    color: white;
-    font-size: 1.4em;
-    font-style: bold;
-    line-height: 1;
-    padding: 5px;
   }
   
   header .nav-btn {
@@ -71,77 +31,15 @@ header {
     padding: 10px 0 10px 0px;
     width: 1065px;
   }
-  
-  .navigation-main .container ul {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin-left: -75px;
-    margin: 0;
-  }
-
-  .navigation-main .container ul li {
-    margin: 5px 0;
-  }
-
-  .navigation-main .container ul li a {
-    color: #fff;
-    display: flex;
-    font-size: 0.813em;
-    font-weight: normal;  /* 400 */
-    padding: 0 15px 0 15px;
-    text-decoration: none;
-  }
-
-  .navigation-main .container ul li a:hover {
-    text-decoration: underline;
-  }
-
-  .navigation-main .container ul .active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  :focus {
-    outline-offset: 1px;
-    outline: 4px solid #3B99FC;
-  }
 
   .navOption {
     color: white;
     margin-bottom: -1px;
   }
-
-  /*
-    These are sample media queries only. Media queries are quite subjective
-    but, in general, should be made for the three different classes of screen
-    size: phone, tablet, full. 
-  */
   
   @media screen and (min-width: 800px) {
     .navigation-main {
       display: block;
-    }
-
-    .navigation-main .container ul {
-      flex-direction: row;
-    }
-
-    .navigation-main .container ul li {
-      margin: 0;
-    }
-    
-    .navigation-main .container ul li a {
-      border-right: 1px solid #9b9b9b;
-    }
-
-    header .banner {
-      padding: 13px 0;
-    }
-
-    header .other {
-      margin-left: -10px;
     }
 
     header .nav-btn {
@@ -151,55 +49,17 @@ header {
       padding-right: 25px;
       width: auto;
     }
-
-    .navImage {
-      height: 100%;
-      margin-left: 77px;
-    }
   }
 
   @media screen and (max-width: 1120px) {
-    header {
-      top:64px;
-    }
     .navigation-main {
       top: 130px;
     }
   }
 
   @media screen and (max-width: 800px) {
-    .navImage {
-      height: 60px;
-      margin-left: -15px;
-      margin-right: 0px;
-      margin-top: -5px;
-    }
-
     .centerBanner {
       display: flex;
     }
-
-    .navigation-main .container ul {
-      margin-left: -28px;
-    }
   }
 
-  @media screen and (min-width: 280px) and (max-width: 430px) {
-    header {
-      top:121px;
-    }
-  }
-
-  @media screen and (min-width: 430px) and (max-width: 596px) {
-    header {
-      top:100px;
-    }
-  }
-  
-  @media screen and (max-width: 400px) {
-
-    .navImage {
-      margin-left: -15px;
-      margin-right: 25px;
-    }
-  }

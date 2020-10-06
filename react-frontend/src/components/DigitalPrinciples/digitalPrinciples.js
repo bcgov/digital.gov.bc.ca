@@ -5,7 +5,7 @@ import {
   GlobaStyleSize,
 } from '../StyleComponents/pageContent';
 import {
-  DigitalPrinciplesTitle,
+  SimpleTextPageTitle,
   DigitalPrinciplesHeading,
 } from '../StyleComponents/headings';
 
@@ -13,9 +13,9 @@ function DigitalPrinciples() {
   return (
     <SimpleTextContainer>
       <GlobaStyleSize />
-      <DigitalPrinciplesTitle>
+      <SimpleTextPageTitle>
         Digital Principles for the Government of British Columbia (Version 1.0)
-      </DigitalPrinciplesTitle>
+      </SimpleTextPageTitle>
 
       <p>
         The Digital Principles are meant to guide the work of individual public
