@@ -22,23 +22,8 @@
     width: 100%;
 }
 
-.productsParagraph {
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    font-size: 12pt;
-    line-height: 16pt;
-}
-
-
 .productCardLink {
     text-decoration: underline;
-}
-
-.productsLink {
-    font-family: 'BC Sans';
-    font-weight: 900;
-    margin-bottom: 10px;
-    font-size: 12pt;
 }
 
 .bolder {
@@ -50,7 +35,4 @@
         width: 85%;
     }
 
-    .productTop {
-        padding-top: 75px;
-    }
 }
