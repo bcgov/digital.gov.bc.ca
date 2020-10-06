@@ -7,7 +7,7 @@ import Assembling from './assembling';
 
 import '../../css/products.css';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
 import { ProductPageHeading } from '../StyleComponents/headings';
 const Products = () => {
   return (
@@ -16,7 +16,7 @@ const Products = () => {
         title="Products and Services"
         description="Supports to help you create or improve a digital service."
       />
-      <div className="productsBody">
+      <SimplePageBody>
         <ProductsInstructions />
         <ProductPageHeading>
           Here are some services to help you along this journey:
@@ -24,7 +24,7 @@ const Products = () => {
         <Defining />
         <Considering />
         <Assembling />
-      </div>
+      </SimplePageBody>
     </PageContainer>
   );
 };

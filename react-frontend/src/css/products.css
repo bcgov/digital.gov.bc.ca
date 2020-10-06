@@ -1,9 +1,3 @@
-
-.productsBody {
-    margin: auto;
-    width: 960px;
-}
-
 .instructions {
     margin-left: -3px;
 }
@@ -24,15 +18,4 @@
 
 .productCardLink {
     text-decoration: underline;
-}
-
-.bolder {
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 800px) {
-    .productsBody {
-        width: 85%;
-    }
-
 }

@@ -8,11 +8,6 @@
     margin-bottom: 25px;
 }
 
-.digitalBody {
-    width: 960px;
-    margin: auto;
-}
-
 .digitalContainer {
     background-color: #F2F2F2;
     padding-bottom: 70px;
@@ -79,9 +74,6 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .digitalBody {
-        width: 85%;
-    }
     .someLinks {
         margin-top: -15px;
     }
@@ -95,10 +87,6 @@
 
     .digitalBlock {
         margin-bottom: 25px;
-    }
-
-    .digitalBody {
-        width: 85%;
     }
     
     .digitalContainer {

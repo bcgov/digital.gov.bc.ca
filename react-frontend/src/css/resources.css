@@ -7,10 +7,6 @@
     background: none;
     height: auto;
 }
-.resourcesBody {
-    margin: auto;
-    width: 960px;
-}
 
 .resourcesBanner {
 	padding: 120px 0;
@@ -102,12 +98,6 @@
 
 
 @media only screen and (max-width: 800px) {
-
-    .resourcesBody {
-        margin: auto;
-        width: 330px;
-    }
-
     .resourceInfo {
         margin-left: -7px;
     }

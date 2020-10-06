@@ -8,6 +8,16 @@ export const GlobaStyleSize = createGlobalStyle`
  }
 `;
 
+export const SimplePageBody = styled.div.attrs({
+  id: 'content-body',
+})`
+  width: 960px;
+  margin: auto;
+  @media only screen and (max-width: 800px) {
+    width: 85%;
+  }
+`;
+
 export const SimpleTextContainer = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',

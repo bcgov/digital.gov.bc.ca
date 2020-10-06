@@ -6,7 +6,7 @@ import '../../css/digital.css';
 
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
 
 const titles = [
   'Our Vision',
@@ -100,7 +100,7 @@ const DigitalFramework = () => {
           'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
         }
       />
-      <div className="digitalBody">
+      <SimplePageBody>
         <div className="digitalSection">
           <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
         </div>
@@ -222,7 +222,7 @@ const DigitalFramework = () => {
             />
           </div>
         </div>
-      </div>
+      </SimplePageBody>
     </PageContainer>
   );
 };
