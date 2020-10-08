@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Col } from 'react-flexbox-grid';
 
 // This file contains styling for Link, a, ul, li, col, row html tags
 
