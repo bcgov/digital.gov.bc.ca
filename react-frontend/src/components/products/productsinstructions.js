@@ -32,7 +32,7 @@ const ProductsInstructions = () => {
   }
 
   return (
-    <div className="instructions contentBlock">
+    <div>
       <div>
         <p className="instructionsFirst">
           Before you’re ready to create or improve a digital service, you will

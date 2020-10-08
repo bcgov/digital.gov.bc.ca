@@ -1,6 +1,3 @@
-.instructions {
-    margin-left: -3px;
-}
 
 .instructionsFirst {
     padding-bottom: 30px;
@@ -16,6 +13,6 @@
     width: 100%;
 }
 
-.productCardLink {
+/* .productCardLink {
     text-decoration: underline;
-}
+} */
