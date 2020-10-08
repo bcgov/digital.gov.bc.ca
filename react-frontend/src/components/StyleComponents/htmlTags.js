@@ -4,12 +4,6 @@ import { Col } from 'react-flexbox-grid';
 
 // This file contains styling for Link, a, ul, li, col, row html tags
 
-export const ColPadded = styled(Col).attrs({
-  className: 'paddedCol',
-})`
-  margin-bottom: 16px;
-`;
-
 export const HrefLink = styled.a.attrs({
   className: 'productCardLink',
 })`
@@ -23,7 +17,22 @@ export const HrefLink = styled.a.attrs({
 `;
 
 export const HrefLinkStandalone = styled.a.attrs({
-  className: 'productCardLink',
+  className: 'externalLink',
+})`
+  color: #1a5a96;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-decoration: underline;
+  :hover {
+    color: blue;
+    text-decoration: none;
+  }
+`;
+
+export const HrefLinkStandaloneInternal = styled(Link).attrs({
+  className: 'internalLink',
 })`
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;

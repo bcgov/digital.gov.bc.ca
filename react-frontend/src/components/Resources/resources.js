@@ -6,13 +6,14 @@ import Guides from './guides';
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import Standards from './standards';
 
-import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
-
-import '../../css/resources.css';
+import {
+  PageContainerResource,
+  SimplePageBody,
+} from '../StyleComponents/pageContent';
 
 function Resources() {
   return (
-    <PageContainer>
+    <PageContainerResource>
       <SimpleBanner
         title="Resources"
         description=" Policy, standards, guides, and tools you can use right now to
@@ -25,7 +26,7 @@ function Resources() {
         <ForDesigners />
         <ForDevelopers />
       </SimplePageBody>
-    </PageContainer>
+    </PageContainerResource>
   );
 }
 
