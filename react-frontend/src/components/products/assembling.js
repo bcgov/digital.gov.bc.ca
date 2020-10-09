@@ -1,11 +1,13 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
+
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const cards = [
-  <div className="cardContent">
+  <div>
     <p>
       <HrefLink
         href="https://bcdevexchange.org/ExchangeLab"
@@ -19,7 +21,7 @@ const cards = [
       team.
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       If you need to contract a team and want them to follow an Agile process,
       you can use the{' '}
@@ -28,7 +30,7 @@ const cards = [
       </HrefLink>
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       By requesting access to the B.C. Government’s{' '}
       <HrefLink
@@ -42,7 +44,7 @@ const cards = [
       securely, and at scale.
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       Learn about{' '}
       <HrefLink
@@ -59,18 +61,22 @@ const cards = [
 
 const Assembling = () => {
   return (
-    <div className="definingContainer">
-      <ProductPageSubHeading>
-        Assembling and supporting your team
-      </ProductPageSubHeading>
-      <p>
-        Whatever technology solution you decide to pursue, you will need a team
-        of people with all the skills necessary to implement and maintain it.
-        Here are some services that can help you form that team and set them up
-        for success.
-      </p>
-      <p>Here are some services that might help you at this stage.</p>
-      <Grid className="cardAdjustment">
+    <ContentBlock id="assemblingTeam">
+      <Grid>
+        <Row>
+          <Col sm={12}>
+            <ProductPageSubHeading>
+              Assembling and supporting your team
+            </ProductPageSubHeading>
+            <p>
+              Whatever technology solution you decide to pursue, you will need a
+              team of people with all the skills necessary to implement and
+              maintain it. Here are some services that can help you form that
+              team and set them up for success.
+            </p>
+            <p>Here are some services that might help you at this stage.</p>
+          </Col>
+        </Row>
         <Row style={{ minHeight: '250px' }}>
           {cards.map((element, i) => (
             <Col key={i} sm={12} md={3}>
@@ -79,7 +85,7 @@ const Assembling = () => {
           ))}
         </Row>
       </Grid>
-    </div>
+    </ContentBlock>
   );
 };
 

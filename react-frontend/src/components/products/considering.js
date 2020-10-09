@@ -1,10 +1,13 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
+
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
+import { ContentBlock } from '../StyleComponents/pageContent';
+
 const cards = [
-  <div className="cardContent">
+  <div>
     <p>
       If you are facing an urgent service delivery challenge due to COVID-19,
       connect with the Digital Response Unit through the{' '}
@@ -19,7 +22,7 @@ const cards = [
       urgent challenges.
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       <HrefLink
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
@@ -33,7 +36,7 @@ const cards = [
       new digital product.
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       Gain a better understanding of solutions that already exist in the
       marketplace before you decide what to buy or build with the{' '}
@@ -46,7 +49,7 @@ const cards = [
       </HrefLink>
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       If you are considering cloud storage or tools such as Salesforce, Service
       Now, MS Dynamics, or Microsoft Office, read about{' '}
@@ -63,28 +66,32 @@ const cards = [
 
 const Considering = () => {
   return (
-    <div className="definingContainer contentBlock">
-      <ProductPageSubHeading>
-        Considering different technology approaches
-      </ProductPageSubHeading>
-      <p>
-        Depending on the complexity of your problem, you may apply a variety of
-        methods to discover appropriate solutions. If your challenge is complex,
-        you should take an{' '}
-        <HrefLink
-          href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Agile
-        </HrefLink>{' '}
-        approach—that is, form a small team to incrementally build your
-        solution, frequently testing it with users and reevaluating what should
-        be done next. On the other hand, if your challenge is simple or
-        complicated, adopting an existing solution with a bit of customization
-        may meet your needs..
-      </p>
-      <Grid className="cardAdjustment">
+    <ContentBlock id="definingContainer">
+      <Grid>
+        <Row>
+          <Col sm={12}>
+            <ProductPageSubHeading>
+              Considering different technology approaches
+            </ProductPageSubHeading>
+            <p>
+              Depending on the complexity of your problem, you may apply a
+              variety of methods to discover appropriate solutions. If your
+              challenge is complex, you should take an{' '}
+              <HrefLink
+                href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Agile
+              </HrefLink>{' '}
+              approach—that is, form a small team to incrementally build your
+              solution, frequently testing it with users and reevaluating what
+              should be done next. On the other hand, if your challenge is
+              simple or complicated, adopting an existing solution with a bit of
+              customization may meet your needs..
+            </p>
+          </Col>
+        </Row>
         <Row style={{ minHeight: '250px' }}>
           {cards.map((element, i) => (
             <Col key={i} sm={12} md={3}>
@@ -93,7 +100,7 @@ const Considering = () => {
           ))}
         </Row>
       </Grid>
-    </div>
+    </ContentBlock>
   );
 };
 

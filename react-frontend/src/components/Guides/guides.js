@@ -14,7 +14,7 @@ const GuidesPage = () => {
         description="Guides to help public sector employees embrace modern digital technology."
       />
       <div className="guides">
-        <Grid className="cardAdjustment">
+        <Grid>
           <Query query={GUIDES_QUERY}>
             {({ data: { guides } }) => {
               return (

@@ -1,12 +1,17 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
-import { ProductPageSubHeading } from '../StyleComponents/headings';
+
+import {
+  ProductPageHeading,
+  ProductPageSubHeading,
+} from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
+import { ContentBlock } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
-    <p className="cardContent">
+    <p>
       <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design">
         The Service Design team
       </HrefLink>{' '}
@@ -15,7 +20,7 @@ const cards = [
     </p>
   </div>,
   <div>
-    <p className="cardContent">
+    <p>
       Consider if there are{' '}
       <HrefLink href="https://www2.gov.bc.ca/gov/content/data">
         data and data services
@@ -24,7 +29,7 @@ const cards = [
     </p>
   </div>,
   <div>
-    <p className="cardContent">
+    <p>
       If you are trying to improve a <b>process</b>,{' '}
       <HrefLink href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/lean-bc">
         LeanBC
@@ -37,15 +42,22 @@ const cards = [
 
 const Defining = () => {
   return (
-    <div className="definingContainer contentBlock">
-      <ProductPageSubHeading>
-        Defining problems, outcomes, value
-      </ProductPageSubHeading>
-      <p>
-        To truly improve something for people, it’s critical to take time to
-        understand them and be clear about what you want to achieve.
-      </p>
-      <Grid className="cardAdjustment">
+    <ContentBlock id="definingProblems">
+      <Grid>
+        <Row>
+          <Col sm={12}>
+            <ProductPageHeading>
+              Here are some services to help you along this journey:
+            </ProductPageHeading>
+            <ProductPageSubHeading>
+              Defining problems, outcomes, value
+            </ProductPageSubHeading>
+            <p>
+              To truly improve something for people, it’s critical to take time
+              to understand them and be clear about what you want to achieve.
+            </p>
+          </Col>
+        </Row>
         <Row style={{ minHeight: '200px' }}>
           {cards.map((element, i) => (
             <Col key={i} sm={12} md={4}>
@@ -54,7 +66,7 @@ const Defining = () => {
           ))}
         </Row>
       </Grid>
-    </div>
+    </ContentBlock>
   );
 };
 
