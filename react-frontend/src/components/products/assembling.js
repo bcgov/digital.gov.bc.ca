@@ -2,18 +2,18 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
 import { ProductPageSubHeading } from '../StyleComponents/headings';
+import { HrefLink } from '../StyleComponents/htmlTags';
 
 const cards = [
   <div className="cardContent">
     <p>
-      <a
-        className="productCardLink"
+      <HrefLink
         href="https://bcdevexchange.org/ExchangeLab"
         target="_blank"
         rel="noopener noreferrer"
       >
         The Exchange Lab
-      </a>{' '}
+      </HrefLink>{' '}
       provides training, community, and digital service delivery residency
       programs that apply Agile and DevOps methods that can help you build your
       team.
@@ -23,22 +23,21 @@ const cards = [
     <p>
       If you need to contract a team and want them to follow an Agile process,
       you can use the{' '}
-      <a className="productCardLink" target="_blank">
+      <HrefLink href="https://digital.gov.bc.ca/marketplace" target="_blank">
         Digital Marketplace.
-      </a>
+      </HrefLink>
     </p>
   </div>,
   <div className="cardContent">
     <p>
       By requesting access to the B.C. Government’s{' '}
-      <a
-        className="productCardLink"
+      <HrefLink
         href="https://www.bcdevexchange.org/DevOpsPlatform"
         target="_blank"
         rel="noopener noreferrer"
       >
         DevOps Container Platform
-      </a>
+      </HrefLink>
       , you can empower your developers to deploy digital applications quickly,
       securely, and at scale.
     </p>
@@ -46,14 +45,13 @@ const cards = [
   <div className="cardContent">
     <p>
       Learn about{' '}
-      <a
-        className="productCardLink"
+      <HrefLink
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
         target="_blank"
         rel="noopener noreferrer"
       >
         IM/IT Capital Investment
-      </a>{' '}
+      </HrefLink>{' '}
       that you may require to build your service.
     </p>
   </div>,

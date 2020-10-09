@@ -1,4 +1,5 @@
 import React from 'react';
+import { HrefLink } from '../../StyleComponents/htmlTags';
 
 const CollaborationTool = ({
   url,
@@ -9,9 +10,9 @@ const CollaborationTool = ({
   features,
 }) => (
   <div className="collaborationTool">
-    <a href={url}>
+    <HrefLink href={url}>
       <strong>{name}</strong>
-    </a>{' '}
+    </HrefLink>{' '}
     *
     <ul>
       <li>

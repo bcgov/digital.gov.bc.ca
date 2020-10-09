@@ -1,15 +1,16 @@
 import React from 'react';
-import DigitalBlock from './digitalframeworkblock';
-import DigitalTable from './digitalframeworktable';
+import DigitalBlock from './digitalFrameworkBlock';
+import DigitalTable from './digitalFrameworkTable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
 
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
 import {
-  PageContainer,
-  SimplePageBodyDigital,
+  PageContainerResource,
+  SimplePageBody,
 } from '../StyleComponents/pageContent';
+import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
 
 const titles = [
   'Our Vision',
@@ -83,6 +84,7 @@ const objectives = [
     'Digital teams will have the tools they need to deliver better value to citizens, faster.',
     'The BC Public Service will be better equipped to deliver government’s priorities.',
   ],
+
   [
     'Government procurement will help grow local economies, create local jobs, and take advantage of made-in-B.C. innovations.',
     'B.C.’s work on digital transformation will be shared and amplified, helping us connect with partners.',
@@ -92,18 +94,17 @@ const objectives = [
 ];
 
 const DigitalFramework = () => {
-  var ScrollLink = Scroll.Link;
   var ScrollElement = Scroll.Element;
 
   return (
-    <PageContainer>
+    <PageContainerResource>
       <SimpleBanner
         title={'Digital Framework'}
         description={
           'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
         }
       />
-      <SimplePageBodyDigital>
+      <SimplePageBody>
         <div className="digitalSection">
           <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
         </div>
@@ -121,53 +122,44 @@ const DigitalFramework = () => {
           <div className="someLinks">
             <ul>
               <li>
-                <ScrollLink
-                  activeClass="active"
+                <HrefLinkScrollTo
                   to="blockOne"
                   spy={true}
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">Service delivery</span>
-                </ScrollLink>
-                <br />
+                  Service delivery
+                </HrefLinkScrollTo>
               </li>
               <li>
-                <ScrollLink
-                  activeClass="active"
+                <HrefLinkScrollTo
                   to="blockTwo"
                   spy={true}
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">Data and information</span>
-                </ScrollLink>
-                <br />
+                  Data and information
+                </HrefLinkScrollTo>
               </li>
               <li>
-                <ScrollLink
-                  activeClass="active"
+                <HrefLinkScrollTo
                   to="blockThree"
                   spy={true}
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">
-                    Tools, processes and practices
-                  </span>
-                </ScrollLink>
-                <br />
+                  Tools, processes and practices
+                </HrefLinkScrollTo>
               </li>
               <li>
-                <ScrollLink
-                  activeClass="active"
+                <HrefLinkScrollTo
                   to="blockFour"
                   spy={true}
                   smooth={true}
                   offset={-120}
                 >
-                  <span className="digitalLink">External Partners</span>
-                </ScrollLink>
+                  External Partners
+                </HrefLinkScrollTo>
               </li>
             </ul>
           </div>
@@ -225,8 +217,8 @@ const DigitalFramework = () => {
             />
           </div>
         </div>
-      </SimplePageBodyDigital>
-    </PageContainer>
+      </SimplePageBody>
+    </PageContainerResource>
   );
 };
 

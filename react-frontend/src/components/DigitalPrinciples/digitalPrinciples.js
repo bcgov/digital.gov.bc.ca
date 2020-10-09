@@ -8,6 +8,7 @@ import {
   SimpleTextPageTitle,
   DigitalPrinciplesHeading,
 } from '../StyleComponents/headings';
+import { HrefLink } from '../StyleComponents/htmlTags';
 
 function DigitalPrinciples() {
   return (
@@ -21,9 +22,11 @@ function DigitalPrinciples() {
         The Digital Principles are meant to guide the work of individual public
         servants and vendor partners as the Province of British Columbia
         continues to evolve into a{' '}
-        <a href="https://digital.gov.bc.ca/">Digital Government</a>. This
-        includes everything from the day-to-day work of individuals to the
-        design, development and delivery of digital products and services.
+        <HrefLink href="https://digital.gov.bc.ca/">
+          Digital Government
+        </HrefLink>
+        . This includes everything from the day-to-day work of individuals to
+        the design, development and delivery of digital products and services.
       </p>
       <p>
         The Digital Principles were co-developed with BC public service
@@ -35,15 +38,15 @@ function DigitalPrinciples() {
       <ul>
         <li>Applicable legislation</li>
         <li>
-          <a href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct">
+          <HrefLink href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct">
             Standards of Conduct for BC Public Service Employees
-          </a>
+          </HrefLink>
         </li>
         <li>
-          <a href="https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf">
+          <HrefLink href="https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf">
             Draft Principles that Guide the Province of British Columbia’s
             Relationship with Indigenous Peoples
-          </a>
+          </HrefLink>
         </li>
         <li>Gender-Based Analysis Plus (GBA+)</li>
       </ul>
@@ -152,9 +155,9 @@ function DigitalPrinciples() {
         Acknowledge the historical relationships, inequity, trauma, and
         discrimination created by government. Work in the spirit of
         reconciliation and{' '}
-        <a href="https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf">
+        <HrefLink href="https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf">
           B.C.’s Draft Principles
-        </a>{' '}
+        </HrefLink>{' '}
         guiding our relationship with Indigenous peoples. Respect that First
         Nations have control over data-collection processes in their
         communities, and that they own their information and control how it can
@@ -165,15 +168,17 @@ function DigitalPrinciples() {
         <em>
           These Principles are being developed in the open on GitHub. If you
           would like to comment,{' '}
-          <a
+          <HrefLink
             href="https://github.com/bcgov/digital-principles"
             target="_blank"
             rel="noopener noreferrer"
           >
             visit the GitHub repository
-          </a>{' '}
+          </HrefLink>{' '}
           and open an Issue, or send an email to{' '}
-          <a href="mailto:Daniel.Pizarro@gov.bc.ca">Daniel.Pizarro@gov.bc.ca</a>
+          <HrefLink href="mailto:Daniel.Pizarro@gov.bc.ca">
+            Daniel.Pizarro@gov.bc.ca
+          </HrefLink>
           .
         </em>
       </p>

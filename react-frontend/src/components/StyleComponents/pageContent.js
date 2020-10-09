@@ -17,19 +17,8 @@ export const SimplePageBody = styled.div.attrs({
   }
 `;
 
-//TODO: When Product page and Digital Framework page refactored
-//delete these and used the common 'SimplePageBody' component
-
-export const SimplePageBodyDigital = styled.div.attrs({
-  id: 'digital-content-body',
-})`
-  width: 960px;
-  margin: auto;
-  @media only screen and (max-width: 800px) {
-    width: 85%;
-  }
-`;
-
+//TODO: When Product page refactored
+//delete this and used the common 'SimplePageBody' component
 export const SimplePageBodyProduct = styled.div.attrs({
   id: 'product-content-body',
 })`
