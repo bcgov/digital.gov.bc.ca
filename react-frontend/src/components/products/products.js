@@ -9,7 +9,7 @@ import {
   PageContainerResource,
   SimplePageBody,
 } from '../StyleComponents/pageContent';
-import { ProductPageHeading } from '../StyleComponents/headings';
+
 const Products = () => {
   return (
     <PageContainerResource>
