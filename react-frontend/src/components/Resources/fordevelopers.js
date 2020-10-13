@@ -10,7 +10,9 @@ function ForDevelopers() {
     <ContentBlock id="forDevelopers">
       <Grid>
         <Row>
-          <ResourcePageSubHeading>For Developers</ResourcePageSubHeading>
+          <Col sm={12}>
+            <ResourcePageSubHeading>For Developers</ResourcePageSubHeading>
+          </Col>
         </Row>
         <Row>
           <Col sm={12} md={6}>

@@ -12,7 +12,9 @@ function Guides() {
     <ContentBlock id="guides">
       <Grid>
         <Row>
-          <ResourcePageHeading>Guides</ResourcePageHeading>
+          <Col sm={12}>
+            <ResourcePageHeading>Guides</ResourcePageHeading>
+          </Col>
         </Row>
         <Row>
           <Col sm={24} md={12}>
