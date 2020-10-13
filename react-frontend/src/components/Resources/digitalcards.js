@@ -23,7 +23,9 @@ function DigitalCards() {
     <ContentBlock id="standards">
       <Grid>
         <Row>
-          <ResourcePageHeading>Standards & Policy</ResourcePageHeading>
+          <Col sm={12}>
+            <ResourcePageHeading>Standards & Policy</ResourcePageHeading>
+          </Col>
         </Row>
         <Row>
           <Col sm={12} md={6}>
