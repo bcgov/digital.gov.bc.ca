@@ -3,7 +3,7 @@ import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 import CardList from './cardlist';
 import '../../css/home.css';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import { PageContainerOld } from '../StyleComponents/pageContent';
 
 const bannerContent = (
   <p style={{ color: 'white' }}>
@@ -22,14 +22,14 @@ const homeImage = require('../../images/home-banner.png');
 
 function Home() {
   return (
-    <PageContainer>
+    <PageContainerOld>
       <BannerWithImage
         content={bannerContent}
         title={bannerTitle}
         image={homeImage}
       />
       <CardList />
-    </PageContainer>
+    </PageContainerOld>
   );
 }
 

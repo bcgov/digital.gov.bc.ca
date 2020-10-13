@@ -52,7 +52,8 @@ export const SimpleTextContainer = styled.div.attrs({
   padding-right: 15px;
 `;
 
-export const PageContainer = styled.div.attrs({
+//TODO Delete page content old when the refactor is complete.
+export const PageContainerOld = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',
 })`
@@ -67,7 +68,7 @@ export const PageContainer = styled.div.attrs({
 //TODO This will be the new standard for Page containers.
 // When refactor complete there should be a single pageContainer
 // That resizes properly with the navbar and site logo
-export const PageContainerResource = styled.div.attrs({
+export const PageContainer = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',
 })`

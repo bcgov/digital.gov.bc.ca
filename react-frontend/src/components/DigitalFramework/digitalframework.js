@@ -7,7 +7,7 @@ import '../../css/digital.css';
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
 import {
-  PageContainer,
+  PageContainerOld,
   SimplePageBodyDigital,
 } from '../StyleComponents/pageContent';
 
@@ -96,7 +96,7 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <PageContainer>
+    <PageContainerOld>
       <SimpleBanner
         title={'Digital Framework'}
         description={
@@ -226,7 +226,7 @@ const DigitalFramework = () => {
           </div>
         </div>
       </SimplePageBodyDigital>
-    </PageContainer>
+    </PageContainerOld>
   );
 };
 

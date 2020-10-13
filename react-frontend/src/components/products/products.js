@@ -8,13 +8,13 @@ import Assembling from './assembling';
 import '../../css/products.css';
 
 import {
-  PageContainer,
+  PageContainerOld,
   SimplePageBodyProduct,
 } from '../StyleComponents/pageContent';
 import { ProductPageHeading } from '../StyleComponents/headings';
 const Products = () => {
   return (
-    <PageContainer>
+    <PageContainerOld>
       <SimpleBanner
         title="Products and Services"
         description="Supports to help you create or improve a digital service."
@@ -28,7 +28,7 @@ const Products = () => {
         <Considering />
         <Assembling />
       </SimplePageBodyProduct>
-    </PageContainer>
+    </PageContainerOld>
   );
 };
 
