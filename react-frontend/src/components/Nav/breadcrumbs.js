@@ -29,9 +29,9 @@ const BreadCrumbs = () => {
       <HrefLinkStandaloneInternal to="/">Home</HrefLinkStandaloneInternal>
     </li>
   );
+  listEntry.push(<li className="listOption">{'>'}</li>);
   for (var i = 1; i < pathArray.length - 1; i++) {
     displayName = pathArray[i];
-    listEntry.push(<li className="listOption">{'>'}</li>);
     listEntry.push(
       <li className="listOption">
         <HrefLinkStandaloneInternal to={'/' + displayName}>
@@ -39,6 +39,7 @@ const BreadCrumbs = () => {
         </HrefLinkStandaloneInternal>
       </li>
     );
+    listEntry.push(<li className="listOption">{'>'}</li>);
   }
 
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
