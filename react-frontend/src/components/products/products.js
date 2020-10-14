@@ -5,14 +5,11 @@ import Defining from './defining';
 import Considering from './considering';
 import Assembling from './assembling';
 
-import {
-  PageContainerResource,
-  SimplePageBody,
-} from '../StyleComponents/pageContent';
+import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
 
 const Products = () => {
   return (
-    <PageContainerResource>
+    <PageContainer>
       <SimpleBanner
         title="Products and Services"
         description="Supports to help you create or improve a digital service."
@@ -23,7 +20,7 @@ const Products = () => {
         <Considering />
         <Assembling />
       </SimplePageBody>
-    </PageContainerResource>
+    </PageContainer>
   );
 };
 

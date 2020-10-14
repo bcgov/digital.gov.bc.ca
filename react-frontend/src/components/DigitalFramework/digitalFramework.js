@@ -6,10 +6,7 @@ import '../../css/digital.css';
 
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
-import {
-  PageContainerResource,
-  SimplePageBody,
-} from '../StyleComponents/pageContent';
+import { SimplePageBody, PageContainer } from '../StyleComponents/pageContent';
 import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
 
 const titles = [
@@ -97,7 +94,7 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <PageContainerResource>
+    <PageContainer>
       <SimpleBanner
         title={'Digital Framework'}
         description={
@@ -218,7 +215,7 @@ const DigitalFramework = () => {
           </div>
         </div>
       </SimplePageBody>
-    </PageContainerResource>
+    </PageContainer>
   );
 };
 
