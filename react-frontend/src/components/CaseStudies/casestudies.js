@@ -4,7 +4,7 @@ import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import { PageContainerOld } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
@@ -13,7 +13,7 @@ const CaseStudies = () => {
     <div>
       <Switch>
         <Route exact path={path}>
-          <PageContainer>
+          <PageContainerOld>
             <SimpleBanner
               title="Case Studies"
               description="Learn how digital approaches are getting results here in British
@@ -22,11 +22,11 @@ const CaseStudies = () => {
             <div className="caseStudyBody">
               <CardList />
             </div>
-          </PageContainer>
+          </PageContainerOld>
         </Route>
-        <PageContainer>
+        <PageContainerOld>
           <Route path={path + '/:caseStudyId'} component={CaseStudy} />
-        </PageContainer>
+        </PageContainerOld>
       </Switch>
     </div>
   );
