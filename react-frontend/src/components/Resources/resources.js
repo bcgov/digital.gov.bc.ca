@@ -2,6 +2,7 @@ import React from 'react';
 import DigitalCards from './digitalcards';
 import ForDesigners from './fordesigners';
 import ForDevelopers from './fordevelopers';
+import DocumentTitle from 'react-document-title';
 import Guides from './guides';
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import Standards from './standards';
@@ -12,20 +13,22 @@ import '../../css/resources.css';
 
 function Resources() {
   return (
-    <PageContainer>
-      <SimpleBanner
-        title="Resources"
-        description=" Policy, standards, guides, and tools you can use right now to
+    <DocumentTitle title="Resources">
+      <PageContainer>
+        <SimpleBanner
+          title="Resources"
+          description=" Policy, standards, guides, and tools you can use right now to
         deliver excellent digital services."
-      />
-      <div className="resourcesBody">
-        <DigitalCards />
-        <Standards />
-        <Guides />
-        <ForDesigners />
-        <ForDevelopers />
-      </div>
-    </PageContainer>
+        />
+        <div className="resourcesBody">
+          <DigitalCards />
+          <Standards />
+          <Guides />
+          <ForDesigners />
+          <ForDevelopers />
+        </div>
+      </PageContainer>
+    </DocumentTitle>
   );
 }
 

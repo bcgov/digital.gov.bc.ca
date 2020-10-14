@@ -3,6 +3,7 @@ import DigitalBlock from './digitalframeworkblock';
 import DigitalTable from './digitalframeworktable';
 import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
+import DocumentTitle from 'react-document-title';
 
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
@@ -93,137 +94,139 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <PageContainer>
-      <SimpleBanner
-        title={'Digital Framework'}
-        description={
-          'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
-        }
-      />
-      <div className="digitalBody">
-        <div className="digitalSection">
-          <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
-        </div>
-        <div className="digitalSection">
-          <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
-        </div>
-        <div className="digitalSection">
-          <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
-        </div>
-        <div className="digitalSection">
-          <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
-        </div>
-        <div className="digitalSection">
-          <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
-          <div className="someLinks">
-            <ul>
-              <li>
-                <ScrollLink
-                  activeClass="active"
-                  to="blockOne"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  <span className="digitalLink">Service delivery</span>
-                </ScrollLink>
-                <br />
-              </li>
-              <li>
-                <ScrollLink
-                  activeClass="active"
-                  to="blockTwo"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  <span className="digitalLink">Data and information</span>
-                </ScrollLink>
-                <br />
-              </li>
-              <li>
-                <ScrollLink
-                  activeClass="active"
-                  to="blockThree"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  <span className="digitalLink">
-                    Tools, processes and practices
-                  </span>
-                </ScrollLink>
-                <br />
-              </li>
-              <li>
-                <ScrollLink
-                  activeClass="active"
-                  to="blockFour"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  <span className="digitalLink">External Partners</span>
-                </ScrollLink>
-              </li>
-            </ul>
+    <DocumentTitle title="Digital Framework">
+      <PageContainer>
+        <SimpleBanner
+          title={'Digital Framework'}
+          description={
+            'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
+          }
+        />
+        <div className="digitalBody">
+          <div className="digitalSection">
+            <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
+          </div>
+          <div className="digitalSection">
+            <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
+          </div>
+          <div className="digitalSection">
+            <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
+          </div>
+          <div className="digitalSection">
+            <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
+          </div>
+          <div className="digitalSection">
+            <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
+            <div className="someLinks">
+              <ul>
+                <li>
+                  <ScrollLink
+                    activeClass="active"
+                    to="blockOne"
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                  >
+                    <span className="digitalLink">Service delivery</span>
+                  </ScrollLink>
+                  <br />
+                </li>
+                <li>
+                  <ScrollLink
+                    activeClass="active"
+                    to="blockTwo"
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                  >
+                    <span className="digitalLink">Data and information</span>
+                  </ScrollLink>
+                  <br />
+                </li>
+                <li>
+                  <ScrollLink
+                    activeClass="active"
+                    to="blockThree"
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                  >
+                    <span className="digitalLink">
+                      Tools, processes and practices
+                    </span>
+                  </ScrollLink>
+                  <br />
+                </li>
+                <li>
+                  <ScrollLink
+                    activeClass="active"
+                    to="blockFour"
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                  >
+                    <span className="digitalLink">External Partners</span>
+                  </ScrollLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="digitalSection">
+            <ScrollElement name="blockOne" className="element" />
+            <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
+            <div style={{ marginTop: '-20px' }}>
+              <ul>
+                <li>Based on user needs (as identified by users themselves)</li>
+                <li>
+                  Designed and tested with the people who will be using them
+                </li>
+                <li>Accessible and inclusive for all British Columbians</li>
+                <li>Designed to work end-to-end</li>
+                <li>
+                  Joined across all channels (online, phone, mail, face-to-face)
+                </li>
+              </ul>
+            </div>
+            <div className="tableSpacer">
+              <DigitalTable
+                priorityActions={priorityActions[0]}
+                objectives={objectives[0]}
+              />
+            </div>
+          </div>
+          <div className="digitalSection">
+            <ScrollElement name="blockTwo" className="element" />
+            <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
+            <div className="tableSpacer">
+              <DigitalTable
+                priorityActions={priorityActions[1]}
+                objectives={objectives[1]}
+              />
+            </div>
+          </div>
+          <div className="digitalSection">
+            <ScrollElement name="blockThree" className="element" />
+            <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
+            <div className="tableSpacer">
+              <DigitalTable
+                priorityActions={priorityActions[2]}
+                objectives={objectives[2]}
+              />
+            </div>
+          </div>
+          <div>
+            <ScrollElement name="blockFour" className="element" />
+            <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
+            <div className="tableSpacer">
+              <DigitalTable
+                priorityActions={priorityActions[3]}
+                objectives={objectives[3]}
+              />
+            </div>
           </div>
         </div>
-        <div className="digitalSection">
-          <ScrollElement name="blockOne" className="element" />
-          <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
-          <div style={{ marginTop: '-20px' }}>
-            <ul>
-              <li>Based on user needs (as identified by users themselves)</li>
-              <li>
-                Designed and tested with the people who will be using them
-              </li>
-              <li>Accessible and inclusive for all British Columbians</li>
-              <li>Designed to work end-to-end</li>
-              <li>
-                Joined across all channels (online, phone, mail, face-to-face)
-              </li>
-            </ul>
-          </div>
-          <div className="tableSpacer">
-            <DigitalTable
-              priorityActions={priorityActions[0]}
-              objectives={objectives[0]}
-            />
-          </div>
-        </div>
-        <div className="digitalSection">
-          <ScrollElement name="blockTwo" className="element" />
-          <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
-          <div className="tableSpacer">
-            <DigitalTable
-              priorityActions={priorityActions[1]}
-              objectives={objectives[1]}
-            />
-          </div>
-        </div>
-        <div className="digitalSection">
-          <ScrollElement name="blockThree" className="element" />
-          <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
-          <div className="tableSpacer">
-            <DigitalTable
-              priorityActions={priorityActions[2]}
-              objectives={objectives[2]}
-            />
-          </div>
-        </div>
-        <div>
-          <ScrollElement name="blockFour" className="element" />
-          <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
-          <div className="tableSpacer">
-            <DigitalTable
-              priorityActions={priorityActions[3]}
-              objectives={objectives[3]}
-            />
-          </div>
-        </div>
-      </div>
-    </PageContainer>
+      </PageContainer>
+    </DocumentTitle>
   );
 };
 
