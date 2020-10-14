@@ -12,7 +12,7 @@ import { PageContainer } from '../StyleComponents/pageContent';
 import { ProductPageHeading } from '../StyleComponents/headings';
 const Products = () => {
   return (
-    <DocumentTitle title="Products">
+    <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
       <PageContainer>
         <SimpleBanner
           title="Products and Services"
