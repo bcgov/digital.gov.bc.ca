@@ -6,7 +6,10 @@ import '../../css/digital.css';
 
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import {
+  PageContainerOld,
+  SimplePageBodyDigital,
+} from '../StyleComponents/pageContent';
 
 const titles = [
   'Our Vision',
@@ -93,14 +96,14 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <PageContainer>
+    <PageContainerOld>
       <SimpleBanner
         title={'Digital Framework'}
         description={
           'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
         }
       />
-      <div className="digitalBody">
+      <SimplePageBodyDigital>
         <div className="digitalSection">
           <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
         </div>
@@ -222,8 +225,8 @@ const DigitalFramework = () => {
             />
           </div>
         </div>
-      </div>
-    </PageContainer>
+      </SimplePageBodyDigital>
+    </PageContainerOld>
   );
 };
 

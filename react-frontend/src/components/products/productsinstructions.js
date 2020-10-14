@@ -3,24 +3,21 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 
 const instructions = [
   <p>
-    Clearly define the <span className="bolder">problems</span> you’re trying to
-    solve, the <span className="bolder">outcomes</span> you want to improve, or
-    the <span className="bolder">values</span> you want to deliver for the users
-    of your service
+    Clearly define the <b>problems</b> you’re trying to solve, the{' '}
+    <b>outcomes</b> you want to improve, or the <b>values</b> you want to
+    deliver for the users of your service
   </p>,
   <p>
-    Identify and consider{' '}
-    <span className="bolder">different technology approaches</span> you might
+    Identify and consider <b>different technology approaches</b> you might
     pursue — for example, licensing and customizing a commercial digital product
     or building a custom application from scratch
   </p>,
   <p>
-    Confirm <span className="bolder">support and funding</span> to pursue your
-    solution
+    Confirm <b>support and funding</b> to pursue your solution
   </p>,
   <p>
-    <span className="bolder">Assemble a team</span> with the skills and capacity
-    to deliver, test, improve, and maintain your digital service into the future
+    <b>Assemble a team</b> with the skills and capacity to deliver, test,
+    improve, and maintain your digital service into the future
   </p>,
 ];
 
@@ -35,7 +32,7 @@ const ProductsInstructions = () => {
   }
 
   return (
-    <div className="instructions contentBlock">
+    <div>
       <div>
         <p className="instructionsFirst">
           Before you’re ready to create or improve a digital service, you will

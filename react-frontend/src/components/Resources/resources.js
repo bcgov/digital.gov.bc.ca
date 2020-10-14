@@ -6,9 +6,7 @@ import Guides from './guides';
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import Standards from './standards';
 
-import { PageContainer } from '../StyleComponents/pageContent';
-
-import '../../css/resources.css';
+import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
 
 function Resources() {
   return (
@@ -18,13 +16,13 @@ function Resources() {
         description=" Policy, standards, guides, and tools you can use right now to
         deliver excellent digital services."
       />
-      <div className="resourcesBody">
+      <SimplePageBody>
         <DigitalCards />
         <Standards />
         <Guides />
         <ForDesigners />
         <ForDevelopers />
-      </div>
+      </SimplePageBody>
     </PageContainer>
   );
 }

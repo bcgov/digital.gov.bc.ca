@@ -8,6 +8,38 @@ export const GlobaStyleSize = createGlobalStyle`
  }
 `;
 
+export const SimplePageBody = styled.div.attrs({
+  id: 'content-body',
+})`
+  margin: auto;
+  @media only screen and (max-width: 800px) {
+    width: 85%;
+  }
+`;
+
+//TODO: When Product page and Digital Framework page refactored
+//delete these and used the common 'SimplePageBody' component
+
+export const SimplePageBodyDigital = styled.div.attrs({
+  id: 'digital-content-body',
+})`
+  width: 960px;
+  margin: auto;
+  @media only screen and (max-width: 800px) {
+    width: 85%;
+  }
+`;
+
+export const SimplePageBodyProduct = styled.div.attrs({
+  id: 'product-content-body',
+})`
+  width: 960px;
+  margin: auto;
+  @media only screen and (max-width: 800px) {
+    width: 85%;
+  }
+`;
+
 export const SimpleTextContainer = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',
@@ -20,12 +52,30 @@ export const SimpleTextContainer = styled.div.attrs({
   padding-right: 15px;
 `;
 
-export const PageContainer = styled.div.attrs({
+//TODO Delete page content old when the refactor is complete.
+export const PageContainerOld = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',
 })`
   background-color: #f2f2f2;
   padding-bottom: 70px;
+  z-index: -2;
+  @media only screen and (max-width: 800px) {
+    padding-top: 65px;
+  }
+`;
+
+//TODO This will be the new standard for Page containers.
+// When refactor complete there should be a single pageContainer
+// That resizes properly with the navbar and site logo
+export const PageContainer = styled.div.attrs({
+  className: 'pageContainer',
+  id: 'main-content-anchor',
+})`
+  background-color: #f2f2f2;
+  padding: 10px 0 70px 0px;
+  margin: auto;
+  max-width: 1065px;
   z-index: -2;
   @media only screen and (max-width: 800px) {
     padding-top: 65px;

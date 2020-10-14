@@ -7,16 +7,19 @@ import Assembling from './assembling';
 
 import '../../css/products.css';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import {
+  PageContainerOld,
+  SimplePageBodyProduct,
+} from '../StyleComponents/pageContent';
 import { ProductPageHeading } from '../StyleComponents/headings';
 const Products = () => {
   return (
-    <PageContainer>
+    <PageContainerOld>
       <SimpleBanner
         title="Products and Services"
         description="Supports to help you create or improve a digital service."
       />
-      <div className="productsBody">
+      <SimplePageBodyProduct>
         <ProductsInstructions />
         <ProductPageHeading>
           Here are some services to help you along this journey:
@@ -24,8 +27,8 @@ const Products = () => {
         <Defining />
         <Considering />
         <Assembling />
-      </div>
-    </PageContainer>
+      </SimplePageBodyProduct>
+    </PageContainerOld>
   );
 };
 
