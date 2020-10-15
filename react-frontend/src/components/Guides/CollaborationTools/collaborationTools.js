@@ -14,6 +14,8 @@ import {
   GlobaStyleSize,
 } from '../../StyleComponents/pageContent';
 
+import { HrefLink } from '../../StyleComponents/htmlTags';
+
 function CollaborationTools() {
   return (
     <DocumentTitle title="Digital Principles - Digital Government - Province of British Columbia">
@@ -159,14 +161,14 @@ function CollaborationTools() {
         <p>
           Since many video communication platforms store data in the United
           States, using these platforms in B.C. may not comply with{' '}
-          <a href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
+          <HrefLink href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
             section 30.1 of the Freedom of Information and Protection of Privacy
             Act
-          </a>{' '}
+          </HrefLink>{' '}
           (the data residency provision). However,{' '}
-          <a href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
+          <HrefLink href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
             Ministerial Order 085
-          </a>{' '}
+          </HrefLink>{' '}
           – issued during the COVID-19 public health emergency – allows
           disclosure of personal information outside Canada in specific
           circumstances. One of these circumstances allows public bodies to use
@@ -185,10 +187,10 @@ function CollaborationTools() {
           expires (June 30, 2020, unless rescinded or extended); and records
           created using these tools or applications are managed appropriately.
           For more information, please read the{' '}
-          <a href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
+          <HrefLink href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
             Guidance on Ministerial Order 085: Respecting Disclosures During
             COVID-19 Emergency
-          </a>
+          </HrefLink>
           .
         </p>
         <Title3>Security measures</Title3>
@@ -471,9 +473,9 @@ function CollaborationTools() {
             <strong>Ensure the Zoom client app is the current version</strong>{' '}
             and regularly check for updates. For more information on installing
             apps, read the{' '}
-            <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/appropriate-use-policy">
+            <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/appropriate-use-policy">
               Applications and Software Guide
-            </a>
+            </HrefLink>
             .
           </li>
           <li>
@@ -489,9 +491,9 @@ function CollaborationTools() {
           </li>
           <li>
             Choose a strong password (see{' '}
-            <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-awareness/password-best-practices">
+            <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-awareness/password-best-practices">
               Password Best Practices
-            </a>
+            </HrefLink>
             ) and change your password immediately if you think someone may have
             access to your account.
           </li>
@@ -604,9 +606,9 @@ function CollaborationTools() {
         </ul>
         <p>
           You can find training and tutorials on Zoom’s website in{' '}
-          <a href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
+          <HrefLink href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
             A Message to Our Users
-          </a>
+          </HrefLink>
           .
         </p>
         <Title4>
@@ -618,9 +620,9 @@ function CollaborationTools() {
           in B.C. This version of Zoom has many features to enable secure
           meetings. Find more information and resources for teachers and school
           administrators on the ministry’s{' '}
-          <a href="https://www.openschool.bc.ca/keeplearning/#sections">
+          <HrefLink href="https://www.openschool.bc.ca/keeplearning/#sections">
             Keep Learning
-          </a>{' '}
+          </HrefLink>{' '}
           website.
         </p>
         <Title2>
@@ -630,9 +632,9 @@ function CollaborationTools() {
         </Title2>
         <p>
           Privacy and Access Helpline 250-356-1851{' '}
-          <a href="mailto:privacy.helpline@gov.bc.ca">
+          <HrefLink href="mailto:privacy.helpline@gov.bc.ca">
             privacy.helpline@gov.bc.ca
-          </a>
+          </HrefLink>
         </p>
         <Title2>
           <strong>
@@ -658,9 +660,9 @@ function CollaborationTools() {
           <strong>Contact Information for Government Ministries</strong>
         </Title2>
         <strong>
-          <a href="mailto:OCIO.Communications@gov.bc.ca">
+          <HrefLink href="mailto:OCIO.Communications@gov.bc.ca">
             OCIO.Communications@gov.bc.ca
-          </a>
+          </HrefLink>
         </strong>
       </SimpleTextContainer>
     </DocumentTitle>
