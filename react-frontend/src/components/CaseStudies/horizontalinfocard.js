@@ -9,6 +9,10 @@ import {
   CardHorizontalDescription,
 } from '../StyleComponents/card';
 
+import {
+  HrefLinkStandalone,
+  HrefLinkStandaloneInternal,
+} from '../StyleComponents/htmlTags';
 const HorizontalInfoCard = (props) => {
   return (
     <Card
@@ -25,15 +29,19 @@ const HorizontalInfoCard = (props) => {
         <CardHorizontalDescription>
           {props.description}
         </CardHorizontalDescription>
-        <div className="cardLinkHorizontal">
-          {props.routePath ? (
-            <Link to={props.routePath}>{props.linkText}</Link>
-          ) : (
-            <a href={props.linkPath} target="_blank" rel="noopener noreferrer">
-              {props.linkText}
-            </a>
-          )}
-        </div>
+        {props.routePath ? (
+          <HrefLinkStandaloneInternal to={props.routePath}>
+            {props.linkText}
+          </HrefLinkStandaloneInternal>
+        ) : (
+          <HrefLinkStandalone
+            href={props.linkPath}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.linkText}
+          </HrefLinkStandalone>
+        )}
       </div>
     </Card>
   );

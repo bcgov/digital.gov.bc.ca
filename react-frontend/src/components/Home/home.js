@@ -4,7 +4,7 @@ import CardList from './cardlist';
 import '../../css/home.css';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import { PageContainerOld } from '../StyleComponents/pageContent';
 
 const bannerContent = (
   <p style={{ color: 'white' }}>
@@ -24,14 +24,14 @@ const homeImage = require('../../images/home-banner.png');
 function Home() {
   return (
     <DocumentTitle title="Home - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <PageContainerOld>
         <BannerWithImage
           content={bannerContent}
           title={bannerTitle}
           image={homeImage}
         />
         <CardList />
-      </PageContainer>
+      </PageContainerOld>
     </DocumentTitle>
   );
 }

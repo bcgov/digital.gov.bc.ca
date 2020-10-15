@@ -8,6 +8,7 @@ import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
 import { CaseStudyHeading } from '../StyleComponents/headings';
+import { HrefLink } from '../StyleComponents/htmlTags';
 
 const routeMatch = {
   'farming-study': FarmerContent,
@@ -38,9 +39,9 @@ const CaseStudy = () => {
     for (var i = 0; i < content.resourceText.length; i++) {
       const insert = (
         <li key={i}>
-          <a className="resourceLink" href={content.resourceLinks[i]}>
+          <HrefLink href={content.resourceLinks[i]}>
             {content.resourceText[i]}
-          </a>
+          </HrefLink>
         </li>
       );
       resources.push(insert);
