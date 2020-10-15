@@ -40,17 +40,9 @@
 
 .cardLink {
     bottom: 25px;
-    color: #1a5a96;
-    font-family: 'BC Sans';
     font-size: 16px;
     font-weight: bold;
     position: absolute;
-    text-decoration: underline;
-}
-
-.cardLink:hover {
-    color: blue;
-    text-decoration: none;
 }
 
 .cardText {
