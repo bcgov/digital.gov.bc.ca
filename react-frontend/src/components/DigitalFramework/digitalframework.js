@@ -94,7 +94,7 @@ const DigitalFramework = () => {
   var ScrollElement = Scroll.Element;
 
   return (
-    <DocumentTitle title="Digital Framework">
+    <DocumentTitle title="Digital Framework - Digital Government - Province of British Columbia">
       <PageContainer>
         <SimpleBanner
           title={'Digital Framework'}

@@ -12,7 +12,7 @@ import {
 
 function DigitalPrinciples() {
   return (
-    <DocumentTitle title="Digital Principles">
+    <DocumentTitle title="Digital Principles - Digital Government - Province of British Columbia">
       <SimpleTextContainer>
         <GlobaStyleSize />
         <SimpleTextPageTitle>

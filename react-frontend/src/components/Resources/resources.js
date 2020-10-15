@@ -13,7 +13,7 @@ import '../../css/resources.css';
 
 function Resources() {
   return (
-    <DocumentTitle title="Resources">
+    <DocumentTitle title="Resources - Digital Government - Province of British Columbia">
       <PageContainer>
         <SimpleBanner
           title="Resources"
