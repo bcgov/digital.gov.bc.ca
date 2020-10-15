@@ -6,7 +6,7 @@ import Footer from '../../components/Nav/footer';
 import Routes from '../../components/Nav/routes';
 import BreadCrumbs from '../../components/Nav/breadcrumbs';
 import CovidBanner from '../../components/Nav/covidbanner';
-import '../../css/global.css';
+
 import { RouteBody } from '../../components/StyleComponents/pageContent';
 
 function App() {
