@@ -2,6 +2,7 @@ import React from 'react';
 import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 import CardList from './cardlist';
 import '../../css/home.css';
+import DocumentTitle from 'react-document-title';
 
 import { PageContainerOld } from '../StyleComponents/pageContent';
 
@@ -22,14 +23,16 @@ const homeImage = require('../../images/home-banner.png');
 
 function Home() {
   return (
-    <PageContainerOld>
-      <BannerWithImage
-        content={bannerContent}
-        title={bannerTitle}
-        image={homeImage}
-      />
-      <CardList />
-    </PageContainerOld>
+    <DocumentTitle title="Home - Digital Government - Province of British Columbia">
+      <PageContainerOld>
+        <BannerWithImage
+          content={bannerContent}
+          title={bannerTitle}
+          image={homeImage}
+        />
+        <CardList />
+      </PageContainerOld>
+    </DocumentTitle>
   );
 }
 

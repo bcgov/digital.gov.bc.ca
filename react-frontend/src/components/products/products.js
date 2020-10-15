@@ -4,6 +4,7 @@ import ProductsInstructions from './productsinstructions';
 import Defining from './defining';
 import Considering from './considering';
 import Assembling from './assembling';
+import DocumentTitle from 'react-document-title';
 
 import '../../css/products.css';
 
@@ -14,21 +15,25 @@ import {
 import { ProductPageHeading } from '../StyleComponents/headings';
 const Products = () => {
   return (
-    <PageContainerOld>
-      <SimpleBanner
-        title="Products and Services"
-        description="Supports to help you create or improve a digital service."
-      />
-      <SimplePageBodyProduct>
-        <ProductsInstructions />
-        <ProductPageHeading>
-          Here are some services to help you along this journey:
-        </ProductPageHeading>
-        <Defining />
-        <Considering />
-        <Assembling />
-      </SimplePageBodyProduct>
-    </PageContainerOld>
+    <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
+      <PageContainerOld>
+        <SimpleBanner
+          title="Products and Services"
+          description="Supports to help you create or improve a digital service."
+        />
+        <SimplePageBodyProduct>
+          <div className="productsBody">
+            <ProductsInstructions />
+            <ProductPageHeading>
+              Here are some services to help you along this journey:
+            </ProductPageHeading>
+            <Defining />
+            <Considering />
+            <Assembling />
+          </div>
+        </SimplePageBodyProduct>
+      </PageContainerOld>
+    </DocumentTitle>
   );
 };
 
