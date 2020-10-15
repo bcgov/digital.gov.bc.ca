@@ -11,7 +11,7 @@ import '../../css/casestudies.css';
 const CaseStudies = () => {
   let { path } = useRouteMatch();
   return (
-    <DocumentTitle title="Case Studies">
+    <DocumentTitle title="Case Studies - Digital Government - Province of British Columbia">
       <div>
         <Switch>
           <Route exact path={path}>

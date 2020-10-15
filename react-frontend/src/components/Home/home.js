@@ -23,7 +23,7 @@ const homeImage = require('../../images/home-banner.png');
 
 function Home() {
   return (
-    <DocumentTitle title="Home">
+    <DocumentTitle title="Home - Digital Government - Province of British Columbia">
       <PageContainer>
         <BannerWithImage
           content={bannerContent}
