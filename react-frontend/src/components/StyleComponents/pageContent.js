@@ -17,29 +17,6 @@ export const SimplePageBody = styled.div.attrs({
   }
 `;
 
-//TODO: When Product page and Digital Framework page refactored
-//delete these and used the common 'SimplePageBody' component
-
-export const SimplePageBodyDigital = styled.div.attrs({
-  id: 'digital-content-body',
-})`
-  width: 960px;
-  margin: auto;
-  @media only screen and (max-width: 800px) {
-    width: 85%;
-  }
-`;
-
-export const SimplePageBodyProduct = styled.div.attrs({
-  id: 'product-content-body',
-})`
-  width: 960px;
-  margin: auto;
-  @media only screen and (max-width: 800px) {
-    width: 85%;
-  }
-`;
-
 export const SimpleTextContainer = styled.div.attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',

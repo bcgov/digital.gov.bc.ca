@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Link as ScrollTo } from 'react-scroll';
 
 // This file contains styling for Link, a, ul, li, col, row html tags
 
@@ -38,6 +39,18 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
+  text-decoration: underline;
+  :hover {
+    color: blue;
+    text-decoration: none;
+  }
+`;
+
+export const HrefLinkScrollTo = styled(ScrollTo).attrs({
+  activeClass: 'active',
+})`
+  color: #1a5a96;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :hover {
     color: blue;

@@ -1,5 +1,6 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
+
 import CollaborationTool from './collaborationTool';
 
 import {
@@ -12,6 +13,8 @@ import {
   SimpleTextContainer,
   GlobaStyleSize,
 } from '../../StyleComponents/pageContent';
+
+import { HrefLink } from '../../StyleComponents/htmlTags';
 
 function CollaborationTools() {
   return (
@@ -146,9 +149,9 @@ function CollaborationTools() {
           Video communication platforms are crucial to working remotely, but it
           is important to ensure that use of these tools addresses privacy,
           security and legal risks. Here we provide some general considerations
-          and information  to assist broader public sector entities in
+          and information to assist broader public sector entities in
           determining which platforms may be suitable for their particular
-          needs.  Broader public sector entities are encouraged to consult their
+          needs. Broader public sector entities are encouraged to consult their
           privacy and security experts and to seek legal advice as appropriate
           based on their intended use of a particular tool.
         </p>
@@ -158,14 +161,14 @@ function CollaborationTools() {
         <p>
           Since many video communication platforms store data in the United
           States, using these platforms in B.C. may not comply with{' '}
-          <a href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
+          <HrefLink href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
             section 30.1 of the Freedom of Information and Protection of Privacy
             Act
-          </a>{' '}
+          </HrefLink>{' '}
           (the data residency provision). However,{' '}
-          <a href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
+          <HrefLink href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
             Ministerial Order 085
-          </a>{' '}
+          </HrefLink>{' '}
           – issued during the COVID-19 public health emergency – allows
           disclosure of personal information outside Canada in specific
           circumstances. One of these circumstances allows public bodies to use
@@ -178,16 +181,16 @@ function CollaborationTools() {
         </p>
         <p>
           Ministerial Order 085 also outlines conditions for the use of these
-          tools or applications, including that:  they are reasonably secure;
-          the public body make all reasonable efforts to remove personal
-          information from the tools or applications as soon as possible when
-          the order expires (June 30, 2020, unless rescinded or extended); and
-           records created using these tools or applications are managed
-          appropriately. For more information, please read the{' '}
-          <a href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
+          tools or applications, including that: they are reasonably secure; the
+          public body make all reasonable efforts to remove personal information
+          from the tools or applications as soon as possible when the order
+          expires (June 30, 2020, unless rescinded or extended); and records
+          created using these tools or applications are managed appropriately.
+          For more information, please read the{' '}
+          <HrefLink href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
             Guidance on Ministerial Order 085: Respecting Disclosures During
             COVID-19 Emergency
-          </a>
+          </HrefLink>
           .
         </p>
         <Title3>Security measures</Title3>
@@ -431,7 +434,7 @@ function CollaborationTools() {
           </li>
         </ul>
         <Title3>
-          <strong>Free Zoom and security </strong>
+          <strong>Free Zoom and security </strong>
         </Title3>
         <p>
           During the COVID-19 public health emergency, many of you across the
@@ -455,8 +458,8 @@ function CollaborationTools() {
           security experts and legal advisors to assess the risks associated
           with their intended use of Zoom. Where a broader public sector entity
           has determined that the use of Zoom is appropriate within its
-          organization, the following steps can be taken  to improve the
-          security of the free version of Zoom.
+          organization, the following steps can be taken to improve the security
+          of the free version of Zoom.
         </p>
         <p>
           <strong>General tips</strong>
@@ -470,9 +473,9 @@ function CollaborationTools() {
             <strong>Ensure the Zoom client app is the current version</strong>{' '}
             and regularly check for updates. For more information on installing
             apps, read the{' '}
-            <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/appropriate-use-policy">
+            <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/appropriate-use-policy">
               Applications and Software Guide
-            </a>
+            </HrefLink>
             .
           </li>
           <li>
@@ -488,9 +491,9 @@ function CollaborationTools() {
           </li>
           <li>
             Choose a strong password (see{' '}
-            <a href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-awareness/password-best-practices">
+            <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-awareness/password-best-practices">
               Password Best Practices
-            </a>
+            </HrefLink>
             ) and change your password immediately if you think someone may have
             access to your account.
           </li>
@@ -603,9 +606,9 @@ function CollaborationTools() {
         </ul>
         <p>
           You can find training and tutorials on Zoom’s website in{' '}
-          <a href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
+          <HrefLink href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
             A Message to Our Users
-          </a>
+          </HrefLink>
           .
         </p>
         <Title4>
@@ -617,9 +620,9 @@ function CollaborationTools() {
           in B.C. This version of Zoom has many features to enable secure
           meetings. Find more information and resources for teachers and school
           administrators on the ministry’s{' '}
-          <a href="https://www.openschool.bc.ca/keeplearning/#sections">
+          <HrefLink href="https://www.openschool.bc.ca/keeplearning/#sections">
             Keep Learning
-          </a>{' '}
+          </HrefLink>{' '}
           website.
         </p>
         <Title2>
@@ -629,9 +632,9 @@ function CollaborationTools() {
         </Title2>
         <p>
           Privacy and Access Helpline 250-356-1851{' '}
-          <a href="mailto:privacy.helpline@gov.bc.ca">
+          <HrefLink href="mailto:privacy.helpline@gov.bc.ca">
             privacy.helpline@gov.bc.ca
-          </a>
+          </HrefLink>
         </p>
         <Title2>
           <strong>
@@ -657,9 +660,9 @@ function CollaborationTools() {
           <strong>Contact Information for Government Ministries</strong>
         </Title2>
         <strong>
-          <a href="mailto:OCIO.Communications@gov.bc.ca">
+          <HrefLink href="mailto:OCIO.Communications@gov.bc.ca">
             OCIO.Communications@gov.bc.ca
-          </a>
+          </HrefLink>
         </strong>
       </SimpleTextContainer>
     </DocumentTitle>

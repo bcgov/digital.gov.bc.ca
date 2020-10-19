@@ -4,7 +4,7 @@ import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import CaseStudies from '../../components/CaseStudies/casestudies';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
-import DigitalFramework from '../DigitalFramework/digitalframework';
+import DigitalFramework from '../DigitalFramework/digitalFramework';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
 import GuidesPage from '../../components/Guides/guides';

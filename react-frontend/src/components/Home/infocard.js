@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { CardTitle, CardDescription } from '../StyleComponents/card';
+import {
+  HrefLinkStandalone,
+  HrefLinkStandaloneInternal,
+} from '../StyleComponents/htmlTags';
 
 function InfoCard({
   height,
@@ -39,9 +43,15 @@ function InfoCard({
           <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
-              <Link to={routePath}>{linkText}</Link>
+              <HrefLinkStandaloneInternal to={routePath}>
+                {linkText}
+              </HrefLinkStandaloneInternal>
             ) : (
-              <a href={linkPath} target="_blank" rel="noopener noreferrer">
+              <HrefLinkStandalone
+                href={linkPath}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
@@ -49,7 +59,7 @@ function InfoCard({
                     style={{ paddingLeft: '5px' }}
                   />
                 )}
-              </a>
+              </HrefLinkStandalone>
             )}
           </div>
         </div>
@@ -65,7 +75,11 @@ function InfoCard({
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <a href={linkPath} target="_blank" rel="noopener noreferrer">
+              <HrefLinkStandalone
+                href={linkPath}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
@@ -73,7 +87,7 @@ function InfoCard({
                     style={{ paddingLeft: '5px' }}
                   />
                 )}
-              </a>
+              </HrefLinkStandalone>
             )}
           </div>
         </div>

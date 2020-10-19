@@ -23,7 +23,7 @@ const GuidePage = () => {
         <GlobaStyleSize />
 
         <div className="guide">
-          <Grid className="cardAdjustment">
+          <Grid>
             <Query query={GUIDE_QUERY} uid={params.uid}>
               {({ data: { guides } }) => {
                 return (

@@ -1,38 +1,28 @@
 import React from 'react';
 import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
-import ProductsInstructions from './productsinstructions';
+import ProductsInstructions from './productsInstructions';
 import Defining from './defining';
 import Considering from './considering';
 import Assembling from './assembling';
 import DocumentTitle from 'react-document-title';
 
-import '../../css/products.css';
+import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
 
-import {
-  PageContainerOld,
-  SimplePageBodyProduct,
-} from '../StyleComponents/pageContent';
-import { ProductPageHeading } from '../StyleComponents/headings';
 const Products = () => {
   return (
     <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
-      <PageContainerOld>
+      <PageContainer>
         <SimpleBanner
           title="Products and Services"
           description="Supports to help you create or improve a digital service."
         />
-        <SimplePageBodyProduct>
-          <div className="productsBody">
-            <ProductsInstructions />
-            <ProductPageHeading>
-              Here are some services to help you along this journey:
-            </ProductPageHeading>
-            <Defining />
-            <Considering />
-            <Assembling />
-          </div>
-        </SimplePageBodyProduct>
-      </PageContainerOld>
+        <SimplePageBody>
+          <ProductsInstructions />
+          <Defining />
+          <Considering />
+          <Assembling />
+        </SimplePageBody>
+      </PageContainer>
     </DocumentTitle>
   );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
+import { ContentBlock } from '../StyleComponents/pageContent';
+
 const instructions = [
   <p>
     Clearly define the <b>problems</b> you’re trying to solve, the{' '}
@@ -26,23 +28,25 @@ const ProductsInstructions = () => {
   for (var i = 0; i < 4; i++) {
     cols.push(
       <Col sm={12} md={3} key={i}>
-        <div className="instructionCol">{instructions[i]}</div>
+        {instructions[i]}
       </Col>
     );
   }
 
   return (
-    <div>
-      <div>
-        <p className="instructionsFirst">
-          Before you’re ready to create or improve a digital service, you will
-          need to:
-        </p>
-      </div>
-      <Grid className="cardAdjustment">
+    <ContentBlock id="productInstructions">
+      <Grid>
+        <Row>
+          <Col sm={12}>
+            <p>
+              Before you’re ready to create or improve a digital service, you
+              will need to:
+            </p>
+          </Col>
+        </Row>
         <Row>{cols}</Row>
       </Grid>
-    </div>
+    </ContentBlock>
   );
 };
 

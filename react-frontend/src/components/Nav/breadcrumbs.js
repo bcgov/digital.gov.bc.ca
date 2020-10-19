@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import '../../css/breadcrumbs.css';
 import { DisplayNames as routeDisplayNames } from '../Nav/routes';
+import { HrefLinkStandaloneInternal } from '../StyleComponents/htmlTags';
 
 const BreadCrumbs = () => {
   const history = useHistory();
@@ -25,7 +26,7 @@ const BreadCrumbs = () => {
 
   listEntry.push(
     <li className="listOption">
-      <Link to="/">Home</Link>
+      <HrefLinkStandaloneInternal to="/">Home</HrefLinkStandaloneInternal>
     </li>
   );
   for (var i = 1; i < pathArray.length - 1; i++) {
@@ -33,7 +34,9 @@ const BreadCrumbs = () => {
     listEntry.push(<li className="listOption">{'>'}</li>);
     listEntry.push(
       <li className="listOption">
-        <Link to={'/' + displayName}>{routeDisplayNames[displayName]}</Link>
+        <HrefLinkStandaloneInternal to={'/' + displayName}>
+          {routeDisplayNames[displayName]}
+        </HrefLinkStandaloneInternal>
       </li>
     );
   }
