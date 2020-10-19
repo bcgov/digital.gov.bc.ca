@@ -18,7 +18,7 @@ import { HrefLink } from '../../StyleComponents/htmlTags';
 
 function CollaborationTools() {
   return (
-    <DocumentTitle title="Digital Principles - Digital Government - Province of British Columbia">
+    <DocumentTitle title="Video Communication Platforms - Digital Government - Province of British Columbia">
       <SimpleTextContainer>
         <GlobaStyleSize />
         <SimpleTextPageTitle>
