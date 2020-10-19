@@ -15,9 +15,9 @@ const DisplayNames = {
   'communication-platforms': 'Communication Platform',
   'digital-framework': 'Digital Framework',
   'digital-principles': 'Digital Principles',
-  guides: 'Guides',
+  'guides': 'Guides',
   'products-services': 'Products and Services',
-  resources: 'Resources',
+  'resources': 'Resources',
 };
 
 const Routes = () => {
