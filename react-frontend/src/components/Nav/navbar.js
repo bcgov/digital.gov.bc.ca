@@ -9,6 +9,7 @@ import {
   NavBarHeader,
   NavContentOnRight,
   NavImage,
+  NavHamburgerButton,
   NavTitle,
   SkipToMainContent,
 } from '../StyleComponents/nav';
@@ -18,6 +19,8 @@ import {
   NavBarLink,
   NavBarUl,
 } from '../StyleComponents/htmlTags';
+import { NavBarContainer } from '../StyleComponents/pageContent';
+
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -67,28 +70,30 @@ function NavBar() {
   let logoPath = isMobile ? mobileImg : desktopImg;
 
   return (
-    <div className="navBar">
+    <div>
       <NavBarHeader>
-        <div className="centerBanner">
-          <NavBanner>
-            <NavBarHeaderLink
-              href="https://gov.bc.ca"
-              alt="Go to the Government of British Columbia website"
-            >
-              <NavImage
-                src={logoPath}
+        <NavBarContainer>
+          <div className="centerBanner">
+            <NavBanner>
+              <NavBarHeaderLink
+                href="https://gov.bc.ca"
                 alt="Go to the Government of British Columbia website"
-              />
-            </NavBarHeaderLink>
-            <NavTitle>Digital Government</NavTitle>
-            <SkipToMainContent>Skip to main content</SkipToMainContent>
-          </NavBanner>
-          <NavContentOnRight>
-            <div className="nav-btn" onClick={toggleMenu} href=".">
-              <FontAwesomeIcon icon={faBars} />
-            </div>
-          </NavContentOnRight>
-        </div>
+              >
+                <NavImage
+                  src={logoPath}
+                  alt="Go to the Government of British Columbia website"
+                />
+              </NavBarHeaderLink>
+              <NavTitle>Digital Government</NavTitle>
+              <SkipToMainContent>Skip to main content</SkipToMainContent>
+            </NavBanner>
+            <NavContentOnRight>
+              <NavHamburgerButton onClick={toggleMenu} href=".">
+                <FontAwesomeIcon icon={faBars} />
+              </NavHamburgerButton>
+            </NavContentOnRight>
+          </div>
+        </NavBarContainer>
       </NavBarHeader>
       <nav className="navigation-main" id="navbar">
         <div className="container">

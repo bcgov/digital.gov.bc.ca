@@ -59,6 +59,20 @@ export const PageContainer = styled.div.attrs({
   }
 `;
 
+export const NavBarContainer = styled.div.attrs({
+  className: 'navBar',
+})`
+  padding-left: 30px;
+
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
+  }
+`;
+
 export const RouteBody = styled.div.attrs({
   className: 'routeBody',
 })`

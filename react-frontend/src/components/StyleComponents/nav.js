@@ -36,7 +36,7 @@ export const NavBarHeader = styled.header.attrs({
   box-shadow: 0 6px 8px -4px #b3b1b3;
   color: #fff;
   display: flex;
-  padding: 0 30px 0 30px;
+  padding: 0 30px 0 0px;
   position: fixed;
   top: 45px;
   width: 100%;
@@ -52,17 +52,34 @@ export const NavBarHeader = styled.header.attrs({
   }
 `;
 
+export const NavHamburgerButton = styled.div.attrs({
+  className: 'navButton',
+})`
+  cursor: pointer;
+  display: block;
+  font-size: 18pt;
+  margin: 0 0 0 auto;
+  width: auto;
+  @media screen and (min-width: 800px) {
+    cursor: pointer;
+    display: none;
+    margin: 0 0 0 auto;
+    padding-right: 25px;
+    width: auto;
+  }
+`;
+
 export const NavImage = styled.img.attrs({
   className: 'navImage',
 })`
   @media screen and (min-width: 800px) {
     height: 100%;
-    margin-left: 77px;
+    // margin-left: 77px;
   }
 
   @media screen and (max-width: 800px) {
     height: 60px;
-    margin-left: -15px;
+    // margin-left: -15px;
     margin-right: 0px;
     margin-top: -5px;
   }

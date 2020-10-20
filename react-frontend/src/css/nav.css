@@ -2,6 +2,7 @@
  the nav.js styled component file */
   .centerBanner {
     margin: auto;
+    margin-left: 0;
     width: 1115px;
   }
   
