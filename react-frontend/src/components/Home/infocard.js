@@ -73,7 +73,9 @@ function InfoCard({
           <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
-              <Link to={routePath}>{linkText}</Link>
+              <HrefLinkStandaloneInternal to={routePath}>
+                {linkText}
+              </HrefLinkStandaloneInternal>
             ) : (
               <HrefLinkStandalone
                 href={linkPath}
