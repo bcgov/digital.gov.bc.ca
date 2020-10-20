@@ -21,7 +21,7 @@
     color: #fcba19;
     display: none;
     position: fixed;
-    top: 111px;
+    top: 113px;
     width: 100%;
     z-index: 1000;
   }
@@ -53,7 +53,7 @@
 
   @media screen and (max-width: 1120px) {
     .navigation-main {
-      top: 130px;
+      top: 131px;
     }
   }
 

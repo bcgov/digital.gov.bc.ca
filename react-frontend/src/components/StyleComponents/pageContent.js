@@ -63,9 +63,10 @@ export const RouteBody = styled.div.attrs({
   className: 'routeBody',
 })`
   background-color: #f2f2f2;
+  padding-top: 124px;
   z-index: -2;
-  @media only screen and (max-width: 800px) {
-    padding-bottom: 60px;
+  @media only screen and (max-width: 799px) {
+    padding-top: 0;
   }
 `;
 

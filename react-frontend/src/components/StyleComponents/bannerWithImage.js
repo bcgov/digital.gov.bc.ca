@@ -39,30 +39,15 @@ export const BannerText = styled.div.attrs({
   className: 'bannerText',
 })`
   margin: auto;
-  padding-top: 10px;
+  max-width: 960px;
   text-align: center;
-  width: 975px;
-  @media only screen and (max-width: 800px) {
-    margin-left: 8%;
-    padding-top: 80px;
-    width: 84%;
-  }
 `;
 
 export const BannerTextWrapper = styled.div.attrs({
   className: 'bannerTextWrapper',
 })`
   background: rgba(0, 51, 102, 0.7);
-  margin-bottom: 120px;
-  margin-top: 260px;
-  padding: 25px;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  @media only screen and (max-width: 800px) {
-    margin-top: 60px;
-    padding-top: 0;
-  }
+  padding: 16px;
 `;
 
 export const BannerTitle = styled.h1.attrs({
@@ -83,16 +68,17 @@ export const BannerTitle = styled.h1.attrs({
 export const BannerWithImageWrapper = styled.div.attrs({
   className: 'banner',
 })`
-  height: 600px;
-  margin-bottom: 120px;
-  overflow: hidden;
-  position: relative;
+  background-image: url(${(props) => props.backgroundImage});
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 0 60px;
+  padding: 230px 0 120px;
   width: 100%;
   @media only screen and (max-width: 800px) {
-    height: 520px;
-    margin-bottom: 60px;
-    margin-top: -50px;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding: 170px 0 10px;
   }
 `;
