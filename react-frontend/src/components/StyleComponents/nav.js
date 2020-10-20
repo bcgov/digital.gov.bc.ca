@@ -74,18 +74,39 @@ export const NavImage = styled.img.attrs({
 })`
   @media screen and (min-width: 800px) {
     height: 100%;
-    // margin-left: 77px;
   }
 
   @media screen and (max-width: 800px) {
     height: 60px;
-    // margin-left: -15px;
     margin-right: 0px;
     margin-top: -5px;
   }
 
   @media screen and (max-width: 400px) {
     margin-right: 25px;
+  }
+`;
+
+export const NavMain = styled.nav.attrs({
+  classNmae: 'navigation-main',
+  id: 'navbar',
+})`
+  -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
+  -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
+  background-color: #38598a;
+  box-shadow: 0 6px 8px -4px #b3b1b3;
+  color: #fcba19;
+  display: none;
+  position: fixed;
+  top: 111px;
+  width: 100%;
+  z-index: 1000;
+  @media screen and (min-width: 800px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 1120px) {
+    top: 130px;
   }
 `;
 

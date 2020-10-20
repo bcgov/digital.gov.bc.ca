@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../../css/nav.css';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +9,7 @@ import {
   NavContentOnRight,
   NavImage,
   NavHamburgerButton,
+  NavMain,
   NavTitle,
   SkipToMainContent,
 } from '../StyleComponents/nav';
@@ -17,6 +17,7 @@ import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
+  NavBarLinkFirst,
   NavBarUl,
 } from '../StyleComponents/htmlTags';
 import { NavBarContainer } from '../StyleComponents/pageContent';
@@ -73,38 +74,36 @@ function NavBar() {
     <div>
       <NavBarHeader>
         <NavBarContainer>
-          <div className="centerBanner">
-            <NavBanner>
-              <NavBarHeaderLink
-                href="https://gov.bc.ca"
+          <NavBanner>
+            <NavBarHeaderLink
+              href="https://gov.bc.ca"
+              alt="Go to the Government of British Columbia website"
+            >
+              <NavImage
+                src={logoPath}
                 alt="Go to the Government of British Columbia website"
-              >
-                <NavImage
-                  src={logoPath}
-                  alt="Go to the Government of British Columbia website"
-                />
-              </NavBarHeaderLink>
-              <NavTitle>Digital Government</NavTitle>
-              <SkipToMainContent>Skip to main content</SkipToMainContent>
-            </NavBanner>
-            <NavContentOnRight>
-              <NavHamburgerButton onClick={toggleMenu} href=".">
-                <FontAwesomeIcon icon={faBars} />
-              </NavHamburgerButton>
-            </NavContentOnRight>
-          </div>
+              />
+            </NavBarHeaderLink>
+            <NavTitle>Digital Government</NavTitle>
+            <SkipToMainContent>Skip to main content</SkipToMainContent>
+          </NavBanner>
+          <NavContentOnRight>
+            <NavHamburgerButton onClick={toggleMenu} href=".">
+              <FontAwesomeIcon icon={faBars} />
+            </NavHamburgerButton>
+          </NavContentOnRight>
         </NavBarContainer>
       </NavBarHeader>
-      <nav className="navigation-main" id="navbar">
-        <div className="container">
+      <NavMain>
+        <NavBarContainer>
           <NavBarUl>
             <NavBarLi>
-              <NavBarLink
+              <NavBarLinkFirst
                 to="/"
                 className={activePage === '/' ? 'active' : 'notactive'}
               >
                 Home
-              </NavBarLink>
+              </NavBarLinkFirst>
             </NavBarLi>
             <NavBarLi>
               <NavBarLink
@@ -125,8 +124,8 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
           </NavBarUl>
-        </div>
-      </nav>
+        </NavBarContainer>
+      </NavMain>
     </div>
   );
 }

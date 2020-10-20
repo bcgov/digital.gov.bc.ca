@@ -62,8 +62,9 @@ export const PageContainer = styled.div.attrs({
 export const NavBarContainer = styled.div.attrs({
   className: 'navBar',
 })`
+  display: flex;
   padding-left: 30px;
-
+  width: 1115px;
   @media screen and (min-width: 800px) {
     padding-left: 107px;
   }
