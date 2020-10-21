@@ -1,5 +1,6 @@
 import React from 'react';
 import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
+import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
 import CardList from './cardlist';
 import '../../css/home.css';
 import DocumentTitle from 'react-document-title';
@@ -30,6 +31,7 @@ function Home() {
           title={bannerTitle}
           image={homeImage}
         />
+        <BannerSideImage />
         <CardList />
       </PageContainerOld>
     </DocumentTitle>
