@@ -63,14 +63,14 @@ export const NavBarContainer = styled.div.attrs({
   className: 'navBar',
 })`
   display: flex;
-  padding-left: 30px;
-  width: 1115px;
+  padding: 0 30px;
+  width: 1140px;
   @media screen and (min-width: 800px) {
     padding-left: 107px;
   }
 
   @media screen and (max-width: 800px) {
-    padding-left: 15px;
+    padding: 0 10px;
   }
 `;
 

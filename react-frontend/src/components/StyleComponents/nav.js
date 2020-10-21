@@ -36,7 +36,7 @@ export const NavBarHeader = styled.header.attrs({
   box-shadow: 0 6px 8px -4px #b3b1b3;
   color: #fff;
   display: flex;
-  padding: 0 30px 0 0px;
+  padding: 0 15px 0 0px;
   position: fixed;
   top: 45px;
   width: 100%;
@@ -75,15 +75,10 @@ export const NavImage = styled.img.attrs({
   @media screen and (min-width: 800px) {
     height: 100%;
   }
-
   @media screen and (max-width: 800px) {
     height: 60px;
     margin-right: 0px;
     margin-top: -5px;
-  }
-
-  @media screen and (max-width: 400px) {
-    margin-right: 25px;
   }
 `;
 
@@ -115,20 +110,16 @@ export const NavTitle = styled.p.attrs({
 })`
   color: white;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  margin: 0px 5px 0px 25px;
-
-  @media screen and (min-width: 900px) {
-    font-size: 28px;
-    visibility: visible;
-  }
-  @media screen and (min-width: 400px) and (max-width: 899px) {
+  margin-bottom: 0;
+  @media screen and (min-width: 400px) {
     font-size: 18px;
-    visibility: visible;
+    margin-left: 8px;
   }
-  @media screen and (max-width: 400px) {
-    font-size: 16px;
-    margin: 0px 5px 0px -5%;
+  @media screen and (min-width: 800px) {
+    font-size: 28px;
+    margin-left: 16px;
   }
 `;
 

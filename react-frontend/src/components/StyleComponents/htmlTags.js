@@ -66,15 +66,14 @@ export const NavBarHeaderLink = styled.a.attrs({
   font-size: 1.4em;
   font-style: bold;
   line-height: 1;
-  padding: 5px;
 `;
 
 export const NavBarLi = styled.li.attrs({
   className: 'navBarLi',
 })`
-  margin: 5px 0;
+  padding: 8px 0;
   @media screen and (min-width: 800px) {
-    margin: 0;
+    padding: 14px 0;
   }
 `;
 
@@ -86,7 +85,7 @@ export const NavBarLink = styled(Link).attrs({
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
-  padding: 0 15px 0 15px;
+  padding: 0 10px;
   text-decoration: none;
   :hover {
     color: #fff;
@@ -101,7 +100,9 @@ export const NavBarLink = styled(Link).attrs({
 export const NavBarLinkFirst = styled(NavBarLink).attrs({
   className: 'navBarLinkFirst',
 })`
-  padding-left: 0;
+  @media screen and (min-width: 800px) {
+    padding-left: 0;
+  }
 `;
 
 export const NavBarUl = styled.ul.attrs({
@@ -111,7 +112,7 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 5px 0;
+  margin: 0;
   padding-left: 0;
   .active {
     font-weight: bold;
