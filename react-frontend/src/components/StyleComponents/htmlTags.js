@@ -101,7 +101,9 @@ export const NavBarLink = styled(Link).attrs({
 export const NavBarLinkFirst = styled(NavBarLink).attrs({
   className: 'navBarLinkFirst',
 })`
-  padding-left: 0;
+  @media (min-width: 800px) {
+    padding-left: 0;
+  }
 `;
 
 export const NavBarUl = styled.ul.attrs({

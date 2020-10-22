@@ -42,6 +42,7 @@ function NavBar() {
       } else {
         const nav = document.getElementById('navbar');
         nav.style.display = 'block';
+
         setOpenMenu(true);
         setIsMobile(true);
       }

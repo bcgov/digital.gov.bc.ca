@@ -97,6 +97,7 @@ export const NavMain = styled.nav.attrs({
   box-shadow: 0 6px 8px -4px #b3b1b3;
   color: #fcba19;
   display: none;
+  height: 40px;
   position: fixed;
   top: 111px;
   width: 100%;
