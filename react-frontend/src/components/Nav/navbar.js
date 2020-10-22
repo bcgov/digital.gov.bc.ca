@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../../css/nav.css';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +8,8 @@ import {
   NavBarHeader,
   NavContentOnRight,
   NavImage,
+  NavHamburgerButton,
+  NavMain,
   NavTitle,
   SkipToMainContent,
 } from '../StyleComponents/nav';
@@ -16,8 +17,11 @@ import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
+  NavBarLinkFirst,
   NavBarUl,
 } from '../StyleComponents/htmlTags';
+import { NavBarContainer } from '../StyleComponents/pageContent';
+
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -38,6 +42,7 @@ function NavBar() {
       } else {
         const nav = document.getElementById('navbar');
         nav.style.display = 'block';
+
         setOpenMenu(true);
         setIsMobile(true);
       }
@@ -67,9 +72,9 @@ function NavBar() {
   let logoPath = isMobile ? mobileImg : desktopImg;
 
   return (
-    <div className="navBar">
+    <div>
       <NavBarHeader>
-        <div className="centerBanner">
+        <NavBarContainer>
           <NavBanner>
             <NavBarHeaderLink
               href="https://gov.bc.ca"
@@ -84,22 +89,22 @@ function NavBar() {
             <SkipToMainContent>Skip to main content</SkipToMainContent>
           </NavBanner>
           <NavContentOnRight>
-            <div className="nav-btn" onClick={toggleMenu} href=".">
+            <NavHamburgerButton onClick={toggleMenu} href=".">
               <FontAwesomeIcon icon={faBars} />
-            </div>
+            </NavHamburgerButton>
           </NavContentOnRight>
-        </div>
+        </NavBarContainer>
       </NavBarHeader>
-      <nav className="navigation-main" id="navbar">
-        <div className="container">
+      <NavMain>
+        <NavBarContainer>
           <NavBarUl>
             <NavBarLi>
-              <NavBarLink
+              <NavBarLinkFirst
                 to="/"
                 className={activePage === '/' ? 'active' : 'notactive'}
               >
                 Home
-              </NavBarLink>
+              </NavBarLinkFirst>
             </NavBarLi>
             <NavBarLi>
               <NavBarLink
@@ -120,8 +125,8 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
           </NavBarUl>
-        </div>
-      </nav>
+        </NavBarContainer>
+      </NavMain>
     </div>
   );
 }
