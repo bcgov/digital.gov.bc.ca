@@ -8,6 +8,23 @@ export const GlobaStyleSize = createGlobalStyle`
  }
 `;
 
+export const BreadcrumbContainer = styled.div.attrs({
+  className: 'breadcrumb',
+})`
+  padding-top: 133px;
+  position: relative;
+  margin: auto;
+  margin-bottom: -133px;
+  width: 1045px;
+  z-index: 5;
+  @media only screen and (max-width: 800px) {
+    margin-left: -13px;
+    padding-left: 0;
+    padding-top: 80px;
+    width: 100%;
+  }
+`;
+
 export const SimplePageBody = styled.div.attrs({
   id: 'content-body',
 })`
@@ -56,6 +73,21 @@ export const PageContainer = styled.div.attrs({
   z-index: -2;
   @media only screen and (max-width: 800px) {
     padding-top: 65px;
+  }
+`;
+
+export const NavBarContainer = styled.div.attrs({
+  className: 'navBar',
+})`
+  display: flex;
+  padding-left: 30px;
+  width: 1115px;
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
   }
 `;
 
