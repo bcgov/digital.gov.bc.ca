@@ -4,6 +4,25 @@ import { Link as ScrollTo } from 'react-scroll';
 
 // This file contains styling for Link, a, ul, li, col, row html tags
 
+export const BreadcrumbLI = styled.li`
+  display: flex;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0 6px 0 6px;
+  text-decoration: none;
+  @media only screen and (max-width: 800px) {
+    font-size: 14px;
+  }
+`;
+
+export const BreadcrumbUL = styled.ul`
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+`;
+
 export const HrefLink = styled.a.attrs({
   className: 'productCardLink',
 })`
