@@ -80,6 +80,16 @@ export const BannerTitle = styled.h1.attrs({
   }
 `;
 
+export const BannerSideImageImg = styled.img.attrs({
+  className: 'sideImage',
+})`
+  background: transparent;
+  background-color: #f2f2f2;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+`;
+
 export const BannerWithImageWrapper = styled.div.attrs({
   className: 'banner',
 })`

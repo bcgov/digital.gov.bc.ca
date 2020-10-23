@@ -2,10 +2,9 @@ import React from 'react';
 import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
 import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
 import CardList from './cardlist';
-import '../../css/home.css';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainerOld } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const bannerContent = (
   <p style={{ color: 'white' }}>
@@ -25,7 +24,7 @@ const homeImage = require('../../images/home-banner.png');
 function Home() {
   return (
     <DocumentTitle title="Home - Digital Government - Province of British Columbia">
-      <PageContainerOld>
+      <PageContainer>
         <BannerWithImage
           content={bannerContent}
           title={bannerTitle}
@@ -33,7 +32,7 @@ function Home() {
         />
         <BannerSideImage />
         <CardList />
-      </PageContainerOld>
+      </PageContainer>
     </DocumentTitle>
   );
 }
