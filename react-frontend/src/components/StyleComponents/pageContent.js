@@ -80,10 +80,17 @@ export const PageContainer = styled.div.attrs({
   id: 'main-content-anchor',
 })`
   background-color: #f2f2f2;
-  padding: 10px 0 70px 0px;
+  padding: 10px 20px 70px 30px;
   margin: auto;
   max-width: 1065px;
   z-index: -2;
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
+  }
+
   @media only screen and (max-width: 800px) {
     padding-top: 65px;
   }
@@ -98,7 +105,6 @@ export const NavBarContainer = styled.div.attrs({
   @media screen and (min-width: 800px) {
     padding-left: 107px;
   }
-
   @media screen and (max-width: 800px) {
     padding-left: 15px;
   }

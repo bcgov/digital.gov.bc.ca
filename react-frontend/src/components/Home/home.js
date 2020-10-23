@@ -5,32 +5,32 @@ import CardList from './cardlist';
 import DocumentTitle from 'react-document-title';
 
 import { PageContainer } from '../StyleComponents/pageContent';
+import { BannerSubTitle } from '../StyleComponents/bannerWithImage';
 
 const bannerContent = (
-  <p style={{ color: 'white' }}>
+  <BannerSubTitle>
     In this digital age, people expect fast and easy access to information and
     services.
     <br />
     Learn how the British Columbia Public Service is building teams and using
     modern technology to meet those expectations and deliver better government
     services.
-  </p>
+  </BannerSubTitle>
 );
 
 const bannerTitle = 'Digital Government';
 
-const homeImage = require('../../images/home-banner.png');
+const homeImage = require('../../images/pngIllustrations/digitalHomePage.png');
 
 function Home() {
   return (
     <DocumentTitle title="Home - Digital Government - Province of British Columbia">
       <PageContainer>
-        <BannerWithImage
+        <BannerSideImage
           content={bannerContent}
           title={bannerTitle}
           image={homeImage}
         />
-        <BannerSideImage />
         <CardList />
       </PageContainer>
     </DocumentTitle>

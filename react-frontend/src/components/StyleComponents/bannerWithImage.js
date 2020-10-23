@@ -85,9 +85,18 @@ export const BannerSideImageImg = styled.img.attrs({
 })`
   background: transparent;
   background-color: #f2f2f2;
+  display: block;
   max-width: 100%;
   max-height: 100%;
-  display: block;
+  padding-bottom: 20px;
+  padding-top: 20px;
+`;
+
+export const BannerSideImageText = styled.div.attrs({
+  className: 'sideImageText',
+})`
+  padding-bottom: 20px;
+  padding-top: 20px;
 `;
 
 export const BannerWithImageWrapper = styled.div.attrs({
