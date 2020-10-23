@@ -23,6 +23,63 @@ export const BreadcrumbUL = styled.ul`
   margin: 0;
 `;
 
+export const FooterLink = styled.a.attrs({
+  className: 'internalLink',
+})`
+  border-right: 1px solid #4b5e7e;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+  :hover {
+    color: white;
+    text-decoration: underline;
+  }
+  :focus {
+    outline-offset: 1px;
+    outline: 4px solid #3b99fc;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+`;
+
+export const FooterLinkInternal = styled(Link).attrs({
+  className: 'internalLink',
+})`
+  border-right: 1px solid #4b5e7e;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+  :hover {
+    color: white;
+    text-decoration: underline;
+  }
+  :focus {
+    outline-offset: 1px;
+    outline: 4px solid #3b99fc;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+`;
+
+export const FooterUL = styled.ul`
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+`;
+
 export const HrefLink = styled.a.attrs({
   className: 'productCardLink',
 })`

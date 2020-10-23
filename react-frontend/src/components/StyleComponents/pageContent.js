@@ -25,6 +25,26 @@ export const BreadcrumbContainer = styled.div.attrs({
   }
 `;
 
+export const FooterContainer = styled.div.attrs({
+  className: 'footerContainer',
+})`
+  display: flex;
+  flex-direction: column;
+  height: 46px;
+  justify-content: center;
+  text-align: center;
+  @media only screen and (max-width: 900px) {
+    height: 70px;
+  }
+`;
+
+export const FooterStyled = styled.footer.attrs()`
+  background-color: #036;
+  border-top: 2px solid #fcba19;
+  color: #fff;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+`;
+
 export const SimplePageBody = styled.div.attrs({
   id: 'content-body',
 })`

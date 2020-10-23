@@ -1,69 +1,68 @@
 import React from 'react';
-import '../../css/footer.css';
-import { Link } from 'react-router-dom';
+
+import { FooterStyled, FooterContainer } from '../StyleComponents/pageContent';
+import {
+  FooterLink,
+  FooterLinkInternal,
+  FooterUL,
+} from '../StyleComponents/htmlTags';
+
 const Footer = () => {
   return (
-    <footer>
-      <div className="container">
-        <ul>
+    <FooterStyled>
+      <FooterContainer>
+        <FooterUL>
           <li>
-            <Link to="/" className="footerLink">
-              Home
-            </Link>
+            <FooterLinkInternal to="/">Home</FooterLinkInternal>
           </li>
           <li>
-            <a
-              className="footerLink"
+            <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/disclaimer"
               target="_blank"
               rel="noopener noreferrer"
             >
               Disclaimer
-            </a>
+            </FooterLink>
           </li>
           <li>
-            <a
-              className="footerLink"
+            <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/privacy"
               target="_blank"
               rel="noopener noreferrer"
             >
               Privacy
-            </a>
+            </FooterLink>
           </li>
           <li>
-            <a
-              className="footerLink"
+            <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/accessible-government"
               target="_blank"
               rel="noopener noreferrer"
             >
               Accessibility
-            </a>
+            </FooterLink>
           </li>
           <li>
-            <a
-              className="footerLink"
+            <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/copyright"
               target="_blank"
               rel="noopener noreferrer"
             >
               Copyright
-            </a>
+            </FooterLink>
           </li>
           <li>
-            <a
-              className="footerLink"
+            <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services"
               target="_blank"
               rel="noopener noreferrer"
             >
               Contact Us
-            </a>
+            </FooterLink>
           </li>
-        </ul>
-      </div>
-    </footer>
+        </FooterUL>
+      </FooterContainer>
+    </FooterStyled>
   );
 };
 
