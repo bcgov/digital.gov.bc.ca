@@ -2,9 +2,9 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import {
   BannerSideImageImg,
-  BannerSideImageText,
+  BannerSideImgText,
 } from '../../StyleComponents/bannerWithImage';
-import { BannerTitle } from '../../StyleComponents/bannerSimple';
+import { BannerSideImgTitle } from '../../StyleComponents/bannerWithImage';
 import { BannerContainer } from '../../StyleComponents/nav';
 const BannerSideImage = ({ content, image, title }) => {
   return (
@@ -12,10 +12,10 @@ const BannerSideImage = ({ content, image, title }) => {
       <Grid>
         <Row middle="xs">
           <Col sm={12} md={6}>
-            <BannerSideImageText>
-              <BannerTitle>{title}</BannerTitle>
+            <BannerSideImgText>
+              <BannerSideImgTitle>{title}</BannerSideImgTitle>
               {content}
-            </BannerSideImageText>
+            </BannerSideImgText>
           </Col>
           <Col sm={12} md={6}>
             <BannerSideImageImg alt="" src={image} />

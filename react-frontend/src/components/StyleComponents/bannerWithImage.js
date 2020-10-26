@@ -92,11 +92,37 @@ export const BannerSideImageImg = styled.img.attrs({
   padding-top: 20px;
 `;
 
-export const BannerSideImageText = styled.div.attrs({
+export const BannerSideImgText = styled.div.attrs({
   className: 'sideImageText',
 })`
   padding-bottom: 20px;
   padding-top: 20px;
+`;
+
+export const BannerSideImgTitle = styled.h1.attrs({
+  className: 'bannerTitle',
+})`
+  color: #313132;
+  font-size: 37px;
+  font-weight: bold;
+  line-height: 37px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: left;
+  @media only screen and (max-width: 800px) {
+    font-size: 31px;
+    text-align: center;
+  }
+`;
+
+export const BannerSideImgSubTitle = styled.div.attrs({
+  className: 'subTitle',
+})`
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  text-align: left;
+  @media only screen and (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 export const BannerWithImageWrapper = styled.div.attrs({

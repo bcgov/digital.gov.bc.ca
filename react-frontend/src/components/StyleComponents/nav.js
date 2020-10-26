@@ -7,6 +7,9 @@ export const BannerContainer = styled.div.attrs({
 })`
   margin-top: 200px;
   margin-bottom: 30px;
+  @media (max-width: 800px) {
+    margin-top: 150px;
+  }
 `;
 
 export const NavBanner = styled.div.attrs({
