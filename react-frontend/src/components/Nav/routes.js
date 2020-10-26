@@ -11,10 +11,13 @@ import GuidesPage from '../../components/Guides/guides';
 import GuidePage from '../../components/Guides/guide';
 
 const DisplayNames = {
-  resources: 'Resources',
-  'products-services': 'Products and Services',
-  'digital-framework': 'Digital Framework',
   'case-studies': 'Case Studies',
+  'communication-platforms': 'Communication Platform',
+  'digital-framework': 'Digital Framework',
+  'digital-principles': 'Digital Principles',
+  guides: 'Guides',
+  'products-services': 'Products and Services',
+  resources: 'Resources',
 };
 
 const Routes = () => {
