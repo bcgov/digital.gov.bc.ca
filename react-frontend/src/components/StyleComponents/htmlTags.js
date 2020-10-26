@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
 
-
-
 // This file contains styling for Link, a, ul, li, col, row html tags
 
 export const BreadcrumbLI = styled.li`
@@ -12,7 +10,7 @@ export const BreadcrumbLI = styled.li`
   font-weight: normal;
   padding: 0 6px 0 6px;
   text-decoration: none;
- 
+
   @media only screen and (max-width: 800px) {
     font-size: 14px;
   }
@@ -22,9 +20,7 @@ export const BreadcrumbUL = styled.ul`
   color: #fff;
   display: flex;
   flex-direction: row;
-  list-style: none; 
-
-  
+  list-style: none;
 `;
 
 export const HrefLink = styled.a.attrs({
@@ -60,8 +56,8 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold; 
- 
+  font-weight: bold;
+
   text-decoration: underline;
   :hover {
     color: blue;
@@ -121,6 +117,13 @@ export const NavBarLink = styled(Link).attrs({
   }
 `;
 
+export const NavBarLinkFirst = styled(NavBarLink).attrs({
+  className: 'navBarLinkFirst',
+})`
+  @media (min-width: 800px) {
+    padding-left: 0;
+  }
+`;
 
 export const NavBarUl = styled.ul.attrs({
   className: 'navBarUl',
@@ -129,8 +132,8 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-left: -75px;
   margin: 5px 0;
+  padding-left: 0;
   .active {
     font-weight: bold;
     text-decoration: underline;
@@ -138,8 +141,5 @@ export const NavBarUl = styled.ul.attrs({
   }
   @media screen and (min-width: 800px) {
     flex-direction: row;
-  }
-  @media screen and (max-width: 800px) {
-    margin-left: -28px;
   }
 `;
