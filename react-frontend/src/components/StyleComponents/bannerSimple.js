@@ -4,13 +4,14 @@ export const BannerSubTitle = styled.p.attrs({
   className: 'bannerSubTitle',
 })`
   color: #313132;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 22px;
-  margin: auto;
-  max-width: 800px;
+  position: relative;
   @media only screen and (max-width: 800px) {
+    font-size: 10pt;
+    text-align: justify;
     font-size: 16px;
     text-align: center;
+    width: 100%;
   }
 `;
 
@@ -44,11 +45,11 @@ export const BannerTitle = styled.h1.attrs({
   className: 'bannerTitle',
 })`
   color: #313132;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 37px;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 37px;
   margin-bottom: 10px;
+  position: relative;
   text-align: center;
   @media only screen and (max-width: 800px) {
     font-size: 31px;
