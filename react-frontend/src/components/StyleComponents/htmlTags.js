@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
 
+
+
 // This file contains styling for Link, a, ul, li, col, row html tags
 
 export const BreadcrumbLI = styled.li`
@@ -10,6 +12,7 @@ export const BreadcrumbLI = styled.li`
   font-weight: normal;
   padding: 0 6px 0 6px;
   text-decoration: none;
+ 
   @media only screen and (max-width: 800px) {
     font-size: 14px;
   }
@@ -19,8 +22,9 @@ export const BreadcrumbUL = styled.ul`
   color: #fff;
   display: flex;
   flex-direction: row;
-  list-style: none;
-  margin: 0;
+  list-style: none; 
+
+  
 `;
 
 export const HrefLink = styled.a.attrs({
@@ -56,8 +60,8 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 16px;
+  font-weight: bold; 
+ 
   text-decoration: underline;
   :hover {
     color: blue;
@@ -116,6 +120,7 @@ export const NavBarLink = styled(Link).attrs({
     border-right: 1px solid #9b9b9b;
   }
 `;
+
 
 export const NavBarUl = styled.ul.attrs({
   className: 'navBarUl',

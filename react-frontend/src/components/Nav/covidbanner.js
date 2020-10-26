@@ -10,8 +10,9 @@ import {
 import { InfoCircleFilled } from '@ant-design/icons';
 import { CloseOutlined } from '@ant-design/icons';
 
-function CovidBanner() {
+function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
+  const [bredCrub,setBredCrub] = useState(true);
 
   if (showBanner) {
     return (
@@ -47,12 +48,15 @@ function CovidBanner() {
                         <a
                           href=""
                           onClick={(event) => {
+                            setBredCrub(true);                          
                             event.preventDefault();
-                            setShowBanner(false);
+                            setShowBanner(false);                                                       
                             const nav = document.getElementById('navbar');
                             nav.style.top = '65px';
                             const header = document.getElementById('navheader');
-                            header.style.top = 0;
+                            header.style.top = 0;                            
+                              props.test(bredCrub);                          
+                            
                           }}
                         >
                           <font color="white">X</font>
