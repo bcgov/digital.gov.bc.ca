@@ -5,32 +5,28 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainerOld } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
   let { path } = useRouteMatch();
   return (
     <DocumentTitle title="Case Studies - Digital Government - Province of British Columbia">
-      <div>
-        <Switch>
-          <Route exact path={path}>
-            <PageContainerOld>
-              <SimpleBanner
-                title="Case Studies"
-                description="Learn how digital approaches are getting results here in British
+      <Switch>
+        <Route exact path={path}>
+          <PageContainer>
+            <SimpleBanner
+              title="Case Studies"
+              description="Learn how digital approaches are getting results here in British
             Columbia."
-              />
-              <div className="caseStudyBody">
-                <CardList />
-              </div>
-            </PageContainerOld>
-          </Route>
-          <PageContainerOld>
-            <Route path={path + '/:caseStudyId'} component={CaseStudy} />
-          </PageContainerOld>
-        </Switch>
-      </div>
+            />
+            <CardList />
+          </PageContainer>
+        </Route>
+        <PageContainer>
+          <Route path={path + '/:caseStudyId'} component={CaseStudy} />
+        </PageContainer>
+      </Switch>
     </DocumentTitle>
   );
 };
