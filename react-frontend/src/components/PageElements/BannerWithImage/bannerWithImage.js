@@ -11,8 +11,7 @@ import {
 
 const BannerWithImage = ({ content, image, title }) => {
   return (
-    <BannerWithImageWrapper>
-      <BannerImage alt="" src={image} />
+    <BannerWithImageWrapper backgroundImage={image}>
       <BannerTextWrapper>
         <BannerText>
           <BannerTitle>{title}</BannerTitle>

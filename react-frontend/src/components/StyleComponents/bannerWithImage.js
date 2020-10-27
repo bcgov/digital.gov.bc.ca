@@ -80,9 +80,59 @@ export const BannerTitle = styled.h1.attrs({
   }
 `;
 
+export const BannerSideImageImg = styled.img.attrs({
+  className: 'sideImage',
+})`
+  background: transparent;
+  background-color: #f2f2f2;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+`;
+
+export const BannerSideImgText = styled.div.attrs({
+  className: 'sideImageText',
+})`
+  padding-bottom: 20px;
+  padding-top: 20px;
+`;
+
+export const BannerSideImgTitle = styled.h1.attrs({
+  className: 'bannerTitle',
+})`
+  color: #313132;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 37px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-align: left;
+  @media only screen and (max-width: 800px) {
+    font-size: 31px;
+    text-align: center;
+  }
+`;
+
+export const BannerSideImgSubTitle = styled.div.attrs({
+  className: 'subTitle',
+})`
+  color: #313132;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 19px;
+  text-align: left;
+  @media only screen and (max-width: 800px) {
+    text-align: center;
+  }
+`;
+
 export const BannerWithImageWrapper = styled.div.attrs({
   className: 'banner',
 })`
+  background-image: url(${(props) => props.backgroundImage});
+  background-position: center center;
+  background-size: cover;
   height: 600px;
   margin-bottom: 120px;
   overflow: hidden;
