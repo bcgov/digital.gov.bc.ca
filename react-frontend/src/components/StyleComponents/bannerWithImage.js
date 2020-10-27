@@ -130,6 +130,9 @@ export const BannerSideImgSubTitle = styled.div.attrs({
 export const BannerWithImageWrapper = styled.div.attrs({
   className: 'banner',
 })`
+  background-image: url(${(props) => props.backgroundImage});
+  background-position: center center;
+  background-size: cover;
   height: 600px;
   margin-bottom: 120px;
   overflow: hidden;
