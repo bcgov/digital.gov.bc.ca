@@ -25,6 +25,28 @@ export const BreadcrumbContainer = styled.div.attrs({
   }
 `;
 
+export const FooterContainer = styled.div.attrs({
+  className: 'footerContainer',
+})`
+  display: flex;
+  max-width: 1115px; /* keeps footer inline with navbar; remove this and the padding styles below when we refactor containers */
+  padding-left: 30px;
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
+  }
+`;
+
+export const FooterStyled = styled.footer.attrs()`
+  background-color: #036;
+  border-top: 2px solid #fcba19;
+  color: #fff;
+  font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+`;
+
 // This will be deleted once the case studies page is refactored
 export const CaseStudiesCardContainer = styled.div.attrs({
   className: 'cardContainer',
