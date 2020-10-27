@@ -29,12 +29,14 @@ export const FooterContainer = styled.div.attrs({
   className: 'footerContainer',
 })`
   display: flex;
-  flex-direction: column;
-  height: 46px;
-  justify-content: center;
-  text-align: center;
-  @media only screen and (max-width: 900px) {
-    height: 70px;
+  max-width: 1115px; /* keeps footer inline with navbar; remove this and the padding styles below when we refactor containers */
+  padding-left: 30px;
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
   }
 `;
 

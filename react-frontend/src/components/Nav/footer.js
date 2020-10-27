@@ -4,6 +4,7 @@ import { FooterStyled, FooterContainer } from '../StyleComponents/pageContent';
 import {
   FooterLink,
   FooterLinkInternal,
+  FooterListItem,
   FooterUL,
 } from '../StyleComponents/htmlTags';
 
@@ -12,10 +13,10 @@ const Footer = () => {
     <FooterStyled>
       <FooterContainer>
         <FooterUL>
-          <li>
+          <FooterListItem>
             <FooterLinkInternal to="/">Home</FooterLinkInternal>
-          </li>
-          <li>
+          </FooterListItem>
+          <FooterListItem>
             <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/disclaimer"
               target="_blank"
@@ -23,8 +24,8 @@ const Footer = () => {
             >
               Disclaimer
             </FooterLink>
-          </li>
-          <li>
+          </FooterListItem>
+          <FooterListItem>
             <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/privacy"
               target="_blank"
@@ -32,8 +33,8 @@ const Footer = () => {
             >
               Privacy
             </FooterLink>
-          </li>
-          <li>
+          </FooterListItem>
+          <FooterListItem>
             <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/accessible-government"
               target="_blank"
@@ -41,8 +42,8 @@ const Footer = () => {
             >
               Accessibility
             </FooterLink>
-          </li>
-          <li>
+          </FooterListItem>
+          <FooterListItem>
             <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/copyright"
               target="_blank"
@@ -50,8 +51,8 @@ const Footer = () => {
             >
               Copyright
             </FooterLink>
-          </li>
-          <li>
+          </FooterListItem>
+          <FooterListItem>
             <FooterLink
               href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services"
               target="_blank"
@@ -59,7 +60,7 @@ const Footer = () => {
             >
               Contact Us
             </FooterLink>
-          </li>
+          </FooterListItem>
         </FooterUL>
       </FooterContainer>
     </FooterStyled>
