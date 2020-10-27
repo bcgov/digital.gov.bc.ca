@@ -12,7 +12,7 @@ import { CloseOutlined } from '@ant-design/icons';
 
 function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
-  const [bredCrub,setBredCrub] = useState(true);
+  const [bredCrub, setBredCrub] = useState(true);
 
   if (showBanner) {
     return (
@@ -48,15 +48,14 @@ function CovidBanner(props) {
                         <a
                           href=""
                           onClick={(event) => {
-                            setBredCrub(true);                          
+                            setBredCrub(true);
                             event.preventDefault();
-                            setShowBanner(false);                                                       
+                            setShowBanner(false);
                             const nav = document.getElementById('navbar');
                             nav.style.top = '65px';
                             const header = document.getElementById('navheader');
-                            header.style.top = 0;                            
-                              props.test(bredCrub);                          
-                            
+                            header.style.top = 0;
+                            props.test(bredCrub);
                           }}
                         >
                           <font color="white">X</font>

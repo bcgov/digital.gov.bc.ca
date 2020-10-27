@@ -5,14 +5,12 @@ import NavBar from '../../components/Nav/navbar';
 import Footer from '../../components/Nav/footer';
 import Routes from '../../components/Nav/routes';
 
-
-
 import { RouteBody } from '../../components/StyleComponents/pageContent';
 
 function App() {
   return (
     <div className="App">
-      <Router>        
+      <Router>
         <NavBar />
         <RouteBody>
           <Routes />
