@@ -5,7 +5,10 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import {
+  PageContainer,
+  PageContainerOld,
+} from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
@@ -23,9 +26,9 @@ const CaseStudies = () => {
             <CardList />
           </PageContainer>
         </Route>
-        <PageContainer>
+        <PageContainerOld>
           <Route path={path + '/:caseStudyId'} component={CaseStudy} />
-        </PageContainer>
+        </PageContainerOld>
       </Switch>
     </DocumentTitle>
   );
