@@ -45,6 +45,19 @@ export const FooterStyled = styled.footer.attrs()`
   font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
 `;
 
+// This will be deleted once the case studies page is refactored
+export const CaseStudiesCardContainer = styled.div.attrs({
+  className: 'cardContainer',
+})`
+  margin: auto;
+  width: 960px;
+  @media only screen and (max-width: 800px) {
+    margin: auto;
+    width: 330px;
+    z-index: 0;
+  }
+`;
+
 export const SimplePageBody = styled.div.attrs({
   id: 'content-body',
 })`
@@ -87,10 +100,17 @@ export const PageContainer = styled.div.attrs({
   id: 'main-content-anchor',
 })`
   background-color: #f2f2f2;
-  padding: 10px 0 70px 0px;
+  padding: 10px 20px 70px 30px;
   margin: auto;
   max-width: 1065px;
   z-index: -2;
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
+  }
+
   @media only screen and (max-width: 800px) {
     padding-top: 65px;
   }
@@ -105,7 +125,6 @@ export const NavBarContainer = styled.div.attrs({
   @media screen and (min-width: 800px) {
     padding-left: 107px;
   }
-
   @media screen and (max-width: 800px) {
     padding-left: 15px;
   }

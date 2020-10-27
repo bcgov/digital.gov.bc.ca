@@ -3,8 +3,8 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 import { useRouteMatch } from 'react-router-dom';
 import InfoCard from '../Home/infocard';
 import HorizontalInfoCard from './horizontalinfocard';
+import { CaseStudiesCardContainer } from '../StyleComponents/pageContent';
 
-import '../../css/home.css';
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
 const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
@@ -18,43 +18,41 @@ const descriptions = [
 const CardList = () => {
   let { url } = useRouteMatch();
   return (
-    <div className="cardContainer">
-      <div className="cardGrid">
-        <Grid>
-          <Row gutter={[0, 24]} justify={'space-around'}>
-            <Col sm={24} md={12}>
-              <HorizontalInfoCard
-                title={'Mines Digital Service'}
-                img={caseStudiesMiningImg}
-                description={descriptions[0]}
-                linkText={'Read more'}
-                routePath={url + '/mining-study'}
-              />
-            </Col>
-          </Row>
-          <Row gutter={[0, 24]} justify={'space-around'}>
-            <Col sm={12} md={6}>
-              <InfoCard
-                title={'Helping farmers understand their soil'}
-                img={caseStudiesFarmingImg}
-                description={descriptions[1]}
-                linkText={'Read more'}
-                routePath={url + '/farming-study'}
-              />
-            </Col>
-            <Col sm={12} md={6}>
-              <InfoCard
-                title={'Transforming the Medical Services Plan'}
-                img={caseStudiesMSPImg}
-                description={descriptions[2]}
-                linkText={'Read more'}
-                routePath={url + '/medical-study'}
-              />
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    </div>
+    <CaseStudiesCardContainer>
+      <Grid>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col sm={24} md={12}>
+            <HorizontalInfoCard
+              title={'Mines Digital Service'}
+              img={caseStudiesMiningImg}
+              description={descriptions[0]}
+              linkText={'Read more'}
+              routePath={url + '/mining-study'}
+            />
+          </Col>
+        </Row>
+        <Row gutter={[0, 24]} justify={'space-around'}>
+          <Col sm={12} md={6}>
+            <InfoCard
+              title={'Helping farmers understand their soil'}
+              img={caseStudiesFarmingImg}
+              description={descriptions[1]}
+              linkText={'Read more'}
+              routePath={url + '/farming-study'}
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              title={'Transforming the Medical Services Plan'}
+              img={caseStudiesMSPImg}
+              description={descriptions[2]}
+              linkText={'Read more'}
+              routePath={url + '/medical-study'}
+            />
+          </Col>
+        </Row>
+      </Grid>
+    </CaseStudiesCardContainer>
   );
 };
 
