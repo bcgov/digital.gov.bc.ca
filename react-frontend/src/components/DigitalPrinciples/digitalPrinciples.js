@@ -130,7 +130,7 @@ function DigitalPrinciples() {
         </p>
 
         <DigitalPrinciplesHeading>
-          8. Manage risks proportionatel
+          8. Manage risks proportionately
         </DigitalPrinciplesHeading>
         <p>
           Promote a risk-balanced approach that addresses security and privacy
