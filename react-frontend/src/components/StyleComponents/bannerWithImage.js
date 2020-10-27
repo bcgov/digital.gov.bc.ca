@@ -103,11 +103,11 @@ export const BannerSideImgTitle = styled.h1.attrs({
   className: 'bannerTitle',
 })`
   color: #313132;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 37px;
   font-weight: bold;
-  line-height: 37px;
+  line-height: 1.2;
   margin-bottom: 10px;
-  position: relative;
   text-align: left;
   @media only screen and (max-width: 800px) {
     font-size: 31px;
@@ -118,7 +118,9 @@ export const BannerSideImgTitle = styled.h1.attrs({
 export const BannerSideImgSubTitle = styled.div.attrs({
   className: 'subTitle',
 })`
+  color: #313132;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 19px;
   text-align: left;
   @media only screen and (max-width: 800px) {
     text-align: center;
