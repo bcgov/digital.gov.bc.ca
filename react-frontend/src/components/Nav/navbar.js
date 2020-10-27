@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Drawer, Menu } from 'antd';
-import '../../css/nav.css';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import CovidBanner from '../../components/Nav/covidbanner';
 import BreadCrumbs from '../../components/Nav/breadcrumbs';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   NavBanner,
   NavBarHeader,
   NavContentOnRight,
   NavImage,
-  NavHamburgerButton,
-  NavMain,
   NavTitle,
   SkipToMainContent,
 } from '../StyleComponents/nav';
@@ -21,12 +19,9 @@ import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
-  NavBarLinkFirst,
   NavBarUl,
   NavBarLinks,
 } from '../StyleComponents/htmlTags';
-import { NavBarContainer } from '../StyleComponents/pageContent';
-
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -37,6 +32,9 @@ function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
   const [bredCrub, setBredCrub] = useState(false);
+  const isTablet = useMediaQuery({
+    query: '(width:768px)',
+  });
 
   useEffect(() => {
     function handleResize() {
@@ -110,7 +108,10 @@ function NavBar() {
           onClose={() => setOpenMenu(false)}
           visible={openMenu}
           width="100%"
-          style={{ height: '200px', marginTop: !bredCrub ? '11.5rem' : '4rem' }}
+          style={{
+            height: '200px',
+            marginTop: !bredCrub ? (isTablet ? '8rem' : '11.5rem') : '4rem',
+          }}
           bodyStyle={{ backgroundColor: '#38598a' }}
         >
           <NavBarLink

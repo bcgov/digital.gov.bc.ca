@@ -117,14 +117,6 @@ export const NavBarLink = styled(Link).attrs({
   }
 `;
 
-export const NavBarLinkFirst = styled(NavBarLink).attrs({
-  className: 'navBarLinkFirst',
-})`
-  @media (min-width: 800px) {
-    padding-left: 0;
-  }
-`;
-
 export const NavBarUl = styled.ul.attrs({
   className: 'navBarUl',
 })`
@@ -132,8 +124,8 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin-left: -75px;
   margin: 5px 0;
-  padding-left: 0;
   .active {
     font-weight: bold;
     text-decoration: underline;
@@ -141,5 +133,8 @@ export const NavBarUl = styled.ul.attrs({
   }
   @media screen and (min-width: 800px) {
     flex-direction: row;
+  }
+  @media screen and (max-width: 800px) {
+    margin-left: -28px;
   }
 `;
