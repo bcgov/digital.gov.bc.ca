@@ -23,6 +23,66 @@ export const BreadcrumbUL = styled.ul`
   list-style: none;
 `;
 
+export const FooterLink = styled.a.attrs({
+  className: 'internalLink',
+})`
+  color: #fff;
+  font-size: 14px;
+  padding: 0 4px;
+  :hover {
+    color: white;
+    text-decoration: underline;
+  }
+  :focus {
+    outline-offset: 1px;
+    outline: 4px solid #3b99fc;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 12px;
+  }
+`;
+
+export const FooterLinkInternal = styled(Link).attrs({
+  className: 'internalLink',
+})`
+  color: #fff;
+  font-size: 14px;
+  padding: 0 4px;
+  :hover {
+    color: white;
+    text-decoration: underline;
+  }
+  :focus {
+    outline-offset: 1px;
+    outline: 4px solid #3b99fc;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+`;
+
+export const FooterListItem = styled.li`
+  align-items: center;
+  border-right: 1px solid #4b5e7e;
+  display: flex;
+  padding: 0 9px;
+  text-align: center;
+`;
+
+export const FooterUL = styled.ul`
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  list-style: none;
+  margin: 10px 0;
+  padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
+`;
+
 export const HrefLink = styled.a.attrs({
   className: 'productCardLink',
 })`
