@@ -60,10 +60,11 @@ export const NavHamburgerButton = styled.div.attrs({
   font-size: 18pt;
   margin: 0 0 0 auto;
   width: auto;
+
   @media screen and (min-width: 800px) {
     cursor: pointer;
     display: none;
-    margin: 0 0 0 auto;
+    margin: 0 0 20px auto;
     padding-right: 25px;
     width: auto;
   }
@@ -154,5 +155,18 @@ export const SkipToMainContent = styled.a.attrs({
     margin-left: 5px;
     outline: 5px auto -webkit-focus-ring-color;
     text-decoration: underline;
+  }
+`;
+
+export const CenterBanner = styled.div.attrs({
+  className: 'centerBanner',
+})`
+  margin: auto;
+  width: 1115px;
+
+  @media screen and (max-width: 800px) {
+    .centerBanner {
+      display: flex;
+    }
   }
 `;

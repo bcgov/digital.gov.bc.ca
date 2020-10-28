@@ -86,6 +86,10 @@ export const NavBarHeaderLink = styled.a.attrs({
   font-style: bold;
   line-height: 1;
   padding: 5px;
+  margin-left: 3rem;
+  @media screen and (max-width: 800px) {
+    margin-left: 0;
+  }
 `;
 
 export const NavBarLi = styled.li.attrs({

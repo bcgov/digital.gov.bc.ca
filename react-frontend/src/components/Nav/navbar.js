@@ -10,17 +10,17 @@ import { useMediaQuery } from 'react-responsive';
 import {
   NavBanner,
   NavBarHeader,
-  NavContentOnRight,
   NavImage,
   NavTitle,
   SkipToMainContent,
+  CenterBanner,
+  NavMain,
+  NavHamburgerButton,
 } from '../StyleComponents/nav';
 import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
-  NavBarUl,
-  NavBarLinks,
 } from '../StyleComponents/htmlTags';
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
@@ -33,18 +33,26 @@ function NavBar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
   const [bredCrub, setBredCrub] = useState(false);
   const isTablet = useMediaQuery({
-    query: '(width:768px)',
+    query: '(max-device-width:700px)',
+  });
+
+  const isTabletSreen = useMediaQuery({
+    query: '(max-device-width:698px)',
+  });
+
+  const isTabletView = useMediaQuery({
+    query: '(max-width:650px)',
   });
 
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 800) {
-        const nav = document.getElementById('navbar');
-        nav.style.display = 'none';
+        const NavMain = document.getElementById('navbar');
+        NavMain.style.display = 'none';
         setIsMobile(false);
       } else {
-        const nav = document.getElementById('navbar');
-        nav.style.display = 'block';
+        const NavMain = document.getElementById('navbar');
+        NavMain.style.display = 'block';
         setIsMobile(true);
       }
     }
@@ -59,15 +67,6 @@ function NavBar() {
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
-    // if (openMenu === false) {
-    // const nav = document.getElementById('nav-mobile');
-    // nav.style.display = 'block';
-    // setOpenMenu(true);
-    // }else{
-    //   const nav = document.getElementById('navbar');
-    //   nav.style.display = 'none';
-    //   setOpenMenu(false);
-    // }
   };
 
   let logoPath = isMobile ? mobileImg : desktopImg;
@@ -81,7 +80,7 @@ function NavBar() {
       <div className="navBar">
         <CovidBanner test={handleSize} />
         <NavBarHeader>
-          <div className="centerBanner">
+          <CenterBanner>
             <NavBanner>
               <NavBarHeaderLink
                 href="https://gov.bc.ca"
@@ -94,13 +93,11 @@ function NavBar() {
               </NavBarHeaderLink>
               <NavTitle>Digital Government</NavTitle>
               <SkipToMainContent>Skip to main content</SkipToMainContent>
-            </NavBanner>
-            <NavContentOnRight>
-              <div className="nav-btn" onClick={toggleMenu} href=".">
+              <NavHamburgerButton onClick={toggleMenu} href=".">
                 <FontAwesomeIcon icon={faBars} />
-              </div>
-            </NavContentOnRight>
-          </div>
+              </NavHamburgerButton>
+            </NavBanner>
+          </CenterBanner>
         </NavBarHeader>
         <Drawer
           placement={'left'}
@@ -109,12 +106,21 @@ function NavBar() {
           visible={openMenu}
           width="100%"
           style={{
-            height: '200px',
-            marginTop: !bredCrub ? (isTablet ? '8rem' : '11.5rem') : '4rem',
+            height: '140px',
+            marginTop: !bredCrub
+              ? isTablet
+                ? isTabletView
+                  ? '10.5rem'
+                  : '8rem'
+                : isTabletSreen
+                ? '4rem'
+                : '8rem'
+              : '4rem',
           }}
           bodyStyle={{ backgroundColor: '#38598a' }}
         >
           <NavBarLink
+            onClick={toggleMenu}
             to="/"
             className={activePage === '/' ? 'active' : 'notactive'}
             style={{ color: '#fff' }}
@@ -123,6 +129,7 @@ function NavBar() {
           </NavBarLink>
 
           <NavBarLink
+            onClick={toggleMenu}
             to="/resources"
             className={activePage === '/resources' ? 'active' : 'notactive'}
             style={{ color: '#fff', marginTop: '1rem' }}
@@ -131,6 +138,7 @@ function NavBar() {
           </NavBarLink>
 
           <NavBarLink
+            onClick={toggleMenu}
             to="/products-services"
             className={
               activePage === '/products-services' ? 'active' : 'notactive'
@@ -141,12 +149,9 @@ function NavBar() {
           </NavBarLink>
         </Drawer>
       </div>
-      <nav className="navigation-main" id="navbar">
-        <Menu
-          mode="horizontal"
-          style={{ lineHeight: '50px', backgroundColor: '#38598a' }}
-        >
-          <Menu.Item key="/home" style={{ left: '12rem' }}>
+      <NavMain>
+        <Menu mode="horizontal" style={{ backgroundColor: '#38598a' }}>
+          <Menu.Item key="/home" style={{ left: '8rem' }}>
             <NavBarLi>
               <NavBarLink
                 to="/"
@@ -157,7 +162,7 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
           </Menu.Item>
-          <Menu.Item key="/resources" style={{ left: '10rem' }}>
+          <Menu.Item key="/resources" style={{ left: '6rem' }}>
             <NavBarLink
               to="/resources"
               className={activePage === '/resources' ? 'active' : 'notactive'}
@@ -166,7 +171,7 @@ function NavBar() {
               Resources
             </NavBarLink>
           </Menu.Item>
-          <Menu.Item key="/products-services" style={{ left: '8rem' }}>
+          <Menu.Item key="/products-services" style={{ left: '4rem' }}>
             <NavBarLink
               to="/products-services"
               className={
@@ -178,7 +183,7 @@ function NavBar() {
             </NavBarLink>
           </Menu.Item>
         </Menu>
-      </nav>
+      </NavMain>
 
       <BreadCrumbs bredCrub={bredCrub} />
     </>

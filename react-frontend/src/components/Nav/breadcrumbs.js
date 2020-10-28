@@ -8,14 +8,22 @@ import {
   HrefLinkStandaloneInternal,
 } from '../StyleComponents/htmlTags';
 import { BreadcrumbContainer } from '../StyleComponents/pageContent';
-import { Col } from 'antd';
 const BreadCrumbs = (props) => {
   const history = useHistory();
   const routeLocation = useLocation();
   const [pathName, setPathName] = useState(routeLocation.pathname);
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width:1224px)' });
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-device-width:1224px)',
+  });
   const isTabletOrMobileDevice = useMediaQuery({
     query: '(max-device-width:760px)',
+  });
+  const isTablet = useMediaQuery({
+    query: '(max-device-width:580px)',
+  });
+
+  const isTabletView = useMediaQuery({
+    query: '(max-device-width:430px)',
   });
 
   useEffect(() => {
@@ -62,7 +70,11 @@ const BreadCrumbs = (props) => {
             : {
                 marginTop: isTabletOrMobile
                   ? isTabletOrMobileDevice
-                    ? '32%'
+                    ? isTabletView
+                      ? '30%'
+                      : '20%'
+                    : isTablet
+                    ? '15%'
                     : '10%'
                   : '5%',
               }
