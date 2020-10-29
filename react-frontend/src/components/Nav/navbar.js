@@ -151,7 +151,10 @@ function NavBar() {
       </div>
       <NavMain>
         <Menu mode="horizontal" style={{ backgroundColor: '#38598a' }}>
-          <Menu.Item key="/home" style={{ left: '8rem' }}>
+          <Menu.Item
+            key="/home"
+            style={{ left: '8rem', borderBottomStyle: 'none' }}
+          >
             <NavBarLi>
               <NavBarLink
                 to="/"
@@ -162,7 +165,10 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
           </Menu.Item>
-          <Menu.Item key="/resources" style={{ left: '6rem' }}>
+          <Menu.Item
+            key="/resources"
+            style={{ left: '6rem', borderBottomStyle: 'none' }}
+          >
             <NavBarLink
               to="/resources"
               className={activePage === '/resources' ? 'active' : 'notactive'}
@@ -171,7 +177,10 @@ function NavBar() {
               Resources
             </NavBarLink>
           </Menu.Item>
-          <Menu.Item key="/products-services" style={{ left: '4rem' }}>
+          <Menu.Item
+            key="/products-services"
+            style={{ left: '4rem', borderBottomStyle: 'none' }}
+          >
             <NavBarLink
               to="/products-services"
               className={

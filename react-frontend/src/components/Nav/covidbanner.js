@@ -52,7 +52,7 @@ function CovidBanner(props) {
                             event.preventDefault();
                             setShowBanner(false);
                             const nav = document.getElementById('navbar');
-                            nav.style.top = '65px';
+                            nav.style.top = '67px';
                             const header = document.getElementById('navheader');
                             header.style.top = 0;
                             props.test(breadCrumb);
