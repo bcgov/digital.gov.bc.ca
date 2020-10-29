@@ -1,14 +1,14 @@
 import React from 'react';
-import DigitalBlock from './digitalFrameworkBlock';
+import DigitalFrameworkBlock from './digitalFrameworkBlock';
 import DigitalTable from './digitalFrameworkTable';
 import * as Scroll from 'react-scroll';
-import '../../css/digital.css';
 import DocumentTitle from 'react-document-title';
 
 import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
+import { DigitalBlock } from '../StyleComponents/pageContent';
 
 const digitalFrameworkImage = require('../../images/pngIllustrations/digitalFrameworkWhite.png');
 
@@ -107,12 +107,26 @@ const DigitalFramework = () => {
           image={digitalFrameworkImage}
         />
         <div>
-          <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
-          <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
-          <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
-          <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
-          <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
-          {/* <div className="someLinks"> */}
+          <DigitalFrameworkBlock
+            title={titles[0]}
+            paragraph={descriptions[0]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[1]}
+            paragraph={descriptions[1]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[2]}
+            paragraph={descriptions[2]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[3]}
+            paragraph={descriptions[3]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[4]}
+            paragraph={descriptions[4]}
+          />
           <ul>
             <li>
               <HrefLinkScrollTo
@@ -155,10 +169,12 @@ const DigitalFramework = () => {
               </HrefLinkScrollTo>
             </li>
           </ul>
-          {/* </div> */}
           <div>
             <ScrollElement name="blockOne" className="element" />
-            <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
+            <DigitalFrameworkBlock
+              title={titles[5]}
+              paragraph={descriptions[5]}
+            />
             <div style={{ marginTop: '-20px' }}>
               <ul>
                 <li>Based on user needs (as identified by users themselves)</li>
@@ -172,42 +188,51 @@ const DigitalFramework = () => {
                 </li>
               </ul>
             </div>
-            <div className="tableSpacer">
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[0]}
                 objectives={objectives[0]}
               />
-            </div>
+            </DigitalBlock>
           </div>
           <div>
             <ScrollElement name="blockTwo" className="element" />
-            <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
-            <div className="tableSpacer">
+            <DigitalFrameworkBlock
+              title={titles[6]}
+              paragraph={descriptions[6]}
+            />
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[1]}
                 objectives={objectives[1]}
               />
-            </div>
+            </DigitalBlock>
           </div>
           <div>
             <ScrollElement name="blockThree" className="element" />
-            <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
-            <div className="tableSpacer">
+            <DigitalFrameworkBlock
+              title={titles[7]}
+              paragraph={descriptions[7]}
+            />
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[2]}
                 objectives={objectives[2]}
               />
-            </div>
+            </DigitalBlock>
           </div>
           <div>
             <ScrollElement name="blockFour" className="element" />
-            <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
-            <div className="tableSpacer">
+            <DigitalFrameworkBlock
+              title={titles[8]}
+              paragraph={descriptions[8]}
+            />
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[3]}
                 objectives={objectives[3]}
               />
-            </div>
+            </DigitalBlock>
           </div>
         </div>
       </PageContainer>

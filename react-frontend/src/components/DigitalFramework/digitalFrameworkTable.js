@@ -4,7 +4,10 @@ import {
   DigitalFrameworkHeading,
   DigitalFrameworkSubHeading,
 } from '../StyleComponents/headings';
-import { DigitalFrameworkP } from '../StyleComponents/htmlTags';
+import {
+  DigitalFrameworkP,
+  DigitalFrameworkRow,
+} from '../StyleComponents/htmlTags';
 const DigitalFrameworkTable = (props) => {
   const initial = window.innerWidth < 800;
   const [isMobile, setIsMobile] = useState(initial);
@@ -26,7 +29,7 @@ const DigitalFrameworkTable = (props) => {
   //jsut use row col again but have title show up when screensize is less than a certain height
 
   const body = props.priorityActions.map((priorityAction, i) => (
-    <Row key={i} className={i === entries - 1 ? 'lastRow' : 'contentRow'}>
+    <DigitalFrameworkRow key={i} underlined={i === entries - 1 ? null : true}>
       <Col sm={12} md={6}>
         {isMobile && (
           <DigitalFrameworkSubHeading>
@@ -41,7 +44,7 @@ const DigitalFrameworkTable = (props) => {
         )}
         <DigitalFrameworkP>{props.objectives[i]}</DigitalFrameworkP>
       </Col>
-    </Row>
+    </DigitalFrameworkRow>
   ));
 
   return (

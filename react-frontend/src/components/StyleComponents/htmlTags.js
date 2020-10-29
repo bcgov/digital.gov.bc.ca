@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
+import { Row } from 'react-flexbox-grid';
 
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
@@ -21,6 +22,26 @@ export const BreadcrumbUL = styled.ul`
   flex-direction: row;
   list-style: none;
   margin: 0;
+`;
+
+export const DigitalFrameworkP = styled.p.attrs({
+  className: 'digitalParagraph',
+})`
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+`;
+
+export const DigitalFrameworkRow = styled(Row).attrs({
+  className: 'digitalRow',
+})`
+  border-bottom: ${(props) => (props.underlined ? 'solid thin black' : '')};
+  padding-bottom: 25px;
+  padding-top: 20px;
+  @media only screen and (max-width: 800px) {
+    padding-top: 15px;
+  }
 `;
 
 export const FooterLink = styled.a.attrs({
@@ -81,15 +102,6 @@ export const FooterUL = styled.ul`
   list-style: none;
   margin: 10px 0;
   padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
-`;
-
-export const DigitalFrameworkP = styled.p.attrs({
-  className: 'digitalParagraph',
-})`
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  position: relative;
 `;
 
 export const HrefLink = styled.a.attrs({
