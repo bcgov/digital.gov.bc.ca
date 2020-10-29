@@ -20,7 +20,7 @@ export const DigitalFrameworkHeading = styled.h2.attrs({
 export const DigitalFrameworkSubHeading = styled.h3.attrs({
   className: 'digitalFrameworkSubHeading',
 })`
-  font-size: 16pt;
+  font-size: 18pt;
   font-weight: bold;
   line-height: 24pt;
   margin-bottom: 5px;

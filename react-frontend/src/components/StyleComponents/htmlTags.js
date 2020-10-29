@@ -27,7 +27,7 @@ export const BreadcrumbUL = styled.ul`
 export const DigitalFrameworkP = styled.p.attrs({
   className: 'digitalParagraph',
 })`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   position: relative;
