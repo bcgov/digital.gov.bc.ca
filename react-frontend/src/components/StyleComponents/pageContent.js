@@ -47,19 +47,6 @@ export const FooterStyled = styled.footer.attrs()`
   font-family: ‘BCSans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
 `;
 
-// This will be deleted once the case studies page is refactored
-export const CaseStudiesCardContainer = styled.div.attrs({
-  className: 'cardContainer',
-})`
-  margin: auto;
-  width: 960px;
-  @media only screen and (max-width: 800px) {
-    margin: auto;
-    width: 330px;
-    z-index: 0;
-  }
-`;
-
 export const SimplePageBody = styled.div.attrs({
   id: 'content-body',
 })`
