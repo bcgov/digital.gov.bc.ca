@@ -26,11 +26,7 @@ const linkTexts = [
 const CardList = () => {
   return (
     <Grid>
-      <Row
-        gutter={[0, 24]}
-        justify={'space-around'}
-        style={{ minHeight: '250px' }}
-      >
+      <Row>
         <Col sm={12} md={6}>
           <InfoCard
             title={'Digital Framework'}
@@ -50,7 +46,7 @@ const CardList = () => {
           />
         </Col>
       </Row>
-      <Row gutter={[0, 24]} justify={'space-around'}>
+      <Row>
         <Col sm={12} md={6}>
           <InfoCard
             title={'Products & Services'}
@@ -70,7 +66,7 @@ const CardList = () => {
           />
         </Col>
       </Row>
-      <Row gutter={[0, 24]} justify={'space-around'}>
+      <Row>
         <Col sm={12} md={6}>
           <InfoCard
             title={'Community'}
