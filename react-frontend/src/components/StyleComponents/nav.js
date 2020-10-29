@@ -173,7 +173,7 @@ export const SkipToMainContent = styled.a.attrs({
 export const CenterBanner = styled.div.attrs({
   className: 'centerBanner',
 })`
-  margin-left: 75px;
+  margin-left: 0px;
   width: 1115px;
 
   @media screen and (max-width: 800px) {

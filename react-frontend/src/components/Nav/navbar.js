@@ -110,7 +110,7 @@ function NavBar() {
             marginTop: !breadCrumb
               ? isTablet
                 ? isTabletView
-                  ? '168px'
+                  ? '188px'
                   : '128px'
                 : isTabletSreen
                 ? '64px'
