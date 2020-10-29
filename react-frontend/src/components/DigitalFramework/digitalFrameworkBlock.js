@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../css/digital.css';
 
+import { DigitalFrameworkHeading } from '../StyleComponents/headings';
+import { DigitalFrameworkP } from '../StyleComponents/htmlTags';
 const DigitalFrameworkBlock = (props) => {
   return (
     <div className="digitalBlock">
-      <h2 className="digitalTitle">{props.title}</h2>
-      <div className="digitalParagraph">
-        <p>{props.paragraph}</p>
-      </div>
+      <DigitalFrameworkHeading>{props.title}</DigitalFrameworkHeading>
+      <DigitalFrameworkP>{props.paragraph}</DigitalFrameworkP>
     </div>
   );
 };

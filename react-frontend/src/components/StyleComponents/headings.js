@@ -8,6 +8,25 @@ export const CaseStudyHeading = styled.h2.attrs({
   margin-bottom: 24px;
 `;
 
+export const DigitalFrameworkHeading = styled.h2.attrs({
+  className: 'digitalFrameworkHeading',
+})`
+  font-size: 22pt;
+  font-weight: bold;
+  line-height: 24pt;
+  margin-bottom: 5px;
+`;
+
+export const DigitalFrameworkSubHeading = styled.h3.attrs({
+  className: 'digitalFrameworkSubHeading',
+})`
+  font-size: 16pt;
+  font-weight: bold;
+  line-height: 24pt;
+  margin-bottom: 5px;
+  margin-top: 5px;
+`;
+
 export const DigitalPrinciplesHeading = styled.h2.attrs({
   className: 'digitalPrinciplesHeading',
 })`

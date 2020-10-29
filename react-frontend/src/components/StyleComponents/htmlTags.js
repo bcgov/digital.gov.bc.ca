@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
 
-// This file contains styling for Link, a, ul, li, col, row html tags
+// This file contains styling for Link, a, ul, li, col, row, p html tags
 
 export const BreadcrumbLI = styled.li`
   display: flex;
@@ -81,6 +81,15 @@ export const FooterUL = styled.ul`
   list-style: none;
   margin: 10px 0;
   padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
+`;
+
+export const DigitalFrameworkP = styled.p.attrs({
+  className: 'digitalParagraph',
+})`
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
 `;
 
 export const HrefLink = styled.a.attrs({

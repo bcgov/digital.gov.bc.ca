@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
-
+import {
+  DigitalFrameworkHeading,
+  DigitalFrameworkSubHeading,
+} from '../StyleComponents/headings';
+import { DigitalFrameworkP } from '../StyleComponents/htmlTags';
 const DigitalFrameworkTable = (props) => {
   const initial = window.innerWidth < 800;
   const [isMobile, setIsMobile] = useState(initial);
@@ -25,51 +29,41 @@ const DigitalFrameworkTable = (props) => {
     <Row key={i} className={i === entries - 1 ? 'lastRow' : 'contentRow'}>
       <Col sm={12} md={6}>
         {isMobile && (
-          <div>
-            <h3 className="digitalTableTitle">Priority Action</h3>
-          </div>
+          <DigitalFrameworkSubHeading>
+            Priority Action
+          </DigitalFrameworkSubHeading>
         )}
-        <div className="digitalParagraph">
-          <p>{priorityAction}</p>
-        </div>
+        <DigitalFrameworkP>{priorityAction}</DigitalFrameworkP>
       </Col>
       <Col sm={12} md={6}>
         {isMobile && (
-          <div>
-            <h3 className="digitalTableTitle">Objective</h3>
-          </div>
+          <DigitalFrameworkSubHeading>Objective</DigitalFrameworkSubHeading>
         )}
-        <div className="digitalParagraph">
-          <p>{props.objectives[i]}</p>
-        </div>
+        <DigitalFrameworkP>{props.objectives[i]}</DigitalFrameworkP>
       </Col>
     </Row>
   ));
 
   return (
     <div>
-      <Grid className="digitalTable">
+      <Grid>
         {!isMobile ? (
-          <Row className="firstRow">
+          <Row>
             <Col md={6} lg={6}>
-              <div>
-                <h2 className="digitalTitle">Priority Actions</h2>
-              </div>
+              <DigitalFrameworkHeading>
+                Priority Actions
+              </DigitalFrameworkHeading>
             </Col>
             <Col md={6} lg={6}>
-              <div>
-                <h2 className="digitalTitle">Objectives</h2>
-              </div>
+              <DigitalFrameworkHeading>Objectives</DigitalFrameworkHeading>
             </Col>
           </Row>
         ) : (
-          <Row className="firstRow">
+          <Row>
             <Col sm={12}>
-              <div>
-                <h2 className="digitalTitle">
-                  Priority Actions and Objectives
-                </h2>
-              </div>
+              <DigitalFrameworkHeading>
+                Priority Actions and Objectives
+              </DigitalFrameworkHeading>
             </Col>
           </Row>
         )}

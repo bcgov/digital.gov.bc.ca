@@ -5,10 +5,12 @@ import * as Scroll from 'react-scroll';
 import '../../css/digital.css';
 import DocumentTitle from 'react-document-title';
 
-import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
+import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
 
-import { SimplePageBody, PageContainer } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
+
+const digitalFrameworkImage = require('../../images/pngIllustrations/digitalFrameworkWhite.png');
 
 const titles = [
   'Our Vision',
@@ -97,73 +99,64 @@ const DigitalFramework = () => {
   return (
     <DocumentTitle title="Digital Framework - Digital Government - Province of British Columbia">
       <PageContainer>
-        <SimpleBanner
+        <BannerSideImage
           title={'Digital Framework'}
-          description={
+          content={
             'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
           }
+          image={digitalFrameworkImage}
         />
-        <SimplePageBody>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
-            <div className="someLinks">
-              <ul>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockOne"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    Service delivery
-                  </HrefLinkScrollTo>
-                </li>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockTwo"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    Data and information
-                  </HrefLinkScrollTo>
-                </li>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockThree"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    Tools, processes and practices
-                  </HrefLinkScrollTo>
-                </li>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockFour"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    External Partners
-                  </HrefLinkScrollTo>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="digitalSection">
+        <div>
+          <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
+          <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
+          <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
+          <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
+          <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
+          {/* <div className="someLinks"> */}
+          <ul>
+            <li>
+              <HrefLinkScrollTo
+                to="blockOne"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Service delivery
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockTwo"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Data and information
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockThree"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Tools, processes and practices
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockFour"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                External Partners
+              </HrefLinkScrollTo>
+            </li>
+          </ul>
+          {/* </div> */}
+          <div>
             <ScrollElement name="blockOne" className="element" />
             <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
             <div style={{ marginTop: '-20px' }}>
@@ -186,7 +179,7 @@ const DigitalFramework = () => {
               />
             </div>
           </div>
-          <div className="digitalSection">
+          <div>
             <ScrollElement name="blockTwo" className="element" />
             <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
             <div className="tableSpacer">
@@ -196,7 +189,7 @@ const DigitalFramework = () => {
               />
             </div>
           </div>
-          <div className="digitalSection">
+          <div>
             <ScrollElement name="blockThree" className="element" />
             <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
             <div className="tableSpacer">
@@ -216,7 +209,7 @@ const DigitalFramework = () => {
               />
             </div>
           </div>
-        </SimplePageBody>
+        </div>
       </PageContainer>
     </DocumentTitle>
   );

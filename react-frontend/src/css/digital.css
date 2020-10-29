@@ -5,71 +5,20 @@
 }
 
 .digitalBlock {
+    padding-top: 60px;
     margin-bottom: 25px;
 }
 
-.digitalContainer {
-    background-color: #F2F2F2;
-    padding-bottom: 70px;
-    padding-top: 100px;
-}
 
-.digitalParagraph {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    position: relative;
-}
-
-.digitalPageText {
-    margin: auto;
-    padding-bottom: 110px;
-    padding-top: 120px;
-    text-align: center;
-    width: 975px;
-}
-
-.digitalSection {
-    padding-bottom: 60px;
-}
-
-.digitalTable {
-    margin-left: -8px;
-}
-
-.digitalTableTitle {
-    font-size: 16pt;
-    font-weight: bold;
-    line-height: 24pt;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
 
 .tableSpacer {
     padding-top: 60px;
-}
-
-.digitalTitle {
-    font-size: 22pt;
-    font-weight: bold;
-    line-height: 24pt;
-    margin-bottom: 5px;
-}
-
-.firstRow {
-    border-bottom: solid darkgray;
 }
 
 .lastRow {
     height: 80px;
     margin-bottom: 25px;
     padding-top: 20px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .someLinks {
-        margin-top: -15px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -80,21 +29,6 @@
 
     .digitalBlock {
         margin-bottom: 25px;
-    }
-    
-    .digitalContainer {
-        padding-top: 65px;
-    }
-
-    .digitalPageText {
-        margin-left: 8%;
-        padding-bottom: 80px;
-        padding-top: 140px;
-        width: 84%;
-    }
-
-    .digitalTable {
-        margin-bottom: 100px;
     }
 
     .digitalTop {
@@ -113,7 +47,4 @@
         margin-bottom: 40px;
     }
 
-    .digitalTable {
-        margin-bottom: 150px;
-    }
 }
