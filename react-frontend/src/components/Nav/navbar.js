@@ -31,7 +31,7 @@ function NavBar() {
   const [activePage, setActivePage] = useState(routeLocation.pathname);
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
-  const [bredCrub, setBredCrub] = useState(false);
+  const [breadCrumb, setBreadCrumb] = useState(false);
   const isTablet = useMediaQuery({
     query: '(max-device-width:700px)',
   });
@@ -72,7 +72,7 @@ function NavBar() {
   let logoPath = isMobile ? mobileImg : desktopImg;
 
   function handleSize(value) {
-    setBredCrub(value);
+    setBreadCrumb(value);
   }
 
   return (
@@ -107,15 +107,15 @@ function NavBar() {
           width="100%"
           style={{
             height: '140px',
-            marginTop: !bredCrub
+            marginTop: !breadCrumb
               ? isTablet
                 ? isTabletView
-                  ? '10.5rem'
-                  : '8rem'
+                  ? '168px'
+                  : '128px'
                 : isTabletSreen
-                ? '4rem'
-                : '8rem'
-              : '4rem',
+                ? '64px'
+                : '128px'
+              : '64px',
           }}
           bodyStyle={{ backgroundColor: '#38598a' }}
         >
@@ -185,7 +185,7 @@ function NavBar() {
         </Menu>
       </NavMain>
 
-      <BreadCrumbs bredCrub={bredCrub} />
+      <BreadCrumbs breadCrumb={breadCrumb} />
     </>
   );
 }

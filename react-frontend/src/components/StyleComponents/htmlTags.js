@@ -117,6 +117,7 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 16px;
 
   text-decoration: underline;
   :hover {
@@ -146,7 +147,6 @@ export const NavBarHeaderLink = styled.a.attrs({
   font-style: bold;
   line-height: 1;
   padding: 5px;
-  margin-left: 3rem;
   @media screen and (max-width: 800px) {
     margin-left: 0;
   }
@@ -188,7 +188,6 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-left: -75px;
   margin: 5px 0;
   .active {
     font-weight: bold;
@@ -197,8 +196,5 @@ export const NavBarUl = styled.ul.attrs({
   }
   @media screen and (min-width: 800px) {
     flex-direction: row;
-  }
-  @media screen and (max-width: 800px) {
-    margin-left: -28px;
   }
 `;

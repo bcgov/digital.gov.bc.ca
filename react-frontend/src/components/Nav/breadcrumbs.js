@@ -27,7 +27,6 @@ const BreadCrumbs = (props) => {
   });
 
   useEffect(() => {
-    console.log('props--', props);
     history.listen((location) => {
       setPathName(location.pathname);
     });
@@ -58,14 +57,14 @@ const BreadCrumbs = (props) => {
     );
     listEntry.push(<BreadcrumbLI key={i + '->'}>{'>'}</BreadcrumbLI>);
   }
-  let bredCrum = props ? props.bredCrub : false;
+  let breadCrumb = props ? props.breadCrumb : false;
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
   const crumbs = (
     <div>
       <BreadcrumbUL
         style={
-          bredCrum
+          breadCrumb
             ? { marginTop: 0 }
             : {
                 marginTop: isTabletOrMobile
