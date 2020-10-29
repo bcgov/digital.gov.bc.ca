@@ -3,10 +3,7 @@ import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
 
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
-import {
-  SimpleTextPageTitle,
-  DigitalPrinciplesHeading,
-} from '../StyleComponents/headings';
+import { DigitalPrinciplesHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 
 const digitalPrinciplesImage = require('../../images/pngIllustrations/digitalPrinciplesWhite.png');
