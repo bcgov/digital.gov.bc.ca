@@ -4,6 +4,15 @@ import 'antd/dist/antd.css';
 import { Card } from 'antd';
 import '../../css/card.css';
 
+import {
+  CardHorizontalTitle,
+  CardHorizontalDescription,
+} from '../StyleComponents/card';
+
+import {
+  HrefLinkStandalone,
+  HrefLinkStandaloneInternal,
+} from '../StyleComponents/htmlTags';
 const HorizontalInfoCard = (props) => {
   return (
     <Card
@@ -16,21 +25,23 @@ const HorizontalInfoCard = (props) => {
       }
     >
       <div className="cardTextHorizontal">
-        <div>
-          <p className="cardTitleHorizontal">{props.title}</p>
-        </div>
-        <div>
-          <p className="cardDescriptionHorizontal">{props.description}</p>
-        </div>
-        <div className="cardLinkHorizontal">
-          {props.routePath ? (
-            <Link to={props.routePath}>{props.linkText}</Link>
-          ) : (
-            <a href={props.linkPath} target="_blank" rel="noopener noreferrer">
-              {props.linkText}
-            </a>
-          )}
-        </div>
+        <CardHorizontalTitle>{props.title}</CardHorizontalTitle>
+        <CardHorizontalDescription>
+          {props.description}
+        </CardHorizontalDescription>
+        {props.routePath ? (
+          <HrefLinkStandaloneInternal to={props.routePath}>
+            {props.linkText}
+          </HrefLinkStandaloneInternal>
+        ) : (
+          <HrefLinkStandalone
+            href={props.linkPath}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.linkText}
+          </HrefLinkStandalone>
+        )}
       </div>
     </Card>
   );

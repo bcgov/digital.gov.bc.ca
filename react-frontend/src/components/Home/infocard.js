@@ -6,6 +6,12 @@ import '../../css/card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { CardTitle, CardDescription } from '../StyleComponents/card';
+import {
+  HrefLinkStandalone,
+  HrefLinkStandaloneInternal,
+} from '../StyleComponents/htmlTags';
+
 function InfoCard({
   height,
   routePath,
@@ -33,17 +39,19 @@ function InfoCard({
         }
       >
         <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{title}</h2>
-          </div>
-          <div className="cardDescription">
-            <p>{description}</p>
-          </div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
-              <Link to={routePath}>{linkText}</Link>
+              <HrefLinkStandaloneInternal to={routePath}>
+                {linkText}
+              </HrefLinkStandaloneInternal>
             ) : (
-              <a href={linkPath} target="_blank" rel="noopener noreferrer">
+              <HrefLinkStandalone
+                href={linkPath}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
@@ -51,7 +59,7 @@ function InfoCard({
                     style={{ paddingLeft: '5px' }}
                   />
                 )}
-              </a>
+              </HrefLinkStandalone>
             )}
           </div>
         </div>
@@ -61,17 +69,19 @@ function InfoCard({
     return (
       <Card className="cardBody" style={{ height: '95%', width: '100%' }}>
         <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{title}</h2>
-          </div>
-          <div className="cardDescription">
-            <p>{description}</p>
-          </div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
-              <Link to={routePath}>{linkText}</Link>
+              <HrefLinkStandaloneInternal to={routePath}>
+                {linkText}
+              </HrefLinkStandaloneInternal>
             ) : (
-              <a href={linkPath} target="_blank" rel="noopener noreferrer">
+              <HrefLinkStandalone
+                href={linkPath}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
@@ -79,7 +89,7 @@ function InfoCard({
                     style={{ paddingLeft: '5px' }}
                   />
                 )}
-              </a>
+              </HrefLinkStandalone>
             )}
           </div>
         </div>

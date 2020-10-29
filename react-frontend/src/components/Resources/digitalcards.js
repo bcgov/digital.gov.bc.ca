@@ -1,9 +1,9 @@
 import React from 'react';
 import InfoCard from '../Home/infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
-import '../../css/resources.css';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
+import { ResourcePageHeading } from '../StyleComponents/headings';
 
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
@@ -20,34 +20,34 @@ const links = [
 
 function DigitalCards() {
   return (
-    <ContentBlock>
-      <div>
-        <h2 className="resourceInfoTitle">Standards & Policy</h2>
-      </div>
-      <div className="resourceInfo">
-        <Grid className="cardAdjustment">
-          <Row>
-            <Col sm={12} md={6}>
-              <InfoCard
-                title={'Digital Principles'}
-                description={descriptions[1]}
-                linkText={linkTexts[0]}
-                routePath={links[0]}
-                height="300px"
-              />
-            </Col>
-            <Col sm={12} md={6}>
-              <InfoCard
-                title={'IM/IT Policy Framework'}
-                description={descriptions[2]}
-                linkText={linkTexts[1]}
-                linkPath={links[1]}
-                height="300px"
-              />
-            </Col>
-          </Row>
-        </Grid>
-      </div>
+    <ContentBlock id="standards">
+      <Grid>
+        <Row>
+          <Col sm={12}>
+            <ResourcePageHeading>Standards & Policy</ResourcePageHeading>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12} md={6}>
+            <InfoCard
+              title={'Digital Principles'}
+              description={descriptions[1]}
+              linkText={linkTexts[0]}
+              routePath={links[0]}
+              height="300px"
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              title={'IM/IT Policy Framework'}
+              description={descriptions[2]}
+              linkText={linkTexts[1]}
+              linkPath={links[1]}
+              height="300px"
+            />
+          </Col>
+        </Row>
+      </Grid>
     </ContentBlock>
   );
 }

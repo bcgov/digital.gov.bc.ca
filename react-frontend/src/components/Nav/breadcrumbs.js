@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
-import '../../css/breadcrumbs.css';
-import { DisplayNames as routeDisplayNames } from '../Nav/routes';
+import { useLocation, useHistory } from 'react-router-dom';
 
+import { DisplayNames as routeDisplayNames } from '../Nav/routes';
+import {
+  BreadcrumbLI,
+  BreadcrumbUL,
+  HrefLinkStandaloneInternal,
+} from '../StyleComponents/htmlTags';
+import { BreadcrumbContainer } from '../StyleComponents/pageContent';
 const BreadCrumbs = () => {
   const history = useHistory();
   const routeLocation = useLocation();
@@ -10,7 +15,6 @@ const BreadCrumbs = () => {
 
   useEffect(() => {
     history.listen((location) => {
-      console.log('change');
       setPathName(location.pathname);
     });
   }, [history]);
@@ -24,29 +28,32 @@ const BreadCrumbs = () => {
   let listEntry = [];
 
   listEntry.push(
-    <li className="listOption">
-      <Link to="/">Home</Link>
-    </li>
+    <BreadcrumbLI key="0">
+      <HrefLinkStandaloneInternal to="/">Home</HrefLinkStandaloneInternal>
+    </BreadcrumbLI>
   );
+  listEntry.push(<BreadcrumbLI key="0->">{'>'}</BreadcrumbLI>);
   for (var i = 1; i < pathArray.length - 1; i++) {
     displayName = pathArray[i];
-    listEntry.push(<li className="listOption">{'>'}</li>);
     listEntry.push(
-      <li className="listOption">
-        <Link to={'/' + displayName}>{routeDisplayNames[displayName]}</Link>
-      </li>
+      <BreadcrumbLI key={i}>
+        <HrefLinkStandaloneInternal to={'/' + displayName}>
+          {routeDisplayNames[displayName]}
+        </HrefLinkStandaloneInternal>
+      </BreadcrumbLI>
     );
+    listEntry.push(<BreadcrumbLI key={i + '->'}>{'>'}</BreadcrumbLI>);
   }
 
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
-  let crumbs = (
+  const crumbs = (
     <div>
-      <ul className="options">{listEntry}</ul>
+      <BreadcrumbUL>{listEntry}</BreadcrumbUL>
     </div>
   );
 
-  return <div className="breadCrumbs">{crumbs}</div>;
+  return <BreadcrumbContainer>{crumbs}</BreadcrumbContainer>;
 };
 
 export default BreadCrumbs;

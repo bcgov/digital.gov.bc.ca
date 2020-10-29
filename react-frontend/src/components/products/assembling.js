@@ -2,57 +2,58 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
 
+import { ProductPageSubHeading } from '../StyleComponents/headings';
+import { HrefLink } from '../StyleComponents/htmlTags';
+import { ContentBlock } from '../StyleComponents/pageContent';
+
 const cards = [
-  <div className="cardContent">
+  <div>
     <p>
-      <a
-        className="productCardLink"
+      <HrefLink
         href="https://bcdevexchange.org/ExchangeLab"
         target="_blank"
         rel="noopener noreferrer"
       >
         The Exchange Lab
-      </a>{' '}
+      </HrefLink>{' '}
       provides training, community, and digital service delivery residency
       programs that apply Agile and DevOps methods that can help you build your
       team.
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       If you need to contract a team and want them to follow an Agile process,
       you can use the{' '}
-      <a className="productCardLink" target="_blank">
+      <HrefLink href="https://digital.gov.bc.ca/marketplace" target="_blank">
         Digital Marketplace.
-      </a>
+      </HrefLink>
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       By requesting access to the B.C. Government’s{' '}
-      <a
-        className="productCardLink"
+      <HrefLink
         href="https://www.bcdevexchange.org/DevOpsPlatform"
         target="_blank"
         rel="noopener noreferrer"
       >
         DevOps Container Platform
-      </a>
+      </HrefLink>
       , you can empower your developers to deploy digital applications quickly,
       securely, and at scale.
     </p>
   </div>,
-  <div className="cardContent">
+  <div>
     <p>
       Learn about{' '}
-      <a
-        className="productCardLink"
+      <HrefLink
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
         target="_blank"
         rel="noopener noreferrer"
       >
         IM/IT Capital Investment
-      </a>{' '}
+      </HrefLink>{' '}
       that you may require to build your service.
     </p>
   </div>,
@@ -60,18 +61,22 @@ const cards = [
 
 const Assembling = () => {
   return (
-    <div className="definingContainer">
-      <div>
-        <p className="productsSubtitle">Assembling and supporting your team</p>
-      </div>
-      <p>
-        Whatever technology solution you decide to pursue, you will need a team
-        of people with all the skills necessary to implement and maintain it.
-        Here are some services that can help you form that team and set them up
-        for success.
-      </p>
-      <p>Here are some services that might help you at this stage.</p>
-      <Grid className="cardAdjustment">
+    <ContentBlock id="assemblingTeam">
+      <Grid>
+        <Row>
+          <Col sm={12}>
+            <ProductPageSubHeading>
+              Assembling and supporting your team
+            </ProductPageSubHeading>
+            <p>
+              Whatever technology solution you decide to pursue, you will need a
+              team of people with all the skills necessary to implement and
+              maintain it. Here are some services that can help you form that
+              team and set them up for success.
+            </p>
+            <p>Here are some services that might help you at this stage.</p>
+          </Col>
+        </Row>
         <Row style={{ minHeight: '250px' }}>
           {cards.map((element, i) => (
             <Col key={i} sm={12} md={3}>
@@ -80,7 +85,7 @@ const Assembling = () => {
           ))}
         </Row>
       </Grid>
-    </div>
+    </ContentBlock>
   );
 };
 

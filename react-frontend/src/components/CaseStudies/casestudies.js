@@ -1,36 +1,37 @@
 import React from 'react';
-import SimpleBanner from '../SimpleBanner/simpleBanner';
+import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import Template from './template';
+import CaseStudy from './caseStudy';
+import DocumentTitle from 'react-document-title';
 
-import { PageContainerCaseStudies } from '../StyleComponents/pageContent';
+import { PageContainerOld } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
 
 const CaseStudies = () => {
   let { path } = useRouteMatch();
   return (
-    <div>
-      <Switch>
-        <Route exact path={path}>
-          <div className="caseStudyContainer">
-            {/* Note the refactor here may conflict with desired styling due to th
-            digitalTop classname added to simple banner*/}
-            <SimpleBanner
-              title="Case Studies"
-              description="Learn how digital approaches are getting results here in British
+    <DocumentTitle title="Case Studies - Digital Government - Province of British Columbia">
+      <div>
+        <Switch>
+          <Route exact path={path}>
+            <PageContainerOld>
+              <SimpleBanner
+                title="Case Studies"
+                description="Learn how digital approaches are getting results here in British
             Columbia."
-            />
-            <div className="caseStudyBody">
-              <CardList />
-            </div>
-          </div>
-        </Route>
-        <PageContainerCaseStudies>
-          <Route path={path + '/:caseStudyId'} component={Template} />
-        </PageContainerCaseStudies>
-      </Switch>
-    </div>
+              />
+              <div className="caseStudyBody">
+                <CardList />
+              </div>
+            </PageContainerOld>
+          </Route>
+          <PageContainerOld>
+            <Route path={path + '/:caseStudyId'} component={CaseStudy} />
+          </PageContainerOld>
+        </Switch>
+      </div>
+    </DocumentTitle>
   );
 };
 

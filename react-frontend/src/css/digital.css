@@ -8,22 +8,10 @@
     margin-bottom: 25px;
 }
 
-.digitalBody {
-    width: 960px;
-    margin: auto;
-}
-
 .digitalContainer {
     background-color: #F2F2F2;
     padding-bottom: 70px;
     padding-top: 100px;
-}
-
-.digitalLink {
-    color: #0000EE;
-    cursor: pointer;
-    font-size: 12pt;
-    font-weight: bold;
 }
 
 .digitalParagraph {
@@ -79,9 +67,6 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .digitalBody {
-        width: 85%;
-    }
     .someLinks {
         margin-top: -15px;
     }
@@ -96,10 +81,6 @@
     .digitalBlock {
         margin-bottom: 25px;
     }
-
-    .digitalBody {
-        width: 85%;
-    }
     
     .digitalContainer {
         padding-top: 65px;
@@ -110,10 +91,6 @@
         padding-bottom: 80px;
         padding-top: 140px;
         width: 84%;
-    }
-
-    .digitalSection {
-        padding-bottom: 60px;
     }
 
     .digitalTable {

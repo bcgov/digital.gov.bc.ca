@@ -4,14 +4,20 @@ import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import CaseStudies from '../../components/CaseStudies/casestudies';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
-import DigitalFramework from '../DigitalFramework/digitalframework';
+import DigitalFramework from '../DigitalFramework/digitalFramework';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
+import GuidesPage from '../../components/Guides/guides';
+import GuidePage from '../../components/Guides/guide';
+
 const DisplayNames = {
-  resources: 'Resources',
-  'products-services': 'Products and Services',
-  'digital-framework': 'Digital Framework',
   'case-studies': 'Case Studies',
+  'communication-platforms': 'Communication Platform',
+  'digital-framework': 'Digital Framework',
+  'digital-principles': 'Digital Principles',
+  guides: 'Guides',
+  'products-services': 'Products and Services',
+  resources: 'Resources',
 };
 
 const Routes = () => {
@@ -35,8 +41,11 @@ const Routes = () => {
       <Route path="/guides/communication-platforms">
         <CollaborationTools />
       </Route>
-      <Route path="/communication-platforms">
-        <CollaborationTools />
+      <Route path="/guides/:uid" exact>
+        <GuidePage />
+      </Route>
+      <Route path="/guides" exact>
+        <GuidesPage />
       </Route>
       <Route path="/">
         <Home />

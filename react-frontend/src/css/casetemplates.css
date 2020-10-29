@@ -3,17 +3,9 @@
     width: 1124px;
 }
 
-
-.pageSubtitle {
-    font-size: 22pt;
-    font-weight: bold;
-    margin-bottom: 24px;
-}
-
 .resourceLink {
     font-size: 20px;
     padding-top: 20px;
-    text-decoration: underline;
 }
 
 .resourceLinkBox {

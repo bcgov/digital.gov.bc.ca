@@ -1,3 +1,5 @@
+/* TODO: Finish migrating this to the card.js styled components */
+
 .cardBody {
     font-size: 16pt;
     margin-bottom: 20px;
@@ -7,15 +9,6 @@
 .cardBodyHorizontal {
     height: 330px;
     margin-bottom: 20px;
-}
-
-.cardDescription {
-    font-weight: normal;
-    padding-bottom: 25px;
-}
-
-.cardDescriptionHorizontal {
-    font-weight: normal;
 }
 
 .cardImage {
@@ -47,26 +40,9 @@
 
 .cardLink {
     bottom: 25px;
-    color: #1a5a96;
-    font-family: 'BC Sans';
     font-size: 16px;
     font-weight: bold;
     position: absolute;
-    text-decoration: underline;
-}
-
-.cardLink:hover {
-    color: blue;
-    text-decoration: none;
-}
-
-.cardLinkHorizontal {
-    bottom: 20px;
-    color: #1a5a96;
-    font-family: 'BC Sans';
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 .cardText {
@@ -77,22 +53,6 @@
 .cardTextHorizontal {
     padding: 16px;
     text-align: left;
-}
-
-.cardTitle {
-    font-family: 'BC Sans';
-    font-size: 31px;
-    font-weight: bold;
-    line-height: 44px;
-    position: relative;
-}
-
-.cardTitleHorizontal {
-    font-family: 'BC Sans';
-    font-size: 31px;
-    font-weight: bold;
-    line-height: 41px;
-    position: relative;
 }
 
 .overFlowHidden {
@@ -108,14 +68,6 @@
     .cardBodyHorizontal {
         height: 95%;
         width: 330px;
-    }
-
-    .cardDescription {
-        font-weight: normal;
-    } 
-
-    .cardDescriptionHorizontal {
-        font-weight: normal;
     }
 
     .cardImage {
@@ -142,15 +94,6 @@
 
     .cardLink {
         bottom: 20px;
-    }
-
-    .cardLinkHorizontal {
-        bottom: 10px;
-    }
-
-    .cardTitle {
-        font-size: 22px;
-        margin-top: -10px;
     }
    
 }
