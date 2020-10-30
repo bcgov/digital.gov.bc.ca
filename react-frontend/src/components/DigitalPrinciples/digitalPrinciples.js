@@ -15,7 +15,7 @@ function DigitalPrinciples() {
         <GlobaStyleSize />
         <BannerSideImage
           title={
-            'Digital Principles - Digital Government - Province of British Columbia'
+            'Digital Principles for the Government of British Columbia (Version 1.0)'
           }
           image={digitalPrinciplesImage}
         />
