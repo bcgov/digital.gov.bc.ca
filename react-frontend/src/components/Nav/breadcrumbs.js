@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import { DisplayNames as routeDisplayNames } from '../Nav/routes';
 import {
@@ -8,16 +9,30 @@ import {
   HrefLinkStandaloneInternal,
 } from '../StyleComponents/htmlTags';
 import { BreadcrumbContainer } from '../StyleComponents/pageContent';
-const BreadCrumbs = () => {
+const BreadCrumbs = (props) => {
   const history = useHistory();
   const routeLocation = useLocation();
   const [pathName, setPathName] = useState(routeLocation.pathname);
+
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-device-width:1224px)',
+  });
+  const isTabletOrMobileDevice = useMediaQuery({
+    query: '(max-device-width:760px)',
+  });
+  const isTablet = useMediaQuery({
+    query: '(max-device-width:580px)',
+  });
+
+  const isTabletView = useMediaQuery({
+    query: '(max-device-width:430px)',
+  });
 
   useEffect(() => {
     history.listen((location) => {
       setPathName(location.pathname);
     });
-  }, [history]);
+  }, [history, props]);
 
   if (pathName === '/') {
     return null;
@@ -45,11 +60,31 @@ const BreadCrumbs = () => {
     listEntry.push(<BreadcrumbLI key={i + '->'}>{'>'}</BreadcrumbLI>);
   }
 
+  let breadCrumb = props ? props.breadCrumb : false;
+
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
   const crumbs = (
     <div>
-      <BreadcrumbUL>{listEntry}</BreadcrumbUL>
+      <BreadcrumbUL
+        style={
+          breadCrumb
+            ? { marginTop: 0 }
+            : {
+                marginTop: isTabletOrMobile
+                  ? isTabletOrMobileDevice
+                    ? isTabletView
+                      ? '30%'
+                      : '20%'
+                    : isTablet
+                    ? '15%'
+                    : '10%'
+                  : '5%',
+              }
+        }
+      >
+        {listEntry}
+      </BreadcrumbUL>
     </div>
   );
 
