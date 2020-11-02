@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Drawer, Menu } from 'antd';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import CovidBanner from '../../components/Nav/covidbanner';
 import BreadCrumbs from '../../components/Nav/breadcrumbs';
 import { useMediaQuery } from 'react-responsive';
-
 import {
   NavBanner,
   NavBarHeader,
@@ -16,11 +14,19 @@ import {
   CenterBanner,
   NavMain,
   NavHamburgerButton,
+  TopHeader,
+  CustomDrawer,
+  MenuItem,
+  MenuItemHome,
+  MenuItemResources,
+  MenuItemProducts,
 } from '../StyleComponents/nav';
 import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
+  NavBarLinkResource,
+  NavBarLinkProducts,
 } from '../StyleComponents/htmlTags';
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
@@ -32,16 +38,18 @@ function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
   const [breadCrumb, setBreadCrumb] = useState(false);
+
+  const isSmallScreen = useMediaQuery({
+    query: '(min-width: 160px) and (max-width:429px)',
+  });
+  const IsScreen = useMediaQuery({
+    query: '(min-width: 430px) and (max-width:550px)',
+  });
   const isTablet = useMediaQuery({
-    query: '(max-device-width:700px)',
+    query: '(min-width: 551px) and (max-width:596px)',
   });
-
-  const isTabletSreen = useMediaQuery({
-    query: '(max-device-width:698px)',
-  });
-
-  const isTabletView = useMediaQuery({
-    query: '(max-width:650px)',
+  const isTabletScreen = useMediaQuery({
+    query: '(min-width: 597px) and (max-width:798px)',
   });
 
   useEffect(() => {
@@ -99,99 +107,78 @@ function NavBar() {
             </NavBanner>
           </CenterBanner>
         </NavBarHeader>
-        <Drawer
+        <CustomDrawer
+          breadCrumb={breadCrumb}
+          isSmallScreen={isSmallScreen}
+          IsScreen={IsScreen}
+          isTablet={isTablet}
+          isTabletScreen={isTabletScreen}
           placement={'left'}
           closable={false}
           onClose={() => setOpenMenu(false)}
           visible={openMenu}
           width="100%"
-          style={{
-            height: '140px',
-            marginTop: !breadCrumb
-              ? isTablet
-                ? isTabletView
-                  ? '188px'
-                  : '128px'
-                : isTabletSreen
-                ? '64px'
-                : '128px'
-              : '64px',
-          }}
-          bodyStyle={{ backgroundColor: '#38598a' }}
         >
           <NavBarLink
             onClick={toggleMenu}
             to="/"
             className={activePage === '/' ? 'active' : 'notactive'}
-            style={{ color: '#fff' }}
           >
             Home
           </NavBarLink>
 
-          <NavBarLink
+          <NavBarLinkResource
             onClick={toggleMenu}
             to="/resources"
             className={activePage === '/resources' ? 'active' : 'notactive'}
-            style={{ color: '#fff', marginTop: '1rem' }}
           >
             Resources
-          </NavBarLink>
+          </NavBarLinkResource>
 
-          <NavBarLink
+          <NavBarLinkProducts
             onClick={toggleMenu}
             to="/products-services"
             className={
               activePage === '/products-services' ? 'active' : 'notactive'
             }
-            style={{ color: '#fff', marginTop: '1rem' }}
           >
             Products & Services
-          </NavBarLink>
-        </Drawer>
+          </NavBarLinkProducts>
+        </CustomDrawer>
       </div>
       <NavMain>
-        <Menu mode="horizontal" style={{ backgroundColor: '#38598a' }}>
-          <Menu.Item
-            key="/home"
-            style={{ left: '8rem', borderBottomStyle: 'none' }}
-          >
-            <NavBarLi>
+        <TopHeader>
+          <MenuItem mode="horizontal">
+            <MenuItemHome key="/home">
+              <NavBarLi>
+                <NavBarLink
+                  to="/"
+                  className={activePage === '/' ? 'active' : 'notactive'}
+                >
+                  Home
+                </NavBarLink>
+              </NavBarLi>
+            </MenuItemHome>
+            <MenuItemResources key="/resources">
               <NavBarLink
-                to="/"
-                className={activePage === '/' ? 'active' : 'notactive'}
-                style={{ color: '#fff' }}
+                to="/resources"
+                className={activePage === '/resources' ? 'active' : 'notactive'}
               >
-                Home
+                Resources
               </NavBarLink>
-            </NavBarLi>
-          </Menu.Item>
-          <Menu.Item
-            key="/resources"
-            style={{ left: '6rem', borderBottomStyle: 'none' }}
-          >
-            <NavBarLink
-              to="/resources"
-              className={activePage === '/resources' ? 'active' : 'notactive'}
-              style={{ color: '#fff' }}
-            >
-              Resources
-            </NavBarLink>
-          </Menu.Item>
-          <Menu.Item
-            key="/products-services"
-            style={{ left: '4rem', borderBottomStyle: 'none' }}
-          >
-            <NavBarLink
-              to="/products-services"
-              className={
-                activePage === '/products-services' ? 'active' : 'notactive'
-              }
-              style={{ color: '#fff' }}
-            >
-              Products & Services
-            </NavBarLink>
-          </Menu.Item>
-        </Menu>
+            </MenuItemResources>
+            <MenuItemProducts key="/products-services">
+              <NavBarLink
+                to="/products-services"
+                className={
+                  activePage === '/products-services' ? 'active' : 'notactive'
+                }
+              >
+                Products & Services
+              </NavBarLink>
+            </MenuItemProducts>
+          </MenuItem>
+        </TopHeader>
       </NavMain>
 
       <BreadCrumbs breadCrumb={breadCrumb} />

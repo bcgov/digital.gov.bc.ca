@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Drawer, Menu } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
-//In order to prevent the navBar from obscuring the title,
-//the title banner needs a margin
 export const BannerContainer = styled.div.attrs({
   className: 'bannerContainer',
 })`
@@ -110,9 +110,9 @@ export const NavMain = styled.nav.attrs({
   box-shadow: 0 6px 8px -4px #b3b1b3;
   color: #fcba19;
   display: none;
-  min-height: 40px;
+  min-height: 50px;
   position: fixed;
-  top: 111px;
+  top: 112px;
   width: 100%;
   z-index: 1000;
   @media screen and (min-width: 800px) {
@@ -141,7 +141,15 @@ export const NavTitle = styled.p.attrs({
     visibility: visible;
   }
   @media screen and (max-width: 400px) {
-    font-size: 16px;
+    font-size: 18px;
+    margin: 0px 5px 0px -5%;
+  }
+  @media screen and (max-width: 318px) {
+    font-size: 14px;
+    margin: 0px 5px 0px -5%;
+  }
+  @media screen and (max-width: 280px) {
+    font-size: 12px;
     margin: 0px 5px 0px -5%;
   }
 `;
@@ -173,12 +181,75 @@ export const SkipToMainContent = styled.a.attrs({
 export const CenterBanner = styled.div.attrs({
   className: 'centerBanner',
 })`
-  margin-left: 0px;
   width: 1115px;
-
+  line-height: 25px;
   @media screen and (max-width: 800px) {
     .centerBanner {
       display: flex;
     }
   }
+  @media screen and (min-width: 1205px) and (max-width: 1440px) {
+    margin-left: 1.5%;
+  }
+`;
+
+export const TopHeader = styled.div.attrs({
+  className: 'Banner',
+})`
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  background-color: #38598a;
+  justify-content: space-between;
+  height: 50px;
+  @media screen and (min-width: 1305px) and (max-width: 1440px) {
+    margin-left: -1%;
+  }
+`;
+
+export const CustomDrawer = styled(Drawer)`
+  .ant-drawer-body {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 24px;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 1.5715;
+    word-wrap: break-word;
+    background-color: #38598a;
+  }
+  height: 130px;
+  margin-top: ${(props) =>
+    !props.breadCrumb
+      ? props.isSmallScreen
+        ? '189px'
+        : props.IsScreen
+        ? '168px'
+        : props.isTablet
+        ? '168px'
+        : props.isTabletScreen
+        ? '133px'
+        : '69px'
+      : '69px'};
+`;
+
+export const MenuItem = styled(Menu)`
+  background-color: #38598a;
+`;
+
+export const MenuItemHome = styled(Menu.Item)`
+  left: 80px;
+  border-bottom-style: none;
+`;
+
+export const MenuItemResources = styled(Menu.Item)`
+  left: 48px;
+  border-bottom-style: none;
+`;
+
+export const MenuItemProducts = styled(Menu.Item)`
+  left: 16px;
+  border-bottom-style: none;
+  color: #fff;
 `;

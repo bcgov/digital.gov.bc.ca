@@ -147,6 +147,7 @@ export const NavBarHeaderLink = styled.a.attrs({
   font-style: bold;
   line-height: 1;
   padding: 5px;
+  margin-left: 8%;
   @media screen and (max-width: 800px) {
     margin-left: 0;
   }
@@ -164,13 +165,61 @@ export const NavBarLi = styled.li.attrs({
 export const NavBarLink = styled(Link).attrs({
   className: 'navBarLink',
 })`
-  color: #fff;
+  &&&& {
+    color: #fff;
+  }
   display: flex;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
-  text-decoration: none;
+  text-decoration: #fff;
+  :hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+  @media screen and (min-width: 800px) {
+    border-right: 1px solid #9b9b9b;
+  }
+`;
+
+export const NavBarLinkResource = styled(Link).attrs({
+  className: 'navBarLink',
+})`
+  &&&& {
+    color: #fff;
+  }
+  display: flex;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal; /* 400 */
+  padding: 0 15px 0 15px;
+  text-decoration: #fff;
+  margin-top: 16px;
+  :hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+  @media screen and (min-width: 800px) {
+    border-right: 1px solid #9b9b9b;
+  }
+`;
+
+export const NavBarLinkProducts = styled(Link).attrs({
+  className: 'navBarLink',
+})`
+  &&&& {
+    color: #fff;
+  }
+  display: flex;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal; /* 400 */
+  padding: 0 15px 0 15px;
+  text-decoration: #fff;
+  margin-top: 16px;
   :hover {
     color: #fff;
     text-decoration: underline;
