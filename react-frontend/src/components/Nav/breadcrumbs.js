@@ -8,7 +8,7 @@ import {
   HrefLinkStandaloneInternal,
 } from '../StyleComponents/htmlTags';
 import { BreadcrumbContainer } from '../StyleComponents/pageContent';
-const BreadCrumbs = () => {
+const BreadCrumbs = (props) => {
   const history = useHistory();
   const routeLocation = useLocation();
   const [pathName, setPathName] = useState(routeLocation.pathname);
@@ -17,7 +17,7 @@ const BreadCrumbs = () => {
     history.listen((location) => {
       setPathName(location.pathname);
     });
-  }, [history]);
+  }, [history, props]);
 
   if (pathName === '/') {
     return null;
@@ -45,11 +45,15 @@ const BreadCrumbs = () => {
     listEntry.push(<BreadcrumbLI key={i + '->'}>{'>'}</BreadcrumbLI>);
   }
 
+  let breadCrumb = props ? props.breadCrumb : false;
+
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
   const crumbs = (
     <div>
-      <BreadcrumbUL>{listEntry}</BreadcrumbUL>
+      <BreadcrumbUL style={breadCrumb ? { marginTop: 0 } : {}}>
+        {listEntry}
+      </BreadcrumbUL>
     </div>
   );
 
