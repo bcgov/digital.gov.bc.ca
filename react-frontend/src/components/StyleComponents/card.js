@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Card } from 'antd';
 
+const cardBorderRadius = '25px';
+
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`
-  border-radius: 25px;
+  border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
@@ -34,9 +36,11 @@ export const CardHorizontalImage = styled.div.attrs({
   background-image: url(${(props) => props.backgroundImage});
   background-position: center;
   background-size: cover;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
   height: 200px;
   width: 100%;
   @media only screen and (min-width: 768px) {
+    border-radius: ${cardBorderRadius} 0 0 ${cardBorderRadius};
     height: initial;
     width: 50%;
   }
@@ -45,11 +49,13 @@ export const CardHorizontalImage = styled.div.attrs({
 export const CardHorizontalText = styled.div.attrs({
   className: 'cardHorizontalText',
 })`
+  border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
   background: #fff;
   height: fit-content;
   padding: 24px;
   text-align: left;
   @media only screen and (min-width: 768px) {
+    border-radius: 0 ${cardBorderRadius} ${cardBorderRadius} 0;
     width: 50%;
   }
 `;
@@ -93,7 +99,6 @@ export const CardImg = styled.img.attrs({
 export const CardIllustration = styled.img.attrs({
   className: 'cardImage',
 })`
-  // height: auto;
   padding: 25px;
 `;
 
