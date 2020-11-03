@@ -6,7 +6,6 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import {
   CardTitle,
   CardDescription,
-  CardImg,
   CardIllustration,
   CardLinkDiv,
   CardStyled,

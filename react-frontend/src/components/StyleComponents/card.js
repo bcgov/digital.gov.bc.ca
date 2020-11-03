@@ -83,14 +83,13 @@ export const CardDescription = styled.p.attrs({
 export const CardImg = styled.img.attrs({
   className: 'cardImage',
 })`
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0 !important;
   height: auto;
   max-width: 100%;
   min-height: 330px;
   min-width: 100%;
-  padding: 25px;
   @media only screen and (max-width: 800px) {
     height: 330px;
-    margin-left: -45%;
     max-width: none;
     width: auto;
   }
