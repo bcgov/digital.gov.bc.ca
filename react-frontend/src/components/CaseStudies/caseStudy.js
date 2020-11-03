@@ -79,7 +79,7 @@ const CaseStudy = () => {
               <CaseStudyHeading>
                 Resources and Related Information
               </CaseStudyHeading>
-              <ul className="resourceLinkBox">{resources}</ul>
+              <ul>{resources}</ul>
             </ContentBlock>
           )}
           {content.contacts && (
