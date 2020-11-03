@@ -18,7 +18,7 @@ const bannerContent = (
 
 const bannerTitle = 'Digital Government';
 
-const homeImage = require('../../images/pngIllustrations/digitalHomePage.png');
+const homeImage = require('../../images/pngIllustrations/digitalHomePageWhite.png');
 
 function Home() {
   return (
