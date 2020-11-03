@@ -1,5 +1,7 @@
 import React from 'react';
 import SimpleBanner from '../PageElements/Banners/bannerSimple';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
+
 import CardList from './cardlist';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
@@ -10,6 +12,9 @@ import {
   PageContainerOld,
 } from '../StyleComponents/pageContent';
 import '../../css/casestudies.css';
+import { BannerSideImageImg } from '../StyleComponents/bannerWithImage';
+
+const caseStudiesIllustration = require('../../images/pngIllustrations/caseStudiesWhite.png');
 
 const CaseStudies = () => {
   let { path } = useRouteMatch();
@@ -18,10 +23,10 @@ const CaseStudies = () => {
       <Switch>
         <Route exact path={path}>
           <PageContainer>
-            <SimpleBanner
+            <BannerSideImage
+              content="Learn how digital approaches are getting results here in British Columbia."
               title="Case Studies"
-              description="Learn how digital approaches are getting results here in British
-            Columbia."
+              image={caseStudiesIllustration}
             />
             <CardList />
           </PageContainer>
