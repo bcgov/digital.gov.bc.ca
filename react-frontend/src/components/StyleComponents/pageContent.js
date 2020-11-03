@@ -25,6 +25,17 @@ export const BreadcrumbContainer = styled.div.attrs({
   }
 `;
 
+// Used for the Digital Framework page
+export const DigitalBlock = styled.div.attrs({
+  className: 'digitalBlock',
+})`
+  padding-top: 60px;
+  margin-bottom: 25px;
+  @media only screen and (max-width: 400px) {
+    margin-bottom: 40px;
+  }
+`;
+
 export const FooterContainer = styled.div.attrs({
   className: 'footerContainer',
 })`

@@ -1,14 +1,16 @@
 import React from 'react';
-import DigitalBlock from './digitalFrameworkBlock';
+import DigitalFrameworkBlock from './digitalFrameworkBlock';
 import DigitalTable from './digitalFrameworkTable';
 import * as Scroll from 'react-scroll';
-import '../../css/digital.css';
 import DocumentTitle from 'react-document-title';
 
-import SimpleBanner from '../PageElements/BannerSimple/bannerSimple';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
-import { SimplePageBody, PageContainer } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
+import { DigitalBlock } from '../StyleComponents/pageContent';
+
+const digitalFrameworkImage = require('../../images/pngIllustrations/digitalFrameworkWhite.png');
 
 const titles = [
   'Our Vision',
@@ -97,75 +99,82 @@ const DigitalFramework = () => {
   return (
     <DocumentTitle title="Digital Framework - Digital Government - Province of British Columbia">
       <PageContainer>
-        <SimpleBanner
+        <BannerSideImage
           title={'Digital Framework'}
-          description={
+          content={
             'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
           }
+          image={digitalFrameworkImage}
         />
-        <SimplePageBody>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[0]} paragraph={descriptions[0]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[1]} paragraph={descriptions[1]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[2]} paragraph={descriptions[2]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[3]} paragraph={descriptions[3]} />
-          </div>
-          <div className="digitalSection">
-            <DigitalBlock title={titles[4]} paragraph={descriptions[4]} />
-            <div className="someLinks">
-              <ul>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockOne"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    Service delivery
-                  </HrefLinkScrollTo>
-                </li>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockTwo"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    Data and information
-                  </HrefLinkScrollTo>
-                </li>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockThree"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    Tools, processes and practices
-                  </HrefLinkScrollTo>
-                </li>
-                <li>
-                  <HrefLinkScrollTo
-                    to="blockFour"
-                    spy={true}
-                    smooth={true}
-                    offset={-120}
-                  >
-                    External Partners
-                  </HrefLinkScrollTo>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="digitalSection">
+        <div>
+          <DigitalFrameworkBlock
+            title={titles[0]}
+            paragraph={descriptions[0]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[1]}
+            paragraph={descriptions[1]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[2]}
+            paragraph={descriptions[2]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[3]}
+            paragraph={descriptions[3]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[4]}
+            paragraph={descriptions[4]}
+          />
+          <ul>
+            <li>
+              <HrefLinkScrollTo
+                to="blockOne"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Service delivery
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockTwo"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Data and information
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockThree"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Tools, processes and practices
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockFour"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                External Partners
+              </HrefLinkScrollTo>
+            </li>
+          </ul>
+          <div>
             <ScrollElement name="blockOne" className="element" />
-            <DigitalBlock title={titles[5]} paragraph={descriptions[5]} />
+            <DigitalFrameworkBlock
+              title={titles[5]}
+              paragraph={descriptions[5]}
+            />
             <div style={{ marginTop: '-20px' }}>
               <ul>
                 <li>Based on user needs (as identified by users themselves)</li>
@@ -179,44 +188,53 @@ const DigitalFramework = () => {
                 </li>
               </ul>
             </div>
-            <div className="tableSpacer">
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[0]}
                 objectives={objectives[0]}
               />
-            </div>
+            </DigitalBlock>
           </div>
-          <div className="digitalSection">
+          <div>
             <ScrollElement name="blockTwo" className="element" />
-            <DigitalBlock title={titles[6]} paragraph={descriptions[6]} />
-            <div className="tableSpacer">
+            <DigitalFrameworkBlock
+              title={titles[6]}
+              paragraph={descriptions[6]}
+            />
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[1]}
                 objectives={objectives[1]}
               />
-            </div>
+            </DigitalBlock>
           </div>
-          <div className="digitalSection">
+          <div>
             <ScrollElement name="blockThree" className="element" />
-            <DigitalBlock title={titles[7]} paragraph={descriptions[7]} />
-            <div className="tableSpacer">
+            <DigitalFrameworkBlock
+              title={titles[7]}
+              paragraph={descriptions[7]}
+            />
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[2]}
                 objectives={objectives[2]}
               />
-            </div>
+            </DigitalBlock>
           </div>
           <div>
             <ScrollElement name="blockFour" className="element" />
-            <DigitalBlock title={titles[8]} paragraph={descriptions[8]} />
-            <div className="tableSpacer">
+            <DigitalFrameworkBlock
+              title={titles[8]}
+              paragraph={descriptions[8]}
+            />
+            <DigitalBlock>
               <DigitalTable
                 priorityActions={priorityActions[3]}
                 objectives={objectives[3]}
               />
-            </div>
+            </DigitalBlock>
           </div>
-        </SimplePageBody>
+        </div>
       </PageContainer>
     </DocumentTitle>
   );

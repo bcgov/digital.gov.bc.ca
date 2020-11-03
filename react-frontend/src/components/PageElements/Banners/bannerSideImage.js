@@ -4,7 +4,10 @@ import {
   BannerSideImageImg,
   BannerSideImgText,
 } from '../../StyleComponents/bannerWithImage';
-import { BannerSideImgTitle } from '../../StyleComponents/bannerWithImage';
+import {
+  BannerSideImgTitle,
+  BannerSideImgSubTitle,
+} from '../../StyleComponents/bannerWithImage';
 import { BannerContainer } from '../../StyleComponents/nav';
 const BannerSideImage = ({ content, image, title }) => {
   return (
@@ -14,7 +17,7 @@ const BannerSideImage = ({ content, image, title }) => {
           <Col sm={12} md={6}>
             <BannerSideImgText>
               <BannerSideImgTitle>{title}</BannerSideImgTitle>
-              {content}
+              <BannerSideImgSubTitle> {content} </BannerSideImgSubTitle>
             </BannerSideImgText>
           </Col>
           <Col sm={12} md={6}>

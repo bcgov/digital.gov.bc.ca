@@ -1,21 +1,19 @@
 import React from 'react';
-import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
-import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import CardList from './cardlist';
 import DocumentTitle from 'react-document-title';
 
 import { PageContainer } from '../StyleComponents/pageContent';
-import { BannerSideImgSubTitle } from '../StyleComponents/bannerWithImage';
 
 const bannerContent = (
-  <BannerSideImgSubTitle>
+  <div>
     In this digital age, people expect fast and easy access to information and
     services.
     <br />
     Learn how the British Columbia Public Service is building teams and using
     modern technology to meet those expectations and deliver better government
     services.
-  </BannerSideImgSubTitle>
+  </div>
 );
 
 const bannerTitle = 'Digital Government';
