@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
+import { Row } from 'react-flexbox-grid';
 
-// This file contains styling for Link, a, ul, li, col, row html tags
+// This file contains styling for Link, a, ul, li, col, row, p html tags
 
 export const BreadcrumbLI = styled.li`
   display: flex;
@@ -36,6 +37,26 @@ export const BreadcrumbUL = styled.ul`
 
   @media screen and (min-width: 430px) and (max-width: 596px) {
     top: 166px;
+  }
+`;
+
+export const DigitalFrameworkP = styled.p.attrs({
+  className: 'digitalParagraph',
+})`
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+`;
+
+export const DigitalFrameworkRow = styled(Row).attrs({
+  className: 'digitalRow',
+})`
+  border-bottom: ${(props) => (props.underlined ? 'solid thin black' : '')};
+  padding-bottom: 25px;
+  padding-top: 20px;
+  @media only screen and (max-width: 800px) {
+    padding-top: 15px;
   }
 `;
 

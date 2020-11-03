@@ -1,11 +1,32 @@
 import styled from 'styled-components';
 
-export const CaseStudyHeading = styled.h2.attrs({
-  className: 'caseStudyHeading',
+const Heading = styled.h2.attrs({
+  className: 'heading',
 })`
   font-size: 22pt;
   font-weight: bold;
+  line-height: 24pt;
+`;
+
+const SubHeading = styled.h3.attrs({
+  className: 'subHeading',
+})`
+  font-size: 18pt;
+  font-weight: bold;
+  line-height: 24pt;
+`;
+
+export const CaseStudyHeading = styled(Heading)`
   margin-bottom: 24px;
+`;
+
+export const DigitalFrameworkHeading = styled(Heading)`
+  margin-bottom: 5px;
+`;
+
+export const DigitalFrameworkSubHeading = styled(SubHeading)`
+  margin-bottom: 5px;
+  margin-top: 5px;
 `;
 
 export const DigitalPrinciplesHeading = styled.h2.attrs({
@@ -16,22 +37,12 @@ export const DigitalPrinciplesHeading = styled.h2.attrs({
   margin-top: 30px;
 `;
 
-export const ProductPageHeading = styled.h2.attrs({
-  className: 'productPageHeading',
-})`
-  font-size: 22pt;
-  font-weight: bold;
-  line-height: 24pt;
+export const ProductPageHeading = styled(Heading)`
   margin-bottom: 5px;
 `;
 
-export const ProductPageSubHeading = styled.h3.attrs({
-  className: 'productPageSubHeading',
-})`
-  font-size: 18pt;
-  font-weight: bold;
+export const ProductPageSubHeading = styled(SubHeading)`
   margin-bottom: 5px;
-  line-height: 24pt;
 `;
 
 export const ResourcePageHeading = styled.h2.attrs({
@@ -64,6 +75,7 @@ export const Title2 = styled.h2`
 export const Title3 = styled.h3`
   font-size: 2.5rem;
   font-weight: 700;
+
   margin-top: 30px;
 `;
 export const Title4 = styled.h4`
