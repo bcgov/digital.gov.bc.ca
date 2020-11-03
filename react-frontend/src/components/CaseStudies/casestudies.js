@@ -1,5 +1,4 @@
 import React from 'react';
-import SimpleBanner from '../PageElements/Banners/bannerSimple';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
 import CardList from './cardlist';
@@ -7,12 +6,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 import DocumentTitle from 'react-document-title';
 
-import {
-  PageContainer,
-  PageContainerOld,
-} from '../StyleComponents/pageContent';
-import '../../css/casestudies.css';
-import { BannerSideImageImg } from '../StyleComponents/bannerWithImage';
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const caseStudiesIllustration = require('../../images/pngIllustrations/caseStudiesWhite.png');
 
@@ -31,9 +25,7 @@ const CaseStudies = () => {
             <CardList />
           </PageContainer>
         </Route>
-        <PageContainerOld>
-          <Route path={path + '/:caseStudyId'} component={CaseStudy} />
-        </PageContainerOld>
+        <Route path={path + '/:caseStudyId'} component={CaseStudy} />
       </Switch>
     </DocumentTitle>
   );
