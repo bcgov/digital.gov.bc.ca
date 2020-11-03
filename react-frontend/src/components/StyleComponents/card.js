@@ -1,4 +1,14 @@
 import styled from 'styled-components';
+import { Card } from 'antd';
+
+export const CardStyled = styled(Card).attrs({
+  className: 'cardRound',
+})`
+  border-radius: 25px;
+  height: 95%;
+  margin-bottom: 20px;
+  width: 100%;
+`;
 
 export const CardHorizontal = styled.div.attrs({
   className: 'cardHorizontal',
@@ -62,6 +72,38 @@ export const CardDescription = styled.p.attrs({
   className: 'cardDescription',
 })`
   padding-bottom: 25px;
+`;
+
+export const CardImg = styled.img.attrs({
+  className: 'cardImage',
+})`
+  height: auto;
+  max-width: 100%;
+  min-height: 330px;
+  min-width: 100%;
+  padding: 25px;
+  @media only screen and (max-width: 800px) {
+    height: 330px;
+    margin-left: -45%;
+    max-width: none;
+    width: auto;
+  }
+`;
+
+export const CardIllustration = styled.img.attrs({
+  className: 'cardImage',
+})`
+  // height: auto;
+  padding: 25px;
+`;
+
+export const CardLinkDiv = styled.div.attrs({
+  className: 'cardLink',
+})`
+  bottom: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
 `;
 
 export const CardTitle = styled.h5.attrs({
