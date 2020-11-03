@@ -4,6 +4,10 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 
 const digitalFrameworkGrey = require('../../images/pngIllustrations/digitalFrameworkGrey.png');
 const digitalPrinciplesGrey = require('../../images/pngIllustrations/digitalPrinciplesGrey.png');
+const productsGrey = require('../../images/pngIllustrations/productsServicesGrey.png');
+const resourcesGrey = require('../../images/pngIllustrations/resourcesGrey.png');
+const communityGrey = require('../../images/pngIllustrations/communityGrey.png');
+const caseStudiesGrey = require('../../images/pngIllustrations/caseStudiesGrey.png');
 
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
@@ -51,6 +55,7 @@ const CardList = () => {
       <Row>
         <Col sm={12} md={6}>
           <InfoCard
+            img={productsGrey}
             title={'Products & Services'}
             description={descriptions[2]}
             linkText="Find support"
@@ -60,6 +65,7 @@ const CardList = () => {
         </Col>
         <Col sm={12} md={6}>
           <InfoCard
+            img={resourcesGrey}
             title={'Resources'}
             description={descriptions[3]}
             linkText={linkTexts[3]}
@@ -71,6 +77,7 @@ const CardList = () => {
       <Row>
         <Col sm={12} md={6}>
           <InfoCard
+            img={communityGrey}
             title={'Community'}
             description={descriptions[4]}
             linkText={'Connect'}
@@ -79,6 +86,7 @@ const CardList = () => {
         </Col>
         <Col sm={12} md={6}>
           <InfoCard
+            img={caseStudiesGrey}
             title={'Case Studies'}
             description={descriptions[5]}
             linkText={linkTexts[5]}

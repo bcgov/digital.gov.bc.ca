@@ -84,6 +84,7 @@ export const CardImg = styled.img.attrs({
   className: 'cardImage',
 })`
   border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0 !important;
+
   height: auto;
   max-width: 100%;
   min-height: 330px;
