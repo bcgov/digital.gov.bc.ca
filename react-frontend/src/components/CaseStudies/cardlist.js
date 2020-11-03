@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import { useRouteMatch } from 'react-router-dom';
-import CaseStudiesInfoCard from './caseStudiesInfocard';
+import InfoCard from '../Home/infocard';
 import HorizontalInfoCard from './horizontalinfocard';
 
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
@@ -31,7 +31,7 @@ const CardList = () => {
       </Row>
       <Row>
         <Col sm={12} md={6}>
-          <CaseStudiesInfoCard
+          <InfoCard
             title={'Helping farmers understand their soil'}
             img={caseStudiesFarmingImg}
             description={descriptions[1]}
@@ -40,7 +40,7 @@ const CardList = () => {
           />
         </Col>
         <Col xs={12} md={6}>
-          <CaseStudiesInfoCard
+          <InfoCard
             title={'Transforming the Medical Services Plan'}
             img={caseStudiesMSPImg}
             description={descriptions[2]}
