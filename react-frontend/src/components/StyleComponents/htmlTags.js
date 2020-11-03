@@ -21,6 +21,22 @@ export const BreadcrumbUL = styled.ul`
   flex-direction: row;
   list-style: none;
   margin: 0;
+  margin-top: 111px;
+  @media screen and (max-width: 1120px) {
+    top: 130px;
+  }
+
+  @media screen and (max-width: 280px) {
+    top: 218px;
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 430px) {
+    top: 188px;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 596px) {
+    top: 166px;
+  }
 `;
 
 export const FooterLink = styled.a.attrs({

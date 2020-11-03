@@ -8,10 +8,10 @@ import {
   CovidLinkStyle,
 } from '../StyleComponents/pageContent';
 import { InfoCircleFilled } from '@ant-design/icons';
-import { CloseOutlined } from '@ant-design/icons';
 
-function CovidBanner() {
+function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
+  const [breadCrumb, setBreadCrumb] = useState(true);
 
   if (showBanner) {
     return (
@@ -48,11 +48,13 @@ function CovidBanner() {
                           href=""
                           onClick={(event) => {
                             event.preventDefault();
+                            setBreadCrumb(true);
                             setShowBanner(false);
                             const nav = document.getElementById('navbar');
-                            nav.style.top = '65px';
+                            nav.style.top = '67px';
                             const header = document.getElementById('navheader');
                             header.style.top = 0;
+                            props.test(breadCrumb);
                           }}
                         >
                           <font color="white">X</font>

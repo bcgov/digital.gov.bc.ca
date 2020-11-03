@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import CovidBanner from '../../components/Nav/covidbanner';
+import BreadCrumbs from '../../components/Nav/breadcrumbs';
 
 import {
   NavBanner,
@@ -31,6 +33,7 @@ function NavBar() {
   const [activePage, setActivePage] = useState(routeLocation.pathname);
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
+  const [breadCrumb, setBreadCrumb] = useState(false);
 
   useEffect(() => {
     function handleResize() {
@@ -71,8 +74,13 @@ function NavBar() {
 
   let logoPath = isMobile ? mobileImg : desktopImg;
 
+  function handleSize(value) {
+    setBreadCrumb(value);
+  }
+
   return (
     <div>
+      <CovidBanner test={handleSize} />
       <NavBarHeader>
         <NavBarContainer>
           <NavBanner>
@@ -127,6 +135,7 @@ function NavBar() {
           </NavBarUl>
         </NavBarContainer>
       </NavMain>
+      <BreadCrumbs breadCrumb={breadCrumb} />
     </div>
   );
 }
