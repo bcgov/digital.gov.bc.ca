@@ -50,7 +50,7 @@ export const FooterLink = styled.a.attrs({
     text-decoration: underline;
   }
   :focus {
-    outline-offset: 1px;
+    outline-offset: 4px;
     outline: 4px solid #3b99fc;
   }
   @media only screen and (max-width: 900px) {
@@ -69,7 +69,7 @@ export const FooterLinkInternal = styled(Link).attrs({
     text-decoration: underline;
   }
   :focus {
-    outline-offset: 1px;
+    outline-offset: 4px;
     outline: 4px solid #3b99fc;
   }
   @media only screen and (max-width: 900px) {
@@ -105,6 +105,10 @@ export const HrefLink = styled.a.attrs({
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
+  :focus {
+    outline-offset: 4px;
+    outline: 4px solid #3b99fc;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -120,6 +124,10 @@ export const HrefLinkStandalone = styled.a.attrs({
   font-weight: bold;
   margin-bottom: 16px;
   text-decoration: underline;
+  :focus {
+    outline-offset: 4px;
+    outline: 4px solid #3b99fc;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -135,6 +143,10 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   font-weight: bold;
   margin-bottom: 16px;
   text-decoration: underline;
+  :focus {
+    outline-offset: 4px;
+    outline: 4px solid #3b99fc;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -147,6 +159,10 @@ export const HrefLinkScrollTo = styled(ScrollTo).attrs({
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
+  :focus {
+    outline-offset: 4px;
+    outline: 4px solid #3b99fc;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -162,6 +178,10 @@ export const NavBarHeaderLink = styled.a.attrs({
   font-style: bold;
   line-height: 1;
   padding: 5px;
+  :focus {
+    outline-offset: 4px;
+    outline: 4px solid #3b99fc;
+  }
 `;
 
 export const NavBarLi = styled.li.attrs({
@@ -183,6 +203,10 @@ export const NavBarLink = styled(Link).attrs({
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
   text-decoration: none;
+  :focus {
+    outline-offset: 4px;
+    outline: 4px solid #3b99fc;
+  }
   :hover {
     color: #fff;
     text-decoration: underline;

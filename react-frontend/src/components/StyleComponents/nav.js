@@ -176,7 +176,8 @@ export const SkipToMainContent = styled.a.attrs({
   }
   :focus {
     margin-left: 5px;
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 4px solid #3b99fc;
+    outline-offset: 4px;
     text-decoration: underline;
   }
 `;
