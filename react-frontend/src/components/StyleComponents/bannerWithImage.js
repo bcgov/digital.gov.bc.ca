@@ -96,6 +96,7 @@ export const BannerSideImgText = styled.div.attrs({
   className: 'sideImageText',
 })`
   padding-bottom: 20px;
+  padding-right: 25px;
   padding-top: 20px;
 `;
 
