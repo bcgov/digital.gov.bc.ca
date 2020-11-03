@@ -1,12 +1,12 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Card } from 'antd';
+import { CardStyled } from '../StyleComponents/card';
 
 const ProductsCard = ({ height, content }) => {
   return (
-    <Card className="cardBody" style={{ height: '95%', width: '100%' }}>
+    <CardStyled>
       <div className="cardText">{content}</div>
-    </Card>
+    </CardStyled>
   );
 };
 

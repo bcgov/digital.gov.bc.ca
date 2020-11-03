@@ -7,7 +7,6 @@ import {
   CardTitle,
   CardDescription,
   CardImg,
-  CardIllustration,
   CardLinkDiv,
   CardStyled,
 } from '../StyleComponents/card';
@@ -16,7 +15,7 @@ import {
   HrefLinkStandaloneInternal,
 } from '../StyleComponents/htmlTags';
 
-function InfoCard({
+function CaseStudiesInfoCard({
   height,
   routePath,
   img,
@@ -35,7 +34,7 @@ function InfoCard({
     return (
       <CardStyled
         style={{ overflow: 'hidded' }}
-        cover={<CardIllustration alt="" src={img} />}
+        cover={<CardImg alt="" src={img} />}
       >
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -93,4 +92,4 @@ function InfoCard({
   }
 }
 
-export default InfoCard;
+export default CaseStudiesInfoCard;
