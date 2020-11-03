@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
 
 import { DisplayNames as routeDisplayNames } from '../Nav/routes';
 import {
@@ -13,20 +12,6 @@ const BreadCrumbs = (props) => {
   const history = useHistory();
   const routeLocation = useLocation();
   const [pathName, setPathName] = useState(routeLocation.pathname);
-
-  const isTabletOrMobile = useMediaQuery({
-    query: '(max-device-width:1224px)',
-  });
-  const isTabletOrMobileDevice = useMediaQuery({
-    query: '(max-device-width:760px)',
-  });
-  const isTablet = useMediaQuery({
-    query: '(max-device-width:580px)',
-  });
-
-  const isTabletView = useMediaQuery({
-    query: '(max-device-width:430px)',
-  });
 
   useEffect(() => {
     history.listen((location) => {
@@ -66,23 +51,7 @@ const BreadCrumbs = (props) => {
 
   const crumbs = (
     <div>
-      <BreadcrumbUL
-        style={
-          breadCrumb
-            ? { marginTop: 0 }
-            : {
-                marginTop: isTabletOrMobile
-                  ? isTabletOrMobileDevice
-                    ? isTabletView
-                      ? '30%'
-                      : '20%'
-                    : isTablet
-                    ? '15%'
-                    : '10%'
-                  : '5%',
-              }
-        }
-      >
+      <BreadcrumbUL style={breadCrumb ? { marginTop: 0 } : {}}>
         {listEntry}
       </BreadcrumbUL>
     </div>

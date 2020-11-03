@@ -122,9 +122,14 @@ export const NavMain = styled.nav.attrs({
     top: 130px;
   }
 
+  @media screen and (max-width: 328px) {
+    top: 258px;
+  }
+
   @media screen and (min-width: 280px) and (max-width: 430px) {
     top: 188px;
   }
+
   @media screen and (min-width: 430px) and (max-width: 596px) {
     top: 166px;
   }
