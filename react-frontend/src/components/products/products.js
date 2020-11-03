@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import ProductsInstructions from './productsInstructions';
 import Defining from './defining';
 import Considering from './considering';

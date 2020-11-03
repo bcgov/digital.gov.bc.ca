@@ -4,7 +4,7 @@ import ForDesigners from './fordesigners';
 import ForDevelopers from './fordevelopers';
 import DocumentTitle from 'react-document-title';
 import Guides from './guides';
-import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import Standards from './standards';
 
 import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';

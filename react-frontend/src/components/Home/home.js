@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import CardList from './cardlist';
 import DocumentTitle from 'react-document-title';
 

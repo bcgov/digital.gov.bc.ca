@@ -3,7 +3,7 @@ import Query from '../Query';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
 import InfoCard from '../Home/infocard';
-import BannerSimple from '../PageElements/BannerSimple/bannerSimple';
+import BannerSimple from '../PageElements/Banners/bannerSimple';
 import GUIDES_QUERY from '../../queries/guide/guides';
 
 const GuidesPage = () => {

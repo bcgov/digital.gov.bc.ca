@@ -2,7 +2,7 @@ import React from 'react';
 import Query from '../Query';
 import { Grid } from 'react-flexbox-grid';
 import ReactMarkdown from 'react-markdown';
-import BannerSimple from '../PageElements/BannerSimple/bannerSimple';
+import BannerSimple from '../PageElements/Banners/bannerSimple';
 import GUIDE_QUERY from '../../queries/guide/guide';
 import { useParams } from 'react-router-dom';
 import {

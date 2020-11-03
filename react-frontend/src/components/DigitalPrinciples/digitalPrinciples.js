@@ -1,6 +1,6 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { DigitalPrinciplesHeading } from '../StyleComponents/headings';

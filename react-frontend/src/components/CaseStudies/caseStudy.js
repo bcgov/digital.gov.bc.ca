@@ -4,7 +4,7 @@ import DocumentTitle from 'react-document-title';
 import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
-import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
+import BannerWithImage from '../PageElements/Banners/bannerWithImage';
 
 import { ContentBlock } from '../StyleComponents/pageContent';
 import { CaseStudyHeading } from '../StyleComponents/headings';

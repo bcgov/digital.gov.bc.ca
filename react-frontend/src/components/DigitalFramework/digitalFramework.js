@@ -4,7 +4,7 @@ import DigitalTable from './digitalFrameworkTable';
 import * as Scroll from 'react-scroll';
 import DocumentTitle from 'react-document-title';
 
-import BannerSideImage from '../PageElements/BannerSideImage/bannerSideImage';
+import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
