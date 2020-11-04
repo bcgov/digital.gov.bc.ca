@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Alert } from 'antd';
 import { Grid, Row } from 'react-flexbox-grid';
-import { CovidAlert, CovidBannerStyle } from '../StyleComponents/pageContent';
+import { CovidAlert } from '../StyleComponents/pageContent';
 import {
   CovidCol,
   CovidLinkStyle,
@@ -15,12 +14,7 @@ function CovidBanner(props) {
 
   if (showBanner) {
     return (
-      // <CovidBannerStyle>
       <CovidAlert
-        // style={{
-        //   backgroundColor: '#355992',
-        //   textAlign: 'center',
-        // }}
         message={
           <Grid>
             <Row>
@@ -57,7 +51,6 @@ function CovidBanner(props) {
           </Grid>
         }
       />
-      // </CovidBannerStyle>
     );
   }
 
