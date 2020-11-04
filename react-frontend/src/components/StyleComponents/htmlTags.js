@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
-import { Row } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
@@ -38,6 +38,31 @@ export const BreadcrumbUL = styled.ul`
   @media screen and (min-width: 430px) and (max-width: 596px) {
     top: 166px;
   }
+`;
+
+export const CovidCol = styled(Col)`
+  color: #fff;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 18px;
+`;
+
+export const CovidLinkStyle = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener noreferrer',
+})`
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  :hover {
+    color: grey;
+  }
+  text-decoration: underline;
+  }
+`;
+
+export const CovidLinkStyleButton = styled(CovidLinkStyle)`
+  font-weight: bold;
+  text-decoration: none;
 `;
 
 export const DigitalFrameworkP = styled.p.attrs({
