@@ -41,12 +41,13 @@ const Routes = () => {
       <Route path="/guides/communication-platforms">
         <CollaborationTools />
       </Route>
-      <Route path="/guides/:uid" exact>
+      {/* This is a test guides page, KEEP comented out until strapi is implemented */}
+      {/* <Route path="/guides/:uid" exact>
         <GuidePage />
       </Route>
       <Route path="/guides" exact>
         <GuidesPage />
-      </Route>
+      </Route> */}
       <Route path="/">
         <Home />
       </Route>

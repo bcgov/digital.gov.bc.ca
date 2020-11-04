@@ -11,6 +11,7 @@ import {
 } from '../../StyleComponents/headings';
 import {
   SimpleTextContainer,
+  PageContainer,
   GlobaStyleSize,
 } from '../../StyleComponents/pageContent';
 
@@ -19,7 +20,7 @@ import { HrefLink } from '../../StyleComponents/htmlTags';
 function CollaborationTools() {
   return (
     <DocumentTitle title="Video Communication Platforms - Digital Government - Province of British Columbia">
-      <SimpleTextContainer>
+      <PageContainer>
         <GlobaStyleSize />
         <SimpleTextPageTitle>
           Video Communication Platforms – Information for the Broader Public
@@ -664,7 +665,7 @@ function CollaborationTools() {
             OCIO.Communications@gov.bc.ca
           </HrefLink>
         </strong>
-      </SimpleTextContainer>
+      </PageContainer>
     </DocumentTitle>
   );
 }
