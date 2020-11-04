@@ -79,7 +79,16 @@ function NavBar() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: '#f2f2f2',
+        boxShadow: '0 6px 8px -4px #b3b1b3',
+        position: '-webkit-sticky',
+        position: 'sticky',
+        top: '0',
+        zIndex: '2',
+      }}
+    >
       <CovidBanner test={handleSize} />
       <NavBarHeader>
         <NavBarContainer>
