@@ -71,8 +71,7 @@ export const FooterLink = styled.a.attrs({
     text-decoration: underline;
   }
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   @media only screen and (max-width: 900px) {
     font-size: 12px;
@@ -90,8 +89,7 @@ export const FooterLinkInternal = styled(Link).attrs({
     text-decoration: underline;
   }
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   @media only screen and (max-width: 900px) {
     font-size: 12px;
@@ -127,8 +125,7 @@ export const HrefLink = styled.a.attrs({
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   :hover {
     color: blue;
@@ -146,8 +143,7 @@ export const HrefLinkStandalone = styled.a.attrs({
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   :hover {
     color: blue;
@@ -165,8 +161,7 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   :hover {
     color: blue;
@@ -181,8 +176,7 @@ export const HrefLinkScrollTo = styled(ScrollTo).attrs({
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   :hover {
     color: blue;
@@ -200,8 +194,7 @@ export const NavBarHeaderLink = styled.a.attrs({
   line-height: 1;
   padding: 5px;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
 `;
 
@@ -225,8 +218,7 @@ export const NavBarLink = styled(Link).attrs({
   padding: 0 15px 0 15px;
   text-decoration: none;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   :hover {
     color: #fff;

@@ -177,8 +177,7 @@ export const CovidButtonStyle = styled.a`
   vertical-align: top;
   width: 20%;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
 `;
 
@@ -200,8 +199,7 @@ export const CovidLinkStyle = styled.a.attrs({
   font-weight: bold;
   text-decoration: underline;
   :focus {
-    outline-offset: 4px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
     text-decoration: underline;
   }
   :hover {
