@@ -9,6 +9,7 @@ import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
 import GuidesPage from '../../components/Guides/guides';
 import GuidePage from '../../components/Guides/guide';
+import BreadCrumbs from './breadcrumbs';
 
 const DisplayNames = {
   'case-studies': 'Case Studies',
@@ -22,36 +23,39 @@ const DisplayNames = {
 
 const Routes = () => {
   return (
-    <Switch>
-      <Route path="/products-services">
-        <Products />
-      </Route>
-      <Route path="/digital-framework">
-        <DigitalFramework />
-      </Route>
-      <Route path="/resources/digital-principles">
-        <DigitalPrinciples />
-      </Route>
-      <Route path="/resources">
-        <Resources />
-      </Route>
-      <Route path="/case-studies">
-        <CaseStudies />
-      </Route>
-      <Route path="/guides/communication-platforms">
-        <CollaborationTools />
-      </Route>
-      {/* This is a test guides page, KEEP comented out until strapi is implemented */}
-      {/* <Route path="/guides/:uid" exact>
+    <div>
+      <BreadCrumbs />
+      <Switch>
+        <Route path="/products-services">
+          <Products />
+        </Route>
+        <Route path="/digital-framework">
+          <DigitalFramework />
+        </Route>
+        <Route path="/resources/digital-principles">
+          <DigitalPrinciples />
+        </Route>
+        <Route path="/resources">
+          <Resources />
+        </Route>
+        <Route path="/case-studies">
+          <CaseStudies />
+        </Route>
+        <Route path="/guides/communication-platforms">
+          <CollaborationTools />
+        </Route>
+        {/* This is a test guides page, KEEP comented out until strapi is implemented */}
+        {/* <Route path="/guides/:uid" exact>
         <GuidePage />
       </Route>
       <Route path="/guides" exact>
         <GuidesPage />
       </Route> */}
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
   );
 };
 

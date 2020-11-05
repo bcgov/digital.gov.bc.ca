@@ -12,18 +12,8 @@ export const GlobaStyleSize = createGlobalStyle`
 export const BreadcrumbContainer = styled.div.attrs({
   className: 'breadcrumb',
 })`
-  padding-top: 133px;
-  position: relative;
   margin: auto;
-  margin-bottom: -133px;
   width: 1045px;
-  z-index: 5;
-  @media only screen and (max-width: 800px) {
-    margin-left: -13px;
-    padding-left: 0;
-    padding-top: 80px;
-    width: 100%;
-  }
 `;
 
 // Used for the Digital Framework page
@@ -133,7 +123,5 @@ export const CovidAlert = styled(Alert)`
   background-color: #355992;
   border: none;
   textalign: center;
-  position: fixed;
   width: 100%;
-  z-index: 1000;
 `;

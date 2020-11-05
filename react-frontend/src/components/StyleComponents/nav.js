@@ -49,19 +49,7 @@ export const NavBarHeader = styled.header.attrs({
   color: #fff;
   display: flex;
   padding: 0 30px 0 0px;
-  position: fixed;
-  top: 45px;
   width: 100%;
-  z-index: 1000;
-  @media screen and (max-width: 1120px) {
-    top: 64px;
-  }
-  @media screen and (min-width: 280px) and (max-width: 430px) {
-    top: 121px;
-  }
-  @media screen and (min-width: 430px) and (max-width: 596px) {
-    top: 100px;
-  }
 `;
 
 export const NavHamburgerButton = styled.div.attrs({
@@ -110,28 +98,9 @@ export const NavMain = styled.nav.attrs({
   color: #fcba19;
   display: none;
   min-height: 40px;
-  position: fixed;
-  top: 111px;
   width: 100%;
-  z-index: 1000;
   @media screen and (min-width: 800px) {
     display: block;
-  }
-
-  @media screen and (max-width: 1120px) {
-    top: 130px;
-  }
-
-  @media screen and (max-width: 328px) {
-    top: 258px;
-  }
-
-  @media screen and (min-width: 280px) and (max-width: 430px) {
-    top: 188px;
-  }
-
-  @media screen and (min-width: 430px) and (max-width: 596px) {
-    top: 166px;
   }
 `;
 

@@ -50,11 +50,9 @@ const BreadCrumbs = (props) => {
   //no paths exist yet that are more than one path deep, if this occurs then we can add a split function using / to populate .options
 
   const crumbs = (
-    <div>
-      <BreadcrumbUL style={breadCrumb ? { marginTop: 0 } : {}}>
-        {listEntry}
-      </BreadcrumbUL>
-    </div>
+    <BreadcrumbUL style={breadCrumb ? { marginTop: 0 } : {}}>
+      {listEntry}
+    </BreadcrumbUL>
   );
 
   return <BreadcrumbContainer>{crumbs}</BreadcrumbContainer>;

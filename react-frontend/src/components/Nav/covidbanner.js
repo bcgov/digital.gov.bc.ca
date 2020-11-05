@@ -10,7 +10,7 @@ import { InfoCircleFilled } from '@ant-design/icons';
 
 function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
-  const [breadCrumb, setBreadCrumb] = useState(true);
+  // const [breadCrumb, setBreadCrumb] = useState(true);
 
   const covidHealthLink =
     'http://covid-19.bccdc.ca/?utm_campaign=20200323_GCPE_AM_COVID_7_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION';
@@ -19,13 +19,13 @@ function CovidBanner(props) {
 
   const closeBanner = (event) => {
     event.preventDefault();
-    setBreadCrumb(true);
+    // setBreadCrumb(true);
     setShowBanner(false);
     const nav = document.getElementById('navbar');
     nav.style.top = '67px';
     const header = document.getElementById('navheader');
     header.style.top = 0;
-    props.test(breadCrumb);
+    // props.test(breadCrumb);
   };
 
   if (showBanner) {
