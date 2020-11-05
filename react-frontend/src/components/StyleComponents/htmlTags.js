@@ -22,6 +22,7 @@ export const BreadcrumbUL = styled.ul`
   flex-direction: row;
   list-style: none;
   margin: 0;
+  padding-left: 0;
   padding-top: 16px;
 `;
 

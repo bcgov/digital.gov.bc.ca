@@ -9,13 +9,6 @@ export const GlobaStyleSize = createGlobalStyle`
  }
 `;
 
-export const BreadcrumbContainer = styled.div.attrs({
-  className: 'breadcrumb',
-})`
-  margin: auto;
-  width: 1045px;
-`;
-
 // Used for the Digital Framework page
 export const DigitalBlock = styled.div.attrs({
   className: 'digitalBlock',
@@ -61,12 +54,11 @@ export const SimplePageBody = styled.div.attrs({
 //TODO This will be the new standard for Page containers.
 // When refactor complete there should be a single pageContainer
 // That resizes properly with the navbar and site logo
-export const PageContainer = styled.div.attrs({
-  className: 'pageContainer',
-  id: 'main-content-anchor',
+const HorizontalContainer = styled.div.attrs({
+  className: 'horizontalAlignment',
 })`
   background-color: #f2f2f2;
-  padding: 10px 20px 70px 30px;
+  padding-left: 30px;
   margin: auto;
   max-width: 1065px;
   z-index: -2;
@@ -76,7 +68,22 @@ export const PageContainer = styled.div.attrs({
   @media screen and (max-width: 800px) {
     padding-left: 15px;
   }
+`;
 
+export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
+  className: 'breadcrumb',
+})`
+  // margin: auto;
+  // width: 1045px;
+`;
+
+export const PageContainer = styled(HorizontalContainer).attrs({
+  className: 'pageContainer',
+  id: 'main-content-anchor',
+})`
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 70px;
   @media only screen and (max-width: 800px) {
     padding-top: 65px;
   }
