@@ -176,6 +176,9 @@ export const CovidButtonStyle = styled.a`
   font-weight: bold;
   vertical-align: top;
   width: 20%;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
 `;
 
 const Link = ({ className, children, href }) => (
@@ -189,12 +192,18 @@ const Link = ({ className, children, href }) => (
   </a>
 );
 
-export const CovidLinkStyle = styled(Link)`
-  color: white;
-  font-weight: 700;
-  :hover {
-    color: grey;
-  }
+export const CovidLinkStyle = styled.a.attrs({
+  className: 'AlertLink',
+})`
+  color: #fff;
+  font-weight: bold;
   text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+    text-decoration: underline;
+  }
+  :hover {
+    color: #b1bfd3 !important;
+    text-decoration: underline;
   }
 `;
