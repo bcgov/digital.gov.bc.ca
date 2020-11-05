@@ -25,6 +25,17 @@ export const BreadcrumbContainer = styled.div.attrs({
   }
 `;
 
+// Used for the Digital Framework page
+export const DigitalBlock = styled.div.attrs({
+  className: 'digitalBlock',
+})`
+  padding-top: 60px;
+  margin-bottom: 25px;
+  @media only screen and (max-width: 400px) {
+    margin-bottom: 40px;
+  }
+`;
+
 export const FooterContainer = styled.div.attrs({
   className: 'footerContainer',
 })`
@@ -165,6 +176,9 @@ export const CovidButtonStyle = styled.a`
   font-weight: bold;
   vertical-align: top;
   width: 20%;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
 `;
 
 const Link = ({ className, children, href }) => (
@@ -178,12 +192,18 @@ const Link = ({ className, children, href }) => (
   </a>
 );
 
-export const CovidLinkStyle = styled(Link)`
-  color: white;
-  font-weight: 700;
-  :hover {
-    color: grey;
-  }
+export const CovidLinkStyle = styled.a.attrs({
+  className: 'AlertLink',
+})`
+  color: #fff;
+  font-weight: bold;
   text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+    text-decoration: underline;
+  }
+  :hover {
+    color: #b1bfd3 !important;
+    text-decoration: underline;
   }
 `;

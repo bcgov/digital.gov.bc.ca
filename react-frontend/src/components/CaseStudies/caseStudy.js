@@ -1,12 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-import '../../css/casetemplates.css';
 
 import { MiningContent, FarmerContent, MedicalContent } from './content';
-import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
+import BannerWithImage from '../PageElements/Banners/bannerWithImage';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlock, PageContainer } from '../StyleComponents/pageContent';
 import { CaseStudyHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 
@@ -56,7 +55,7 @@ const CaseStudy = () => {
           title={content.title}
           image={content.backgroundImage}
         />
-        <div className="pageBody">
+        <PageContainer>
           {content.context && (
             <ContentBlock>
               <CaseStudyHeading>Context and Questions</CaseStudyHeading>
@@ -79,7 +78,7 @@ const CaseStudy = () => {
               <CaseStudyHeading>
                 Resources and Related Information
               </CaseStudyHeading>
-              <ul className="resourceLinkBox">{resources}</ul>
+              <ul>{resources}</ul>
             </ContentBlock>
           )}
           {content.contacts && (
@@ -92,7 +91,7 @@ const CaseStudy = () => {
             <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
             <div>{content.others}</div>
           </div>
-        </div>
+        </PageContainer>
       </div>
     </DocumentTitle>
   );
