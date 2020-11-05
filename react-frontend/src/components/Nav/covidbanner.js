@@ -35,7 +35,9 @@ function CovidBanner(props) {
           <Grid>
             <Row>
               <CovidCol xs={1}>
-                <InfoCircleFilled style={{ float: 'right' }} />
+                <InfoCircleFilled
+                  style={{ float: 'right', fontSize: '1.5em' }}
+                />
               </CovidCol>
               <CovidCol xs={10}>
                 B.C. has declared a state of emergency. Learn about{' '}
