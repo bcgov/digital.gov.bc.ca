@@ -20,7 +20,6 @@ function CovidBanner(props) {
           <Alert
             style={{
               backgroundColor: '#355992',
-              border: 'none',
               fontSize: '18px',
               fontColor: 'white',
               textAlign: 'center',
