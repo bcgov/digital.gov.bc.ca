@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Col, Row } from 'react-flexbox-grid';
-import InfoCard from '../Home/infocard';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
 import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
@@ -179,8 +178,19 @@ const FarmerContent = {
       and resources they needed.
     </p>
   ),
-  context:
-    'Healthy soil is an important part of farming – crops need the right amount of nutrients to grow. Too few nutrients can contribute to low yields and poor-quality crops, but too many nutrients in the soil can impact water quality and lead to run-off and pollution.\n The Ministry of Agriculture engaged the Service Design Team to help understand how farmers monitor and manage their soils, and to identify opportunities for the Ministry to provide soil management resources and support. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.',
+  context: (
+    <p>
+      Healthy soil is an important part of farming – crops need the right amount
+      of nutrients to grow. Too few nutrients can contribute to low yields and
+      poor-quality crops, but too many nutrients in the soil can impact water
+      quality and lead to run-off and pollution.\n The Ministry of Agriculture
+      engaged the Service Design Team to help understand how farmers monitor and
+      manage their soils, and to identify opportunities for the Ministry to
+      provide soil management resources and support. With new environmental
+      regulations around soil management pending, the research aimed to provide
+      farmers with the support and resources they needed.',
+    </p>
+  ),
   approach: (
     <div>
       <p>
