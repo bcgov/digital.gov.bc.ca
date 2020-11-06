@@ -46,9 +46,9 @@ export const NavBarHeader = styled.header.attrs({
   border-bottom: 2px solid #fcba19;
   box-shadow: 0 6px 8px -4px #b3b1b3;
   color: #fff;
-  display: flex;
-  padding: 0 30px 0 0px;
-  width: 100%;
+  // display: flex;
+  // padding: 0 30px 0 0px;
+  // width: 100%;
 `;
 
 export const NavHamburgerButton = styled.div.attrs({
