@@ -256,8 +256,9 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 5px 0;
+  margin: 0;
   padding-left: 0;
+  padding-top: 8px;
   .active {
     font-weight: bold;
     text-decoration: underline;

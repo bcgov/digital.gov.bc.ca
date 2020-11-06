@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Alert } from 'antd';
 
@@ -68,18 +67,7 @@ export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
 
 export const FooterContainer = styled(HorizontalContainer).attrs({
   className: 'footerContainer',
-})`
-  // display: flex;
-  // max-width: 1115px; /* keeps footer inline with navbar; remove this and the padding styles below when we refactor containers */
-  // padding-left: 30px;
-  // @media screen and (min-width: 800px) {
-  //   padding-left: 107px;
-  // }
-
-  // @media screen and (max-width: 800px) {
-  //   padding-left: 15px;
-  // }
-`;
+})``;
 
 export const PageContainer = styled(HorizontalContainer).attrs({
   className: 'pageContainer',
@@ -98,15 +86,6 @@ export const NavBarContainer = styled(HorizontalContainer).attrs({
   className: 'navBar',
 })`
   z-index: 0;
-  // display: flex;
-  // padding-left: 30px;
-  // width: 1115px;
-  // @media screen and (min-width: 800px) {
-  //   padding-left: 107px;
-  // }
-  // @media screen and (max-width: 800px) {
-  //   padding-left: 15px;
-  // }
 `;
 
 export const RouteBody = styled.div.attrs({

@@ -132,7 +132,42 @@ function NavBar() {
       </NavBarHeader>
       <NavMain>
         <NavBarContainer>
-          <NavBarUl>
+          <Grid>
+            {/* <Row> */}
+            <NavBarUl>
+              <NavBarLi>
+                <NavBarLinkFirst
+                  to="/"
+                  className={activePage === '/' ? 'active' : 'notactive'}
+                >
+                  Home
+                </NavBarLinkFirst>
+              </NavBarLi>
+              <NavBarLi>
+                <NavBarLink
+                  to="/resources"
+                  className={
+                    activePage === '/resources' ? 'active' : 'notactive'
+                  }
+                >
+                  Resources
+                </NavBarLink>
+              </NavBarLi>
+              <NavBarLi>
+                <NavBarLink
+                  to="/products-services"
+                  className={
+                    activePage === '/products-services' ? 'active' : 'notactive'
+                  }
+                >
+                  Products & Services
+                </NavBarLink>
+              </NavBarLi>
+            </NavBarUl>
+            {/* </Row> */}
+          </Grid>
+
+          {/* <NavBarUl>
             <NavBarLi>
               <NavBarLinkFirst
                 to="/"
@@ -159,7 +194,7 @@ function NavBar() {
                 Products & Services
               </NavBarLink>
             </NavBarLi>
-          </NavBarUl>
+          </NavBarUl> */}
         </NavBarContainer>
       </NavMain>
     </div>
