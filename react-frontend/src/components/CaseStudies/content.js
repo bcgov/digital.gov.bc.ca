@@ -188,7 +188,7 @@ const FarmerContent = {
       manage their soils, and to identify opportunities for the Ministry to
       provide soil management resources and support. With new environmental
       regulations around soil management pending, the research aimed to provide
-      farmers with the support and resources they needed.',
+      farmers with the support and resources they needed.
     </p>
   ),
   approach: (
