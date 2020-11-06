@@ -22,13 +22,13 @@ function Resources() {
           }
           image={resourcesImage}
         />
-        <SimplePageBody>
-          <DigitalCards />
-          <Standards />
-          <Guides />
-          <ForDesigners />
-          <ForDevelopers />
-        </SimplePageBody>
+        {/* <SimplePageBody> */}
+        <DigitalCards />
+        <Standards />
+        <Guides />
+        <ForDesigners />
+        <ForDevelopers />
+        {/* </SimplePageBody> */}
       </PageContainer>
     </DocumentTitle>
   );

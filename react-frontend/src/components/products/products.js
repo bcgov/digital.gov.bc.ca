@@ -19,12 +19,12 @@ const Products = () => {
           content={'Supports to help you create or improve a digital service.'}
           image={productsImage}
         />
-        <SimplePageBody>
-          <ProductsInstructions />
-          <Defining />
-          <Considering />
-          <Assembling />
-        </SimplePageBody>
+        {/* <SimplePageBody> */}
+        <ProductsInstructions />
+        <Defining />
+        <Considering />
+        <Assembling />
+        {/* </SimplePageBody> */}
       </PageContainer>
     </DocumentTitle>
   );
