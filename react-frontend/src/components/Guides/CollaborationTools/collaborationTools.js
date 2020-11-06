@@ -10,7 +10,6 @@ import {
   Title4,
 } from '../../StyleComponents/headings';
 import {
-  SimpleTextContainer,
   PageContainer,
   GlobaStyleSize,
 } from '../../StyleComponents/pageContent';
