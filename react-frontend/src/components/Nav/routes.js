@@ -7,8 +7,8 @@ import CollaborationTools from '../../components/Guides/CollaborationTools/colla
 import DigitalFramework from '../DigitalFramework/digitalFramework';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
-import GuidesPage from '../../components/Guides/guides';
-import GuidePage from '../../components/Guides/guide';
+// import GuidesPage from '../../components/Guides/guides';
+// import GuidePage from '../../components/Guides/guide';
 import BreadCrumbs from './breadcrumbs';
 
 const DisplayNames = {
