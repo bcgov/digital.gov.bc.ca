@@ -8,6 +8,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import {
   NavBanner,
   NavBarHeader,
+  NavBarWrapper,
   NavContentOnRight,
   NavImage,
   NavHamburgerButton,
@@ -74,15 +75,7 @@ function NavBar() {
   let logoPath = isMobile ? mobileImg : desktopImg;
 
   return (
-    <div
-      style={{
-        border: 'none',
-        position: '-webkit-sticky',
-        position: 'sticky',
-        top: '0',
-        zIndex: '2',
-      }}
-    >
+    <NavBarWrapper>
       <CovidBanner />
       <NavBarHeader>
         <NavBarContainer>
@@ -197,7 +190,7 @@ function NavBar() {
           </NavBarUl> */}
         </NavBarContainer>
       </NavMain>
-    </div>
+    </NavBarWrapper>
   );
 }
 

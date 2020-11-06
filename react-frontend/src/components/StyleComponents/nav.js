@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
-//In order to prevent the navBar from obscuring the title,
-//the title banner needs a margin
-export const BannerContainer = styled.div.attrs({
-  className: 'bannerContainer',
-})`
-  margin-bottom: 30px;
-  @media (max-width: 800px) {
-    margin-top: 150px;
-  }
+export const NavBarWrapper = styled.div.attrs()`
+  border: none;
+  position: '-webkit-sticky';
+  position: sticky;
+  top: 0;
+  zindex: 2;
 `;
 
 export const NavBanner = styled.div.attrs({
