@@ -35,9 +35,8 @@ export const SimplePageBody = styled.div.attrs({
   }
 `;
 
-//TODO This will be the new standard for Page containers.
-// When refactor complete there should be a single pageContainer
-// That resizes properly with the navbar and site logo
+// This will is the base style for horizontal alignment of page content
+// all resposive elements must be in some kind of container object.
 const HorizontalContainer = styled.div.attrs({
   className: 'horizontalAlignment',
 })`
