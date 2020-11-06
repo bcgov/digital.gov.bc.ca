@@ -20,21 +20,6 @@ export const DigitalBlock = styled.div.attrs({
   }
 `;
 
-export const FooterContainer = styled.div.attrs({
-  className: 'footerContainer',
-})`
-  display: flex;
-  max-width: 1115px; /* keeps footer inline with navbar; remove this and the padding styles below when we refactor containers */
-  padding-left: 30px;
-  @media screen and (min-width: 800px) {
-    padding-left: 107px;
-  }
-
-  @media screen and (max-width: 800px) {
-    padding-left: 15px;
-  }
-`;
-
 export const FooterStyled = styled.footer.attrs()`
   background-color: #036;
   border-top: 2px solid #fcba19;
@@ -57,7 +42,6 @@ export const SimplePageBody = styled.div.attrs({
 const HorizontalContainer = styled.div.attrs({
   className: 'horizontalAlignment',
 })`
-  background-color: #f2f2f2;
   padding-left: 30px;
   margin: auto;
   max-width: 1065px;
@@ -70,17 +54,38 @@ const HorizontalContainer = styled.div.attrs({
   }
 `;
 
+export const BannerWithImageTextContainer = styled(HorizontalContainer).attrs({
+  className: 'bannerCenterText',
+})`
+  text-align: center;
+`;
+
 export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
   className: 'breadcrumb',
 })`
-  // margin: auto;
-  // width: 1045px;
+  background-color: #f2f2f2;
+`;
+
+export const FooterContainer = styled(HorizontalContainer).attrs({
+  className: 'footerContainer',
+})`
+  // display: flex;
+  // max-width: 1115px; /* keeps footer inline with navbar; remove this and the padding styles below when we refactor containers */
+  // padding-left: 30px;
+  // @media screen and (min-width: 800px) {
+  //   padding-left: 107px;
+  // }
+
+  // @media screen and (max-width: 800px) {
+  //   padding-left: 15px;
+  // }
 `;
 
 export const PageContainer = styled(HorizontalContainer).attrs({
   className: 'pageContainer',
   id: 'main-content-anchor',
 })`
+  background-color: #f2f2f2;
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 70px;
@@ -89,18 +94,19 @@ export const PageContainer = styled(HorizontalContainer).attrs({
   }
 `;
 
-export const NavBarContainer = styled.div.attrs({
+export const NavBarContainer = styled(HorizontalContainer).attrs({
   className: 'navBar',
 })`
-  display: flex;
-  padding-left: 30px;
-  width: 1115px;
-  @media screen and (min-width: 800px) {
-    padding-left: 107px;
-  }
-  @media screen and (max-width: 800px) {
-    padding-left: 15px;
-  }
+  z-index: 0;
+  // display: flex;
+  // padding-left: 30px;
+  // width: 1115px;
+  // @media screen and (min-width: 800px) {
+  //   padding-left: 107px;
+  // }
+  // @media screen and (max-width: 800px) {
+  //   padding-left: 15px;
+  // }
 `;
 
 export const RouteBody = styled.div.attrs({

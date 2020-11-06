@@ -3,6 +3,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import CovidBanner from '../../components/Nav/covidbanner';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import {
   NavBanner,
@@ -76,8 +77,6 @@ function NavBar() {
     <div
       style={{
         border: 'none',
-        // backgroundColor: '#f2f2f2',
-        // boxShadow: '0 6px 8px -4px #b3b1b3',
         position: '-webkit-sticky',
         position: 'sticky',
         top: '0',
@@ -87,7 +86,31 @@ function NavBar() {
       <CovidBanner />
       <NavBarHeader>
         <NavBarContainer>
-          <NavBanner>
+          <Grid>
+            <Row middle="xs">
+              <Col xs={11}>
+                <NavBanner>
+                  <NavBarHeaderLink
+                    href="https://gov.bc.ca"
+                    alt="Go to the Government of British Columbia website"
+                  >
+                    <NavImage
+                      src={logoPath}
+                      alt="Go to the Government of British Columbia website"
+                    />
+                  </NavBarHeaderLink>
+                  <NavTitle>Digital Government</NavTitle>
+                  <SkipToMainContent>Skip to main content</SkipToMainContent>
+                </NavBanner>
+              </Col>
+              <Col xs={1}>
+                <NavHamburgerButton onClick={toggleMenu} href=".">
+                  <FontAwesomeIcon icon={faBars} />
+                </NavHamburgerButton>
+              </Col>
+            </Row>
+          </Grid>
+          {/* <NavBanner>
             <NavBarHeaderLink
               href="https://gov.bc.ca"
               alt="Go to the Government of British Columbia website"
@@ -104,7 +127,7 @@ function NavBar() {
             <NavHamburgerButton onClick={toggleMenu} href=".">
               <FontAwesomeIcon icon={faBars} />
             </NavHamburgerButton>
-          </NavContentOnRight>
+          </NavContentOnRight> */}
         </NavBarContainer>
       </NavBarHeader>
       <NavMain>
