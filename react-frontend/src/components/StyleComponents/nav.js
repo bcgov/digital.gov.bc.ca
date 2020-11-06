@@ -22,18 +22,6 @@ export const NavBanner = styled.div.attrs({
   }
 `;
 
-export const NavContentOnRight = styled.div.attrs({
-  className: 'navContentOnRight',
-})`
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  @media screen and (min-width: 800px) {
-    margin-left: -10px;
-  }
-`;
-
 export const NavBarHeader = styled.header.attrs({
   id: 'navheader',
 })`

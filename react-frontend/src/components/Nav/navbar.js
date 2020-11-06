@@ -9,7 +9,6 @@ import {
   NavBanner,
   NavBarHeader,
   NavBarWrapper,
-  NavContentOnRight,
   NavImage,
   NavHamburgerButton,
   NavMain,
@@ -103,30 +102,11 @@ function NavBar() {
               </Col>
             </Row>
           </Grid>
-          {/* <NavBanner>
-            <NavBarHeaderLink
-              href="https://gov.bc.ca"
-              alt="Go to the Government of British Columbia website"
-            >
-              <NavImage
-                src={logoPath}
-                alt="Go to the Government of British Columbia website"
-              />
-            </NavBarHeaderLink>
-            <NavTitle>Digital Government</NavTitle>
-            <SkipToMainContent>Skip to main content</SkipToMainContent>
-          </NavBanner>
-          <NavContentOnRight>
-            <NavHamburgerButton onClick={toggleMenu} href=".">
-              <FontAwesomeIcon icon={faBars} />
-            </NavHamburgerButton>
-          </NavContentOnRight> */}
         </NavBarContainer>
       </NavBarHeader>
       <NavMain>
         <NavBarContainer>
           <Grid>
-            {/* <Row> */}
             <NavBarUl>
               <NavBarLi>
                 <NavBarLinkFirst
@@ -157,37 +137,7 @@ function NavBar() {
                 </NavBarLink>
               </NavBarLi>
             </NavBarUl>
-            {/* </Row> */}
           </Grid>
-
-          {/* <NavBarUl>
-            <NavBarLi>
-              <NavBarLinkFirst
-                to="/"
-                className={activePage === '/' ? 'active' : 'notactive'}
-              >
-                Home
-              </NavBarLinkFirst>
-            </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
-                to="/resources"
-                className={activePage === '/resources' ? 'active' : 'notactive'}
-              >
-                Resources
-              </NavBarLink>
-            </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
-                to="/products-services"
-                className={
-                  activePage === '/products-services' ? 'active' : 'notactive'
-                }
-              >
-                Products & Services
-              </NavBarLink>
-            </NavBarLi>
-          </NavBarUl> */}
         </NavBarContainer>
       </NavMain>
     </NavBarWrapper>

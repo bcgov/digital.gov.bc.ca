@@ -7,7 +7,7 @@ import Guides from './guides';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import Standards from './standards';
 
-import { PageContainer, SimplePageBody } from '../StyleComponents/pageContent';
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const resourcesImage = require('../../images/pngIllustrations/resourcesWhite.png');
 
@@ -22,13 +22,11 @@ function Resources() {
           }
           image={resourcesImage}
         />
-        {/* <SimplePageBody> */}
         <DigitalCards />
         <Standards />
         <Guides />
         <ForDesigners />
         <ForDevelopers />
-        {/* </SimplePageBody> */}
       </PageContainer>
     </DocumentTitle>
   );
