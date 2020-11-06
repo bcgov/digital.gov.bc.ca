@@ -144,7 +144,7 @@ export const SkipToMainContent = styled.a.attrs({
   }
   :focus {
     margin-left: 5px;
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: -webkit-focus-ring-color auto 5px;
     text-decoration: underline;
   }
 `;
