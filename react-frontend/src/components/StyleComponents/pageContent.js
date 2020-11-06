@@ -40,9 +40,10 @@ export const SimplePageBody = styled.div.attrs({
 const HorizontalContainer = styled.div.attrs({
   className: 'horizontalAlignment',
 })`
-  padding-left: 30px;
   margin: auto;
   max-width: 1065px;
+  padding-left: 30px;
+  padding-right: 20px;
   z-index: -2;
   @media screen and (min-width: 800px) {
     padding-left: 107px;
@@ -74,7 +75,6 @@ export const PageContainer = styled(HorizontalContainer).attrs({
 })`
   background-color: #f2f2f2;
   padding-top: 10px;
-  padding-right: 20px;
   padding-bottom: 70px;
   @media only screen and (max-width: 800px) {
     padding-top: 65px;
