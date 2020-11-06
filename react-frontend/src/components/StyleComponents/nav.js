@@ -5,7 +5,7 @@ export const NavBarWrapper = styled.div.attrs()`
   position: '-webkit-sticky';
   position: sticky;
   top: 0;
-  zindex: 2;
+  z-index: 2;
 `;
 
 export const NavBanner = styled.div.attrs({
