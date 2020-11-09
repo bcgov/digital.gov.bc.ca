@@ -6,8 +6,6 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
-
 const caseStudiesIllustration = require('../../images/pngIllustrations/caseStudiesWhite.png');
 
 const CaseStudies = () => {
@@ -21,9 +19,7 @@ const CaseStudies = () => {
             title="Case Studies"
             image={caseStudiesIllustration}
           />
-          <PageContainer>
-            <CardList />
-          </PageContainer>
+          <CardList />
         </Route>
         <Route path={path + '/:caseStudyId'} component={CaseStudy} />
       </Switch>

@@ -3,8 +3,6 @@ import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import CardList from './cardlist';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
-
 const bannerContent = (
   <div>
     In this digital age, people expect fast and easy access to information and
@@ -29,9 +27,7 @@ function Home() {
           title={bannerTitle}
           image={homeImage}
         />
-        <PageContainer>
-          <CardList />
-        </PageContainer>
+        <CardList />
       </div>
     </DocumentTitle>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import InfoCard from './infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const digitalFrameworkGrey = require('../../images/pngIllustrations/digitalFrameworkGrey.png');
 const digitalPrinciplesGrey = require('../../images/pngIllustrations/digitalPrinciplesGrey.png');
@@ -29,7 +30,7 @@ const linkTexts = [
 
 const CardList = () => {
   return (
-    <div>
+    <PageContainer>
       <Grid style={{ paddingTop: '90px' }}>
         <Row>
           <Col sm={12} md={6}>
@@ -98,7 +99,7 @@ const CardList = () => {
           </Col>
         </Row>
       </Grid>
-    </div>
+    </PageContainer>
   );
 };
 

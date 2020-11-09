@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-
+import { Grid } from 'react-flexbox-grid';
 import { MiningContent, FarmerContent, MedicalContent } from './content';
 import BannerWithImage from '../PageElements/Banners/bannerWithImage';
 
@@ -90,10 +90,12 @@ const CaseStudy = () => {
             {content.contacts}
           </ContentBlockContainer>
         )}
-        <div>
-          <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
-          <div>{content.others}</div>
-        </div>
+        <PageContainer>
+          <Grid>
+            <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
+            <div>{content.others}</div>
+          </Grid>
+        </PageContainer>
         {/* </PageContainer> */}
       </div>
     </DocumentTitle>
