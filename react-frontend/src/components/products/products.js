@@ -13,17 +13,21 @@ const productsImage = require('../../images/pngIllustrations/productsServicesWhi
 const Products = () => {
   return (
     <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <div>
+        {/* <PageContainer> */}
         <BannerSideImage
           title={'Products and Services'}
           content={'Supports to help you create or improve a digital service.'}
           image={productsImage}
         />
+        {/* </PageContainer> */}
+        {/* <PageContainer> */}
         <ProductsInstructions />
         <Defining />
         <Considering />
         <Assembling />
-      </PageContainer>
+        {/* </PageContainer> */}
+      </div>
     </DocumentTitle>
   );
 };

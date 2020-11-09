@@ -2,7 +2,7 @@ import React from 'react';
 import InfoCard from '../Home/infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
 
 const descriptions = [
@@ -20,7 +20,7 @@ const links = [
 
 function DigitalCards() {
   return (
-    <ContentBlock id="standards">
+    <ContentBlockContainer id="standards">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -48,7 +48,7 @@ function DigitalCards() {
           </Col>
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 }
 

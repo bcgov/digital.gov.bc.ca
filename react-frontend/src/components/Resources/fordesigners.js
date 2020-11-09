@@ -3,7 +3,7 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageSubHeading } from '../StyleComponents/headings';
 import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
 
@@ -13,7 +13,7 @@ const linkIcon = (
 
 function ForDesigners() {
   return (
-    <ContentBlock id="forDesigners">
+    <ContentBlockContainer id="forDesigners">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -113,7 +113,7 @@ function ForDesigners() {
           </Col>
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 }
 

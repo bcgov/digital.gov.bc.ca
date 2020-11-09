@@ -16,12 +16,12 @@ const CaseStudies = () => {
     <DocumentTitle title="Case Studies - Digital Government - Province of British Columbia">
       <Switch>
         <Route exact path={path}>
+          <BannerSideImage
+            content="Learn how digital approaches are getting results here in British Columbia."
+            title="Case Studies"
+            image={caseStudiesIllustration}
+          />
           <PageContainer>
-            <BannerSideImage
-              content="Learn how digital approaches are getting results here in British Columbia."
-              title="Case Studies"
-              image={caseStudiesIllustration}
-            />
             <CardList />
           </PageContainer>
         </Route>

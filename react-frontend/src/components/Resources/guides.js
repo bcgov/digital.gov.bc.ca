@@ -2,14 +2,14 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
 
 const videoCommsImg = require('../../images/videocomms.png');
 
 function Guides() {
   return (
-    <ContentBlock id="guides">
+    <ContentBlockContainer id="guides">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -30,7 +30,7 @@ function Guides() {
           </Col>
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 }
 

@@ -7,7 +7,7 @@ import {
   ProductPageSubHeading,
 } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
@@ -42,7 +42,7 @@ const cards = [
 
 const Defining = () => {
   return (
-    <ContentBlock id="definingProblems">
+    <ContentBlockContainer id="definingProblems">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -66,7 +66,7 @@ const Defining = () => {
           ))}
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 };
 

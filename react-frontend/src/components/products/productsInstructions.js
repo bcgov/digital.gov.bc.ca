@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const instructions = [
   <p>
@@ -34,7 +34,7 @@ const ProductsInstructions = () => {
   }
 
   return (
-    <ContentBlock id="productInstructions">
+    <ContentBlockContainer id="productInstructions">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -46,7 +46,7 @@ const ProductsInstructions = () => {
         </Row>
         <Row>{cols}</Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 };
 

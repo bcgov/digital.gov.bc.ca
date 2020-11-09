@@ -2,12 +2,12 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import InfoCard from '../Home/infocard';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageSubHeading } from '../StyleComponents/headings';
 
 function ForDevelopers() {
   return (
-    <ContentBlock id="forDevelopers">
+    <ContentBlockContainer id="forDevelopers">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -39,7 +39,7 @@ function ForDevelopers() {
           </Col>
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 }
 

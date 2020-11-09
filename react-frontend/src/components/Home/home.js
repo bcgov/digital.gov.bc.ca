@@ -23,14 +23,16 @@ const homeImage = require('../../images/pngIllustrations/digitalHomePageWhite.pn
 function Home() {
   return (
     <DocumentTitle title="Home - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <div>
         <BannerSideImage
           content={bannerContent}
           title={bannerTitle}
           image={homeImage}
         />
-        <CardList />
-      </PageContainer>
+        <PageContainer>
+          <CardList />
+        </PageContainer>
+      </div>
     </DocumentTitle>
   );
 }

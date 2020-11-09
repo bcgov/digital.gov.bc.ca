@@ -4,7 +4,7 @@ import ProductsCard from './productscard';
 
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
@@ -66,7 +66,7 @@ const cards = [
 
 const Considering = () => {
   return (
-    <ContentBlock id="definingContainer">
+    <ContentBlockContainer id="definingContainer">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -100,7 +100,7 @@ const Considering = () => {
           ))}
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 };
 

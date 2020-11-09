@@ -65,6 +65,15 @@ export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
   background-color: #f2f2f2;
 `;
 
+export const ContentBlockContainer = styled(HorizontalContainer).attrs({
+  className: 'contentBlockContainer',
+})`
+  padding-bottom: 120px;
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 60px;
+  }
+`;
+
 export const FooterContainer = styled(HorizontalContainer).attrs({
   className: 'footerContainer',
 })``;
@@ -92,13 +101,6 @@ export const RouteBody = styled.div.attrs({
 })`
   background-color: #f2f2f2;
   z-index: -2;
-  @media only screen and (max-width: 800px) {
-    padding-bottom: 60px;
-  }
-`;
-
-export const ContentBlock = styled.div`
-  padding-bottom: 120px;
   @media only screen and (max-width: 800px) {
     padding-bottom: 60px;
   }

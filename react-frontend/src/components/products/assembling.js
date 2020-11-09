@@ -4,7 +4,7 @@ import ProductsCard from './productscard';
 
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
@@ -61,7 +61,7 @@ const cards = [
 
 const Assembling = () => {
   return (
-    <ContentBlock id="assemblingTeam">
+    <ContentBlockContainer id="assemblingTeam">
       <Grid>
         <Row>
           <Col sm={12}>
@@ -85,7 +85,7 @@ const Assembling = () => {
           ))}
         </Row>
       </Grid>
-    </ContentBlock>
+    </ContentBlockContainer>
   );
 };
 

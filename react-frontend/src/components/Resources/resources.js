@@ -14,7 +14,7 @@ const resourcesImage = require('../../images/pngIllustrations/resourcesWhite.png
 function Resources() {
   return (
     <DocumentTitle title="Resources - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <div>
         <BannerSideImage
           title={'Resources'}
           content={
@@ -27,7 +27,7 @@ function Resources() {
         <Guides />
         <ForDesigners />
         <ForDevelopers />
-      </PageContainer>
+      </div>
     </DocumentTitle>
   );
 }
