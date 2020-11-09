@@ -16,10 +16,11 @@ const GuidePage = () => {
         title="Test guide page"
         description="It's dangerous to go it alone, take these."
       />
-      <PageContainer>
-        <GlobaStyleSize />
 
-        <div className="guide">
+      <GlobaStyleSize />
+
+      <div className="guide">
+        <PageContainer>
           <Grid>
             <Query query={GUIDE_QUERY} uid={params.uid}>
               {({ data: { guides } }) => {
@@ -34,8 +35,8 @@ const GuidePage = () => {
               }}
             </Query>
           </Grid>
-        </div>
-      </PageContainer>
+        </PageContainer>
+      </div>
     </div>
   );
 };

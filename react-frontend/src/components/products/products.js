@@ -6,27 +6,21 @@ import Considering from './considering';
 import Assembling from './assembling';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
-
 const productsImage = require('../../images/pngIllustrations/productsServicesWhite.png');
 
 const Products = () => {
   return (
     <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
       <div>
-        {/* <PageContainer> */}
         <BannerSideImage
           title={'Products and Services'}
           content={'Supports to help you create or improve a digital service.'}
           image={productsImage}
         />
-        {/* </PageContainer> */}
-        {/* <PageContainer> */}
         <ProductsInstructions />
         <Defining />
         <Considering />
         <Assembling />
-        {/* </PageContainer> */}
       </div>
     </DocumentTitle>
   );

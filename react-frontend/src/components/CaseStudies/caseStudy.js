@@ -61,33 +61,45 @@ const CaseStudy = () => {
         {/* <PageContainer> */}
         {content.context && (
           <ContentBlockContainer>
-            <CaseStudyHeading>Context and Questions</CaseStudyHeading>
-            {content.context}
+            <Grid>
+              <CaseStudyHeading>Context and Questions</CaseStudyHeading>
+              {content.context}
+            </Grid>
           </ContentBlockContainer>
         )}
         <ContentBlockContainer>
-          <CaseStudyHeading>The Approach</CaseStudyHeading>
-          {content.approach}
+          <Grid>
+            <CaseStudyHeading>The Approach</CaseStudyHeading>
+            {content.approach}
+          </Grid>
         </ContentBlockContainer>
         <ContentBlockContainer>
-          <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
-          {content.outcomes}
+          <Grid>
+            <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
+            {content.outcomes}
+          </Grid>
         </ContentBlockContainer>
         {content.additional && (
-          <ContentBlockContainer>{content.additional}</ContentBlockContainer>
+          <ContentBlockContainer>
+            <Grid>{content.additional}</Grid>
+          </ContentBlockContainer>
         )}
         {resources.length !== 0 && (
           <ContentBlockContainer>
-            <CaseStudyHeading>
-              Resources and Related Information
-            </CaseStudyHeading>
-            <ul>{resources}</ul>
+            <Grid>
+              <CaseStudyHeading>
+                Resources and Related Information
+              </CaseStudyHeading>
+              <ul>{resources}</ul>
+            </Grid>
           </ContentBlockContainer>
         )}
         {content.contacts && (
           <ContentBlockContainer>
-            <CaseStudyHeading>For more information</CaseStudyHeading>
-            {content.contacts}
+            <Grid>
+              <CaseStudyHeading>For more information</CaseStudyHeading>
+              {content.contacts}
+            </Grid>
           </ContentBlockContainer>
         )}
         <PageContainer>
@@ -96,7 +108,6 @@ const CaseStudy = () => {
             <div>{content.others}</div>
           </Grid>
         </PageContainer>
-        {/* </PageContainer> */}
       </div>
     </DocumentTitle>
   );
