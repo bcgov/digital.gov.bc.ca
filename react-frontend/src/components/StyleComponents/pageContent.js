@@ -53,8 +53,9 @@ const HorizontalContainer = styled.div.attrs({
   }
 `;
 
-export const BannerWithImageTextContainer = styled(HorizontalContainer).attrs({
+export const BannerHorizontalContainer = styled(HorizontalContainer).attrs({
   className: 'bannerCenterText',
+  id: 'main-content-anchor',
 })`
   text-align: center;
 `;
@@ -80,7 +81,6 @@ export const FooterContainer = styled(HorizontalContainer).attrs({
 
 export const PageContainer = styled(HorizontalContainer).attrs({
   className: 'pageContainer',
-  id: 'main-content-anchor',
 })`
   background-color: #f2f2f2;
   padding-top: 10px;

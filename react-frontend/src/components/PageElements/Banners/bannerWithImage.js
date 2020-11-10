@@ -7,17 +7,17 @@ import {
   BannerTitle,
   BannerWithImageWrapper,
 } from '../../StyleComponents/bannerWithImage';
-import { BannerWithImageTextContainer } from '../../StyleComponents/pageContent';
+import { BannerHorizontalContainer } from '../../StyleComponents/pageContent';
 const BannerWithImage = ({ content, image, title }) => {
   return (
     <BannerWithImageWrapper backgroundImage={image}>
       <BannerTextWrapper>
-        <BannerWithImageTextContainer>
+        <BannerHorizontalContainer>
           <Grid>
             <BannerTitle>{title}</BannerTitle>
             <BannerSubTitle>{content}</BannerSubTitle>
           </Grid>
-        </BannerWithImageTextContainer>
+        </BannerHorizontalContainer>
       </BannerTextWrapper>
     </BannerWithImageWrapper>
   );

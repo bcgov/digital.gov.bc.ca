@@ -8,11 +8,11 @@ import {
   BannerSideImgTitle,
   BannerSideImgSubTitle,
 } from '../../StyleComponents/bannerWithImage';
-import { PageContainer } from '../../StyleComponents/pageContent';
+import { BannerHorizontalContainer } from '../../StyleComponents/pageContent';
 
 const BannerSideImage = ({ content, image, title }) => {
   return (
-    <PageContainer>
+    <BannerHorizontalContainer>
       <Grid>
         <Row middle="xs">
           <Col sm={12} md={6}>
@@ -26,7 +26,7 @@ const BannerSideImage = ({ content, image, title }) => {
           </Col>
         </Row>
       </Grid>
-    </PageContainer>
+    </BannerHorizontalContainer>
   );
 };
 
