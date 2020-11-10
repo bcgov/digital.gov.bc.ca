@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Row } from 'react-flexbox-grid';
-import { CovidAlert } from '../StyleComponents/pageContent';
+import { CovidAlert, NavBarContainer } from '../StyleComponents/pageContent';
 import {
   CovidCol,
   CovidLinkStyle,
@@ -29,26 +29,30 @@ function CovidBanner(props) {
     return (
       <CovidAlert
         message={
-          <Row>
-            <CovidCol xs={1}>
-              <InfoCircleFilled style={{ float: 'right', fontSize: '1.5em' }} />
-            </CovidCol>
-            <CovidCol xs={10}>
-              B.C. has declared a state of emergency. Learn about{' '}
-              <CovidLinkStyle href={covidHealthLink}>
-                COVID-19 health issues.
-              </CovidLinkStyle>{' '}
-              |{' '}
-              <CovidLinkStyle href={covidBCresponseLink}>
-                B.C.'s response to COVID-19.
-              </CovidLinkStyle>
-            </CovidCol>
-            <CovidCol xs={1}>
-              <CovidLinkStyleButton onClick={closeBanner}>
-                X
-              </CovidLinkStyleButton>
-            </CovidCol>
-          </Row>
+          <NavBarContainer>
+            <Row>
+              <CovidCol xs={1}>
+                <InfoCircleFilled
+                  style={{ float: 'right', fontSize: '1.5em' }}
+                />
+              </CovidCol>
+              <CovidCol xs={10}>
+                B.C. has declared a state of emergency. Learn about{' '}
+                <CovidLinkStyle href={covidHealthLink}>
+                  COVID-19 health issues.
+                </CovidLinkStyle>{' '}
+                |{' '}
+                <CovidLinkStyle href={covidBCresponseLink}>
+                  B.C.'s response to COVID-19.
+                </CovidLinkStyle>
+              </CovidCol>
+              <CovidCol xs={1}>
+                <CovidLinkStyleButton onClick={closeBanner}>
+                  X
+                </CovidLinkStyleButton>
+              </CovidCol>
+            </Row>
+          </NavBarContainer>
         }
       />
     );
