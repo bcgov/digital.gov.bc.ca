@@ -29,7 +29,7 @@ const DigitalFrameworkTable = (props) => {
   //jsut use row col again but have title show up when screensize is less than a certain height
 
   const body = props.priorityActions.map((priorityAction, i) => (
-    <DigitalFrameworkRow key={i} underlined={i === entries - 1 ? null : true}>
+    <DigitalFrameworkRow key={i} underlined={i === entries - 1 ? null : 'true'}>
       <Col sm={12} md={6}>
         {isMobile && (
           <DigitalFrameworkSubHeading>

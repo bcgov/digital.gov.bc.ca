@@ -21,6 +21,7 @@ export const BannerSubTitle = styled.div.attrs({
   p {
     color: white;
     font-size: 22px;
+    margin: 0;
     position: relative;
   }
 
@@ -35,34 +36,13 @@ export const BannerSubTitle = styled.div.attrs({
   }
 `;
 
-export const BannerText = styled.div.attrs({
-  className: 'bannerText',
-})`
-  margin: auto;
-  padding-top: 10px;
-  text-align: center;
-  width: 975px;
-  @media only screen and (max-width: 800px) {
-    margin-left: 8%;
-    padding-top: 80px;
-    width: 84%;
-  }
-`;
-
 export const BannerTextWrapper = styled.div.attrs({
   className: 'bannerTextWrapper',
 })`
   background: rgba(0, 51, 102, 0.7);
-  margin-bottom: 120px;
-  margin-top: 260px;
-  padding: 25px;
-  position: absolute;
+  padding: 35px 0 35px 0;
   width: 100%;
   z-index: 1;
-  @media only screen and (max-width: 800px) {
-    margin-top: 60px;
-    padding-top: 0;
-  }
 `;
 
 export const BannerTitle = styled.h1.attrs({
@@ -134,16 +114,13 @@ export const BannerWithImageWrapper = styled.div.attrs({
   background-image: url(${(props) => props.backgroundImage});
   background-position: center center;
   background-size: cover;
-  height: 600px;
   margin-bottom: 120px;
   overflow: hidden;
+  padding-bottom: 60px;
+  padding-top: 60px;
   position: relative;
   width: 100%;
   @media only screen and (max-width: 800px) {
-    height: 520px;
     margin-bottom: 60px;
-    margin-top: -50px;
-    padding-bottom: 40px;
-    padding-top: 40px;
   }
 `;

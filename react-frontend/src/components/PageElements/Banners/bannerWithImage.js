@@ -1,22 +1,23 @@
 import React from 'react';
+import { Grid } from 'react-flexbox-grid';
 
 import {
-  BannerImage,
   BannerSubTitle,
   BannerTextWrapper,
-  BannerText,
   BannerTitle,
   BannerWithImageWrapper,
 } from '../../StyleComponents/bannerWithImage';
-
+import { BannerWithImageTextContainer } from '../../StyleComponents/pageContent';
 const BannerWithImage = ({ content, image, title }) => {
   return (
     <BannerWithImageWrapper backgroundImage={image}>
       <BannerTextWrapper>
-        <BannerText>
-          <BannerTitle>{title}</BannerTitle>
-          <BannerSubTitle>{content}</BannerSubTitle>
-        </BannerText>
+        <BannerWithImageTextContainer>
+          <Grid>
+            <BannerTitle>{title}</BannerTitle>
+            <BannerSubTitle>{content}</BannerSubTitle>
+          </Grid>
+        </BannerWithImageTextContainer>
       </BannerTextWrapper>
     </BannerWithImageWrapper>
   );
