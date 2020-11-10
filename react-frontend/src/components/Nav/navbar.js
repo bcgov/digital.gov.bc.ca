@@ -3,12 +3,12 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import CovidBanner from '../../components/Nav/covidbanner';
-import BreadCrumbs from '../../components/Nav/breadcrumbs';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import {
   NavBanner,
   NavBarHeader,
-  NavContentOnRight,
+  NavBarWrapper,
   NavImage,
   NavHamburgerButton,
   NavMain,
@@ -33,7 +33,6 @@ function NavBar() {
   const [activePage, setActivePage] = useState(routeLocation.pathname);
   const [openMenu, setOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth > 800);
-  const [breadCrumb, setBreadCrumb] = useState(false);
 
   useEffect(() => {
     function handleResize() {
@@ -74,69 +73,74 @@ function NavBar() {
 
   let logoPath = isMobile ? mobileImg : desktopImg;
 
-  function handleSize(value) {
-    setBreadCrumb(value);
-  }
-
   return (
-    <div>
-      <CovidBanner test={handleSize} />
+    <NavBarWrapper>
+      <CovidBanner />
       <NavBarHeader>
         <NavBarContainer>
-          <NavBanner>
-            <NavBarHeaderLink
-              href="https://gov.bc.ca"
-              alt="Go to the Government of British Columbia website"
-            >
-              <NavImage
-                src={logoPath}
-                alt="Go to the Government of British Columbia website"
-              />
-            </NavBarHeaderLink>
-            <NavTitle>Digital Government</NavTitle>
-            <SkipToMainContent>Skip to main content</SkipToMainContent>
-          </NavBanner>
-          <NavContentOnRight>
-            <NavHamburgerButton onClick={toggleMenu} href=".">
-              <FontAwesomeIcon icon={faBars} />
-            </NavHamburgerButton>
-          </NavContentOnRight>
+          <Grid>
+            <Row middle="xs">
+              <Col xs={11}>
+                <NavBanner>
+                  <NavBarHeaderLink
+                    href="https://gov.bc.ca"
+                    alt="Go to the Government of British Columbia website"
+                  >
+                    <NavImage
+                      src={logoPath}
+                      alt="Go to the Government of British Columbia website"
+                    />
+                  </NavBarHeaderLink>
+                  <NavTitle>Digital Government</NavTitle>
+                  <SkipToMainContent>Skip to main content</SkipToMainContent>
+                </NavBanner>
+              </Col>
+              <Col xs={1}>
+                <NavHamburgerButton onClick={toggleMenu} href=".">
+                  <FontAwesomeIcon icon={faBars} />
+                </NavHamburgerButton>
+              </Col>
+            </Row>
+          </Grid>
         </NavBarContainer>
       </NavBarHeader>
       <NavMain>
         <NavBarContainer>
-          <NavBarUl>
-            <NavBarLi>
-              <NavBarLinkFirst
-                to="/"
-                className={activePage === '/' ? 'active' : 'notactive'}
-              >
-                Home
-              </NavBarLinkFirst>
-            </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
-                to="/resources"
-                className={activePage === '/resources' ? 'active' : 'notactive'}
-              >
-                Resources
-              </NavBarLink>
-            </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
-                to="/products-services"
-                className={
-                  activePage === '/products-services' ? 'active' : 'notactive'
-                }
-              >
-                Products & Services
-              </NavBarLink>
-            </NavBarLi>
-          </NavBarUl>
+          <Grid>
+            <NavBarUl>
+              <NavBarLi>
+                <NavBarLinkFirst
+                  to="/"
+                  className={activePage === '/' ? 'active' : 'notactive'}
+                >
+                  Home
+                </NavBarLinkFirst>
+              </NavBarLi>
+              <NavBarLi>
+                <NavBarLink
+                  to="/resources"
+                  className={
+                    activePage === '/resources' ? 'active' : 'notactive'
+                  }
+                >
+                  Resources
+                </NavBarLink>
+              </NavBarLi>
+              <NavBarLi>
+                <NavBarLink
+                  to="/products-services"
+                  className={
+                    activePage === '/products-services' ? 'active' : 'notactive'
+                  }
+                >
+                  Products & Services
+                </NavBarLink>
+              </NavBarLi>
+            </NavBarUl>
+          </Grid>
         </NavBarContainer>
       </NavMain>
-      <BreadCrumbs breadCrumb={breadCrumb} />
-    </div>
+    </NavBarWrapper>
   );
 }
 

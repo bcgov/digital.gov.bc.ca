@@ -5,10 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import BannerSimple from '../PageElements/Banners/bannerSimple';
 import GUIDE_QUERY from '../../queries/guide/guide';
 import { useParams } from 'react-router-dom';
-import {
-  SimpleTextContainer,
-  GlobaStyleSize,
-} from '../StyleComponents/pageContent';
+import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { MarkdownStyles } from '../StyleComponents/styledMarkdown';
 
 const GuidePage = () => {
@@ -19,7 +16,7 @@ const GuidePage = () => {
         title="Test guide page"
         description="It's dangerous to go it alone, take these."
       />
-      <SimpleTextContainer>
+      <PageContainer>
         <GlobaStyleSize />
 
         <div className="guide">
@@ -38,7 +35,7 @@ const GuidePage = () => {
             </Query>
           </Grid>
         </div>
-      </SimpleTextContainer>
+      </PageContainer>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Col, Row } from 'react-flexbox-grid';
-import InfoCard from '../Home/infocard';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
 import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
