@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { Alert } from 'antd';
+import { Grid } from 'react-flexbox-grid';
 
 export const GlobaStyleSize = createGlobalStyle`
  html {
@@ -37,7 +38,7 @@ export const SimplePageBody = styled.div.attrs({
 
 // This will is the base style for horizontal alignment of page content
 // all resposive elements must be in some kind of container object.
-const HorizontalContainer = styled.div.attrs({
+const HorizontalContainer = styled(Grid).attrs({
   className: 'horizontalAlignment',
 })`
   margin: auto;

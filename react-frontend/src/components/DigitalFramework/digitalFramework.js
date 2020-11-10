@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from 'react-flexbox-grid';
 import DigitalFrameworkBlock from './digitalFrameworkBlock';
 import DigitalTable from './digitalFrameworkTable';
 import * as Scroll from 'react-scroll';
@@ -108,138 +107,133 @@ const DigitalFramework = () => {
           image={digitalFrameworkImage}
         />
         <PageContainer>
-          <Grid>
+          <DigitalFrameworkBlock
+            title={titles[0]}
+            paragraph={descriptions[0]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[1]}
+            paragraph={descriptions[1]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[2]}
+            paragraph={descriptions[2]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[3]}
+            paragraph={descriptions[3]}
+          />
+          <DigitalFrameworkBlock
+            title={titles[4]}
+            paragraph={descriptions[4]}
+          />
+          <ul>
+            <li>
+              <HrefLinkScrollTo
+                to="blockOne"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Service delivery
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockTwo"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Data and information
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockThree"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                Tools, processes and practices
+              </HrefLinkScrollTo>
+            </li>
+            <li>
+              <HrefLinkScrollTo
+                to="blockFour"
+                spy={true}
+                smooth={true}
+                offset={-120}
+              >
+                External Partners
+              </HrefLinkScrollTo>
+            </li>
+          </ul>
+          <div>
+            <ScrollElement name="blockOne" className="element" />
             <DigitalFrameworkBlock
-              title={titles[0]}
-              paragraph={descriptions[0]}
+              title={titles[5]}
+              paragraph={descriptions[5]}
             />
-            <DigitalFrameworkBlock
-              title={titles[1]}
-              paragraph={descriptions[1]}
-            />
-            <DigitalFrameworkBlock
-              title={titles[2]}
-              paragraph={descriptions[2]}
-            />
-            <DigitalFrameworkBlock
-              title={titles[3]}
-              paragraph={descriptions[3]}
-            />
-            <DigitalFrameworkBlock
-              title={titles[4]}
-              paragraph={descriptions[4]}
-            />
-            <ul>
-              <li>
-                <HrefLinkScrollTo
-                  to="blockOne"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  Service delivery
-                </HrefLinkScrollTo>
-              </li>
-              <li>
-                <HrefLinkScrollTo
-                  to="blockTwo"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  Data and information
-                </HrefLinkScrollTo>
-              </li>
-              <li>
-                <HrefLinkScrollTo
-                  to="blockThree"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  Tools, processes and practices
-                </HrefLinkScrollTo>
-              </li>
-              <li>
-                <HrefLinkScrollTo
-                  to="blockFour"
-                  spy={true}
-                  smooth={true}
-                  offset={-120}
-                >
-                  External Partners
-                </HrefLinkScrollTo>
-              </li>
-            </ul>
-            <div>
-              <ScrollElement name="blockOne" className="element" />
-              <DigitalFrameworkBlock
-                title={titles[5]}
-                paragraph={descriptions[5]}
-              />
-              <div style={{ marginTop: '-20px' }}>
-                <ul>
-                  <li>
-                    Based on user needs (as identified by users themselves)
-                  </li>
-                  <li>
-                    Designed and tested with the people who will be using them
-                  </li>
-                  <li>Accessible and inclusive for all British Columbians</li>
-                  <li>Designed to work end-to-end</li>
-                  <li>
-                    Joined across all channels (online, phone, mail,
-                    face-to-face)
-                  </li>
-                </ul>
-              </div>
-              <DigitalBlock>
-                <DigitalTable
-                  priorityActions={priorityActions[0]}
-                  objectives={objectives[0]}
-                />
-              </DigitalBlock>
+            <div style={{ marginTop: '-20px' }}>
+              <ul>
+                <li>Based on user needs (as identified by users themselves)</li>
+                <li>
+                  Designed and tested with the people who will be using them
+                </li>
+                <li>Accessible and inclusive for all British Columbians</li>
+                <li>Designed to work end-to-end</li>
+                <li>
+                  Joined across all channels (online, phone, mail, face-to-face)
+                </li>
+              </ul>
             </div>
-            <div>
-              <ScrollElement name="blockTwo" className="element" />
-              <DigitalFrameworkBlock
-                title={titles[6]}
-                paragraph={descriptions[6]}
+            <DigitalBlock>
+              <DigitalTable
+                priorityActions={priorityActions[0]}
+                objectives={objectives[0]}
               />
-              <DigitalBlock>
-                <DigitalTable
-                  priorityActions={priorityActions[1]}
-                  objectives={objectives[1]}
-                />
-              </DigitalBlock>
-            </div>
-            <div>
-              <ScrollElement name="blockThree" className="element" />
-              <DigitalFrameworkBlock
-                title={titles[7]}
-                paragraph={descriptions[7]}
+            </DigitalBlock>
+          </div>
+          <div>
+            <ScrollElement name="blockTwo" className="element" />
+            <DigitalFrameworkBlock
+              title={titles[6]}
+              paragraph={descriptions[6]}
+            />
+            <DigitalBlock>
+              <DigitalTable
+                priorityActions={priorityActions[1]}
+                objectives={objectives[1]}
               />
-              <DigitalBlock>
-                <DigitalTable
-                  priorityActions={priorityActions[2]}
-                  objectives={objectives[2]}
-                />
-              </DigitalBlock>
-            </div>
-            <div>
-              <ScrollElement name="blockFour" className="element" />
-              <DigitalFrameworkBlock
-                title={titles[8]}
-                paragraph={descriptions[8]}
+            </DigitalBlock>
+          </div>
+          <div>
+            <ScrollElement name="blockThree" className="element" />
+            <DigitalFrameworkBlock
+              title={titles[7]}
+              paragraph={descriptions[7]}
+            />
+            <DigitalBlock>
+              <DigitalTable
+                priorityActions={priorityActions[2]}
+                objectives={objectives[2]}
               />
-              <DigitalBlock>
-                <DigitalTable
-                  priorityActions={priorityActions[3]}
-                  objectives={objectives[3]}
-                />
-              </DigitalBlock>
-            </div>
-          </Grid>
+            </DigitalBlock>
+          </div>
+          <div>
+            <ScrollElement name="blockFour" className="element" />
+            <DigitalFrameworkBlock
+              title={titles[8]}
+              paragraph={descriptions[8]}
+            />
+            <DigitalBlock>
+              <DigitalTable
+                priorityActions={priorityActions[3]}
+                objectives={objectives[3]}
+              />
+            </DigitalBlock>
+          </div>
         </PageContainer>
       </div>
     </DocumentTitle>

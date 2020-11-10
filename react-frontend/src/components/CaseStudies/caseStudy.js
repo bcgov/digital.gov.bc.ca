@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-import { Grid } from 'react-flexbox-grid';
 import { MiningContent, FarmerContent, MedicalContent } from './content';
 import BannerWithImage from '../PageElements/Banners/bannerWithImage';
 
@@ -58,55 +57,40 @@ const CaseStudy = () => {
           title={content.title}
           image={content.backgroundImage}
         />
-        {/* <PageContainer> */}
         {content.context && (
           <ContentBlockContainer>
-            <Grid>
-              <CaseStudyHeading>Context and Questions</CaseStudyHeading>
-              {content.context}
-            </Grid>
+            <CaseStudyHeading>Context and Questions</CaseStudyHeading>
+            {content.context}
           </ContentBlockContainer>
         )}
         <ContentBlockContainer>
-          <Grid>
-            <CaseStudyHeading>The Approach</CaseStudyHeading>
-            {content.approach}
-          </Grid>
+          <CaseStudyHeading>The Approach</CaseStudyHeading>
+          {content.approach}
         </ContentBlockContainer>
         <ContentBlockContainer>
-          <Grid>
-            <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
-            {content.outcomes}
-          </Grid>
+          <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
+          {content.outcomes}
         </ContentBlockContainer>
         {content.additional && (
-          <ContentBlockContainer>
-            <Grid>{content.additional}</Grid>
-          </ContentBlockContainer>
+          <ContentBlockContainer>{content.additional}</ContentBlockContainer>
         )}
         {resources.length !== 0 && (
           <ContentBlockContainer>
-            <Grid>
-              <CaseStudyHeading>
-                Resources and Related Information
-              </CaseStudyHeading>
-              <ul>{resources}</ul>
-            </Grid>
+            <CaseStudyHeading>
+              Resources and Related Information
+            </CaseStudyHeading>
+            <ul>{resources}</ul>
           </ContentBlockContainer>
         )}
         {content.contacts && (
           <ContentBlockContainer>
-            <Grid>
-              <CaseStudyHeading>For more information</CaseStudyHeading>
-              {content.contacts}
-            </Grid>
+            <CaseStudyHeading>For more information</CaseStudyHeading>
+            {content.contacts}
           </ContentBlockContainer>
         )}
         <PageContainer>
-          <Grid>
-            <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
-            <div>{content.others}</div>
-          </Grid>
+          <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
+          <div>{content.others}</div>
         </PageContainer>
       </div>
     </DocumentTitle>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from 'react-flexbox-grid';
 
 import {
   BannerSubTitle,
@@ -13,10 +12,8 @@ const BannerWithImage = ({ content, image, title }) => {
     <BannerWithImageWrapper backgroundImage={image}>
       <BannerTextWrapper>
         <BannerHorizontalContainer>
-          <Grid>
-            <BannerTitle>{title}</BannerTitle>
-            <BannerSubTitle>{content}</BannerSubTitle>
-          </Grid>
+          <BannerTitle>{title}</BannerTitle>
+          <BannerSubTitle>{content}</BannerSubTitle>
         </BannerHorizontalContainer>
       </BannerTextWrapper>
     </BannerWithImageWrapper>

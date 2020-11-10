@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { Grid } from 'react-flexbox-grid';
 
 import { DisplayNames as routeDisplayNames } from '../Nav/routes';
 import {
@@ -56,11 +55,7 @@ const BreadCrumbs = (props) => {
     </BreadcrumbUL>
   );
 
-  return (
-    <BreadcrumbContainer>
-      <Grid>{crumbs}</Grid>
-    </BreadcrumbContainer>
-  );
+  return <BreadcrumbContainer>{crumbs}</BreadcrumbContainer>;
 };
 
 export default BreadCrumbs;

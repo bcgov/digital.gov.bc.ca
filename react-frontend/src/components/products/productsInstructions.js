@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
@@ -35,17 +35,15 @@ const ProductsInstructions = () => {
 
   return (
     <ContentBlockContainer id="productInstructions">
-      <Grid>
-        <Row>
-          <Col sm={12}>
-            <p>
-              Before you’re ready to create or improve a digital service, you
-              will need to:
-            </p>
-          </Col>
-        </Row>
-        <Row>{cols}</Row>
-      </Grid>
+      <Row>
+        <Col sm={12}>
+          <p>
+            Before you’re ready to create or improve a digital service, you will
+            need to:
+          </p>
+        </Col>
+      </Row>
+      <Row>{cols}</Row>
     </ContentBlockContainer>
   );
 };

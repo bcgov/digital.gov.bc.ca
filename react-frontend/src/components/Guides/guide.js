@@ -1,6 +1,5 @@
 import React from 'react';
 import Query from '../Query';
-import { Grid } from 'react-flexbox-grid';
 import ReactMarkdown from 'react-markdown';
 import BannerSimple from '../PageElements/Banners/bannerSimple';
 import GUIDE_QUERY from '../../queries/guide/guide';
@@ -21,20 +20,18 @@ const GuidePage = () => {
 
       <div className="guide">
         <PageContainer>
-          <Grid>
-            <Query query={GUIDE_QUERY} uid={params.uid}>
-              {({ data: { guides } }) => {
-                return (
-                  <div>
-                    <h1>{guides[0].title}</h1>
-                    <MarkdownStyles>
-                      <ReactMarkdown source={guides[0].content} />
-                    </MarkdownStyles>
-                  </div>
-                );
-              }}
-            </Query>
-          </Grid>
+          <Query query={GUIDE_QUERY} uid={params.uid}>
+            {({ data: { guides } }) => {
+              return (
+                <div>
+                  <h1>{guides[0].title}</h1>
+                  <MarkdownStyles>
+                    <ReactMarkdown source={guides[0].content} />
+                  </MarkdownStyles>
+                </div>
+              );
+            }}
+          </Query>
         </PageContainer>
       </div>
     </div>
