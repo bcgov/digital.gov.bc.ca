@@ -142,16 +142,6 @@ function NavBar() {
                 Case Studies
               </NavBarLink>
             </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
-                to="/marketplace"
-                className={
-                  activePage === '/marketplace' ? 'active' : 'notactive'
-                }
-              >
-                Marketplace
-              </NavBarLink>
-            </NavBarLi>
           </NavBarUl>
         </NavBarContainer>
       </NavMain>
