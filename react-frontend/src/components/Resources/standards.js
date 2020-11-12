@@ -15,10 +15,10 @@ function Standards() {
     <ContentBlockContainer id="standards">
       <Row>
         <Col md={12} lg={4}>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <ResourcePageSubHeading>Technical</ResourcePageSubHeading>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -28,7 +28,7 @@ function Standards() {
               {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -38,7 +38,7 @@ function Standards() {
               {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -50,10 +50,10 @@ function Standards() {
           </Row>
         </Col>
         <Col md={12} lg={4}>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <ResourcePageSubHeading>Privacy</ResourcePageSubHeading>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -63,7 +63,7 @@ function Standards() {
               {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -73,7 +73,7 @@ function Standards() {
               {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -85,10 +85,10 @@ function Standards() {
           </Row>
         </Col>
         <Col md={12} lg={4}>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <ResourcePageSubHeading>Security</ResourcePageSubHeading>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -98,7 +98,7 @@ function Standards() {
               {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
