@@ -42,6 +42,7 @@ const HorizontalContainer = styled(Grid).attrs({
   className: 'horizontalAlignment',
 })`
   margin: auto;
+  padding: 0 16px;
   @media screen and (min-width: 576px) {
     width: 540px;
   }
