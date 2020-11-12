@@ -16,10 +16,10 @@ function ForDesigners() {
     <ContentBlockContainer id="forDesigners">
       <Row>
         <Col sm={12}>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <ResourcePageSubHeading>For Designers</ResourcePageSubHeading>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -28,7 +28,7 @@ function ForDesigners() {
               B.C. Visual Identity Program (Gov Mark) {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -37,7 +37,7 @@ function ForDesigners() {
               CMS Lite User's Manual {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -46,7 +46,7 @@ function ForDesigners() {
               Content Design Guide {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -55,7 +55,7 @@ function ForDesigners() {
               Design Research Guide {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -64,7 +64,7 @@ function ForDesigners() {
               Design System {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -73,7 +73,7 @@ function ForDesigners() {
               Plain Language Guide {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -82,7 +82,7 @@ function ForDesigners() {
               Service Design Phases {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -91,7 +91,7 @@ function ForDesigners() {
               Service Writing Guide {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -100,7 +100,7 @@ function ForDesigners() {
               Visual Design Guide {linkIcon}
             </HrefLinkStandalone>
           </Row>
-          <Row>
+          <Row style={{ marginLeft: '0px', marginRight: '16px' }}>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
