@@ -42,15 +42,17 @@ const HorizontalContainer = styled(Grid).attrs({
   className: 'horizontalAlignment',
 })`
   margin: auto;
-  max-width: 1065px;
-  padding-left: 30px;
-  padding-right: 20px;
-  z-index: -2;
-  @media screen and (min-width: 800px) {
-    padding-left: 107px;
+  @media screen and (min-width: 576px) {
+    width: 540px;
   }
-  @media screen and (max-width: 800px) {
-    padding-left: 15px;
+  @media screen and (min-width: 768px) {
+    width: 720px;
+  }
+  @media screen and (min-width: 992px) {
+    width: 960px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1140px;
   }
 `;
 
