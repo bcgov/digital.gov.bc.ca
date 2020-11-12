@@ -21,7 +21,7 @@ export const BreadcrumbUL = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 -8px; /* negative left margin aligns breadcrumb with page elements */
   padding-left: 0;
   padding-top: 16px;
 `;
@@ -123,9 +123,8 @@ export const FooterUL = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
+  height: 46px; /* from Design System */
   list-style: none;
-  margin: 10px 0;
   padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
 `;
 
