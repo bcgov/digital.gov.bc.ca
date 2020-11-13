@@ -125,6 +125,7 @@ export const FooterUL = styled.ul`
   flex-wrap: wrap;
   height: 46px; /* from Design System */
   list-style: none;
+  margin: 0;
   padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
 `;
 
