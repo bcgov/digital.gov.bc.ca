@@ -22,7 +22,7 @@ jobs:
           const core = require('@actions/core')
           const prNumber = ${{ github.event.inputs.prnumber }};
           core.exportVariable('PULL_NUMBER', prNumber);
-          const env = ${{ github.event.inputs.environment }};
+          const env = "${{ github.event.inputs.environment }}";
           core.exportVariable('ENV', env);
     - name: install oc
       run: |
