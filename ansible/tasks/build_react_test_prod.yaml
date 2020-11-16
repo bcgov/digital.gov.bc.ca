@@ -10,7 +10,7 @@
   - name: cancel any existing builds {{ react_infra_name }}-{{ version }}
     shell: oc -n "{{ tools_namespace }}" cancel-build bc/{{ react_infra_name }}-{{ version }}
   - name: start build {{ react_infra_name }}-{{ version }}
-    shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }} --wait=true
+    shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }} --follow=true
   # - name: Pause for 10 seconds to let the build start
   #   pause:
   #     seconds: "10"
