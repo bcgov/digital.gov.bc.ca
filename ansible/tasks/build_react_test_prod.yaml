@@ -1,0 +1,26 @@
+---
+
+  - name: create build in tools namespace using head/pulls/{{ PR }} as ref 
+    shell: >
+      oc process -n "{{ tools_namespace }}" -f "../openshift/templates/react-frontend/bc.yaml" {{ build_params }} | 
+      oc apply -n "{{ tools_namespace }}" -f -
+    vars:
+      GIT_REF: 'pull/{{ PR }}/head'
+      build_params: "{{ lookup('template', './templates/build_react.param.j2') }}"
+  - name: cancel any existing builds {{ react_infra_name }}-{{ version }}
+    shell: oc -n "{{ tools_namespace }}" cancel-build bc/{{ react_infra_name }}-{{ version }}
+  - name: start build {{ react_infra_name }}-{{ version }}
+    shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }} --follow=true
+  # - name: Pause for 10 seconds to let the build start
+  #   pause:
+  #     seconds: "10"
+  # - name: get build number
+  #   shell: oc get build -n "{{ tools_namespace }}"
+  #   register: allbuilds
+  # - name: check for build completion {{ react_infra_name }}-{{ version }}
+  #   shell: oc get build "{{ react_infra_name }}-{{ version }}" -n "{{ tools_namespace }}"
+  #   register: output 
+  #   until: ('Complete' not in output.stdout or 'Failed' not in output.stdout or 'Error' not in output.stdout or 'Cancelled' not in output.stdout)
+  #   delay: 30
+  #   retries: 40
+  #   ignore_errors: True
