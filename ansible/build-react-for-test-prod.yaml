@@ -28,7 +28,7 @@
         when: not should_build
 
       - name: Build React Project
-        include: ./tasks/build_react.yaml
+        include: ./tasks/build_react_test_prod.yaml
         when: 
           - should_build
           - is_valid_author

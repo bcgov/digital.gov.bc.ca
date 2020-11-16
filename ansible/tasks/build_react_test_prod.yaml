@@ -1,0 +1,13 @@
+---
+
+  - name: create build in tools namespace using head/pulls/{{ PR }} as ref 
+    shell: >
+      oc process -n "{{ tools_namespace }}" -f "../openshift/templates/react-frontend/bc.yaml" {{ build_params }} | 
+      oc apply -n "{{ tools_namespace }}" -f -
+    vars:
+      GIT_REF: 'pull/{{ PR }}/head'
+      build_params: "{{ lookup('template', './templates/build_react.param.j2') }}"
+  - name: cancel any existing builds {{ react_infra_name }}-{{ version }}
+    shell: oc -n "{{ tools_namespace }}" cancel-build bc/{{ react_infra_name }}-{{ version }}
+  - name: start build {{ react_infra_name }}-{{ version }}
+    shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }} --wait
