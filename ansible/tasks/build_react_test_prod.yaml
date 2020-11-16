@@ -11,8 +11,11 @@
     shell: oc -n "{{ tools_namespace }}" cancel-build bc/{{ react_infra_name }}-{{ version }}
   - name: start build {{ react_infra_name }}-{{ version }}
     shell: oc -n "{{ tools_namespace }}" start-build {{ react_infra_name }}-{{ version }}
+  - name: Pause for 2 minutes to let the build start
+    pause:
+      minutes: "2"
   - name: check for build completion {{ react_infra_name }}-{{ version }}
-    shell: oc get build "{{ react_infra_name }}-{{ version }}"
+    shell: oc get build "{{ react_infra_name }}-{{ version }}" -n "{{ tools_namespace }}"
     register: output 
     until: ('Complete' not in output.stdout or 'Failed' not in output.stdout or 'Error' not in output.stdout or 'Cancelled' not in output.stdout)
     delay: 30
