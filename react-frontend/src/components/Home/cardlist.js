@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoCard from './infocard';
 import { Col, Row, Grid } from 'react-flexbox-grid';
-import { Title3 } from '../StyleComponents/headings';
+import { Title2 } from '../StyleComponents/headings';
 
 const digitalFrameworkGrey = require('../../images/pngIllustrations/digitalFrameworkGrey.png');
 const digitalPrinciplesGrey = require('../../images/pngIllustrations/digitalPrinciplesGrey.png');
@@ -80,7 +80,7 @@ const CardList = () => {
       <Grid style={{ paddingTop: '60px' }}>
         <Row>
           <Col sm={12}>
-            <Title3>Learn from Others</Title3>
+            <Title2>Learn from Others</Title2>
           </Col>
         </Row>
         <Row>
