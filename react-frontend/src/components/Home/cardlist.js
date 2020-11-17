@@ -30,7 +30,7 @@ const linkTexts = [
 const CardList = () => {
   return (
     <div>
-      <Grid style={{ 'padding-top': '90px' }}>
+      <Grid style={{ paddingTop: '90px' }}>
         <Row>
           <Col sm={12} md={6}>
             <InfoCard
@@ -76,7 +76,7 @@ const CardList = () => {
           </Col>
         </Row>
       </Grid>
-      <Grid style={{ 'padding-top': '90px' }}>
+      <Grid style={{ paddingTop: '90px' }}>
         <Row>
           <Col sm={12} md={6}>
             <InfoCard
