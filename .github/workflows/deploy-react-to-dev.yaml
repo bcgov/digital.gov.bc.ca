@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Store PR Num in env
-      uses: actions/github-script@0.3.0
+      uses: actions/github-script@3.1.0
       with:
         github-token: ${{github.token}}
         script: |
