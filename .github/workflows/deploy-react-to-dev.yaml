@@ -18,7 +18,7 @@ jobs:
         script: |
           const core = require('@actions/core')
           const prNumber = context.payload.number;
-          core.exportVariable('PULL_NUMBER', prNumber);
+          echo "{PULL_NUMBER}={prNumber}" >> $GITHUB_ENV
     - name: install oc
       # manually installing oc, i've opened up an issue with  github actions to include this since they
       # already have kubectl https://github.com/actions/virtual-environments/issues/1083
