@@ -16,8 +16,7 @@ jobs:
       with:
         github-token: ${{github.token}}
         script: |
-          echo "{ACTIONS_ALLOW_UNSECURE_COMMANDS}={true}" >> $GITHUB_ENV;
-          const core = require('@actions/core');
+          const core = require('@actions/core')
           const prNumber = context.payload.number;
           core.exportVariable('PULL_NUMBER', prNumber);
     - name: install oc
