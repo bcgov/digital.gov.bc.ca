@@ -28,7 +28,7 @@ const BreadCrumbs = (props) => {
   let listEntry = [];
 
   listEntry.push(
-    <BreadcrumbLI key="0">
+    <BreadcrumbLI key="0" style={{ paddingLeft: '0' }}>
       <HrefLinkStandaloneInternal to="/">Home</HrefLinkStandaloneInternal>
     </BreadcrumbLI>
   );
