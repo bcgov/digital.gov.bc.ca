@@ -15,11 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Store PR Num in env
-      uses: actions/github-script@0.3.0
+      uses: actions/github-script@v3
       with:
         github-token: ${{github.token}}
         script: |
-          const core = require('@actions/core')
           const prNumber = ${{ github.event.inputs.prnumber }};
           core.exportVariable('PULL_NUMBER', prNumber);
           const env = "${{ github.event.inputs.environment }}";
