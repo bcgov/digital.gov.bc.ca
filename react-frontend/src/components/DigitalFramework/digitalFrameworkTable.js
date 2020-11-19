@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import {
   DigitalFrameworkHeading,
   DigitalFrameworkSubHeading,
@@ -49,29 +49,25 @@ const DigitalFrameworkTable = (props) => {
 
   return (
     <div>
-      <Grid>
-        {!isMobile ? (
-          <Row>
-            <Col md={6} lg={6}>
-              <DigitalFrameworkHeading>
-                Priority Actions
-              </DigitalFrameworkHeading>
-            </Col>
-            <Col md={6} lg={6}>
-              <DigitalFrameworkHeading>Objectives</DigitalFrameworkHeading>
-            </Col>
-          </Row>
-        ) : (
-          <Row>
-            <Col sm={12}>
-              <DigitalFrameworkHeading>
-                Priority Actions and Objectives
-              </DigitalFrameworkHeading>
-            </Col>
-          </Row>
-        )}
-        {body}
-      </Grid>
+      {!isMobile ? (
+        <Row>
+          <Col md={6} lg={6}>
+            <DigitalFrameworkHeading>Priority Actions</DigitalFrameworkHeading>
+          </Col>
+          <Col md={6} lg={6}>
+            <DigitalFrameworkHeading>Objectives</DigitalFrameworkHeading>
+          </Col>
+        </Row>
+      ) : (
+        <Row>
+          <Col sm={12}>
+            <DigitalFrameworkHeading>
+              Priority Actions and Objectives
+            </DigitalFrameworkHeading>
+          </Col>
+        </Row>
+      )}
+      {body}
     </div>
   );
 };

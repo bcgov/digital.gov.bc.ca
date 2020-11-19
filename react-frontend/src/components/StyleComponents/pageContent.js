@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { Alert } from 'antd';
+import { Grid } from 'react-flexbox-grid';
 
 export const GlobaStyleSize = createGlobalStyle`
  html {
@@ -37,7 +38,7 @@ export const SimplePageBody = styled.div.attrs({
 
 // This will is the base style for horizontal alignment of page content
 // all resposive elements must be in some kind of container object.
-const HorizontalContainer = styled.div.attrs({
+const HorizontalContainer = styled(Grid).attrs({
   className: 'horizontalAlignment',
 })`
   margin: auto;
@@ -53,8 +54,9 @@ const HorizontalContainer = styled.div.attrs({
   }
 `;
 
-export const BannerWithImageTextContainer = styled(HorizontalContainer).attrs({
+export const BannerHorizontalContainer = styled(HorizontalContainer).attrs({
   className: 'bannerCenterText',
+  id: 'main-content-anchor',
 })`
   text-align: center;
 `;
@@ -65,13 +67,21 @@ export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
   background-color: #f2f2f2;
 `;
 
+export const ContentBlockContainer = styled(HorizontalContainer).attrs({
+  className: 'contentBlockContainer',
+})`
+  padding-bottom: 120px;
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 60px;
+  }
+`;
+
 export const FooterContainer = styled(HorizontalContainer).attrs({
   className: 'footerContainer',
 })``;
 
 export const PageContainer = styled(HorizontalContainer).attrs({
   className: 'pageContainer',
-  id: 'main-content-anchor',
 })`
   background-color: #f2f2f2;
   padding-top: 10px;
@@ -92,13 +102,6 @@ export const RouteBody = styled.div.attrs({
 })`
   background-color: #f2f2f2;
   z-index: -2;
-  @media only screen and (max-width: 800px) {
-    padding-bottom: 60px;
-  }
-`;
-
-export const ContentBlock = styled.div`
-  padding-bottom: 120px;
   @media only screen and (max-width: 800px) {
     padding-bottom: 60px;
   }

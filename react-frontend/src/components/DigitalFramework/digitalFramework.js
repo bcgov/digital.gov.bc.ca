@@ -98,7 +98,7 @@ const DigitalFramework = () => {
 
   return (
     <DocumentTitle title="Digital Framework - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <div>
         <BannerSideImage
           title={'Digital Framework'}
           content={
@@ -106,7 +106,7 @@ const DigitalFramework = () => {
           }
           image={digitalFrameworkImage}
         />
-        <div>
+        <PageContainer>
           <DigitalFrameworkBlock
             title={titles[0]}
             paragraph={descriptions[0]}
@@ -234,8 +234,8 @@ const DigitalFramework = () => {
               />
             </DigitalBlock>
           </div>
-        </div>
-      </PageContainer>
+        </PageContainer>
+      </div>
     </DocumentTitle>
   );
 };

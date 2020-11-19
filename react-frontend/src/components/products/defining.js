@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
 
 import {
@@ -7,7 +7,7 @@ import {
   ProductPageSubHeading,
 } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
@@ -42,31 +42,29 @@ const cards = [
 
 const Defining = () => {
   return (
-    <ContentBlock id="definingProblems">
-      <Grid>
-        <Row>
-          <Col sm={12}>
-            <ProductPageHeading>
-              Here are some services to help you along this journey:
-            </ProductPageHeading>
-            <ProductPageSubHeading>
-              Defining problems, outcomes, value
-            </ProductPageSubHeading>
-            <p>
-              To truly improve something for people, it’s critical to take time
-              to understand them and be clear about what you want to achieve.
-            </p>
+    <ContentBlockContainer id="definingProblems">
+      <Row>
+        <Col sm={12}>
+          <ProductPageHeading>
+            Here are some services to help you along this journey:
+          </ProductPageHeading>
+          <ProductPageSubHeading>
+            Defining problems, outcomes, value
+          </ProductPageSubHeading>
+          <p>
+            To truly improve something for people, it’s critical to take time to
+            understand them and be clear about what you want to achieve.
+          </p>
+        </Col>
+      </Row>
+      <Row style={{ minHeight: '200px' }}>
+        {cards.map((element, i) => (
+          <Col key={i} sm={12} md={4}>
+            <ProductsCard content={element} />
           </Col>
-        </Row>
-        <Row style={{ minHeight: '200px' }}>
-          {cards.map((element, i) => (
-            <Col key={i} sm={12} md={4}>
-              <ProductsCard content={element} />
-            </Col>
-          ))}
-        </Row>
-      </Grid>
-    </ContentBlock>
+        ))}
+      </Row>
+    </ContentBlockContainer>
   );
 };
 

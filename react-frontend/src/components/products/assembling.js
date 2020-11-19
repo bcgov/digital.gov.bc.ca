@@ -1,10 +1,10 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
 
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
@@ -61,31 +61,29 @@ const cards = [
 
 const Assembling = () => {
   return (
-    <ContentBlock id="assemblingTeam">
-      <Grid>
-        <Row>
-          <Col sm={12}>
-            <ProductPageSubHeading>
-              Assembling and supporting your team
-            </ProductPageSubHeading>
-            <p>
-              Whatever technology solution you decide to pursue, you will need a
-              team of people with all the skills necessary to implement and
-              maintain it. Here are some services that can help you form that
-              team and set them up for success.
-            </p>
-            <p>Here are some services that might help you at this stage.</p>
+    <ContentBlockContainer id="assemblingTeam">
+      <Row>
+        <Col sm={12}>
+          <ProductPageSubHeading>
+            Assembling and supporting your team
+          </ProductPageSubHeading>
+          <p>
+            Whatever technology solution you decide to pursue, you will need a
+            team of people with all the skills necessary to implement and
+            maintain it. Here are some services that can help you form that team
+            and set them up for success.
+          </p>
+          <p>Here are some services that might help you at this stage.</p>
+        </Col>
+      </Row>
+      <Row style={{ minHeight: '250px' }}>
+        {cards.map((element, i) => (
+          <Col key={i} sm={12} md={3}>
+            <ProductsCard content={element} />
           </Col>
-        </Row>
-        <Row style={{ minHeight: '250px' }}>
-          {cards.map((element, i) => (
-            <Col key={i} sm={12} md={3}>
-              <ProductsCard content={element} />
-            </Col>
-          ))}
-        </Row>
-      </Grid>
-    </ContentBlock>
+        ))}
+      </Row>
+    </ContentBlockContainer>
   );
 };
 
