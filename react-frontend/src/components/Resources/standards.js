@@ -5,7 +5,10 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageSubHeading } from '../StyleComponents/headings';
-import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
+import {
+  HrefLinkStandalone,
+  ResourceLinkRow,
+} from '../StyleComponents/htmlTags';
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
 );
@@ -15,10 +18,10 @@ function Standards() {
     <ContentBlockContainer id="standards">
       <Row>
         <Col md={12} lg={4}>
-          <Row>
+          <ResourceLinkRow>
             <ResourcePageSubHeading>Technical</ResourcePageSubHeading>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -27,8 +30,8 @@ function Standards() {
               Accessiblity and Inclusion Toolkit
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -37,8 +40,8 @@ function Standards() {
               Ministry IM/IT Policies and Standards
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -47,13 +50,13 @@ function Standards() {
               Web Standards
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
+          </ResourceLinkRow>
         </Col>
         <Col md={12} lg={4}>
-          <Row>
+          <ResourceLinkRow>
             <ResourcePageSubHeading>Privacy</ResourcePageSubHeading>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -62,8 +65,8 @@ function Standards() {
               Privacy Management & Accountability Policy
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -72,8 +75,8 @@ function Standards() {
               Privacy and Personal Information
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -82,13 +85,13 @@ function Standards() {
               Privacy Impact Assessments
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
+          </ResourceLinkRow>
         </Col>
         <Col md={12} lg={4}>
-          <Row>
+          <ResourceLinkRow>
             <ResourcePageSubHeading>Security</ResourcePageSubHeading>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -97,8 +100,8 @@ function Standards() {
               Information Security Policy and Guidelines
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
-          <Row>
+          </ResourceLinkRow>
+          <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
@@ -107,7 +110,7 @@ function Standards() {
               Security Threat and Risk Assessments
               {linkIcon}
             </HrefLinkStandalone>
-          </Row>
+          </ResourceLinkRow>
         </Col>
       </Row>
     </ContentBlockContainer>
