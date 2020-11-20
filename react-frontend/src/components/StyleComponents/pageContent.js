@@ -41,16 +41,16 @@ export const SimplePageBody = styled.div.attrs({
 const HorizontalContainer = styled(Grid).attrs({
   className: 'horizontalAlignment',
 })`
-  margin: auto;
-  max-width: 1065px;
-  padding-left: 30px;
-  padding-right: 20px;
-  z-index: -2;
-  @media screen and (min-width: 800px) {
-    padding-left: 107px;
+  width: 100%;
+  padding: 0 16px;
+  @media screen and (min-width: 576px) {
+    max-width: 720px;
   }
-  @media screen and (max-width: 800px) {
-    padding-left: 15px;
+  @media screen and (min-width: 1100px) {
+    max-width: 960px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px;
   }
 `;
 
