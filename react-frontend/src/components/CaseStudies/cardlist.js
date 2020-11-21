@@ -1,8 +1,10 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import { useRouteMatch } from 'react-router-dom';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
 import HorizontalInfoCard from './horizontalinfocard';
+
+import { PageContainer } from '../StyleComponents/pageContent';
 
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
 const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
@@ -17,7 +19,7 @@ const descriptions = [
 const CardList = () => {
   let { url } = useRouteMatch();
   return (
-    <Grid>
+    <PageContainer>
       <Row>
         <Col sm={12}>
           <HorizontalInfoCard
@@ -49,7 +51,7 @@ const CardList = () => {
           />
         </Col>
       </Row>
-    </Grid>
+    </PageContainer>
   );
 };
 

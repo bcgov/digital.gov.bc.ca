@@ -1,7 +1,6 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
-import { Grid } from 'react-flexbox-grid';
 
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { DigitalPrinciplesHeading } from '../StyleComponents/headings';
@@ -12,7 +11,7 @@ const digitalPrinciplesImage = require('../../images/pngIllustrations/digitalPri
 function DigitalPrinciples() {
   return (
     <DocumentTitle title="Digital Principles - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <div>
         <GlobaStyleSize />
         <BannerSideImage
           title={
@@ -20,7 +19,7 @@ function DigitalPrinciples() {
           }
           image={digitalPrinciplesImage}
         />
-        <Grid>
+        <PageContainer>
           <p>
             The Digital Principles are meant to guide the work of individual
             public servants and vendor partners as the Province of British
@@ -191,8 +190,8 @@ function DigitalPrinciples() {
               .
             </em>
           </p>
-        </Grid>
-      </PageContainer>
+        </PageContainer>
+      </div>
     </DocumentTitle>
   );
 }
