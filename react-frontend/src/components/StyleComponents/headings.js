@@ -62,7 +62,6 @@ export const ResourcePageSubHeading = styled.h3.attrs({
 `;
 
 export const SimpleTextPageTitle = styled.h1`
-  padding-top: 200px;
   font-size: 3rem;
   font-weight: 700;
   margin-top: 30px;

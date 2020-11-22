@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import {
   BannerSideImageImg,
   BannerSideImgText,
@@ -8,10 +8,11 @@ import {
   BannerSideImgTitle,
   BannerSideImgSubTitle,
 } from '../../StyleComponents/bannerWithImage';
+import { BannerHorizontalContainer } from '../../StyleComponents/pageContent';
 
 const BannerSideImage = ({ content, image, title }) => {
   return (
-    <Grid>
+    <BannerHorizontalContainer>
       <Row middle="xs">
         <Col sm={12} md={6}>
           <BannerSideImgText>
@@ -23,7 +24,7 @@ const BannerSideImage = ({ content, image, title }) => {
           <BannerSideImageImg alt="" src={image} />
         </Col>
       </Row>
-    </Grid>
+    </BannerHorizontalContainer>
   );
 };
 

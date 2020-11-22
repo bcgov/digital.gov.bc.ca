@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Col, Row } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
 import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
@@ -15,32 +15,28 @@ const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',
   backgroundImage: MiningBannerImage,
   contacts: (
-    <div>
-      <Grid>
-        <Row>
-          <Col sm={12} md={6}>
-            <CaseStudiesInfoCard
-              title={'Aaron Unger'}
-              description={
-                'Product Owner, Mines Digital Services - Aaron.Unger@gov.bc.ca'
-              }
-              img={aaron}
-              height="550px"
-            />
-          </Col>
-          <Col sm={12} md={6}>
-            <CaseStudiesInfoCard
-              title={'Jillian Carruthers'}
-              description={
-                'Director, Digital Services - Jillian.Carruthers@gov.bc.ca'
-              }
-              img={jill}
-              height="550px"
-            />
-          </Col>
-        </Row>
-      </Grid>
-    </div>
+    <Row>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          title={'Aaron Unger'}
+          description={
+            'Product Owner, Mines Digital Services - Aaron.Unger@gov.bc.ca'
+          }
+          img={aaron}
+          height="550px"
+        />
+      </Col>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          title={'Jillian Carruthers'}
+          description={
+            'Director, Digital Services - Jillian.Carruthers@gov.bc.ca'
+          }
+          img={jill}
+          height="550px"
+        />
+      </Col>
+    </Row>
   ),
   description: (
     <p>
@@ -88,68 +84,64 @@ const MiningContent = {
     </div>
   ),
   others: (
-    <Grid>
-      <Row>
-        <Col sm={12} md={6}>
-          <CaseStudiesInfoCard
-            routePath={'/case-studies/farming-study'}
-            linkText={'Read more'}
-            title={'Helping farmers understand their soil'}
-            description={
-              'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
-            }
-            img={caseStudiesFarmingImg}
-            height="650px"
-          />
-        </Col>
-        <Col sm={12} md={6}>
-          <CaseStudiesInfoCard
-            routePath={'/case-studies/medical-study'}
-            linkText={'Read more'}
-            title={'Transforming the medical services plan'}
-            description={
-              'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
-            }
-            img={caseStudiesMSPImg}
-            height="650px"
-          />
-        </Col>
-      </Row>
-    </Grid>
+    <Row>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/farming-study'}
+          linkText={'Read more'}
+          title={'Helping farmers understand their soil'}
+          description={
+            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
+          }
+          img={caseStudiesFarmingImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/medical-study'}
+          linkText={'Read more'}
+          title={'Transforming the medical services plan'}
+          description={
+            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
+          }
+          img={caseStudiesMSPImg}
+          height="650px"
+        />
+      </Col>
+    </Row>
   ),
   outcomes: (
-    <div>
-      <ol>
-        <li>
-          <p>
-            <strong>Public-facing information portal.</strong> From 2017 to
-            2018, the Ministry developed and launched a user-friendly website
-            that helps people access inspection reports, permits, and other
-            reports on mining and the environment from multiple agencies.
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>Real-time mine data.</strong> Building on the success of the
-            public facing portal, the small, initial team doubled in size and
-            set its sights on developing a modern mine oversight system capable
-            of sharing real-time mine data and interacting directly with mines.
-            The new system reduces the time to gather a major mine’s regulatory
-            requirement submissions from over six hours to less than a minute
-          </p>
-        </li>
-        <li>
-          <p>
-            <strong>Ongoing product development.</strong> Using an iterative,
-            user-focused approach, the team is building a mine oversight system
-            that will be responsive to the needs of Ministry staff, the mining
-            industry, Indigenous communities, stakeholders, and the public. By
-            enhancing usability, efficiency, and transparency, this system will
-            transform the province’s regulation of mines.
-          </p>
-        </li>
-      </ol>
-    </div>
+    <ol>
+      <li>
+        <p>
+          <strong>Public-facing information portal.</strong> From 2017 to 2018,
+          the Ministry developed and launched a user-friendly website that helps
+          people access inspection reports, permits, and other reports on mining
+          and the environment from multiple agencies.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Real-time mine data.</strong> Building on the success of the
+          public facing portal, the small, initial team doubled in size and set
+          its sights on developing a modern mine oversight system capable of
+          sharing real-time mine data and interacting directly with mines. The
+          new system reduces the time to gather a major mine’s regulatory
+          requirement submissions from over six hours to less than a minute
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Ongoing product development.</strong> Using an iterative,
+          user-focused approach, the team is building a mine oversight system
+          that will be responsive to the needs of Ministry staff, the mining
+          industry, Indigenous communities, stakeholders, and the public. By
+          enhancing usability, efficiency, and transparency, this system will
+          transform the province’s regulation of mines.
+        </p>
+      </li>
+    </ol>
   ),
   resourceText: [
     'B.C Mine Information Website',
@@ -228,36 +220,32 @@ const FarmerContent = {
     </div>
   ),
   others: (
-    <div>
-      <Grid>
-        <Row>
-          <Col sm={12} md={6}>
-            <CaseStudiesInfoCard
-              routePath={'/case-studies/mining-study'}
-              linkText={'Read more'}
-              title={'Mines Digital Service'}
-              description={
-                'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
-              }
-              img={caseStudiesMiningImg}
-              height="650px"
-            />
-          </Col>
-          <Col sm={12} md={6}>
-            <CaseStudiesInfoCard
-              routePath={'/case-studies/medical-study'}
-              linkText={'Read more'}
-              title={'Transforming the medical services plan'}
-              description={
-                'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
-              }
-              img={caseStudiesMSPImg}
-              height="650px"
-            />
-          </Col>
-        </Row>
-      </Grid>
-    </div>
+    <Row>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/mining-study'}
+          linkText={'Read more'}
+          title={'Mines Digital Service'}
+          description={
+            'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
+          }
+          img={caseStudiesMiningImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/medical-study'}
+          linkText={'Read more'}
+          title={'Transforming the medical services plan'}
+          description={
+            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
+          }
+          img={caseStudiesMSPImg}
+          height="650px"
+        />
+      </Col>
+    </Row>
   ),
   outcomes: (
     <div>
@@ -346,36 +334,32 @@ const MedicalContent = {
     </div>
   ),
   others: (
-    <div>
-      <Grid>
-        <Row>
-          <Col sm={12} md={6}>
-            <CaseStudiesInfoCard
-              routePath={'/case-studies/mining-study'}
-              linkText={'Read more'}
-              title={'Mines Digital Service'}
-              description={
-                'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
-              }
-              img={caseStudiesMiningImg}
-              height="650px"
-            />
-          </Col>
-          <Col sm={12} md={6}>
-            <CaseStudiesInfoCard
-              routePath={'/case-studies/farming-study'}
-              linkText={'Read more'}
-              title={'Helping farmers understand their soil'}
-              description={
-                'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
-              }
-              img={caseStudiesFarmingImg}
-              height="650px"
-            />
-          </Col>
-        </Row>
-      </Grid>
-    </div>
+    <Row>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/mining-study'}
+          linkText={'Read more'}
+          title={'Mines Digital Service'}
+          description={
+            'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
+          }
+          img={caseStudiesMiningImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={6}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/farming-study'}
+          linkText={'Read more'}
+          title={'Helping farmers understand their soil'}
+          description={
+            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
+          }
+          img={caseStudiesFarmingImg}
+          height="650px"
+        />
+      </Col>
+    </Row>
   ),
   approach: (
     <div>
