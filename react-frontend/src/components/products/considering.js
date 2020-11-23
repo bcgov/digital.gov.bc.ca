@@ -18,8 +18,8 @@ const cards = [
       >
         Exchange Lab
       </HrefLink>
-      ,a community of digital experts who are working together to address urgent
-      challenges.
+      , a community of digital experts who are working together to address
+      urgent challenges.
     </p>
   </div>,
   <div>
