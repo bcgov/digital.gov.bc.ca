@@ -15,11 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Store PR Num in env
-      uses: actions/github-script@0.3.0
+      uses: actions/github-script@v3
       with:
         github-token: ${{github.token}}
         script: |
-          const core = require('@actions/core')
           const prNumber = ${{ github.event.inputs.prnumber }};
           core.exportVariable('PULL_NUMBER', prNumber);
           const env = "${{ github.event.inputs.environment }}";
@@ -36,10 +35,10 @@ jobs:
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     - name: build react app
-      run: ansible-playbook ansible/build-react-for-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+      run: ansible-playbook ansible/build-react-for-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v
     - name: deploy react app
-      run: ansible-playbook ansible/deploy-react-to-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV
+      run: ansible-playbook ansible/deploy-react-to-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -v
     - name: create github deployment to test/prod
-      run: ansible-playbook ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }}
+      run: ansible-playbook ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -v
 
     

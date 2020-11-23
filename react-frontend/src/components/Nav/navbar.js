@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import CovidBanner from '../../components/Nav/covidbanner';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
 import {
   NavBanner,
@@ -80,75 +80,69 @@ function NavBar() {
       <CovidBanner />
       <NavBarHeader>
         <NavBarContainer>
-          <Grid>
-            <Row middle="xs">
-              <Col xs={11}>
-                <NavBanner>
-                  <NavBarHeaderLink
-                    href="https://gov.bc.ca"
+          <Row middle="xs">
+            <Col xs={11}>
+              <NavBanner>
+                <NavBarHeaderLink
+                  href="https://gov.bc.ca"
+                  alt="Go to the Government of British Columbia website"
+                >
+                  <NavImage
+                    src={logoPath}
                     alt="Go to the Government of British Columbia website"
-                  >
-                    <NavImage
-                      src={logoPath}
-                      alt="Go to the Government of British Columbia website"
-                    />
-                  </NavBarHeaderLink>
-                  <NavTitle>Digital Government</NavTitle>
-                  <SkipToMainContent>Skip to main content</SkipToMainContent>
-                </NavBanner>
-              </Col>
-              <Col xs={1}>
-                <NavHamburgerButton onClick={toggleMenu} href=".">
-                  <FontAwesomeIcon icon={faBars} />
-                </NavHamburgerButton>
-              </Col>
-            </Row>
-          </Grid>
+                  />
+                </NavBarHeaderLink>
+                <NavTitle>Digital Government</NavTitle>
+                <SkipToMainContent>Skip to main content</SkipToMainContent>
+              </NavBanner>
+            </Col>
+            <Col xs={1}>
+              <NavHamburgerButton onClick={toggleMenu} href=".">
+                <FontAwesomeIcon icon={faBars} />
+              </NavHamburgerButton>
+            </Col>
+          </Row>
         </NavBarContainer>
       </NavBarHeader>
       <NavMain>
         <NavBarContainer>
-          <Grid>
-            <NavBarUl>
-              <NavBarLi>
-                <NavBarLinkFirst
-                  to="/"
-                  className={activePage === '/' ? 'active' : 'notactive'}
-                >
-                  Home
-                </NavBarLinkFirst>
-              </NavBarLi>
-              <NavBarLi>
-                <NavBarLink
-                  to="/resources"
-                  className={
-                    activePage === '/resources' ? 'active' : 'notactive'
-                  }
-                >
-                  Resources
-                </NavBarLink>
-              </NavBarLi>
-              <NavBarLi>
-                <NavBarLink
-                  to="/products-services"
-                  className={
-                    activePage === '/products-services' ? 'active' : 'notactive'
-                  }
-                >
-                  Products & Services
-                </NavBarLink>
-              </NavBarLi>
-              <NavBarLi>
-                <NavBarLinkExternal href="https://digital.gov.bc.ca/marketplace">
-                  Marketplace
-                  <FontAwesomeIcon
-                    icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px', height: 'inherit' }}
-                  />
-                </NavBarLinkExternal>
-              </NavBarLi>
-            </NavBarUl>
-          </Grid>
+          <NavBarUl>
+            <NavBarLi>
+              <NavBarLinkFirst
+                to="/"
+                className={activePage === '/' ? 'active' : 'notactive'}
+              >
+                Home
+              </NavBarLinkFirst>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
+                to="/resources"
+                className={activePage === '/resources' ? 'active' : 'notactive'}
+              >
+                Resources
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
+                to="/products-services"
+                className={
+                  activePage === '/products-services' ? 'active' : 'notactive'
+                }
+              >
+                Products & Services
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLinkExternal href="https://digital.gov.bc.ca/marketplace">
+                Marketplace
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px', height: 'inherit' }}
+                />
+              </NavBarLinkExternal>
+            </NavBarLi>
+          </NavBarUl>
         </NavBarContainer>
       </NavMain>
     </NavBarWrapper>

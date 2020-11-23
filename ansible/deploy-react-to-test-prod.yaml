@@ -13,4 +13,4 @@
       - name: check images
         include: ./tasks/check_image_exists-test-prod.yaml
       - name: Deploying to test/prod
-        include: ./tasks/deploy_react.yaml
+        include: ./tasks/deploy_react_test_prod.yaml
