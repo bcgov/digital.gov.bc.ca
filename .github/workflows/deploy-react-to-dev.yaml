@@ -1,13 +1,7 @@
 name: Deploy React To Dev
 on: 
-  pull_request:
+  [pull_request, push]
     paths:
-      - 'react-frontend/**'
-      - 'openshift/templates/react-frontend'
-      - 'ansible/build-react.yaml'
-      - 'ansible/deploy-react.yaml'
-  push:
-    paths: 
       - 'react-frontend/**'
       - 'openshift/templates/react-frontend'
       - 'ansible/build-react.yaml'
