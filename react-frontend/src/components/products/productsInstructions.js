@@ -11,8 +11,8 @@ const instructions = [
   </p>,
   <p>
     Identify and consider <b>different technology approaches</b> you might
-    pursue — for example, licensing and customizing a commercial digital product
-    or building a custom application from scratch
+    pursue — for example, licensing a commercial digital product or building a
+    custom application from scratch
   </p>,
   <p>
     Confirm <b>support and funding</b> to pursue your solution

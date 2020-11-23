@@ -10,7 +10,7 @@ const cards = [
   <div>
     <p>
       If you are facing an urgent service delivery challenge due to COVID-19,
-      connect with the Digital Response Unit through the{' '}
+      connect with the Digital Delivery Network through the{' '}
       <HrefLink
         href="mailto:exchangelab@gov.bc.ca"
         target="_blank"
@@ -18,8 +18,8 @@ const cards = [
       >
         Exchange Lab
       </HrefLink>
-      , a community of digital experts who are working together to address
-      urgent challenges.
+      ,a community of digital experts who are working together to address urgent
+      challenges.
     </p>
   </div>,
   <div>
