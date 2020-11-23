@@ -134,11 +134,24 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
             <NavBarLi>
-              <NavBarLinkExternal href="https://digital.gov.bc.ca/marketplace">
+              <NavBarLink
+                to="/case-studies"
+                className={
+                  activePage === '/case-studies' ? 'active' : 'notactive'
+                }
+              >
+                Case Studies
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLinkExternal
+                href="https://digital.gov.bc.ca/marketplace"
+                target="_blank"
+              >
                 Marketplace
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
-                  style={{ paddingLeft: '5px', height: 'inherit' }}
+                  style={{ paddingLeft: '5px', height: '25px' }}
                 />
               </NavBarLinkExternal>
             </NavBarLi>
