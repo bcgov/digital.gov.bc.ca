@@ -131,6 +131,16 @@ function NavBar() {
                 Products & Services
               </NavBarLink>
             </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
+                to="/case-studies"
+                className={
+                  activePage === '/case-studies' ? 'active' : 'notactive'
+                }
+              >
+                Case Studies
+              </NavBarLink>
+            </NavBarLi>
           </NavBarUl>
         </NavBarContainer>
       </NavMain>
