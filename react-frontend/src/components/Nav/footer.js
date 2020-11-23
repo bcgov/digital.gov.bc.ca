@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { FooterStyled, FooterContainer } from '../StyleComponents/pageContent';
 import {
   FooterLink,

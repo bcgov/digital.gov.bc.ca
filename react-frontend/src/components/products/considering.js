@@ -1,10 +1,10 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
 
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const cards = [
   <div>
@@ -66,41 +66,39 @@ const cards = [
 
 const Considering = () => {
   return (
-    <ContentBlock id="definingContainer">
-      <Grid>
-        <Row>
-          <Col sm={12}>
-            <ProductPageSubHeading>
-              Considering different technology approaches
-            </ProductPageSubHeading>
-            <p>
-              Depending on the complexity of your problem, you may apply a
-              variety of methods to discover appropriate solutions. If your
-              challenge is complex, you should take an{' '}
-              <HrefLink
-                href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Agile
-              </HrefLink>{' '}
-              approach—that is, form a small team to incrementally build your
-              solution, frequently testing it with users and reevaluating what
-              should be done next. On the other hand, if your challenge is
-              simple or complicated, adopting an existing solution with a bit of
-              customization may meet your needs..
-            </p>
+    <ContentBlockContainer id="definingContainer">
+      <Row>
+        <Col sm={12}>
+          <ProductPageSubHeading>
+            Considering different technology approaches
+          </ProductPageSubHeading>
+          <p>
+            Depending on the complexity of your problem, you may apply a variety
+            of methods to discover appropriate solutions. If your challenge is
+            complex, you should take an{' '}
+            <HrefLink
+              href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agile
+            </HrefLink>{' '}
+            approach—that is, form a small team to incrementally build your
+            solution, frequently testing it with users and reevaluating what
+            should be done next. On the other hand, if your challenge is simple
+            or complicated, adopting an existing solution with a bit of
+            customization may meet your needs..
+          </p>
+        </Col>
+      </Row>
+      <Row style={{ minHeight: '250px' }}>
+        {cards.map((element, i) => (
+          <Col key={i} sm={12} md={3}>
+            <ProductsCard content={element} />
           </Col>
-        </Row>
-        <Row style={{ minHeight: '250px' }}>
-          {cards.map((element, i) => (
-            <Col key={i} sm={12} md={3}>
-              <ProductsCard content={element} />
-            </Col>
-          ))}
-        </Row>
-      </Grid>
-    </ContentBlock>
+        ))}
+      </Row>
+    </ContentBlockContainer>
   );
 };
 

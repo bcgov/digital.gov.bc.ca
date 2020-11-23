@@ -6,8 +6,6 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
-
 const caseStudiesIllustration = require('../../images/pngIllustrations/caseStudiesWhite.png');
 
 const CaseStudies = () => {
@@ -16,14 +14,12 @@ const CaseStudies = () => {
     <DocumentTitle title="Case Studies - Digital Government - Province of British Columbia">
       <Switch>
         <Route exact path={path}>
-          <PageContainer>
-            <BannerSideImage
-              content="Learn how digital approaches are getting results here in British Columbia."
-              title="Case Studies"
-              image={caseStudiesIllustration}
-            />
-            <CardList />
-          </PageContainer>
+          <BannerSideImage
+            content="Learn how digital approaches are getting results here in British Columbia."
+            title="Case Studies"
+            image={caseStudiesIllustration}
+          />
+          <CardList />
         </Route>
         <Route path={path + '/:caseStudyId'} component={CaseStudy} />
       </Switch>

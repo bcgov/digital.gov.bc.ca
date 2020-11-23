@@ -30,7 +30,6 @@ objects:
           - deploymentconfigs/instantiate
         verbs:
           - create
-   
       - apiGroups:
           - build.openshift.io
           - ""
@@ -45,7 +44,6 @@ objects:
           - buildconfigs
         verbs:
           - patch
-    
       - apiGroups:
           - build.openshift.io
           - ""
@@ -167,7 +165,6 @@ objects:
           - replicationcontrollers/scale
         verbs:
           - update
-      
       - apiGroups:
           - ""
         attributeRestrictions: null
@@ -233,7 +230,268 @@ objects:
       name: ${NAME}-deployer-dev
       namespace: ${DEV_NAMESPACE}
       apiGroup: authorization.openshift.io
-
+  - apiVersion: authorization.openshift.io/v1
+    kind: Role
+    metadata:
+      name: ${NAME}-deployer-test
+      labels:
+        app: ${NAME}
+      namespace: ${TEST_NAMESPACE}
+    rules:
+      - apiGroups:
+          - template.openshift.io 
+        resources:
+          - processedtemplates
+        verbs:
+          - create
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers
+        verbs:
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers
+        verbs:
+          - get
+          - list
+          - update
+          - watch
+          - patch
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - pods
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - pods/log
+        verbs:
+          - get
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - events
+        verbs:
+          - list
+      - apiGroups:
+          - image.openshift.io
+          - ""
+        attributeRestrictions: null
+        resources:
+          - imagestreamtags
+        verbs:
+          - update
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers/scale
+          - configmaps
+          - secrets
+          - services
+        verbs:
+          - get
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers/scale
+        verbs:
+          - update
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - configmaps
+          - services
+        verbs:
+          - patch
+          - create
+          - patch
+          - delete
+      - apiGroups:
+          - "route.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - routes
+        verbs:
+          - get
+          - create
+          - patch
+          - delete
+      - apiGroups:
+          - "apps.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - deploymentconfigs
+        verbs:
+          - get
+          - list
+          - create
+          - patch
+          - delete
+          - update
+  - apiVersion: authorization.openshift.io/v1
+    kind: RoleBinding
+    metadata:
+      name: ${NAME}-deployer-test
+      labels:
+        app: ${NAME}
+      namespace: ${TEST_NAMESPACE}
+    subjects:
+      - kind: ServiceAccount
+        name: ${NAME}
+        namespace: ${TOOLS_NAMESPACE}
+    roleRef:
+      kind: Role
+      name: ${NAME}-deployer-test
+      namespace: ${TEST_NAMESPACE}
+      apiGroup: authorization.openshift.io
+  - apiVersion: authorization.openshift.io/v1
+    kind: Role
+    metadata:
+      name: ${NAME}-deployer-prod
+      labels:
+        app: ${NAME}
+      namespace: ${PROD_NAMESPACE}
+    rules:
+      - apiGroups:
+          - template.openshift.io 
+        resources:
+          - processedtemplates
+        verbs:
+          - create
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers
+        verbs:
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers
+        verbs:
+          - get
+          - list
+          - update
+          - watch
+          - patch
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - pods
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - pods/log
+        verbs:
+          - get
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - events
+        verbs:
+          - list
+      - apiGroups:
+          - image.openshift.io
+          - ""
+        attributeRestrictions: null
+        resources:
+          - imagestreamtags
+        verbs:
+          - update
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers/scale
+          - configmaps
+          - secrets
+          - services
+        verbs:
+          - get
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - replicationcontrollers/scale
+        verbs:
+          - update
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - configmaps
+          - services
+        verbs:
+          - patch
+          - create
+          - patch
+          - delete
+      - apiGroups:
+          - "route.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - routes
+        verbs:
+          - get
+          - create
+          - patch
+          - delete
+      - apiGroups:
+          - "apps.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - deploymentconfigs
+        verbs:
+          - get
+          - list
+          - create
+          - patch
+          - delete
+          - update
+  - apiVersion: authorization.openshift.io/v1
+    kind: RoleBinding
+    metadata:
+      name: ${NAME}-deployer-prod
+      labels:
+        app: ${NAME}
+      namespace: ${PROD_NAMESPACE}
+    subjects:
+      - kind: ServiceAccount
+        name: ${NAME}
+        namespace: ${PROD_NAMESPACE}
+    roleRef:
+      kind: Role
+      name: ${NAME}-deployer-prod
+      namespace: ${PROD_NAMESPACE}
+      apiGroup: authorization.openshift.io
 parameters:
   - displayName: Tools Namespace
     description: |
@@ -246,10 +504,22 @@ parameters:
       credentials are stored.
     name: DEV_NAMESPACE
     required: true
+  - displayName: Test Namespace
+    description: |
+      The namespace where all of components of the
+      credentials are stored.
+    name: TEST_NAMESPACE
+    required: true
+  - displayName: Prod Namespace
+    description: |
+      The namespace where all of components of the
+      credentials are stored.
+    name: PROD_NAMESPACE
+    required: true
   - displayName: Credentials Name
     description: |
       The name used for all components of the 
       credentials.
     name: NAME
     required: true
-    value: github-cicd
+    value: github-cicdv2

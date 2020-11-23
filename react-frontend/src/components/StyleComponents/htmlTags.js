@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
-import { Row } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
@@ -22,22 +22,33 @@ export const BreadcrumbUL = styled.ul`
   flex-direction: row;
   list-style: none;
   margin: 0;
-  margin-top: 111px;
-  @media screen and (max-width: 1120px) {
-    top: 130px;
-  }
+  padding-left: 0;
+  padding-top: 16px;
+`;
 
-  @media screen and (max-width: 280px) {
-    top: 218px;
-  }
+export const CovidCol = styled(Col)`
+  color: #fff;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 18px;
+`;
 
-  @media screen and (min-width: 280px) and (max-width: 430px) {
-    top: 188px;
+export const CovidLinkStyle = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener noreferrer',
+})`
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  :hover {
+    color: grey;
   }
+  text-decoration: underline;
+  }
+`;
 
-  @media screen and (min-width: 430px) and (max-width: 596px) {
-    top: 166px;
-  }
+export const CovidLinkStyleButton = styled(CovidLinkStyle)`
+  font-weight: bold;
+  text-decoration: none;
 `;
 
 export const DigitalFrameworkP = styled.p.attrs({
@@ -112,9 +123,9 @@ export const FooterUL = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
+  height: 46px; /* from Design System */
   list-style: none;
-  margin: 10px 0;
+  margin: 0;
   padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
 `;
 
@@ -245,8 +256,9 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 5px 0;
+  margin: 0;
   padding-left: 0;
+  padding-top: 8px;
   .active {
     font-weight: bold;
     text-decoration: underline;
@@ -255,4 +267,9 @@ export const NavBarUl = styled.ul.attrs({
   @media screen and (min-width: 800px) {
     flex-direction: row;
   }
+`;
+
+export const ResourceLinkRow = styled(Row)`
+  margin-left: 0;
+  margin-right: 16px;
 `;

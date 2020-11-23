@@ -3,8 +3,6 @@ import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import CardList from './cardlist';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
-
 const bannerContent = (
   <div>
     In this digital age, people expect fast and easy access to information and
@@ -23,14 +21,14 @@ const homeImage = require('../../images/pngIllustrations/digitalHomePageWhite.pn
 function Home() {
   return (
     <DocumentTitle title="Home - Digital Government - Province of British Columbia">
-      <PageContainer>
+      <div>
         <BannerSideImage
           content={bannerContent}
           title={bannerTitle}
           image={homeImage}
         />
         <CardList />
-      </PageContainer>
+      </div>
     </DocumentTitle>
   );
 }
