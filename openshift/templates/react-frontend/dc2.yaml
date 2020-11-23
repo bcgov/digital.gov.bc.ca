@@ -71,6 +71,17 @@ objects:
           securityContext: {}
           terminationGracePeriodSeconds: 30
       test: false
+      triggers:
+        - type: ConfigChange
+        - imageChangeParams:
+            automatic: true
+            containerNames:
+              - ${NAME}-${SUFFIX}
+            from:
+              kind: ImageStreamTag
+              name: '${IMAGE_STREAM}:${IMAGE_TAG}'
+              namespace: ${IMAGE_NAMESPACE}
+          type: ImageChange
     metadata:
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
