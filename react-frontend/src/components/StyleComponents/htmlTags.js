@@ -241,6 +241,29 @@ export const NavBarLink = styled(Link).attrs({
   }
 `;
 
+export const NavBarLinkExternal = styled.a.attrs({
+  className: 'navBarLink',
+})`
+  color: #fff;
+  display: flex;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal; /* 400 */
+  padding: 0 15px 0 15px;
+  text-decoration: none;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  :hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+  @media screen and (min-width: 800px) {
+    border-right: 1px solid #9b9b9b;
+  }
+`;
+
 export const NavBarLinkFirst = styled(NavBarLink).attrs({
   className: 'navBarLinkFirst',
 })`

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import CovidBanner from '../../components/Nav/covidbanner';
 import { Row, Col } from 'react-flexbox-grid';
@@ -19,6 +20,7 @@ import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
+  NavBarLinkExternal,
   NavBarLinkFirst,
   NavBarUl,
 } from '../StyleComponents/htmlTags';
@@ -130,6 +132,28 @@ function NavBar() {
               >
                 Products & Services
               </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
+                to="/case-studies"
+                className={
+                  activePage === '/case-studies' ? 'active' : 'notactive'
+                }
+              >
+                Case Studies
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLinkExternal
+                href="https://digital.gov.bc.ca/marketplace"
+                target="_blank"
+              >
+                Marketplace
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px', height: '25px' }}
+                />
+              </NavBarLinkExternal>
             </NavBarLi>
           </NavBarUl>
         </NavBarContainer>
