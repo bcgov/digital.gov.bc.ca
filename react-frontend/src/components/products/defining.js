@@ -31,7 +31,7 @@ const cards = [
   <div>
     <p>
       If you are trying to improve a <b>process</b>,{' '}
-      <HrefLink href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/lean-bc">
+      <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/lean-bc">
         LeanBC
       </HrefLink>{' '}
       can help you identify areas for improvement as you apply the Lean
