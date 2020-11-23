@@ -67,9 +67,9 @@ export const SimpleTextPageTitle = styled.h1`
   margin-top: 30px;
 `;
 export const Title2 = styled.h2`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 30px;
+  font-size: 31px;
+  font-weight: bold;
+  margin-bottom: 24px;
 `;
 export const Title3 = styled.h3`
   font-size: 2.5rem;
