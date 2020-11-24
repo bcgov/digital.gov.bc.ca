@@ -22,7 +22,7 @@ jobs:
         id: check
         uses: scherermichael-oss/action-has-permission@master
         with:
-          required-permission: write
+          required-permission: admin
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Use the output from the `check` step
