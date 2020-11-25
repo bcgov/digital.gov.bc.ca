@@ -1,13 +1,12 @@
 ---
-  # Check for write permission
-  - name: Check user permission
+  - name: Check user permission for owner
     id: check
     uses: scherermichael-oss/action-has-permission@master
     with:
       required-permission: admin
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  # Use the output from the `check` step
+
   - name: Run only if user has NOT sufficient permissions
     if: "! steps.check.outputs.has-permission"
     run: exit 1
