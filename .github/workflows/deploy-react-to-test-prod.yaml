@@ -39,7 +39,7 @@ jobs:
         required-permission: admin
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Run only if user has NOT sufficient permissions
+    - name: Cancel workflow if user does NOT have sufficient permissions
       if: "! steps.check.outputs.has-permission"
       run: exit 1
     - name: login to oc client

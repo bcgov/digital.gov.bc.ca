@@ -22,10 +22,6 @@
         include: ./tasks/check_if_should_build.yaml
         when: is_valid_author
 
-      - name: Check if valid admin for manual workflow
-        include: ./tasks/check_if_admin_for_manual_workflow.yaml
-        when: is_valid_author
-
       - debug:
           msg:
             - not rebuilding react project, the commits match
