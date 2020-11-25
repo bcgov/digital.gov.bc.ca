@@ -3,10 +3,7 @@ import DocumentTitle from 'react-document-title';
 
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { PageContainer } from '../StyleComponents/pageContent';
-import {
-  DigitalFrameworkP,
-  HrefLinkInternal,
-} from '../StyleComponents/htmlTags';
+import { StyledP, HrefLinkInternal } from '../StyleComponents/htmlTags';
 import { Link } from 'react-router-dom';
 const image404 = require('../../images/pngIllustrations/404.png');
 const bannerTitle = "Page not found. We're sorry, something is missing.";
@@ -18,10 +15,10 @@ function NotFound({ standards }) {
       <div>
         {standards ? (
           <PageContainer>
-            <DigitalFrameworkP style={{ fontSize: '32px', fontWeight: 'bold' }}>
+            <StyledP style={{ fontSize: '32px', fontWeight: 'bold' }}>
               Looking for "Standards and Guides"? They've moved{' '}
               <HrefLinkInternal to={'/resources'}>Here.</HrefLinkInternal>
-            </DigitalFrameworkP>
+            </StyledP>
           </PageContainer>
         ) : null}
         <BannerSideImage
@@ -30,16 +27,16 @@ function NotFound({ standards }) {
           image={image404}
         />
         <PageContainer>
-          <DigitalFrameworkP>
+          <StyledP>
             Suggestions to help you find what you’re looking for:
-          </DigitalFrameworkP>
-          <DigitalFrameworkP>
+          </StyledP>
+          <StyledP>
             Check that the web URL has been entered correctly Go to our Home
             Page and browse through our topics for the information you want.
-          </DigitalFrameworkP>
-          <DigitalFrameworkP>
+          </StyledP>
+          <StyledP>
             If you would like to email us, please contact digital.gov@gov.bc.ca.
-          </DigitalFrameworkP>
+          </StyledP>
         </PageContainer>
       </div>
     </DocumentTitle>

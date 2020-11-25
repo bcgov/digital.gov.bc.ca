@@ -4,10 +4,7 @@ import {
   DigitalFrameworkHeading,
   DigitalFrameworkSubHeading,
 } from '../StyleComponents/headings';
-import {
-  DigitalFrameworkP,
-  DigitalFrameworkRow,
-} from '../StyleComponents/htmlTags';
+import { StyledP, DigitalFrameworkRow } from '../StyleComponents/htmlTags';
 const DigitalFrameworkTable = (props) => {
   const initial = window.innerWidth < 800;
   const [isMobile, setIsMobile] = useState(initial);
@@ -36,13 +33,13 @@ const DigitalFrameworkTable = (props) => {
             Priority Action
           </DigitalFrameworkSubHeading>
         )}
-        <DigitalFrameworkP>{priorityAction}</DigitalFrameworkP>
+        <StyledP>{priorityAction}</StyledP>
       </Col>
       <Col sm={12} md={6}>
         {isMobile && (
           <DigitalFrameworkSubHeading>Objective</DigitalFrameworkSubHeading>
         )}
-        <DigitalFrameworkP>{props.objectives[i]}</DigitalFrameworkP>
+        <StyledP>{props.objectives[i]}</StyledP>
       </Col>
     </DigitalFrameworkRow>
   ));
