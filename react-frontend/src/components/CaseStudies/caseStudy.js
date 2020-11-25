@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import { MiningContent, FarmerContent, MedicalContent } from './content';
 import BannerWithImage from '../PageElements/Banners/bannerWithImage';
-
+import NotFound from '../NotFoundPage/notFoundPage';
 import {
   ContentBlockContainer,
   PageContainer,
@@ -33,7 +33,7 @@ const CaseStudy = () => {
   const resources = [];
 
   if (!content) {
-    return <BannerWithImage title={'Case Study Not Found'} />;
+    return <NotFound />;
   }
 
   if (content.resourceText) {
