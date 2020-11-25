@@ -18,12 +18,12 @@ describe('Cypress', () => {
     // Simple test which visits the app and checks for the home page title = Digital Government
     it('visits the app and checks for page title', () => {
         cy.visit('/');
-        cy.get('.pageHeader').get('.pageText').get('.pageTitle').should('have.text','Digital Government');
+        cy.get('.navTitle').should('have.text','Digital Government');
       });
 
     // Simple test which visits the app and checks the number of cards on the home page
     it('visits the app and checks for the card count', () => {
         cy.visit('/');
-        cy.get('.cardContainer').get('.cardGrid').find('.cardBody').should('have.length', 6);
+        cy.get('.cardRound').should('have.length', 6);
       });
   })
