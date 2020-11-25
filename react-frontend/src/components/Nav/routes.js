@@ -10,7 +10,7 @@ import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrincip
 // import GuidesPage from '../../components/Guides/guides';
 // import GuidePage from '../../components/Guides/guide';
 import BreadCrumbs from './breadcrumbs';
-import NotFound from '../NotFoundPage/notFoundPage'
+import NotFound from '../NotFoundPage/notFoundPage';
 
 const DisplayNames = {
   'case-studies': 'Case Studies',
@@ -29,10 +29,18 @@ const Routes = () => {
       <Switch>
         <Route exact path="/products-services" component={Products} />
         <Route exact path="/digital-framework" component={DigitalFramework} />
-        <Route exact path="/resources/digital-principles" component={DigitalPrinciples} />
+        <Route
+          exact
+          path="/resources/digital-principles"
+          component={DigitalPrinciples}
+        />
         <Route exact path="/resources" component={Resources} />
         <Route path="/case-studies" component={CaseStudies} />
-        <Route exact path="/guides/communication-platforms" component={CollaborationTools} />
+        <Route
+          exact
+          path="/guides/communication-platforms"
+          component={CollaborationTools}
+        />
         {/* This is a test guides page, KEEP comented out until strapi is implemented */}
         {/* 
         <Route path="/guides/:uid" exact>
@@ -41,8 +49,9 @@ const Routes = () => {
         <Route exact path="/guides" component={GuidesPage} /> 
         */}
         <Route exact path="/" component={Home} />
-        {/* TODO: REDIRECT STANDARDS AND GUIDES LINK TO RESOURCE PAGE */}
-        <Route path="/standards-and-guides" component={NotFound} />
+        <Route path="/standards-and-guides">
+          <NotFound standards />
+        </Route>
         <Route component={NotFound} />
       </Switch>
     </div>

@@ -180,6 +180,22 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   }
 `;
 
+export const HrefLinkInternal = styled(Link).attrs({
+  className: 'internalLink',
+})`
+  color: #1a5a96;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  :hover {
+    color: blue;
+    text-decoration: none;
+  }
+`;
+
 export const HrefLinkScrollTo = styled(ScrollTo).attrs({
   activeClass: 'active',
 })`
