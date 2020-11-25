@@ -32,6 +32,16 @@ jobs:
         rm oc.tar.gz
         oc version
         pip install openshift
+    - name: Check user permissions for admin
+      id: check
+      uses: scherermichael-oss/action-has-permission@master
+      with:
+        required-permission: admin
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Cancel workflow if user does NOT have sufficient permissions
+      if: "! steps.check.outputs.has-permission"
+      run: exit 1
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     - name: build react app
