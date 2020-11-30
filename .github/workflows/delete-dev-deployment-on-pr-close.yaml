@@ -1,0 +1,34 @@
+name: Delete Dev Deployment on PR close
+on: 
+  pull_request:
+    types: [closed]
+jobs:
+  run:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - name: Store PR Num in env
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{github.token}}
+        script: |
+          const prNumber = context.payload.number;
+          core.exportVariable('PULL_NUMBER', prNumber);
+    - name: install oc
+      # manually installing oc, i've opened up an issue with  github actions to include this since they
+      # already have kubectl https://github.com/actions/virtual-environments/issues/1083
+      run: |
+        
+        curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
+        tar xvzf oc.tar.gz 
+        ls -l
+        sudo mv oc /usr/local/bin
+        rm oc.tar.gz
+        oc version
+        pip install openshift
+    - name: login to oc client
+      run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
+    - name: delete react deployment
+      run: ansible-playbook ansible/clean_up_react_deployment.yaml -e PR=$PULL_NUMBER -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+    # TODO Add clean up steps for mongo and strapi deployments once those have been implemented.
+
