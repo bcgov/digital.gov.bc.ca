@@ -16,8 +16,10 @@ function NotFound({ standards }) {
         {standards ? (
           <PageContainer>
             <StyledP style={{ fontSize: '32px', fontWeight: 'bold' }}>
-              Looking for "Standards and Guides"? They've moved{' '}
-              <HrefLinkInternal to={'/resources'}>Here.</HrefLinkInternal>
+              Looking for "Standards and Guides"? They've moved to the{' '}
+              <HrefLinkInternal to={'/resources'}>
+                Resources Page.
+              </HrefLinkInternal>
             </StyledP>
           </PageContainer>
         ) : null}
@@ -31,8 +33,9 @@ function NotFound({ standards }) {
             Suggestions to help you find what you’re looking for:
           </StyledP>
           <StyledP>
-            Check that the web URL has been entered correctly Go to our Home
-            Page and browse through our topics for the information you want.
+            Check that the web URL has been entered correctly. Go to our{' '}
+            <HrefLinkInternal to={'/'}>Home Page</HrefLinkInternal> and browse
+            through our topics for the information you want.
           </StyledP>
           <StyledP>
             If you would like to email us, please contact digital.gov@gov.bc.ca.
