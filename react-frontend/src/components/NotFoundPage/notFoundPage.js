@@ -16,8 +16,10 @@ function NotFound({ standards }) {
         {standards ? (
           <PageContainer>
             <StyledP style={{ fontSize: '32px', fontWeight: 'bold' }}>
-              Looking for "Standards and Guides"? They've moved{' '}
-              <HrefLinkInternal to={'/resources'}>Here.</HrefLinkInternal>
+              Looking for "Standards and Guides"? They've moved to the{' '}
+              <HrefLinkInternal to={'/resources'}>
+                Resources Page.
+              </HrefLinkInternal>
             </StyledP>
           </PageContainer>
         ) : null}
