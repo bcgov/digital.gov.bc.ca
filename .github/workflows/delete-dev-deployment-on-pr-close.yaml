@@ -30,5 +30,4 @@ jobs:
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
     - name: delete react deployment
       run: ansible-playbook ansible/clean_up_react_deployment.yaml -e PR=$PULL_NUMBER -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-    # TODO Add clean up steps for mongo and strapi deployments once those have been implemented.
 
