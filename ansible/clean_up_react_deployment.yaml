@@ -9,5 +9,6 @@
       - name: check images
         include: ./tasks/check_image_exists.yaml
       - name: Delete PR Deployment
-        include: ./tasks/delete_react_deployment.yaml
-      # TODO delete the image, use delete_react_image.yaml
+        include: ./tasks/delete_deployment.yaml
+      - name: Delete PR images in tools name space.
+        include: ./tasks/delete_images.yaml

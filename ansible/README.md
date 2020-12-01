@@ -113,3 +113,11 @@ Usage:
 `ansible-playbook backup-restore-mongo.yaml -e PR=<pr num>`
 
 
+### Clean up the pods deployed in dev.
+When a PR is closed and the pods are no longer being used they can be deleted. Run this playbook in the ansible folder
+
+Options:
+- `PR` <number> this should be the open pull request number
+
+Usage:
+`ansible-playbook clean_up_react_deployment.yaml -e PR=<pr num>`
