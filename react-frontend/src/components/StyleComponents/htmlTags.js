@@ -51,15 +51,6 @@ export const CovidLinkStyleButton = styled(CovidLinkStyle)`
   text-decoration: none;
 `;
 
-export const DigitalFrameworkP = styled.p.attrs({
-  className: 'digitalParagraph',
-})`
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  position: relative;
-`;
-
 export const DigitalFrameworkRow = styled(Row).attrs({
   className: 'digitalRow',
 })`
@@ -170,6 +161,22 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
+  text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  :hover {
+    color: blue;
+    text-decoration: none;
+  }
+`;
+
+export const HrefLinkInternal = styled(Link).attrs({
+  className: 'internalLink',
+})`
+  color: #1a5a96;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-weight: bold;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -295,4 +302,12 @@ export const NavBarUl = styled.ul.attrs({
 export const ResourceLinkRow = styled(Row)`
   margin-left: 0;
   margin-right: 16px;
+`;
+
+export const StyledP = styled.p.attrs({
+  className: 'digitalParagraph',
+})`
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  position: relative;
 `;
