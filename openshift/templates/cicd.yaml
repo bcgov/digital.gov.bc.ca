@@ -522,4 +522,4 @@ parameters:
       credentials.
     name: NAME
     required: true
-    value: github-cicdv2
+    value: github-cicdv3
