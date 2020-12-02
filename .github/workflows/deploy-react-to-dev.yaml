@@ -6,12 +6,6 @@ on:
       - 'openshift/templates/react-frontend'
       - 'ansible/build-react.yaml'
       - 'ansible/deploy-react.yaml'
-  push:
-    paths: 
-      - 'react-frontend/**'
-      - 'openshift/templates/react-frontend'
-      - 'ansible/build-react.yaml'
-      - 'ansible/deploy-react.yaml'
 jobs:
   run:
     runs-on: ubuntu-18.04
