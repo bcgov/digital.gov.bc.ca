@@ -38,7 +38,8 @@ function NotFound({ standards }) {
             through our topics for the information you want.
           </StyledP>
           <StyledP>
-            If you would like to email us, please contact digital.gov@gov.bc.ca.
+            If you would like to email us, please contact{' '}
+            <HrefLinkInternal>Digital.Government@gov.bc.ca</HrefLinkInternal>.
           </StyledP>
         </PageContainer>
       </div>
