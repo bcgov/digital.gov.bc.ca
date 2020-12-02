@@ -6,7 +6,7 @@ jobs:
   run:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Store PR Num in env
       uses: actions/github-script@v3
       with:
