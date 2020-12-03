@@ -8,9 +8,9 @@
       deploy_params: "{{ lookup('template', './templates/deploy_react.param.j2') }}"
   - debug: msg="Image Tag has not been created yet or the build is still in progress. A rollout has been triggered and may fail a few times before be successful"
     when: not image_exists
-  - name: Cancel existing rollout
+  - name: Cancel existing rollout 
     shell: oc rollout cancel dc/{{ react_infra_name }}-{{ version }} -n {{ namespace }}
     when: image_exists
-  - name: Rolling Out
+  - name: Rolling Out 
     shell: oc rollout latest {{ react_infra_name }}-{{ version }} -n {{ namespace }}
       

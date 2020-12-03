@@ -1,8 +1,8 @@
 import React from 'react';
 import InfoCard from '../Home/infocard';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
 
 const descriptions = [
@@ -20,35 +20,33 @@ const links = [
 
 function DigitalCards() {
   return (
-    <ContentBlock id="standards">
-      <Grid>
-        <Row>
-          <Col sm={12}>
-            <ResourcePageHeading>Standards & Policy</ResourcePageHeading>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12} md={6}>
-            <InfoCard
-              title={'Digital Principles'}
-              description={descriptions[1]}
-              linkText={linkTexts[0]}
-              routePath={links[0]}
-              height="300px"
-            />
-          </Col>
-          <Col sm={12} md={6}>
-            <InfoCard
-              title={'IM/IT Policy Framework'}
-              description={descriptions[2]}
-              linkText={linkTexts[1]}
-              linkPath={links[1]}
-              height="300px"
-            />
-          </Col>
-        </Row>
-      </Grid>
-    </ContentBlock>
+    <ContentBlockContainer id="standards">
+      <Row>
+        <Col sm={12}>
+          <ResourcePageHeading>Standards & Policy</ResourcePageHeading>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={12} md={6}>
+          <InfoCard
+            title={'Digital Principles'}
+            description={descriptions[1]}
+            linkText={linkTexts[0]}
+            routePath={links[0]}
+            height="300px"
+          />
+        </Col>
+        <Col sm={12} md={6}>
+          <InfoCard
+            title={'IM/IT Policy Framework'}
+            description={descriptions[2]}
+            linkText={linkTexts[1]}
+            linkPath={links[1]}
+            height="300px"
+          />
+        </Col>
+      </Row>
+    </ContentBlockContainer>
   );
 }
 

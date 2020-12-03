@@ -1,12 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-import '../../css/casetemplates.css';
-
 import { MiningContent, FarmerContent, MedicalContent } from './content';
-import BannerWithImage from '../PageElements/BannerWithImage/bannerWithImage';
-
-import { ContentBlock } from '../StyleComponents/pageContent';
+import BannerWithImage from '../PageElements/Banners/bannerWithImage';
+import NotFound from '../NotFoundPage/notFoundPage';
+import {
+  ContentBlockContainer,
+  PageContainer,
+} from '../StyleComponents/pageContent';
 import { CaseStudyHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 
@@ -32,7 +33,7 @@ const CaseStudy = () => {
   const resources = [];
 
   if (!content) {
-    return <BannerWithImage title={'Case Study Not Found'} />;
+    return <NotFound />;
   }
 
   if (content.resourceText) {
@@ -56,43 +57,41 @@ const CaseStudy = () => {
           title={content.title}
           image={content.backgroundImage}
         />
-        <div className="pageBody">
-          {content.context && (
-            <ContentBlock>
-              <CaseStudyHeading>Context and Questions</CaseStudyHeading>
-              {content.context}
-            </ContentBlock>
-          )}
-          <ContentBlock>
-            <CaseStudyHeading>The Approach</CaseStudyHeading>
-            {content.approach}
-          </ContentBlock>
-          <ContentBlock>
-            <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
-            {content.outcomes}
-          </ContentBlock>
-          {content.additional && (
-            <ContentBlock>{content.additional}</ContentBlock>
-          )}
-          {resources.length !== 0 && (
-            <ContentBlock>
-              <CaseStudyHeading>
-                Resources and Related Information
-              </CaseStudyHeading>
-              <ul className="resourceLinkBox">{resources}</ul>
-            </ContentBlock>
-          )}
-          {content.contacts && (
-            <ContentBlock>
-              <CaseStudyHeading>For more information</CaseStudyHeading>
-              {content.contacts}
-            </ContentBlock>
-          )}
-          <div>
-            <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
-            <div>{content.others}</div>
-          </div>
-        </div>
+        {content.context && (
+          <ContentBlockContainer>
+            <CaseStudyHeading>Context and Questions</CaseStudyHeading>
+            {content.context}
+          </ContentBlockContainer>
+        )}
+        <ContentBlockContainer>
+          <CaseStudyHeading>The Approach</CaseStudyHeading>
+          {content.approach}
+        </ContentBlockContainer>
+        <ContentBlockContainer>
+          <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
+          {content.outcomes}
+        </ContentBlockContainer>
+        {content.additional && (
+          <ContentBlockContainer>{content.additional}</ContentBlockContainer>
+        )}
+        {resources.length !== 0 && (
+          <ContentBlockContainer>
+            <CaseStudyHeading>
+              Resources and Related Information
+            </CaseStudyHeading>
+            <ul>{resources}</ul>
+          </ContentBlockContainer>
+        )}
+        {content.contacts && (
+          <ContentBlockContainer>
+            <CaseStudyHeading>For more information</CaseStudyHeading>
+            {content.contacts}
+          </ContentBlockContainer>
+        )}
+        <PageContainer>
+          <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
+          <div>{content.others}</div>
+        </PageContainer>
       </div>
     </DocumentTitle>
   );

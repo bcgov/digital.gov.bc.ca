@@ -1,79 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { Alert } from 'antd';
+import React, { useState } from 'react';
+import { Row } from 'react-flexbox-grid';
+import { CovidAlert, NavBarContainer } from '../StyleComponents/pageContent';
 import {
-  EmptyBannerStyle,
-  CovidBannerStyle,
-  CovidButtonStyle,
-  CovidTextStyle,
+  CovidCol,
   CovidLinkStyle,
-} from '../StyleComponents/pageContent';
+  CovidLinkStyleButton,
+} from '../StyleComponents/htmlTags';
 import { InfoCircleFilled } from '@ant-design/icons';
-import { CloseOutlined } from '@ant-design/icons';
 
-function CovidBanner() {
+function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
+
+  const covidHealthLink =
+    'http://covid-19.bccdc.ca/?utm_campaign=20200323_GCPE_AM_COVID_7_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION';
+  const covidBCresponseLink =
+    'https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support?utm_campaign=20200323_GCPE_AM_COVID_8_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION';
+
+  const closeBanner = (event) => {
+    event.preventDefault();
+    setShowBanner(false);
+    const nav = document.getElementById('navbar');
+    nav.style.top = '67px';
+    const header = document.getElementById('navheader');
+    header.style.top = 0;
+  };
 
   if (showBanner) {
     return (
-      <CovidBannerStyle>
-        <div>
-          <Alert
-            style={{
-              backgroundColor: '#355992',
-              fontSize: '18px',
-              fontColor: 'white',
-              textAlign: 'center',
-            }}
-            message={
-              <CovidTextStyle>
-                <table align="center">
-                  <tr>
-                    <td width="8%" valign="top" align="right">
-                      <InfoCircleFilled />
-                    </td>
-                    <td width="80%">
-                      {' '}
-                      B.C. has declared a state of emergency. Learn about{' '}
-                      <CovidLinkStyle href="http://covid-19.bccdc.ca/?utm_campaign=20200323_GCPE_AM_COVID_7_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION">
-                        COVID-19 health issues.
-                      </CovidLinkStyle>{' '}
-                      |{' '}
-                      <CovidLinkStyle href="https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support?utm_campaign=20200323_GCPE_AM_COVID_8_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION">
-                        B.C.'s response to COVID-19.{' '}
-                      </CovidLinkStyle>
-                    </td>
-                    <td width="10%" align="center" valign="top">
-                      <CovidButtonStyle>
-                        <a
-                          href=""
-                          onClick={(event) => {
-                            event.preventDefault();
-                            setShowBanner(false);
-                            const nav = document.getElementById('navbar');
-                            nav.style.top = '65px';
-                            const header = document.getElementById('navheader');
-                            header.style.top = 0;
-                          }}
-                        >
-                          <font color="white">X</font>
-                        </a>
-                      </CovidButtonStyle>
-                    </td>
-                  </tr>
-                </table>
-              </CovidTextStyle>
-            }
-          />
-        </div>
-      </CovidBannerStyle>
+      <CovidAlert
+        message={
+          <NavBarContainer>
+            <Row>
+              <CovidCol xs={1}>
+                <InfoCircleFilled
+                  style={{ float: 'right', fontSize: '1.5em' }}
+                />
+              </CovidCol>
+              <CovidCol xs={10}>
+                B.C. has declared a state of emergency. Learn about{' '}
+                <CovidLinkStyle href={covidHealthLink}>
+                  COVID-19 health issues.
+                </CovidLinkStyle>{' '}
+                |{' '}
+                <CovidLinkStyle href={covidBCresponseLink}>
+                  B.C.'s response to COVID-19.
+                </CovidLinkStyle>
+              </CovidCol>
+              <CovidCol xs={1}>
+                <CovidLinkStyleButton onClick={closeBanner}>
+                  X
+                </CovidLinkStyleButton>
+              </CovidCol>
+            </Row>
+          </NavBarContainer>
+        }
+      />
     );
   }
 
-  return (
-    <EmptyBannerStyle>
-      <div></div>
-    </EmptyBannerStyle>
-  );
+  return <div className="dismissedCovidBanner" />;
 }
 
 export default CovidBanner;

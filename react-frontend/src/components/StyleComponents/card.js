@@ -1,8 +1,64 @@
 import styled from 'styled-components';
+import { Card } from 'antd';
+
+const cardBorderRadius = '25px';
+
+export const CardStyled = styled(Card).attrs({
+  className: 'cardRound',
+})`
+  border-radius: ${cardBorderRadius};
+  height: 95%;
+  margin-bottom: 20px;
+  width: 100%;
+`;
+
+export const CardHorizontal = styled.div.attrs({
+  className: 'cardHorizontal',
+})`
+  display: block;
+  margin-bottom: 20px;
+  @media only screen and (min-width: 768px) {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+  }
+`;
 
 export const CardHorizontalDescription = styled.p.attrs({
   className: 'cardHorizonalDescription',
-})``;
+})`
+  margin-bottom: 25px;
+`;
+
+export const CardHorizontalImage = styled.div.attrs({
+  className: 'cardHorizontalImage',
+})`
+  background-image: url(${(props) => props.backgroundImage});
+  background-position: center;
+  background-size: cover;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  height: 200px;
+  width: 100%;
+  @media only screen and (min-width: 768px) {
+    border-radius: ${cardBorderRadius} 0 0 ${cardBorderRadius};
+    height: initial;
+    width: 50%;
+  }
+`;
+
+export const CardHorizontalText = styled.div.attrs({
+  className: 'cardHorizontalText',
+})`
+  border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
+  background: #fff;
+  height: fit-content;
+  padding: 24px;
+  text-align: left;
+  @media only screen and (min-width: 768px) {
+    border-radius: 0 ${cardBorderRadius} ${cardBorderRadius} 0;
+    width: 50%;
+  }
+`;
 
 export const CardHorizontalTitle = styled.h5.attrs({
   className: 'cardHorizontalTitle',
@@ -10,8 +66,12 @@ export const CardHorizontalTitle = styled.h5.attrs({
   font-family: 'BC Sans';
   font-size: 31px;
   font-weight: bold;
-  line-height: 41px;
+  line-height: 1.2;
   position: relative;
+  @media only screen and (max-width: 800px) {
+    font-size: 22px;
+    line-height: 1.25;
+  }
 `;
 
 export const CardDescription = styled.p.attrs({
@@ -20,16 +80,42 @@ export const CardDescription = styled.p.attrs({
   padding-bottom: 25px;
 `;
 
+export const CardImg = styled.img.attrs({
+  className: 'cardImage',
+})`
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0 !important;
+  height: auto;
+  max-width: 100%;
+  min-height: 330px;
+  min-width: 100%;
+  object-fit: cover;
+`;
+
+export const CardIllustration = styled.img.attrs({
+  className: 'cardIllustration',
+})`
+  padding: 25px;
+`;
+
+export const CardLinkDiv = styled.div.attrs({
+  className: 'cardLink',
+})`
+  bottom: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+`;
+
 export const CardTitle = styled.h5.attrs({
   className: 'cardTitle',
 })`
   font-family: 'BC Sans';
   font-size: 31px;
   font-weight: bold;
-  line-height: 44px;
+  line-height: 1.2;
   position: relative;
   @media only screen and (max-width: 800px) {
     font-size: 22px;
-    margin-top: -10px;
+    line-height: 1.25;
   }
 `;

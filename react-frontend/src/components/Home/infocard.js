@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { Card } from 'antd';
-import '../../css/card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { CardTitle, CardDescription } from '../StyleComponents/card';
+import {
+  CardTitle,
+  CardDescription,
+  CardIllustration,
+  CardLinkDiv,
+  CardStyled,
+} from '../StyleComponents/card';
 import {
   HrefLinkStandalone,
   HrefLinkStandaloneInternal,
@@ -29,71 +32,62 @@ function InfoCard({
 
   if (img != null) {
     return (
-      <Card
-        style={{ height: '95%', width: '100%' }}
-        className="cardBody overFlowHidden"
-        cover={
-          <div className="cardImageContainer">
-            <img className="cardImage" alt="" src={img} />
-          </div>
-        }
+      <CardStyled
+        style={{ overflow: 'hidded' }}
+        cover={<CardIllustration alt="" src={img} />}
       >
-        <div className="cardText">
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
-          <div className="cardLink">
-            {isRouteCard ? (
-              <HrefLinkStandaloneInternal to={routePath}>
-                {linkText}
-              </HrefLinkStandaloneInternal>
-            ) : (
-              <HrefLinkStandalone
-                href={linkPath}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {linkText}
-                {linkPath && (
-                  <FontAwesomeIcon
-                    icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px' }}
-                  />
-                )}
-              </HrefLinkStandalone>
-            )}
-          </div>
-        </div>
-      </Card>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+        <CardLinkDiv>
+          {isRouteCard ? (
+            <HrefLinkStandaloneInternal to={routePath}>
+              {linkText}
+            </HrefLinkStandaloneInternal>
+          ) : (
+            <HrefLinkStandalone
+              href={linkPath}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {linkText}
+              {linkPath && (
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px' }}
+                />
+              )}
+            </HrefLinkStandalone>
+          )}
+        </CardLinkDiv>
+      </CardStyled>
     );
   } else {
     return (
-      <Card className="cardBody" style={{ height: '95%', width: '100%' }}>
-        <div className="cardText">
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
-          <div className="cardLink">
-            {isRouteCard ? (
-              <HrefLinkStandaloneInternal to={routePath}>
-                {linkText}
-              </HrefLinkStandaloneInternal>
-            ) : (
-              <HrefLinkStandalone
-                href={linkPath}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {linkText}
-                {linkPath && (
-                  <FontAwesomeIcon
-                    icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px' }}
-                  />
-                )}
-              </HrefLinkStandalone>
-            )}
-          </div>
-        </div>
-      </Card>
+      <CardStyled>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+        <CardLinkDiv>
+          {isRouteCard ? (
+            <HrefLinkStandaloneInternal to={routePath}>
+              {linkText}
+            </HrefLinkStandaloneInternal>
+          ) : (
+            <HrefLinkStandalone
+              href={linkPath}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {linkText}
+              {linkPath && (
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px' }}
+                />
+              )}
+            </HrefLinkStandalone>
+          )}
+        </CardLinkDiv>
+      </CardStyled>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 
-import { ContentBlock } from '../StyleComponents/pageContent';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const instructions = [
   <p>
@@ -11,8 +11,8 @@ const instructions = [
   </p>,
   <p>
     Identify and consider <b>different technology approaches</b> you might
-    pursue — for example, licensing and customizing a commercial digital product
-    or building a custom application from scratch
+    pursue — for example, licensing a commercial digital product or building a
+    custom application from scratch
   </p>,
   <p>
     Confirm <b>support and funding</b> to pursue your solution
@@ -34,19 +34,17 @@ const ProductsInstructions = () => {
   }
 
   return (
-    <ContentBlock id="productInstructions">
-      <Grid>
-        <Row>
-          <Col sm={12}>
-            <p>
-              Before you’re ready to create or improve a digital service, you
-              will need to:
-            </p>
-          </Col>
-        </Row>
-        <Row>{cols}</Row>
-      </Grid>
-    </ContentBlock>
+    <ContentBlockContainer id="productInstructions">
+      <Row>
+        <Col sm={12}>
+          <p>
+            Before you’re ready to create or improve a digital service, you will
+            need to:
+          </p>
+        </Col>
+      </Row>
+      <Row>{cols}</Row>
+    </ContentBlockContainer>
   );
 };
 

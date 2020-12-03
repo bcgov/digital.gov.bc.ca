@@ -1,22 +1,20 @@
 import React from 'react';
 
 import {
-  BannerImage,
   BannerSubTitle,
   BannerTextWrapper,
-  BannerText,
   BannerTitle,
   BannerWithImageWrapper,
 } from '../../StyleComponents/bannerWithImage';
-
+import { BannerHorizontalContainer } from '../../StyleComponents/pageContent';
 const BannerWithImage = ({ content, image, title }) => {
   return (
     <BannerWithImageWrapper backgroundImage={image}>
       <BannerTextWrapper>
-        <BannerText>
+        <BannerHorizontalContainer>
           <BannerTitle>{title}</BannerTitle>
           <BannerSubTitle>{content}</BannerSubTitle>
-        </BannerText>
+        </BannerHorizontalContainer>
       </BannerTextWrapper>
     </BannerWithImageWrapper>
   );

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
+import { Row, Col } from 'react-flexbox-grid';
 
-// This file contains styling for Link, a, ul, li, col, row html tags
+// This file contains styling for Link, a, ul, li, col, row, p html tags
 
 export const BreadcrumbLI = styled.li`
   display: flex;
@@ -21,6 +22,44 @@ export const BreadcrumbUL = styled.ul`
   flex-direction: row;
   list-style: none;
   margin: 0;
+  padding-left: 0;
+  padding-top: 16px;
+`;
+
+export const CovidCol = styled(Col)`
+  color: #fff;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 18px;
+`;
+
+export const CovidLinkStyle = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener noreferrer',
+})`
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  :hover {
+    color: grey;
+  }
+  text-decoration: underline;
+  }
+`;
+
+export const CovidLinkStyleButton = styled(CovidLinkStyle)`
+  font-weight: bold;
+  text-decoration: none;
+`;
+
+export const DigitalFrameworkRow = styled(Row).attrs({
+  className: 'digitalRow',
+})`
+  border-bottom: ${(props) => (props.underlined ? 'solid thin black' : '')};
+  padding-bottom: 25px;
+  padding-top: 20px;
+  @media only screen and (max-width: 800px) {
+    padding-top: 15px;
+  }
 `;
 
 export const FooterLink = styled.a.attrs({
@@ -34,8 +73,7 @@ export const FooterLink = styled.a.attrs({
     text-decoration: underline;
   }
   :focus {
-    outline-offset: 1px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   @media only screen and (max-width: 900px) {
     font-size: 12px;
@@ -53,8 +91,7 @@ export const FooterLinkInternal = styled(Link).attrs({
     text-decoration: underline;
   }
   :focus {
-    outline-offset: 1px;
-    outline: 4px solid #3b99fc;
+    outline: -webkit-focus-ring-color auto 5px;
   }
   @media only screen and (max-width: 900px) {
     font-size: 12px;
@@ -77,9 +114,9 @@ export const FooterUL = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
+  height: 46px; /* from Design System */
   list-style: none;
-  margin: 10px 0;
+  margin: 0;
   padding-left: 0 !important; /* cancels default padding-inline-start for unordered lists */
 `;
 
@@ -89,6 +126,9 @@ export const HrefLink = styled.a.attrs({
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -104,6 +144,9 @@ export const HrefLinkStandalone = styled.a.attrs({
   font-weight: bold;
   margin-bottom: 16px;
   text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -119,6 +162,25 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   font-weight: bold;
   margin-bottom: 16px;
   text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  :hover {
+    color: blue;
+    text-decoration: none;
+  }
+`;
+
+export const HrefLinkInternal = styled(Link).attrs({
+  className: 'internalLink',
+})`
+  color: #1a5a96;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -131,6 +193,9 @@ export const HrefLinkScrollTo = styled(ScrollTo).attrs({
   color: #1a5a96;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   text-decoration: underline;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
   :hover {
     color: blue;
     text-decoration: none;
@@ -146,6 +211,9 @@ export const NavBarHeaderLink = styled.a.attrs({
   font-style: bold;
   line-height: 1;
   padding: 5px;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
 `;
 
 export const NavBarLi = styled.li.attrs({
@@ -167,6 +235,32 @@ export const NavBarLink = styled(Link).attrs({
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
   text-decoration: none;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  :hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+  @media screen and (min-width: 800px) {
+    border-right: 1px solid #9b9b9b;
+  }
+`;
+
+export const NavBarLinkExternal = styled.a.attrs({
+  className: 'navBarLink',
+})`
+  color: #fff;
+  display: flex;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal; /* 400 */
+  padding: 0 15px 0 15px;
+  text-decoration: none;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
   :hover {
     color: #fff;
     text-decoration: underline;
@@ -192,8 +286,9 @@ export const NavBarUl = styled.ul.attrs({
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 5px 0;
+  margin: 0;
   padding-left: 0;
+  padding-top: 8px;
   .active {
     font-weight: bold;
     text-decoration: underline;
@@ -202,4 +297,17 @@ export const NavBarUl = styled.ul.attrs({
   @media screen and (min-width: 800px) {
     flex-direction: row;
   }
+`;
+
+export const ResourceLinkRow = styled(Row)`
+  margin-left: 0;
+  margin-right: 16px;
+`;
+
+export const StyledP = styled.p.attrs({
+  className: 'digitalParagraph',
+})`
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  position: relative;
 `;

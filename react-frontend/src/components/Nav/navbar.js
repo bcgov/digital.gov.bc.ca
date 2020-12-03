@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import CovidBanner from '../../components/Nav/covidbanner';
+import { Row, Col } from 'react-flexbox-grid';
 
 import {
   NavBanner,
   NavBarHeader,
-  NavContentOnRight,
+  NavBarWrapper,
   NavImage,
   NavHamburgerButton,
   NavMain,
@@ -17,6 +20,7 @@ import {
   NavBarHeaderLink,
   NavBarLi,
   NavBarLink,
+  NavBarLinkExternal,
   NavBarLinkFirst,
   NavBarUl,
 } from '../StyleComponents/htmlTags';
@@ -72,27 +76,32 @@ function NavBar() {
   let logoPath = isMobile ? mobileImg : desktopImg;
 
   return (
-    <div>
+    <NavBarWrapper>
+      <CovidBanner />
       <NavBarHeader>
         <NavBarContainer>
-          <NavBanner>
-            <NavBarHeaderLink
-              href="https://gov.bc.ca"
-              alt="Go to the Government of British Columbia website"
-            >
-              <NavImage
-                src={logoPath}
-                alt="Go to the Government of British Columbia website"
-              />
-            </NavBarHeaderLink>
-            <NavTitle>Digital Government</NavTitle>
-            <SkipToMainContent>Skip to main content</SkipToMainContent>
-          </NavBanner>
-          <NavContentOnRight>
-            <NavHamburgerButton onClick={toggleMenu} href=".">
-              <FontAwesomeIcon icon={faBars} />
-            </NavHamburgerButton>
-          </NavContentOnRight>
+          <Row middle="xs">
+            <Col xs={11}>
+              <NavBanner>
+                <NavBarHeaderLink
+                  href="https://gov.bc.ca"
+                  alt="Go to the Government of British Columbia website"
+                >
+                  <NavImage
+                    src={logoPath}
+                    alt="Go to the Government of British Columbia website"
+                  />
+                </NavBarHeaderLink>
+                <NavTitle>Digital Government</NavTitle>
+                <SkipToMainContent>Skip to main content</SkipToMainContent>
+              </NavBanner>
+            </Col>
+            <Col xs={1}>
+              <NavHamburgerButton onClick={toggleMenu} href=".">
+                <FontAwesomeIcon icon={faBars} />
+              </NavHamburgerButton>
+            </Col>
+          </Row>
         </NavBarContainer>
       </NavBarHeader>
       <NavMain>
@@ -124,10 +133,32 @@ function NavBar() {
                 Products & Services
               </NavBarLink>
             </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
+                to="/case-studies"
+                className={
+                  activePage === '/case-studies' ? 'active' : 'notactive'
+                }
+              >
+                Case Studies
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLinkExternal
+                href="https://digital.gov.bc.ca/marketplace"
+                target="_blank"
+              >
+                Marketplace
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px', height: '25px' }}
+                />
+              </NavBarLinkExternal>
+            </NavBarLi>
           </NavBarUl>
         </NavBarContainer>
       </NavMain>
-    </div>
+    </NavBarWrapper>
   );
 }
 
