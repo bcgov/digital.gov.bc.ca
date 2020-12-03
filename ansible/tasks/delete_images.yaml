@@ -1,0 +1,5 @@
+---  
+  - name: Delete {{ react_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
+    shell: >
+      oc delete -n "{{ image_namespace }}" all --selector pr={{ PR }}
+  - debug: msg="Attempt to delete PR images failed"  
