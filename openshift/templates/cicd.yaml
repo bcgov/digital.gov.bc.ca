@@ -486,7 +486,7 @@ objects:
     subjects:
       - kind: ServiceAccount
         name: ${NAME}
-        namespace: ${PROD_NAMESPACE}
+        namespace: ${TOOLS_NAMESPACE}
     roleRef:
       kind: Role
       name: ${NAME}-deployer-prod
