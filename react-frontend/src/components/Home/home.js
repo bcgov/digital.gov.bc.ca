@@ -14,7 +14,7 @@ const bannerContent = (
   </div>
 );
 
-const bannerTitle = 'Digital Government';
+const bannerTitle = 'FAKE HOME PAGE DONT MERT THIS';
 
 const homeImage = require('../../images/pngIllustrations/digitalHomePageWhite.png');
 
