@@ -12,9 +12,9 @@ function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
 
   const covidHealthLink =
-    'http://covid-19.bccdc.ca/?utm_campaign=20200323_GCPE_AM_COVID_7_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION';
+    'https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support/restrictions?utm_campaign=20201118_GCPE_AM_COVID_1_NOTIFICATION_BCGOV_BCGOV_EN_BC__NOTIFICATION';
   const covidBCresponseLink =
-    'https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support?utm_campaign=20200323_GCPE_AM_COVID_8_NOTIFICATION_WORDPRESS_BCGOV_EN_BC__NOTIFICATION';
+    'https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support?utm_campaign=20200506_GCPE_AM_COVID_9_NOTIFICATION_BCGOV_BCGOV_EN_BC__NOTIFICATION';
 
   const closeBanner = (event) => {
     event.preventDefault();
@@ -37,13 +37,13 @@ function CovidBanner(props) {
                 />
               </CovidCol>
               <CovidCol xs={10}>
-                B.C. has declared a state of emergency. Learn about{' '}
-                <CovidLinkStyle href={covidHealthLink}>
-                  COVID-19 health issues.
+                B.C. has declared a state of emergency.{' '}
+                <CovidLinkStyle href={covidBCresponseLink}>
+                  Our response to COVID-19
                 </CovidLinkStyle>{' '}
                 |{' '}
-                <CovidLinkStyle href={covidBCresponseLink}>
-                  B.C.'s response to COVID-19.
+                <CovidLinkStyle href={covidHealthLink}>
+                  Province-wide restrictions
                 </CovidLinkStyle>
               </CovidCol>
               <CovidCol xs={1}>
