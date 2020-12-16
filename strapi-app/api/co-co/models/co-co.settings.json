@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "co_cos",
+  "info": {
+    "name": "CoCo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
