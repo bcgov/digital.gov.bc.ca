@@ -198,6 +198,13 @@ objects:
           - patch
           - delete
           - update
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - ResourceAll
+        verbs:
+          - list
   - apiVersion: authorization.openshift.io/v1
     kind: RoleBinding
     metadata:
