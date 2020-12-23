@@ -17,6 +17,39 @@
     "Description": {
       "type": "richtext",
       "required": true
+    },
+    "ProjectStatus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.co-co-development-status"
+    },
+    "Tags": {
+      "collection": "tag",
+      "via": "co_cos",
+      "dominant": true
+    },
+    "TeamNameAndMinistry": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "costs": {
+      "unique": true,
+      "collection": "cost",
+      "via": "co_cos",
+      "dominant": true
+    },
+    "NumberOfUsers": {
+      "type": "integer"
+    },
+    "OnboardingTime": {
+      "type": "enumeration",
+      "enum": [
+        "hours",
+        "days",
+        "weeks",
+        "months"
+      ]
     }
   }
 }

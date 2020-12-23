@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "costs",
+  "info": {
+    "name": "Cost"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "cost": {
+      "type": "string",
+      "required": false
+    },
+    "co_cos": {
+      "via": "costs",
+      "collection": "co-co"
+    }
+  }
+}
