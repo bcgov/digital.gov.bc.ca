@@ -38,7 +38,7 @@ A line of text that describes the team and ministry.
 
 ### CoCoTag `optional`
 
-This is a multiselect field that adds common tags to the CoCo. For example: API, Code, Instruction, Service.  To add items to this multi-select, got to the CoCoTag content type and add it.  The new tag will appear in the CoCo dropdown.
+This is a multiselect field that adds common tags to the CoCo. For example: API, Code, Instruction, Service, Form.  To add items to this multi-select, got to the CoCoTag content type and add it.  The new tag will appear in the CoCo dropdown.
 
 ### Cost `at least 1 required`
 
@@ -56,7 +56,7 @@ Select the best estimate for the time needed to implement a given coco.  (hours 
 
 What schedule is the support team available.
 
-## Fields NOT displayed on CoCo Card
+## Fields displayed on the CoCo page, but NOT displayed on CoCo Card.
 
 ### CoCo image `required`
 
@@ -72,22 +72,44 @@ This is a tag associated with the ministries using the CoCo
 
 ### Component Creation Date `required`
 
-A best estimate of when the component was created.  Currently strapi only has a date picker, if the content managed is unsure of the exact realease date the closest month is fine.
+A best estimate of when the component was created.  Currently strapi only has a date picker, if the content manager is unsure of the exact realease date the closest month is fine.
 
 ### WhyShouldIUseThis `3 required`
 
+Three of these components are needed on each CoCo to advertise it's best features. It has three fields:
 
-
-### Number of Functions Performed NOT SURE HOW TO DO THIS
+- Icon: An icon representing the motivation (e.g. a clock for time saving)
+- Heading: Eye catching headline of a few words.
+- Details: Slightly longer text giving more details.
 
 ### ServiceLevelSupport `1 required more possible`
 
+Details about support provided for the component.  
+
 ### Additional Technical Information `1 required more possible`
+
+Directs interested parties to other technical docs.  Two fields
+
+- Header: Text describing the technical info.
+- Link: A url link to the documentation.
 
 ### Requirements and Restrictions `1 required more possible`
 
+Directs interested parties to other any additional documentation about requirements and restrictions.  Two fields
+
+- Header: Text describing the documentation.
+- Link: A url link to the documentation. 
+
 ### Get Started URL `required`
+
+A url that links to the components 'get started' documentation.
 
 ### Get started steps `optional`
 
+Optional richtext that allows content manager to list steps to getting started using markdown. 
+
 ### Support Contact `1 required more possible`
+
+A required component for contacting the component's support.  It has two fields:
+- Header: a description of the contact (e.g. Support managed through githup issues)
+- PhoneURLorEmail: a phone number, website, or e-email contact.

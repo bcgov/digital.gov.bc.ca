@@ -117,6 +117,9 @@
       "collection": "ministry",
       "via": "co_cos",
       "dominant": true
+    },
+    "GetStartedSteps": {
+      "type": "richtext"
     }
   }
 }

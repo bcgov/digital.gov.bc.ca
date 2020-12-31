@@ -6,11 +6,11 @@
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "Heading": {
       "type": "string",
       "required": true
     },
-    "Summary": {
+    "Details": {
       "type": "text",
       "required": true
     },
