@@ -29,10 +29,10 @@ jobs:
             if('prod' == env) { 
               target = "https://digital-gov-frontend-prod-xdwiwd-prod.pathfinder.gov.bc.ca/";
             }
-            elif('test' == env) {
+            else if('test' == env) {
               target = "https://digital-gov-frontend-test-xdwiwd-test.pathfinder.gov.bc.ca/";
             }
-            elif('dev' == env) {
+            else if('dev' == env) {
               target = "https://digital-gov-frontend-pr-${{github.event.inputs.prnumber}}-xdwiwd-dev.pathfinder.gov.bc.ca/";
             }
             core.exportVariable('TARGET', target);
