@@ -60,3 +60,9 @@ The technology is __Github Actions__, __Github Apps__, __Ansible__, and of cours
 The service account that is responsible for building and deploying has __very specific__ roles for each
 namespace, this provides it with the minimum amount of access it needs to do its work. The template `cicd.yaml` provides
 insight into what `Role` is created for each namespace.
+
+This template needs to be run **locally** in the base of the project using the oc command:
+
+`oc process -f openshift/templates/cicd.yaml -p DEV_NAMESPACE=xdwiwd-dev -p TEST_NAMESPACE=xdwiwd-test -p PROD_NAMESPACE=xdwiwd-prod | oc apply -f -`
+
+An extra parameter `NAME` can also be set.
