@@ -1,22 +1,21 @@
 {
   "kind": "collectionType",
-  "collectionName": "tags",
+  "collectionName": "Ministries",
   "info": {
-    "name": "CoCoTag",
-    "description": "This is a list tags that could describe any CoCo."
+    "name": "Ministry"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "MinistryAcronym": {
       "type": "string",
       "required": true,
-      "unique": true
+      "regex": "^\\S+$"
     },
     "co_cos": {
-      "via": "Tags",
+      "via": "ministries",
       "collection": "co-co"
     }
   }

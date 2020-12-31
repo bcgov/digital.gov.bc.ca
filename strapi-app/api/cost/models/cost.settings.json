@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "costs",
+  "collectionName": "co-co-costs",
   "info": {
-    "name": "Cost"
+    "name": "CoCoCost",
+    "description": "This is a list of cost options for CoCo's: Free, Subscription, ect."
   },
   "options": {
     "increments": true,

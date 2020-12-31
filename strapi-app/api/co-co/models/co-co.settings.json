@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "co_cos",
   "info": {
-    "name": "CoCo"
+    "name": "CoCo",
+    "description": "This is the Common Component Collection Type."
   },
   "options": {
     "increments": true,
@@ -34,7 +35,6 @@
       "unique": false
     },
     "costs": {
-      "unique": true,
       "collection": "cost",
       "via": "co_cos",
       "dominant": true
@@ -50,6 +50,73 @@
         "weeks",
         "months"
       ]
+    },
+    "SupportSchedule": {
+      "type": "enumeration",
+      "enum": [
+        "Anytime",
+        "MonFriday"
+      ]
+    },
+    "CoverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "WhyShouldIUseThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.why-should-iu-se-this",
+      "required": true,
+      "max": 3,
+      "min": 3
+    },
+    "ComponentCreationDate": {
+      "type": "date",
+      "required": true
+    },
+    "AdditionalTechnicalInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.additional-technical-info",
+      "min": 1,
+      "required": true
+    },
+    "RequirementsAndRestrictions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.requirements-and-restrictions",
+      "required": true,
+      "min": 1
+    },
+    "GetStartedURL": {
+      "type": "string",
+      "required": true
+    },
+    "SupportContact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.support-contact",
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+    "CoCoWebsite": {
+      "type": "string",
+      "required": true
+    },
+    "ministries": {
+      "unique": true,
+      "collection": "ministry",
+      "via": "co_cos",
+      "dominant": true
     }
   }
 }

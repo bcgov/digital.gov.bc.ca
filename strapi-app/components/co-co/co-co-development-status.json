@@ -1,22 +1,28 @@
 {
   "collectionName": "components_co_co_co_co_development_statuses",
   "info": {
-    "name": "CoCoDevelopmentStatus",
+    "name": "DevelopmentStatus",
     "icon": "circle"
   },
   "options": {},
   "attributes": {
-    "Status": {
-      "type": "string",
-      "required": true
-    },
-    "Colour": {
+    "Maintenance": {
       "type": "enumeration",
       "enum": [
-        "green",
-        "yellow",
-        "red"
-      ]
+        "ActiveDevelopment",
+        "Maintained",
+        "Abandoned"
+      ],
+      "required": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Alpha",
+        "Beta",
+        "Mature"
+      ],
+      "required": true
     }
   }
 }
