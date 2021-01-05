@@ -1,4 +1,4 @@
-name: Test Workflow Dispatch Works
+name: Run Zap Scan
 on: 
   workflow_dispatch:
     inputs:
