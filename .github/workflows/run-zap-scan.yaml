@@ -2,35 +2,51 @@ name: Run Zap Scan
 on: 
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      prnumber:
+        description: 'Pull Request number'     
         required: true
-        default: 'warning'
-      tags:
+      environment:
         required: true
-        description: 'Test workflow dispatch tags'
+        default: 'dev'
+        description: 'Deploy environment'
+      scantype:
+        required: true
+        default: 'base'
+        description: 'Zap scan type: base or full'
 jobs:
-  printInputs:
-    runs-on: ubuntu-latest
+  zap_scan:
+    runs-on: ubuntu-18.04
     steps: 
-      - name: 'test step'
-        run: |
-            echo "Log level: ${{ github.event.inputs.logLevel }}"
-            echo "Tags: ${{ github.event.inputs.tags }}"
-      # Check for write permission
-      - name: Check user permission
-        id: check
-        uses: scherermichael-oss/action-has-permission@master
+      - uses: actions/checkout@v1
+      - name: Store PR Num in env
+        uses: actions/github-script@v3
         with:
-          required-permission: admin
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # Use the output from the `check` step
-      - name: Run only if user has sufficient permissions
-        if: steps.check.outputs.has-permission
-        run: exit 1
-      - name: Run only if user has NOT sufficient permissions
-        if: "! steps.check.outputs.has-permission"
-        run: echo "Sorry! Your permissions are insufficient."
-      - name: Should not hit
-        run: echo "Should no hi"
+          github-token: ${{github.token}}
+          script: |
+            const prNumber = ${{ github.event.inputs.prnumber }};
+            const env = "${{ github.event.inputs.environment }}";
+            var target = '';
+            if('prod' == env) { 
+              target = "https://digital-gov-frontend-prod-xdwiwd-prod.pathfinder.gov.bc.ca/";
+            }
+            else if('test' == env) {
+              target = "https://digital-gov-frontend-test-xdwiwd-test.pathfinder.gov.bc.ca/";
+            }
+            else if('dev' == env) {
+              target = "https://digital-gov-frontend-pr-${{github.event.inputs.prnumber}}-xdwiwd-dev.pathfinder.gov.bc.ca/";
+            }
+            core.exportVariable('TARGET', target);
+      - name: Full ZAP Scan
+        uses: zaproxy/action-full-scan@v0.2.0
+        if: ${{ 'full' == github.event.inputs.scantype }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          docker_name: 'owasp/zap2docker-stable'
+          target: ${{ env.TARGET }}
+      - name: Baseline ZAP Scan
+        uses: zaproxy/action-baseline@v0.4.0
+        if: ${{ 'base' == github.event.inputs.scantype }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          docker_name: 'owasp/zap2docker-stable'
+          target: ${{ env.TARGET }}
