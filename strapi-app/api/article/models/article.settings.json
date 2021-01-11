@@ -17,9 +17,6 @@
       "type": "richtext",
       "required": true
     },
-    "published_at": {
-      "type": "date"
-    },
     "categories": {
       "collection": "category",
       "via": "article"
