@@ -4,17 +4,17 @@
 
 ### uid `required`
 
-This is used by the frontend to navigate to the coco when clicking on the card.  The uid should be automatically generated based on the CoCo Name entered
+This is used by the frontend to navigate to the CoCo when clicking on the card.  The uid should be automatically generated based on the CoCo Name entered.
 
 ### Team Name `required`
 
-Name of the team that created the CoCo
+Name of the team that created the CoCo.
 
 ## Fields displayed on the CoCo card (All fields bellow this point are displayed on the CoCo Page.
 
 ### Name `required`
 
-The name of the common component.
+The name of the CoCo.
 
 ### Description `required`
 
@@ -30,7 +30,7 @@ A component with two fields Status and Colour.  Their values are hardcoded to be
 - Colour
 -- green: Actively Developed 	
 -- yellow: Maintained
--- red: Abandonned  
+-- red: Abandoned  
 
 ### Team and Ministry `required`
 
@@ -50,7 +50,7 @@ An estimate of the number of teams that currently use this CoCo, ideally a given
 
 ### Onboarding Time `required`
 
-Select the best estimate for the time needed to implement a given coco.  (hours days, weeks, months)
+Select the best estimate for the time needed to implement a given CoCo: hours, days, weeks, months.
 
 ### Support Schedule `required`
 
@@ -60,7 +60,7 @@ What schedule is the support team available.
 
 ### CoCo image `required`
 
-A logo or image that represents the CoCo
+A logo or image that represents the CoCo.
 
 ### CoCoWebsite `required`
 
@@ -68,7 +68,7 @@ This is the CoCo's website it will be linked through the project image.
 
 ### WhoIsUsingThis `1 required up to 3 possible`
 
-This is a tag associated with the ministries using the CoCo
+This is a tag associated with the ministries using the CoCo.
 
 ### Component Creation Date `required`
 
@@ -76,11 +76,11 @@ A best estimate of when the component was created.  Currently strapi only has a 
 
 ### WhyShouldIUseThis `3 required`
 
-Three of these components are needed on each CoCo to advertise it's best features. It has three fields:
+Three of these components are needed on each CoCo to advertise its best features. It has three fields:
 
 - Icon: An icon representing the motivation (e.g. a clock for time saving)
-- Heading: Eye catching headline of a few words.
-- Details: Slightly longer text giving more details.
+- Heading: Eye catching headline of a few words
+- Details: Slightly longer text giving more details
 
 ### ServiceLevelSupport `1 required more possible`
 
@@ -88,10 +88,10 @@ Details about support provided for the component.
 
 ### Additional Technical Information `1 required more possible`
 
-Directs interested parties to other technical docs.  Two fields
+Directs interested parties to other technical docs.  Two fields:
 
-- Header: Text describing the technical info.
-- Link: A url link to the documentation.
+- Header: Text describing the technical info
+- Link: A url link to the documentation
 
 ### Requirements and Restrictions `1 required more possible`
 
@@ -111,5 +111,5 @@ Optional richtext that allows content manager to list steps to getting started u
 ### Support Contact `1 required more possible`
 
 A required component for contacting the component's support.  It has two fields:
-- Header: a description of the contact (e.g. Support managed through githup issues)
-- PhoneURLorEmail: a phone number, website, or e-email contact.
+- Header: a description of the contact (e.g. Support managed through GitHub issues)
+- PhoneURLorEmail: a phone number, website, or email contact.
