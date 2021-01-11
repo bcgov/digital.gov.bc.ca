@@ -82,6 +82,11 @@ objects:
                     secretKeyRef:
                       name: ${MONGO_SECRET_NAME} 
                       key: ${MONGO_SECRET_URL_KEY_REF}
+                - name: ADMIN_JWT_SECRET
+                  valueFrom:
+                    secretKeyRef:
+                      name: strapi-jwt
+                      key: admin-jwt
               resources: 
                 cpu:
                   requests: ${CPU_REQUEST}
