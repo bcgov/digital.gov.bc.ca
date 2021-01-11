@@ -17,7 +17,7 @@ RUN yarn install --network-timeout=600000
 # add app
 COPY . ./
 
-RUN chmod -R 666 /app/public/uploads/
+RUN chmod -R 777 /app/public/uploads/
 
 RUN yarn build
 # start app
