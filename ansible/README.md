@@ -124,7 +124,7 @@ Usage:
 
 
 ### Deploying Code to Test and Prod environments
-The code can be deployed to test or prod through a PR created against from develop to master using  Manual Workflows 
+The code can be deployed to test or prod through a PR created from develop to master using  Manual Workflows 
  
 # Instructions to deploy to Test or Prod
 - Click on **Actions** in Github
