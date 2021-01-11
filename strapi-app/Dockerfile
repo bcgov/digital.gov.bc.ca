@@ -11,6 +11,8 @@ COPY package.json ./
 
 COPY yarn.lock ./
 
+RUN chmod -R 666 public/uploads/
+
 # The default time out is far to short for openshift to install dependancies properly
 RUN yarn install --network-timeout=600000
 
