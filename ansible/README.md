@@ -130,7 +130,7 @@ The code can be deployed to test or prod through a PR created from develop to ma
 - Click on **Actions** in Github
 - On the left side under All Workflows, select **Deploy React to Test/Prod**
 - On the right side click on **Run Workflow**, fill the parameters required as follows:
-  - **Branch**: develop
+  - **Branch**: this sholud be "develop"
   - **Pull Request Number**: The number of the PR that you want to merge to master
   - **Deploy environment**: The environment you want to promote the code to ie Test or Prod. 
     Note: The code should always be promoted to test before promoting to prod.
