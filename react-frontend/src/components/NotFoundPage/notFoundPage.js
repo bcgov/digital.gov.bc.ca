@@ -4,7 +4,7 @@ import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { StyledP, HrefLinkInternal } from '../StyleComponents/htmlTags';
-import { Link } from 'react-router-dom';
+
 const image404 = require('../../images/pngIllustrations/404.png');
 const bannerTitle = "Page not found. We're sorry, something is missing.";
 const bannerContent =

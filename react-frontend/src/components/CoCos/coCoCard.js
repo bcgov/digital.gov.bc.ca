@@ -1,22 +1,13 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Badge as AntBadge } from 'antd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { Badge, BadgeDot } from '../StyleComponents/badge';
 import {
   CardTitle,
   CardDescription,
-  CardIllustration,
-  CardLinkDiv,
   CardStyled,
   Icon,
 } from '../StyleComponents/card';
-import {
-  HrefLinkStandalone,
-  HrefLinkStandaloneInternal,
-} from '../StyleComponents/htmlTags';
 
 const assistantIcon = require('../../images/icons/assistant-24.png');
 const peopleIcon = require('../../images/icons/conference-24.png');
@@ -32,31 +23,34 @@ function CoCoCard({
   cost,
   status,
   tags,
+  uid,
 }) {
   const colourPicker = (maintenanceStatus) => {
-    if (maintenanceStatus == 'ActiveDevelopment') {
+    if (maintenanceStatus === 'ActiveDevelopment') {
       return <BadgeDot color="green" title="Active Development" />;
     }
-    if (maintenanceStatus == 'Maintained') {
+    if (maintenanceStatus === 'Maintained') {
       return <BadgeDot color="yellow" title="Maintained" />;
     }
-    if (maintenanceStatus == 'Abandoned') {
+    if (maintenanceStatus === 'Abandoned') {
       return <BadgeDot color="red" title="Abandoned" />;
     }
+    return null;
   };
 
+  //TODO:  use uid to link to the specific coco page.
   return (
     <CardStyled>
       <Badge>
         {colourPicker(status?.Maintenance)} {status?.Status}
       </Badge>
+      {/* Only display 3 tags */}
       {tags?.map((tag, i) => {
-        if (i < 2) {
-          return <Badge key={tag.name}>{tag.name}</Badge>;
+        if (i > 2) {
+          return null;
         }
+        return <Badge key={tag.name}>{tag.name}</Badge>;
       })}
-      {/*  up to three tags */}
-      {/* link to the uid coco page */}
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
       <span>
