@@ -21,7 +21,7 @@ jobs:
           core.exportVariable('REF', context.payload.deployment.ref);
 
     # - name: login to oc client
-    #   run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN }}
+    #   run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN_OC4 }}
     # create handle deployment in master playbook which will delegate tasks based on the deploy microservice and environment
     # - name: promoting environment
     #   run: ansible-playbook ansible/master-playbook.yaml -e PR=$PULL_NUMBER -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e MICROSERVICE=$MICROSERVICE -e ENVIRONMENT=$ENVIRONMENT -e DEPLOYMENT_ID=$DEPLOYMENT_ID -e REF=$REF
