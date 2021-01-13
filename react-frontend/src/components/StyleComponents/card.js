@@ -119,3 +119,9 @@ export const CardTitle = styled.h5.attrs({
     line-height: 1.25;
   }
 `;
+
+export const Icon = styled.img.attrs({
+  className: 'icon',
+})`
+  height: 16px;
+`;

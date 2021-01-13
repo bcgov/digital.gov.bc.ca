@@ -20,7 +20,7 @@ The name of the CoCo.
 
 A brief description of what the CoCo does in plain text.
 
-### DevelopmentStatus `required`
+### ProjectStatus `required`
 
 A component with two fields Status and Colour.  Their values are hardcoded to be:
 - Status
