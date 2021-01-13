@@ -1,7 +1,8 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import { Col, Row, Grid } from 'react-flexbox-grid';
 
-import { Badge, BadgeDot } from '../StyleComponents/badge';
+import { Badge, BadgeDot, BadgeWrapper } from '../StyleComponents/badge';
 import {
   CardTitle,
   CardDescription,
@@ -41,24 +42,35 @@ function CoCoCard({
   //TODO:  use uid to link to the specific coco page.
   return (
     <CardStyled>
-      <Badge>
-        {colourPicker(status?.Maintenance)} {status?.Status}
-      </Badge>
-      {/* Only display 3 tags */}
-      {tags?.map((tag, i) => {
-        if (i > 2) {
-          return null;
-        }
-        return <Badge key={tag.name}>{tag.name}</Badge>;
-      })}
+      <BadgeWrapper>
+        <Badge>
+          {colourPicker(status?.Maintenance)} {status?.Status}
+        </Badge>
+        {/* Only display 3 tags */}
+        {tags?.map((tag, i) => {
+          if (i > 2) {
+            return null;
+          }
+          return <Badge key={tag.name}>{tag.name}</Badge>;
+        })}
+      </BadgeWrapper>
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
-      <span>
-        <Icon src={priceIcon} /> {cost}
-        <Icon src={peopleIcon} /> {numberOfUsers} Teams
-        <Icon src={clockIcon} /> {onboardingTime}
-        <Icon src={assistantIcon} /> {supportSchedule}
-      </span>
+      <Row center="xs">
+        <Col xs={3}>
+          {' '}
+          <Icon src={priceIcon} /> {cost}
+        </Col>
+        <Col xs={3}>
+          <Icon src={peopleIcon} /> {numberOfUsers} Teams
+        </Col>
+        <Col xs={3}>
+          <Icon src={clockIcon} /> {onboardingTime}
+        </Col>
+        <Col xs={3}>
+          <Icon src={assistantIcon} /> {supportSchedule}
+        </Col>
+      </Row>
     </CardStyled>
   );
 }
