@@ -23,7 +23,8 @@
     "ProjectStatus": {
       "type": "component",
       "repeatable": false,
-      "component": "co-co.co-co-development-status"
+      "component": "co-co.co-co-development-status",
+      "required": true
     },
     "Tags": {
       "collection": "tag",

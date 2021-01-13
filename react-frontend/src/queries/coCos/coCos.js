@@ -14,8 +14,8 @@ const COCOS_QUERY = gql`
       Tags {
         name
       }
-      costs {
-        cost
+      CostStructure {
+        Cost
       }
       NumberOfUsers
       OnboardingTime

@@ -24,27 +24,38 @@ const priceIcon = require('../../images/icons/price-tag-24.png');
 const clockIcon = require('../../images/icons/stopWatch.png');
 
 function CoCoCard({
-  height,
-  routePath,
   title,
   description,
   numberOfUsers,
   onboardingTime,
   supportSchedule,
   cost,
+  status,
+  tags,
 }) {
-  var isRouteCard = false;
+  const colourPicker = (maintenanceStatus) => {
+    if (maintenanceStatus == 'ActiveDevelopment') {
+      return <BadgeDot color="green" title="Active Development" />;
+    }
+    if (maintenanceStatus == 'Maintained') {
+      return <BadgeDot color="yellow" title="Maintained" />;
+    }
+    if (maintenanceStatus == 'Abandoned') {
+      return <BadgeDot color="red" title="Abandoned" />;
+    }
+  };
 
-  if (routePath != null) {
-    isRouteCard = true;
-  }
   return (
     <CardStyled>
       <Badge>
-        <BadgeDot color="red" /> Blah
+        {colourPicker(status?.Maintenance)} {status?.Status}
       </Badge>
-      {/* status bubble, up to three tags */}
-      {/* hover text on status bubble */}
+      {tags?.map((tag, i) => {
+        if (i < 2) {
+          return <Badge key={tag.name}>{tag.name}</Badge>;
+        }
+      })}
+      {/*  up to three tags */}
       {/* link to the uid coco page */}
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>
@@ -54,7 +65,6 @@ function CoCoCard({
         <Icon src={clockIcon} /> {onboardingTime}
         <Icon src={assistantIcon} /> {supportSchedule}
       </span>
-      {/* cost, numberusers, spinuptime support */}
     </CardStyled>
   );
 }

@@ -29,20 +29,19 @@ function CoCoCards() {
           return (
             <Row>
               {coCos.map((coCo, i) => {
-                console.log(coCo);
+                console.log(coCo.Tags);
                 return (
-                  // <p key={coCo.uid}>{coCo.Name}</p>
                   <Col sm={12} md={6} key={coCo.uid}>
                     <CoCoCard
                       title={coCo.Name}
                       description={coCo.Description}
-                      // linkText={'Explore'}
-                      // routePath={`guides/${guide.uid}`}
-                      height="300px"
+                      // maintenanceStatus={coCo.ProjectStatus.Maintenance}
                       numberOfUsers={coCo.NumberOfUsers}
                       onboardingTime={coCo.OnboardingTime}
                       supportSchedule={coCo.SupportSchedule}
-                      cost={coCo.costs[0].cost}
+                      cost={coCo.CostStructure.Cost}
+                      status={coCo.ProjectStatus}
+                      tags={coCo.Tags}
                     />
                   </Col>
                 );
