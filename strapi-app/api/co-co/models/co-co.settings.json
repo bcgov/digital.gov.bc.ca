@@ -7,7 +7,8 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "Name": {
@@ -33,11 +34,6 @@
       "type": "string",
       "required": true,
       "unique": false
-    },
-    "costs": {
-      "collection": "cost",
-      "via": "co_cos",
-      "dominant": true
     },
     "NumberOfUsers": {
       "type": "integer"
@@ -120,6 +116,16 @@
     },
     "GetStartedSteps": {
       "type": "richtext"
+    },
+    "CostStructure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.cost-details",
+      "required": true
+    },
+    "ServiceLevelSupport": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
