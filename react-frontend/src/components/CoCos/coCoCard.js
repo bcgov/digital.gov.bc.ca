@@ -39,7 +39,7 @@ function CoCoCard({
     return null;
   };
 
-  //TODO:  use uid to link to the specific coco page.
+  //TODO:use uid to link to the specific coco page.
   return (
     <CardStyled>
       <BadgeWrapper>
