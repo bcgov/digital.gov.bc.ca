@@ -43,7 +43,7 @@ function CoCoCard({
   return (
     <CardStyled>
       <BadgeWrapper>
-        <Badge>
+        <Badge data-testid="status-badge">
           {colourPicker(status?.Maintenance)} {status?.Status}
         </Badge>
         {/* Only display 3 tags */}
@@ -51,23 +51,27 @@ function CoCoCard({
           if (i > 2) {
             return null;
           }
-          return <Badge key={tag.name}>{tag.name}</Badge>;
+          return (
+            <Badge data-testid="tag-badge" key={tag.name}>
+              {tag.name}
+            </Badge>
+          );
         })}
       </BadgeWrapper>
-      <CardTitle>{title}</CardTitle>
-      <CardDescription>{description}</CardDescription>
+      <CardTitle data-testid="title">{title}</CardTitle>
+      <CardDescription data-testid="description">{description}</CardDescription>
       <Row center="xs">
-        <Col xs={3}>
+        <Col data-testid="cost" xs={3}>
           {' '}
           <Icon src={priceIcon} /> {cost}
         </Col>
-        <Col xs={3}>
+        <Col data-testid="user-count" xs={3}>
           <Icon src={peopleIcon} /> {numberOfUsers} Teams
         </Col>
-        <Col xs={3}>
+        <Col data-testid="onboarding-time" xs={3}>
           <Icon src={clockIcon} /> {onboardingTime}
         </Col>
-        <Col xs={3}>
+        <Col data-testid="support-schedule" xs={3}>
           <Icon src={assistantIcon} /> {supportSchedule}
         </Col>
       </Row>
