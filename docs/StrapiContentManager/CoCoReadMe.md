@@ -40,9 +40,11 @@ A line of text that describes the team and ministry.
 
 This is a multiselect field that adds common tags to the CoCo. For example: API, Code, Instruction, Service, Form.  To add items to this multi-select, got to the CoCoTag content type and add it.  The new tag will appear in the CoCo dropdown.
 
-### Cost `at least 1 required`
+### Cost Structure `required`
 
-This is a multiselect field that adds common cost structures to the CoCo. For example: Free, SAS, Paid Version.  To add items to this multi-select, got to the CoCoTag content type and add it.  The new tag will appear in the CoCo dropdown.
+This component has two fields. Only the Cost field is displayed on the CoCo card.
+ - Cost: A single select drop down for the cost structure of the CoCo.
+ - Payment Structure: This is an optional rich text field that will give more details on the Payment Structure. Note: In order to insure the Digital.gov site remains accessible to screen readers, pleas do not use h-tags in the text box.  (h1,h2, etc).
 
 ### Number of Teams `required`
 
@@ -60,7 +62,7 @@ What schedule is the support team available.
 
 ### CoCo image `required`
 
-A logo or image that represents the CoCo.
+A logo or image that represents the CoCo. Note: There are currently no restrictions on the size or aspect ratio of the image uploaded.  However, for best results please upload an image with a 4:3 ratio. Otherwise it may get distorted when displayed.
 
 ### CoCoWebsite `required`
 
@@ -78,7 +80,7 @@ A best estimate of when the component was created.  Currently strapi only has a 
 
 Three of these components are needed on each CoCo to advertise its best features. It has three fields:
 
-- Icon: An icon representing the motivation (e.g. a clock for time saving)
+- Icon: An icon representing the motivation (e.g. a clock for time saving) Please only use 24x24px png images.
 - Heading: Eye catching headline of a few words
 - Details: Slightly longer text giving more details
 
@@ -107,6 +109,10 @@ A url that links to the components 'get started' documentation.
 ### Get started steps `optional`
 
 Optional richtext that allows content manager to list steps to getting started using markdown. 
+
+### Service Level Support `required`
+
+A rich text field that describes the support that exist for the app. Please don't use any h-tags in the text to insure the screen readers do not get confused. (h1, h2, etc).
 
 ### Support Contact `1 required more possible`
 
