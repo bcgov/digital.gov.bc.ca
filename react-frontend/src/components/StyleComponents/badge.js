@@ -21,7 +21,7 @@ export const Badge = styled.span.attrs({
   box-shadow: 0 0 0 1px #fff;
 `;
 
-export const BadgeDot = styled.span.attrs({
+export const BadgeDot = styled.div.attrs({
   className: 'badgeDot',
 })`
   height: 12px;
@@ -29,6 +29,7 @@ export const BadgeDot = styled.span.attrs({
   background-color: ${(props) => props.color};
   border-radius: 50%;
   display: inline-block;
+  vertical-align: text-top;
 `;
 
 export const BadgeWrapper = styled.div.attrs({
