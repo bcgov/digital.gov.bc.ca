@@ -3,7 +3,7 @@ import CoCoCards from './coCoCards.js';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
-const resourcesImage = require('../../images/pngIllustrations/resourcesWhite.png');
+const coCoImage = require('../../images/pngIllustrations/CoCo.svg');
 
 function CoCos() {
   return (
@@ -16,7 +16,7 @@ function CoCos() {
           content={
             'Common components are re-usable building blocks, used together, or separately.'
           }
-          image={resourcesImage}
+          image={coCoImage}
         />
         <CoCoCards />
       </div>
