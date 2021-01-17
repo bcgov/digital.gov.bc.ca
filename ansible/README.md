@@ -121,3 +121,37 @@ Options:
 
 Usage:
 `ansible-playbook clean_up_react_deployment.yaml -e PR=<pr num>`
+
+
+### Deploying Code to Test and Prod environments
+The code can be deployed to test or prod through a PR created from develop to master using  Manual Workflows 
+ 
+# Instructions to deploy to Test or Prod
+- Click on **Actions** in Github
+- On the left side under All Workflows, select **Deploy React to Test/Prod**
+- On the right side click on **Run Workflow**, fill the parameters required as follows:
+  - **Branch**: this sholud be "develop"
+  - **Pull Request Number**: The number of the PR that you want to merge to master
+  - **Deploy environment**: The environment you want to promote the code to ie Test or Prod. 
+    Note: The code should always be promoted to test before promoting to prod.
+
+
+### Running Zapscan
+ZAPSCAN is an open-source web application security scanner. Zapscan can be run against any environment dev, test or prod using the Manual Workflow. Zapscan can be a baseline scan or a full scan. 
+
+# Baseline
+ In case of baseline scan, ZAP spider against the specified target for (by default) 1 minute and then waits for the passive scanning to complete before reporting the results.This means that the script doesn't perform any actual ‘attacks’ and will run for a relatively short period of time (a few minutes at most).
+
+# Fullscan
+It runs the ZAP spider against the specified target (by default with no time limit) followed by an optional ajax spider scan and then a full active scan before reporting the results.
+This means that the script does perform actual ‘attacks’ and can potentially run for a long period of time.
+
+# Instructions for running Zapscan
+- Click on **Actions** in Github
+- On the left side under All Workflows, select **run Zap Scan**
+- On the right side click on **Run Workflow**, fill the parameters required as follows:
+  - Branch: develop
+  - Pull request number: The number of the PR. It is required if you are running the zapscan workflow against dev environment. For test and prod environments it is not required.
+  - Deploy environment: dev, test or prod
+  - Zap scan type: base or full
+  
