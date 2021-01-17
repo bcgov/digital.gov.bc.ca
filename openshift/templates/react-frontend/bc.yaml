@@ -21,7 +21,7 @@ objects:
           memory: 1280Mi
           cpu: 300m
         limits:
-          memory: 2 Gi
+          memory: 2Gi
           cpu: 500m
       runPolicy: Serial
       source:
