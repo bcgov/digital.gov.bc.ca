@@ -104,9 +104,9 @@ objects:
         encode gzip
 
         try_files {path} {path}/ /index.html
-        
+
         log {
-          errors stdout
+          output stderr
           output stdout 
           format single_field common_log
           level info
