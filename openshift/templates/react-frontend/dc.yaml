@@ -104,8 +104,13 @@ objects:
         encode gzip
 
         try_files {path} {path}/ /index.html
-        log stdout
-        log stderr
+        
+        log {
+          errors stdout
+          output stdout 
+          format single_field common_log
+          level info
+        }
 
         header / {
           # prevent any static html from being cached
