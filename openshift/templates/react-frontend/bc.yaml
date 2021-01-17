@@ -18,11 +18,11 @@ objects:
       postCommit: {}
       resources: 
         requests:
-          memory: 1Gi
-          cpu: 250m
-        limits:
           memory: 1280Mi
           cpu: 300m
+        limits:
+          memory: 2 Gi
+          cpu: 500m
       runPolicy: Serial
       source:
         contextDir: react-frontend
