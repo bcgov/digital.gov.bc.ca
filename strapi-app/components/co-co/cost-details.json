@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_co_co_cost_details",
+  "info": {
+    "name": "CostDetails",
+    "icon": "dollar-sign"
+  },
+  "options": {},
+  "attributes": {
+    "Cost": {
+      "type": "enumeration",
+      "enum": [
+        "Free",
+        "Freemium",
+        "Paid",
+        "Subscription"
+      ],
+      "required": true
+    },
+    "PaymentStructure": {
+      "type": "richtext"
+    }
+  }
+}

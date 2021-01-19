@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_co_co_service_level_supports",
+  "info": {
+    "name": "ServiceLevelSupport",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "SupportType": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

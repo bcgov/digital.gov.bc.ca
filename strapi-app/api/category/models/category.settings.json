@@ -11,10 +11,6 @@
   "attributes": {
     "name": {
       "type": "string"
-    },
-    "article": {
-      "via": "categories",
-      "model": "article"
     }
   }
 }

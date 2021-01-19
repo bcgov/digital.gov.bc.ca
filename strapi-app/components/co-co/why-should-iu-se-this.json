@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_co_co_why_should_iu_se_this",
+  "info": {
+    "name": "WhyShouldIUseThis",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "Details": {
+      "type": "text",
+      "required": true
+    },
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
