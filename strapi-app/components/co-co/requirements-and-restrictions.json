@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_co_co_requirements_and_restrictions",
+  "info": {
+    "name": "RequirementsAndRestrictions",
+    "icon": "angry"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

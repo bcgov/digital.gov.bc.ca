@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_co_co_who_is_using_this",
+  "info": {
+    "name": "WhoIsUsingThis",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Ministry": {
+      "type": "enumeration",
+      "enum": [
+        "AEST",
+        "AG",
+        "AGRI",
+        "BCPAS",
+        "CSNR",
+        "CITZ",
+        "EDUC",
+        "EMPR",
+        "ENV",
+        "FIN",
+        "FLNR",
+        "HLTH",
+        "IRR",
+        "JERI",
+        "LBR",
+        "MAH",
+        "MCF",
+        "MMHA",
+        "PSSG",
+        "SDPR",
+        "TAC",
+        "TRAN"
+      ]
+    },
+    "Summary": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
