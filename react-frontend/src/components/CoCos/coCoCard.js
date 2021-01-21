@@ -1,6 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Col, Row, Grid } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
+import { Link } from 'react-router-dom';
 
 import { Badge, BadgeDot, BadgeWrapper } from '../StyleComponents/badge';
 import {
@@ -41,41 +42,45 @@ function CoCoCard({
 
   //TODO:use uid to link to the specific coco page.
   return (
-    <CardStyled>
-      <BadgeWrapper>
-        <Badge data-testid="status-badge">
-          {colourPicker(status?.Maintenance)} {status?.Status}
-        </Badge>
-        {/* Only display 3 tags */}
-        {tags?.map((tag, i) => {
-          if (i > 2) {
-            return null;
-          }
-          return (
-            <Badge data-testid="tag-badge" key={tag.name}>
-              {tag.name}
-            </Badge>
-          );
-        })}
-      </BadgeWrapper>
-      <CardTitle data-testid="title">{title}</CardTitle>
-      <CardDescription data-testid="description">{description}</CardDescription>
-      <Row center="xs">
-        <Col data-testid="cost" xs={3}>
-          {' '}
-          <Icon src={priceIcon} /> {cost}
-        </Col>
-        <Col data-testid="user-count" xs={3}>
-          <Icon src={peopleIcon} /> {numberOfUsers} Teams
-        </Col>
-        <Col data-testid="onboarding-time" xs={3}>
-          <Icon src={clockIcon} /> {onboardingTime}
-        </Col>
-        <Col data-testid="support-schedule" xs={3}>
-          <Icon src={assistantIcon} /> {supportSchedule}
-        </Col>
-      </Row>
-    </CardStyled>
+    <Link to={`cocos/${uid}`}>
+      <CardStyled>
+        <BadgeWrapper>
+          <Badge data-testid="status-badge">
+            {colourPicker(status?.Maintenance)} {status?.Status}
+          </Badge>
+          {/* Only display 3 tags */}
+          {tags?.map((tag, i) => {
+            if (i > 2) {
+              return null;
+            }
+            return (
+              <Badge data-testid="tag-badge" key={tag.name}>
+                {tag.name}
+              </Badge>
+            );
+          })}
+        </BadgeWrapper>
+        <CardTitle data-testid="title">{title}</CardTitle>
+        <CardDescription data-testid="description">
+          {description}
+        </CardDescription>
+        <Row center="xs">
+          <Col data-testid="cost" xs={3}>
+            {' '}
+            <Icon src={priceIcon} /> {cost}
+          </Col>
+          <Col data-testid="user-count" xs={3}>
+            <Icon src={peopleIcon} /> {numberOfUsers} Teams
+          </Col>
+          <Col data-testid="onboarding-time" xs={3}>
+            <Icon src={clockIcon} /> {onboardingTime}
+          </Col>
+          <Col data-testid="support-schedule" xs={3}>
+            <Icon src={assistantIcon} /> {supportSchedule}
+          </Col>
+        </Row>
+      </CardStyled>
+    </Link>
   );
 }
 

@@ -38,7 +38,7 @@ const Routes = () => {
         />
         <Route exact path="/resources" component={Resources} />
         <Route exact path="/cocos" component={CoCos} />
-        <Route exact path="/coco/:uid" component={CoCoPage} />
+        <Route exact path="/cocos/:uid" component={CoCoPage} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route
           exact
