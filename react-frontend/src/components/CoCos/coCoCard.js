@@ -62,17 +62,17 @@ function CoCoCard({
       <CardTitle data-testid="title">{title}</CardTitle>
       <CardDescription data-testid="description">{description}</CardDescription>
       <Row center="xs">
-        <IconCol data-testid="cost" xs={3}>
+        <IconCol data-testid="cost" xs={6} sm={3}>
           {' '}
           <Icon src={priceIcon} /> {cost}
         </IconCol>
-        <IconCol data-testid="user-count" xs={3}>
+        <IconCol data-testid="user-count" xs={6} sm={3}>
           <Icon src={peopleIcon} /> {numberOfUsers} Teams
         </IconCol>
-        <IconCol data-testid="onboarding-time" xs={3}>
+        <IconCol data-testid="onboarding-time" xs={6} sm={3}>
           <Icon src={clockIcon} /> {onboardingTime}
         </IconCol>
-        <IconCol data-testid="support-schedule" xs={3}>
+        <IconCol data-testid="support-schedule" xs={6} sm={3}>
           <Icon src={assistantIcon} /> {supportSchedule}
         </IconCol>
       </Row>
