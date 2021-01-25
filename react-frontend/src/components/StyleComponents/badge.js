@@ -15,7 +15,7 @@ export const Badge = styled.span.attrs({
   margin-right: 4px;
   white-space: nowrap;
   text-align: center;
-  background: #c0c0c0;
+  background: #f2f2f2;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 1px #fff;
   box-shadow: 0 0 0 1px #fff;
@@ -24,8 +24,8 @@ export const Badge = styled.span.attrs({
 export const BadgeDot = styled.div.attrs({
   className: 'badgeDot',
 })`
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
   background-color: ${(props) => props.color};
   border-radius: 50%;
   display: inline-block;

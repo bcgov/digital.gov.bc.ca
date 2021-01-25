@@ -42,10 +42,10 @@
     "OnboardingTime": {
       "type": "enumeration",
       "enum": [
-        "hours",
-        "days",
-        "weeks",
-        "months"
+        "Hours",
+        "Days",
+        "Weeks",
+        "Months"
       ]
     },
     "SupportSchedule": {

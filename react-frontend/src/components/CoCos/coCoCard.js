@@ -9,6 +9,7 @@ import {
   CardDescription,
   CardStyled,
   Icon,
+  IconCol,
 } from '../StyleComponents/card';
 
 const assistantIcon = require('../../images/icons/assistant-24.png');
@@ -65,19 +66,19 @@ function CoCoCard({
           {description}
         </CardDescription>
         <Row center="xs">
-          <Col data-testid="cost" xs={3}>
+          <IconCol data-testid="cost" xs={6} sm={3}>
             {' '}
             <Icon src={priceIcon} /> {cost}
-          </Col>
-          <Col data-testid="user-count" xs={3}>
+          </IconCol>
+          <IconCol data-testid="user-count" xs={6} sm={3}>
             <Icon src={peopleIcon} /> {numberOfUsers} Teams
-          </Col>
-          <Col data-testid="onboarding-time" xs={3}>
+          </IconCol>
+          <IconCol data-testid="onboarding-time" xs={6} sm={3}>
             <Icon src={clockIcon} /> {onboardingTime}
-          </Col>
-          <Col data-testid="support-schedule" xs={3}>
+          </IconCol>
+          <IconCol data-testid="support-schedule" xs={6} sm={3}>
             <Icon src={assistantIcon} /> {supportSchedule}
-          </Col>
+          </IconCol>
         </Row>
       </CardStyled>
     </Link>

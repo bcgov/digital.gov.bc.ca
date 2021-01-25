@@ -22,6 +22,7 @@ const DisplayNames = {
   guides: 'Guides',
   'products-services': 'Products and Services',
   resources: 'Resources',
+  cocos: 'Common Components',
 };
 
 const Routes = () => {

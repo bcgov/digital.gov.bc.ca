@@ -19,7 +19,7 @@ function CoCoCards() {
       <Query query={COCOS_QUERY}>
         {({ data: { coCos } }) => {
           return (
-            <Row>
+            <Row style={{ marginBottom: '4px' }}>
               {coCos.map((coCo, i) => {
                 return (
                   <Col sm={12} md={6} key={coCo.uid}>
