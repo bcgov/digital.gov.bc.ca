@@ -20,7 +20,11 @@ const BreadCrumbs = (props) => {
   }, [history, props]);
 
   if (pathName === '/') {
-    return null;
+    return (
+      <BreadcrumbContainer>
+        <BreadcrumbUL style={{ height: '40px' }}></BreadcrumbUL>
+      </BreadcrumbContainer>
+    );
   }
 
   let pathArray = pathName.split('/');
