@@ -23,13 +23,9 @@ function DigitalPrinciples() {
           <p>
             The Digital Principles are meant to guide the work of individual
             public servants and vendor partners as the Province of British
-            Columbia continues to evolve into a{' '}
-            <HrefLink href="https://digital.gov.bc.ca/">
-              Digital Government
-            </HrefLink>
-            . This includes everything from the day-to-day work of individuals
-            to the design, development and delivery of digital products and
-            services.
+            Columbia continues to evolve into a digital government. This
+            includes everything from the day-to-day work of individuals to the
+            design, development and delivery of digital products and services.
           </p>
           <p>
             The Digital Principles were co-developed with BC public service

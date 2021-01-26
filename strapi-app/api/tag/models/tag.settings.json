@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "CoCoTag",
+    "description": "This is a list tags that could describe any CoCo."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "co_cos": {
+      "via": "Tags",
+      "collection": "co-co"
+    }
+  }
+}

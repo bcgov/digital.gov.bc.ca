@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_co_co_support_contacts",
+  "info": {
+    "name": "SupportContact",
+    "icon": "comments"
+  },
+  "options": {},
+  "attributes": {
+    "ContatactUsCallToAction": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneURLorEmail": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

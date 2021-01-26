@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_co_co_additional_technical_infos",
+  "info": {
+    "name": "AdditionalTechnicalInfo",
+    "icon": "atom"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

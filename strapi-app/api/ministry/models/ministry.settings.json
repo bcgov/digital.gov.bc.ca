@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Ministries",
+  "info": {
+    "name": "Ministry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "MinistryAcronym": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\S+$"
+    },
+    "co_cos": {
+      "via": "ministries",
+      "collection": "co-co"
+    }
+  }
+}
