@@ -15,12 +15,13 @@ function CoCoPage() {
           {({ data: { coco } }) => {
             return (
               <div>
-                <img
+                {/* This may be breaking the coors policy */}
+                {/* <img
                   src={
                     process.env.REACT_APP_STRAPI_BACKEND_URL +
                     coco?.CoverImage.url
                   }
-                />
+                /> */}
                 <p>Test that query runs</p>
               </div>
             );
