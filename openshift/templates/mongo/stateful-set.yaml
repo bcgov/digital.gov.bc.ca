@@ -1,150 +1,130 @@
-Kind: Template
+---
+kind: Template
 apiVersion: v1
 metadata:
-  name: digital-gov-mongodb
+  name: digitalgov-db
+  labels:
+    app: digitalgov-db
   annotations:
     description: "MongoDB database running as replicate set"
-    iconClass: "icon-nodejs"
-    tags: "nodejs,mongodb,replication,instant-app"
+    tags: "mongodb,replication"
 parameters:
-  - name: MONGODB_ADMIN_PASSWORD
-    displayName: "MongoDB Admin Password"
-    description: "Password for the database admin user."
-    generate: expression
-    from: "[a-zA-Z0-9]{16}"
-    required: true
-
   - name: MONGODB_USER
     displayName: "MongoDB Connection Username"
     description: "Username for MongoDB user that will be used for accessing the database."
-    value: strapi
+    generate: expression
+    from: "[a-zA-Z0-9]{5}"
     required: true
-
   - name: MONGODB_PASSWORD
     displayName: "MongoDB Connection Password"
     description: "Password for the MongoDB connection user."
     generate: expression
     from: "[a-zA-Z0-9]{16}"
     required: true
-
-  - name: MONGODB_DATABASE
-    displayName: "MongoDB Database Name"
-    description: "Name of the MongoDB database accessed."
-    value: strapi
+  - name: MONGODB_ADMIN_PASSWORD
+    displayName: "MongoDB Admin Password"
+    description: "Password for the database admin user."
+    generate: expression
+    from: "[a-zA-Z0-9]{16}"
     required: true
-
-  - name: SUFFIX
+  - name: MONGODB_REPLICA_NAME
+    displayName: "Replica Set Name"
+    description: "The name of the replica set."
+    value: "rs0"
     required: true
-    description: a suffix used in conjunction with NAME to further isolate different instances of these components
-    displayName: suffix
-  - name: PULL_REQUEST_NUMBER
-    default: 0
-    required: false 
-    description: The pull request number associated with this object
-    displayName: Pull Request Number
-  - name: MEMORY_REQUEST
-    description: Amount of Memory to Request.
-    displayName: Memory Request
-    required: true
-
-  - name: MEMORY_LIMIT
-    description: Amount of Memory to Limit.
-    displayName: Memory Limit
-    required: true
-
-  - name: CPU_REQUEST
-    description: Amount of CPU to Request.
-    displayName: Memory Request
-    required: true
-
-  - name: CPU_LIMIT
-    description: Amount of CPU to Limit.
-    displayName: Memory Limit
-    required: true
-    
   - name: MONGODB_SERVICE_NAME
     description: Name of the MongoDB Service
     displayName: MongoDB Service Name
     value: "mongodb"
     required: true
-
+  - name: MONGODB_DATABASE
+    displayName: "MongoDB Database Name"
+    description: "Name of the MongoDB database accessed."
+    value: digitalgov
+    required: true
+  - name: MEMORY_REQUEST
+    description: Amount of Memory to Request.
+    displayName: Memory Request
+    required: true
+  - name: MEMORY_LIMIT
+    description: Amount of Memory to Limit.
+    displayName: Memory Limit
+    required: true
+  - name: CPU_REQUEST
+    description: Amount of CPU to Request.
+    displayName: Memory Request
+    required: true
+  - name: CPU_LIMIT
+    description: Amount of CPU to Limit.
+    displayName: Memory Limit
+    required: true
   - name: MONGODB_REPLICAS
     description: Number of MongoDB replica pods
     displayName: MongoDB Replicas
     value: "3"
     required: true
-
   - name: MONGODB_SECRET_NAME
     displayName: MongoDB Secret.
     description: Name of the Secret containing MongoDB Assets
-    value: "mongodb"
+    value: "mongodb-creds"
     required: true
-    
-  - name: MONGODB_REPLICA_NAME
-    displayName: "Replica Set Name"
-    description: "The name of the replica set."
-    value: rs0
-    required: true
-
   - name: MONGODB_KEYFILE_VALUE
     displayName: "Keyfile Content"
     description: "The value of the MongoDB keyfile (https://docs.mongodb.com/manual/core/security-internal-authentication/#internal-auth-keyfile)."
     generate: expression
     from: "[a-zA-Z0-9]{255}"
     required: true
-
   - name: MONGODB_IMAGE
     displayName: "MongoDB Docker Image"
     description: "A reference to a supported MongoDB Docker image."
-    value: "docker-registry.default.svc:5000/openshift/mongodb"
+    value: registry.redhat.io/rhscl/mongodb-36-rhel7
     required: true
-
   - name: MONGODB_IMAGE_TAG
     description: Name of the MongoDB tag that should be used
     displayName: MongoDB Tag
-    value: "3.6"
+    value: "1"
     required: true
-
   - name: VOLUME_CAPACITY
     displayName: "Volume Capacity for MongoDB"
     description: "Volume space available for data, e.g. 512Mi, 2Gi."
     required: true
-
-  - name: SC_MONGO
+  - name: VOLUME_STORAGE_CLASS
     description: The Storage Class for the MongoDB
     displayName: Storage Class for MongoDB
     required: true
-
 objects:
-  # A non-headless service which takes pod readiness into consideration
+  - apiVersion: v1
+    kind: Secret
+    metadata:
+      name: ${MONGODB_SECRET_NAME}
+      labels:
+        app: digital-gov-mongodb
+    stringData:
+      database: ${MONGODB_DATABASE}
+      username: "${MONGODB_USER}"
+      password: "${MONGODB_PASSWORD}"
+      admin-username: "admin"
+      admin-password: "${MONGODB_ADMIN_PASSWORD}"
+      mongo-url: "mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_SERVICE_NAME}:27017/${MONGODB_DATABASE}?replicaSet=${MONGODB_REPLICA_NAME}"
+      mongo-oplog-url: "mongodb://admin:${MONGODB_ADMIN_PASSWORD}@${MONGODB_SERVICE_NAME}:27017/local?authSource=admin&replicaSet=${MONGODB_REPLICA_NAME}"
   - kind: Service
     apiVersion: v1
     metadata:
-      name: "${MONGODB_SERVICE_NAME}-${SUFFIX}"
+      name: "${MONGODB_SERVICE_NAME}"
       labels:
-        app: ${MONGODB_SERVICE_NAME}-${SUFFIX}
-        version: ${PULL_REQUEST_NUMBER}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${MONGODB_SERVICE_NAME}
-        name: "${MONGODB_SERVICE_NAME}"
+        app: digitalgov-db
     spec:
       ports:
         - name: mongodb
           port: 27017
       selector:
-        name: "${MONGODB_SERVICE_NAME}-${SUFFIX}"
-
-  # A headless service to create DNS records
+        statefulset: "${MONGODB_SERVICE_NAME}"
   - kind: Service
     apiVersion: v1
     metadata:
-      name: "${MONGODB_SERVICE_NAME}-${SUFFIX}-internal"
+      name: "${MONGODB_SERVICE_NAME}-internal"
       labels:
-        app: ${MONGODB_SERVICE_NAME}-${SUFFIX}
-        version: ${PULL_REQUEST_NUMBER}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${MONGODB_SERVICE_NAME}
-        name: "${MONGODB_SERVICE_NAME}"
+        app: digitalgov-db
       annotations:
         service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
     spec:    
@@ -153,29 +133,24 @@ objects:
         - name: mongodb
           port: 27017
       selector:
-        name: "${MONGODB_SERVICE_NAME}-${SUFFIX}"
-
-# Mongo DB StatefulSet
+        statefulset: "${MONGODB_SERVICE_NAME}"
   - kind: StatefulSet
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     metadata:
-      name: "${MONGODB_SERVICE_NAME}-${SUFFIX}"
+      name: "${MONGODB_SERVICE_NAME}"
       labels:
-        app: ${MONGODB_SERVICE_NAME}-${SUFFIX}
-        version: ${PULL_REQUEST_NUMBER}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${MONGODB_SERVICE_NAME}
+        app: digitalgov-db
     spec:
-      serviceName: "${MONGODB_SERVICE_NAME}-${SUFFIX}-internal"
-      replicas: "${MONGODB_REPLICAS}"
+      selector:
+        matchLabels:
+          statefulset: ${MONGODB_SERVICE_NAME}
+      serviceName: "${MONGODB_SERVICE_NAME}-internal"
+      replicas: ${{MONGODB_REPLICAS}}
       template:
         metadata:
           labels:
-            name: "${MONGODB_SERVICE_NAME}-${SUFFIX}"
-            app: ${MONGODB_SERVICE_NAME}-${SUFFIX}
-            version: ${PULL_REQUEST_NUMBER}
-            pr: ${PULL_REQUEST_NUMBER}
-            group: ${MONGODB_SERVICE_NAME}
+            app: digitalgov-db
+            statefulset: ${MONGODB_SERVICE_NAME}
         spec:
           affinity:
             podAntiAffinity:
@@ -185,7 +160,7 @@ objects:
                   - key: name
                     operator: In
                     values: 
-                    - ${MONGODB_SERVICE_NAME}-${SUFFIX}
+                    - ${MONGODB_SERVICE_NAME}
                 topologyKey: "kubernetes.io/hostname"
           containers:
             - name: mongo-container
@@ -202,36 +177,33 @@ objects:
                   valueFrom:
                     secretKeyRef:
                       key: username
-                      name: "${MONGODB_SECRET_NAME}-${SUFFIX}"
+                      name: "${MONGODB_SECRET_NAME}"
                 - name: MONGODB_PASSWORD
                   valueFrom:
                     secretKeyRef:
                       key: password
-                      name: "${MONGODB_SECRET_NAME}-${SUFFIX}"
+                      name: "${MONGODB_SECRET_NAME}"
                 - name: MONGODB_DATABASE
                   valueFrom:
                     secretKeyRef:
                       key: database
-                      name: "${MONGODB_SECRET_NAME}-${SUFFIX}"
+                      name: "${MONGODB_SECRET_NAME}"
                 - name: MONGODB_ADMIN_PASSWORD
                   valueFrom:
                     secretKeyRef:
                       key: admin-password
-                      name: "${MONGODB_SECRET_NAME}-${SUFFIX}"
+                      name: "${MONGODB_SECRET_NAME}"
                 - name: MONGO_OPLOG_URL
                   valueFrom:
                     secretKeyRef:
                       key: mongo-oplog-url
-                      name: "${MONGODB_SECRET_NAME}-${SUFFIX}"
+                      name: "${MONGODB_SECRET_NAME}"
                 - name: MONGODB_REPLICA_NAME
-                  valueFrom:
-                    secretKeyRef:
-                      key: replica-name
-                      name: "${MONGODB_SECRET_NAME}-${SUFFIX}"
+                  value: "${MONGODB_REPLICA_NAME}"
                 - name: MONGODB_KEYFILE_VALUE
                   value: "${MONGODB_KEYFILE_VALUE}"
                 - name: MONGODB_SERVICE_NAME
-                  value: "${MONGODB_SERVICE_NAME}-${SUFFIX}-internal"
+                  value: "${MONGODB_SERVICE_NAME}-internal"
               resources:
                 limits:
                   memory: "${MEMORY_LIMIT}"
@@ -248,30 +220,11 @@ objects:
         - metadata:
             name: mongo-data
             labels:
-              app: ${MONGODB_SERVICE_NAME}-${SUFFIX}
-              version: ${PULL_REQUEST_NUMBER}
-              pr: ${PULL_REQUEST_NUMBER}
-              group: ${MONGODB_SERVICE_NAME}
-              name: "${MONGODB_SERVICE_NAME}-${SUFFIX}"
+              name: "${MONGODB_SERVICE_NAME}"
+              app: digitalgov-db
           spec:
             accessModes: [ ReadWriteOnce ]
-            storageClassName: "${SC_MONGO}"
+            storageClassName: "${VOLUME_STORAGE_CLASS}"
             resources:
               requests:
                 storage: "${VOLUME_CAPACITY}"
-## secret 
-  - apiVersion: v1
-    kind: Secret
-    stringData:
-      username: '${MONGODB_USER}'
-      password: '${MONGODB_PASSWORD}'
-      admin-username: admin
-      admin-password: '${MONGODB_ADMIN_PASSWORD}'
-      database: '${MONGODB_DATABASE}'
-      replica-name: '${MONGODB_REPLICA_NAME}'
-      mongo-url: >-
-        mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_SERVICE_NAME}-${SUFFIX}:27017/${MONGODB_DATABASE}?replicaSet=${MONGODB_REPLICA_NAME}
-      mongo-oplog-url: >-
-        mongodb://admin:${MONGODB_ADMIN_PASSWORD}@${MONGODB_SERVICE_NAME}-${SUFFIX}:27017/local?authSource=admin&replicaSet=${MONGODB_REPLICA_NAME}
-    metadata:
-      name: '${MONGODB_SECRET_NAME}-${SUFFIX}'
