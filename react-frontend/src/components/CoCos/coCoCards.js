@@ -45,11 +45,11 @@ function CoCoCards() {
         <Col sm={12}>
           <ResourcePageHeading>Support</ResourcePageHeading>
           <StyledP>
-            Contact the Common Components team:
+            Contact the Common Components team:{' '}
             <HrefLinkStandalone>
-              CommonComponents@gov.bc.ca
-            </HrefLinkStandalone>{' '}
-            or <HrefLinkStandalone>250-777-7777</HrefLinkStandalone>
+              Digital.Government@gov.bc.ca
+            </HrefLinkStandalone>
+            .
           </StyledP>
         </Col>
       </Row>

@@ -109,12 +109,6 @@
       "type": "string",
       "required": true
     },
-    "ministries": {
-      "unique": true,
-      "collection": "ministry",
-      "via": "co_cos",
-      "dominant": true
-    },
     "GetStartedSteps": {
       "type": "richtext"
     },
@@ -127,6 +121,14 @@
     "ServiceLevelSupport": {
       "type": "richtext",
       "required": true
+    },
+    "WhoIsUsingThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.who-is-using-this",
+      "required": true,
+      "max": 3,
+      "min": 3
     }
   }
 }

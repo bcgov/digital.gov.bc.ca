@@ -13,10 +13,6 @@
       "type": "string",
       "required": true,
       "regex": "^\\S+$"
-    },
-    "co_cos": {
-      "via": "ministries",
-      "collection": "co-co"
     }
   }
 }
