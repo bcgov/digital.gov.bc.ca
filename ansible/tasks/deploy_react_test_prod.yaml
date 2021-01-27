@@ -1,7 +1,7 @@
 ---  
   - name: deploy {{ react_infra_name }} of PR {{ PR }} in {{ namespace }} namespace
     shell: >
-      oc process -n "xdwiwd-tools" -f "../openshift/templates/react-frontend/dc.yaml" {{ deploy_params }} | 
+      oc process -n "c0cce6-tools" -f "../openshift/templates/react-frontend/dc.yaml" {{ deploy_params }} | 
       oc apply -n "{{ namespace }}" -f -
     vars:
       IMAGE_TAG: '{{ version }}'

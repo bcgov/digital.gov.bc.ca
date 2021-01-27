@@ -63,6 +63,6 @@ insight into what `Role` is created for each namespace.
 
 This template needs to be run **locally** in the base of the project using the oc command:
 
-`oc process -f openshift/templates/cicd.yaml -p DEV_NAMESPACE=xdwiwd-dev -p TEST_NAMESPACE=xdwiwd-test -p PROD_NAMESPACE=xdwiwd-prod | oc apply -f -`
+`oc process -f openshift/templates/cicd.yaml -p DEV_NAMESPACE=c0cce6-dev -p TEST_NAMESPACE=c0cce6-test -p PROD_NAMESPACE=c0cce6-prod | oc apply -f -`
 
 An extra parameter `NAME` can also be set.

@@ -40,7 +40,7 @@
 
       - name: "Setting deployment status of deployment {{ deployment.json.id }} to pending"
         uri:
-          url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses
+          url: "https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses"
           method: POST
           body: 
             description: "Deployment of {{ ref }} is now pending, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"

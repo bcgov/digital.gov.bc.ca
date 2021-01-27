@@ -87,7 +87,7 @@ Options:
 
 Usage:
 
-`ansible-playbook ansible/create-gh-deployment.yaml -e PR=5 -e ENV=dev -e GITHUB_TOKEN=<secret> -e OPENSHIFT_SERVER_URL=https://console..`
+`ansible-playbook ansible/create-gh-deployment.yaml -e PR=5 -e ENV=dev -e GITHUB_TOKEN=<secret> -e OPENSHIFT_SERVER_URL_OC4=https://console..`
 
 ### Promote Environment
 > this currently is only configured to promote our react based deployments. It is not ready to promote mongo/strapi deployments
