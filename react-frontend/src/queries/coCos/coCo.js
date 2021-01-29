@@ -27,9 +27,12 @@ const COCO_QUERY = gql`
       WhyShouldIUseThis {
         Heading
         Details
-        Icon {
-          url
+      }
+      WhoIsUsingThis {
+        ministry {
+          MinistryAcronym
         }
+        Summary
       }
       ComponentCreationDate
       AdditionalTechnicalInfo {

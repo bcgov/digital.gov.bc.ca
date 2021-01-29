@@ -25,7 +25,7 @@ function CoCoCards() {
                   <Col sm={12} md={6} key={coCo.uid}>
                     <CoCoCard
                       title={coCo.Name}
-                      description={coCo.Description}
+                      description={coCo.ShortDescription}
                       numberOfUsers={coCo.NumberOfUsers}
                       onboardingTime={coCo.OnboardingTime}
                       supportSchedule={coCo.SupportSchedule}

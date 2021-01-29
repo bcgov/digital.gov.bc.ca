@@ -129,6 +129,10 @@
       "required": true,
       "max": 3,
       "min": 3
+    },
+    "ShortDescription": {
+      "type": "text",
+      "required": true
     }
   }
 }

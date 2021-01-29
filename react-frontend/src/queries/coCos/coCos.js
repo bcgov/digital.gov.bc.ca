@@ -5,7 +5,7 @@ const COCOS_QUERY = gql`
     coCos {
       uid
       Name
-      Description
+      ShortDescription
       ProjectStatus {
         Maintenance
         Status
