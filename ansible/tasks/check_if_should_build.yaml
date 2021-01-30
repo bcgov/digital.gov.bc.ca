@@ -29,8 +29,8 @@
   - name: Setting Facts from Build
     set_fact:
       # if a build is cancelled the commit field is undefined inside of the build
-      build_commit: "{% if build.resources[0].spec.revision is defined and build.resources[0].spec.revision.git.commit is defined  %}{{ build.resources[0].spec.revision.git.commit }}{% else %}''{% endif %}"
-      build_phase: "{{ build.resources[0].status.phase }}"
+      build_commit: "{% if build is defined and build.resources is defined and build.resources[0] is defined and build.resources[0].spec is defined and build.resources[0].spec.revision is defined and build.resources[0].spec.revision.git.commit is defined  %}{{ build.resources[0].spec.revision.git.commit }}{% else %}''{% endif %}"
+      build_phase: "{% if build is defined and build.resources is defined and build.resources[0] is defined and build.resources[0].status is defined and build.resources[0].status.phase is defined %}{{ build.resources[0].status.phase }}{% else %}''{% endif %}"
     when: bc.resources|length > 0
 
     

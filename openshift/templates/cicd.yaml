@@ -74,6 +74,7 @@ objects:
           - get
           - list
           - patch
+          - create
       - apiGroups:
           - build.openshift.io
           - ""
@@ -522,5 +523,5 @@ parameters:
       credentials.
     name: NAME
     required: true
-    value: github-cicdv3
+    value: github-cicd
 
