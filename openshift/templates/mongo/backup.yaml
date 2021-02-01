@@ -17,9 +17,6 @@ parameters:
     value: 'mongodb-backup'
   - name: MONGODB_ADMIN_PASSWORD
     description: 'MongoDB admin user''s password. Required.'
-  - name: MONGODB_IMAGE_TAG
-    description: Name of the MongoDB tag that should be used
-    value: "3.6"
   - name: MONGODB_SERVICE_HOST
     description: Address of the Mongo DB service
     required: true
@@ -44,7 +41,7 @@ objects:
                     claimName: ${MONGODB_BACKUP_VOLUME_CLAIM}
               containers:
                 - name: mongodb-backup
-                  image: 'docker-registry.default.svc:5000/openshift/mongodb:{MONGODB_IMAGE_TAG}'
+                  image: 'registry.redhat.io/rhscl/mongodb-36-rhel7:1'
                   command:
                     - 'bash'
                     - '-c'
