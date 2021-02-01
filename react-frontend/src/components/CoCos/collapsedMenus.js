@@ -3,11 +3,7 @@ import React from 'react';
 import { Collapse } from 'antd';
 import { Col, Row } from 'react-flexbox-grid';
 
-import {
-  CollapseButton,
-  PanelStyled,
-  StyledCheckbox,
-} from '../StyleComponents/collapseMenu';
+import { CollapseButton, PanelStyled } from '../StyleComponents/collapseMenu';
 
 const { Panel } = Collapse;
 
@@ -36,7 +32,6 @@ function CollapsedMenus({ price, service, technicalInfo, requirements }) {
           | <CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
         </Col>
       </Row>
-      <StyledCheckbox> Test</StyledCheckbox>
       <Collapse
         defaultActiveKey={['1']}
         activeKey={expanded}
