@@ -8,6 +8,7 @@ import DocumentTitle from 'react-document-title';
 import { Button } from 'antd';
 
 import MinistryUse from './ministryUse';
+import CollapsedMenus from './collapsedMenus';
 import { PageContainer } from '../StyleComponents/pageContent';
 import {
   BannerSideImageImg,
@@ -18,6 +19,7 @@ import {
   BannerSideImgSubTitle,
 } from '../StyleComponents/bannerWithImage';
 import { Heading, SubHeading } from '../StyleComponents/headings';
+import { CoCoLinkExternal } from '../StyleComponents/htmlTags';
 
 const coCoImage = require('../../images/pngIllustrations/CoCo.svg');
 
@@ -70,31 +72,19 @@ function CoCoPage() {
                     <SubHeading>
                       {coCos[0]?.WhyShouldIUseThis[0]?.Heading}
                     </SubHeading>
-                    <span>
-                      <SubHeading>
-                        {coCos[0]?.WhyShouldIUseThis[0]?.Details}
-                      </SubHeading>
-                    </span>
+                    <p>{coCos[0]?.WhyShouldIUseThis[0]?.Details}</p>
                   </Col>
                   <Col xs={12} md={4}>
                     <SubHeading>
                       {coCos[0]?.WhyShouldIUseThis[1]?.Heading}
                     </SubHeading>
-                    <span>
-                      <SubHeading>
-                        {coCos[0]?.WhyShouldIUseThis[1]?.Details}
-                      </SubHeading>
-                    </span>
+                    <p>{coCos[0]?.WhyShouldIUseThis[1]?.Details}</p>
                   </Col>
                   <Col xs={12} md={4}>
                     <SubHeading>
                       {coCos[0]?.WhyShouldIUseThis[2]?.Heading}
                     </SubHeading>
-                    <span>
-                      <SubHeading>
-                        {coCos[0]?.WhyShouldIUseThis[2]?.Details}
-                      </SubHeading>
-                    </span>
+                    <p>{coCos[0]?.WhyShouldIUseThis[2]?.Details}</p>
                   </Col>
                 </Row>
                 <Row>
@@ -138,10 +128,12 @@ function CoCoPage() {
                     <Heading>About {coCos[0].Name}</Heading>
                   </Col>
                 </Row>
-                {/* Price Accordian */}
-                {/* Service level support Accordian */}
-                {/* Additional Tech informations Accordian*/}
-                {/* Requirements and Restrictions */}
+                <CollapsedMenus
+                  price={coCos[0]?.CostStructure?.PaymentStructure}
+                  service={coCos[0]?.ServiceLevelSupport}
+                  technicalInfo={coCos[0]?.AdditionalTechnicalInfo?.Header}
+                  requirements={coCos[0]?.RequirementsAndRestrictions?.Heading}
+                />
                 <Row>
                   <Col xs={12}>
                     <Heading>Getting started</Heading>
@@ -154,9 +146,11 @@ function CoCoPage() {
                   </Col>
                 </Row>
                 <Row>
-                  <Link href={coCos[0].GetStartedURL}>
-                    <Button type="primary">Start Using Now</Button>
-                  </Link>
+                  <Col xs={12} style={{ flexBasis: 'auto' }}>
+                    <CoCoLinkExternal href={coCos[0]?.GetStartedURL}>
+                      Start Using Now
+                    </CoCoLinkExternal>
+                  </Col>
                 </Row>
                 <Row>
                   <Col xs={12}>

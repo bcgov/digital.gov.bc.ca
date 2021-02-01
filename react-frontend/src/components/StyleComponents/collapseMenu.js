@@ -1,0 +1,23 @@
+import styled from 'styled-components';
+import { Collapse } from 'antd';
+import Checkbox from 'antd/lib/checkbox';
+
+const { Panel } = Collapse;
+
+export const CollapseButton = styled.span.attrs({
+  className: 'collapseButton',
+})`
+  border: none;
+  color: #1a5a96;
+  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+`;
+
+export const PanelStyled = styled(Panel).attrs({
+  className: 'PanelStyled',
+})`
+  .ant-collapse-header {
+    color: #1a5a96 !important;
+    font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-weight: 700;
+  }
+`;
