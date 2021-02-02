@@ -12,6 +12,7 @@ import {
   BannerSideImgTitle,
   BannerSideImgSubTitle,
 } from '../StyleComponents/bannerWithImage';
+import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 
 function CoCoBannerSideImage({
   name,
@@ -29,8 +30,7 @@ function CoCoBannerSideImage({
         <BannerSideImgText>
           {Badges(status, maintenanceStatus, tags, 'white')}
           <BannerSideImgTitle>{name}</BannerSideImgTitle>
-          {/*TODO: The description must be formated*/}
-          <BannerSideImgSubTitle> {description} </BannerSideImgSubTitle>
+          <ReactMarkdownStyled source={description} />
         </BannerSideImgText>
       </Col>
       <Col sm={12} md={6}>
