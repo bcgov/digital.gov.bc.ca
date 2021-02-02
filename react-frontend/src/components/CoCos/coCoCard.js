@@ -17,6 +17,31 @@ const peopleIcon = require('../../images/icons/conference-24.png');
 const priceIcon = require('../../images/icons/price-tag-24.png');
 const clockIcon = require('../../images/icons/stopWatch.png');
 
+// This function will be used on coCoPage as well
+export const Badges = (status, maintenanceStatus, tags, colour) => {
+  return (
+    <BadgeWrapper>
+      <Badge data-testid="status-badge" background={colour}>
+        {status}
+      </Badge>
+      <Badge data-testid="status-badge" background={colour}>
+        {maintenanceStatus}
+      </Badge>
+      {/* Only display 3 tags */}
+      {tags?.map((tag, i) => {
+        if (i > 2) {
+          return null;
+        }
+        return (
+          <Badge data-testid="tag-badge" key={tag.name} background={colour}>
+            {tag.name}
+          </Badge>
+        );
+      })}
+    </BadgeWrapper>
+  );
+};
+
 function CoCoCard({
   title,
   description,
@@ -28,39 +53,10 @@ function CoCoCard({
   tags,
   uid,
 }) {
-  const colourPicker = (maintenanceStatus) => {
-    if (maintenanceStatus === 'ActiveDevelopment') {
-      return <BadgeDot color="green" title="Active Development" />;
-    }
-    if (maintenanceStatus === 'Maintained') {
-      return <BadgeDot color="yellow" title="Maintained" />;
-    }
-    if (maintenanceStatus === 'Abandoned') {
-      return <BadgeDot color="red" title="Abandoned" />;
-    }
-    return null;
-  };
-
-  //TODO:use uid to link to the specific coco page.
   return (
     <Link to={`cocos/${uid}`}>
       <CardStyled>
-        <BadgeWrapper>
-          <Badge data-testid="status-badge">
-            {colourPicker(status?.Maintenance)} {status?.Status}
-          </Badge>
-          {/* Only display 3 tags */}
-          {tags?.map((tag, i) => {
-            if (i > 2) {
-              return null;
-            }
-            return (
-              <Badge data-testid="tag-badge" key={tag.name}>
-                {tag.name}
-              </Badge>
-            );
-          })}
-        </BadgeWrapper>
+        {Badges(status?.Status, status?.Maintenance, tags)}
         <CardTitle data-testid="title">{title}</CardTitle>
         <CardDescription data-testid="description">
           {description}

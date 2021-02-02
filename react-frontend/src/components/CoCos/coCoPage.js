@@ -1,5 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import dateFormat from 'dateformat';
+import * as Scroll from 'react-scroll';
+
 import Query from '../Query';
 import COCO_QUERY from '../../queries/coCos/coCo';
 
@@ -9,6 +12,10 @@ import { Button } from 'antd';
 
 import MinistryUse from './ministryUse';
 import CollapsedMenus from './collapsedMenus';
+import WhyShouldIUseThis from './whyShoulIUseThis';
+import Analytics from './analytics';
+import CoCoBannerSideImage from './coCoBannerSideImage';
+
 import { PageContainer } from '../StyleComponents/pageContent';
 import {
   BannerSideImageImg,
@@ -19,12 +26,17 @@ import {
   BannerSideImgSubTitle,
 } from '../StyleComponents/bannerWithImage';
 import { Heading, SubHeading } from '../StyleComponents/headings';
-import { CoCoLinkExternal } from '../StyleComponents/htmlTags';
+import {
+  CoCoLinkExternal,
+  HrefLinkScrollTo,
+} from '../StyleComponents/htmlTags';
 
 const coCoImage = require('../../images/pngIllustrations/CoCo.svg');
 
 function CoCoPage() {
   const params = useParams();
+  const ScrollElement = Scroll.Element;
+
   return (
     <DocumentTitle title="Common Components - Digital Government - Province of British Columbia">
       <PageContainer>
@@ -39,92 +51,83 @@ function CoCoPage() {
                   </Col>
                 </Row>
                 <Row between="xs">
-                  <Col md={2}>Overview</Col>
-                  <Col md={2}>Who else is using this?</Col>
-                  <Col md={2}>About {coCos[0].Name}</Col>
-                  <Col md={2}>Getting started</Col>
-                  <Col md={2}>Support</Col>
+                  <Col sm={2}>
+                    <HrefLinkScrollTo
+                      to="overview"
+                      spy={true}
+                      smooth={true}
+                      offset={-180}
+                    >
+                      Overview
+                    </HrefLinkScrollTo>
+                  </Col>
+                  <Col sm={2}>
+                    <HrefLinkScrollTo
+                      to="whoIsUsing"
+                      spy={true}
+                      smooth={true}
+                      offset={-180}
+                    >
+                      Who else is using this?
+                    </HrefLinkScrollTo>
+                  </Col>
+                  <Col sm={2}>
+                    <HrefLinkScrollTo
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={-180}
+                    >
+                      About {coCos[0].Name}
+                    </HrefLinkScrollTo>
+                  </Col>
+                  <Col sm={2}>
+                    <HrefLinkScrollTo
+                      to="getStarted"
+                      spy={true}
+                      smooth={true}
+                      offset={-180}
+                    >
+                      Getting started
+                    </HrefLinkScrollTo>
+                  </Col>
+                  <Col sm={2}>
+                    <HrefLinkScrollTo
+                      to="support"
+                      spy={true}
+                      smooth={true}
+                      offset={-180}
+                    >
+                      Support
+                    </HrefLinkScrollTo>
+                  </Col>
                 </Row>
-                {/*TODO: The tags must be added*/}
 
-                <Row middle="xs">
-                  <Col sm={12} md={6}>
-                    <BannerSideImgText>
-                      <BannerSideImgTitle>{coCos[0].Name}</BannerSideImgTitle>
-                      {/*TODO: The description must be formated*/}
-                      <BannerSideImgSubTitle>
-                        {' '}
-                        {coCos[0].Description}{' '}
-                      </BannerSideImgSubTitle>
-                    </BannerSideImgText>
-                  </Col>
-                  <Col sm={12} md={6}>
-                    <BannerSideImageImg alt="" src={coCoImage} />
-                  </Col>
-                </Row>
+                <ScrollElement name="overview" className="element" />
+                <CoCoBannerSideImage
+                  name={coCos[0]?.Name}
+                  description={coCos[0]?.Description}
+                  status={coCos[0]?.ProjectStatus?.Status}
+                  maintenanceStatus={coCos[0]?.ProjectStatus?.Maintenance}
+                  image={null}
+                  tags={coCos[0]?.Tags}
+                />
+
+                <WhyShouldIUseThis
+                  whyShouldIUseThis={coCos[0]?.WhyShouldIUseThis}
+                />
+
+                <ScrollElement name="whoIsUsing" className="element" />
+                <Analytics
+                  coCoName={coCos[0]?.Name}
+                  numberOfUsers={coCos[0]?.NumberOfUsers}
+                  creationDate={coCos[0]?.ComponentCreationDate}
+                  whoIsUsingThis={coCos[0]?.WhoIsUsingThis}
+                />
+
                 <Row>
                   <Col xs={12}>
-                    <Heading>Why should I use this?</Heading>
-                  </Col>
-                </Row>
-                <Row middle="xs">
-                  <Col xs={12} md={4}>
-                    <SubHeading>
-                      {coCos[0]?.WhyShouldIUseThis[0]?.Heading}
-                    </SubHeading>
-                    <p>{coCos[0]?.WhyShouldIUseThis[0]?.Details}</p>
-                  </Col>
-                  <Col xs={12} md={4}>
-                    <SubHeading>
-                      {coCos[0]?.WhyShouldIUseThis[1]?.Heading}
-                    </SubHeading>
-                    <p>{coCos[0]?.WhyShouldIUseThis[1]?.Details}</p>
-                  </Col>
-                  <Col xs={12} md={4}>
-                    <SubHeading>
-                      {coCos[0]?.WhyShouldIUseThis[2]?.Heading}
-                    </SubHeading>
-                    <p>{coCos[0]?.WhyShouldIUseThis[2]?.Details}</p>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
-                    <Heading>Who else is using this?</Heading>
-                  </Col>
-                </Row>
-                <Row>
-                  {/* Validate the imput for the ministry */}
-                  <MinistryUse
-                    acronym={
-                      coCos[0]?.WhoIsUsingThis[0]?.ministry?.MinistryAcronym
-                    }
-                    summary={coCos[0]?.WhoIsUsingThis[0]?.Summary}
-                  />
-                  <MinistryUse
-                    acronym={
-                      coCos[0]?.WhoIsUsingThis[1]?.ministry?.MinistryAcronym
-                    }
-                    summary={coCos[0]?.WhoIsUsingThis[1]?.Summary}
-                  />
-                  <MinistryUse
-                    acronym={
-                      coCos[0]?.WhoIsUsingThis[2]?.ministry?.MinistryAcronym
-                    }
-                    summary={coCos[0]?.WhoIsUsingThis[2]?.Summary}
-                  />
-                </Row>
-                <Row>
-                  <Col xs={12} md={4}>
-                    <SubHeading>Running Since</SubHeading>
-                    <span>{coCos[0]?.ComponentCreationDate}</span>
-                  </Col>
-                  <Col xs={12} md={4}>
-                    <SubHeading>{coCos[0]?.NumberOfUsers}</SubHeading>
-                    <span>teams using {coCos[0].Name}</span>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
+                    <ScrollElement name="about" className="element" />
                     <Heading>About {coCos[0].Name}</Heading>
                   </Col>
                 </Row>
@@ -136,6 +139,7 @@ function CoCoPage() {
                 />
                 <Row>
                   <Col xs={12}>
+                    <ScrollElement name="getStarted" className="element" />
                     <Heading>Getting started</Heading>
                   </Col>
                 </Row>
@@ -154,6 +158,7 @@ function CoCoPage() {
                 </Row>
                 <Row>
                   <Col xs={12}>
+                    <ScrollElement name="support" className="element" />
                     <Heading>Support</Heading>
                   </Col>
                 </Row>

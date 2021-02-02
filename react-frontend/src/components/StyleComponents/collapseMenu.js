@@ -15,9 +15,13 @@ export const CollapseButton = styled.span.attrs({
 export const PanelStyled = styled(Panel).attrs({
   className: 'PanelStyled',
 })`
+  padding-top: 5px;
   .ant-collapse-header {
     color: #1a5a96 !important;
     font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-weight: 700;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    margin-left: 40px;
   }
 `;
