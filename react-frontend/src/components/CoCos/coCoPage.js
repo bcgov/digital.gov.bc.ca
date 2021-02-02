@@ -8,7 +8,6 @@ import COCO_QUERY from '../../queries/coCos/coCo';
 
 import { Col, Row } from 'react-flexbox-grid';
 import DocumentTitle from 'react-document-title';
-import { Button } from 'antd';
 
 import CollapsedMenus from './collapsedMenus';
 import WhyShouldIUseThis from './whyShoulIUseThis';
@@ -16,14 +15,7 @@ import Analytics from './analytics';
 import CoCoBannerSideImage from './coCoBannerSideImage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
-import {
-  BannerSideImageImg,
-  BannerSideImgText,
-} from '../StyleComponents/bannerWithImage';
-import {
-  BannerSideImgTitle,
-  BannerSideImgSubTitle,
-} from '../StyleComponents/bannerWithImage';
+
 import { Heading, SubHeading } from '../StyleComponents/headings';
 import {
   CoCoLinkExternal,
@@ -108,7 +100,7 @@ function CoCoPage() {
                   description={coCos[0]?.Description}
                   status={coCos[0]?.ProjectStatus?.Status}
                   maintenanceStatus={coCos[0]?.ProjectStatus?.Maintenance}
-                  image={null}
+                  imageurl={coCos[0]?.CoverImage?.url}
                   tags={coCos[0]?.Tags}
                   coCoLink={coCos[0]?.CoCoWebsite}
                 />
