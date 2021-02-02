@@ -3,12 +3,16 @@ import React from 'react';
 import { Collapse } from 'antd';
 import { Col, Row } from 'react-flexbox-grid';
 
-import { CollapseButton, PanelStyled } from '../StyleComponents/collapseMenu';
-import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
+import {
+  CollapseButton,
+  PanelStyled,
+} from '../../StyleComponents/collapseMenu';
+import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
+import { Heading } from '../../StyleComponents/headings';
 
 const { Panel } = Collapse;
 
-function CollapsedMenus({ price, service, technicalInfo, requirements }) {
+function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
   const [expanded, setExpanded] = React.useState(['1']);
 
   const expandAll = () => {
@@ -24,7 +28,12 @@ function CollapsedMenus({ price, service, technicalInfo, requirements }) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: '60px' }}>
+      <Row>
+        <Col xs={12}>
+          <Heading>About {name}</Heading>
+        </Col>
+      </Row>
       <Row>
         <Col xs={12}>
           <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>

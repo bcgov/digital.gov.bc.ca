@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Col, Row } from 'react-flexbox-grid';
 
-import { Heading, SubHeading } from '../StyleComponents/headings';
+import { Heading, SubHeading } from '../../StyleComponents/headings';
 
 function WhyShouldIUseThis({ whyShouldIUseThis }) {
   let headings = whyShouldIUseThis?.map((reason) => reason?.Heading);

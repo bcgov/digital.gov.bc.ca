@@ -1,26 +1,21 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import dateFormat from 'dateformat';
+import { useParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
-
 import Query from '../Query';
 import COCO_QUERY from '../../queries/coCos/coCo';
-
 import { Col, Row } from 'react-flexbox-grid';
 import DocumentTitle from 'react-document-title';
 
-import CollapsedMenus from './collapsedMenus';
-import WhyShouldIUseThis from './whyShoulIUseThis';
-import Analytics from './analytics';
-import CoCoBannerSideImage from './coCoBannerSideImage';
+import CollapsedMenus from './CoCoPageComponents/collapsedMenus';
+import WhyShouldIUseThis from './CoCoPageComponents/whyShoulIUseThis';
+import Analytics from './CoCoPageComponents/analytics';
+import CoCoBannerSideImage from './CoCoPageComponents/coCoBannerSideImage';
+import CoCoPageNav from './CoCoPageComponents/coCoPageNav';
+import GetStarted from './CoCoPageComponents/getStarted';
+import Support from './CoCoPageComponents/support';
+import NotFound from '../NotFoundPage/notFoundPage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
-
-import { Heading, SubHeading } from '../StyleComponents/headings';
-import {
-  CoCoLinkExternal,
-  HrefLinkScrollTo,
-} from '../StyleComponents/htmlTags';
 
 const coCoImage = require('../../images/pngIllustrations/CoCo.svg');
 
@@ -34,66 +29,20 @@ function CoCoPage() {
         <Query query={COCO_QUERY} uid={params.uid}>
           {({ data: { coCos } }) => {
             console.log(coCos);
+            if (coCos.length === 0) {
+              return <NotFound />;
+            }
+
             return (
               <div>
-                <Row>
-                  <Col xs={12}>
-                    <Heading>On this page</Heading>
-                  </Col>
-                </Row>
-                <Row between="xs">
-                  <Col sm={2}>
-                    <HrefLinkScrollTo
-                      to="overview"
-                      spy={true}
-                      smooth={true}
-                      offset={-180}
-                    >
-                      Overview
-                    </HrefLinkScrollTo>
-                  </Col>
-                  <Col sm={2}>
-                    <HrefLinkScrollTo
-                      to="whoIsUsing"
-                      spy={true}
-                      smooth={true}
-                      offset={-180}
-                    >
-                      Who else is using this?
-                    </HrefLinkScrollTo>
-                  </Col>
-                  <Col sm={2}>
-                    <HrefLinkScrollTo
-                      to="about"
-                      spy={true}
-                      smooth={true}
-                      offset={-180}
-                    >
-                      About {coCos[0]?.Name}
-                    </HrefLinkScrollTo>
-                  </Col>
-                  <Col sm={2}>
-                    <HrefLinkScrollTo
-                      to="getStarted"
-                      spy={true}
-                      smooth={true}
-                      offset={-180}
-                    >
-                      Getting started
-                    </HrefLinkScrollTo>
-                  </Col>
-                  <Col sm={2}>
-                    <HrefLinkScrollTo
-                      to="support"
-                      spy={true}
-                      smooth={true}
-                      offset={-180}
-                    >
-                      Support
-                    </HrefLinkScrollTo>
-                  </Col>
-                </Row>
-
+                <CoCoPageNav
+                  location1="overview"
+                  location2="whoIsUsing"
+                  location3="about"
+                  location4="getStarted"
+                  location5="support"
+                  name={coCos[0]?.Name}
+                />
                 <ScrollElement name="overview" className="element" />
                 <CoCoBannerSideImage
                   name={coCos[0]?.Name}
@@ -104,11 +53,9 @@ function CoCoPage() {
                   tags={coCos[0]?.Tags}
                   coCoLink={coCos[0]?.CoCoWebsite}
                 />
-
                 <WhyShouldIUseThis
                   whyShouldIUseThis={coCos[0]?.WhyShouldIUseThis}
                 />
-
                 <ScrollElement name="whoIsUsing" className="element" />
                 <Analytics
                   coCoName={coCos[0]?.Name}
@@ -116,54 +63,21 @@ function CoCoPage() {
                   creationDate={coCos[0]?.ComponentCreationDate}
                   whoIsUsingThis={coCos[0]?.WhoIsUsingThis}
                 />
-
-                <div style={{ marginTop: '60px' }}>
-                  <Row>
-                    <Col xs={12}>
-                      <ScrollElement name="about" className="element" />
-                      <Heading>About {coCos[0]?.Name}</Heading>
-                    </Col>
-                  </Row>
-                  <CollapsedMenus
-                    price={coCos[0]?.CostStructure?.PaymentStructure}
-                    service={coCos[0]?.ServiceLevelSupport}
-                    technicalInfo={coCos[0]?.AdditionalTechnicalInfo?.Header}
-                    requirements={
-                      coCos[0]?.RequirementsAndRestrictions?.Heading
-                    }
-                  />
-                </div>
-                <div style={{ marginTop: '60px' }}>
-                  <Row>
-                    <Col xs={12}>
-                      <ScrollElement name="getStarted" className="element" />
-                      <Heading>Getting started</Heading>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col xs={12}>
-                      Select the "Start Using Now" button to visit the{' '}
-                      {coCos[0]?.Name} Onboarding guide.
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col xs={12} style={{ flexBasis: 'auto' }}>
-                      <CoCoLinkExternal href={coCos[0]?.GetStartedURL}>
-                        Start Using Now
-                      </CoCoLinkExternal>
-                    </Col>
-                  </Row>
-                </div>
-
-                <div style={{ marginTop: '60px' }}>
-                  <Row>
-                    <Col xs={12}>
-                      <ScrollElement name="support" className="element" />
-                      <Heading>Support</Heading>
-                    </Col>
-                  </Row>
-                  {/* For each support link add a line. */}
-                </div>
+                <ScrollElement name="about" className="element" />
+                <CollapsedMenus
+                  name={coCos[0]?.name}
+                  price={coCos[0]?.CostStructure?.PaymentStructure}
+                  service={coCos[0]?.ServiceLevelSupport}
+                  technicalInfo={coCos[0]?.AdditionalTechnicalInfo?.Header}
+                  requirements={coCos[0]?.RequirementsAndRestrictions?.Heading}
+                />
+                <ScrollElement name="getStarted" className="element" />
+                <GetStarted
+                  name={coCos[0]?.Name}
+                  url={coCos[0]?.GetStartedURL}
+                />
+                <ScrollElement name="support" className="element" />
+                <Support />
               </div>
             );
           }}

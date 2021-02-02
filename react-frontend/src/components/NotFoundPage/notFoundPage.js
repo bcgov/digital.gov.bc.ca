@@ -3,7 +3,11 @@ import DocumentTitle from 'react-document-title';
 
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { PageContainer } from '../StyleComponents/pageContent';
-import { StyledP, HrefLinkInternal } from '../StyleComponents/htmlTags';
+import {
+  StyledP,
+  HrefLinkInternal,
+  HrefLink,
+} from '../StyleComponents/htmlTags';
 
 const image404 = require('../../images/pngIllustrations/404.png');
 const bannerTitle = "Page not found. We're sorry, something is missing.";
@@ -39,7 +43,7 @@ function NotFound({ standards }) {
           </StyledP>
           <StyledP>
             If you would like to email us, please contact{' '}
-            <HrefLinkInternal>Digital.Government@gov.bc.ca</HrefLinkInternal>.
+            <HrefLink>Digital.Government@gov.bc.ca</HrefLink>.
           </StyledP>
         </PageContainer>
       </div>

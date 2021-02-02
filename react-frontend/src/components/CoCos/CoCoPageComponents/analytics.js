@@ -4,7 +4,7 @@ import dateFormat from 'dateformat';
 import { Col, Row } from 'react-flexbox-grid';
 import MinistryUse from './ministryUse';
 
-import { Heading, SubHeading } from '../StyleComponents/headings';
+import { Heading, SubHeading } from '../../StyleComponents/headings';
 
 function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
   let ministries = whoIsUsingThis?.map((who) => who?.ministry?.MinistryAcronym);

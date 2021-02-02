@@ -25,11 +25,11 @@ const ministryNames = {
 };
 
 function MinistryUse({ acronym, summary }) {
-  let ministryImage = require(`../../images/ministryMarks/BCID_H_rgb_pos.png`);
+  let ministryImage = require(`../../../images/ministryMarks/BCID_H_rgb_pos.png`);
   let altText = 'Invalid ministry acronym provided';
 
   if (ministryNames[acronym]) {
-    ministryImage = require(`../../images/ministryMarks/BC_${acronym}_H_RGB_pos.png`);
+    ministryImage = require(`../../../images/ministryMarks/BC_${acronym}_H_RGB_pos.png`);
     altText = ministryNames.acronym;
   } else {
     console.log('Ministry acronym not found.');
