@@ -4,7 +4,6 @@ import { Col, Row } from 'react-flexbox-grid';
 
 import { Badges } from './coCoCard';
 
-import { Heading, SubHeading } from '../StyleComponents/headings';
 import {
   BannerSideImageImg,
   BannerSideImgText,
@@ -21,13 +20,9 @@ function CoCoBannerSideImage({
   maintenanceStatus,
   image,
   tags,
+  coCoLink,
 }) {
   const coCoImage = require('../../images/pngIllustrations/CoCo.svg');
-
-  let tag = tags.map((tag) => tag?.name);
-  console.log(status);
-  console.log(maintenanceStatus);
-  console.log(tag);
   return (
     <Row middle="xs">
       <Col sm={12} md={6}>
@@ -39,7 +34,9 @@ function CoCoBannerSideImage({
         </BannerSideImgText>
       </Col>
       <Col sm={12} md={6}>
-        <BannerSideImageImg alt="" src={coCoImage} />
+        <a href={coCoLink} target="_blank">
+          <BannerSideImageImg alt="" src={coCoImage} />
+        </a>
       </Col>
     </Row>
   );

@@ -10,7 +10,6 @@ import { Col, Row } from 'react-flexbox-grid';
 import DocumentTitle from 'react-document-title';
 import { Button } from 'antd';
 
-import MinistryUse from './ministryUse';
 import CollapsedMenus from './collapsedMenus';
 import WhyShouldIUseThis from './whyShoulIUseThis';
 import Analytics from './analytics';
@@ -78,7 +77,7 @@ function CoCoPage() {
                       smooth={true}
                       offset={-180}
                     >
-                      About {coCos[0].Name}
+                      About {coCos[0]?.Name}
                     </HrefLinkScrollTo>
                   </Col>
                   <Col sm={2}>
@@ -111,6 +110,7 @@ function CoCoPage() {
                   maintenanceStatus={coCos[0]?.ProjectStatus?.Maintenance}
                   image={null}
                   tags={coCos[0]?.Tags}
+                  coCoLink={coCos[0]?.CoCoWebsite}
                 />
 
                 <WhyShouldIUseThis
@@ -125,44 +125,53 @@ function CoCoPage() {
                   whoIsUsingThis={coCos[0]?.WhoIsUsingThis}
                 />
 
-                <Row>
-                  <Col xs={12}>
-                    <ScrollElement name="about" className="element" />
-                    <Heading>About {coCos[0].Name}</Heading>
-                  </Col>
-                </Row>
-                <CollapsedMenus
-                  price={coCos[0]?.CostStructure?.PaymentStructure}
-                  service={coCos[0]?.ServiceLevelSupport}
-                  technicalInfo={coCos[0]?.AdditionalTechnicalInfo?.Header}
-                  requirements={coCos[0]?.RequirementsAndRestrictions?.Heading}
-                />
-                <Row>
-                  <Col xs={12}>
-                    <ScrollElement name="getStarted" className="element" />
-                    <Heading>Getting started</Heading>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
-                    Select the "Start Using Now" button to visit the{' '}
-                    {coCos[0].Name} Onboarding guide.
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12} style={{ flexBasis: 'auto' }}>
-                    <CoCoLinkExternal href={coCos[0]?.GetStartedURL}>
-                      Start Using Now
-                    </CoCoLinkExternal>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
-                    <ScrollElement name="support" className="element" />
-                    <Heading>Support</Heading>
-                  </Col>
-                </Row>
-                {/* For each support link add a line. */}
+                <div style={{ marginTop: '60px' }}>
+                  <Row>
+                    <Col xs={12}>
+                      <ScrollElement name="about" className="element" />
+                      <Heading>About {coCos[0]?.Name}</Heading>
+                    </Col>
+                  </Row>
+                  <CollapsedMenus
+                    price={coCos[0]?.CostStructure?.PaymentStructure}
+                    service={coCos[0]?.ServiceLevelSupport}
+                    technicalInfo={coCos[0]?.AdditionalTechnicalInfo?.Header}
+                    requirements={
+                      coCos[0]?.RequirementsAndRestrictions?.Heading
+                    }
+                  />
+                </div>
+                <div style={{ marginTop: '60px' }}>
+                  <Row>
+                    <Col xs={12}>
+                      <ScrollElement name="getStarted" className="element" />
+                      <Heading>Getting started</Heading>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={12}>
+                      Select the "Start Using Now" button to visit the{' '}
+                      {coCos[0]?.Name} Onboarding guide.
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={12} style={{ flexBasis: 'auto' }}>
+                      <CoCoLinkExternal href={coCos[0]?.GetStartedURL}>
+                        Start Using Now
+                      </CoCoLinkExternal>
+                    </Col>
+                  </Row>
+                </div>
+
+                <div style={{ marginTop: '60px' }}>
+                  <Row>
+                    <Col xs={12}>
+                      <ScrollElement name="support" className="element" />
+                      <Heading>Support</Heading>
+                    </Col>
+                  </Row>
+                  {/* For each support link add a line. */}
+                </div>
               </div>
             );
           }}

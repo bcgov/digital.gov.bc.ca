@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Collapse } from 'antd';
-import Checkbox from 'antd/lib/checkbox';
 
 const { Panel } = Collapse;
 

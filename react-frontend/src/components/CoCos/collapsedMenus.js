@@ -4,6 +4,7 @@ import { Collapse } from 'antd';
 import { Col, Row } from 'react-flexbox-grid';
 
 import { CollapseButton, PanelStyled } from '../StyleComponents/collapseMenu';
+import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 
 const { Panel } = Collapse;
 
@@ -40,22 +41,22 @@ function CollapsedMenus({ price, service, technicalInfo, requirements }) {
       >
         {price && (
           <PanelStyled header="Price" key="1">
-            <p>{price}</p>
+            <ReactMarkdownStyled source={price} />
           </PanelStyled>
         )}
         {service && (
           <PanelStyled header="Service Level Support" key="2">
-            <p>{service}</p>
+            <ReactMarkdownStyled source={service} />
           </PanelStyled>
         )}
         {technicalInfo && (
           <PanelStyled header="Additional Technical Information" key="3">
-            <p>{technicalInfo}</p>
+            <ReactMarkdownStyled source={technicalInfo} />
           </PanelStyled>
         )}
         {requirements && (
           <PanelStyled header="Requirements and Restrictions" key="4">
-            <p>{requirements}</p>
+            <ReactMarkdownStyled source={requirements} />
           </PanelStyled>
         )}
       </Collapse>

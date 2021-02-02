@@ -31,6 +31,8 @@ function MinistryUse({ acronym, summary }) {
   if (ministryNames[acronym]) {
     ministryImage = require(`../../images/ministryMarks/BC_${acronym}_H_RGB_pos.png`);
     altText = ministryNames.acronym;
+  } else {
+    console.log('Ministry acronym not found.');
   }
 
   return (
