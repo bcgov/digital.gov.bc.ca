@@ -24,7 +24,6 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
   const changeKeyState = (key) => {
     setExpanded(key);
   };
-  // const panelStyle = { "borderRadius": "2px", "border": "0", "overflow": "hidden" }
 
   return (
     <div style={{ marginTop: '60px' }}>

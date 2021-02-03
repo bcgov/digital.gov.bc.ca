@@ -15,7 +15,7 @@ export const PanelStyled = styled(Panel).attrs({
   className: 'PanelStyled',
 })`
   border-radius: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   overflow: hidden;
   padding-top: 5px;
 
@@ -29,7 +29,7 @@ export const PanelStyled = styled(Panel).attrs({
     margin-left: 40px;
   }
   .ant-collapse-content {
-    border-top-width: 10px;
+    border-top-width: 2px;
     border-top-color: #f2f2f2;
   }
 `;
