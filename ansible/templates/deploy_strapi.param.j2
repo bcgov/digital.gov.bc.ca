@@ -3,5 +3,5 @@
 -p IMAGE_STREAM={{ strapi_infra_name }} \
 -p IMAGE_TAG={{ version }} \
 -p SUFFIX={{ suffix }} \
--p MONGO_SECRET_NAME={{ mongo_infra_name }}-{{ suffix }} \
+-p MONGO_SECRET_NAME=mongodb-creds \
 -p PULL_REQUEST_NUMBER={{ PR }} 

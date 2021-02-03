@@ -59,10 +59,6 @@ objects:
         uri: ${GIT_REPO}
       type: Git
     strategy:
-      dockerStrategy:
-        from:
-          kind: ImageStreamTag
-          name: node:12.17.0-alpine
       type: Docker
     successfulBuildsHistoryLimit: 5
     triggers:
