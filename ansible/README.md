@@ -87,7 +87,7 @@ Options:
 
 Usage:
 
-`ansible-playbook ansible/create-gh-deployment.yaml -e PR=5 -e ENV=dev -e GITHUB_TOKEN=<secret> -e OPENSHIFT_SERVER_URL=https://console..`
+`ansible-playbook ansible/create-gh-deployment.yaml -e PR=5 -e ENV=dev -e GITHUB_TOKEN=<secret> -e OPENSHIFT_SERVER_URL_OC4=https://console..`
 
 ### Promote Environment
 > this currently is only configured to promote our react based deployments. It is not ready to promote mongo/strapi deployments
@@ -136,17 +136,17 @@ The code can be deployed to test or prod through a PR created from develop to ma
     Note: The code should always be promoted to test before promoting to prod.
 
 
-### Running Zapscan
+# Running Zapscan
 ZAPSCAN is an open-source web application security scanner. Zapscan can be run against any environment dev, test or prod using the Manual Workflow. Zapscan can be a baseline scan or a full scan. 
 
-# Baseline
+### Baseline
  In case of baseline scan, ZAP spider against the specified target for (by default) 1 minute and then waits for the passive scanning to complete before reporting the results.This means that the script doesn't perform any actual ‘attacks’ and will run for a relatively short period of time (a few minutes at most).
 
-# Fullscan
+### Fullscan
 It runs the ZAP spider against the specified target (by default with no time limit) followed by an optional ajax spider scan and then a full active scan before reporting the results.
 This means that the script does perform actual ‘attacks’ and can potentially run for a long period of time.
 
-# Instructions for running Zapscan
+### Instructions for running Zapscan
 - Click on **Actions** in Github
 - On the left side under All Workflows, select **run Zap Scan**
 - On the right side click on **Run Workflow**, fill the parameters required as follows:

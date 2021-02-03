@@ -23,6 +23,6 @@
 - debug: 
     msg:
       - "--------- Failed deployment of {{ kind }}/{{ name }}  ---------"
-      - "{{ result.json.status.readyReplicas }} ready replicas"
+      - "{{ result.json.status }} deployment status"
       - "{{ result.json.spec.replicas }} configured replicas"
   when: not object_ready
