@@ -17,20 +17,6 @@ export const ReactMarkdownStyled = styled(ReactMarkdown)`
 `;
 
 export const MarkdownStyles = styled.div`
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-  & > a {
-    color: #1a5a96;
-    font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-    text-decoration: underline;
-    :focus {
-      outline: -webkit-focus-ring-color auto 5px;
-    }
-    :hover {
-      color: blue;
-      text-decoration: none;
-    }
-  }
-
   & > h1 {
     font-size: 3rem;
     font-weight: 700;
