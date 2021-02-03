@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import Query from '../Query';
 import COCO_QUERY from '../../queries/coCos/coCo';
-import { Col, Row } from 'react-flexbox-grid';
 import DocumentTitle from 'react-document-title';
 
 import CollapsedMenus from './CoCoPageComponents/collapsedMenus';
@@ -17,8 +16,6 @@ import NotFound from '../NotFoundPage/notFoundPage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 
-const coCoImage = require('../../images/pngIllustrations/CoCo.svg');
-
 function CoCoPage() {
   const params = useParams();
   const ScrollElement = Scroll.Element;
@@ -28,7 +25,6 @@ function CoCoPage() {
       <PageContainer>
         <Query query={COCO_QUERY} uid={params.uid}>
           {({ data: { coCos } }) => {
-            console.log(coCos);
             if (coCos.length === 0) {
               return <NotFound />;
             }

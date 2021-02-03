@@ -10,8 +10,6 @@ import {
 import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
 import { Heading } from '../../StyleComponents/headings';
 
-const { Panel } = Collapse;
-
 function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
   const [expanded, setExpanded] = React.useState(['1']);
 
@@ -26,6 +24,7 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
   const changeKeyState = (key) => {
     setExpanded(key);
   };
+  // const panelStyle = { "borderRadius": "2px", "border": "0", "overflow": "hidden" }
 
   return (
     <div style={{ marginTop: '60px' }}>
@@ -47,6 +46,7 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
         activeKey={expanded}
         onChange={changeKeyState}
         expandIconPosition="right"
+        style={{ background: '#f2f2f2', border: 'none' }}
       >
         {price && (
           <PanelStyled header="Price" key="1">

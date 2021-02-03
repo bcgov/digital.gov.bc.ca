@@ -5,7 +5,6 @@ import { Heading } from '../../StyleComponents/headings';
 import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
 
 function Support({ contact }) {
-  console.log(contact);
   return (
     <div style={{ marginTop: '60px' }}>
       <Row>

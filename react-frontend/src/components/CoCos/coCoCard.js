@@ -1,9 +1,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Col, Row } from 'react-flexbox-grid';
+import { Row } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 
-import { Badge, BadgeDot, BadgeWrapper } from '../StyleComponents/badge';
+import { Badge, BadgeWrapper } from '../StyleComponents/badge';
 import {
   CardTitle,
   CardDescription,
