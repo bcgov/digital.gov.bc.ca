@@ -76,28 +76,8 @@
       "type": "date",
       "required": true
     },
-    "AdditionalTechnicalInfo": {
-      "type": "component",
-      "repeatable": true,
-      "component": "co-co.additional-technical-info",
-      "min": 1,
-      "required": true
-    },
-    "RequirementsAndRestrictions": {
-      "type": "component",
-      "repeatable": true,
-      "component": "co-co.requirements-and-restrictions",
-      "required": true,
-      "min": 1
-    },
     "GetStartedURL": {
       "type": "string",
-      "required": true
-    },
-    "SupportContact": {
-      "type": "component",
-      "repeatable": false,
-      "component": "co-co.support-contact",
       "required": true
     },
     "uid": {
@@ -133,6 +113,15 @@
     "ShortDescription": {
       "type": "text",
       "required": true
+    },
+    "AdditionalTechnicalInformation": {
+      "type": "richtext"
+    },
+    "RequirementsAndRestrictions": {
+      "type": "richtext"
+    },
+    "Support": {
+      "type": "richtext"
     }
   }
 }

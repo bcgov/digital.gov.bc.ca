@@ -35,22 +35,13 @@ const COCO_QUERY = gql`
         Summary
       }
       ComponentCreationDate
-      AdditionalTechnicalInfo {
-        Header
-        Link
-      }
-      RequirementsAndRestrictions {
-        Heading
-        Link
-      }
       GetStartedURL
-      SupportContact {
-        ContatactUsCallToAction
-        PhoneURLorEmail
-      }
       CoCoWebsite
       GetStartedSteps
       ServiceLevelSupport
+      AdditionalTechnicalInformation
+      RequirementsAndRestrictions
+      Support
     }
   }
 `;

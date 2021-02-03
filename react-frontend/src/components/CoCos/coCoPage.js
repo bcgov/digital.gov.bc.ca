@@ -68,8 +68,8 @@ function CoCoPage() {
                   name={coCos[0]?.name}
                   price={coCos[0]?.CostStructure?.PaymentStructure}
                   service={coCos[0]?.ServiceLevelSupport}
-                  technicalInfo={coCos[0]?.AdditionalTechnicalInfo?.Header}
-                  requirements={coCos[0]?.RequirementsAndRestrictions?.Heading}
+                  technicalInfo={coCos[0]?.AdditionalTechnicalInformation}
+                  requirements={coCos[0]?.RequirementsAndRestrictions}
                 />
                 <ScrollElement name="getStarted" className="element" />
                 <GetStarted
@@ -77,7 +77,7 @@ function CoCoPage() {
                   url={coCos[0]?.GetStartedURL}
                 />
                 <ScrollElement name="support" className="element" />
-                <Support />
+                <Support contact={coCos[0]?.Support} />
               </div>
             );
           }}

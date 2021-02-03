@@ -2,8 +2,10 @@ import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 
 import { Heading } from '../../StyleComponents/headings';
+import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
 
-function Support({}) {
+function Support({ contact }) {
+  console.log(contact);
   return (
     <div style={{ marginTop: '60px' }}>
       <Row>
@@ -11,7 +13,11 @@ function Support({}) {
           <Heading>Support</Heading>
         </Col>
       </Row>
-      {/* For each support link add a line. */}
+      <Row>
+        <Col xs={12}>
+          <ReactMarkdownStyled source={contact} />
+        </Col>
+      </Row>
     </div>
   );
 }
