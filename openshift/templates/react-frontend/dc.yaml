@@ -129,7 +129,7 @@ objects:
     data:
       StrapiConfig: |
         {
-          "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.pathfinder.gov.bc.ca/graphql"
+          "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.apps.silver.devops.gov.bc.ca/graphql"
         }
     kind: ConfigMap
     metadata:
