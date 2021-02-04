@@ -116,7 +116,7 @@ objects:
       name: ${NAME}-${SUFFIX}
 parameters:
 - name: IMAGE_REGISTRY
-  value: docker-registry.default.svc:5000
+  value: image-registry.openshift-image-registry.svc:5000
   description: the image registry to find the docker image
 - name: IMAGE_NAMESPACE
   required: true
