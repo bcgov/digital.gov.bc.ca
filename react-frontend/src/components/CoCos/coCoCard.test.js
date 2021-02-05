@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Route from 'react-router-dom';
 import CoCoCard from './coCoCard';
 import { BrowserRouter as Router } from 'react-router-dom';
 

@@ -13,61 +13,18 @@ it('Renders without crashing if not props are passed in', () => {
   ReactDOM.render(<MinistryUse></MinistryUse>, div);
 });
 
-// it('Renders all fields when props passed in', () => {
-//   const { getByTestId } = render(
-//     <CoCoCard
-//       title="Test Name"
-//       description="An awesome description"
-//       numberOfUsers="66"
-//       onboardingTime="days"
-//       supportSchedule="247"
-//       cost="Free"
-//       status={{ Maintenance: 'ActiveDevelopment', Status: 'On Fire' }}
-//       tags={[{ name: 'one' }, { name: 'two' }]}
-//       uid="TestUID"
-//     />
-//   );
-//   expect(getByTestId('title')).toHaveTextContent('Test Name');
-//   expect(getByTestId('description')).toHaveTextContent(
-//     'An awesome description'
-//   );
-// });
+it('Gives alt text warning if invalid acronym supplied', () => {
+  const { getByAltText } = render(
+    <MinistryUse acronym="FAKE" summary="Test Ministry" />
+  );
+  getByAltText('Invalid ministry acronym provided');
+});
 
-// it('Expect 3 tags displayed when 3 tags passed in', () => {
-//   const { getAllByTestId } = render(
-//     <CoCoCard
-//       title="Test Name"
-//       description="An awesome description"
-//       numberOfUsers="66"
-//       onboardingTime="days"
-//       supportSchedule="247"
-//       cost="Free"
-//       status={{ Maintenance: 'ActiveDevelopment', Status: 'On Fire' }}
-//       tags={[{ name: 'one' }, { name: 'two' }, { name: 'three' }]}
-//       uid="TestUID"
-//     />
-//   );
-//   expect(getAllByTestId('tag-badge').length).toEqual(3);
-// });
-
-// it('Expect only 3 tags displayed when 4 or more tags passed in', () => {
-//   const { getAllByTestId } = render(
-//     <CoCoCard
-//       title="Test Name"
-//       description="An awesome description"
-//       numberOfUsers="66"
-//       onboardingTime="days"
-//       supportSchedule="247"
-//       cost="Free"
-//       status={{ Maintenance: 'ActiveDevelopment', Status: 'On Fire' }}
-//       tags={[
-//         { name: 'one' },
-//         { name: 'two' },
-//         { name: 'three' },
-//         { name: 'four' },
-//       ]}
-//       uid="TestUID"
-//     />
-//   );
-//   expect(getAllByTestId('tag-badge').length).toEqual(3);
-// });
+it('Gives alt text for ministry if valid acronym supplied', () => {
+  const { getByAltText } = render(
+    <MinistryUse acronym="FLNR" summary="Test Ministry" />
+  );
+  getByAltText(
+    'Forests, Lands, Natural Resource Operations and Rural Development'
+  );
+});
