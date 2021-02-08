@@ -26,7 +26,9 @@ function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
         <Row>
           <Col xs={6}>
             <SubHeading>Running Since</SubHeading>
-            <span>{dateFormat(creationDate, 'mmmm yyyy')}</span>
+            <span data-testid="date">
+              {dateFormat(creationDate, 'mmmm yyyy')}
+            </span>
           </Col>
           <Col xs={6} style={{ textAlign: 'center' }}>
             <SubHeading>{numberOfUsers}</SubHeading>
