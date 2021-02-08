@@ -6,7 +6,7 @@ import COCO_QUERY from '../../queries/coCos/coCo';
 import DocumentTitle from 'react-document-title';
 
 import CollapsedMenus from './CoCoPageComponents/collapsedMenus';
-import WhyShouldIUseThis from './CoCoPageComponents/whyShoulIUseThis';
+import WhyShouldIUseThis from './CoCoPageComponents/whyShouldIUseThis';
 import Analytics from './CoCoPageComponents/analytics';
 import CoCoBannerSideImage from './CoCoPageComponents/coCoBannerSideImage';
 import CoCoPageNav from './CoCoPageComponents/coCoPageNav';
