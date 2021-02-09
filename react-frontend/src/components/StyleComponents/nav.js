@@ -62,10 +62,6 @@ export const NavImage = styled.img.attrs({
     margin-right: 0px;
     margin-top: -5px;
   }
-
-  @media screen and (max-width: 400px) {
-    margin-right: 25px;
-  }
 `;
 
 export const NavMain = styled.nav.attrs({
@@ -91,10 +87,10 @@ export const NavTitle = styled.p.attrs({
   color: white;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-weight: normal;
-  margin: 0px 5px 0px 25px;
+  margin: 0px 5px 0px 0px;
 
   @media screen and (min-width: 900px) {
-    font-size: 28px;
+    font-size: 20px;
     visibility: visible;
   }
   @media screen and (min-width: 400px) and (max-width: 899px) {
