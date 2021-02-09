@@ -73,7 +73,7 @@ const CaseStudy = () => {
             <CaseStudyHeading>
               Transforming the Medical Services Plan
             </CaseStudyHeading>
-            <ReactPlayer url={content.videoContent} width="auto" />
+            <ReactPlayer url={content.videoContent} width="auto" controls />
           </ContentBlockContainer>
         )}
         <ContentBlockContainer>
