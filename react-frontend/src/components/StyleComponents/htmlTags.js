@@ -28,7 +28,7 @@ export const BreadcrumbUL = styled.ul`
 
 export const CovidCol = styled(Col)`
   color: #fff;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 18px;
 `;
 
@@ -124,7 +124,7 @@ export const HrefLink = styled.a.attrs({
   className: 'productCardLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -139,7 +139,7 @@ export const HrefLinkStandalone = styled.a.attrs({
   className: 'externalLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
@@ -157,7 +157,7 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   className: 'internalLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
@@ -175,7 +175,7 @@ export const HrefLinkInternal = styled(Link).attrs({
   className: 'internalLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-weight: bold;
   text-decoration: underline;
   :focus {
@@ -191,7 +191,7 @@ export const HrefLinkScrollTo = styled(ScrollTo).attrs({
   activeClass: 'active',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -230,7 +230,7 @@ export const NavBarLink = styled(Link).attrs({
 })`
   color: #fff;
   display: flex;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
@@ -253,7 +253,7 @@ export const NavBarLinkExternal = styled.a.attrs({
 })`
   color: #fff;
   display: flex;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
@@ -307,7 +307,7 @@ export const ResourceLinkRow = styled(Row)`
 export const StyledP = styled.p.attrs({
   className: 'digitalParagraph',
 })`
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   position: relative;
 `;

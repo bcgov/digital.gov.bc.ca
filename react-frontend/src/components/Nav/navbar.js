@@ -84,15 +84,17 @@ function NavBar() {
             <Col xs={11}>
               <NavBanner>
                 <NavBarHeaderLink
-                  href="https://gov.bc.ca"
-                  alt="Go to the Government of British Columbia website"
+                  href="/"
+                  alt="Go to the Digital.gov.bc.ca home page."
                 >
-                  <NavImage
-                    src={logoPath}
-                    alt="Go to the Government of British Columbia website"
-                  />
+                  <NavTitle>
+                    <NavImage
+                      src={logoPath}
+                      alt="Go to the Digital.gov.bc.ca home page."
+                    />{' '}
+                    Digital Government
+                  </NavTitle>
                 </NavBarHeaderLink>
-                <NavTitle>Digital Government</NavTitle>
                 <SkipToMainContent>Skip to main content</SkipToMainContent>
               </NavBanner>
             </Col>
@@ -109,19 +111,11 @@ function NavBar() {
           <NavBarUl>
             <NavBarLi>
               <NavBarLinkFirst
-                to="/"
-                className={activePage === '/' ? 'active' : 'notactive'}
-              >
-                Home
-              </NavBarLinkFirst>
-            </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
               >
                 Resources
-              </NavBarLink>
+              </NavBarLinkFirst>
             </NavBarLi>
             <NavBarLi>
               <NavBarLink
