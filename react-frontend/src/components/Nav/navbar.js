@@ -111,19 +111,11 @@ function NavBar() {
           <NavBarUl>
             <NavBarLi>
               <NavBarLinkFirst
-                to="/"
-                className={activePage === '/' ? 'active' : 'notactive'}
-              >
-                Home
-              </NavBarLinkFirst>
-            </NavBarLi>
-            <NavBarLi>
-              <NavBarLink
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
               >
                 Resources
-              </NavBarLink>
+              </NavBarLinkFirst>
             </NavBarLi>
             <NavBarLi>
               <NavBarLink
