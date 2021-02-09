@@ -8,7 +8,7 @@ export const Badge = styled.span.attrs({
   height: 25px;
   padding: 3px 8px 3px 8px;
   color: black;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 20px;
