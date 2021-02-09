@@ -89,7 +89,7 @@ export const NavTitle = styled.p.attrs({
   className: 'navTitle',
 })`
   color: white;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-weight: normal;
   margin: 0px 5px 0px 25px;
 
@@ -114,7 +114,7 @@ export const SkipToMainContent = styled.a.attrs({
   'aria-label': 'Skip to main content',
 })`
   color: #fcba19;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin: 5px 0 0 -5000px;
