@@ -33,7 +33,7 @@ jobs:
               target = "https://digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca/";
             }
             else if('dev' == env) {
-              target = "https://digital-gov-frontend-pr-${{github.event.inputs.prnumber}}-c0cce6-dev.apps.silver.devops.gov.bc.ca"/;
+              target = "https://digital-gov-frontend-pr-${{github.event.inputs.prnumber}}-c0cce6-dev.apps.silver.devops.gov.bc.ca/";
             }
             core.exportVariable('TARGET', target);
       - name: Full ZAP Scan
