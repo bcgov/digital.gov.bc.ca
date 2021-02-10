@@ -398,6 +398,7 @@ const MedicalContent = {
       </ol>
     </div>
   ),
+  videoContent: 'https://youtu.be/U5SecUbCtyE',
   outcomes: (
     <div>
       <p>
