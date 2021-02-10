@@ -76,28 +76,8 @@
       "type": "date",
       "required": true
     },
-    "AdditionalTechnicalInfo": {
-      "type": "component",
-      "repeatable": true,
-      "component": "co-co.additional-technical-info",
-      "min": 1,
-      "required": true
-    },
-    "RequirementsAndRestrictions": {
-      "type": "component",
-      "repeatable": true,
-      "component": "co-co.requirements-and-restrictions",
-      "required": true,
-      "min": 1
-    },
     "GetStartedURL": {
       "type": "string",
-      "required": true
-    },
-    "SupportContact": {
-      "type": "component",
-      "repeatable": false,
-      "component": "co-co.support-contact",
       "required": true
     },
     "uid": {
@@ -108,12 +88,6 @@
     "CoCoWebsite": {
       "type": "string",
       "required": true
-    },
-    "ministries": {
-      "unique": true,
-      "collection": "ministry",
-      "via": "co_cos",
-      "dominant": true
     },
     "GetStartedSteps": {
       "type": "richtext"
@@ -127,6 +101,27 @@
     "ServiceLevelSupport": {
       "type": "richtext",
       "required": true
+    },
+    "WhoIsUsingThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.who-is-using-this",
+      "required": true,
+      "max": 3,
+      "min": 3
+    },
+    "ShortDescription": {
+      "type": "text",
+      "required": true
+    },
+    "AdditionalTechnicalInformation": {
+      "type": "richtext"
+    },
+    "RequirementsAndRestrictions": {
+      "type": "richtext"
+    },
+    "Support": {
+      "type": "richtext"
     }
   }
 }

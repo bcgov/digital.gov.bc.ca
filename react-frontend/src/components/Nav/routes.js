@@ -4,6 +4,7 @@ import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import CaseStudies from '../../components/CaseStudies/casestudies';
 import CoCos from '../../components/CoCos/coCos';
+import CoCoPage from '../../components/CoCos/coCoPage';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
 import DigitalFramework from '../DigitalFramework/digitalFramework';
 import Products from '../products/products';
@@ -38,6 +39,7 @@ const Routes = () => {
         />
         <Route exact path="/resources" component={Resources} />
         <Route exact path="/cocos" component={CoCos} />
+        <Route exact path="/cocos/:uid" component={CoCoPage} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route
           exact

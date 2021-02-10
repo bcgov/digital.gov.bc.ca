@@ -25,7 +25,7 @@ function CoCoCards() {
                   <Col sm={12} md={6} key={coCo.uid}>
                     <CoCoCard
                       title={coCo.Name}
-                      description={coCo.Description}
+                      description={coCo.ShortDescription}
                       numberOfUsers={coCo.NumberOfUsers}
                       onboardingTime={coCo.OnboardingTime}
                       supportSchedule={coCo.SupportSchedule}
@@ -45,11 +45,11 @@ function CoCoCards() {
         <Col sm={12}>
           <ResourcePageHeading>Support</ResourcePageHeading>
           <StyledP>
-            Contact the Common Components team:
+            Contact the Common Components team:{' '}
             <HrefLinkStandalone>
-              CommonComponents@gov.bc.ca
-            </HrefLinkStandalone>{' '}
-            or <HrefLinkStandalone>250-777-7777</HrefLinkStandalone>
+              Digital.Government@gov.bc.ca
+            </HrefLinkStandalone>
+            .
           </StyledP>
         </Col>
       </Row>

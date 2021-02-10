@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Heading = styled.h2.attrs({
+export const Heading = styled.h2.attrs({
   className: 'heading',
 })`
   font-size: 22pt;
@@ -8,7 +8,7 @@ const Heading = styled.h2.attrs({
   line-height: 24pt;
 `;
 
-const SubHeading = styled.h3.attrs({
+export const SubHeading = styled.h3.attrs({
   className: 'subHeading',
 })`
   font-size: 18pt;

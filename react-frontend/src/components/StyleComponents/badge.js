@@ -15,7 +15,7 @@ export const Badge = styled.span.attrs({
   margin-right: 4px;
   white-space: nowrap;
   text-align: center;
-  background: #f2f2f2;
+  background: ${(props) => (props.background ? props.background : '#f2f2f2')};
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 1px #fff;
   box-shadow: 0 0 0 1px #fff;
