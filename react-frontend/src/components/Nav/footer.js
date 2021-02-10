@@ -52,11 +52,7 @@ const Footer = () => {
             </FooterLink>
           </FooterListItem>
           <FooterListItem>
-            <FooterLink
-              href="https://www2.gov.bc.ca/gov/content/home/get-help-with-government-services"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <FooterLink href="mailto:digital.government@gov.bc.ca">
               Contact Us
             </FooterLink>
           </FooterListItem>
