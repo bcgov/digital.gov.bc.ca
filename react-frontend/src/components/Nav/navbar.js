@@ -3,7 +3,6 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import CovidBanner from '../../components/Nav/covidbanner';
 import { Row, Col } from 'react-flexbox-grid';
 
 import {
@@ -77,7 +76,7 @@ function NavBar() {
 
   return (
     <NavBarWrapper>
-      <CovidBanner />
+      {/* If a site banner is needed in the future, add the component here. (see CovidBanner code) */}
       <NavBarHeader>
         <NavBarContainer>
           <Row middle="xs">
