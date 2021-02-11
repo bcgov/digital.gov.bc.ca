@@ -74,7 +74,7 @@ function CoCoCard({
   uid,
 }) {
   return (
-    <Link to={`cocos/${uid}`}>
+    <Link to={(location) => ({ ...location, pathname: `cocos/${uid}` })}>
       <CardStyled>
         {Badges(status?.Status, status?.Maintenance, tags)}
         <CardTitle data-testid="title">{title}</CardTitle>
