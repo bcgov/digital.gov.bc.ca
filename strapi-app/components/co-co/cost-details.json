@@ -2,7 +2,8 @@
   "collectionName": "components_co_co_cost_details",
   "info": {
     "name": "CostDetails",
-    "icon": "dollar-sign"
+    "icon": "dollar-sign",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,7 +13,7 @@
         "Free",
         "Freemium",
         "Paid",
-        "Subscription"
+        "SaaS"
       ],
       "required": true
     },

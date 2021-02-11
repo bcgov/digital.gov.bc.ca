@@ -17,6 +17,18 @@ const peopleIcon = require('../../images/icons/conference-24.png');
 const priceIcon = require('../../images/icons/price-tag-24.png');
 const clockIcon = require('../../images/icons/stopWatch.png');
 
+const maintenanceStatusObj = {
+  ActiveDevelopment: 'Active Development',
+  Maintained: 'Maintained',
+  Abandoned: 'Abandoned',
+};
+
+const supportStructureObj = {
+  MonFriday: 'Mon-Fri',
+  TwentyfourSeven: '24/7',
+  None: 'None',
+};
+
 // This function will be used on coCoPage as well
 export const Badges = (status, maintenanceStatus, tags, colour) => {
   return (
@@ -33,7 +45,7 @@ export const Badges = (status, maintenanceStatus, tags, colour) => {
         background={colour}
         title="Maintenance Status"
       >
-        {maintenanceStatus}
+        {maintenanceStatusObj[maintenanceStatus]}
       </Badge>
       {/* Only display 3 tags */}
       {tags?.map((tag, i) => {
@@ -93,14 +105,7 @@ function CoCoCard({
             title="Number of Teams Using CoCo"
           >
             <Row center="xs" style={{ height: '18px' }}>
-              <Icon
-                src={peopleIcon}
-                style={{
-                  paddingRight: '2px',
-                  position: 'relative',
-                  top: '2px',
-                }}
-              />
+              <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
               {numberOfUsers}
             </Row>
             <Row center="xs">Teams</Row>
@@ -123,7 +128,7 @@ function CoCoCard({
             <Row center="xs" style={{ height: '18px' }}>
               <Icon src={assistantIcon} />
             </Row>
-            <Row center="xs">{supportSchedule}</Row>
+            <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
           </IconCol>
         </Row>
       </CardStyled>

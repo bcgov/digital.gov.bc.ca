@@ -51,9 +51,11 @@
     "SupportSchedule": {
       "type": "enumeration",
       "enum": [
-        "Anytime",
-        "MonFriday"
-      ]
+        "TwentyfourSeven",
+        "MonFriday",
+        "None"
+      ],
+      "required": true
     },
     "CoverImage": {
       "model": "file",
