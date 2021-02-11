@@ -21,10 +21,18 @@ const clockIcon = require('../../images/icons/stopWatch.png');
 export const Badges = (status, maintenanceStatus, tags, colour) => {
   return (
     <BadgeWrapper>
-      <Badge data-testid="status-badge" background={colour}>
+      <Badge
+        data-testid="status-badge"
+        background={colour}
+        title="Software Status"
+      >
         {status}
       </Badge>
-      <Badge data-testid="status-badge" background={colour}>
+      <Badge
+        data-testid="status-badge"
+        background={colour}
+        title="Maintenance Status"
+      >
         {maintenanceStatus}
       </Badge>
       {/* Only display 3 tags */}
@@ -58,22 +66,64 @@ function CoCoCard({
       <CardStyled>
         {Badges(status?.Status, status?.Maintenance, tags)}
         <CardTitle data-testid="title">{title}</CardTitle>
-        <CardDescription data-testid="description">
+        <CardDescription
+          data-testid="description"
+          style={{ marginBottom: '40px' }}
+        >
           {description}
         </CardDescription>
-        <Row center="xs">
-          <IconCol data-testid="cost" xs={6} sm={3}>
-            {' '}
-            <Icon src={priceIcon} /> {cost}
+        <Row
+          start="xs"
+          style={{ bottom: '20px', position: 'absolute', width: '90%' }}
+        >
+          <IconCol
+            data-testid="cost"
+            xs={3}
+            title="Cost Structure"
+            style={{ paddingLeft: '0' }}
+          >
+            <Row center="xs" style={{ height: '18px' }}>
+              <Icon src={priceIcon} />
+            </Row>
+            <Row center="xs">{cost}</Row>
           </IconCol>
-          <IconCol data-testid="user-count" xs={6} sm={3}>
-            <Icon src={peopleIcon} /> {numberOfUsers} Teams
+          <IconCol
+            data-testid="user-count"
+            xs={3}
+            title="Number of Teams Using CoCo"
+          >
+            <Row center="xs" style={{ height: '18px' }}>
+              <Icon
+                src={peopleIcon}
+                style={{
+                  paddingRight: '2px',
+                  position: 'relative',
+                  top: '2px',
+                }}
+              />
+              {numberOfUsers}
+            </Row>
+            <Row center="xs">Teams</Row>
           </IconCol>
-          <IconCol data-testid="onboarding-time" xs={6} sm={3}>
-            <Icon src={clockIcon} /> {onboardingTime}
+          <IconCol
+            data-testid="onboarding-time"
+            xs={3}
+            title="Estimate of Onboarding Time"
+          >
+            <Row center="xs" style={{ height: '18px' }}>
+              <Icon src={clockIcon} />
+            </Row>
+            <Row center="xs">{onboardingTime}</Row>
           </IconCol>
-          <IconCol data-testid="support-schedule" xs={6} sm={3}>
-            <Icon src={assistantIcon} /> {supportSchedule}
+          <IconCol
+            data-testid="support-schedule"
+            xs={3}
+            title="Support Availability"
+          >
+            <Row center="xs" style={{ height: '18px' }}>
+              <Icon src={assistantIcon} />
+            </Row>
+            <Row center="xs">{supportSchedule}</Row>
           </IconCol>
         </Row>
       </CardStyled>
