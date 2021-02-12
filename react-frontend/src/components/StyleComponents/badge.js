@@ -13,6 +13,7 @@ export const Badge = styled.span.attrs({
   font-weight: normal;
   line-height: 20px;
   margin-right: 4px;
+  margin-top: 6px;
   white-space: nowrap;
   text-align: center;
   background: ${(props) => (props.background ? props.background : '#f2f2f2')};
@@ -35,5 +36,7 @@ export const BadgeDot = styled.div.attrs({
 export const BadgeWrapper = styled.div.attrs({
   className: 'badgeWrapper',
 })`
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 18px;
 `;
