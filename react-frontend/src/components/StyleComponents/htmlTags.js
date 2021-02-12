@@ -30,18 +30,21 @@ export const CoCoLinkExternal = styled.a.attrs({
   className: 'CoCoLink',
 })`
   background: #003366;
+  border-radius: 4px;
   color: #fff;
   display: flex;
   font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: normal; /* 400 */
-  padding: 0 15px 0 15px;
+  font-weight: bold;
+  height: 30px;
+  padding: 4px 15px 0 15px;
   text-decoration: none;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
   }
   :hover {
     color: #fff;
+    opacity: 0.8;
     text-decoration: underline;
     text-decoration-color: #fff;
   }

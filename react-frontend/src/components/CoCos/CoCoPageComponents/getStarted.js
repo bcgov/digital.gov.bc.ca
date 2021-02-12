@@ -18,7 +18,7 @@ function GetStarted({ name, url }) {
           guide.
         </Col>
       </Row>
-      <Row>
+      <Row style={{ marginTop: '30px' }}>
         <Col xs={12} style={{ flexBasis: 'auto' }}>
           <CoCoLinkExternal href={url}>Start Using Now</CoCoLinkExternal>
         </Col>
