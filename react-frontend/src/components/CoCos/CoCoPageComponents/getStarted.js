@@ -14,8 +14,10 @@ function GetStarted({ name, url }) {
       </Row>
       <Row>
         <Col xs={12}>
-          Select the "Start Using Now" button to visit the {name} Onboarding
-          guide.
+          <p>
+            Select the "Start Using Now" button to visit the {name} Onboarding
+            guide.
+          </p>
         </Col>
       </Row>
       <Row style={{ marginTop: '30px' }}>
