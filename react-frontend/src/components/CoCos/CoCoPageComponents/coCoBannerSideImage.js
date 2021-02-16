@@ -42,7 +42,7 @@ function CoCoBannerSideImage({
         </BannerSideImgText>
       </Col>
       <Col sm={12} md={6}>
-        <a href={coCoLink} target="_blank">
+        <a href={coCoLink} target="_blank" rel="noopener noreferrer">
           <BannerSideImageImg
             src={coCoImage}
             onError={onError}

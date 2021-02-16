@@ -125,6 +125,8 @@ export const Icon = styled.img.attrs({
   className: 'icon',
 })`
   height: 16px;
+  position: relative;
+  top: 2px;
 `;
 
 export const IconCol = styled(Col).attrs({
