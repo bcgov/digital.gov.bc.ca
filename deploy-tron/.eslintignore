@@ -1,5 +1,0 @@
-lib/**/*.js
-lib/index.d.ts
-lib/*.d.ts
-lib/
-node_modules
