@@ -29,16 +29,19 @@ export const BreadcrumbUL = styled.ul`
 export const CoCoLinkExternal = styled.a.attrs({
   className: 'CoCoLink',
 })`
-  background: #003366;
+  background-color: #003366;
+  border: none;
   border-radius: 4px;
-  color: #fff;
-  display: flex;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  height: 30px;
-  padding: 4px 15px 0 15px;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
   text-decoration: none;
+  display: block;
+  font-size: 18px;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
   }
