@@ -23,7 +23,7 @@ function CoCoBannerSideImage({
 }) {
   const config = useContext(AppConfigContext);
   const strapiURL = config['state']['strapiApiUrl'];
-  const imageSource = strapiURL.replace('/graphql', imageurl);
+  const imageSource = strapiURL?.replace('/graphql', imageurl);
 
   const [coCoImage, setCoCoImg] = useState(imageSource);
 
@@ -33,7 +33,7 @@ function CoCoBannerSideImage({
   };
 
   return (
-    <Row middle="xs">
+    <Row top="xs" style={{ marginTop: '60px' }}>
       <Col sm={12} md={6}>
         <BannerSideImgText>
           {Badges(status, maintenanceStatus, tags, 'white')}

@@ -6,7 +6,7 @@ import COCO_QUERY from '../../queries/coCos/coCo';
 import DocumentTitle from 'react-document-title';
 
 import CollapsedMenus from './CoCoPageComponents/collapsedMenus';
-import WhyShouldIUseThis from './CoCoPageComponents/whyShoulIUseThis';
+import WhyShouldIUseThis from './CoCoPageComponents/whyShouldIUseThis';
 import Analytics from './CoCoPageComponents/analytics';
 import CoCoBannerSideImage from './CoCoPageComponents/coCoBannerSideImage';
 import CoCoPageNav from './CoCoPageComponents/coCoPageNav';
@@ -37,6 +37,7 @@ function CoCoPage() {
                   location3="about"
                   location4="getStarted"
                   location5="support"
+                  location6="whyUse"
                   name={coCos[0]?.Name}
                 />
                 <ScrollElement name="overview" className="element" />
@@ -49,6 +50,7 @@ function CoCoPage() {
                   tags={coCos[0]?.Tags}
                   coCoLink={coCos[0]?.CoCoWebsite}
                 />
+                <ScrollElement name="whyUse" className="element" />
                 <WhyShouldIUseThis
                   whyShouldIUseThis={coCos[0]?.WhyShouldIUseThis}
                 />

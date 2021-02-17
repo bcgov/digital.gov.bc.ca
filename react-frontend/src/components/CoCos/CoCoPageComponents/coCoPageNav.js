@@ -11,6 +11,7 @@ function CoCoPageNav({
   location3,
   location4,
   location5,
+  location6,
   name,
 }) {
   return (
@@ -29,6 +30,16 @@ function CoCoPageNav({
             offset={-180}
           >
             Overview
+          </HrefLinkScrollTo>
+        </Col>
+        <Col sm={2}>
+          <HrefLinkScrollTo
+            to={location6}
+            spy={true}
+            smooth={true}
+            offset={-180}
+          >
+            Why should I use this?
           </HrefLinkScrollTo>
         </Col>
         <Col sm={2}>
