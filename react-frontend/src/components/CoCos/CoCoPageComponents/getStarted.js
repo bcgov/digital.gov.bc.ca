@@ -14,11 +14,13 @@ function GetStarted({ name, url }) {
       </Row>
       <Row>
         <Col xs={12}>
-          Select the "Start Using Now" button to visit the {name} Onboarding
-          guide.
+          <p>
+            Select the "Start Using Now" button to visit the {name} Onboarding
+            guide.
+          </p>
         </Col>
       </Row>
-      <Row>
+      <Row style={{ marginTop: '30px' }}>
         <Col xs={12} style={{ flexBasis: 'auto' }}>
           <CoCoLinkExternal href={url}>Start Using Now</CoCoLinkExternal>
         </Col>
