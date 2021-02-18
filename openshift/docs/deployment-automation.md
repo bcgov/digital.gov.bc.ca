@@ -59,7 +59,7 @@ The technology is __Github Actions__, __Github Apps__, __Ansible__, and of cours
 
 The service account that is responsible for building and deploying has __very specific__ roles for each
 namespace, this provides it with the minimum amount of access it needs to do its work. The template `cicd.yaml` provides
-insight into what `Role` is created for each namespace.
+insight into what `Role` is created for each namespace. The template `cicdv2.yaml` provides insight into what `Role` with delete permissions is created for each namespace.
 
 This template needs to be run **locally** in the base of the project using the oc command:
 
