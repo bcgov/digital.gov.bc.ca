@@ -9,8 +9,6 @@ import CollaborationTools from '../../components/Guides/CollaborationTools/colla
 import DigitalFramework from '../DigitalFramework/digitalFramework';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
-// import GuidesPage from '../../components/Guides/guides';
-// import GuidePage from '../../components/Guides/guide';
 import BreadCrumbs from './breadcrumbs';
 import NotFound from '../NotFoundPage/notFoundPage';
 
@@ -19,7 +17,6 @@ const DisplayNames = {
   'communication-platforms': 'Communication Platform',
   'digital-framework': 'Digital Framework',
   'digital-principles': 'Digital Principles',
-  guides: 'Guides',
   'products-services': 'Products and Services',
   resources: 'Resources',
   cocos: 'Common Components',
@@ -46,13 +43,6 @@ const Routes = () => {
           path="/guides/communication-platforms"
           component={CollaborationTools}
         />
-        {/* This is a test guides page, KEEP comented out until strapi is implemented */}
-        {/* 
-        <Route path="/guides/:uid" exact>
-          <GuidePage />
-        </Route>
-        <Route exact path="/guides" component={GuidesPage} /> 
-        */}
         <Route exact path="/" component={Home} />
         <Route path="/standards-and-guides">
           <NotFound standards />
