@@ -1,5 +1,7 @@
 ---  
-  - name: Delete {{ react_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
+  - name: Delete buildconfig for {{ react_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
     shell: >
-      oc delete -n "{{ image_namespace }}" all --selector pr={{ PR }}
-  - debug: msg="Attempt to delete PR images failed"  
+      oc delete -n "{{ image_namespace }}" buildconfig --selector pr={{ PR }}
+  - name: Delete build for {{ react_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
+    shell: >
+      oc delete -n "{{ image_namespace }}" build --selector pr={{ PR }}
