@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/digital-framework-progresses",
+      "handler": "digital-framework-progress.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/digital-framework-progresses/count",
+      "handler": "digital-framework-progress.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/digital-framework-progresses/:id",
+      "handler": "digital-framework-progress.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/digital-framework-progresses",
+      "handler": "digital-framework-progress.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/digital-framework-progresses/:id",
+      "handler": "digital-framework-progress.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/digital-framework-progresses/:id",
+      "handler": "digital-framework-progress.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
