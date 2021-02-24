@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Collapse } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 import CollapsedMenuContent from './collapsedMenuContent';
 
@@ -19,6 +20,9 @@ function CollapsedMenus({ projects }) {
       activeKey={expanded}
       onChange={changeKeyState}
       expandIconPosition="right"
+      expandIcon={({ isActive }) => (
+        <DownOutlined rotate={isActive ? 180 : 0} />
+      )}
       style={{ background: '#f2f2f2', border: 'none' }}
     >
       {projects?.map((project, i) => {

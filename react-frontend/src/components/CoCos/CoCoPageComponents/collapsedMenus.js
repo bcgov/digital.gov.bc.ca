@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Collapse } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+
 import { Col, Row } from 'react-flexbox-grid';
 
 import {
@@ -45,6 +47,9 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
         activeKey={expanded}
         onChange={changeKeyState}
         expandIconPosition="right"
+        expandIcon={({ isActive }) => (
+          <DownOutlined rotate={isActive ? 180 : 0} />
+        )}
         style={{ background: '#f2f2f2', border: 'none' }}
       >
         {price && (
