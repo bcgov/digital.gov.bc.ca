@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Collapse } from 'antd';
 
+import CollapsedMenuContent from './collapsedMenuContent';
+
 import { PanelStyled } from '../StyleComponents/collapseMenu';
 import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 
@@ -24,7 +26,8 @@ function CollapsedMenus({ projects }) {
       {projects?.map((project, i) => {
         return (
           <PanelStyled header={project.Name} key={project.Name}>
-            <ReactMarkdownStyled source={content} />
+            <CollapsedMenuContent />
+            {/* <ReactMarkdownStyled source={content} /> */}
           </PanelStyled>
         );
       })}

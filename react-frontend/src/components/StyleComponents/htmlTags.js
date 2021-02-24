@@ -78,6 +78,11 @@ export const CovidLinkStyleButton = styled(CovidLinkStyle)`
   text-decoration: none;
 `;
 
+export const DigitalFrameworkHeading = styled.p`
+  font-weight: bold;
+  padding-top: 20px;
+`;
+
 export const DigitalFrameworkRow = styled(Row).attrs({
   className: 'digitalRow',
 })`
