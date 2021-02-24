@@ -15,7 +15,6 @@ const DigitalFramework = () => {
   const [strategyToggled, setStrategyToggled] = useState(true);
 
   function onChange(strategy) {
-    console.log(`switch to ${strategy}`);
     setStrategyToggled(strategy);
   }
 
