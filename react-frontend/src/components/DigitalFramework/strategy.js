@@ -99,6 +99,7 @@ const Strategy = () => {
           <DigitalFrameworkBlock
             title={titles[0]}
             paragraph={descriptions[0]}
+            style={{ paddingTop: '0' }}
           />
           <DigitalFrameworkBlock
             title={titles[1]}

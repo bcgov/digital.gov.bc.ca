@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DocumentTitle from 'react-document-title';
 
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
-import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
+import { DigitalFrameworkToggle } from '../StyleComponents/htmlTags';
 import { DigitalBlock } from '../StyleComponents/pageContent';
+import Progress from './progress';
 import Strategy from './strategy';
 
 const digitalFrameworkImage = require('../../images/pngIllustrations/digitalFrameworkWhite.png');
 
 const DigitalFramework = () => {
+  const [strategyToggled, setStrategyToggled] = useState(true);
+
+  function onChange(strategy) {
+    console.log(`switch to ${strategy}`);
+    setStrategyToggled(strategy);
+  }
+
   return (
     <DocumentTitle title="Digital Framework - Digital Government - Province of British Columbia">
       <div>
@@ -21,7 +29,23 @@ const DigitalFramework = () => {
           }
           image={digitalFrameworkImage}
         />
-        <Strategy />
+        <PageContainer style={{ paddingBottom: '0' }}>
+          <div style={{ textAlign: 'center' }}>
+            <DigitalFrameworkToggle
+              onClick={() => onChange(true)}
+              underlined={strategyToggled}
+            >
+              STRATEGY
+            </DigitalFrameworkToggle>
+            <DigitalFrameworkToggle
+              onClick={() => onChange(false)}
+              underlined={!strategyToggled}
+            >
+              PROGRESS
+            </DigitalFrameworkToggle>
+          </div>
+        </PageContainer>
+        {strategyToggled ? <Strategy /> : <Progress />}
       </div>
     </DocumentTitle>
   );
