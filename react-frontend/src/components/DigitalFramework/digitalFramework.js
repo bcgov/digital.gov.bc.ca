@@ -5,7 +5,6 @@ import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 import { DigitalFrameworkToggle } from '../StyleComponents/htmlTags';
-import { DigitalBlock } from '../StyleComponents/pageContent';
 import Progress from './progress';
 import Strategy from './strategy';
 
