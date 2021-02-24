@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
-const COCO_QUERY = gql`
-  query CoCos($uid: String!) {
-    digitalFrameworkProgresses(where: { Category: "ServiceDelivery" }) {
+const FRAMEWORK_PROGRESS_QUERY = gql`
+  query CoCos($category: String!) {
+    digitalFrameworkProgresses(where: { Category: $category }) {
       Name
       Description
       ProblemStatement
@@ -18,4 +18,4 @@ const COCO_QUERY = gql`
   }
 `;
 
-export default COCO_QUERY;
+export default FRAMEWORK_PROGRESS_QUERY;

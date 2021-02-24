@@ -1,13 +1,38 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 
 import DigitalFrameworkBlock from './digitalFrameworkBlock';
+import Query from '../Query';
+
+import FRAMEWORK_PROGRESS_QUERY from '../../queries/digitalFrameworkProgress/digitalFrameworkProgress';
+
 import { PageContainer } from '../StyleComponents/pageContent';
 
 const Progress = () => {
   return (
     <div>
+      <Query query={FRAMEWORK_PROGRESS_QUERY} category="ServiceDelivery">
+        {({ data: { digitalFrameworkProgresses } }) => {
+          {
+            console.log(digitalFrameworkProgresses);
+          }
+          return <div />;
+        }}
+      </Query>
       <PageContainer>
-        {/* add the picture/video */}
+        <div style={{ textAlign: 'center' }}>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=D4DhfV7splA"
+            controls
+            width="auto"
+            style={{
+              maxWidth: '546px',
+              maxHeight: '310px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          />
+        </div>
         <DigitalFrameworkBlock
           title="Service Delivery"
           paragraph="Simple, easy to use online services that meet British Columbian’s changing expectations."
