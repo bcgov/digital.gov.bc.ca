@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Collapse } from 'antd';
 
+import CollapsedMenuContent from './collapsedMenuContent';
+
 import { PanelStyled } from '../StyleComponents/collapseMenu';
 import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 
@@ -11,8 +13,7 @@ function CollapsedMenus({ projects }) {
   const changeKeyState = (key) => {
     setExpanded(key);
   };
-  // This filler content will be deleted when the page fixed.
-  const content = 'Content coming soon';
+
   return (
     <Collapse
       defaultActiveKey={['']}
@@ -24,7 +25,7 @@ function CollapsedMenus({ projects }) {
       {projects?.map((project, i) => {
         return (
           <PanelStyled header={project.Name} key={project.Name}>
-            <ReactMarkdownStyled source={content} />
+            <CollapsedMenuContent content={project} />
           </PanelStyled>
         );
       })}
