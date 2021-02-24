@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { Collapse } from 'antd';
 import { Col, Row } from 'react-flexbox-grid';
 
 import { ministryNames } from '../../constants/ministryDictionary';
 
-import { PanelStyled } from '../StyleComponents/collapseMenu';
 import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 import { DigitalFrameworkHeading } from '../StyleComponents/htmlTags';
 

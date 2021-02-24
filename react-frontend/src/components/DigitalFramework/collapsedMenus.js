@@ -5,7 +5,6 @@ import { Collapse } from 'antd';
 import CollapsedMenuContent from './collapsedMenuContent';
 
 import { PanelStyled } from '../StyleComponents/collapseMenu';
-import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 
 function CollapsedMenus({ projects }) {
   const [expanded, setExpanded] = React.useState(['']);
