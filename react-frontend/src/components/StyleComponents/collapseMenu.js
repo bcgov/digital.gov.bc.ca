@@ -8,7 +8,7 @@ export const CollapseButton = styled.span.attrs({
 })`
   border: none;
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
 `;
 
 export const PanelStyled = styled(Panel).attrs({
@@ -22,7 +22,7 @@ export const PanelStyled = styled(Panel).attrs({
   .ant-collapse-header {
     background: white;
     color: black !important;
-    font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+    font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
     font-weight: 700;
   }
   .ant-collapse-content > .ant-collapse-content-box {
