@@ -22,13 +22,13 @@ function CollapsedMenuContent({ content }) {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} sm={8}>
+        <Col xs={12} md={6}>
           <DigitalFrameworkHeading>
             The Problem Being Addressed
           </DigitalFrameworkHeading>
           <p>{content?.ProblemStatement}</p>
         </Col>
-        <Col xs={12} sm={4}>
+        <Col xs={12} md={6}>
           <DigitalFrameworkHeading>
             For more information
           </DigitalFrameworkHeading>
@@ -44,15 +44,15 @@ function CollapsedMenuContent({ content }) {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} sm={4}>
+        <Col xs={12} md={4}>
           <DigitalFrameworkHeading>Achievements</DigitalFrameworkHeading>
           <ReactMarkdownStyled source={content?.Achievements} />
         </Col>
-        <Col xs={12} sm={4}>
+        <Col xs={12} md={4}>
           <DigitalFrameworkHeading>Milestones</DigitalFrameworkHeading>
           <ReactMarkdownStyled source={content?.Milestones} />
         </Col>
-        <Col xs={12} sm={4}>
+        <Col xs={12} md={4}>
           <DigitalFrameworkHeading>Future Plans</DigitalFrameworkHeading>
           <ReactMarkdownStyled source={content?.FuturePlans} />
         </Col>
