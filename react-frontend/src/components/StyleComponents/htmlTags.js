@@ -78,7 +78,8 @@ export const CovidLinkStyleButton = styled(CovidLinkStyle)`
   text-decoration: none;
 `;
 
-export const DigitalFrameworkHeading = styled.p`
+export const DigitalFrameworkHeading = styled.h4`
+  font-size: 21.6px;
   font-weight: bold;
   padding-top: 20px;
 `;
