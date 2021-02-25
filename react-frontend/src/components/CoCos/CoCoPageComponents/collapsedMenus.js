@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { Collapse } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
-
 import { Col, Row } from 'react-flexbox-grid';
 
 import {
   CollapseButton,
+  CollapseStyled,
   PanelStyled,
 } from '../../StyleComponents/collapseMenu';
 import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
@@ -42,15 +40,10 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
           | <CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
         </Col>
       </Row>
-      <Collapse
+      <CollapseStyled
         defaultActiveKey={['1']}
         activeKey={expanded}
         onChange={changeKeyState}
-        expandIconPosition="right"
-        expandIcon={({ isActive }) => (
-          <DownOutlined rotate={isActive ? 180 : 0} />
-        )}
-        style={{ background: '#f2f2f2', border: 'none' }}
       >
         {price && (
           <PanelStyled header="Price" key="1">
@@ -72,7 +65,7 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
             <ReactMarkdownStyled source={requirements} />
           </PanelStyled>
         )}
-      </Collapse>
+      </CollapseStyled>
     </div>
   );
 }
