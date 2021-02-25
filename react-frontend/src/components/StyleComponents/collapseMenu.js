@@ -21,7 +21,7 @@ export const PanelStyled = styled(Panel).attrs({
 
   .ant-collapse-header {
     background: white;
-    color: black !important;
+    color: #1a5a96 !important;
     font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
     font-weight: 700;
   }
