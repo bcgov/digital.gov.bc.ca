@@ -47,7 +47,7 @@ const DigitalFrameworkTable = (props) => {
   return (
     <div>
       {!isMobile ? (
-        <Row>
+        <Row style={{ borderBottom: 'solid thick black' }}>
           <Col md={6} lg={6}>
             <DigitalFrameworkHeading>Priority Actions</DigitalFrameworkHeading>
           </Col>
@@ -56,7 +56,7 @@ const DigitalFrameworkTable = (props) => {
           </Col>
         </Row>
       ) : (
-        <Row>
+        <Row style={{ borderBottom: 'solid thick black' }}>
           <Col sm={12}>
             <DigitalFrameworkHeading>
               Priority Actions and Objectives
