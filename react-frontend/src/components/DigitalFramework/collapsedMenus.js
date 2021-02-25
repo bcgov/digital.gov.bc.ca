@@ -1,11 +1,14 @@
 import React from 'react';
 
 import { Collapse } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 import { DownOutlined } from '@ant-design/icons';
 
 import CollapsedMenuContent from './collapsedMenuContent';
 
-import { PanelStyled } from '../StyleComponents/collapseMenu';
+import { PanelStyled, CollapseStyled } from '../StyleComponents/collapseMenu';
 
 function CollapsedMenus({ projects }) {
   const [expanded, setExpanded] = React.useState(['']);
@@ -15,15 +18,10 @@ function CollapsedMenus({ projects }) {
   };
 
   return (
-    <Collapse
+    <CollapseStyled
       defaultActiveKey={['']}
       activeKey={expanded}
       onChange={changeKeyState}
-      expandIconPosition="right"
-      expandIcon={({ isActive }) => (
-        <DownOutlined rotate={isActive ? 180 : 0} />
-      )}
-      style={{ background: '#f2f2f2', border: 'none' }}
     >
       {projects?.map((project, i) => {
         return (
@@ -32,7 +30,7 @@ function CollapsedMenus({ projects }) {
           </PanelStyled>
         );
       })}
-    </Collapse>
+    </CollapseStyled>
   );
 }
 
