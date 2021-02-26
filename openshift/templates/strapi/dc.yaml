@@ -1,52 +1,6 @@
 kind: Template
 apiVersion: v1
 objects:
-  - apiVersion: route.openshift.io/v1
-    kind: Route
-    metadata:
-      annotations:
-        openshift.io/host.generated: "true"
-      labels:
-        app: ${NAME}-${SUFFIX}
-        pr: ${PULL_REQUEST_NUMBER}
-        version: ${IMAGE_TAG}
-        group: ${NAME}
-      name: ${NAME}-${SUFFIX}
-    spec:
-      tls:
-        termination: edge
-        insecureEdgeTerminationPolicy: Redirect
-      port:
-        targetPort: 1337-1337
-      to:
-        kind: Service
-        name: ${NAME}-${SUFFIX}
-        weight: 100
-      wildcardPolicy: None
-    status: {}
-
-  - apiVersion: v1
-    kind: Service
-    metadata:
-      labels:
-        app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        pr: ${PULL_REQUEST_NUMBER}
-        group: ${NAME}
-      name: ${NAME}-${SUFFIX}
-    spec:
-      ports:
-      - name: 1337-1337
-        port: 1337
-        protocol: TCP
-        targetPort: 1337
-      selector:
-        app: ${NAME}-${SUFFIX}
-      sessionAffinity: None
-      type: ClusterIP
-    status:
-      loadBalancer: {}
-
   - apiVersion: apps.openshift.io/v1
     kind: DeploymentConfig
     spec:
@@ -114,6 +68,51 @@ objects:
         pr: ${PULL_REQUEST_NUMBER}
         version: ${IMAGE_TAG}
       name: ${NAME}-${SUFFIX}
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      annotations:
+        openshift.io/host.generated: "true"
+      labels:
+        app: ${NAME}-${SUFFIX}
+        pr: ${PULL_REQUEST_NUMBER}
+        version: ${IMAGE_TAG}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
+    spec:
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
+      port:
+        targetPort: 1337-1337
+      to:
+        kind: Service
+        name: ${NAME}-${SUFFIX}
+        weight: 100
+      wildcardPolicy: None
+    status: {}
+
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      labels:
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME}
+      name: ${NAME}-${SUFFIX}
+    spec:
+      ports:
+      - name: 1337-1337
+        port: 1337
+        protocol: TCP
+        targetPort: 1337
+      selector:
+        app: ${NAME}-${SUFFIX}
+      sessionAffinity: None
+      type: ClusterIP
+    status:
+      loadBalancer: {}
 parameters:
 - name: IMAGE_REGISTRY
   value: image-registry.openshift-image-registry.svc:5000
