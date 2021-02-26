@@ -78,6 +78,12 @@ export const CovidLinkStyleButton = styled(CovidLinkStyle)`
   text-decoration: none;
 `;
 
+export const DigitalFrameworkHeading = styled.h4`
+  font-size: 21.6px;
+  font-weight: bold;
+  padding-top: 20px;
+`;
+
 export const DigitalFrameworkRow = styled(Row).attrs({
   className: 'digitalRow',
 })`
@@ -87,6 +93,20 @@ export const DigitalFrameworkRow = styled(Row).attrs({
   @media only screen and (max-width: 800px) {
     padding-top: 15px;
   }
+`;
+
+export const DigitalFrameworkToggle = styled.button.attrs({
+  className: 'strategyProgressToggle',
+})`
+  background-color: #f2f2f2;
+  border: none;
+  border-bottom: ${(props) => (props.underlined ? 'solid thick #1A5A96' : '')};
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 20px 30px 20px;
+  padding-left: 0;
+  padding-right: 0;
 `;
 
 export const FooterLink = styled.a.attrs({
