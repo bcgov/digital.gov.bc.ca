@@ -21,6 +21,6 @@
             - not rebuilding react project, there is already a build in progress with the same tail commit
         when: not should_build
 
-      - name: Build React Project
+      - name: Build Strapi Project
         include: ./tasks/build_strapi.yaml
         when: should_build
