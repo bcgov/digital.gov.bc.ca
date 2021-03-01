@@ -17,6 +17,9 @@ The build and deploy are controlled by ansible play books
 
 The workflow is a hybrid between Github and git flow. The ansible playbooks allow developers to build and deploy their PR's to Dev and then subsequent playbooks will promote by retagging their images to the _git flow_ dev/test/prod instances 
 
+## Configuring secrets in openshift
+
+NEW DOCUMENTATION GOES HERE
 
 ## Available Playbooks 
 ### Build React
