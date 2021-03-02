@@ -25,7 +25,7 @@ jobs:
           core.exportVariable('ENV', env);
     - name: install oc
       run: |
-        curl -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.1/openshift-client-linux.tar.gz > oc.tar.gz
+        curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
         tar xvzf oc.tar.gz 
         ls -l
         sudo mv oc /usr/local/bin
