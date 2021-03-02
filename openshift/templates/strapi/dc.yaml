@@ -26,6 +26,10 @@ objects:
           labels:
             app: ${NAME}-${SUFFIX}
         spec:
+          volumes:
+            - name: test-strapi-pv
+              persistentVolumeClaim:
+                claimName: test-strapi-pv-claim
           containers:
             - image: ${IMAGE_REGISTRY}/${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: IfNotPresent
@@ -50,6 +54,9 @@ objects:
                   limits: ${MEMORY_LIMIT}
               terminationMessagePath: /dev/termination-log
               terminationMessagePolicy: File
+              volumeMounts:
+              - mountPath: /app/public/uploads
+                name: test-strapi-pv
           dnsPolicy: ClusterFirst
           restartPolicy: Always
           schedulerName: default-scheduler
@@ -90,6 +97,20 @@ objects:
         name: ${NAME}-${SUFFIX}
         weight: 100
       wildcardPolicy: None
+    status: {}
+
+  - kind: PersistentVolumeClaim
+    apiVersion: v1
+    metadata:
+      name: test-strapi-pv-claim
+      labels:
+        app: strapi
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: "2Gi"
     status: {}
 
   - apiVersion: v1
