@@ -60,6 +60,7 @@ objects:
       type: ClusterIP
     status:
       loadBalancer: {}
+      
   - apiVersion: apps.openshift.io/v1
     kind: DeploymentConfig
     spec:
