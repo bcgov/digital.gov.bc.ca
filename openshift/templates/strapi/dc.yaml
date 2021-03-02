@@ -28,7 +28,7 @@ objects:
   - kind: PersistentVolumeClaim
     apiVersion: v1
     metadata:
-      name: test-strapi-pv-claim2
+      name: strapi-media-pvc
       labels:
         app: strapi
     spec:
@@ -60,7 +60,7 @@ objects:
       type: ClusterIP
     status:
       loadBalancer: {}
-      
+
   - apiVersion: apps.openshift.io/v1
     kind: DeploymentConfig
     spec:
@@ -87,9 +87,9 @@ objects:
             app: ${NAME}-${SUFFIX}
         spec:
           volumes:
-            - name: test-strapi-pv
+            - name: strapi-media-pv
               persistentVolumeClaim:
-                claimName: test-strapi-pv-claim2
+                claimName: strapi-media-pvc
           containers:
             - image: ${IMAGE_REGISTRY}/${IMAGE_NAMESPACE}/${IMAGE_STREAM}:${IMAGE_TAG}
               imagePullPolicy: IfNotPresent
@@ -116,7 +116,7 @@ objects:
               terminationMessagePolicy: File
               volumeMounts:
               - mountPath: /app/public/uploads
-                name: test-strapi-pv
+                name: strapi-media-pv
           dnsPolicy: ClusterFirst
           restartPolicy: Always
           schedulerName: default-scheduler
