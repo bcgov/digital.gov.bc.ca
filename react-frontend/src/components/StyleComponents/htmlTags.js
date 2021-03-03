@@ -73,7 +73,7 @@ export const CovidLinkStyle = styled.a.attrs({
 `;
 
 export const CovidLinkStyleButton = styled(CovidLinkStyle)`
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: none;
 `;
 

@@ -11,8 +11,8 @@
 @font-face {
     font-family: 'BC SansBold';
     font-style: normal;
-    src: url(./fonts/BCSans-Bold.woff)format('woff');
     font-weight: normal;
+    src: url(./fonts/BCSans-Bold.woff)format('woff');
 }
 
 p {
