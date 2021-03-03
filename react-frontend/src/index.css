@@ -27,6 +27,6 @@ h1, h2, h3, h4 {
     font-size: 16px;
 }
 
-strong {
+strong, b {
     font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
 }
