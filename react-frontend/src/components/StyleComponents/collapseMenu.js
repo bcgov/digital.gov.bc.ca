@@ -61,9 +61,8 @@ export const PanelStyled = styled(Panel).attrs({
   .ant-collapse-header {
     background: white;
     color: #1a5a96 !important;
-    font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+    font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
     font-size: 25.92px;
-    font-weight: 700;
   }
   .ant-collapse-content > .ant-collapse-content-box {
     margin-left: 40px;

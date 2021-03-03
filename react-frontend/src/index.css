@@ -8,12 +8,25 @@
         url(./fonts/BCSans-Italic.woff)format('woff');
 }
 
-p, h1, h2, h3, h4, li {
+@font-face {
+    font-family: 'BC SansBold';
+    font-style: normal;
+    src: url(./fonts/BCSans-Bold.woff)format('woff');
+    font-weight: normal;
+}
+
+p {
     font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
     color: #313132;
     font-size: 16px;
 }
 
 h1, h2, h3, h4 {
-    font-weight: bold;
+    font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
+    color: #313132;
+    font-size: 16px;
+}
+
+strong {
+    font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
 }

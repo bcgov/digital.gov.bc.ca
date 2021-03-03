@@ -38,8 +38,7 @@ export const CoCoLinkExternal = styled.a.attrs({
   text-decoration: none;
   display: block;
   font-size: 18px;
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  font-weight: 700;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
   :focus {
@@ -64,8 +63,8 @@ export const CovidLinkStyle = styled.a.attrs({
   rel: 'noopener noreferrer',
 })`
   color: white;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 18px;
-  font-weight: 700;
   :hover {
     color: grey;
   }
@@ -74,13 +73,12 @@ export const CovidLinkStyle = styled.a.attrs({
 `;
 
 export const CovidLinkStyleButton = styled(CovidLinkStyle)`
-  font-weight: bold;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: none;
 `;
 
 export const DigitalFrameworkHeading = styled.h4`
   font-size: 21.6px;
-  font-weight: bold;
   padding-top: 20px;
 `;
 
@@ -101,9 +99,8 @@ export const DigitalFrameworkToggle = styled.button.attrs({
   background-color: #f2f2f2;
   border: none;
   border-bottom: ${(props) => (props.underlined ? 'solid thick #1A5A96' : '')};
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 22px;
-  font-weight: 700;
   margin: 30px 20px 30px 20px;
   padding-left: 0;
   padding-right: 0;
@@ -186,9 +183,8 @@ export const HrefLinkStandalone = styled.a.attrs({
   className: 'externalLink',
 })`
   color: #1a5a96;
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
@@ -204,9 +200,8 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   className: 'internalLink',
 })`
   color: #1a5a96;
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
@@ -222,8 +217,7 @@ export const HrefLinkInternal = styled(Link).attrs({
   className: 'internalLink',
 })`
   color: #1a5a96;
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  font-weight: bold;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -337,7 +331,7 @@ export const NavBarUl = styled.ul.attrs({
   padding-left: 0;
   padding-top: 8px;
   .active {
-    font-weight: bold;
+    font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
     text-decoration: underline;
     text-decoration-color: #fff;
   }

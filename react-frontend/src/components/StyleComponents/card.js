@@ -64,9 +64,8 @@ export const CardHorizontalText = styled.div.attrs({
 export const CardHorizontalTitle = styled.h5.attrs({
   className: 'cardHorizontalTitle',
 })`
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 31px;
-  font-weight: bold;
   line-height: 1.2;
   position: relative;
   @media only screen and (max-width: 800px) {
@@ -102,17 +101,16 @@ export const CardLinkDiv = styled.div.attrs({
   className: 'cardLink',
 })`
   bottom: 25px;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
   position: absolute;
 `;
 
 export const CardTitle = styled.h5.attrs({
   className: 'cardTitle',
 })`
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 31px;
-  font-weight: bold;
   line-height: 1.2;
   position: relative;
   @media only screen and (max-width: 800px) {
@@ -132,6 +130,5 @@ export const Icon = styled.img.attrs({
 export const IconCol = styled(Col).attrs({
   className: 'iconCol',
 })`
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  font-weight: bold;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
 `;

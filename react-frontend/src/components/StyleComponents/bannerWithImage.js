@@ -50,7 +50,6 @@ export const BannerTitle = styled.h1.attrs({
 })`
   color: white;
   font-size: 37px;
-  font-weight: bold;
   line-height: 37px;
   margin-bottom: 10px;
   position: relative;
@@ -84,9 +83,8 @@ export const BannerSideImgTitle = styled.h1.attrs({
   className: 'bannerTitle',
 })`
   color: #313132;
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 37px;
-  font-weight: bold;
   line-height: 1.2;
   margin-bottom: 10px;
   text-align: left;
