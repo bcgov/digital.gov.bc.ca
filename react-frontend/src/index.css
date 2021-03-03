@@ -29,4 +29,5 @@ h1, h2, h3, h4 {
 
 strong, b {
     font-family: BC SansBold, Noto Sans, Verdana, Arial, sans-serif;
+    font-weight: normal !important;
 }
