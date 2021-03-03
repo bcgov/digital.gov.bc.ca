@@ -26,6 +26,7 @@ function CoCoCards() {
                     <CoCoCard
                       title={coCo.Name}
                       description={coCo.ShortDescription}
+                      nameAndMinistry={coCo.TeamNameAndMinistry}
                       numberOfUsers={coCo.NumberOfUsers}
                       onboardingTime={coCo.OnboardingTime}
                       supportSchedule={coCo.SupportSchedule}
