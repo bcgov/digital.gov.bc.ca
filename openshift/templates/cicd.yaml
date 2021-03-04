@@ -131,6 +131,17 @@ objects:
           - ""
         attributeRestrictions: null
         resources:
+          - persistentvolumeclaims
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
           - pods/log
         verbs:
           - get
@@ -278,6 +289,17 @@ objects:
           - ""
         attributeRestrictions: null
         resources:
+          - persistentvolumeclaims
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
           - pods/log
         verbs:
           - get
@@ -399,6 +421,17 @@ objects:
         attributeRestrictions: null
         resources:
           - pods
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - persistentvolumeclaims
         verbs:
           - create
           - get
