@@ -65,6 +65,7 @@ export const Badges = (status, maintenanceStatus, tags, colour) => {
 function CoCoCard({
   title,
   description,
+  nameAndMinistry,
   numberOfUsers,
   onboardingTime,
   supportSchedule,
@@ -77,7 +78,10 @@ function CoCoCard({
     <Link to={`/cocos/${uid}`}>
       <CardStyled>
         {Badges(status?.Status, status?.Maintenance, tags)}
-        <CardTitle data-testid="title">{title}</CardTitle>
+        <CardTitle data-testid="title" style={{ marginBottom: '0' }}>
+          {title}
+        </CardTitle>
+        <p>{nameAndMinistry}</p>
         <CardDescription
           data-testid="description"
           style={{ marginBottom: '40px' }}
