@@ -74,13 +74,12 @@ export const CovidLinkStyle = styled.a.attrs({
 `;
 
 export const CovidLinkStyleButton = styled(CovidLinkStyle)`
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 `;
 
 export const DigitalFrameworkHeading = styled.h4`
   font-size: 21.6px;
-  font-weight: bold;
   padding-top: 20px;
 `;
 
@@ -188,7 +187,7 @@ export const HrefLinkStandalone = styled.a.attrs({
   color: #1a5a96;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
@@ -206,7 +205,7 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   color: #1a5a96;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
@@ -223,7 +222,7 @@ export const HrefLinkInternal = styled(Link).attrs({
 })`
   color: #1a5a96;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -337,7 +336,7 @@ export const NavBarUl = styled.ul.attrs({
   padding-left: 0;
   padding-top: 8px;
   .active {
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: underline;
     text-decoration-color: #fff;
   }
