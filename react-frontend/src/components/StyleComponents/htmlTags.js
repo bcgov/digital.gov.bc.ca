@@ -6,6 +6,7 @@ import { Row, Col } from 'react-flexbox-grid';
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
 export const BreadcrumbLI = styled.li`
+  color: black;
   display: flex;
   font-size: 16px;
   font-weight: normal;

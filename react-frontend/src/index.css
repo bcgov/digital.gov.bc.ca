@@ -38,3 +38,8 @@ p, h1, h2, h3, h4, li {
 h1, h2, h3, h4 {
     font-weight: 700;
 }
+
+strong, b {
+    font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+    font-weight: 700 !important;
+}
