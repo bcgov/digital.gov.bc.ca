@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import CaseStudies from '../../components/CaseStudies/casestudies';
+import Community from '../../components/Community/community';
 import CoCos from '../../components/CoCos/coCos';
 import CoCoPage from '../../components/CoCos/coCoPage';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
@@ -20,6 +21,7 @@ const DisplayNames = {
   'products-services': 'Products and Services',
   resources: 'Resources',
   cocos: 'Common Components',
+  community: 'Communities of Practice',
 };
 
 const Routes = () => {
@@ -37,6 +39,8 @@ const Routes = () => {
         <Route exact path="/resources" component={Resources} />
         <Route exact path="/cocos" component={CoCos} />
         <Route exact path="/cocos/:uid" component={CoCoPage} />
+        {/* <Route exact path="/community" component={Communities} /> */}
+        <Route exact path="/community/:uid" component={Community} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route
           exact
