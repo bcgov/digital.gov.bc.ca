@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_community_external_sites",
+  "info": {
+    "name": "ExternalSite",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "WebsiteName": {
+      "type": "string",
+      "required": true
+    },
+    "Url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
