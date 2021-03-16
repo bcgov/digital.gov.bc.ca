@@ -12,9 +12,19 @@ import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title, Heading } from '../StyleComponents/headings';
 import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
+
+function LinkWithIcon({ icon, text, url }) {
+  if (url) {
+    return (
+      <p>
+        <HrefLink href={url}>{text}</HrefLink>
+      </p>
+    );
+  }
+}
+
 function CoCoPage() {
   const params = useParams();
-
   return (
     <DocumentTitle title="Community Page">
       <PageContainer>
@@ -62,19 +72,26 @@ function CoCoPage() {
                       );
                     })}
                   </div>
-                  {/* TODO: ONLY RENDER IF THE LINKS ARE ENTERED */}
                   {/* TODO ADD THE FANCY ICONS */}
-                  <Heading>Links</Heading>
                   <div>
-                    {communityPage?.ExternalLink?.map((link, i) => {
-                      return (
-                        <p key={i} style={{ margin: '0' }}>
-                          <HrefLink href={link.Url}>
-                            {link.WebsiteName}
-                          </HrefLink>
-                        </p>
-                      );
-                    })}
+                    <Heading>Links</Heading>
+                    <LinkWithIcon
+                      url={communityPage?.RocketChatLink}
+                      text="RocketChat"
+                    />
+                    <LinkWithIcon
+                      url={communityPage?.YammerLink}
+                      text="Yammer"
+                    />
+                    <LinkWithIcon
+                      url={communityPage?.AtWorkLink}
+                      text="@Work"
+                    />
+                    <LinkWithIcon
+                      url={communityPage?.MSTeamsLink}
+                      text="MS Teams"
+                    />
+                    <LinkWithIcon url={communityPage?.Website} text="Website" />
                   </div>
                 </Col>
               </Row>

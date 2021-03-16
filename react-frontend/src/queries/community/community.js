@@ -13,13 +13,14 @@ const COMMUNITY_QUERY = gql`
         Name
         Email
       }
-      ExternalLink {
-        WebsiteName
-        Url
-      }
       CommunityImage {
         url
       }
+      RocketChatLink
+      YammerLink
+      AtWorkLink
+      MSTeamsLink
+      Website
       KeyResources
     }
   }
