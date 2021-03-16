@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-flexbox-grid';
 
 import Query from '../Query';
 import COMMUNITY_QUERY from '../../queries/community/community';
 import DocumentTitle from 'react-document-title';
+import { AppConfigContext } from '../../providers/AppConfig';
 
 import NotFound from '../NotFoundPage/notFoundPage';
 
@@ -13,14 +14,36 @@ import { PageContainer } from '../StyleComponents/pageContent';
 import { Title, Heading } from '../StyleComponents/headings';
 import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 
+const rocketChat = require('../../images/icons/rocketChat.png');
+const MSTeams = require('../../images/icons/MSTeams-Logo.png');
+const yammer = require('../../images/icons/Yammer-Logo.png');
+const websiteLogo = require('../../images/icons/website1.png');
+const atSymbol = require('../../images/icons/at-solid.png');
+
 function LinkWithIcon({ icon, text, url }) {
   if (url) {
     return (
       <p>
+        <img src={icon} style={{ height: '24px' }} />{' '}
         <HrefLink href={url}>{text}</HrefLink>
       </p>
     );
   }
+  return <div />;
+}
+
+function CommunityImage({ url }) {
+  const onError = (error) => {
+    return null;
+  };
+  const config = useContext(AppConfigContext);
+  const strapiURL = config['state']['strapiApiUrl'];
+  const imageSource = strapiURL?.replace('/graphql', url);
+  console.log(imageSource);
+  if (imageSource) {
+    return <img src={imageSource} onError={onError} alt="Community Image" />;
+  }
+  return <div />;
 }
 
 function CoCoPage() {
@@ -35,7 +58,6 @@ function CoCoPage() {
             }
             const communityPage = communityPages[0];
 
-            console.log(communityPages);
             return (
               <Row>
                 <Col xs={12} md={8}>
@@ -44,6 +66,7 @@ function CoCoPage() {
                   <Heading>Who we are</Heading>
                   <p>{communityPage?.WhoWeAre}</p>
                   {/* TODO: ADD THE IMAGE */}
+                  <CommunityImage url={communityPage?.CommunityImage.url} />
                   <Heading>What we do</Heading>
                   <p>{communityPage?.WhatWeDo}</p>
                   <Heading>How to participate</Heading>
@@ -64,7 +87,7 @@ function CoCoPage() {
                   <div>
                     {communityPage?.CommunityEmail?.map((email, i) => {
                       return (
-                        <p key={i} style={{ margin: '0' }}>
+                        <p key={i}>
                           <HrefLink href={`mailto:${email.Email}`}>
                             {email.Name}
                           </HrefLink>
@@ -72,26 +95,33 @@ function CoCoPage() {
                       );
                     })}
                   </div>
-                  {/* TODO ADD THE FANCY ICONS */}
                   <div>
                     <Heading>Links</Heading>
                     <LinkWithIcon
                       url={communityPage?.RocketChatLink}
                       text="RocketChat"
+                      icon={rocketChat}
                     />
                     <LinkWithIcon
                       url={communityPage?.YammerLink}
                       text="Yammer"
+                      icon={yammer}
                     />
                     <LinkWithIcon
                       url={communityPage?.AtWorkLink}
                       text="@Work"
+                      icon={atSymbol}
                     />
                     <LinkWithIcon
                       url={communityPage?.MSTeamsLink}
                       text="MS Teams"
+                      icon={MSTeams}
                     />
-                    <LinkWithIcon url={communityPage?.Website} text="Website" />
+                    <LinkWithIcon
+                      url={communityPage?.Website}
+                      text="Website"
+                      icon={websiteLogo}
+                    />
                   </div>
                 </Col>
               </Row>
