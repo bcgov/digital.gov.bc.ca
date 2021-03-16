@@ -1,20 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Col, Row } from 'react-flexbox-grid';
+
 import Query from '../Query';
 import COMMUNITY_QUERY from '../../queries/community/community';
 import DocumentTitle from 'react-document-title';
 
-// import CollapsedMenus from './CoCoPageComponents/collapsedMenus';
-// import WhyShouldIUseThis from './CoCoPageComponents/whyShouldIUseThis';
-// import Analytics from './CoCoPageComponents/analytics';
-// import CoCoBannerSideImage from './CoCoPageComponents/coCoBannerSideImage';
-// import CoCoPageNav from './CoCoPageComponents/coCoPageNav';
-// import GetStarted from './CoCoPageComponents/getStarted';
-// import Support from './CoCoPageComponents/support';
 import NotFound from '../NotFoundPage/notFoundPage';
 
+import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
-
+import { Title, Heading } from '../StyleComponents/headings';
+import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
 function CoCoPage() {
   const params = useParams();
 
@@ -23,54 +20,66 @@ function CoCoPage() {
       <PageContainer>
         <Query query={COMMUNITY_QUERY} uid={params.uid}>
           {({ data: { communityPages } }) => {
-            // if (communityPages.length === 0) {
-            //   return <NotFound />;
-            // }
-            console.log(communityPages);
-            return <div></div>;
-          }}
-
-          {/* {({ data: { community } }) => {
-            if (community.length === 0) {
+            if (communityPages.length === 0) {
               return <NotFound />;
             }
+            const communityPage = communityPages[0];
 
+            console.log(communityPages);
             return (
-              <div>
-                {community}
-                {/* <CoCoBannerSideImage
-                  name={coCos[0]?.Name}
-                  description={coCos[0]?.Description}
-                  status={coCos[0]?.ProjectStatus?.Status}
-                  maintenanceStatus={coCos[0]?.ProjectStatus?.Maintenance}
-                  imageurl={coCos[0]?.CoverImage?.url}
-                  tags={coCos[0]?.Tags}
-                  coCoLink={coCos[0]?.CoCoWebsite}
-                />
-                <WhyShouldIUseThis
-                  whyShouldIUseThis={coCos[0]?.WhyShouldIUseThis}
-                />
-                <Analytics
-                  coCoName={coCos[0]?.Name}
-                  numberOfUsers={coCos[0]?.NumberOfUsers}
-                  creationDate={coCos[0]?.ComponentCreationDate}
-                  whoIsUsingThis={coCos[0]?.WhoIsUsingThis}
-                />
-                <CollapsedMenus
-                  name={coCos[0]?.name}
-                  price={coCos[0]?.CostStructure?.PaymentStructure}
-                  service={coCos[0]?.ServiceLevelSupport}
-                  technicalInfo={coCos[0]?.AdditionalTechnicalInformation}
-                  requirements={coCos[0]?.RequirementsAndRestrictions}
-                />
-                <GetStarted
-                  name={coCos[0]?.Name}
-                  url={coCos[0]?.GetStartedURL}
-                />
-                <Support contact={coCos[0]?.Support} /> 
-              </div>
+              <Row>
+                <Col xs={12} md={8}>
+                  <Title>{communityPage?.Title}</Title>
+                  <p>{communityPage?.Description}</p>
+                  <Heading>Who we are</Heading>
+                  <p>{communityPage?.WhoWeAre}</p>
+                  {/* TODO: ADD THE IMAGE */}
+                  <Heading>What we do</Heading>
+                  <p>{communityPage?.WhatWeDo}</p>
+                  <Heading>How to participate</Heading>
+                  <ReactMarkdownStyled
+                    source={communityPage?.HowToParticipate}
+                  />
+                  {communityPage?.KeyResources && (
+                    <div>
+                      <Heading>Key resources</Heading>
+                      <ReactMarkdownStyled
+                        source={communityPage?.KeyResources}
+                      />
+                    </div>
+                  )}
+                </Col>
+                <Col xs={12} md={4}>
+                  <Heading>Community Managers</Heading>
+                  <div>
+                    {communityPage?.CommunityEmail?.map((email, i) => {
+                      return (
+                        <p key={i} style={{ margin: '0' }}>
+                          <HrefLink href={`mailto:${email.Email}`}>
+                            {email.Name}
+                          </HrefLink>
+                        </p>
+                      );
+                    })}
+                  </div>
+                  {/* TODO: ONLY RENDER IF THE LINKS ARE ENTERED */}
+                  {/* TODO ADD THE FANCY ICONS */}
+                  <Heading>Links</Heading>
+                  <div>
+                    {communityPage?.ExternalLink?.map((link, i) => {
+                      return (
+                        <p key={i} style={{ margin: '0' }}>
+                          <HrefLink href={link.Url}>
+                            {link.WebsiteName}
+                          </HrefLink>
+                        </p>
+                      );
+                    })}
+                  </div>
+                </Col>
+              </Row>
             );
-          }} */}
+          }}
         </Query>
       </PageContainer>
     </DocumentTitle>

@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
+export const Title = styled.h1`
+  font-size: 37.32px;
+  font-weight: 700;
+`;
+
 export const Heading = styled.h2.attrs({
   className: 'heading',
 })`
   font-size: 22pt;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24pt;
 `;
 
@@ -12,7 +17,7 @@ export const SubHeading = styled.h3.attrs({
   className: 'subHeading',
 })`
   font-size: 18pt;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24pt;
 `;
 
@@ -57,7 +62,7 @@ export const ResourcePageSubHeading = styled.h3.attrs({
   className: 'resourceSubHeading',
 })`
   font-size: 16pt;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 10px;
 `;
 
@@ -68,13 +73,12 @@ export const SimpleTextPageTitle = styled.h1`
 `;
 export const Title2 = styled.h2`
   font-size: 31px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 24px;
 `;
 export const Title3 = styled.h3`
   font-size: 2.5rem;
   font-weight: 700;
-
   margin-top: 30px;
 `;
 export const Title4 = styled.h4`

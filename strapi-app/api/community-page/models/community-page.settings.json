@@ -54,10 +54,20 @@
       "required": true,
       "min": 1
     },
-    "ExternalLink": {
-      "type": "component",
-      "repeatable": true,
-      "component": "community.external-site"
+    "RocketChatLink": {
+      "type": "string"
+    },
+    "YammerLink": {
+      "type": "string"
+    },
+    "AtWorkLink": {
+      "type": "string"
+    },
+    "MSTeamsLink": {
+      "type": "string"
+    },
+    "Website": {
+      "type": "string"
     }
   }
 }
