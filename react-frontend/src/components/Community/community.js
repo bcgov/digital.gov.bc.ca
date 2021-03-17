@@ -37,7 +37,13 @@ function CommunityImage({ url }) {
   const strapiURL = config['state']['strapiApiUrl'];
   if (url) {
     const imageSource = strapiURL?.replace('/graphql', url);
-    return <img src={imageSource} alt="Community Image" />;
+    return (
+      <img
+        src={imageSource}
+        alt="Community Image"
+        style={{ marginBottom: '16px' }}
+      />
+    );
   }
   return <div />;
 }
