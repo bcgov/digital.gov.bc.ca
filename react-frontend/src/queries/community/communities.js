@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const COMMUNITIES_QUERY = gql`
   query Community {
-    communityPages {
+    communityPages(sort: "Title:asc") {
       uid
       Title
       Description
