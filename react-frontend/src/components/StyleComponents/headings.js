@@ -9,6 +9,7 @@ export const Heading = styled.h2.attrs({
   className: 'heading',
 })`
   font-size: 22pt;
+  font-weight: 700;
   line-height: 24pt;
 `;
 
@@ -16,6 +17,7 @@ export const SubHeading = styled.h3.attrs({
   className: 'subHeading',
 })`
   font-size: 18pt;
+  font-weight: 700;
   line-height: 24pt;
 `;
 

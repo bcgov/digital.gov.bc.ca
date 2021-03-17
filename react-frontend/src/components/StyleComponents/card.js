@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Card } from 'antd';
 import { Col } from 'react-flexbox-grid';
+import { Link } from 'react-router-dom';
 
 const cardBorderRadius = '25px';
 
@@ -125,6 +126,7 @@ export const CardTitle = styled.h5.attrs({
 export const CommunityCardDescription = styled.p.attrs({
   className: 'cardHorizontalText',
 })`
+  background: #ffffff;
   border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
   height: fit-content;
   padding: 24px;
@@ -140,29 +142,27 @@ export const CommunityCardHeader = styled.h5.attrs({
   font-weight: 700;
   font-size: 21px;
   height: fit-content;
+  margin-bottom: 0;
   padding: 24px;
   text-align: left;
 `;
 
-export const CommunityCardStyled = styled(Card).attrs({
+export const CommunityCardStyled = styled(Link).attrs({
   className: 'cardRound',
 })`
+  background: #003366;
   border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
-  .ant-card-body {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    padding: 0;
-  }
-  .ant-card-body > :nth-child(2) {
-    color: red;
+  display: flex;
+  flex-direction: column;
+  > :nth-child(2) {
     margin-top: auto;
+    margin-bottom: -2px;
   }
   :hover {
-    opacity: 1;
+    box-shadow: 5px 7px grey;
   }
 `;
 
