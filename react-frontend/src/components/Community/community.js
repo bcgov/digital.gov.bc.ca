@@ -41,7 +41,7 @@ function CommunityImage({ url }) {
       <img
         src={imageSource}
         alt="Community Image"
-        style={{ marginBottom: '16px' }}
+        style={{ marginBottom: '16px', width: '100%' }}
       />
     );
   }
