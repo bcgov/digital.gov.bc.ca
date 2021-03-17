@@ -24,7 +24,7 @@ function Communities() {
           }
           image={comunitiesImage}
         />
-        <ContentBlockContainer>
+        <ContentBlockContainer style={{ paddingTop: '50px' }}>
           <Query query={COMMUNITIES_QUERY}>
             {({ data: { communityPages } }) => {
               return (
