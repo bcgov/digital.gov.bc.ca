@@ -129,6 +129,8 @@ export const CommunityCardDescription = styled.p.attrs({
   background: #ffffff;
   border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
   height: fit-content;
+  margin-top: auto;
+  margin-bottom: -2px;
   padding: 24px;
   text-align: left;
 `;
@@ -157,10 +159,6 @@ export const CommunityCardStyled = styled(Link).attrs({
   width: 100%;
   display: flex;
   flex-direction: column;
-  > :nth-child(2) {
-    margin-top: auto;
-    margin-bottom: -2px;
-  }
   :hover {
     box-shadow: 5px 7px grey;
   }
