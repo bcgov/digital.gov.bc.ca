@@ -63,7 +63,9 @@ function CoCoPage() {
             return (
               <Row>
                 <Col xs={12} md={8}>
-                  <Title>{communityPage?.Title}</Title>
+                  <Title style={{ lineHeight: '1.2' }}>
+                    {communityPage?.Title}
+                  </Title>
                   <p>{communityPage?.Description}</p>
                   <Heading>Who we are</Heading>
                   <p>{communityPage?.WhoWeAre}</p>
@@ -84,7 +86,9 @@ function CoCoPage() {
                   )}
                 </Col>
                 <Col xs={12} md={4}>
-                  <Heading>Community Managers</Heading>
+                  <Heading style={{ fontSize: '22px' }}>
+                    Community Managers
+                  </Heading>
                   <div>
                     {communityPage?.CommunityEmail?.map((email, i) => {
                       return (
@@ -97,7 +101,7 @@ function CoCoPage() {
                     })}
                   </div>
                   <div>
-                    <Heading>Links</Heading>
+                    <Heading style={{ fontSize: '22px' }}>Links</Heading>
                     <LinkWithIcon
                       url={communityPage?.RocketChatLink}
                       text="RocketChat"
