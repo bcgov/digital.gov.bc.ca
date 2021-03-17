@@ -33,15 +33,11 @@ function LinkWithIcon({ icon, text, url }) {
 }
 
 function CommunityImage({ url }) {
-  const onError = (error) => {
-    return null;
-  };
   const config = useContext(AppConfigContext);
   const strapiURL = config['state']['strapiApiUrl'];
-  const imageSource = strapiURL?.replace('/graphql', url);
-  console.log(imageSource);
-  if (imageSource) {
-    return <img src={imageSource} onError={onError} alt="Community Image" />;
+  if (url) {
+    const imageSource = strapiURL?.replace('/graphql', url);
+    return <img src={imageSource} alt="Community Image" />;
   }
   return <div />;
 }
@@ -65,8 +61,7 @@ function CoCoPage() {
                   <p>{communityPage?.Description}</p>
                   <Heading>Who we are</Heading>
                   <p>{communityPage?.WhoWeAre}</p>
-                  {/* TODO: ADD THE IMAGE */}
-                  <CommunityImage url={communityPage?.CommunityImage.url} />
+                  <CommunityImage url={communityPage?.CommunityImage?.url} />
                   <Heading>What we do</Heading>
                   <p>{communityPage?.WhatWeDo}</p>
                   <Heading>How to participate</Heading>
