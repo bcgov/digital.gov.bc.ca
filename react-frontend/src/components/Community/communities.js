@@ -15,7 +15,7 @@ const comunitiesImage = require('../../images/pngIllustrations/communityWhite.pn
 
 function Communities() {
   return (
-    <DocumentTitle title="Communities of Practice - Digital Government - Province of British Columbia">
+    <DocumentTitle title="Communities - Digital Government - Province of British Columbia">
       <div>
         <BannerSideImage
           title={'Communities'}

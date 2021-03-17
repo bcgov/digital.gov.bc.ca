@@ -22,7 +22,7 @@ const DisplayNames = {
   'products-services': 'Products and Services',
   resources: 'Resources',
   cocos: 'Common Components',
-  community: 'Communities of Practice',
+  community: 'Communities',
 };
 
 const Routes = () => {
