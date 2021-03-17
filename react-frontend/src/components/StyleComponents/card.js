@@ -121,6 +121,51 @@ export const CardTitle = styled.h5.attrs({
   }
 `;
 
+//community cards
+export const CommunityCardDescription = styled.p.attrs({
+  className: 'cardHorizontalText',
+})`
+  border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
+  height: fit-content;
+  padding: 24px;
+  text-align: left;
+`;
+
+export const CommunityCardHeader = styled.h5.attrs({
+  className: 'cardHorizontalText',
+})`
+  background: #003366;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 21px;
+  height: fit-content;
+  padding: 24px;
+  text-align: left;
+`;
+
+export const CommunityCardStyled = styled(Card).attrs({
+  className: 'cardRound',
+})`
+  border-radius: ${cardBorderRadius};
+  height: 95%;
+  margin-bottom: 20px;
+  width: 100%;
+  .ant-card-body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .ant-card-body > :nth-child(2) {
+    color: red;
+    margin-top: auto;
+  }
+  :hover {
+    opacity: 1;
+  }
+`;
+
 export const Icon = styled.img.attrs({
   className: 'icon',
 })`
