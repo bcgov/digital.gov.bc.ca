@@ -48,7 +48,7 @@ function CommunityImage({ url }) {
   return <div />;
 }
 
-function CoCoPage() {
+function Community() {
   const params = useParams();
   return (
     <DocumentTitle title="Community Page">
@@ -138,4 +138,4 @@ function CoCoPage() {
   );
 }
 
-export default CoCoPage;
+export default Community;
