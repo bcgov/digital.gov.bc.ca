@@ -128,9 +128,10 @@ export const CommunityCardDescription = styled.p.attrs({
 })`
   background: #ffffff;
   border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
-  height: fit-content;
+  height: 200px;
   margin-top: auto;
   margin-bottom: -2px;
+  overflow: hidden;
   padding: 24px;
   text-align: left;
 `;
