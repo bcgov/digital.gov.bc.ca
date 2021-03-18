@@ -31,7 +31,7 @@ function Communities() {
                 <Row style={{ marginBottom: '4px' }}>
                   {communityPages?.map((communityPage, i) => {
                     return (
-                      <Col xs={12} sm={6} md={4} key={communityPage?.uid}>
+                      <Col xs={12} md={6} lg={4} key={communityPage?.uid}>
                         <CommunityCard
                           title={communityPage?.Title}
                           description={communityPage?.Description}
