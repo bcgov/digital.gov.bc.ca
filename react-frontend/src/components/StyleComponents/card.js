@@ -130,7 +130,7 @@ export const CommunityCardDescription = styled.p.attrs({
   border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
   height: 200px;
   margin-top: auto;
-  margin-bottom: -2px;
+  margin-bottom: 0;
   overflow: hidden;
   padding: 24px;
   text-align: left;
@@ -154,14 +154,18 @@ export const CommunityCardStyled = styled(Link).attrs({
   className: 'cardRound',
 })`
   background: #003366;
-  border-radius: ${cardBorderRadius};
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 30px 30px;
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
   :hover {
-    box-shadow: 5px 7px grey;
+    border: 5px solid #fdb917;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    right: -7px;
+    top: -7px;
   }
 `;
 
