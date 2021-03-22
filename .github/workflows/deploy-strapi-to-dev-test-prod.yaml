@@ -1,4 +1,4 @@
-name: Deploy Strapi to Test/Prod
+name: Deploy Strapi to Dev/Test/Prod
 on: 
   workflow_dispatch:
     inputs:
