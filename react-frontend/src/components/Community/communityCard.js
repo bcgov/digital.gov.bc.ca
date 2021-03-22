@@ -9,7 +9,7 @@ import {
 
 function CommunityCard({ title, description, uid }) {
   return (
-    <CommunityCardStyled to={`/community/${uid}`}>
+    <CommunityCardStyled to={`/communities/${uid}`}>
       <CommunityCardHeader>{title}</CommunityCardHeader>
       <CommunityCardDescription>{description}</CommunityCardDescription>
     </CommunityCardStyled>

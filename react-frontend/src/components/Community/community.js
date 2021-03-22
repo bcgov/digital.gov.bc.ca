@@ -62,7 +62,7 @@ function Community() {
 
             return (
               <Row>
-                <Col xs={12} md={8}>
+                <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
                   <Title style={{ lineHeight: '1.2' }}>
                     {communityPage?.Title}
                   </Title>

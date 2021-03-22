@@ -22,7 +22,7 @@ const DisplayNames = {
   'products-services': 'Products and Services',
   resources: 'Resources',
   cocos: 'Common Components',
-  community: 'Communities',
+  communities: 'Communities',
 };
 
 const Routes = () => {
@@ -40,8 +40,8 @@ const Routes = () => {
         <Route exact path="/resources" component={Resources} />
         <Route exact path="/cocos" component={CoCos} />
         <Route exact path="/cocos/:uid" component={CoCoPage} />
-        <Route exact path="/community" component={Communities} />
-        <Route exact path="/community/:uid" component={Community} />
+        <Route exact path="/communities" component={Communities} />
+        <Route exact path="/communities/:uid" component={Community} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route
           exact
