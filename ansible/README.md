@@ -15,7 +15,7 @@ The build and deploy are controlled by ansible play books
 
 ## The workflow
 
-The workflow is a hybrid between Github and git flow. The ansible playbooks allow developers to build and deploy their PR's to Dev and then subsequent playbooks will promote by retagging their images to the _git flow_ dev/test/prod instances 
+The workflow is a hybrid between GitHub and git flow. The ansible playbooks allow developers to build and deploy their PR's to Dev and then subsequent playbooks will promote by retagging their images to the _git flow_ dev/test/prod instances 
 
 
 ## Available Playbooks 
@@ -74,16 +74,16 @@ Options:
 Usage:
 `ansible-playbook deploy-mongo.yaml -e PR=<pr num>`
 
-### Create Github Deployment
-> currently this only creates deployments for the react app and is best utilized by our custom github action
+### Create GitHub Deployment
+> currently this only creates deployments for the react app and is best utilized by our custom GitHub action
 
-Creates a github deployment for a PR. 
+Creates a GitHub deployment for a PR. 
 
 Options:
 - `PR` <number> this should be the open pull request number
-- `ENV` <string> (dev|test|prod) used to create the github deployment in a specific environment
+- `ENV` <string> (dev|test|prod) used to create the GitHub deployment in a specific environment
 - `OPENSHIFT_SERVER_URL` <string> the uri to the cluster 
-- `GITHUB_TOKEN` <string> a token that has permissions to create github deployments/statuses
+- `GITHUB_TOKEN` <string> a token that has permissions to create GitHub deployments/statuses
 
 Usage:
 
@@ -98,7 +98,7 @@ Current workflow is to base this on a PR from develop branch to the master branc
 
 Options:
 - `IMAGE_TAG` <string> This is the image tag in the tools namespace's digital-gov-frontend image stream.
-- `ENV` <string> (test|prod) used to create the github deployment in a specific environment
+- `ENV` <string> (test|prod) used to create the GitHub deployment in a specific environment
 
 Usage:
 `ansible-playbook ansible/promote-environment.yaml -e ENV=test|prod -e IMAGE_TAG=<image tag>`
@@ -127,7 +127,7 @@ Usage:
 The code can be deployed to test or prod through a PR created from develop to master using  Manual Workflows 
  
 # Instructions to deploy to Test or Prod
-- Click on **Actions** in Github
+- Click on **Actions** in GitHub
 - On the left side under All Workflows, select **Deploy React to Test/Prod**
 - On the right side click on **Run Workflow**, fill the parameters required as follows:
   - **Branch**: this sholud be "develop"
@@ -147,7 +147,7 @@ It runs the ZAP spider against the specified target (by default with no time lim
 This means that the script does perform actual ‘attacks’ and can potentially run for a long period of time.
 
 ### Instructions for running Zapscan
-- Click on **Actions** in Github
+- Click on **Actions** in GitHub
 - On the left side under All Workflows, select **run Zap Scan**
 - On the right side click on **Run Workflow**, fill the parameters required as follows:
   - Branch: develop

@@ -49,8 +49,7 @@ function Standards() {
               rel="noopener noreferrer"
               href={standardsUrls.WebStandards}
             >
-              Web Standards
-              {linkIcon}
+              Web Standards & Guides {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
         </Col>

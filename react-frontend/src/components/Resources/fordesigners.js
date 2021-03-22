@@ -10,6 +10,8 @@ import {
   ResourceLinkRow,
 } from '../StyleComponents/htmlTags';
 
+import { designersUrls } from '../../constants/urls';
+
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
 );
@@ -26,7 +28,7 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/bc-visual-identity?keyword=visual&keyword=identity"
+              href={designersUrls.VisualIdentityProgram}
             >
               B.C. Visual Identity Program (Gov Mark) {linkIcon}
             </HrefLinkStandalone>
@@ -35,7 +37,7 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/cms-lite-manual"
+              href={designersUrls.CMSLiteUsersManual}
             >
               CMS Lite User's Manual {linkIcon}
             </HrefLinkStandalone>
@@ -44,16 +46,16 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/content-design?keyword=Content&keyword=Design&keyword=and&keyword=Writing&keyword=Group&keyword=%28CDAWG%29"
+              href={designersUrls.ContentDesignGuide}
             >
-              Content Design Guide {linkIcon}
+              Content Design & Strategy {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
           <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://bcgov.github.io/design-research-guide/"
+              href={designersUrls.DesignResearchGuide}
             >
               Design Research Guide {linkIcon}
             </HrefLinkStandalone>
@@ -62,7 +64,7 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://developer.gov.bc.ca/Design-System/About-the-Design-System"
+              href={designersUrls.DesignSystem}
             >
               Design System {linkIcon}
             </HrefLinkStandalone>
@@ -71,16 +73,16 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/plain-language-guide?keyword=plain&keyword=language&keyword=guide"
+              href={designersUrls.PlainLanguageGuide}
             >
-              Plain Language Guide {linkIcon}
+              Plain Language Course {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
           <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design/service-design-phases"
+              href={designersUrls.ServiceDesignPhases}
             >
               Service Design Phases {linkIcon}
             </HrefLinkStandalone>
@@ -89,16 +91,16 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/writingforservices?keyword=Service&keyword=writing&keyword=guide"
+              href={designersUrls.ServiceWritingGuide}
             >
-              Service Writing Guide {linkIcon}
+              Writing Services for the Web {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
           <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/visual-design-guide?keyword=visual&keyword=identity"
+              href={designersUrls.VisualDesignGuide}
             >
               Visual Design Guide {linkIcon}
             </HrefLinkStandalone>
@@ -107,7 +109,7 @@ function ForDesigners() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/web-style-guide"
+              href={designersUrls.WebStyleGuide}
             >
               Web Style Guide {linkIcon}
             </HrefLinkStandalone>

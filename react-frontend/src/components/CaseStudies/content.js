@@ -145,7 +145,7 @@ const MiningContent = {
   ),
   resourceText: [
     'B.C Mine Information Website',
-    'Mines Digital Service Github repo',
+    'Mines Digital Service GitHub repo',
     '2016 Vancouver Sun article ‘B.C. ministry change gives public online access to mine inspections and dam safety information’',
     '2017 Vancouver Sun article ‘B.C. announces more changes resulting from Mount Polley mine failure’',
     '2019 CTV News article ‘British Columbia proposes reforms to strengthen oversight of mining industry’',

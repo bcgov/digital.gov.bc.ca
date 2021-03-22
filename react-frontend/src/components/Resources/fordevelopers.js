@@ -16,7 +16,7 @@ function ForDevelopers() {
       <Row>
         <Col sm={12} md={6}>
           <InfoCard
-            title={'BCGov on Github'}
+            title={'BCGov on GitHub'}
             description={
               'Explore hundreds of open source code repositories that are being maintained by the teams who are building modern digital services in British Columbia.'
             }
