@@ -1,5 +1,5 @@
 ---
-  - name: Fetch imagestream {{ react_infra_name }}:{{ version }}
+  - name: Fetch imagestream {{ strapi_infra_name }}:{{ version }}
     set_fact: 
       imagestreamtag: "{{ lookup('k8s', kind='ImageStreamTag', namespace=image_namespace, resource_name=strapi_infra_name + ':' + version) }}"
     until: (imagestreamtag|length > 0)
@@ -9,7 +9,7 @@
   - name: Image Tag {{ version }} does not exist in {{ image_namespace }}. 
     debug: 
       msg: "Image Tag {{ version }} does not exist in {{ image_namespace }}. \
-           This is because either you have not run ansible-playbook build-react.yaml -e PR={{ PR }} \
+           This is because either you have not run ansible-playbook build-strapi.yaml -e PR={{ PR }} \
            Or the buildconfig has been run but isn't complete \
            OR the build failed"
     when: "imagestreamtag|length == 0"
