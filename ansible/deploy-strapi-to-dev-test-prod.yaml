@@ -14,4 +14,4 @@
       - name: check images
         include: ./tasks/check_image_exists-test-prod.yaml
       - name: Deploying to test/prod
-        include: ./tasks/deploy_strapi_test_prod.yaml
+        include: ./tasks/deploy_strapi_dev_test_prod.yaml

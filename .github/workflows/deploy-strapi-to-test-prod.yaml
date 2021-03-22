@@ -45,9 +45,9 @@ jobs:
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN_OC4 }}
     - name: build strapi app
-      run: ansible-playbook ansible/build-strapi-for-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v
+      run: ansible-playbook ansible/build-strapi-for-dev-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v
     - name: deploy strapi app
-      run: ansible-playbook ansible/deploy-strapi-to-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -v
+      run: ansible-playbook ansible/deploy-strapi-to-dev-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -v
     - name: create github deployment to test/prod
       run: ansible-playbook ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -v
 
