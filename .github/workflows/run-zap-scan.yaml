@@ -1,0 +1,52 @@
+name: Run Zap Scan
+on: 
+  workflow_dispatch:
+    inputs:
+      prnumber:
+        description: 'Pull Request number'     
+        required: true
+      environment:
+        required: true
+        default: 'dev'
+        description: 'Deploy environment'
+      scantype:
+        required: true
+        default: 'base'
+        description: 'Zap scan type: base or full'
+jobs:
+  zap_scan:
+    runs-on: ubuntu-18.04
+    steps: 
+      - uses: actions/checkout@v1
+      - name: Store PR Num in env
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{github.token}}
+          script: |
+            const prNumber = ${{ github.event.inputs.prnumber }};
+            const env = "${{ github.event.inputs.environment }}";
+            var target = '';
+            if('prod' == env) { 
+              target = "https://digital-gov-frontend-prod-c0cce6-prod.apps.silver.devops.gov.bc.ca/";
+            }
+            else if('test' == env) {
+              target = "https://digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca/";
+            }
+            else if('dev' == env) {
+              target = "https://digital-gov-frontend-pr-${{github.event.inputs.prnumber}}-c0cce6-dev.apps.silver.devops.gov.bc.ca/";
+            }
+            core.exportVariable('TARGET', target);
+      - name: Full ZAP Scan
+        uses: zaproxy/action-full-scan@v0.2.0
+        if: ${{ 'full' == github.event.inputs.scantype }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          docker_name: 'owasp/zap2docker-stable'
+          target: ${{ env.TARGET }}
+      - name: Baseline ZAP Scan
+        uses: zaproxy/action-baseline@v0.4.0
+        if: ${{ 'base' == github.event.inputs.scantype }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          docker_name: 'owasp/zap2docker-stable'
+          target: ${{ env.TARGET }}

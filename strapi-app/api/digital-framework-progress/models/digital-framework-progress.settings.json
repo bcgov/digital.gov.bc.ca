@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_framework_progresses",
+  "info": {
+    "name": "DigitalFrameworkProgress",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "ministry": {
+      "model": "ministry"
+    },
+    "ProblemStatement": {
+      "type": "text",
+      "required": true
+    },
+    "ReportingPeriod": {
+      "type": "string",
+      "required": true
+    },
+    "MoreInformation": {
+      "type": "richtext",
+      "required": true
+    },
+    "Achievements": {
+      "type": "richtext",
+      "required": true
+    },
+    "Milestones": {
+      "type": "richtext",
+      "required": true
+    },
+    "FuturePlans": {
+      "type": "richtext",
+      "required": true
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "ServiceDelivery",
+        "DataAndInfo",
+        "DigitalInside",
+        "ConnectedOutside"
+      ],
+      "required": true
+    }
+  }
+}

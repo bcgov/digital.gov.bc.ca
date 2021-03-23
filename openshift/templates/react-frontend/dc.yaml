@@ -18,7 +18,7 @@ objects:
           intervalSeconds: 1
           maxSurge: 25%
           maxUnavailable: 25%
-          timeoutSeconds: 600
+          timeoutSeconds: 1000
           updatePeriodSeconds: 1
         type: Rolling
       template:
@@ -104,8 +104,13 @@ objects:
         encode gzip
 
         try_files {path} {path}/ /index.html
-        log stdout
-        log stderr
+
+        log {
+          output stderr
+          output stdout 
+          format single_field common_log
+          level info
+        }
 
         header / {
           # prevent any static html from being cached
@@ -124,7 +129,7 @@ objects:
     data:
       StrapiConfig: |
         {
-          "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.pathfinder.gov.bc.ca/graphql"
+          "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.apps.silver.devops.gov.bc.ca/graphql"
         }
     kind: ConfigMap
     metadata:

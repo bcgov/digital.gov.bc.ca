@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Card } from 'antd';
+import { Col } from 'react-flexbox-grid';
 
 const cardBorderRadius = '25px';
 
@@ -63,9 +64,9 @@ export const CardHorizontalText = styled.div.attrs({
 export const CardHorizontalTitle = styled.h5.attrs({
   className: 'cardHorizontalTitle',
 })`
-  font-family: 'BC Sans';
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 31px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.2;
   position: relative;
   @media only screen and (max-width: 800px) {
@@ -102,20 +103,35 @@ export const CardLinkDiv = styled.div.attrs({
 })`
   bottom: 25px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   position: absolute;
 `;
 
 export const CardTitle = styled.h5.attrs({
   className: 'cardTitle',
 })`
-  font-family: 'BC Sans';
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 31px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.2;
   position: relative;
   @media only screen and (max-width: 800px) {
     font-size: 22px;
     line-height: 1.25;
   }
+`;
+
+export const Icon = styled.img.attrs({
+  className: 'icon',
+})`
+  height: 16px;
+  position: relative;
+  top: 2px;
+`;
+
+export const IconCol = styled(Col).attrs({
+  className: 'iconCol',
+})`
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-weight: 700;
 `;

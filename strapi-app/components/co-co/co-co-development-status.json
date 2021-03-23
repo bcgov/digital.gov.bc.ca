@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_co_co_co_co_development_statuses",
+  "info": {
+    "name": "DevelopmentStatus",
+    "icon": "circle"
+  },
+  "options": {},
+  "attributes": {
+    "Maintenance": {
+      "type": "enumeration",
+      "enum": [
+        "ActiveDevelopment",
+        "Maintained",
+        "Abandoned"
+      ],
+      "required": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Alpha",
+        "Beta",
+        "Mature"
+      ],
+      "required": true
+    }
+  }
+}

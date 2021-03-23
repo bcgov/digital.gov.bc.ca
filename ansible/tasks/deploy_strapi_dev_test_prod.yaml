@@ -1,0 +1,17 @@
+---  
+  - name: deploy {{ strapi_infra_name }} of PR {{ PR }} in {{ namespace }} namespace
+    shell: >
+      oc process -n "{{ image_namespace }}" -f "../openshift/templates/strapi/dc.yaml" {{ deploy_params }} | 
+      oc apply -n "{{ namespace }}" -f -
+    vars:
+      IMAGE_TAG: '{{ version }}'
+      deploy_params: "{{ lookup('template', './templates/deploy_strapi.param.j2') }}"
+  - name: Debug message failed
+    debug: 
+      msg: "Image Tag has not been created yet or the build is still in progress. A rollout has been triggered and may fail a few times before be successful"
+    when: not image_exists
+  - name: Debug message sucess
+    debug:
+      msg: "Rollout is happening"
+    when: image_exists
+        

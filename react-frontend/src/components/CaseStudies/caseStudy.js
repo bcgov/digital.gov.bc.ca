@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import { MiningContent, FarmerContent, MedicalContent } from './content';
@@ -67,6 +68,14 @@ const CaseStudy = () => {
           <CaseStudyHeading>The Approach</CaseStudyHeading>
           {content.approach}
         </ContentBlockContainer>
+        {content.videoContent && (
+          <ContentBlockContainer>
+            <CaseStudyHeading>
+              Transforming the Medical Services Plan
+            </CaseStudyHeading>
+            <ReactPlayer url={content.videoContent} width="auto" controls />
+          </ContentBlockContainer>
+        )}
         <ContentBlockContainer>
           <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
           {content.outcomes}

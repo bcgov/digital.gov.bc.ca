@@ -74,6 +74,7 @@ objects:
           - get
           - list
           - patch
+          - create
       - apiGroups:
           - build.openshift.io
           - ""
@@ -120,6 +121,17 @@ objects:
         attributeRestrictions: null
         resources:
           - pods
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
+          - persistentvolumeclaims
         verbs:
           - create
           - get
@@ -277,6 +289,17 @@ objects:
           - ""
         attributeRestrictions: null
         resources:
+          - persistentvolumeclaims
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
           - pods/log
         verbs:
           - get
@@ -408,6 +431,17 @@ objects:
           - ""
         attributeRestrictions: null
         resources:
+          - persistentvolumeclaims
+        verbs:
+          - create
+          - get
+          - list
+          - watch
+          - delete
+      - apiGroups:
+          - ""
+        attributeRestrictions: null
+        resources:
           - pods/log
         verbs:
           - get
@@ -522,4 +556,5 @@ parameters:
       credentials.
     name: NAME
     required: true
-    value: github-cicdv3
+    value: github-cicd
+

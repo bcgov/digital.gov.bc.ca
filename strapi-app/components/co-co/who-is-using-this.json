@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_co_co_who_is_using_this",
+  "info": {
+    "name": "WhoIsUsingThis",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Summary": {
+      "type": "text",
+      "required": true
+    },
+    "ministry": {
+      "model": "ministry"
+    }
+  }
+}

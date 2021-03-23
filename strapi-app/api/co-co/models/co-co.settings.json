@@ -1,0 +1,129 @@
+{
+  "kind": "collectionType",
+  "collectionName": "co_cos",
+  "info": {
+    "name": "CoCo",
+    "description": "This is the Common Component Collection Type."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "ProjectStatus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.co-co-development-status",
+      "required": true
+    },
+    "Tags": {
+      "collection": "tag",
+      "via": "co_cos",
+      "dominant": true
+    },
+    "TeamNameAndMinistry": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "NumberOfUsers": {
+      "type": "integer"
+    },
+    "OnboardingTime": {
+      "type": "enumeration",
+      "enum": [
+        "Hours",
+        "Days",
+        "Weeks",
+        "Months"
+      ]
+    },
+    "SupportSchedule": {
+      "type": "enumeration",
+      "enum": [
+        "TwentyfourSeven",
+        "MonFriday",
+        "None"
+      ],
+      "required": true
+    },
+    "CoverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "WhyShouldIUseThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.why-should-iu-se-this",
+      "required": true,
+      "max": 3,
+      "min": 3
+    },
+    "ComponentCreationDate": {
+      "type": "date",
+      "required": true
+    },
+    "GetStartedURL": {
+      "type": "string",
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+    "CoCoWebsite": {
+      "type": "string",
+      "required": true
+    },
+    "GetStartedSteps": {
+      "type": "richtext"
+    },
+    "CostStructure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.cost-details",
+      "required": true
+    },
+    "ServiceLevelSupport": {
+      "type": "richtext",
+      "required": true
+    },
+    "WhoIsUsingThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.who-is-using-this",
+      "required": true,
+      "max": 3,
+      "min": 3
+    },
+    "ShortDescription": {
+      "type": "text",
+      "required": true
+    },
+    "AdditionalTechnicalInformation": {
+      "type": "richtext"
+    },
+    "RequirementsAndRestrictions": {
+      "type": "richtext"
+    },
+    "Support": {
+      "type": "richtext"
+    }
+  }
+}

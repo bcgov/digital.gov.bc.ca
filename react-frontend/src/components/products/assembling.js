@@ -34,7 +34,7 @@ const cards = [
     <p>
       By requesting access to the B.C. Government’s{' '}
       <HrefLink
-        href="https://www.bcdevexchange.org/DevOpsPlatform"
+        href="https://bcdevexchange.org/DevOpsPlatform"
         target="_blank"
         rel="noopener noreferrer"
       >

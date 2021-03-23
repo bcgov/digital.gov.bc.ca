@@ -6,6 +6,7 @@ import { Row, Col } from 'react-flexbox-grid';
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
 export const BreadcrumbLI = styled.li`
+  color: black;
   display: flex;
   font-size: 16px;
   font-weight: normal;
@@ -26,9 +27,36 @@ export const BreadcrumbUL = styled.ul`
   padding-top: 16px;
 `;
 
+export const CoCoLinkExternal = styled.a.attrs({
+  className: 'CoCoLink',
+})`
+  background-color: #003366;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  :hover {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+`;
+
 export const CovidCol = styled(Col)`
   color: #fff;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 18px;
 `;
 
@@ -47,8 +75,13 @@ export const CovidLinkStyle = styled.a.attrs({
 `;
 
 export const CovidLinkStyleButton = styled(CovidLinkStyle)`
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
+`;
+
+export const DigitalFrameworkHeading = styled.h4`
+  font-size: 21.6px;
+  padding-top: 20px;
 `;
 
 export const DigitalFrameworkRow = styled(Row).attrs({
@@ -60,6 +93,20 @@ export const DigitalFrameworkRow = styled(Row).attrs({
   @media only screen and (max-width: 800px) {
     padding-top: 15px;
   }
+`;
+
+export const DigitalFrameworkToggle = styled.button.attrs({
+  className: 'strategyProgressToggle',
+})`
+  background-color: #f2f2f2;
+  border: none;
+  border-bottom: ${(props) => (props.underlined ? 'solid thick #1A5A96' : '')};
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 20px 30px 20px;
+  padding-left: 0;
+  padding-right: 0;
 `;
 
 export const FooterLink = styled.a.attrs({
@@ -124,7 +171,7 @@ export const HrefLink = styled.a.attrs({
   className: 'productCardLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -139,9 +186,9 @@ export const HrefLinkStandalone = styled.a.attrs({
   className: 'externalLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
@@ -157,9 +204,9 @@ export const HrefLinkStandaloneInternal = styled(Link).attrs({
   className: 'internalLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 16px;
   text-decoration: underline;
   :focus {
@@ -175,8 +222,8 @@ export const HrefLinkInternal = styled(Link).attrs({
   className: 'internalLink',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-  font-weight: bold;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-weight: 700;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -191,7 +238,7 @@ export const HrefLinkScrollTo = styled(ScrollTo).attrs({
   activeClass: 'active',
 })`
   color: #1a5a96;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   text-decoration: underline;
   :focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -230,7 +277,7 @@ export const NavBarLink = styled(Link).attrs({
 })`
   color: #fff;
   display: flex;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
@@ -253,7 +300,7 @@ export const NavBarLinkExternal = styled.a.attrs({
 })`
   color: #fff;
   display: flex;
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal; /* 400 */
   padding: 0 15px 0 15px;
@@ -290,7 +337,7 @@ export const NavBarUl = styled.ul.attrs({
   padding-left: 0;
   padding-top: 8px;
   .active {
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: underline;
     text-decoration-color: #fff;
   }
@@ -307,7 +354,7 @@ export const ResourceLinkRow = styled(Row)`
 export const StyledP = styled.p.attrs({
   className: 'digitalParagraph',
 })`
-  font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
   position: relative;
 `;

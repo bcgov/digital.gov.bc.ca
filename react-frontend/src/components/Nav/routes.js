@@ -3,12 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
 import CaseStudies from '../../components/CaseStudies/casestudies';
+import CoCos from '../../components/CoCos/coCos';
+import CoCoPage from '../../components/CoCos/coCoPage';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
 import DigitalFramework from '../DigitalFramework/digitalFramework';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
-// import GuidesPage from '../../components/Guides/guides';
-// import GuidePage from '../../components/Guides/guide';
 import BreadCrumbs from './breadcrumbs';
 import NotFound from '../NotFoundPage/notFoundPage';
 
@@ -17,9 +17,9 @@ const DisplayNames = {
   'communication-platforms': 'Communication Platform',
   'digital-framework': 'Digital Framework',
   'digital-principles': 'Digital Principles',
-  guides: 'Guides',
   'products-services': 'Products and Services',
   resources: 'Resources',
+  cocos: 'Common Components',
 };
 
 const Routes = () => {
@@ -35,19 +35,14 @@ const Routes = () => {
           component={DigitalPrinciples}
         />
         <Route exact path="/resources" component={Resources} />
+        <Route exact path="/cocos" component={CoCos} />
+        <Route exact path="/cocos/:uid" component={CoCoPage} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route
           exact
           path="/guides/communication-platforms"
           component={CollaborationTools}
         />
-        {/* This is a test guides page, KEEP comented out until strapi is implemented */}
-        {/* 
-        <Route path="/guides/:uid" exact>
-          <GuidePage />
-        </Route>
-        <Route exact path="/guides" component={GuidesPage} /> 
-        */}
         <Route exact path="/" component={Home} />
         <Route path="/standards-and-guides">
           <NotFound standards />
