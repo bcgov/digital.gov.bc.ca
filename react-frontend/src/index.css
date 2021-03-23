@@ -1,11 +1,23 @@
 @font-face {
     font-family: 'BC Sans';
     font-style: normal;
-    src: local('BC Sans'), local('BCSans'),
-        url(./fonts/BCSans-Regular.woff)format('woff'),
-        url(./fonts/BCSans-BoldItalic.woff)format('woff'),
-        url(./fonts/BCSans-Bold.woff)format('woff'),
-        url(./fonts/BCSans-Italic.woff)format('woff');
+    src: url('./fonts/BCSans-Regular.woff') format('woff'); /* Modern Browsers */
+}
+@font-face {
+    font-family: 'BC Sans';
+    font-style: italic;
+    src: url('./fonts/BCSans-Italic.woff') format('woff'); /* Modern Browsers */
+}
+@font-face {
+    font-family: 'BC Sans';
+    font-weight: 700;
+    src: url('./fonts/BCSans-Bold.woff') format('woff'); /* Modern Browsers */
+}
+@font-face {
+    font-family: 'BC Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./fonts/BCSans-BoldItalic.woff') format('woff'); /* Modern Browsers */
 }
 
 p, h1, h2, h3, h4, li {
@@ -15,5 +27,10 @@ p, h1, h2, h3, h4, li {
 }
 
 h1, h2, h3, h4 {
-    font-weight: bold;
+    font-weight: 700;
+}
+
+strong, b {
+    font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+    font-weight: 700 !important;
 }
