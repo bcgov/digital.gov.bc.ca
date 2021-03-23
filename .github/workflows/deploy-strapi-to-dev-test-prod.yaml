@@ -1,4 +1,4 @@
-name: Deploy Strapi to Test/Prod
+name: Deploy Strapi to Dev/Test/Prod
 on: 
   workflow_dispatch:
     inputs:
@@ -25,7 +25,7 @@ jobs:
           core.exportVariable('ENV', env);
     - name: install oc
       run: |
-        curl -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.1/openshift-client-linux.tar.gz > oc.tar.gz
+        curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
         tar xvzf oc.tar.gz 
         ls -l
         sudo mv oc /usr/local/bin
@@ -44,10 +44,10 @@ jobs:
       run: exit 1
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN_OC4 }}
-    - name: build react app
-      run: ansible-playbook ansible/build-react-for-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v
-    - name: deploy react app
-      run: ansible-playbook ansible/deploy-react-to-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -v
+    - name: build strapi app
+      run: ansible-playbook ansible/build-strapi-for-dev-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v
+    - name: deploy strapi app
+      run: ansible-playbook ansible/deploy-strapi-to-dev-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -v
     - name: create github deployment to test/prod
       run: ansible-playbook ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=$ENV -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -v
 
