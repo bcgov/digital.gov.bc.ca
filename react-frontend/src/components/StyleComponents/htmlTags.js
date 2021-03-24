@@ -266,7 +266,7 @@ export const NavBarLi = styled.li.attrs({
   className: 'navBarLi',
 })`
   margin: 5px 0;
-  @media screen and (min-width: ${navBarResize}) {
+  @media screen and (min-width: ${navBarResize}px) {
     margin: 0;
   }
 `;
@@ -289,7 +289,7 @@ export const NavBarLink = styled(Link).attrs({
     text-decoration: underline;
     text-decoration-color: #fff;
   }
-  @media screen and (min-width: ${navBarResize}) {
+  @media screen and (min-width: ${navBarResize}px) {
     border-right: 1px solid #9b9b9b;
   }
 `;
@@ -312,7 +312,7 @@ export const NavBarLinkExternal = styled.a.attrs({
     text-decoration: underline;
     text-decoration-color: #fff;
   }
-  @media screen and (min-width: ${navBarResize}) {
+  @media screen and (min-width: ${navBarResize}px) {
     border-right: 1px solid #9b9b9b;
   }
 `;
@@ -320,7 +320,7 @@ export const NavBarLinkExternal = styled.a.attrs({
 export const NavBarLinkFirst = styled(NavBarLink).attrs({
   className: 'navBarLinkFirst',
 })`
-  @media (min-width: ${navBarResize}) {
+  @media (min-width: ${navBarResize}px) {
     padding-left: 0;
   }
 `;
@@ -340,7 +340,7 @@ export const NavBarUl = styled.ul.attrs({
     text-decoration: underline;
     text-decoration-color: #fff;
   }
-  @media screen and (min-width: ${navBarResize}) {
+  @media screen and (min-width: ${navBarResize}px) {
     flex-direction: row;
   }
 `;
