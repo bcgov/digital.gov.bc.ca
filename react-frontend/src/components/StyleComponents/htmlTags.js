@@ -71,7 +71,6 @@ export const CovidLinkStyle = styled.a.attrs({
     color: grey;
   }
   text-decoration: underline;
-  }
 `;
 
 export const CovidLinkStyleButton = styled(CovidLinkStyle)`

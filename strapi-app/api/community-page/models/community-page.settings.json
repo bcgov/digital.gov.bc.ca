@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "community_pages",
+  "info": {
+    "name": "CommunityPage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "WhoWeAre": {
+      "type": "text",
+      "required": true
+    },
+    "CommunityImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "WhatWeDo": {
+      "type": "text",
+      "required": true
+    },
+    "HowToParticipate": {
+      "type": "richtext",
+      "required": true
+    },
+    "KeyResources": {
+      "type": "richtext"
+    },
+    "CommunityEmail": {
+      "type": "component",
+      "repeatable": true,
+      "component": "community.email",
+      "required": true,
+      "min": 1
+    },
+    "RocketChatLink": {
+      "type": "string"
+    },
+    "YammerLink": {
+      "type": "string"
+    },
+    "AtWorkLink": {
+      "type": "string"
+    },
+    "MSTeamsLink": {
+      "type": "string"
+    },
+    "Website": {
+      "type": "string"
+    }
+  }
+}
