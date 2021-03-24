@@ -1,6 +1,6 @@
-## Github Flow Based Deployments
+## GitHub Flow Based Deployments
 
-The deployment pipeline of the microservices in this project are of the Github Flow Type. 
+The deployment pipeline of the microservices in this project are of the GitHub Flow Type. 
 
 __TL;DR__ 
 - All PRs should be relatively short lived
@@ -34,7 +34,7 @@ The workflow for deploying is a mix between process and technology. The process 
 The technology is __Github Actions__, __Github Apps__, __Ansible__, and of course __oc__.
 
 - 1. Stage 1: Build and Deploy to Dev. The build and deploy to dev will happen regardless whether or not ci github action checks pass or fail. 
-- 2. Stage 2: A developer will trigger the promotion event by creating a Github Deployment for that respective environment
+- 2. Stage 2: A developer will trigger the promotion event by creating a GitHub Deployment for that respective environment
 - 3. Stage 3: The event will trigger the promotion github action. This event will only trigger if:
   - a. No pending deployments to that environment already exist
   - b. The codebase is up to date with master
