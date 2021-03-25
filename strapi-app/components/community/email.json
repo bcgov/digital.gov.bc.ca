@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_community_emails",
+  "info": {
+    "name": "Email",
+    "icon": "at"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

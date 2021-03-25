@@ -9,6 +9,8 @@ import {
   HrefLinkStandalone,
   ResourceLinkRow,
 } from '../StyleComponents/htmlTags';
+import { standardsUrls } from '../../constants/urls';
+
 const linkIcon = (
   <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
 );
@@ -25,7 +27,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/home/accessible-government/toolkit?keyword=accessibility&keyword=and&keyword=inclusion&keyword=toolkit"
+              href={standardsUrls.AccessiblityandInclusionToolkit}
             >
               Accessiblity and Inclusion Toolkit
               {linkIcon}
@@ -35,7 +37,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/im-it-standards/ministry-standards?keyword=im/it&keyword=ministry&keyword=standards"
+              href={standardsUrls.MinistryIMITPoliciesAndStandards}
             >
               Ministry IM/IT Policies and Standards
               {linkIcon}
@@ -45,10 +47,9 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/web-content-development-guides/writing-for-the-web/web-standards?keyword=web&keyword=standards"
+              href={standardsUrls.WebStandards}
             >
-              Web Standards
-              {linkIcon}
+              Web Standards & Guides {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
         </Col>
@@ -60,7 +61,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/privacy-policy?keyword=privacy&keyword=management"
+              href={standardsUrls.PrivacyManagementAccountabilityPolicy}
             >
               Privacy Management & Accountability Policy
               {linkIcon}
@@ -70,7 +71,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy"
+              href={standardsUrls.PrivacyandPersonalInformation}
             >
               Privacy and Personal Information
               {linkIcon}
@@ -80,7 +81,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments?keyword=privacy&keyword=and&keyword=personal&keyword=information"
+              href={standardsUrls.PrivacyImpactAssessments}
             >
               Privacy Impact Assessments
               {linkIcon}
@@ -95,7 +96,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines"
+              href={standardsUrls.InformationSecurityPolicyandGuidelines}
             >
               Information Security Policy and Guidelines
               {linkIcon}
@@ -105,7 +106,7 @@ function Standards() {
             <HrefLinkStandalone
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/security-threat-and-risk-assessment?keyword=security&keyword=risk&keyword=threat&keyword=assessment"
+              href={standardsUrls.SecurityThreatandRiskAssessments}
             >
               Security Threat and Risk Assessments
               {linkIcon}

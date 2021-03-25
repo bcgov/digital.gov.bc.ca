@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
+export const Title = styled.h1`
+  font-size: 37.32px;
+  font-weight: 700;
+`;
+
 export const Heading = styled.h2.attrs({
   className: 'heading',
 })`
   font-size: 22pt;
+  font-weight: 700;
   line-height: 24pt;
 `;
 
@@ -11,6 +17,7 @@ export const SubHeading = styled.h3.attrs({
   className: 'subHeading',
 })`
   font-size: 18pt;
+  font-weight: 700;
   line-height: 24pt;
 `;
 

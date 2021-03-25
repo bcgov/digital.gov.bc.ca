@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
 import { Row, Col } from 'react-flexbox-grid';
-
+import { navBarResize } from './nav';
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
 export const BreadcrumbLI = styled.li`
@@ -71,7 +71,6 @@ export const CovidLinkStyle = styled.a.attrs({
     color: grey;
   }
   text-decoration: underline;
-  }
 `;
 
 export const CovidLinkStyleButton = styled(CovidLinkStyle)`
@@ -267,7 +266,7 @@ export const NavBarLi = styled.li.attrs({
   className: 'navBarLi',
 })`
   margin: 5px 0;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     margin: 0;
   }
 `;
@@ -290,7 +289,7 @@ export const NavBarLink = styled(Link).attrs({
     text-decoration: underline;
     text-decoration-color: #fff;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     border-right: 1px solid #9b9b9b;
   }
 `;
@@ -313,7 +312,7 @@ export const NavBarLinkExternal = styled.a.attrs({
     text-decoration: underline;
     text-decoration-color: #fff;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     border-right: 1px solid #9b9b9b;
   }
 `;
@@ -321,7 +320,7 @@ export const NavBarLinkExternal = styled.a.attrs({
 export const NavBarLinkFirst = styled(NavBarLink).attrs({
   className: 'navBarLinkFirst',
 })`
-  @media (min-width: 800px) {
+  @media (min-width: ${navBarResize}px) {
     padding-left: 0;
   }
 `;
@@ -341,7 +340,7 @@ export const NavBarUl = styled.ul.attrs({
     text-decoration: underline;
     text-decoration-color: #fff;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     flex-direction: row;
   }
 `;

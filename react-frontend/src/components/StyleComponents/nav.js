@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const navBarResize = 1000;
+
 export const NavBarWrapper = styled.div.attrs()`
   border: none;
   position: '-webkit-sticky';
@@ -17,7 +19,7 @@ export const NavBanner = styled.div.attrs({
   height: 65px;
   justify-content: flex-start;
   margin: auto;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     padding: 13px 0;
   }
 `;
@@ -41,7 +43,7 @@ export const NavHamburgerButton = styled.div.attrs({
   font-size: 18pt;
   margin: 0 0 0 auto;
   width: auto;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     cursor: pointer;
     display: none;
     margin: 0 0 0 auto;
@@ -53,11 +55,15 @@ export const NavHamburgerButton = styled.div.attrs({
 export const NavImage = styled.img.attrs({
   className: 'navImage',
 })`
-  @media screen and (min-width: 800px) {
-    height: 100%;
+  margin-right: 10px;
+  height: 100%;
+
+  @media screen and (max-width: ${navBarResize}px) {
+    height: 60px;
+    margin-top: -5px;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 400px) {
     height: 60px;
     margin-right: 0px;
     margin-top: -5px;
@@ -76,7 +82,7 @@ export const NavMain = styled.nav.attrs({
   display: none;
   min-height: 40px;
   width: 100%;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${navBarResize}px) {
     display: block;
   }
 `;
@@ -86,17 +92,9 @@ export const NavTitle = styled.p.attrs({
 })`
   color: white;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 700;
   margin: 0px 5px 0px 0px;
-
-  @media screen and (min-width: 900px) {
-    font-size: 20px;
-    visibility: visible;
-  }
-  @media screen and (min-width: 400px) and (max-width: 899px) {
-    font-size: 18px;
-    visibility: visible;
-  }
+  font-size: 20px;
   @media screen and (max-width: 400px) {
     font-size: 16px;
     margin: 0px 5px 0px -5%;
