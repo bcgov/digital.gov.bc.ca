@@ -23,7 +23,7 @@ const DigitalFramework = () => {
         <BannerSideImage
           title={'Digital Framework'}
           content={
-            'This is the Digital Framework: our plan for becoming a digital government. We consider it a draft – an “alpha” version – that reserves the flexibility to learn and adapt as we go.'
+            'The Digital Framework was released in July 2019. Here are key actions and progress we’re making towards becoming a digital government and the impact of COVID-19.'
           }
           image={digitalFrameworkImage}
         />

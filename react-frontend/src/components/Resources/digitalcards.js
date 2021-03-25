@@ -8,14 +8,14 @@ import { ResourcePageHeading } from '../StyleComponents/headings';
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
-  'See how we are working in the open on the next IM/IT Policy Framework.',
+  'The IM/IT Standards promote consistent, appropriate management of government technology resources.',
 ];
 
-const linkTexts = ['Read the principles', 'View the alpha version on GitHub'];
+const linkTexts = ['Read the principles', 'Read the standards'];
 
 const links = [
   '/resources/digital-principles',
-  'https://github.com/bcgov/digital-policy',
+  'https://www2.gov.bc.ca/gov/content?id=2A477231EF934E22B0FBC8C43A98B9D9',
 ];
 
 function DigitalCards() {
@@ -38,7 +38,7 @@ function DigitalCards() {
         </Col>
         <Col sm={12} md={6}>
           <InfoCard
-            title={'IM/IT Policy Framework'}
+            title={'IM/IT Standards'}
             description={descriptions[2]}
             linkText={linkTexts[1]}
             linkPath={links[1]}
