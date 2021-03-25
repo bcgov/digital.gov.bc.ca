@@ -16,7 +16,7 @@ const descriptions = [
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
   'Supports to help you create or improve a digital service.',
   'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.',
-  'Join the BCDevExchange, a supportive community working to improve digital services in British Columbia.',
+  'The digital delivery network within the BC Public Service is active and growing. Connect, learn, and contribute!',
   'See examples of how teams are improving digital services for British Columbians.',
 ];
 
@@ -86,10 +86,10 @@ const CardList = () => {
           <Col sm={12} md={6}>
             <InfoCard
               img={communityGrey}
-              title={'Community'}
+              title={'Communities'}
               description={descriptions[4]}
               linkText={'Connect'}
-              linkPath={'https://bcdevexchange.org/'}
+              routePath={'/communities'}
             />
           </Col>
           <Col sm={12} md={6}>

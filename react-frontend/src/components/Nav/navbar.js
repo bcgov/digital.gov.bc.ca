@@ -6,6 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Row, Col } from 'react-flexbox-grid';
 
 import {
+  navBarResize,
   NavBanner,
   NavBarHeader,
   NavBarWrapper,
@@ -37,7 +38,7 @@ function NavBar() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 800) {
+      if (window.innerWidth < navBarResize) {
         const nav = document.getElementById('navbar');
         nav.style.display = 'none';
         setOpenMenu(false);
@@ -110,11 +111,21 @@ function NavBar() {
           <NavBarUl>
             <NavBarLi>
               <NavBarLinkFirst
+                to="/communities"
+                className={
+                  activePage === '/communities' ? 'active' : 'notactive'
+                }
+              >
+                Communities
+              </NavBarLinkFirst>
+            </NavBarLi>
+            <NavBarLi>
+              <NavBarLink
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
               >
                 Resources
-              </NavBarLinkFirst>
+              </NavBarLink>
             </NavBarLi>
             <NavBarLi>
               <NavBarLink
