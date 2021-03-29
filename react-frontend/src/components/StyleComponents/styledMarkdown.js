@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import parse from 'html-react-parser';
 
 export const StyleRichText = ({ htmlOrMarkdown }) => {
-  console.log(htmlOrMarkdown);
   // Detect html tags
   const re = /<.+?>/;
   // If the string has html tags, return parsed html
@@ -32,7 +31,9 @@ export const ParsedHTMLStyled = styled.div.attrs({
   }
 `;
 
-export const ReactMarkdownStyled = styled(ReactMarkdown)`
+export const ReactMarkdownStyled = styled(ReactMarkdown).attrs({
+  className: 'parsedMarkdown',
+})`
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   a {
     color: #1a5a96;
