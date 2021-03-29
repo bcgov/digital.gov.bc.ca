@@ -21,7 +21,6 @@ export const ParsedHTMLStyled = styled.div.attrs({
 })`
   a {
     color: #1a5a96;
-
     text-decoration: underline;
     :focus {
       outline: -webkit-focus-ring-color auto 5px;
