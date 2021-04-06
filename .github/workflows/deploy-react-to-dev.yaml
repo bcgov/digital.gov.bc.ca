@@ -18,18 +18,19 @@ jobs:
         script: |
           const prNumber = context.payload.number;
           core.exportVariable('PULL_NUMBER', prNumber);
-    # - name: install oc
-    #   # manually installing oc, i've opened up an issue with  github actions to include this since they
-    #   # already have kubectl https://github.com/actions/virtual-environments/issues/1083
-    #   run: |
+    - name: install oc
+      # manually installing oc, i've opened up an issue with  github actions to include this since they
+      # already have kubectl https://github.com/actions/virtual-environments/issues/1083
+      run: |
         
-    #     curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
-    #     tar xvzf oc.tar.gz 
-    #     ls -l
-    #     sudo mv oc /usr/local/bin
-    #     rm oc.tar.gz
-    #     oc version
-    #     pip install openshift
+        curl -O https://mirror.openshift.com/pub/openshift-v3/clients/3.11.232/linux/oc.tar.gz > oc.tar.gz
+        tar xvzf oc.tar.gz 
+        ls -l
+        sudo mv oc /usr/local/bin
+        rm oc.tar.gz
+        oc version
+        pip install --upgrade setuptools
+        pip install openshift
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN_OC4 }}
     - name: build react app
