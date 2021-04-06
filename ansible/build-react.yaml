@@ -7,6 +7,7 @@
       image_namespace: "{{ tools_namespace }}"
       suffix: "{{ version }}"
       infra_name: "{{ react_infra_name }}"
+      ansible_python_interpreter: '{{ ansible_playbook_python }}'
     tasks:
       - name: Pre checks
         include: ./tasks/check_pr_exists.yaml
