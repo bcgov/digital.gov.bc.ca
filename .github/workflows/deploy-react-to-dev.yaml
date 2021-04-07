@@ -32,8 +32,7 @@ jobs:
         rm oc.tar.gz
         oc version
         python --version
-        python -m pip install -U pip setuptools
-        pip install openshift
+        pip3 install ansible openshift
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN_OC4 }}
     - name: build react app
