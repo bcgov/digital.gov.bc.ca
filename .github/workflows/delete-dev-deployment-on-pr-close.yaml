@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8.1'
     - name: Store PR Num in env
       uses: actions/github-script@v3
       with:
@@ -25,7 +28,7 @@ jobs:
         sudo mv oc /usr/local/bin
         rm oc.tar.gz
         oc version
-        pip install openshift
+        pip3 install ansible openshift
     - name: login to oc client
       run: ansible-playbook ansible/oc-login.yaml -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -e CICD_SA_ACCOUNT_TOKEN=${{ secrets.CICD_SA_ACCOUNT_TOKEN_OC4_DELETE }}
     - name: delete react deployment
