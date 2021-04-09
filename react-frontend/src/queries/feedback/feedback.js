@@ -11,7 +11,7 @@ import gql from 'graphql-tag';
 // }
 
 const ADD_FEEDBACK = gql`
-  mutation($email: String!, $feedback: String!) {
+  mutation createUserFeedback($email: String!, $feedback: String!) {
     createUserFeedback(
       input: { data: { UserEmail: $email, Feedback: $feedback } }
     ) {
