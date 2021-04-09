@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        {/* <FeedbackForm /> */}
+        <FeedbackForm />
         <RouteBody>
           <Routes />
         </RouteBody>

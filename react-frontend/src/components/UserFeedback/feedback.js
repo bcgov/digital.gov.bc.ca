@@ -1,5 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useMutation } from '@apollo/client';
+import { Mutation } from 'react-apollo';
+import ADD_FEEDBACK from '../../queries/feedback/feedback';
 
 export default function FeedbackForm() {
   const {
@@ -9,7 +12,13 @@ export default function FeedbackForm() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const [addFeedback] = useMutation(ADD_FEEDBACK);
+
+  const onSubmit = (data) => {
+    console.log(data);
+
+    // return (<Mutation mutation={ADD_FEEDBACK}, variables={{ email: data.email, feedback: data.feedback }} />)
+  };
 
   // console.log(watch("example")); // watch input value by passing the name of it
 
