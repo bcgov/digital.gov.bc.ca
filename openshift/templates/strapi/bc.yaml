@@ -17,7 +17,7 @@ objects:
         openshift.io/imported-from: node:12.17.0-alpine
       from:
         kind: DockerImage
-        name: docker.io/node:12.17.0-alpine
+        name: registry.redhat.io/node:12.17.0-alpine
       generation: null
       importPolicy: {}
       name: node:12.17.0-alpine
