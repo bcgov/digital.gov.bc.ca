@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Modal, Button } from 'antd';
-
+import { Button } from 'antd';
+import { ModalStyled, ModalButton } from '../StyleComponents/modalAndForms';
 import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
+import StepError from './stepError';
 
 export default function FeedbackForm() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-
   // Handle state of form.
   const [formStep, setFormStep] = useState('Initial');
 
@@ -22,10 +15,6 @@ export default function FeedbackForm() {
 
   const showModal = () => {
     setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
   };
 
   const handleCancel = () => {
@@ -40,21 +29,24 @@ export default function FeedbackForm() {
     formContent = <Step2 setFormStep={setFormStep} />;
   } else if (formStep == 'ThankYou') {
     formContent = <Step3 />;
+  } else if (formStep == 'Error') {
+    console.log('Error was called');
+    formContent = <StepError />;
   }
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <ModalButton type="primary" onClick={showModal}>
         Open Modal
-      </Button>
-      <Modal
+      </ModalButton>
+      <ModalStyled
         title={null}
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
       >
         {formContent}
-      </Modal>
+      </ModalStyled>
     </>
   );
 }

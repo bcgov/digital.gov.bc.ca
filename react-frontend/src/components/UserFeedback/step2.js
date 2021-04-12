@@ -1,5 +1,11 @@
 import React from 'react';
-import { Button } from 'antd';
+import {
+  FormInputButton,
+  FormText,
+  FormInputTextArea,
+  FormInputText,
+} from '../StyleComponents/modalAndForms';
+
 import { useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/react-hooks';
 
@@ -27,25 +33,28 @@ function Step2({ setFormStep }) {
         console.log(data);
       })
       .catch((e) => {
+        setFormStep('Error');
         console.log(e);
         // you can do something with the error here
       });
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} style={{ marginBottom: '24px' }}>
       {/* register your input into the hook by invoking the "register" function */}
-      <p>Would you mind sharing what were you looking for?</p>
-      <input placeholder="E-mail" {...register('email')} />
-      <p>Please provide your email (in case we need to follow up)</p>
-      <input {...register('feedback')} />
+      <FormText>Would you mind sharing what were you looking for?</FormText>
+      <FormInputTextArea {...register('feedback')} />
+      <FormText>
+        Please provide your email (in case we need to follow up)
+      </FormText>
+      <FormInputText placeholder="E-mail" {...register('email')} />
 
       {/* include validation with required or other standard HTML validation rules */}
       {/* <input {...register("exampleRequired", { required: true })} /> */}
       {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
-
-      <input type="submit" />
+      {/* {errors.exampleRequired && <span>This field is required</span>} */}
+      {/* <FormInputButton type="submit">Submit</FormInputButton> */}
+      <FormInputButton type="submit" />
     </form>
   );
 }

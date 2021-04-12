@@ -1,10 +1,11 @@
 import React from 'react';
+import { FormText, FormContainer } from '../StyleComponents/modalAndForms';
 
 function Step3({}) {
   return (
-    <div>
-      <p>Thanks for your response!</p>
-    </div>
+    <FormContainer>
+      <FormText>Thanks for your response!</FormText>
+    </FormContainer>
   );
 }
 

@@ -1,13 +1,17 @@
 import React from 'react';
-import { Button } from 'antd';
+import {
+  FormButton,
+  FormText,
+  FormContainer,
+} from '../StyleComponents/modalAndForms';
 
 function Step1({ setFormStep }) {
   return (
-    <div>
-      <p>Did you find what you were looking for?</p>
-      <Button onClick={() => setFormStep('ThankYou')}>Yes</Button>
-      <Button onClick={() => setFormStep('FeedBack')}>No</Button>
-    </div>
+    <FormContainer>
+      <FormText>Did you find what you were looking for?</FormText>
+      <FormButton onClick={() => setFormStep('ThankYou')}>Yes</FormButton>
+      <FormButton onClick={() => setFormStep('FeedBack')}>No</FormButton>
+    </FormContainer>
   );
 }
 
