@@ -14,13 +14,13 @@ objects:
       local: false
     tags:
     - annotations:
-        openshift.io/imported-from: node:12.17.0-alpine
+        openshift.io/imported-from: node:lts-alpine
       from:
         kind: DockerImage
-        name: registry.redhat.io/node:12.17.0-alpine
+        name: docker.io/node:lts-alpine
       generation: null
       importPolicy: {}
-      name: node:12.17.0-alpine
+      name: node:lts-alpine
       referencePolicy:
         type: ""
   status:

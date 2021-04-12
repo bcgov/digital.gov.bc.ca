@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:12.17.0-alpine
+FROM docker.io/node:lts-alpine
 
 # set working directory
 WORKDIR /app
