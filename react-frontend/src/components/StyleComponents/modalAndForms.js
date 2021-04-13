@@ -52,11 +52,21 @@ export const FormInputText = styled.input`
 export const FormText = styled.p`
   font-weight: 700;
 `;
-export const ModalButton = styled(Button)`
+export const ModalButton = styled.button`
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background: #003366;
+  height: 70px;
+  width: 30px;
   position: fixed;
-  right: 8px;
-  bottom: 8px;
+  right: 0;
+  bottom: 24px;
   z-index: 1;
+  :hover {
+    background: #39598c;
+    color: #fff;
+    opacity: 0.8;
+  }
 `;
 
 export const ModalStyled = styled(Modal)`

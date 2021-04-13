@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from 'antd';
 import { ModalStyled, ModalButton } from '../StyleComponents/modalAndForms';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSmile, faFrown } from '@fortawesome/free-solid-svg-icons';
+
 import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
@@ -24,20 +26,22 @@ export default function FeedbackForm() {
 
   let formContent;
   if (formStep == 'Initial') {
-    formContent = <Step1 setFormStep={setFormStep} />;
+    formContent = (
+      <Step1 setFormStep={setFormStep} data-testid="InitialState" />
+    );
   } else if (formStep == 'FeedBack') {
-    formContent = <Step2 setFormStep={setFormStep} />;
+    formContent = <Step2 setFormStep={setFormStep} data-testid="InputForm" />;
   } else if (formStep == 'ThankYou') {
-    formContent = <Step3 />;
+    formContent = <Step3 data-testid="Thankyou" />;
   } else if (formStep == 'Error') {
-    console.log('Error was called');
-    formContent = <StepError />;
+    formContent = <StepError data-testid="Error" />;
   }
 
   return (
     <>
       <ModalButton type="primary" onClick={showModal}>
-        Open Modal
+        <FontAwesomeIcon icon={faSmile} style={{ color: '#fcba19' }} />
+        <FontAwesomeIcon icon={faSmile} style={{ color: '#fcba19' }} />
       </ModalButton>
       <ModalStyled
         title={null}
