@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "user_feedbacks",
   "info": {
-    "name": "UserFeedback"
+    "name": "UserFeedback",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,9 +18,6 @@
     "Feedback": {
       "type": "text",
       "required": false
-    },
-    "FoundWhatYouNeed": {
-      "type": "boolean"
     }
   }
 }
