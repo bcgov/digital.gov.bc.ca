@@ -91,7 +91,7 @@ parameters:
   description: the output image stream tag
 - name: GIT_REF
   value: master 
-  description: the git branch
+  description: the git branch to work on
   requireD: true
 - name: GIT_REPO
   description: the github repo
