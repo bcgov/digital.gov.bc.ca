@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
-import { ModalStyled, ModalButton } from '../StyleComponents/modalAndForms';
+import {
+  ModalButton,
+  ModalButtonClose,
+  modalBodyStyleProps,
+  modalStyleProps,
+} from '../StyleComponents/modalAndForms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSmile, faFrown } from '@fortawesome/free-solid-svg-icons';
+import { CloseOutlined } from '@ant-design/icons';
+import { Modal } from 'antd';
 
 import Step1 from './step1';
 import Step2 from './step2';
@@ -41,16 +48,23 @@ export default function FeedbackForm() {
     <>
       <ModalButton type="primary" onClick={showModal}>
         <FontAwesomeIcon icon={faSmile} style={{ color: '#fcba19' }} />
-        <FontAwesomeIcon icon={faSmile} style={{ color: '#fcba19' }} />
+        <FontAwesomeIcon icon={faFrown} style={{ color: '#fcba19' }} />
       </ModalButton>
-      <ModalStyled
+      <Modal
+        closable={false}
         title={null}
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
+        style={modalStyleProps}
+        centered={false}
+        bodyStyle={modalBodyStyleProps}
       >
+        <ModalButtonClose onClick={handleCancel} style={{ float: 'right' }}>
+          <CloseOutlined />
+        </ModalButtonClose>
         {formContent}
-      </ModalStyled>
+      </Modal>
     </>
   );
 }

@@ -52,15 +52,19 @@ export const FormInputText = styled.input`
 export const FormText = styled.p`
   font-weight: 700;
 `;
+
+const buttonWidth = '30px';
+const modalBottom = '24px';
+
 export const ModalButton = styled.button`
   border: none;
   border-radius: 8px 0 0 8px;
   background: #003366;
   height: 70px;
-  width: 30px;
+  width: ${buttonWidth};
   position: fixed;
   right: 0;
-  bottom: 24px;
+  bottom: ${modalBottom};
   z-index: 1;
   :hover {
     background: #39598c;
@@ -69,8 +73,35 @@ export const ModalButton = styled.button`
   }
 `;
 
-export const ModalStyled = styled(Modal)`
-  .ant-modal-body {
+export const ModalButtonClose = styled.button`
+  border: none;
+  background: #f2f2f2;
+  position: relative;
+  top: -10px;
+  right: -10px;
+  :hover {
     background: #f2f2f2;
+    color: #000;
   }
 `;
+
+// The antd modal expect style props to be passed in as an object.
+// To prevent some edge cases with the opening and closing of the
+// modal, we avoid styled components in this case.
+export const modalStyleProps = {
+  position: 'fixed',
+  bottom: '0',
+  right: '0',
+  margin: '0',
+  paddingBottom: '0',
+};
+
+export const modalBodyStyleProps = {
+  background: '#f2f2f2',
+  position: 'fixed',
+  bottom: modalBottom,
+  right: buttonWidth,
+  marginRight: '4px',
+  marginLeft: '4px',
+  borderRadius: '8px',
+};
