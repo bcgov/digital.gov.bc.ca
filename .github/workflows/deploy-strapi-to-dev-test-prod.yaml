@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8.1'
     - name: Store PR Num in env
       uses: actions/github-script@v3
       with:
@@ -31,7 +34,7 @@ jobs:
         sudo mv oc /usr/local/bin
         rm oc.tar.gz
         oc version
-        pip install openshift
+        pip3 install ansible openshift
     - name: Check user permissions for admin
       id: check
       uses: scherermichael-oss/action-has-permission@master
