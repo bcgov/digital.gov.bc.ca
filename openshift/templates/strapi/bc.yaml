@@ -13,7 +13,7 @@ objects:
     lookupPolicy:
       local: false
     tags:
-      from:
+    - from:
         kind: DockerImage
         name: docker.io/node:12.22.1-alpine3.12
       generation: null
