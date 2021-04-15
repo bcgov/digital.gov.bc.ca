@@ -20,7 +20,7 @@ objects:
         name: docker.io/node:12.22.1-alpine3.12
       generation: null
       importPolicy: {}
-      name: node:12.22.1-alpine3.12
+      name:  docker.io/node:12.17.0-alpine
       referencePolicy:
         type: ""
   status:
