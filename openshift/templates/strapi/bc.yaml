@@ -24,7 +24,7 @@ objects:
       referencePolicy:
         type: ""
     imagePullSecrets:
-      - name: myregistrykey
+      - name: docker-creds
   status:
     dockerImageRepository: ""
 - apiVersion: build.openshift.io/v1
