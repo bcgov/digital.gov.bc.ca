@@ -13,7 +13,9 @@ objects:
     lookupPolicy:
       local: false
     tags:
-    - from:
+    - annotations:
+        openshift.io/imported-from: node:12.22.1-alpine3.12
+      from:
         kind: DockerImage
         name: docker.io/node:12.22.1-alpine3.12
       generation: null
@@ -21,6 +23,8 @@ objects:
       name:  docker.io/node:12.17.0-alpine
       referencePolicy:
         type: ""
+    imagePullSecrets:
+      - name: myregistrykey
   status:
     dockerImageRepository: ""
 - apiVersion: build.openshift.io/v1
@@ -58,9 +62,6 @@ objects:
       type: Git
     strategy:
       type: Docker
-      sourceStrategy:
-        env:
-        - name: docker-creds
     successfulBuildsHistoryLimit: 5
     triggers:
     - type: ConfigChange
