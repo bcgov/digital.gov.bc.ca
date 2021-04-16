@@ -76,6 +76,15 @@ objects:
   spec:
     lookupPolicy:
       local: false
+-apiVersion: v1
+  kind: BuildConfig
+  metadata:
+    name: secret-example-bc
+  spec:
+    strategy:
+      sourceStrategy:
+        env:
+        - name: docker-creds
 kind: Template
 metadata:
   resourceVersion: ""
