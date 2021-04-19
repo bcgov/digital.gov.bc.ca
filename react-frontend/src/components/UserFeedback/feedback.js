@@ -32,15 +32,15 @@ export default function FeedbackForm() {
   };
 
   let formContent;
-  if (formStep == 'Initial') {
+  if (formStep === 'Initial') {
     formContent = (
       <Step1 setFormStep={setFormStep} data-testid="InitialState" />
     );
-  } else if (formStep == 'FeedBack') {
+  } else if (formStep === 'FeedBack') {
     formContent = <Step2 setFormStep={setFormStep} data-testid="InputForm" />;
-  } else if (formStep == 'ThankYou') {
+  } else if (formStep === 'ThankYou') {
     formContent = <Step3 data-testid="Thankyou" />;
-  } else if (formStep == 'Error') {
+  } else if (formStep === 'Error') {
     formContent = <StepError data-testid="Error" />;
   }
 

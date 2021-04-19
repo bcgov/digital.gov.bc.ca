@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, Modal } from 'antd';
+import { Button } from 'antd';
 
 export const FormButton = styled(Button)`
   background: #39598c;
