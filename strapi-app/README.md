@@ -31,7 +31,7 @@ When deploying to a new namespace the deployment of strapi requires a jwt secret
 When building new plugins for the strapi app there will be multiple package.json files in the strapi container.  To ensure these libraries get installed add a version of this command to the strapi Dockerfile.  (note use yarn instead of npm for consistency with package manager in the route of the project.)
 
 `
-RUN cd plugins/wysiwyg/ && \
+    RUN cd plugins/wysiwyg/ && \
 
     npm install && \
 
@@ -40,6 +40,6 @@ RUN cd plugins/wysiwyg/ && \
     npm install pg --save && \
 
     npm install && \
-    
+
     npm run build
 `
