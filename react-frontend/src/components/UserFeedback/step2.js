@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  FormError,
   FormInputButton,
   FormText,
   FormInputTextArea,
@@ -11,8 +12,15 @@ import { useMutation } from '@apollo/react-hooks';
 
 import ADD_FEEDBACK from '../../queries/feedback/feedback';
 
+// Regex for valid emails
+const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
 function Step2({ setFormStep }) {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   // Handle submission of form to strapi
   const [createUserFeedback] = useMutation(ADD_FEEDBACK);
@@ -37,7 +45,11 @@ function Step2({ setFormStep }) {
       <FormText>
         Please provide your email (in case we need to follow up)
       </FormText>
-      <FormInputText placeholder="E-mail" {...register('email')} />
+      <FormInputText
+        placeholder="E-mail"
+        {...register('email', { pattern: re })}
+      />
+      {errors.email && <FormError>Please enter a valid email.</FormError>}
       <FormInputButton type="submit" />
     </form>
   );

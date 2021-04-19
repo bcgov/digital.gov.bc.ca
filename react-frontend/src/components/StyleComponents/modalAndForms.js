@@ -20,6 +20,12 @@ export const FormContainer = styled.div`
   text-align: center;
 `;
 
+export const FormError = styled.p`
+  color: red;
+  font-weight: 700;
+  margin-bottom: 0;
+`;
+
 export const FormInputButton = styled.input`
   background: #39598c;
   border-style: none;
@@ -28,6 +34,7 @@ export const FormInputButton = styled.input`
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-weight: 700;
   height: 32px;
+  margin-top: 16px;
   padding: 4px 15px 4px 15px;
   :hover {
     background: #39598c;
@@ -45,7 +52,6 @@ export const FormInputTextArea = styled.textarea`
 
 export const FormInputText = styled.input`
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  margin-bottom: 16px;
   width: 100%;
 `;
 
