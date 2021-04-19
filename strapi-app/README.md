@@ -32,9 +32,14 @@ When building new plugins for the strapi app there will be multiple package.json
 
 `
 RUN cd plugins/wysiwyg/ && \
+
     npm install && \
+
     cd ../../ && \
+
     npm install pg --save && \
+
     npm install && \
+    
     npm run build
 `
