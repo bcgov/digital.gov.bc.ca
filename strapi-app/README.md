@@ -28,7 +28,7 @@ When deploying to a new namespace the deployment of strapi requires a jwt secret
 
 ## Development of Plugins 
 
-When building new plugins for the strapi app there will be multiple package.json files in the strapi container.  To ensure these libraries get installed add a version of this command to the strapi Dockerfile.  (note use yarn instead of npm for consistency with package manager in the route of the project.)
+When building new plugins for the strapi app there will be multiple package.json files in the strapi container.  To ensure these libraries get installed when deploying the app in Openshift, add a version of this command to the strapi Dockerfile.  (note use yarn instead of npm for consistency with package manager in the route of the project.)
 
 ```
 RUN cd plugins/wysiwyg/ && \
