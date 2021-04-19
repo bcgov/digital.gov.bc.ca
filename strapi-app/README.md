@@ -32,7 +32,7 @@ When building new plugins for the strapi app there will be multiple package.json
 
 `
 
-    RUN cd plugins/wysiwyg/ && \
+RUN cd plugins/wysiwyg/ && \
 
     npm install && \
 
