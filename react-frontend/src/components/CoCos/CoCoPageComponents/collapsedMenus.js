@@ -7,7 +7,7 @@ import {
   CollapseStyled,
   PanelStyled,
 } from '../../StyleComponents/collapseMenu';
-import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
+import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 import { Heading } from '../../StyleComponents/headings';
 
 function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
@@ -47,22 +47,22 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
       >
         {price && (
           <PanelStyled header="Price" key="1">
-            <ReactMarkdownStyled source={price} />
+            <StyleRichText htmlOrMarkdown={price} />
           </PanelStyled>
         )}
         {service && (
           <PanelStyled header="Service Level Support" key="2">
-            <ReactMarkdownStyled source={service} />
+            <StyleRichText htmlOrMarkdown={service} />
           </PanelStyled>
         )}
         {technicalInfo && (
           <PanelStyled header="Additional Technical Information" key="3">
-            <ReactMarkdownStyled source={technicalInfo} />
+            <StyleRichText htmlOrMarkdown={technicalInfo} />
           </PanelStyled>
         )}
         {requirements && (
           <PanelStyled header="Requirements and Restrictions" key="4">
-            <ReactMarkdownStyled source={requirements} />
+            <StyleRichText htmlOrMarkdown={requirements} />
           </PanelStyled>
         )}
       </CollapseStyled>
