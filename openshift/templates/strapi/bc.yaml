@@ -17,7 +17,7 @@ objects:
         openshift.io/imported-from: node:lts-alpine
       from:
         kind: DockerImage
-        name: docker.io/node:lts-alpine
+        name: docker-remote.artifacts.developer.gov.bc.ca/node:lts-alpine
       generation: null
       importPolicy: {}
       name: node:lts-alpine
