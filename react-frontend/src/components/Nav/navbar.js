@@ -40,13 +40,16 @@ function NavBar() {
     function handleResize() {
       if (window.innerWidth < navBarResize) {
         const nav = document.getElementById('navbar');
-        nav.style.display = 'none';
+        if (nav?.style?.display) {
+          nav.style.display = 'none';
+        }
         setOpenMenu(false);
         setIsMobile(false);
       } else {
         const nav = document.getElementById('navbar');
-        nav.style.display = 'block';
-
+        if (nav?.style?.display) {
+          nav.style.display = 'block';
+        }
         setOpenMenu(true);
         setIsMobile(true);
       }
