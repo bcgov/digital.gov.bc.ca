@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 
 import { Heading } from '../../StyleComponents/headings';
-import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
+import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
 function Support({ contact }) {
   return (
@@ -14,7 +14,7 @@ function Support({ contact }) {
       </Row>
       <Row>
         <Col xs={12}>
-          <ReactMarkdownStyled source={contact} />
+          <StyleRichText htmlOrMarkdown={contact} />
         </Col>
       </Row>
     </div>
