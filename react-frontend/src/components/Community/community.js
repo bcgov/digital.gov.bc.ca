@@ -12,7 +12,7 @@ import NotFound from '../NotFoundPage/notFoundPage';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title, Heading } from '../StyleComponents/headings';
-import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
+import { StyleRichText } from '../StyleComponents/styledMarkdown';
 
 const rocketChat = require('../../images/icons/rocketChat.png');
 const MSTeams = require('../../images/icons/MSTeams-Logo.png');
@@ -73,14 +73,14 @@ function Community() {
                   <Heading>What we do</Heading>
                   <p>{communityPage?.WhatWeDo}</p>
                   <Heading>How to participate</Heading>
-                  <ReactMarkdownStyled
-                    source={communityPage?.HowToParticipate}
+                  <StyleRichText
+                    htmlOrMarkdown={communityPage?.HowToParticipate}
                   />
                   {communityPage?.KeyResources && (
                     <div>
                       <Heading>Key resources</Heading>
-                      <ReactMarkdownStyled
-                        source={communityPage?.KeyResources}
+                      <StyleRichText
+                        htmlOrMarkdown={communityPage?.KeyResources}
                       />
                     </div>
                   )}
