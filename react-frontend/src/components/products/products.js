@@ -6,7 +6,8 @@ import Considering from './considering';
 import Assembling from './assembling';
 import DocumentTitle from 'react-document-title';
 
-const productsImage = require('../../images/pngIllustrations/productsServicesWhite.png');
+const productsImage = require('../../images/pngIllustrations/productsServicesWhite.png')
+  .default;
 
 const Products = () => {
   return (

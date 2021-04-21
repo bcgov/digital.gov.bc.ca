@@ -8,7 +8,8 @@ import { DigitalFrameworkToggle } from '../StyleComponents/htmlTags';
 import Progress from './progress';
 import Strategy from './strategy';
 
-const digitalFrameworkImage = require('../../images/pngIllustrations/digitalFrameworkWhite.png');
+const digitalFrameworkImage = require('../../images/pngIllustrations/digitalFrameworkWhite.png')
+  .default;
 
 const DigitalFramework = () => {
   const [strategyToggled, setStrategyToggled] = useState(true);
