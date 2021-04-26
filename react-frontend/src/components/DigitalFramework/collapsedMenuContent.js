@@ -4,7 +4,7 @@ import { Col, Row } from 'react-flexbox-grid';
 
 import { ministryNames } from '../../constants/ministryDictionary';
 
-import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
+import { StyleRichText } from '../StyleComponents/styledMarkdown';
 import { DigitalFrameworkHeading } from '../StyleComponents/htmlTags';
 
 function CollapsedMenuContent({ content }) {
@@ -32,7 +32,7 @@ function CollapsedMenuContent({ content }) {
           <DigitalFrameworkHeading>
             For more information
           </DigitalFrameworkHeading>
-          <ReactMarkdownStyled source={content?.MoreInformation} />
+          <StyleRichText htmlOrMarkdown={content?.MoreInformation} />
         </Col>
       </Row>
       <Row>
@@ -46,15 +46,15 @@ function CollapsedMenuContent({ content }) {
       <Row>
         <Col xs={12} md={4}>
           <DigitalFrameworkHeading>Achievements</DigitalFrameworkHeading>
-          <ReactMarkdownStyled source={content?.Achievements} />
+          <StyleRichText htmlOrMarkdown={content?.Achievements} />
         </Col>
         <Col xs={12} md={4}>
           <DigitalFrameworkHeading>Milestones</DigitalFrameworkHeading>
-          <ReactMarkdownStyled source={content?.Milestones} />
+          <StyleRichText htmlOrMarkdown={content?.Milestones} />
         </Col>
         <Col xs={12} md={4}>
           <DigitalFrameworkHeading>Future Plans</DigitalFrameworkHeading>
-          <ReactMarkdownStyled source={content?.FuturePlans} />
+          <StyleRichText htmlOrMarkdown={content?.FuturePlans} />
         </Col>
       </Row>
     </div>
