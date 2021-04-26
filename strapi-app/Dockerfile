@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:12.22.1-alpine3.12
+FROM docker-remote.artifacts.developer.gov.bc.ca/node:lts-alpine
 
 # set working directory
 WORKDIR /app
