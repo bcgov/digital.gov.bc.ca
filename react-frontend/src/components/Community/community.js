@@ -24,7 +24,7 @@ function LinkWithIcon({ icon, text, url }) {
   if (url) {
     return (
       <p>
-        <img src={icon} style={{ height: '24px' }} />{' '}
+        <img src={icon} style={{ height: '24px' }} alt="icon" />{' '}
         <HrefLink href={url}>{text}</HrefLink>
       </p>
     );
@@ -40,7 +40,7 @@ function CommunityImage({ url }) {
     return (
       <img
         src={imageSource}
-        alt="Community Image"
+        alt="Community"
         style={{ marginBottom: '16px', width: '100%' }}
       />
     );

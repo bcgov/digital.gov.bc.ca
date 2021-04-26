@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_feedbacks",
+  "info": {
+    "name": "UserFeedback",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "UserEmail": {
+      "type": "email",
+      "required": false
+    },
+    "Feedback": {
+      "type": "text",
+      "required": false
+    }
+  }
+}
