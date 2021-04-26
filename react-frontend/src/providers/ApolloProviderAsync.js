@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import { AppConfigContext } from './AppConfig';
