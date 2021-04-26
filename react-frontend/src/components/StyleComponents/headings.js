@@ -8,17 +8,17 @@ export const Title = styled.h1`
 export const Heading = styled.h2.attrs({
   className: 'heading',
 })`
-  font-size: 22pt;
+  font-size: 31px;
   font-weight: 700;
-  line-height: 24pt;
+  line-height: 1.6;
 `;
 
 export const SubHeading = styled.h3.attrs({
   className: 'subHeading',
 })`
-  font-size: 18pt;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 24pt;
+  line-height: 1.6;
 `;
 
 export const CaseStudyHeading = styled(Heading)`
