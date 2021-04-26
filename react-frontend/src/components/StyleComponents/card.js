@@ -96,7 +96,10 @@ export const CardImg = styled.img.attrs({
 export const CardIllustration = styled.img.attrs({
   className: 'cardIllustration',
 })`
-  padding: 25px;
+  margin: auto;
+  max-height: 180px;
+  padding: 24px 0 0;
+  width: auto;
 `;
 
 export const CardLinkDiv = styled.div.attrs({

@@ -70,10 +70,7 @@ export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
 export const ContentBlockContainer = styled(HorizontalContainer).attrs({
   className: 'contentBlockContainer',
 })`
-  padding-bottom: 120px;
-  @media only screen and (max-width: 800px) {
-    padding-bottom: 60px;
-  }
+  padding-bottom: 60px;
 `;
 
 export const FooterContainer = styled(HorizontalContainer).attrs({
