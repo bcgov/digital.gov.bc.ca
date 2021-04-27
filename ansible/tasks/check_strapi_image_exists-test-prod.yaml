@@ -12,7 +12,7 @@
            This is because either you have not run ansible-playbook build-strapi.yaml -e PR={{ PR }} \
            Or the buildconfig has been run but isn't complete \
            OR the build failed"
-    when: "imagestreamtag|length == 0"
+    when: output.stdout.find("Error from server (NotFound)") != -1
   - name: Setting image exists
     set_fact:
-      image_exists: "imagestreamtag|length > 0"
+      image_exists: output.stdout.find("Error from server (NotFound)") == -1
