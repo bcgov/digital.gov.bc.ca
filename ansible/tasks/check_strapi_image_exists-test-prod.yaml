@@ -1,5 +1,5 @@
 ---
-  - name: Fetch imagestream {{ strapi_infra_name }}:{{ version }}
+  - name: Fetch imagestream {{ strapi_infra_name }}:{{ version }} in namespace {{image_namespace}}
     set_fact: 
       imagestreamtag: "{{ lookup('k8s', kind='ImageStreamTag', namespace=image_namespace, resource_name=strapi_infra_name + ':' + version) }}"
     until: (imagestreamtag|length > 0)
