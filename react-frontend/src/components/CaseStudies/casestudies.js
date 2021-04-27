@@ -6,7 +6,8 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import CaseStudy from './caseStudy';
 import DocumentTitle from 'react-document-title';
 
-const caseStudiesIllustration = require('../../images/pngIllustrations/caseStudiesWhite.png');
+const caseStudiesIllustration = require('../../images/pngIllustrations/caseStudiesWhite.png')
+  .default;
 
 const CaseStudies = () => {
   let { path } = useRouteMatch();

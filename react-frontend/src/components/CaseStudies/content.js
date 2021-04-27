@@ -5,11 +5,13 @@ import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
 import FarmingBannerImage from '../../images/case-study-farming.jpg';
 
-const jill = require('../../images/jill.png');
-const aaron = require('../../images/aaron.png');
-const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
-const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
-const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
+const jill = require('../../images/jill.png').default;
+const aaron = require('../../images/aaron.png').default;
+const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg')
+  .default;
+const caseStudiesMiningImg = require('../../images/case-study-mining.jpg')
+  .default;
+const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
 
 const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',

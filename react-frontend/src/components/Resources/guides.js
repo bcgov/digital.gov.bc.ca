@@ -5,7 +5,7 @@ import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
 
-const videoCommsImg = require('../../images/videocomms.png');
+const videoCommsImg = require('../../images/videocomms.png').default;
 
 function Guides() {
   return (

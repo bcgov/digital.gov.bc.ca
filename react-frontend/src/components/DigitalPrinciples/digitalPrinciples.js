@@ -6,7 +6,8 @@ import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { DigitalPrinciplesHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 
-const digitalPrinciplesImage = require('../../images/pngIllustrations/digitalPrinciplesWhite.png');
+const digitalPrinciplesImage = require('../../images/pngIllustrations/digitalPrinciplesWhite.png')
+  .default;
 
 function DigitalPrinciples() {
   return (

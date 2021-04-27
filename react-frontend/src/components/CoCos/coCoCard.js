@@ -12,10 +12,10 @@ import {
   IconCol,
 } from '../StyleComponents/card';
 
-const assistantIcon = require('../../images/icons/assistant-24.png');
-const peopleIcon = require('../../images/icons/conference-24.png');
-const priceIcon = require('../../images/icons/price-tag-24.png');
-const clockIcon = require('../../images/icons/stopWatch.png');
+const assistantIcon = require('../../images/icons/assistant-24.png').default;
+const peopleIcon = require('../../images/icons/conference-24.png').default;
+const priceIcon = require('../../images/icons/price-tag-24.png').default;
+const clockIcon = require('../../images/icons/stopWatch.png').default;
 
 const maintenanceStatusObj = {
   ActiveDevelopment: 'Active Development',
