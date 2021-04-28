@@ -2,7 +2,7 @@
   - name: Fetch imagestream {{ strapi_infra_name }}:{{ version }} in namespace {{image_namespace}}
     shell: "oc -n {{image_namespace}} get istag {{ strapi_infra_name}}:{{version}}"
     register: output
-    until: output.stdout.find("Error from server (NotFound)") == -1
+    until: output.stdout.find("strapi") != -1
     delay: 60
     retries: 20
     ignore_errors: True
@@ -12,7 +12,7 @@
            This is because either you have not run ansible-playbook build-strapi.yaml -e PR={{ PR }} \
            Or the buildconfig has been run but isn't complete \
            OR the build failed"
-    when: output.stdout.find("Error from server (NotFound)") != -1
+    when: output.stdout.find("strapi") == -1
   - name: Setting image exists
     set_fact:
-      image_exists: output.stdout.find("Error from server (NotFound)") == -1
+      image_exists: output.stdout.find("strapi") != -1
