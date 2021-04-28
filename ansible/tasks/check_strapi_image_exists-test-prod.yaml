@@ -1,5 +1,5 @@
 ---
-  - name: Fetch imagestream {{ strapi_infra_name }}:{{ version }} in namespace {{image_namespace}}
+  - name: Fetch imagestream {{ strapi_infra_name }}:{{ version }}
     shell: "oc -n {{image_namespace}} get istag {{ strapi_infra_name}}:{{version}}"
     register: output
     until: output.stdout.find("strapi") != -1
