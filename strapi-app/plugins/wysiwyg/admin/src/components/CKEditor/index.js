@@ -28,7 +28,7 @@ const configuration = {
     '|',
     'blockQuote',
     'insertTable',
-    // 'mediaEmbed',// Removed the media embedding function
+    'mediaEmbed',
     'undo',
     'redo',
   ],
