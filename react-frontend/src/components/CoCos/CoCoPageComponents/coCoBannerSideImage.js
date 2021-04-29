@@ -29,7 +29,7 @@ function CoCoBannerSideImage({
 
   //If the image cannot be loaded from the backend the coCo image is used by default
   const onError = (error) => {
-    setCoCoImg(require('../../../images/pngIllustrations/CoCo.svg'));
+    setCoCoImg(require('../../../images/pngIllustrations/CoCo.svg').default);
   };
   return (
     <Row top="xs" style={{ marginTop: '60px' }}>

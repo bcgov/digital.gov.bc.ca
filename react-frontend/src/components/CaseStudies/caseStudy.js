@@ -97,10 +97,10 @@ const CaseStudy = () => {
             {content.contacts}
           </ContentBlockContainer>
         )}
-        <PageContainer>
+        <ContentBlockContainer>
           <CaseStudyHeading>Other Case Studies</CaseStudyHeading>
           <div>{content.others}</div>
-        </PageContainer>
+        </ContentBlockContainer>
       </div>
     </DocumentTitle>
   );

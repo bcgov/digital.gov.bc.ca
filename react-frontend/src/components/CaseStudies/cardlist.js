@@ -6,9 +6,11 @@ import HorizontalInfoCard from './horizontalinfocard';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 
-const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg');
-const caseStudiesMiningImg = require('../../images/case-study-mining.jpg');
-const caseStudiesMSPImg = require('../../images/case-study-msp.jpg');
+const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg')
+  .default;
+const caseStudiesMiningImg = require('../../images/case-study-mining.jpg')
+  .default;
+const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
 
 const descriptions = [
   'Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.',

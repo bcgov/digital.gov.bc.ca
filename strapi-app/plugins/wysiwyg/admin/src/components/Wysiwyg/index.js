@@ -44,12 +44,11 @@ const Wysiwyg = ({
       }}
     >
       <Label htmlFor={name} message={label} style={{ marginBottom: 10 }} />
-      {/* The media library is commented out.  This is only a text editor */}
-      {/* <div>
+      <div style={{ paddingBottom: '4px' }}>
         <Button color="primary" onClick={handleToggle}>
           MediaLib
         </Button>
-      </div> */}
+      </div>
       <Editor name={name} onChange={onChange} value={value} />
       <InputDescription
         message={inputDescription}
@@ -57,7 +56,7 @@ const Wysiwyg = ({
       />
       <InputErrors errors={(!noErrorsDescription && errors) || []} name={name} />
       {spacer}
-      {/* <MediaLib onToggle={handleToggle} isOpen={isOpen} onChange={handleChange} /> */}
+      <MediaLib onToggle={handleToggle} isOpen={isOpen} onChange={handleChange} />
     </div>
   );
 };
