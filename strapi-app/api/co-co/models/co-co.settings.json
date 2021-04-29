@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "co_cos",
   "info": {
-    "name": "CoCo",
+    "name": "CommonComponent",
     "description": "This is the Common Component Collection Type."
   },
   "options": {
@@ -27,8 +27,8 @@
       "required": true
     },
     "Tags": {
-      "collection": "tag",
       "via": "co_cos",
+      "collection": "tag",
       "dominant": true
     },
     "TeamNameAndMinistry": {
