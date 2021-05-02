@@ -95,10 +95,29 @@ objects:
   - apiVersion: v1
     data:
       Caddyfile: |
-        :4000
-
+        :4000 
+      
         # for app
         root * /opt/app-root/src
+        reverse_proxy /parul/* https://google.com {
+          header_up Host {google.com}
+          header_up Sec-WebSocket-Protocol {>Sec-WebSocket-Protocol}
+          header_up X-Real-IP {remote_host}
+          header_up X-Forwarded-For {remote_host}
+          header_up X-Forwarded-Proto {scheme}
+          flush_interval -1
+        }
+        route /marketplace/* {
+          reverse_proxy https://app-digmkt-prod.apps.silver.devops.gov.bc.ca {
+              header_up Host {app-digmkt-prod.apps.silver.devops.gov.bc.ca}
+              header_up Sec-WebSocket-Protocol {>Sec-WebSocket-Protocol}
+              header_up X-Real-IP {remote_host}
+              header_up X-Forwarded-For {remote_host}
+              header_up X-Forwarded-Proto {scheme}
+              flush_interval -1
+          }
+          respond /ehlo 200
+        }
 
         file_server 
         encode gzip
@@ -115,26 +134,6 @@ objects:
         header / {
           # prevent any static html from being cached
           Cache-Control "public, max-age=0, must-revalidate"
-        }
-        # Proxy requests to API service
-        route ~/marketplace/* {
-            reverse_proxy https://app-digmkt-prod.apps.silver.devops.gov.bc.ca {
-                header_up Host {app-digmkt-prod.apps.silver.devops.gov.bc.ca}
-                header_up Sec-WebSocket-Protocol {>Sec-WebSocket-Protocol}
-                header_up X-Real-IP {remote_host}
-                header_up X-Forwarded-For {remote_host}
-                header_up X-Forwarded-Proto {scheme}
-                flush_interval -1
-            }
-            respond /ehlo 200
-        }
-        reverse_proxy /parul/* https://google.com {
-            header_up Host {google.com}
-            header_up Sec-WebSocket-Protocol {>Sec-WebSocket-Protocol}
-            header_up X-Real-IP {remote_host}
-            header_up X-Forwarded-For {remote_host}
-            header_up X-Forwarded-Proto {scheme}
-            flush_interval -1
         }
     kind: ConfigMap
     metadata:
