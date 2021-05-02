@@ -52,7 +52,7 @@ const Routes = () => {
         <Route path="/standards-and-guides">
           <NotFound standards />
         </Route>
-        {/* <Route component={NotFound} /> */}
+        <Route component={NotFound} />
       </Switch>
     </div>
   );
