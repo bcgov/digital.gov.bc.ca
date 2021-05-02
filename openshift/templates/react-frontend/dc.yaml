@@ -119,7 +119,7 @@ objects:
         # Proxy requests to API service
         route /marketplace/* {
             reverse_proxy https://app-digmkt-prod.apps.silver.devops.gov.bc.ca {
-                header_up Host {http.reverse_proxy.upstream.hostport}
+                header_up Host {app-digmkt-prod.apps.silver.devops.gov.bc.ca}
                 header_up Sec-WebSocket-Protocol {>Sec-WebSocket-Protocol}
                 header_up X-Real-IP {remote_host}
                 header_up X-Forwarded-For {remote_host}
