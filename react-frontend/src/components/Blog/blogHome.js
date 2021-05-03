@@ -6,14 +6,14 @@ import { Col, Row } from 'react-flexbox-grid';
 import Query from '../Query';
 import COMMUNITIES_QUERY from '../../queries/community/communities';
 
-import CommunityCard from './communityCard';
+import BlogCard from './blogCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const comunitiesImage = require('../../images/pngIllustrations/communityWhite.png')
   .default;
 
-function Communities() {
+function BlogHome() {
   return (
     <DocumentTitle title="Communities - Digital Government - Province of British Columbia">
       <div>
@@ -32,7 +32,7 @@ function Communities() {
                   {communityPages?.map((communityPage, i) => {
                     return (
                       <Col xs={12} md={6} lg={4} key={communityPage?.uid}>
-                        <CommunityCard
+                        <BlogCard
                           title={communityPage?.Title}
                           description={communityPage?.Description}
                           uid={communityPage?.uid}
@@ -50,4 +50,4 @@ function Communities() {
   );
 }
 
-export default Communities;
+export default BlogHome;
