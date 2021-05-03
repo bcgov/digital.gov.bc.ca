@@ -4,12 +4,18 @@ import { Col, Row } from 'react-flexbox-grid';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title2 } from '../StyleComponents/headings';
 
-const digitalFrameworkGrey = require('../../images/pngIllustrations/digitalFrameworkGrey.png');
-const digitalPrinciplesGrey = require('../../images/pngIllustrations/digitalPrinciplesGrey.png');
-const productsGrey = require('../../images/pngIllustrations/productsServicesGrey.png');
-const resourcesGrey = require('../../images/pngIllustrations/resourcesGrey.png');
-const communityGrey = require('../../images/pngIllustrations/communityGrey.png');
-const caseStudiesGrey = require('../../images/pngIllustrations/caseStudiesGrey.png');
+const digitalFrameworkGrey = require('../../images/pngIllustrations/digitalFrameworkGrey.png')
+  .default;
+const digitalPrinciplesGrey = require('../../images/pngIllustrations/digitalPrinciplesGrey.png')
+  .default;
+const productsGrey = require('../../images/pngIllustrations/productsServicesGrey.png')
+  .default;
+const resourcesGrey = require('../../images/pngIllustrations/resourcesGrey.png')
+  .default;
+const communityGrey = require('../../images/pngIllustrations/communityGrey.png')
+  .default;
+const caseStudiesGrey = require('../../images/pngIllustrations/caseStudiesGrey.png')
+  .default;
 
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',

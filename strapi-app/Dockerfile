@@ -1,5 +1,8 @@
 # pull official base image
-FROM node:12.17.0-alpine
+# If local builds are failing, try pulling directly from docker
+# FROM node:12.22.1-alpine3.12
+# The openshift pipeline requires an image pulled through artifactory
+FROM docker-remote.artifacts.developer.gov.bc.ca/node:lts-alpine
 
 # set working directory
 WORKDIR /app
@@ -9,11 +12,17 @@ COPY package.json ./
 
 COPY yarn.lock ./
 
-# The default time out is far to short for openshift to install dependancies properly
-RUN yarn install --network-timeout=600000
+# # The default time out is far to short for openshift to install dependancies properly
+# RUN yarn install --network-timeout=600000
 
 # add app
 COPY . ./
+
+# Install the plugin npm packages
+RUN cd plugins/wysiwyg/ && \
+  yarn install && \
+  cd ../../ && \
+  yarn install --network-timeout=600000
 
 RUN chmod -R 777 /app/public/uploads/
 

@@ -9,7 +9,7 @@ import {
   HrefLink,
 } from '../StyleComponents/htmlTags';
 
-const image404 = require('../../images/pngIllustrations/404.png');
+const image404 = require('../../images/pngIllustrations/404.png').default;
 const bannerTitle = "Page not found. We're sorry, something is missing.";
 const bannerContent =
   'The page you’re looking for might have been removed, moved, or is temporarily unavailable.';

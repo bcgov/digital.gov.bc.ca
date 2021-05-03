@@ -10,7 +10,7 @@ import {
   BannerSideImgText,
 } from '../../StyleComponents/bannerWithImage';
 import { BannerSideImgTitle } from '../../StyleComponents/bannerWithImage';
-import { ReactMarkdownStyled } from '../../StyleComponents/styledMarkdown';
+import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
 function CoCoBannerSideImage({
   name,
@@ -29,16 +29,15 @@ function CoCoBannerSideImage({
 
   //If the image cannot be loaded from the backend the coCo image is used by default
   const onError = (error) => {
-    setCoCoImg(require('../../../images/pngIllustrations/CoCo.svg'));
+    setCoCoImg(require('../../../images/pngIllustrations/CoCo.svg').default);
   };
-
   return (
     <Row top="xs" style={{ marginTop: '60px' }}>
       <Col sm={12} md={6}>
         <BannerSideImgText>
           {Badges(status, maintenanceStatus, tags, 'white')}
           <BannerSideImgTitle>{name}</BannerSideImgTitle>
-          <ReactMarkdownStyled source={description} />
+          <StyleRichText htmlOrMarkdown={description} />
         </BannerSideImgText>
       </Col>
       <Col sm={12} md={6}>

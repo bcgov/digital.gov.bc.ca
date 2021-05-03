@@ -7,7 +7,8 @@ import Guides from './guides';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import Standards from './standards';
 
-const resourcesImage = require('../../images/pngIllustrations/resourcesWhite.png');
+const resourcesImage = require('../../images/pngIllustrations/resourcesWhite.png')
+  .default;
 
 function Resources() {
   return (

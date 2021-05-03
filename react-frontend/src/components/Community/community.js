@@ -12,19 +12,19 @@ import NotFound from '../NotFoundPage/notFoundPage';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title, Heading } from '../StyleComponents/headings';
-import { ReactMarkdownStyled } from '../StyleComponents/styledMarkdown';
+import { StyleRichText } from '../StyleComponents/styledMarkdown';
 
-const rocketChat = require('../../images/icons/rocketChat.png');
-const MSTeams = require('../../images/icons/MSTeams-Logo.png');
-const yammer = require('../../images/icons/Yammer-Logo.png');
-const websiteLogo = require('../../images/icons/website1.png');
-const atSymbol = require('../../images/icons/at-solid.png');
+const rocketChat = require('../../images/icons/rocketChat.png').default;
+const MSTeams = require('../../images/icons/MSTeams-Logo.png').default;
+const yammer = require('../../images/icons/Yammer-Logo.png').default;
+const websiteLogo = require('../../images/icons/website1.png').default;
+const atSymbol = require('../../images/icons/at-solid.png').default;
 
 function LinkWithIcon({ icon, text, url }) {
   if (url) {
     return (
       <p>
-        <img src={icon} style={{ height: '24px' }} />{' '}
+        <img src={icon} style={{ height: '24px' }} alt="icon" />{' '}
         <HrefLink href={url}>{text}</HrefLink>
       </p>
     );
@@ -40,7 +40,7 @@ function CommunityImage({ url }) {
     return (
       <img
         src={imageSource}
-        alt="Community Image"
+        alt="Community"
         style={{ marginBottom: '16px', width: '100%' }}
       />
     );
@@ -73,14 +73,14 @@ function Community() {
                   <Heading>What we do</Heading>
                   <p>{communityPage?.WhatWeDo}</p>
                   <Heading>How to participate</Heading>
-                  <ReactMarkdownStyled
-                    source={communityPage?.HowToParticipate}
+                  <StyleRichText
+                    htmlOrMarkdown={communityPage?.HowToParticipate}
                   />
                   {communityPage?.KeyResources && (
                     <div>
                       <Heading>Key resources</Heading>
-                      <ReactMarkdownStyled
-                        source={communityPage?.KeyResources}
+                      <StyleRichText
+                        htmlOrMarkdown={communityPage?.KeyResources}
                       />
                     </div>
                   )}

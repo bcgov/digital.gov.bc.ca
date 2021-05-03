@@ -11,7 +11,8 @@ import CommunityCard from './communityCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
-const comunitiesImage = require('../../images/pngIllustrations/communityWhite.png');
+const comunitiesImage = require('../../images/pngIllustrations/communityWhite.png')
+  .default;
 
 function Communities() {
   return (
