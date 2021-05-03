@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-flexbox-grid';
 
 import Query from '../Query';
-import COMMUNITY_QUERY from '../../queries/community/community';
+import BLOG_QUERY from '../../queries/blog/blog';
 import DocumentTitle from 'react-document-title';
 import { AppConfigContext } from '../../providers/AppConfig';
 
@@ -32,7 +32,7 @@ function LinkWithIcon({ icon, text, url }) {
   return <div />;
 }
 
-function CommunityImage({ url }) {
+function BlogImage({ url }) {
   const config = useContext(AppConfigContext);
   const strapiURL = config['state']['strapiApiUrl'];
   if (url) {
@@ -40,7 +40,7 @@ function CommunityImage({ url }) {
     return (
       <img
         src={imageSource}
-        alt="Community"
+        alt="Blog"
         style={{ marginBottom: '16px', width: '100%' }}
       />
     );
@@ -51,83 +51,21 @@ function CommunityImage({ url }) {
 function BlogPage() {
   const params = useParams();
   return (
-    <DocumentTitle title="Community Page">
+    <DocumentTitle title="Blog Page">
       <PageContainer>
-        <Query query={COMMUNITY_QUERY} uid={params.uid}>
-          {({ data: { communityPages } }) => {
-            if (communityPages.length === 0) {
+        <Query query={BLOG_QUERY} uid={params.uid}>
+          {({ data: { blogPosts } }) => {
+            if (blogPosts.length === 0) {
               return <NotFound />;
             }
-            const communityPage = communityPages[0];
+            const blog = blogPosts[0];
 
             return (
               <Row>
                 <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
-                  <Title style={{ lineHeight: '1.2' }}>
-                    {communityPage?.Title}
-                  </Title>
-                  <p>{communityPage?.Description}</p>
-                  <Heading>Who we are</Heading>
-                  <p>{communityPage?.WhoWeAre}</p>
-                  <CommunityImage url={communityPage?.CommunityImage?.url} />
-                  <Heading>What we do</Heading>
-                  <p>{communityPage?.WhatWeDo}</p>
-                  <Heading>How to participate</Heading>
-                  <StyleRichText
-                    htmlOrMarkdown={communityPage?.HowToParticipate}
-                  />
-                  {communityPage?.KeyResources && (
-                    <div>
-                      <Heading>Key resources</Heading>
-                      <StyleRichText
-                        htmlOrMarkdown={communityPage?.KeyResources}
-                      />
-                    </div>
-                  )}
-                </Col>
-                <Col xs={12} md={4}>
-                  <Heading style={{ fontSize: '22px' }}>
-                    Community Managers
-                  </Heading>
-                  <div>
-                    {communityPage?.CommunityEmail?.map((email, i) => {
-                      return (
-                        <p key={i}>
-                          <HrefLink href={`mailto:${email.Email}`}>
-                            {email.Name}
-                          </HrefLink>
-                        </p>
-                      );
-                    })}
-                  </div>
-                  <div>
-                    <Heading style={{ fontSize: '22px' }}>Links</Heading>
-                    <LinkWithIcon
-                      url={communityPage?.RocketChatLink}
-                      text="RocketChat"
-                      icon={rocketChat}
-                    />
-                    <LinkWithIcon
-                      url={communityPage?.YammerLink}
-                      text="Yammer"
-                      icon={yammer}
-                    />
-                    <LinkWithIcon
-                      url={communityPage?.AtWorkLink}
-                      text="@Work"
-                      icon={atSymbol}
-                    />
-                    <LinkWithIcon
-                      url={communityPage?.MSTeamsLink}
-                      text="MS Teams"
-                      icon={MSTeams}
-                    />
-                    <LinkWithIcon
-                      url={communityPage?.Website}
-                      text="Website"
-                      icon={websiteLogo}
-                    />
-                  </div>
+                  <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
+                  <p>{blog?.SubTilte}</p>
+                  <BlogImage url={blog?.CoverImage?.url} />
                 </Col>
               </Row>
             );

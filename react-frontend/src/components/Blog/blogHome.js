@@ -4,7 +4,7 @@ import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { Col, Row } from 'react-flexbox-grid';
 
 import Query from '../Query';
-import COMMUNITIES_QUERY from '../../queries/community/communities';
+import BLOGS_QUERY from '../../queries/blog/blogs';
 
 import BlogCard from './blogCard';
 
@@ -25,17 +25,17 @@ function BlogHome() {
           image={comunitiesImage}
         />
         <ContentBlockContainer style={{ paddingTop: '50px' }}>
-          <Query query={COMMUNITIES_QUERY}>
-            {({ data: { communityPages } }) => {
+          <Query query={BLOGS_QUERY}>
+            {({ data: { blogPosts } }) => {
               return (
                 <Row style={{ marginBottom: '4px' }}>
-                  {communityPages?.map((communityPage, i) => {
+                  {blogPosts?.map((blogPost, i) => {
                     return (
-                      <Col xs={12} md={6} lg={4} key={communityPage?.uid}>
+                      <Col xs={12} md={6} lg={4} key={blogPost?.uid}>
                         <BlogCard
-                          title={communityPage?.Title}
-                          description={communityPage?.Description}
-                          uid={communityPage?.uid}
+                          title={blogPost?.Title}
+                          description={blogPost?.SubTitle}
+                          uid={blogPost?.uid}
                         />
                       </Col>
                     );
