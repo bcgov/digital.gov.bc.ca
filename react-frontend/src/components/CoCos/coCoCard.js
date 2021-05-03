@@ -75,7 +75,7 @@ function CoCoCard({
   uid,
 }) {
   return (
-    <Link to={`/cocos/${uid}`}>
+    <Link to={`/common-components/${uid}`}>
       <CardStyled>
         {Badges(status?.Status, status?.Maintenance, tags)}
         <CardTitle data-testid="title" style={{ marginBottom: '0' }}>

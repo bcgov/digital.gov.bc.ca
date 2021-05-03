@@ -21,7 +21,7 @@ const DisplayNames = {
   'digital-principles': 'Digital Principles',
   'products-services': 'Products and Services',
   resources: 'Resources',
-  cocos: 'Common Components',
+  'common-components': 'Common Components',
   communities: 'Communities',
 };
 
@@ -38,8 +38,8 @@ const Routes = () => {
           component={DigitalPrinciples}
         />
         <Route exact path="/resources" component={Resources} />
-        <Route exact path="/cocos" component={CoCos} />
-        <Route exact path="/cocos/:uid" component={CoCoPage} />
+        <Route exact path="/common-components" component={CoCos} />
+        <Route exact path="/common-components/:uid" component={CoCoPage} />
         <Route exact path="/communities" component={Communities} />
         <Route exact path="/communities/:uid" component={Community} />
         <Route path="/case-studies" component={CaseStudies} />
