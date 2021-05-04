@@ -96,14 +96,14 @@ objects:
     data:
       Caddyfile: |
         :4000 {
-          handle /parul/* {
+          handle_path /parul/* {
             reverse_proxy https://www.google.com {
               header_up Host {http.reverse_proxy.upstream.host}
               flush_interval -1
             }
           }
 
-          handle_path /marketplace/* {
+          handle /marketplace/* {
             reverse_proxy https://app-digmkt-prod.apps.silver.devops.gov.bc.ca {
               header_up Host {http.reverse_proxy.upstream.host}
               flush_interval -1
