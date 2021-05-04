@@ -97,22 +97,28 @@ objects:
       Caddyfile: |
         :4000 {
           handle /parul/* {
-            reverse_proxy https://google.com {
+            reverse_proxy https://www.google.com {
               header_up Host {http.reverse_proxy.upstream.host}
+              flush_interval -1
             }
           }
 
           handle_path /marketplace/* {
             reverse_proxy https://app-digmkt-prod.apps.silver.devops.gov.bc.ca {
               header_up Host {http.reverse_proxy.upstream.host}
+              flush_interval -1
             }
           }
-          
+
           handle {
             root * /opt/app-root/src
             try_files {path} {path}/ /index.html
             encode gzip
             file_server
+            header / {
+              # prevent any static html from being cached
+              Cache-Control “public, max-age=0, must-revalidate”
+            }
           }
         }
     kind: ConfigMap
