@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-flexbox-grid';
 
@@ -33,6 +33,9 @@ function LinkWithIcon({ icon, text, url }) {
 }
 
 function BlogImage({ url }) {
+  const [blogAuthors, setBlogAuthors] = useState();
+
+  console.log(`The blog authors are ${blogAuthors}`);
   const config = useContext(AppConfigContext);
   const strapiURL = config['state']['strapiApiUrl'];
   if (url) {
@@ -61,13 +64,23 @@ function BlogPage() {
             const blog = blogPosts[0];
 
             return (
-              <Row>
-                <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
-                  <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
-                  <p>{blog?.SubTilte}</p>
-                  <BlogImage url={blog?.CoverImage?.url} />
-                </Col>
-              </Row>
+              <>
+                <Row>
+                  <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
+                    <BlogImage url={blog?.CoverImage?.url} />
+                    <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
+                    <p>{blog?.SubTilte}</p>
+                    <p> {blog?.published_at}</p>
+                    <StyleRichText htmlOrMarkdown={blog?.Content} />
+                  </Col>
+                  <Col>
+                    <p>{blog?.blog_author?.Name}</p>
+                    <p>{blog?.blog_author?.Title}</p>
+                    {/* Image */}
+                  </Col>
+                </Row>
+                <Row>{/* Previous and next page link */}</Row>
+              </>
             );
           }}
         </Query>

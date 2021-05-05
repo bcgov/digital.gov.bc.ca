@@ -1,28 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { Col, Row } from 'react-flexbox-grid';
+import { AppConfigContext } from '../../providers/AppConfig';
 
+import { useQuery } from '@apollo/react-hooks';
 import Query from '../Query';
 import BLOGS_QUERY from '../../queries/blog/blogs';
-
+import BLOGAUTHORS_QUERY from '../../queries/blog/blogAuthors';
 import BlogCard from './blogCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
-const comunitiesImage = require('../../images/pngIllustrations/communityWhite.png')
+const blogImage = require('../../images/pngIllustrations/communityWhite.png')
   .default;
 
 function BlogHome() {
+  const config = useContext(AppConfigContext);
+  const strapiURL = config['state']['strapiApiUrl'];
+
+  const { loading, error, data } = useQuery(BLOGAUTHORS_QUERY);
+
+  const blogAuthorList = [];
+  useEffect(() => {
+    if (data) {
+      data?.blogAuthors?.map((blogAuthor, i) => {
+        blogAuthorList[i] = {
+          Name: blogAuthor?.Name,
+          Title: blogAuthor?.Title,
+          thumbnailSource: strapiURL?.replace(
+            '/graphql',
+            blogAuthor?.Image?.formats?.thumbnail?.url
+          ),
+        };
+      });
+      console.log(blogAuthorList);
+    }
+  });
+
   return (
-    <DocumentTitle title="Communities - Digital Government - Province of British Columbia">
+    <DocumentTitle title="Blog - Digital Government - Province of British Columbia">
       <div>
         <BannerSideImage
-          title={'Communities'}
+          title={'Blog'}
           content={
-            'The digital delivery network within the BC Public Service is active and growing. Connect, learn, and contribute!'
+            'Read all the latest and the greatest about what’s happening in and around BC Government’s Digital space.'
           }
-          image={comunitiesImage}
+          image={blogImage}
         />
         <ContentBlockContainer style={{ paddingTop: '50px' }}>
           <Query query={BLOGS_QUERY}>
