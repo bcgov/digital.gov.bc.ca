@@ -5,10 +5,17 @@ import { Link } from 'react-router-dom';
 
 const cardBorderRadius = '25px';
 
+export const BlogCardThumnail = styled.img`
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+`;
+
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`
-  border-radius: ${cardBorderRadius};
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
   height: 95%;
   margin-bottom: 20px;
   width: 100%;

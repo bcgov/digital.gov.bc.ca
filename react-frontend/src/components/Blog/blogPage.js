@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-flexbox-grid';
+import dateFormat from 'dateformat';
 
 import Query from '../Query';
 import BLOG_QUERY from '../../queries/blog/blog';
@@ -8,7 +9,7 @@ import DocumentTitle from 'react-document-title';
 import { AppConfigContext } from '../../providers/AppConfig';
 
 import NotFound from '../NotFoundPage/notFoundPage';
-
+import { convertImageLink } from '../../helperFunctions/helpers';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title, Heading } from '../StyleComponents/headings';
@@ -33,16 +34,11 @@ function LinkWithIcon({ icon, text, url }) {
 }
 
 function BlogImage({ url }) {
-  const [blogAuthors, setBlogAuthors] = useState();
-
-  console.log(`The blog authors are ${blogAuthors}`);
   const config = useContext(AppConfigContext);
-  const strapiURL = config['state']['strapiApiUrl'];
   if (url) {
-    const imageSource = strapiURL?.replace('/graphql', url);
     return (
       <img
-        src={imageSource}
+        src={convertImageLink(config, url)}
         alt="Blog"
         style={{ marginBottom: '16px', width: '100%' }}
       />
@@ -51,8 +47,28 @@ function BlogImage({ url }) {
   return <div />;
 }
 
+function AuthorIcon({ url }) {
+  if (url) {
+    return (
+      <img
+        src={url}
+        alt="avatar"
+        style={{
+          verticalAlign: 'middle',
+          width: '48px',
+          height: '48px',
+          borderRadius: '50%',
+        }}
+      />
+    );
+  }
+  return <div />;
+}
+
 function BlogPage() {
   const params = useParams();
+  const config = useContext(AppConfigContext);
+
   return (
     <DocumentTitle title="Blog Page">
       <PageContainer>
@@ -62,21 +78,29 @@ function BlogPage() {
               return <NotFound />;
             }
             const blog = blogPosts[0];
-
+            console.log(blog);
             return (
               <>
                 <Row>
-                  <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
+                  <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
                     <BlogImage url={blog?.CoverImage?.url} />
                     <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
-                    <p>{blog?.SubTilte}</p>
-                    <p> {blog?.published_at}</p>
+                    <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
+
+                    <p> {dateFormat(blog?.published_at, 'mmmm d, yyyy')}</p>
                     <StyleRichText htmlOrMarkdown={blog?.Content} />
                   </Col>
                   <Col>
-                    <p>{blog?.blog_author?.Name}</p>
+                    <p style={{ fontWeight: '700' }}>
+                      {blog?.blog_author?.Name}
+                    </p>
                     <p>{blog?.blog_author?.Title}</p>
-                    {/* Image */}
+                    <AuthorIcon
+                      url={convertImageLink(
+                        config,
+                        blog?.blog_author?.Image?.formats?.thumbnail?.url
+                      )}
+                    />
                   </Col>
                 </Row>
                 <Row>{/* Previous and next page link */}</Row>

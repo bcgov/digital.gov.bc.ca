@@ -9,6 +9,9 @@ const BLOG_QUERY = gql`
       blog_author {
         Name
         Title
+        Image {
+          formats
+        }
       }
       CoverImage {
         url

@@ -7,9 +7,15 @@ const BLOGS_QUERY = gql`
       Title
       SubTitle
       published_at
+      CoverImage {
+        formats
+      }
       blog_author {
         Name
         Title
+        Image {
+          formats
+        }
       }
     }
   }
