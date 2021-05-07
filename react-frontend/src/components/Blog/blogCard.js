@@ -26,9 +26,9 @@ function BlogCard({ title, description, uid, date, authImg, author, coverImgSrc 
     <CommunityCardStyled style={{ backgroundColor: 'white' }} to={`/blog/${uid}`}>
       <BlogCardThumnail src={coverImgSrc} />
       <div style={{ padding: '24px' }}>
-        <div style={{ display: 'inline', color: 'black', width: '100%' }}>
-          <span>
-            {author}</span> <AuthorIcon url={authImg} />
+        <div style={{ display: 'inline-block', color: 'black', width: '100%' }}>
+          <div>{author}</div>
+          <AuthorIcon url={authImg} />
           <span style={{ float: 'right' }}>{dateFormat(date, "mmm d,yyyy")}</span>
         </div>
         <CardTitle style={{ clear: 'both' }}>{title}</CardTitle>

@@ -29,6 +29,31 @@ export const ParsedHTMLStyled = styled.div.attrs({
       text-decoration: none;
     }
   }
+
+  h2 {
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  h4 {
+    font-size: 21.60px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  blockquote {
+    border-left: 4px solid #000;
+    font-weight: 700;
+    padding-left: 16px
+  }
+
 `;
 
 export const ReactMarkdownStyled = styled(ReactMarkdown).attrs({

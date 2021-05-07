@@ -63,6 +63,7 @@ function BlogPage() {
               return <NotFound />;
             }
             const blog = blogPosts[0];
+            console.log(blog.Content)
             return (
               <Row>
                 <Col xs={10} md={8} style={{ paddingRight: '30px' }}>

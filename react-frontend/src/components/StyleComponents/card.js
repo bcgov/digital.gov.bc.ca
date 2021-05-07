@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const cardBorderRadius = '25px';
 
 export const BlogCardThumnail = styled.img`
+  background: #003366;
   border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
   height: 200px;
   object-fit: cover;
