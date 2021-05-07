@@ -10,28 +10,13 @@ import { AppConfigContext } from '../../providers/AppConfig';
 
 import NotFound from '../NotFoundPage/notFoundPage';
 import { convertImageLink } from '../../helperFunctions/helpers';
+import BlogNavigation from './blogNavigation'
+
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
-import { Title, Heading } from '../StyleComponents/headings';
+import { Title } from '../StyleComponents/headings';
 import { StyleRichText } from '../StyleComponents/styledMarkdown';
 
-const rocketChat = require('../../images/icons/rocketChat.png').default;
-const MSTeams = require('../../images/icons/MSTeams-Logo.png').default;
-const yammer = require('../../images/icons/Yammer-Logo.png').default;
-const websiteLogo = require('../../images/icons/website1.png').default;
-const atSymbol = require('../../images/icons/at-solid.png').default;
-
-function LinkWithIcon({ icon, text, url }) {
-  if (url) {
-    return (
-      <p>
-        <img src={icon} style={{ height: '24px' }} alt="icon" />{' '}
-        <HrefLink href={url}>{text}</HrefLink>
-      </p>
-    );
-  }
-  return <div />;
-}
 
 function BlogImage({ url }) {
   const config = useContext(AppConfigContext);
@@ -78,36 +63,35 @@ function BlogPage() {
               return <NotFound />;
             }
             const blog = blogPosts[0];
-            console.log(blog);
             return (
-              <>
-                <Row>
-                  <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
-                    <BlogImage url={blog?.CoverImage?.url} />
-                    <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
-                    <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
+              <Row>
+                <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
+                  <BlogImage url={blog?.CoverImage?.url} />
+                  <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
+                  <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
 
-                    <p> {dateFormat(blog?.published_at, 'mmmm d, yyyy')}</p>
-                    <StyleRichText htmlOrMarkdown={blog?.Content} />
-                  </Col>
-                  <Col>
-                    <p style={{ fontWeight: '700' }}>
-                      {blog?.blog_author?.Name}
-                    </p>
-                    <p>{blog?.blog_author?.Title}</p>
-                    <AuthorIcon
-                      url={convertImageLink(
-                        config,
-                        blog?.blog_author?.Image?.formats?.thumbnail?.url
-                      )}
-                    />
-                  </Col>
-                </Row>
-                <Row>{/* Previous and next page link */}</Row>
-              </>
+                  <p> {dateFormat(blog?.published_at, 'mmmm d, yyyy')}</p>
+                  <StyleRichText htmlOrMarkdown={blog?.Content} />
+                </Col>
+                <Col>
+                  <p style={{ fontWeight: '700' }}>
+                    {blog?.blog_author?.Name}
+                  </p>
+                  <p>{blog?.blog_author?.Title}</p>
+                  <AuthorIcon
+                    url={convertImageLink(
+                      config,
+                      blog?.blog_author?.Image?.formats?.thumbnail?.url
+                    )}
+                  />
+                </Col>
+              </Row>
             );
           }}
         </Query>
+        <Row>
+          <BlogNavigation uid={params.uid} />
+        </Row>
       </PageContainer>
     </DocumentTitle>
   );

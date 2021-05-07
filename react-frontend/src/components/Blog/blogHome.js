@@ -19,7 +19,7 @@ const blogImage = require('../../images/pngIllustrations/blogWhite.png')
 function BlogHome() {
   const config = useContext(AppConfigContext);
 
-  const { loading, error, data } = useQuery(BLOGAUTHORS_QUERY);
+  // const { loading, error, data } = useQuery(BLOGAUTHORS_QUERY);
 
   // const blogAuthorList = [];
   // useEffect(() => {
