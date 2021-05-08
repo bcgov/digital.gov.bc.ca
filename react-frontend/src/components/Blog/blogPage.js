@@ -19,11 +19,10 @@ import { StyleRichText } from '../StyleComponents/styledMarkdown';
 
 
 function BlogImage({ url }) {
-  const config = useContext(AppConfigContext);
   if (url) {
     return (
       <img
-        src={convertImageLink(config, url)}
+        src={url}
         alt="Blog"
         style={{ marginBottom: '16px', width: '100%' }}
       />
@@ -52,7 +51,7 @@ function AuthorIcon({ url }) {
 
 function BlogPage() {
   const params = useParams();
-  const config = useContext(AppConfigContext);
+  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
 
   return (
     <DocumentTitle title="Blog Page">
@@ -67,7 +66,7 @@ function BlogPage() {
             return (
               <Row>
                 <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
-                  <BlogImage url={blog?.CoverImage?.url} />
+                  <BlogImage url={strapiMediaUrl + blog?.CoverImage?.url} />
                   <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
                   <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
 
@@ -80,10 +79,9 @@ function BlogPage() {
                   </p>
                   <p>{blog?.blog_author?.Title}</p>
                   <AuthorIcon
-                    url={convertImageLink(
-                      config,
+                    url={strapiMediaUrl +
                       blog?.blog_author?.Image?.formats?.thumbnail?.url
-                    )}
+                    }
                   />
                 </Col>
               </Row>

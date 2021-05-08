@@ -33,10 +33,9 @@ function LinkWithIcon({ icon, text, url }) {
 }
 
 function CommunityImage({ url }) {
-  const config = useContext(AppConfigContext);
-  const strapiURL = config['state']['strapiApiUrl'];
+  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
   if (url) {
-    const imageSource = strapiURL?.replace('/graphql', url);
+    const imageSource = strapiMediaUrl + url;
     return (
       <img
         src={imageSource}

@@ -4,8 +4,8 @@ import React, { useContext, useState } from 'react';
 // To fix this we made a helper function to correct things
 export function convertImageLink(config, url) {
   if (url) {
-    const strapiURL = config['state']['strapiApiUrl'];
-    return strapiURL?.replace('/graphql', url);
+    const strapiURL = config['state']['strapiMediaUrl'];
+    return strapiURL + url;
   }
   return null;
 }

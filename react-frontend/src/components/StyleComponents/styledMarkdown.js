@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppConfigContext } from '../../providers/AppConfig';
 
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import parse from 'html-react-parser';
 
 export const StyleRichText = ({ htmlOrMarkdown }) => {
+  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
   // Detect html tags
   const re = /<.+?>/;
   // If the string has html tags, return parsed html
   if (re.test(htmlOrMarkdown)) {
-    return <ParsedHTMLStyled> {parse(htmlOrMarkdown)} </ParsedHTMLStyled>;
+    //Find and replace /upload with the proper strapi url
+    // imageURL =convertImageLink(config)
+    const htmlWithImages = htmlOrMarkdown.replace('<img src="/uploads',
+      '<img src="' + strapiMediaUrl + '/uploads')
+    console.log(htmlWithImages)
+    return <ParsedHTMLStyled> {parse(htmlWithImages)} </ParsedHTMLStyled>;
   }
   // If there are no html tags detected treat the string as markdown
   return <ReactMarkdownStyled source={htmlOrMarkdown} />;

@@ -17,7 +17,7 @@ const blogImage = require('../../images/pngIllustrations/blogWhite.png')
   .default;
 
 function BlogHome() {
-  const config = useContext(AppConfigContext);
+  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
 
   // const { loading, error, data } = useQuery(BLOGAUTHORS_QUERY);
 
@@ -63,15 +63,13 @@ function BlogHome() {
                           uid={blogPost?.uid}
                           date={blogPost?.published_at}
                           author={blogPost?.blog_author?.Name}
-                          authImg={convertImageLink(
-                            config,
+                          authImg={strapiMediaUrl +
                             blogPost?.blog_author?.Image?.formats?.thumbnail
                               ?.url
-                          )}
-                          coverImgSrc={convertImageLink(
-                            config,
+                          }
+                          coverImgSrc={strapiMediaUrl +
                             blogPost?.CoverImage?.formats?.thumbnail?.url
-                          )}
+                          }
                         />
                       </Col>
                     );
