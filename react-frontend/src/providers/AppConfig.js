@@ -9,7 +9,7 @@ export class AppConfig extends Component {
     super();
     this.state = {
       strapiApiUrl: null,
-      strapiMediaUrl: null
+      strapiMediaUrl: null,
     };
   }
 
@@ -24,8 +24,11 @@ export class AppConfig extends Component {
         // analyze HTTP status of the xhrs response
         // do something
       } else {
-        const strapiURLs = JSON.parse(xhr.response)
-        strapiURLs.strapiMediaUrl = strapiURLs?.strapiApiUrl?.replace('/graphql', '')
+        const strapiURLs = JSON.parse(xhr.response);
+        strapiURLs.strapiMediaUrl = strapiURLs?.strapiApiUrl?.replace(
+          '/graphql',
+          ''
+        );
         this.setState(strapiURLs);
       }
     };

@@ -17,7 +17,9 @@ const blogImage = require('../../images/pngIllustrations/blogWhite.png')
   .default;
 
 function BlogHome() {
-  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
+  const strapiMediaUrl = useContext(AppConfigContext)['state'][
+    'strapiMediaUrl'
+  ];
 
   // const { loading, error, data } = useQuery(BLOGAUTHORS_QUERY);
 
@@ -55,6 +57,16 @@ function BlogHome() {
               return (
                 <Row style={{ marginBottom: '4px' }}>
                   {blogPosts?.map((blogPost, i) => {
+                    const authorImgUrl = blogPost?.blog_author?.Image?.formats
+                      ?.thumbnail?.url
+                      ? strapiMediaUrl +
+                        blogPost?.blog_author?.Image?.formats?.thumbnail?.url
+                      : null;
+                    const coverImgUrl = blogPost?.CoverImage?.formats?.thumbnail
+                      ?.url
+                      ? strapiMediaUrl +
+                        blogPost?.CoverImage?.formats?.thumbnail?.url
+                      : null;
                     return (
                       <Col xs={12} md={6} lg={4} key={blogPost?.uid}>
                         <BlogCard
@@ -63,13 +75,8 @@ function BlogHome() {
                           uid={blogPost?.uid}
                           date={blogPost?.published_at}
                           author={blogPost?.blog_author?.Name}
-                          authImg={strapiMediaUrl +
-                            blogPost?.blog_author?.Image?.formats?.thumbnail
-                              ?.url
-                          }
-                          coverImgSrc={strapiMediaUrl +
-                            blogPost?.CoverImage?.formats?.thumbnail?.url
-                          }
+                          authImg={authorImgUrl}
+                          coverImgSrc={coverImgUrl}
                         />
                       </Col>
                     );

@@ -66,7 +66,9 @@ function BlogPage() {
             return (
               <Row>
                 <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
-                  <BlogImage url={strapiMediaUrl + blog?.CoverImage?.url} />
+                  {blog?.CoverImage?.url && (
+                    <BlogImage url={strapiMediaUrl + blog?.CoverImage?.url} />
+                  )}
                   <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
                   <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
 

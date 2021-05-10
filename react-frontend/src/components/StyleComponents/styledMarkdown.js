@@ -6,7 +6,9 @@ import ReactMarkdown from 'react-markdown';
 import parse from 'html-react-parser';
 
 export const StyleRichText = ({ htmlOrMarkdown }) => {
-  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
+  const strapiMediaUrl = useContext(AppConfigContext)['state'][
+    'strapiMediaUrl'
+  ];
   // Detect html tags
   const re = /<.+?>/;
 
@@ -18,15 +20,16 @@ export const StyleRichText = ({ htmlOrMarkdown }) => {
         if (!attribs) {
           return;
         }
-        //if the attribute has a source it is an image, this replaces that image src 
+        //if the attribute has a source it is an image, this replaces that image src
         //with a valid url
         if (attribs.src) {
           return <img src={strapiMediaUrl + attribs.src} alt={attribs.alt} />;
         }
-      }
-    }
-    return <ParsedHTMLStyled> {parse(htmlOrMarkdown, options)} </ParsedHTMLStyled>;
-
+      },
+    };
+    return (
+      <ParsedHTMLStyled> {parse(htmlOrMarkdown, options)} </ParsedHTMLStyled>
+    );
   }
   // If there are no html tags detected treat the string as markdown
   return <ReactMarkdownStyled source={htmlOrMarkdown} />;
@@ -60,7 +63,7 @@ export const ParsedHTMLStyled = styled.div.attrs({
   }
 
   h4 {
-    font-size: 21.60px;
+    font-size: 21.6px;
     font-weight: 700;
     line-height: 1.6;
   }
@@ -68,13 +71,12 @@ export const ParsedHTMLStyled = styled.div.attrs({
   blockquote {
     border-left: 4px solid #000;
     font-weight: 700;
-    padding-left: 16px
+    padding-left: 16px;
   }
 
   figcaption {
     text-align: center;
   }
-
 `;
 
 export const ReactMarkdownStyled = styled(ReactMarkdown).attrs({

@@ -33,7 +33,9 @@ function LinkWithIcon({ icon, text, url }) {
 }
 
 function CommunityImage({ url }) {
-  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
+  const strapiMediaUrl = useContext(AppConfigContext)['state'][
+    'strapiMediaUrl'
+  ];
   if (url) {
     const imageSource = strapiMediaUrl + url;
     return (
