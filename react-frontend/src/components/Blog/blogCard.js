@@ -20,6 +20,7 @@ function AuthorIcon({ url }) {
           height: '24px',
           borderRadius: '50%',
         }}
+        data-testid="authorImage"
       />
     );
   }
@@ -40,7 +41,9 @@ function BlogCard({
       style={{ backgroundColor: 'white' }}
       to={`/blog/${uid}`}
     >
-      <BlogCardThumnail src={coverImgSrc} />
+      {coverImgSrc && (
+        <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+      )}
       <div style={{ padding: '24px' }}>
         <div style={{ display: 'inline-block', color: 'black', width: '100%' }}>
           <div>{author}</div>
@@ -49,8 +52,12 @@ function BlogCard({
             {dateFormat(date, 'mmm d,yyyy')}
           </span>
         </div>
-        <CardTitle style={{ clear: 'both' }}>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardTitle style={{ clear: 'both' }} data-testid="title">
+          {title}
+        </CardTitle>
+        <CardDescription data-testid="description">
+          {description}
+        </CardDescription>
       </div>
     </CommunityCardStyled>
   );
