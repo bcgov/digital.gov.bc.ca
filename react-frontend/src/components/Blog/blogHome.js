@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { Col, Row } from 'react-flexbox-grid';
 import { AppConfigContext } from '../../providers/AppConfig';
-import { convertImageLink } from '../../helperFunctions/helpers';
 
-import { useQuery } from '@apollo/react-hooks';
 import Query from '../Query';
 import BLOGS_QUERY from '../../queries/blog/blogs';
 import BLOGAUTHORS_QUERY from '../../queries/blog/blogAuthors';
@@ -20,26 +18,6 @@ function BlogHome() {
   const strapiMediaUrl = useContext(AppConfigContext)['state'][
     'strapiMediaUrl'
   ];
-
-  // const { loading, error, data } = useQuery(BLOGAUTHORS_QUERY);
-
-  // const blogAuthorList = [];
-  // useEffect(() => {
-  //   if (data) {
-  //     data?.blogAuthors?.map((blogAuthor, i) => {
-  //       blogAuthorList[i] = {
-  //         Name: blogAuthor?.Name,
-  //         Title: blogAuthor?.Title,
-  //         thumbnailSource: convertImageLink(config,
-  //           blogAuthor?.Image?.formats?.thumbnail?.url
-  //         ),
-  //       };
-  //     });
-
-  //     console.log(`The author list is`);
-  //     console.log(blogAuthorList)
-  //   }
-  // });
 
   return (
     <DocumentTitle title="Blog - Digital Government - Province of British Columbia">
