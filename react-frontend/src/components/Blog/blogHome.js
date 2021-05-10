@@ -6,7 +6,6 @@ import { AppConfigContext } from '../../providers/AppConfig';
 
 import Query from '../Query';
 import BLOGS_QUERY from '../../queries/blog/blogs';
-import BLOGAUTHORS_QUERY from '../../queries/blog/blogAuthors';
 import BlogCard from './blogCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-flexbox-grid';
 import dateFormat from 'dateformat';
@@ -9,10 +9,8 @@ import DocumentTitle from 'react-document-title';
 import { AppConfigContext } from '../../providers/AppConfig';
 
 import NotFound from '../NotFoundPage/notFoundPage';
-import { convertImageLink } from '../../helperFunctions/helpers';
 import BlogNavigation from './blogNavigation';
 
-import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title } from '../StyleComponents/headings';
 import { StyleRichText } from '../StyleComponents/styledMarkdown';
@@ -78,12 +76,14 @@ function BlogPage() {
                 <Col>
                   <p style={{ fontWeight: '700' }}>{blog?.blog_author?.Name}</p>
                   <p>{blog?.blog_author?.Title}</p>
-                  <AuthorIcon
-                    url={
-                      strapiMediaUrl +
-                      blog?.blog_author?.Image?.formats?.thumbnail?.url
-                    }
-                  />
+                  {blog?.blog_author?.Image?.formats?.thumbnail?.url && (
+                    <AuthorIcon
+                      url={
+                        strapiMediaUrl +
+                        blog?.blog_author?.Image?.formats?.thumbnail?.url
+                      }
+                    />
+                  )}
                 </Col>
               </Row>
             );
