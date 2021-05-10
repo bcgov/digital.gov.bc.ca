@@ -10,13 +10,12 @@ import { AppConfigContext } from '../../providers/AppConfig';
 
 import NotFound from '../NotFoundPage/notFoundPage';
 import { convertImageLink } from '../../helperFunctions/helpers';
-import BlogNavigation from './blogNavigation'
+import BlogNavigation from './blogNavigation';
 
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title } from '../StyleComponents/headings';
 import { StyleRichText } from '../StyleComponents/styledMarkdown';
-
 
 function BlogImage({ url }) {
   if (url) {
@@ -51,7 +50,9 @@ function AuthorIcon({ url }) {
 
 function BlogPage() {
   const params = useParams();
-  const strapiMediaUrl = useContext(AppConfigContext)['state']['strapiMediaUrl'];
+  const strapiMediaUrl = useContext(AppConfigContext)['state'][
+    'strapiMediaUrl'
+  ];
 
   return (
     <DocumentTitle title="Blog Page">
@@ -62,7 +63,6 @@ function BlogPage() {
               return <NotFound />;
             }
             const blog = blogPosts[0];
-            console.log(blog.Content)
             return (
               <Row>
                 <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
@@ -74,12 +74,11 @@ function BlogPage() {
                   <StyleRichText htmlOrMarkdown={blog?.Content} />
                 </Col>
                 <Col>
-                  <p style={{ fontWeight: '700' }}>
-                    {blog?.blog_author?.Name}
-                  </p>
+                  <p style={{ fontWeight: '700' }}>{blog?.blog_author?.Name}</p>
                   <p>{blog?.blog_author?.Title}</p>
                   <AuthorIcon
-                    url={strapiMediaUrl +
+                    url={
+                      strapiMediaUrl +
                       blog?.blog_author?.Image?.formats?.thumbnail?.url
                     }
                   />
