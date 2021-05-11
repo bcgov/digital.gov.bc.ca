@@ -77,6 +77,10 @@ export const ParsedHTMLStyled = styled.div.attrs({
   figcaption {
     text-align: center;
   }
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const ReactMarkdownStyled = styled(ReactMarkdown).attrs({
