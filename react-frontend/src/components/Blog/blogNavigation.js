@@ -5,6 +5,34 @@ import { useQuery } from '@apollo/react-hooks';
 import { HrefLinkInternal } from '../StyleComponents/htmlTags';
 import BLOGLIST_QUERY from '../../queries/blog/blogList';
 
+export function PrevNextButton({ blogUIDs, uid }) {
+  const uidIndex = blogUIDs.findIndex((x) => x == uid);
+  if (uidIndex == -1) {
+    return <div />;
+  }
+  return (
+    <div style={{ width: '100%' }}>
+      {uidIndex >= 0 && uidIndex < blogUIDs.length - 1 && (
+        <HrefLinkInternal
+          to={`/blog/${blogUIDs[uidIndex + 1]}`}
+          data-testid="prev"
+        >
+          {'< Prev Blog'}
+        </HrefLinkInternal>
+      )}
+      {uidIndex > 0 && (
+        <HrefLinkInternal
+          to={`/blog/${blogUIDs[uidIndex - 1]}`}
+          style={{ float: 'right' }}
+          data-testid="next"
+        >
+          {'Next Blog >'}
+        </HrefLinkInternal>
+      )}
+    </div>
+  );
+}
+
 function BlogNavigation({ uid }) {
   // Create a list of blog posts
   const blogList = [];
@@ -12,25 +40,7 @@ function BlogNavigation({ uid }) {
   data?.blogPosts?.map((blogPost, i) => {
     blogList[i] = blogPost?.uid;
   });
-
-  const uidIndex = blogList.findIndex((x) => x == uid);
-  return (
-    <div style={{ width: '100%' }}>
-      {uidIndex >= 0 && uidIndex < blogList.length - 1 && (
-        <HrefLinkInternal to={`/blog/${blogList[uidIndex + 1]}`}>
-          {'< Prev Blog'}
-        </HrefLinkInternal>
-      )}
-      {uidIndex > 0 && (
-        <HrefLinkInternal
-          to={`/blog/${blogList[uidIndex - 1]}`}
-          style={{ float: 'right' }}
-        >
-          {'Next Blog >'}
-        </HrefLinkInternal>
-      )}
-    </div>
-  );
+  return <PrevNextButton blogUIDs={blogList} uid={uid} />;
 }
 
 export default BlogNavigation;
