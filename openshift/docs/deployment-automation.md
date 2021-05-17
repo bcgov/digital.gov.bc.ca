@@ -61,6 +61,9 @@ The service account that is responsible for building and deploying has __very sp
 namespace, this provides it with the minimum amount of access it needs to do its work. The template `cicd.yaml` provides
 insight into what `Role` is created for each namespace. The template `cicdv2.yaml` provides insight into what `Role` with delete permissions is created for each namespace.
 
+*This is @thegentlemanphysicist's best understanding of the service account configuration, May 17 2021*
+`cicdv2.yaml` template generates a seccond service account.  This one is used by the workflow `/.github/workflows/delete-dev-deployment-on-pr-close.yaml`.  The workflow requires additional list an delete permissions that build and deploy workflows don't in order to function properly.
+
 This template needs to be run **locally** in the base of the project using the oc command:
 
 `oc process -f openshift/templates/cicd.yaml -p DEV_NAMESPACE=c0cce6-dev -p TEST_NAMESPACE=c0cce6-test -p PROD_NAMESPACE=c0cce6-prod | oc apply -f -`
