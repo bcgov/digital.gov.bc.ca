@@ -27,8 +27,8 @@
       "required": true
     },
     "Tags": {
-      "via": "co_cos",
       "collection": "tag",
+      "via": "co_cos",
       "dominant": true
     },
     "TeamNameAndMinistry": {
@@ -70,9 +70,8 @@
       "type": "component",
       "repeatable": true,
       "component": "co-co.why-should-iu-se-this",
-      "required": true,
-      "max": 3,
-      "min": 3
+      "required": false,
+      "max": 3
     },
     "ComponentCreationDate": {
       "type": "date",
@@ -103,14 +102,6 @@
     "ServiceLevelSupport": {
       "type": "richtext",
       "required": true
-    },
-    "WhoIsUsingThis": {
-      "type": "component",
-      "repeatable": true,
-      "component": "co-co.who-is-using-this",
-      "required": true,
-      "max": 3,
-      "min": 3
     },
     "ShortDescription": {
       "type": "text",
