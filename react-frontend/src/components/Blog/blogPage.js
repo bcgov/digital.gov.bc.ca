@@ -61,7 +61,12 @@ function BlogPage() {
           const blog = blogPosts[0];
           const pageTitle = blog?.Title;
           return (
-            <DocumentTitle title={pageTitle}>
+            <DocumentTitle
+              title={
+                pageTitle +
+                ' - Digital Government - Province of British Columbia'
+              }
+            >
               <Row>
                 <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
                   {blog?.CoverImage?.url && (

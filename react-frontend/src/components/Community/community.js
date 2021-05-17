@@ -61,7 +61,12 @@ function Community() {
           const communityPage = communityPages[0];
           const communityTitle = communityPage?.Title;
           return (
-            <DocumentTitle title={communityTitle}>
+            <DocumentTitle
+              title={
+                communityTitle +
+                ' - Digital Government - Province of British Columbia'
+              }
+            >
               <Row>
                 <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
                   <Title style={{ lineHeight: '1.2' }}>{communityTitle}</Title>
