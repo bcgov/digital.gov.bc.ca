@@ -51,23 +51,23 @@ function BlogPage() {
   const strapiMediaUrl = useContext(AppConfigContext)['state'][
     'strapiMediaUrl'
   ];
-
   return (
-    <DocumentTitle title="Blog Page">
-      <PageContainer>
-        <Query query={BLOG_QUERY} uid={params.uid}>
-          {({ data: { blogPosts } }) => {
-            if (blogPosts.length === 0) {
-              return <NotFound />;
-            }
-            const blog = blogPosts[0];
-            return (
+    <PageContainer>
+      <Query query={BLOG_QUERY} uid={params.uid}>
+        {({ data: { blogPosts } }) => {
+          if (blogPosts.length === 0) {
+            return <NotFound />;
+          }
+          const blog = blogPosts[0];
+          const pageTitle = blog?.Title;
+          return (
+            <DocumentTitle title={pageTitle}>
               <Row>
                 <Col xs={10} md={8} style={{ paddingRight: '30px' }}>
                   {blog?.CoverImage?.url && (
                     <BlogImage url={strapiMediaUrl + blog?.CoverImage?.url} />
                   )}
-                  <Title style={{ lineHeight: '1.2' }}>{blog?.Title}</Title>
+                  <Title style={{ lineHeight: '1.2' }}>{pageTitle}</Title>
                   <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
 
                   <p> {dateFormat(blog?.published_at, 'mmmm d, yyyy')}</p>
@@ -86,14 +86,14 @@ function BlogPage() {
                   )}
                 </Col>
               </Row>
-            );
-          }}
-        </Query>
-        <Row>
-          <BlogNavigation uid={params.uid} />
-        </Row>
-      </PageContainer>
-    </DocumentTitle>
+            </DocumentTitle>
+          );
+        }}
+      </Query>
+      <Row>
+        <BlogNavigation uid={params.uid} />
+      </Row>
+    </PageContainer>
   );
 }
 

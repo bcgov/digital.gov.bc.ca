@@ -52,21 +52,19 @@ function CommunityImage({ url }) {
 function Community() {
   const params = useParams();
   return (
-    <DocumentTitle title="Community Page">
-      <PageContainer>
-        <Query query={COMMUNITY_QUERY} uid={params.uid}>
-          {({ data: { communityPages } }) => {
-            if (communityPages.length === 0) {
-              return <NotFound />;
-            }
-            const communityPage = communityPages[0];
-
-            return (
+    <PageContainer>
+      <Query query={COMMUNITY_QUERY} uid={params.uid}>
+        {({ data: { communityPages } }) => {
+          if (communityPages.length === 0) {
+            return <NotFound />;
+          }
+          const communityPage = communityPages[0];
+          const communityTitle = communityPage?.Title;
+          return (
+            <DocumentTitle title={communityTitle}>
               <Row>
                 <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
-                  <Title style={{ lineHeight: '1.2' }}>
-                    {communityPage?.Title}
-                  </Title>
+                  <Title style={{ lineHeight: '1.2' }}>{communityTitle}</Title>
                   <p>{communityPage?.Description}</p>
                   <Heading>Who we are</Heading>
                   <p>{communityPage?.WhoWeAre}</p>
@@ -131,11 +129,11 @@ function Community() {
                   </div>
                 </Col>
               </Row>
-            );
-          }}
-        </Query>
-      </PageContainer>
-    </DocumentTitle>
+            </DocumentTitle>
+          );
+        }}
+      </Query>
+    </PageContainer>
   );
 }
 
