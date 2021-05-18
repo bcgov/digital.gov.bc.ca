@@ -189,6 +189,11 @@ export const CommunityCardStyled = styled(Link).attrs({
   }
 `;
 
+export const BlogCardStyled = styled(CommunityCardStyled)`
+  background: white;
+  display: block;
+`;
+
 export const Icon = styled.img.attrs({
   className: 'icon',
 })`

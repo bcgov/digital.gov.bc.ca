@@ -5,6 +5,7 @@ import {
   BlogCardThumnail,
   BlogCardThumnailNullImg,
   BlogCardAuthorLine,
+  BlogCardStyled,
   CardTitle,
   CardDescription,
   CommunityCardStyled,
@@ -41,10 +42,7 @@ function BlogCard({
   coverImgSrc,
 }) {
   return (
-    <CommunityCardStyled
-      style={{ backgroundColor: 'white' }}
-      to={`/blog/${uid}`}
-    >
+    <BlogCardStyled to={`/blog/${uid}`}>
       {coverImgSrc ? (
         <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
       ) : (
@@ -68,7 +66,7 @@ function BlogCard({
           {description}
         </CardDescription>
       </div>
-    </CommunityCardStyled>
+    </BlogCardStyled>
   );
 }
 
