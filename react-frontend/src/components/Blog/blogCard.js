@@ -58,7 +58,10 @@ function BlogCard({
             {dateFormat(date, 'mmm d,yyyy')}
           </span>
         </BlogCardAuthorLine>
-        <CardTitle style={{ clear: 'both' }} data-testid="title">
+        <CardTitle
+          style={{ fontSize: '25.92px', clear: 'both' }}
+          data-testid="title"
+        >
           {title}
         </CardTitle>
         <CardDescription data-testid="description">
