@@ -74,6 +74,9 @@ export const ParsedHTMLStyled = styled.div.attrs({
     font-style: italic;
     font-weight: 700;
     padding-left: 16px;
+    p {
+      font-size: 22px;
+    }
   }
 
   figcaption {
