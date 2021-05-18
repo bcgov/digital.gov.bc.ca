@@ -73,14 +73,21 @@ function BlogPage() {
                     <BlogImage url={strapiMediaUrl + blog?.CoverImage?.url} />
                   )}
                   <Title style={{ lineHeight: '1.2' }}>{pageTitle}</Title>
-                  <p style={{ fontWeight: '700' }}>{blog?.SubTitle}</p>
-
-                  <p> {dateFormat(blog?.published_at, 'mmmm d, yyyy')}</p>
+                  <p style={{ fontWeight: '700', paddingBottom: '20px' }}>
+                    {blog?.SubTitle}
+                  </p>
+                  <p style={{ paddingBottom: '20px' }}>
+                    {dateFormat(blog?.published_at, 'mmmm d, yyyy')}
+                  </p>
                   <StyleRichText htmlOrMarkdown={blog?.Content} />
                 </Col>
                 <Col>
-                  <p style={{ fontWeight: '700' }}>{blog?.blog_author?.Name}</p>
-                  <p>{blog?.blog_author?.Title}</p>
+                  <p style={{ marginBottom: '0', fontWeight: '700' }}>
+                    {blog?.blog_author?.Name}
+                  </p>
+                  <p style={{ marginBottom: '4px' }}>
+                    {blog?.blog_author?.Title}
+                  </p>
                   {blog?.blog_author?.Image?.formats?.thumbnail?.url && (
                     <AuthorIcon
                       url={

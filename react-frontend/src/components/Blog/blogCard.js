@@ -3,6 +3,8 @@ import dateFormat from 'dateformat';
 import 'antd/dist/antd.css';
 import {
   BlogCardThumnail,
+  BlogCardThumnailNullImg,
+  BlogCardAuthorLine,
   CardTitle,
   CardDescription,
   CommunityCardStyled,
@@ -15,10 +17,12 @@ function AuthorIcon({ url }) {
         src={url}
         alt="avatar"
         style={{
+          borderRadius: '50%',
+          display: 'inline-block',
+          height: '24px',
           verticalAlign: 'middle',
           width: '24px',
-          height: '24px',
-          borderRadius: '50%',
+          marginLeft: '4px',
         }}
         data-testid="authorImage"
       />
@@ -41,17 +45,19 @@ function BlogCard({
       style={{ backgroundColor: 'white' }}
       to={`/blog/${uid}`}
     >
-      {coverImgSrc && (
+      {coverImgSrc ? (
         <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+      ) : (
+        <BlogCardThumnailNullImg />
       )}
       <div style={{ padding: '24px' }}>
-        <div style={{ display: 'inline-block', color: 'black', width: '100%' }}>
-          <div>{author}</div>
+        <BlogCardAuthorLine>
+          <span>{author}</span>
           <AuthorIcon url={authImg} />
           <span style={{ float: 'right' }}>
             {dateFormat(date, 'mmm d,yyyy')}
           </span>
-        </div>
+        </BlogCardAuthorLine>
         <CardTitle style={{ clear: 'both' }} data-testid="title">
           {title}
         </CardTitle>

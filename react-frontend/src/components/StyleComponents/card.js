@@ -13,6 +13,19 @@ export const BlogCardThumnail = styled.img`
   width: 100%;
 `;
 
+export const BlogCardThumnailNullImg = styled.div`
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  background: #003366;
+  height: 200px;
+`;
+
+export const BlogCardAuthorLine = styled.div`
+  color: #606060;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  width: 100%;
+`;
+
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`

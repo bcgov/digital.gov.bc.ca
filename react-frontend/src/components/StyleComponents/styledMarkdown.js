@@ -70,12 +70,19 @@ export const ParsedHTMLStyled = styled.div.attrs({
 
   blockquote {
     border-left: 4px solid #000;
+    font-size: 22px;
+    font-style: italic;
     font-weight: 700;
     padding-left: 16px;
   }
 
   figcaption {
+    color: #606060;
     text-align: center;
+    font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+    font-size: 12.8px;
+    font-style: italic;
+    margin: 16px 0;
   }
 
   img {
