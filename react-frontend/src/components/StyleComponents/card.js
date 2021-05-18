@@ -5,10 +5,31 @@ import { Link } from 'react-router-dom';
 
 const cardBorderRadius = '25px';
 
+export const BlogCardThumnail = styled.img`
+  background: #003366;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+`;
+
+export const BlogCardThumnailNullImg = styled.div`
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  background: #003366;
+  height: 200px;
+`;
+
+export const BlogCardAuthorLine = styled.div`
+  color: #606060;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  width: 100%;
+`;
+
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`
-  border-radius: ${cardBorderRadius};
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
@@ -166,6 +187,11 @@ export const CommunityCardStyled = styled(Link).attrs({
   :hover {
     box-shadow: 5px 7px grey;
   }
+`;
+
+export const BlogCardStyled = styled(CommunityCardStyled)`
+  background: white;
+  display: block;
 `;
 
 export const Icon = styled.img.attrs({

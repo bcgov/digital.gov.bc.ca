@@ -1,5 +1,4 @@
 import React from 'react';
-// import CoCoCards from './coCoCards.js';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import { Col, Row } from 'react-flexbox-grid';

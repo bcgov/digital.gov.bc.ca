@@ -15,6 +15,4 @@ assignees: ''
 
 #### Definition of Done
 
-- [ ] Design has been checked with BC design standards from the Design System
-- [ ] Design has been peer reviewed
-- [ ] Design has been approved by PO
+- [ ] Wireframe is annotated for the developer to indicate whether content is to be hard-coded, pulled from an API, or manageable through Strapi. If through Strapi, indicate whether pieces are mandatory, optional, etc.
