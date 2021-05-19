@@ -115,6 +115,12 @@
     },
     "Support": {
       "type": "richtext"
+    },
+    "WhoIsUsingThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.who-is-using-this",
+      "max": 3
     }
   }
 }
