@@ -32,8 +32,8 @@ function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
         </>
       )}
       <Row>
-        {creationDate && (
-          <Col xs={6}>
+        {creationDate?.Year && (
+          <Col xs={12} sm={numberOfUsers ? 6 : 4}>
             <SubHeading>Running Since</SubHeading>
             <p data-testid="date">
               {creationDate.Month + ' ' + creationDate.Year}
@@ -41,7 +41,11 @@ function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
           </Col>
         )}
         {numberOfUsers && (
-          <Col xs={6} style={{ textAlign: 'center' }}>
+          <Col
+            xs={12}
+            sm={creationDate?.Year ? 6 : 4}
+            style={{ textAlign: 'center' }}
+          >
             <SubHeading>{numberOfUsers}</SubHeading>
             <p>teams using {coCoName}</p>
           </Col>
