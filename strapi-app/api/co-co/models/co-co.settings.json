@@ -75,7 +75,7 @@
     },
     "ComponentCreationDate": {
       "type": "date",
-      "required": true
+      "required": false
     },
     "GetStartedURL": {
       "type": "string",
@@ -121,6 +121,11 @@
       "repeatable": true,
       "component": "co-co.who-is-using-this",
       "max": 3
+    },
+    "MonthAndYearCreated": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.month-year-created"
     }
   }
 }

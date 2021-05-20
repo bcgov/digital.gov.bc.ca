@@ -42,6 +42,10 @@ const COCO_QUERY = gql`
       AdditionalTechnicalInformation
       RequirementsAndRestrictions
       Support
+      MonthAndYearCreated {
+        Month
+        Year
+      }
     }
   }
 `;
