@@ -97,23 +97,23 @@ objects:
       Caddyfile: |
         :4000
 
-        handle {
-          reverse_proxy https://app-digmkt-test.apps.silver.devops.gov.bc.ca 
-
-          # for app
-          root * /opt/app-root/src
-
-          file_server 
-          encode gzip
-
-          try_files {path} {path}/ /index.html
-
-          header / {
-            # prevent any static html from being cached
-            Cache-Control "public, max-age=0, must-revalidate"
+        handle_path /marketplace* {
+          reverse_proxy reverse_proxy https://app-digmkt-test.apps.silver.devops.gov.bc.ca {
+            header_up Host {http.reverse_proxy.upstream.host}
+            flush_interval -1
           }
         }
-
+        handle {
+          root * /opt/app-root/src
+          try_files {path} {path}/ /index.html
+          encode gzip
+          file_server
+          header / {
+            # prevent any static html from being cached
+            Cache-Control “public, max-age=0, must-revalidate”
+          }
+        }
+     
         log {
           output stderr
           output stdout 
