@@ -6,16 +6,12 @@ import MinistryUse from './ministryUse';
 
 import { Heading, SubHeading } from '../../StyleComponents/headings';
 
-// function numberAndCreationDate({numberOfUsers,creationDate}) {
-
-// }
-
 function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
   return (
     <div style={{ marginTop: '60px' }}>
       {whoIsUsingThis?.length > 0 && (
         <>
-          <Row>
+          <Row data-testid="ministries">
             <Col xs={12}>
               <Heading>Who else is using this?</Heading>
             </Col>
@@ -47,7 +43,7 @@ function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
             style={{ textAlign: 'center' }}
           >
             <SubHeading>{numberOfUsers}</SubHeading>
-            <p>teams using {coCoName}</p>
+            <p data-testid="numberOfUsers">teams using {coCoName}</p>
           </Col>
         )}
       </Row>

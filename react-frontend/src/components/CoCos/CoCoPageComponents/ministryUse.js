@@ -20,7 +20,7 @@ function MinistryUse({ acronym, summary }) {
   }
 
   return (
-    <Col xs={12} sm={4}>
+    <Col xs={12} sm={4} data-testid="ministry">
       <img
         style={{
           maxWidth: '100%',

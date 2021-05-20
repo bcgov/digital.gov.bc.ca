@@ -24,7 +24,7 @@ it('Renders without crashing if all props are passed in', () => {
     <Analytics
       coCoName="Steve"
       numberOfUsers="37"
-      creationDate="2019-7-22"
+      creationDate={{ Year: 2019, Month: "July" }}
       whoIsUsingThis={whoList}
     />,
     div
