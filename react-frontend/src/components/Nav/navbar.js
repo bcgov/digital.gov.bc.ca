@@ -152,7 +152,7 @@ function NavBar() {
             </NavBarLi>
             <NavBarLi>
               <NavBarLinkExternal
-                href="https://digital.gov.bc.ca/marketplace"
+                href="/marketplace"
                 target="_blank"
               >
                 Marketplace
