@@ -4,13 +4,26 @@ import ReactDOM from 'react-dom';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import { AppConfig } from '../../providers/AppConfig';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
 import CollapsedMenuContent from './collapsedMenuContent';
 
 afterEach(cleanup);
 
 it('It does not crash when when no props passed in.', () => {
   const div = document.createElement('div');
-  const { container } = render(<CollapsedMenuContent />, div);
+  ReactDOM.render(
+    <AppConfig>
+      <ApolloProvider
+        client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
+      >
+        <CollapsedMenuContent />
+      </ApolloProvider>
+    </AppConfig>,
+    div
+  );
 });
 
 it('Renders without crashing when a project passed in.', () => {
@@ -26,5 +39,14 @@ it('Renders without crashing when a project passed in.', () => {
     ministry: { MinistryAcronym: 'CITZ', __typename: 'Ministry' },
   };
   const div = document.createElement('div');
-  const { container } = render(<CollapsedMenuContent content={project} />, div);
+  const { container } = render(
+    <AppConfig>
+      <ApolloProvider
+        client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
+      >
+        <CollapsedMenuContent content={project} />
+      </ApolloProvider>
+    </AppConfig>,
+    div
+  );
 });

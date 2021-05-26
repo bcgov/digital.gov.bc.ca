@@ -21,9 +21,11 @@ function CoCoBannerSideImage({
   tags,
   coCoLink,
 }) {
-  const config = useContext(AppConfigContext);
-  const strapiURL = config['state']['strapiApiUrl'];
-  const imageSource = strapiURL?.replace('/graphql', imageurl);
+  const strapiMediaUrl = useContext(AppConfigContext)['state'][
+    'strapiMediaUrl'
+  ];
+
+  const imageSource = imageurl ? strapiMediaUrl + imageurl : null;
 
   const [coCoImage, setCoCoImg] = useState(imageSource);
 
