@@ -100,7 +100,7 @@ objects:
       handle /marketplace* {
         # handle path not working
         uri strip_prefix /marketplace
-        reverse_proxy https://app-digmkt-test.apps.silver.devops.gov.bc.ca {
+        reverse_proxy https://app-digmkt-${NAMESPACE}.apps.silver.devops.gov.bc.ca {
           header_up Host {http.reverse_proxy.upstream.host}
           flush_interval -1
         }
