@@ -95,8 +95,7 @@ objects:
   - apiVersion: v1
     data:
       Caddyfile: |
-      :4000
-  
+        :4000
         handle /marketplace* {
           # handle path not working
           uri strip_prefix /marketplace
@@ -111,6 +110,7 @@ objects:
           root * /opt/app-root/src
           file_server 
           encode gzip
+
     
           try_files {path} {path}/ /index.html
     
