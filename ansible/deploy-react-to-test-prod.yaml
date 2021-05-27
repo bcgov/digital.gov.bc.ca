@@ -9,7 +9,6 @@
       suffix: "{{ new_image_tag }}"
       version: "{{ new_image_tag }}"
       image_namespace: "{{ tools_namespace }}"
-      env: "{{ ENV }}"
     tasks:
       - name: check images
         include: ./tasks/check_image_exists-test-prod.yaml
