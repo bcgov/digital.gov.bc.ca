@@ -110,7 +110,6 @@ objects:
           root * /opt/app-root/src
           file_server 
           encode gzip
-
     
           try_files {path} {path}/ /index.html
     
