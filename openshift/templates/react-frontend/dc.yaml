@@ -99,7 +99,7 @@ objects:
         handle /marketplace* {
           # handle path not working
           uri strip_prefix /marketplace
-          reverse_proxy https://app-digmkt-${NAMESPACE}.apps.silver.devops.gov.bc.ca {
+          reverse_proxy https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca {
             header_up Host {http.reverse_proxy.upstream.host}
             flush_interval -1
           }
@@ -216,6 +216,11 @@ parameters:
   required: true
   displayName: name
   description: the name for the dc and container
+  value: digital-gov-frontend
+- name: ENV
+  required: true
+  displayName: Environment
+  description: the environment being deployed to
   value: digital-gov-frontend
 - name: CPU_REQUEST
   value: 50m 
