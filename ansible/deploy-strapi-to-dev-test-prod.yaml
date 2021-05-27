@@ -10,7 +10,6 @@
       version: "{{ new_image_tag }}"
       image_namespace: "{{ tools_namespace }}"
       infra_name: "{{ strapi_infra_name }}"
-      env: ENV
     tasks:
       - name: check images
         include: ./tasks/check_strapi_image_exists-test-prod.yaml
