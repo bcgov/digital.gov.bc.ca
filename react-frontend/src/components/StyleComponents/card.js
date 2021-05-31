@@ -29,7 +29,7 @@ export const BlogCardAuthorLine = styled.div`
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`
-  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
