@@ -35,6 +35,13 @@ function CoCoBannerSideImage({
       require('../../../images/pngIllustrations/CoCoWhite.png').default
     );
   };
+
+  if (!coCoImage) {
+    setCoCoImg(
+      require('../../../images/pngIllustrations/CoCoWhite.png').default
+    );
+  }
+
   return (
     <Row top="xs" style={{ marginTop: '60px' }}>
       <Col sm={12} md={6}>
