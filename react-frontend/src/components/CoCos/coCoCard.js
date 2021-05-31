@@ -33,20 +33,24 @@ const supportStructureObj = {
 export const Badges = (status, maintenanceStatus, tags, colour) => {
   return (
     <BadgeWrapper>
-      <Badge
-        data-testid="status-badge"
-        background={colour}
-        title="Software Status"
-      >
-        {status}
-      </Badge>
-      <Badge
-        data-testid="status-badge"
-        background={colour}
-        title="Maintenance Status"
-      >
-        {maintenanceStatusObj[maintenanceStatus]}
-      </Badge>
+      {status && (
+        <Badge
+          data-testid="status-badge"
+          background={colour}
+          title="Software Status"
+        >
+          {status}
+        </Badge>
+      )}
+      {maintenanceStatusObj[maintenanceStatus] && (
+        <Badge
+          data-testid="status-badge"
+          background={colour}
+          title="Maintenance Status"
+        >
+          {maintenanceStatusObj[maintenanceStatus]}
+        </Badge>
+      )}
       {/* Only display 3 tags */}
       {tags?.map((tag, i) => {
         if (i > 2) {
@@ -106,11 +110,15 @@ function CoCoCard({
           <IconCol
             data-testid="user-count"
             xs={3}
-            title="Number of Teams Using CoCo"
+            title={
+              numberOfUsers
+                ? 'Number of Teams Using CoCo'
+                : 'Unknown number of Teams Using CoCo'
+            }
           >
             <Row center="xs" style={{ height: '18px' }}>
               <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
-              {numberOfUsers}
+              {numberOfUsers ? numberOfUsers : ' ?'}
             </Row>
             <Row center="xs">Teams</Row>
           </IconCol>

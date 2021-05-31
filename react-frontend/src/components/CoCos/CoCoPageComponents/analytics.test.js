@@ -24,14 +24,14 @@ it('Renders without crashing if all props are passed in', () => {
     <Analytics
       coCoName="Steve"
       numberOfUsers="37"
-      creationDate={{ Year: 2019, Month: "July" }}
+      creationDate={{ Year: 2019, Month: 'July' }}
       whoIsUsingThis={whoList}
     />,
     div
   );
   expect(getByTestId('date')).toHaveTextContent('July 2019');
-  expect(getAllByTestId('ministry').length).toBe(3)
-  expect(getByTestId('numberOfUsers')).not.toBeNull()
+  expect(getAllByTestId('ministry').length).toBe(3);
+  expect(getByTestId('numberOfUsers')).not.toBeNull();
 });
 
 it('Only renders two ministries if two are passed in', () => {
@@ -45,14 +45,14 @@ it('Only renders two ministries if two are passed in', () => {
     <Analytics
       coCoName="Steve"
       numberOfUsers="37"
-      creationDate={{ Year: 2019, Month: "July" }}
+      creationDate={{ Year: 2019, Month: 'July' }}
       whoIsUsingThis={whoList}
     />,
     div
   );
   expect(getByTestId('date')).toHaveTextContent('July 2019');
-  expect(getAllByTestId('ministry').length).toBe(2)
-  expect(getByTestId('numberOfUsers')).not.toBeNull()
+  expect(getAllByTestId('ministry').length).toBe(2);
+  expect(getByTestId('numberOfUsers')).not.toBeNull();
 });
 
 it('Does not render the ministry parent if none are passed in', () => {
@@ -61,13 +61,13 @@ it('Does not render the ministry parent if none are passed in', () => {
     <Analytics
       coCoName="Steve"
       numberOfUsers="37"
-      creationDate={{ Year: 2019, Month: "July" }}
+      creationDate={{ Year: 2019, Month: 'July' }}
     />,
     div
   );
   expect(getByTestId('date')).toHaveTextContent('July 2019');
-  expect(queryByTestId('ministries')).toBeNull()
-  expect(getByTestId('numberOfUsers')).not.toBeNull()
+  expect(queryByTestId('ministries')).toBeNull();
+  expect(getByTestId('numberOfUsers')).not.toBeNull();
 });
 
 it('Does not render year if none passed in', () => {
@@ -81,14 +81,14 @@ it('Does not render year if none passed in', () => {
     <Analytics
       coCoName="Steve"
       numberOfUsers="37"
-      creationDate={{ Month: "July" }}
+      creationDate={{ Month: 'July' }}
       whoIsUsingThis={whoList}
     />,
     div
   );
   expect(queryByTestId('date')).toBeNull();
-  expect(getAllByTestId('ministry').length).toBe(2)
-  expect(getByTestId('numberOfUsers')).not.toBeNull()
+  expect(getAllByTestId('ministry').length).toBe(2);
+  expect(getByTestId('numberOfUsers')).not.toBeNull();
 });
 
 it('Does not render numberOfUsers if none passed in', () => {
@@ -101,12 +101,12 @@ it('Does not render numberOfUsers if none passed in', () => {
   const { getByTestId, getAllByTestId, queryByTestId } = render(
     <Analytics
       coCoName="Steve"
-      creationDate={{ Year: 2025, Month: "July" }}
+      creationDate={{ Year: 2025, Month: 'July' }}
       whoIsUsingThis={whoList}
     />,
     div
   );
   expect(getByTestId('date')).toHaveTextContent('July 2025');
-  expect(getAllByTestId('ministry').length).toBe(2)
-  expect(queryByTestId('numberOfUsers')).toBeNull()
+  expect(getAllByTestId('ministry').length).toBe(2);
+  expect(queryByTestId('numberOfUsers')).toBeNull();
 });

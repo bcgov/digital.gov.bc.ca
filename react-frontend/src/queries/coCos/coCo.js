@@ -34,7 +34,6 @@ const COCO_QUERY = gql`
         }
         Summary
       }
-      ComponentCreationDate
       GetStartedURL
       CoCoWebsite
       GetStartedSteps

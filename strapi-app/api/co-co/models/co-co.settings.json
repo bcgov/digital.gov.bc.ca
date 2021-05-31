@@ -24,7 +24,7 @@
       "type": "component",
       "repeatable": false,
       "component": "co-co.co-co-development-status",
-      "required": true
+      "required": false
     },
     "Tags": {
       "collection": "tag",
@@ -72,10 +72,6 @@
       "component": "co-co.why-should-iu-se-this",
       "required": false,
       "max": 3
-    },
-    "ComponentCreationDate": {
-      "type": "date",
-      "required": false
     },
     "GetStartedURL": {
       "type": "string",

@@ -3,7 +3,8 @@ import CoCoCards from './coCoCards.js';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
-const coCoImage = require('../../images/pngIllustrations/CoCoWhite.png').default;
+const coCoImage = require('../../images/pngIllustrations/CoCoWhite.png')
+  .default;
 
 function CoCos() {
   return (
