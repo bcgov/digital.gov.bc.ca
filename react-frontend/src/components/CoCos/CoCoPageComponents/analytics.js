@@ -7,10 +7,6 @@ import MinistryUse from './ministryUse';
 import { Heading, SubHeading } from '../../StyleComponents/headings';
 
 function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
-  const creationDateString = creationDate.Month
-    ? creationDate.Month + ' ' + creationDate.Year
-    : creationDate.Year;
-
   return (
     <div style={{ marginTop: '60px' }}>
       {whoIsUsingThis?.length > 0 && (
@@ -35,7 +31,11 @@ function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
         {creationDate?.Year && (
           <Col xs={12} sm={numberOfUsers ? 6 : 4}>
             <SubHeading>Running Since</SubHeading>
-            <p data-testid="date">{creationDateString}</p>
+            <p data-testid="date">
+              {creationDate?.Month
+                ? creationDate.Month + ' ' + creationDate?.Year
+                : creationDate.Year}
+            </p>
           </Col>
         )}
         {numberOfUsers && (
