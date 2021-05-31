@@ -5,6 +5,7 @@
       namespace: "{{ dev_namespace }}"
       suffix: "{{ version }}"
       image_namespace: "{{ tools_namespace }}"
+      env: "dev"
     tasks:
       - name: check images
         include: ./tasks/check_image_exists.yaml
