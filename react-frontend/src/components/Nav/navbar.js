@@ -151,10 +151,7 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
             <NavBarLi>
-              <NavBarLinkExternal
-                href="/marketplace"
-                target="_blank"
-              >
+              <NavBarLinkExternal href="/marketplace" target="_blank">
                 Marketplace
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
