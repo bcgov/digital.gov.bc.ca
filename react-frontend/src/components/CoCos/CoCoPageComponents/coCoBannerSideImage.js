@@ -12,6 +12,9 @@ import {
 import { BannerSideImgTitle } from '../../StyleComponents/bannerWithImage';
 import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
+const defaultImage = require('../../../images/pngIllustrations/CoCoWhite.png')
+  .default;
+
 function CoCoBannerSideImage({
   name,
   description,
@@ -25,22 +28,12 @@ function CoCoBannerSideImage({
     'strapiMediaUrl'
   ];
 
-  const imageSource = imageurl ? strapiMediaUrl + imageurl : null;
+  const imageSource = imageurl ? strapiMediaUrl + imageurl : defaultImage;
 
   const [coCoImage, setCoCoImg] = useState(imageSource);
 
   //If the image cannot be loaded from the backend the coCo image is used by default
-  const onError = (error) => {
-    setCoCoImg(
-      require('../../../images/pngIllustrations/CoCoWhite.png').default
-    );
-  };
-
-  if (!coCoImage) {
-    setCoCoImg(
-      require('../../../images/pngIllustrations/CoCoWhite.png').default
-    );
-  }
+  const onError = (error) => setCoCoImg(defaultImage);
 
   return (
     <Row top="xs" style={{ marginTop: '60px' }}>
