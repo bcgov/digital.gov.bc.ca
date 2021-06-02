@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
-import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
+import HorizontalCoCoCard from './horizontalCoCoCard';
 
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
@@ -87,7 +87,7 @@ const Assembling = () => {
         ))}
       </Row>
       <Row>
-        <HorizontalInfoCard
+        <HorizontalCoCoCard
           title={'Common Components'}
           img={coCoGrey}
           description={
