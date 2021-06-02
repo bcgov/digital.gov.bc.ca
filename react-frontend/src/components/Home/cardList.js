@@ -16,6 +16,7 @@ const communityGrey = require('../../images/pngIllustrations/communityGrey.png')
   .default;
 const caseStudiesGrey = require('../../images/pngIllustrations/caseStudiesGrey.png')
   .default;
+const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const descriptions = [
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
@@ -24,15 +25,7 @@ const descriptions = [
   'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.',
   'The digital delivery network within the BC Public Service is active and growing. Connect, learn, and contribute!',
   'See examples of how teams are improving digital services for British Columbians.',
-];
-
-const linkTexts = [
-  'Read the framework',
-  'Read the principles',
-  'Read the policy',
-  'Find resources',
-  'Connect',
-  'Learn more',
+  'Reusable building blocks to create your product or service',
 ];
 
 const CardList = () => {
@@ -45,7 +38,7 @@ const CardList = () => {
               img={digitalFrameworkGrey}
               title={'Digital Framework'}
               description={descriptions[0]}
-              linkText={linkTexts[0]}
+              linkText="Read the framework"
               routePath="/digital-framework"
               height="300px"
             />
@@ -55,7 +48,7 @@ const CardList = () => {
               img={digitalPrinciplesGrey}
               title={'Digital Principles'}
               description={descriptions[1]}
-              linkText={linkTexts[1]}
+              linkText="Read the principles"
               routePath={'/resources/digital-principles'}
               height="300px"
             />
@@ -64,11 +57,11 @@ const CardList = () => {
         <Row>
           <Col sm={12} md={6}>
             <InfoCard
-              img={productsGrey}
-              title={'Products & Services'}
-              description={descriptions[2]}
-              linkText="Find support"
-              routePath={'/products-services'}
+              img={coCoGrey}
+              title={'Common Components'}
+              description={descriptions[6]}
+              linkText="View the collection"
+              routePath={'/common-components'}
               height="300px"
             />
           </Col>
@@ -77,7 +70,7 @@ const CardList = () => {
               img={resourcesGrey}
               title={'Resources'}
               description={descriptions[3]}
-              linkText={linkTexts[3]}
+              linkText="Find resources"
               routePath="/resources"
               height="300px"
             />
@@ -103,7 +96,7 @@ const CardList = () => {
               img={caseStudiesGrey}
               title={'Case Studies'}
               description={descriptions[5]}
-              linkText={linkTexts[5]}
+              linkText="Learn more"
               routePath="/case-studies"
             />
           </Col>
