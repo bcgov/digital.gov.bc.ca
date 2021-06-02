@@ -13,26 +13,31 @@ import {
   HrefLinkStandaloneInternal,
 } from '../StyleComponents/htmlTags';
 
-const HorizontalInfoCard = (props) => {
+const HorizontalInfoCard = ({
+  img,
+  title,
+  description,
+  routePath,
+  linkText,
+  linkPath,
+}) => {
   return (
     <CardHorizontal>
-      <CardHorizontalImage backgroundImage={props.img} />
+      <CardHorizontalImage backgroundImage={img} />
       <CardHorizontalText>
-        <CardHorizontalTitle>{props.title}</CardHorizontalTitle>
-        <CardHorizontalDescription>
-          {props.description}
-        </CardHorizontalDescription>
-        {props.routePath ? (
-          <HrefLinkStandaloneInternal to={props.routePath}>
-            {props.linkText}
+        <CardHorizontalTitle>{title}</CardHorizontalTitle>
+        <CardHorizontalDescription>{description}</CardHorizontalDescription>
+        {routePath ? (
+          <HrefLinkStandaloneInternal to={routePath}>
+            {linkText}
           </HrefLinkStandaloneInternal>
         ) : (
           <HrefLinkStandalone
-            href={props.linkPath}
+            href={linkPath}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {props.linkText}
+            {linkText}
           </HrefLinkStandalone>
         )}
       </CardHorizontalText>
