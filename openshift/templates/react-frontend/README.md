@@ -8,6 +8,24 @@ In other words
 
 The deployment is fairly simple, caddy2 will recieve a __Caddyfile__ configmap and a deployment config manages its lifecycle. 
 
+## Reverse Proxy
+
+Reverse proxy's are configured in the `./dc.yaml` file.
+
+### Digital Marketplace
+
+The route `/marketplace` redirects to the digital marketplace app.  This behaves defferently in the 3 nampaces.
+- dev: Current Digintal.gov dev deployements proxy to the Marketplace dev deployment. Marketplace's dev deployment is currently configured in a way that does not render the site from this url. Though the user will be prompted to login.
+- test: The Digintal.gov test deployement is proxied to the Marketplace test deployment.
+The current configuration of the marketplace app will work properly when accessed from `https://digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca/marketplace` (once they log in, contact Digital Marketplace admins for credentials).
+- prod: Only users from digital.gov.bc.ca/marketplace will be able to access the marketplace app.
+
+#### Configuring Marketplace App 
+
+To allow the marketplace app proxy to function the marketplace app must have environment variables set in three places.
+1) The env variable `PATH_PREFIX='marketplace'` must be added to relevant build in the marketplace tools namspace. Then the project needs to be re-built.
+2) In the relevant namespace the Config Map  `app-digmkt-${NAMESPACE}-config` must have the variables `ORIGIN` and `PATH_PREFIX='marketplace'` set.  `ORIGIN=https://digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca/marketplace` for test.
+3) In order for Keycloak autentication to work, the digital gov url has to be whitelisted in the Marketplace keycloak test realm.  
 
 ## Labels
 

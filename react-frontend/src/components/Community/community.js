@@ -33,10 +33,11 @@ function LinkWithIcon({ icon, text, url }) {
 }
 
 function CommunityImage({ url }) {
-  const config = useContext(AppConfigContext);
-  const strapiURL = config['state']['strapiApiUrl'];
+  const strapiMediaUrl = useContext(AppConfigContext)['state'][
+    'strapiMediaUrl'
+  ];
   if (url) {
-    const imageSource = strapiURL?.replace('/graphql', url);
+    const imageSource = strapiMediaUrl + url;
     return (
       <img
         src={imageSource}
@@ -51,21 +52,24 @@ function CommunityImage({ url }) {
 function Community() {
   const params = useParams();
   return (
-    <DocumentTitle title="Community Page">
-      <PageContainer>
-        <Query query={COMMUNITY_QUERY} uid={params.uid}>
-          {({ data: { communityPages } }) => {
-            if (communityPages.length === 0) {
-              return <NotFound />;
-            }
-            const communityPage = communityPages[0];
-
-            return (
+    <PageContainer>
+      <Query query={COMMUNITY_QUERY} uid={params.uid}>
+        {({ data: { communityPages } }) => {
+          if (communityPages.length === 0) {
+            return <NotFound />;
+          }
+          const communityPage = communityPages[0];
+          const communityTitle = communityPage?.Title;
+          return (
+            <DocumentTitle
+              title={
+                communityTitle +
+                ' - Digital Government - Province of British Columbia'
+              }
+            >
               <Row>
                 <Col xs={12} md={8} style={{ paddingRight: '30px' }}>
-                  <Title style={{ lineHeight: '1.2' }}>
-                    {communityPage?.Title}
-                  </Title>
+                  <Title style={{ lineHeight: '1.2' }}>{communityTitle}</Title>
                   <p>{communityPage?.Description}</p>
                   <Heading>Who we are</Heading>
                   <p>{communityPage?.WhoWeAre}</p>
@@ -130,11 +134,11 @@ function Community() {
                   </div>
                 </Col>
               </Row>
-            );
-          }}
-        </Query>
-      </PageContainer>
-    </DocumentTitle>
+            </DocumentTitle>
+          );
+        }}
+      </Query>
+    </PageContainer>
   );
 }
 

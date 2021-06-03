@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_co_co_month_year_createds",
+  "info": {
+    "name": "MonthYearCreated",
+    "icon": "calendar-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Month": {
+      "type": "enumeration",
+      "enum": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    },
+    "Year": {
+      "type": "integer",
+      "default": 2020
+    }
+  }
+}

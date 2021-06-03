@@ -7,7 +7,10 @@ export class AppConfig extends Component {
   // constructor to make sure the config is assigned
   constructor() {
     super();
-    this.state = { strapiApiUrl: null };
+    this.state = {
+      strapiApiUrl: null,
+      strapiMediaUrl: null,
+    };
   }
 
   componentDidMount() {
@@ -21,7 +24,12 @@ export class AppConfig extends Component {
         // analyze HTTP status of the xhrs response
         // do something
       } else {
-        this.setState(JSON.parse(xhr.response));
+        const strapiURLs = JSON.parse(xhr.response);
+        strapiURLs.strapiMediaUrl = strapiURLs?.strapiApiUrl?.replace(
+          '/graphql',
+          ''
+        );
+        this.setState(strapiURLs);
       }
     };
   }
