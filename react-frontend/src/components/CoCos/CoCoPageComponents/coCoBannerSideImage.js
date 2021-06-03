@@ -12,7 +12,7 @@ import {
 import { BannerSideImgTitle } from '../../StyleComponents/bannerWithImage';
 import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
-const defaultImage = require('../../../images/pngIllustrations/CoCoWhite.png')
+const defaultImage = require('../../../images/pngIllustrations/coCoWhite.png')
   .default;
 
 function CoCoBannerSideImage({

@@ -69,6 +69,22 @@ export const CardHorizontalImage = styled.div.attrs({
   }
 `;
 
+export const CardHorizontalCoCoImage = styled.div.attrs({
+  className: 'cardHorizontalImage',
+})`
+  background: white;
+  background-position: center;
+  background-size: cover;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  text-align: center;
+  width: 100%;
+  @media only screen and (min-width: 768px) {
+    border-radius: ${cardBorderRadius} 0 0 ${cardBorderRadius};
+    height: initial;
+    width: 50%;
+  }
+`;
+
 export const CardHorizontalText = styled.div.attrs({
   className: 'cardHorizontalText',
 })`
