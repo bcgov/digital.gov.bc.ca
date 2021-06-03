@@ -58,7 +58,7 @@ function CoCoPage() {
                 <Analytics
                   coCoName={coCos[0]?.Name}
                   numberOfUsers={coCos[0]?.NumberOfUsers}
-                  creationDate={coCos[0]?.ComponentCreationDate}
+                  creationDate={coCos[0]?.MonthAndYearCreated}
                   whoIsUsingThis={coCos[0]?.WhoIsUsingThis}
                 />
                 <ScrollElement name="about" className="element" />

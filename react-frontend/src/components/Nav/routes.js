@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from '../../components/Home/home';
 import Resources from '../../components/Resources/resources';
+import BlogHome from '../../components/Blog/blogHome';
+import BlogPage from '../../components/Blog/blogPage';
 import CaseStudies from '../../components/CaseStudies/casestudies';
 import Communities from '../../components/Community/communities';
 import Community from '../../components/Community/community';
@@ -15,6 +17,7 @@ import BreadCrumbs from './breadcrumbs';
 import NotFound from '../NotFoundPage/notFoundPage';
 
 const DisplayNames = {
+  blog: 'Blog',
   'case-studies': 'Case Studies',
   'communication-platforms': 'Communication Platform',
   'digital-framework': 'Digital Framework',
@@ -37,6 +40,8 @@ const Routes = () => {
           path="/resources/digital-principles"
           component={DigitalPrinciples}
         />
+        <Route exact path="/blog" component={BlogHome} />
+        <Route exact path="/blog/:uid" component={BlogPage} />
         <Route exact path="/resources" component={Resources} />
         <Route exact path="/common-components" component={CoCos} />
         <Route exact path="/common-components/:uid" component={CoCoPage} />
