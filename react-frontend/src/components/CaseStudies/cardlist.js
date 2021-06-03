@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import { useRouteMatch } from 'react-router-dom';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
-import HorizontalInfoCard from './horizontalinfocard';
+import HorizontalInfoCard from './horizontalInfoCard';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 

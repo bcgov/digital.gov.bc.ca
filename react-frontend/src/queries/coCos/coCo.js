@@ -34,7 +34,6 @@ const COCO_QUERY = gql`
         }
         Summary
       }
-      ComponentCreationDate
       GetStartedURL
       CoCoWebsite
       GetStartedSteps
@@ -42,6 +41,10 @@ const COCO_QUERY = gql`
       AdditionalTechnicalInformation
       RequirementsAndRestrictions
       Support
+      MonthAndYearCreated {
+        Month
+        Year
+      }
     }
   }
 `;

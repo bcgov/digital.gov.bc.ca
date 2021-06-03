@@ -29,7 +29,7 @@ export const BlogCardAuthorLine = styled.div`
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`
-  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
@@ -61,6 +61,22 @@ export const CardHorizontalImage = styled.div.attrs({
   background-size: cover;
   border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
   height: 200px;
+  width: 100%;
+  @media only screen and (min-width: 768px) {
+    border-radius: ${cardBorderRadius} 0 0 ${cardBorderRadius};
+    height: initial;
+    width: 50%;
+  }
+`;
+
+export const CardHorizontalCoCoImage = styled.div.attrs({
+  className: 'cardHorizontalImage',
+})`
+  background: white;
+  background-position: center;
+  background-size: cover;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  text-align: center;
   width: 100%;
   @media only screen and (min-width: 768px) {
     border-radius: ${cardBorderRadius} 0 0 ${cardBorderRadius};

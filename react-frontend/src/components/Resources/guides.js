@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
-import HorizontalInfoCard from '../CaseStudies/horizontalinfocard';
+import HorizontalInfoCard from '../CaseStudies/horizontalInfoCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';

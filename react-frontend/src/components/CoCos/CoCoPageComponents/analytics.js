@@ -7,36 +7,50 @@ import MinistryUse from './ministryUse';
 import { Heading, SubHeading } from '../../StyleComponents/headings';
 
 function Analytics({ coCoName, numberOfUsers, creationDate, whoIsUsingThis }) {
-  let ministries = whoIsUsingThis?.map((who) => who?.ministry?.MinistryAcronym);
-  let summaries = whoIsUsingThis?.map((who) => who?.Summary);
-
-  if (ministries && summaries) {
-    return (
-      <div style={{ marginTop: '60px' }}>
-        <Row>
-          <Col xs={12}>
-            <Heading>Who else is using this?</Heading>
-          </Col>
-        </Row>
-        <Row>
-          <MinistryUse acronym={ministries[0]} summary={summaries[0]} />
-          <MinistryUse acronym={ministries[1]} summary={summaries[1]} />
-          <MinistryUse acronym={ministries[2]} summary={summaries[2]} />
-        </Row>
-        <Row>
-          <Col xs={6}>
+  return (
+    <div style={{ marginTop: '60px' }}>
+      {whoIsUsingThis?.length > 0 && (
+        <>
+          <Row data-testid="ministries">
+            <Col xs={12}>
+              <Heading>Who else is using this?</Heading>
+            </Col>
+          </Row>
+          <Row>
+            {whoIsUsingThis.map((who, i) => (
+              <MinistryUse
+                acronym={who?.ministry?.MinistryAcronym}
+                summary={who?.Summary}
+                key={i}
+              />
+            ))}
+          </Row>
+        </>
+      )}
+      <Row>
+        {creationDate?.Year && (
+          <Col xs={12} sm={numberOfUsers ? 6 : 4}>
             <SubHeading>Running Since</SubHeading>
-            <p data-testid="date">{dateFormat(creationDate, 'mmmm yyyy')}</p>
+            <p data-testid="date">
+              {creationDate?.Month
+                ? creationDate.Month + ' ' + creationDate?.Year
+                : creationDate.Year}
+            </p>
           </Col>
-          <Col xs={6} style={{ textAlign: 'center' }}>
+        )}
+        {numberOfUsers && (
+          <Col
+            xs={12}
+            sm={creationDate?.Year ? 6 : 4}
+            style={{ textAlign: 'center' }}
+          >
             <SubHeading>{numberOfUsers}</SubHeading>
-            <p>teams using {coCoName}</p>
+            <p data-testid="numberOfUsers">teams using {coCoName}</p>
           </Col>
-        </Row>
-      </div>
-    );
-  }
-  return <div />;
+        )}
+      </Row>
+    </div>
+  );
 }
 
 export default Analytics;
