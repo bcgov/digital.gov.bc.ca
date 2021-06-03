@@ -17,8 +17,8 @@
       "unique": true
     },
     "co_cos": {
-      "collection": "co-co",
-      "via": "Tags"
+      "via": "Tags",
+      "collection": "co-co"
     }
   }
 }

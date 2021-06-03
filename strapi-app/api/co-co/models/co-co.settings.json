@@ -24,11 +24,11 @@
       "type": "component",
       "repeatable": false,
       "component": "co-co.co-co-development-status",
-      "required": true
+      "required": false
     },
     "Tags": {
-      "via": "co_cos",
       "collection": "tag",
+      "via": "co_cos",
       "dominant": true
     },
     "TeamNameAndMinistry": {
@@ -70,13 +70,8 @@
       "type": "component",
       "repeatable": true,
       "component": "co-co.why-should-iu-se-this",
-      "required": true,
-      "max": 3,
-      "min": 3
-    },
-    "ComponentCreationDate": {
-      "type": "date",
-      "required": true
+      "required": false,
+      "max": 3
     },
     "GetStartedURL": {
       "type": "string",
@@ -104,14 +99,6 @@
       "type": "richtext",
       "required": true
     },
-    "WhoIsUsingThis": {
-      "type": "component",
-      "repeatable": true,
-      "component": "co-co.who-is-using-this",
-      "required": true,
-      "max": 3,
-      "min": 3
-    },
     "ShortDescription": {
       "type": "text",
       "required": true
@@ -124,6 +111,17 @@
     },
     "Support": {
       "type": "richtext"
+    },
+    "WhoIsUsingThis": {
+      "type": "component",
+      "repeatable": true,
+      "component": "co-co.who-is-using-this",
+      "max": 3
+    },
+    "MonthAndYearCreated": {
+      "type": "component",
+      "repeatable": false,
+      "component": "co-co.month-year-created"
     }
   }
 }
