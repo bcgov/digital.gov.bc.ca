@@ -1,10 +1,13 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
+import HorizontalCoCoCard from './horizontalCoCoCard';
 
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
+
+const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const cards = [
   <div>
@@ -97,6 +100,17 @@ const Considering = () => {
             <ProductsCard content={element} />
           </Col>
         ))}
+      </Row>
+      <Row>
+        <HorizontalCoCoCard
+          title={'Common Components'}
+          img={coCoGrey}
+          description={
+            'Reusable building blocks to create your product or service'
+          }
+          linkText={'View the collection'}
+          routePath={'/common-components'}
+        />
       </Row>
     </ContentBlockContainer>
   );
