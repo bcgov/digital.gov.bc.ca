@@ -1,6 +1,6 @@
 # Creating a manual backup of the Mongo Database
 
-If a user is doing something potentially risky, like creating a new role in the prod namespace it is a good idea to create a manual backup in case something goes wrong.  These instructions alloe them to do this safely.
+If a user is doing something potentially risky, like creating a new role in the prod namespace it is a good idea to create a manual backup in case something goes wrong.  These instructions allow them to do this safely.
 
 ## **Step 1:** Go to the terminal of any Mongo pod in Openshift 
 
