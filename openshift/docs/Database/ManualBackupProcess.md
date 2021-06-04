@@ -45,4 +45,8 @@ Do this by running mongorestore command in the terminal of the Primary pod
 
 `mongorestore --host 127.0.0.1 --port 27017 -d digitalgov --username <username> --password <password> <location on machine>`
 
-Note the `<location on machine>` must be the location of the backup, not the folder.  In this example it's `dumps/digitalgov` and not `./dumps`.
+Note the `<location on machine>` must be the location of the backup, not the folder.  In this example it's `dumps/digitalgov` and not `./dumps`.  
+
+## **Step 9:** Confirm the database has been restored
+
+Log into the strapi app and confirm the data is present. Note: if the data wasn't restored the user will not be able to login at all.
