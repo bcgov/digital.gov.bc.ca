@@ -25,7 +25,7 @@ For example to sync it with the dumps folder in the current directory:
 
 `oc rsync mongodb-0:/opt/app-root/src/dumps ./dumps`
 
-## **Step 5:** Log into the PRIMARY mongo db.
+## **Step 5:** Log into the PRIMARY mongo db replica.
 
 In the terminal of a mongo pod, run the command `mongo 127.0.0.1:27017/digitalgov -u <username> -p <password>`. If the terminal indicates it's the Primary replica continue to stem 6. If it indicates it is a Secondary replica, log out and repeat the login on a **different** pod.  Repeat until you've found the Primary pod.
 
