@@ -1,13 +1,15 @@
 # Creating a manual backup of the Mongo Database
 
-If a user is doing something potentially risky, like creating a new role in the prod namespace it is a good idea to create a manual backup in case something goes wrong.  These instructions allow them to do this safely.
+If a user is doing something potentially risky, like creating a new role in the prod namespace it is a good idea to create a manual backup in case something goes wrong.  These instructions allows them to do this safely.
 
 ## **Step 1:** Go to the terminal of any Mongo pod in Openshift 
 
 ## **Step 2:** Create a new folder and use the mongodump command to create a dump of the database.
 
 `mkdir dumps`
+
 `cd dumps`
+
 `mongodump --host 127.0.0.1 --port 27017 --db digitalgov -u <username> -p <password>`
 
 ## **Step 3:** Login to openshift command prompt on your machine and select the relevant project.
