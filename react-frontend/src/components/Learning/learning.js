@@ -1,14 +1,12 @@
 import React from 'react';
 
+import ContactUs from './podcast';
 import Courses from './courses';
 import Events from './events';
-// import DigitalCards from './digitalcards';
-// import ForDesigners from './fordesigners';
-// import ForDevelopers from './fordevelopers';
+import Podcast from './podcast';
+
 import DocumentTitle from 'react-document-title';
-// import Guides from './guides';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
-// import Standards from './standards';
 
 const learningImage = require('../../images/pngIllustrations/learningWhite.png')
   .default;
@@ -26,11 +24,8 @@ function Learning() {
         />
         <Courses />
         <Events />
-        {/* <DigitalCards />
-        <Standards />
-        <Guides />
-        <ForDesigners />
-        <ForDevelopers /> */}
+        <ContactUs />
+        <Podcast />
       </div>
     </DocumentTitle>
   );

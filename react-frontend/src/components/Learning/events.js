@@ -1,11 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
-import HorizontalInfoCard from '../CaseStudies/horizontalInfoCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { Heading } from '../StyleComponents/headings';
-
-const videoCommsImg = require('../../images/videocomms.png').default;
 
 function Events() {
   return (
