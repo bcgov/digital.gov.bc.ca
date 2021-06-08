@@ -18,4 +18,8 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+  //Test at every minute
+  '* * * * *': function () {
+    strapi.config.functions.eventbrite();
+  }
 };
