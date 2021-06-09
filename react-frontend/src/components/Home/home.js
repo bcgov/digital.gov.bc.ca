@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
-import CardList from './cardlist';
+import CardList from './cardList';
 import DocumentTitle from 'react-document-title';
 
 const bannerContent = (
