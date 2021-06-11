@@ -43,7 +43,10 @@ function NotFound({ standards }) {
           </StyledP>
           <StyledP>
             If you would like to email us, please contact{' '}
-            <HrefLink>Digital.Government@gov.bc.ca</HrefLink>.
+            <HrefLink href="mailto:digital.government@gov.bc.ca">
+              Digital.Government@gov.bc.ca
+            </HrefLink>
+            .
           </StyledP>
         </PageContainer>
       </div>
