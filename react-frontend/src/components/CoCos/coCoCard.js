@@ -110,21 +110,19 @@ function CoCoCard({
             </Row>
             <Row center="xs">{cost}</Row>
           </IconCol>
-          <IconCol
-            data-testid="user-count"
-            xs={3}
-            title={
-              numberOfUsers
-                ? 'Number of Teams Using CoCo'
-                : 'Unknown number of Teams Using CoCo'
-            }
-          >
-            <Row center="xs" style={{ height: '18px' }}>
-              <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
-              {numberOfUsers ? numberOfUsers : ' ?'}
-            </Row>
-            <Row center="xs">Teams</Row>
-          </IconCol>
+          {numberOfUsers && (
+            <IconCol
+              data-testid="user-count"
+              xs={3}
+              title={'Number of Teams Using CoCo'}
+            >
+              <Row center="xs" style={{ height: '18px' }}>
+                <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
+                {numberOfUsers}
+              </Row>
+              <Row center="xs">Teams</Row>
+            </IconCol>
+          )}
           <IconCol
             data-testid="onboarding-time"
             xs={3}
