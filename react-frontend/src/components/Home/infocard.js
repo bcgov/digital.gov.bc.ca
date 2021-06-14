@@ -35,6 +35,7 @@ function InfoCard({
       <CardStyled
         style={{ overflow: 'hidded' }}
         cover={<CardIllustration alt="" src={img} />}
+        data-testid="styled-card"
       >
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -63,7 +64,7 @@ function InfoCard({
     );
   } else {
     return (
-      <CardStyled>
+      <CardStyled data-testid="styled-card">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
         <CardLinkDiv>
