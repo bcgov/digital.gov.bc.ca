@@ -19,7 +19,7 @@ module.exports = {
   //
   // }
   //Test at every minute
-  '* * * * *': function () {
-    strapi.config.functions.eventbrite();
-  }
+  // '* * * * *': function () {
+  //   strapi.config.functions.eventbrite();
+  // }
 };
