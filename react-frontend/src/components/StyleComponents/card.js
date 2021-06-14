@@ -194,14 +194,21 @@ export const CommunityCardStyled = styled(Link).attrs({
   className: 'cardRound',
 })`
   background: #003366;
+  border: 5px solid rgb(242, 242, 242);
   border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  :hover {
-    box-shadow: 5px 7px grey;
+  :hover, :focus {
+    border: 5px solid #fdb917;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.25s; /* These make the interaction less jumpy */
+    transition-timing-function: ease-in-out;
+  }
+  :focus {
+    outline: -webkit-focus-ring-color auto 5px !important;
   }
 `;
 
