@@ -201,7 +201,6 @@ export const CommunityCardStyled = styled(Link).attrs({
   display: flex;
   flex-direction: column;
   :hover, :focus {
-    border: 5px solid #fdb917;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.25s; /* These make the interaction less jumpy */
     transition-timing-function: ease-in-out;
