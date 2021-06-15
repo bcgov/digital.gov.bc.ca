@@ -194,7 +194,6 @@ export const CommunityCardStyled = styled(Link).attrs({
   className: 'cardRound',
 })`
   background: #003366;
-  border: 5px solid rgb(242, 242, 242);
   border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
