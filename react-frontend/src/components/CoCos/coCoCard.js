@@ -86,13 +86,16 @@ function CoCoCard({
           {title}
         </CardTitle>
         <p>{nameAndMinistry}</p>
-        <CardDescription
+        {/* This is commented out until a design desision is made */}
+        {/* <CardDescription
           data-testid="description"
           style={{ marginBottom: '40px' }}
-        >
+        > */}
+        <CardDescription data-testid="description">
           {description}
         </CardDescription>
-        <Row
+        {/* This is commented out until a design desision is made  */}
+        {/* <Row
           start="xs"
           style={{ bottom: '20px', position: 'absolute', width: '90%' }}
         >
@@ -140,7 +143,7 @@ function CoCoCard({
             </Row>
             <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
           </IconCol>
-        </Row>
+        </Row> */}
       </CardStyled>
     </Link>
   );
