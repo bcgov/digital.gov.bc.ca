@@ -3,7 +3,7 @@ import { Card } from 'antd';
 import { Col } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 
-const cardBorderRadius = '25px';
+const cardBorderRadius = '12px';
 
 export const BlogCardThumnail = styled.img`
   background: #003366;
@@ -193,7 +193,7 @@ export const CommunityCardHeader = styled.h5.attrs({
 export const CommunityCardStyled = styled(Link).attrs({
   className: 'cardRound',
 })`
-  background: #003366;
+  border: 5px solid transparent;
   border-radius: ${cardBorderRadius};
   height: 95%;
   margin-bottom: 20px;
@@ -201,6 +201,7 @@ export const CommunityCardStyled = styled(Link).attrs({
   display: flex;
   flex-direction: column;
   :hover, :focus {
+    border-color: #fdb917;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.25s; /* These make the interaction less jumpy */
     transition-timing-function: ease-in-out;
