@@ -20,6 +20,6 @@ module.exports = {
   // }
   //Test at every minute
   '* * * * *': function () {
-    strapi.config.functions.eventbrite();
+    strapi.config.functions.eventbrite()
   }
 };
