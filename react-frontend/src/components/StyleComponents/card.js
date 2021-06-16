@@ -3,7 +3,8 @@ import { Card } from 'antd';
 import { Col } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 
-const cardBorderRadius = '12px';
+const cardBorderRadius = '25px';
+const cardBorderInsetRadius = '21px';
 
 export const BlogCardThumnail = styled.img`
   background: #003366;
@@ -167,10 +168,9 @@ export const CommunityCardDescription = styled.p.attrs({
   className: 'cardHorizontalText',
 })`
   background: #ffffff;
-  border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
-  height: 200px;
-  margin-top: auto;
-  margin-bottom: -2px;
+  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+  height: 100%;
+  margin: 0;
   overflow: hidden;
   padding: 24px;
   text-align: left;
@@ -180,12 +180,12 @@ export const CommunityCardHeader = styled.h5.attrs({
   className: 'cardHorizontalText',
 })`
   background: #003366;
-  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
   color: #ffffff;
   font-weight: 700;
   font-size: 21px;
   height: fit-content;
-  margin-bottom: 0;
+  margin: 0;
   padding: 24px;
   text-align: left;
 `;
@@ -193,9 +193,9 @@ export const CommunityCardHeader = styled.h5.attrs({
 export const CommunityCardStyled = styled(Link).attrs({
   className: 'cardRound',
 })`
-  border: 5px solid transparent;
+  border: 6px solid transparent;
   border-radius: ${cardBorderRadius};
-  height: 95%;
+  height: 100%;
   margin-bottom: 20px;
   width: 100%;
   display: flex;
@@ -203,11 +203,11 @@ export const CommunityCardStyled = styled(Link).attrs({
   :hover, :focus {
     border-color: #fdb917;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 0.25s; /* These make the interaction less jumpy */
+    transition: 0.15s; /* These make the interaction less jumpy */
     transition-timing-function: ease-in-out;
   }
   :focus {
-    outline: -webkit-focus-ring-color auto 5px !important;
+    outline: -webkit-focus-ring-color auto 6px !important;
   }
 `;
 
