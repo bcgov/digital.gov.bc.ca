@@ -2,12 +2,12 @@ let EVENTBRITE_CRON_IN_PROCESS = false;
 
 const eventbriteCronStarted = () => {
   EVENTBRITE_CRON_IN_PROCESS = true;
-  console.log("The Eventbrite CronJob is triggered.")
+  strapi.log.info("The Eventbrite CronJob is triggered.")
 }
 
 const eventbriteCronCompleted = () => {
   EVENTBRITE_CRON_IN_PROCESS = false;
-  console.log("The Eventbrite CronJob is Completed.")
+  strapi.log.info("The Eventbrite CronJob is Completed.")
 }
 
 const isEventbriteCronInProgress = () => {

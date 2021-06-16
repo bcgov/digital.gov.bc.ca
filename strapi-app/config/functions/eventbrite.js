@@ -34,19 +34,22 @@ async function getEvents() {
 }
 
 module.exports = async () => {
+  // Due to multiple strapi pods, the cron job is handled 
+  // by the fist one to detect that it hasn't been run.
+  // when it is completed it will set EVENTBRITE_CRON_IN_PROCESS
+  // back to false in the shared volume folder 
   const {
     eventbriteCronStarted,
     eventbriteCronCompleted,
     isEventbriteCronInProgress
   } = require('../../public/PublicVariables')
+
   if (!isEventbriteCronInProgress()) {
     eventbriteCronStarted();
     try {
-
       //Get a list of all entries in strapi
       const savedEvents = await strapi.query('eventbrite-event').model.find({}).select({ EventID: 1 });
       const listSavedEvents = savedEvents.map(savedEvent => savedEvent["EventID"])
-      console.log(listSavedEvents)
 
       //Get the current live events from eventbrite
       const events = await getEvents();
@@ -56,7 +59,6 @@ module.exports = async () => {
       listSavedEvents.forEach(savedEventID => {
         if (!listEventIDs.includes(savedEventID)) {
           strapi.query('eventbrite-event').delete({ EventID: savedEventID })
-          console.log(`deleted event ${savedEventID}`)
         }
       })
 
@@ -82,7 +84,6 @@ module.exports = async () => {
                 StartTime: event.start.utc,
                 SeriesUID: event.series_id
               });
-          console.log(`updated event ${event.id}`)
         } else {
           //If the event is not stored in strapi create a new one.
           strapi
@@ -98,14 +99,12 @@ module.exports = async () => {
               StartTime: event.start.utc,
               SeriesUID: event.series_id
             });
-          console.log(`created event ${event.id}`)
         }
 
       });
     } catch (err) {
-      console.log(err)
+      strapi.log.info(err)
     } finally {
-      strapi.log.info('The eventbrite endpoint was called');
       eventbriteCronCompleted();
     }
   }
