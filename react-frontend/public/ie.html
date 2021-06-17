@@ -16,12 +16,16 @@
   }
 
   .browserIcon {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    filter: gray;
     width: 100px;
   }
 
-  .browserIcon:hover {
+  .browserLink {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: gray;
+  }
+
+  .browserLink:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     filter: none;
   }
 
@@ -55,17 +59,17 @@
   </div>
   <div class="row-bottom">
     <div class="column-3">
-      <a href="https://www.google.com/intl/en_ca/chrome/">
+      <a href="https://www.google.com/intl/en_ca/chrome/" class="browserLink">
         <img src="./IENotSupportedImg/chromeIcon.png" class="browserIcon" />
       </a>
     </div>
     <div class="column-3">
-      <a href="https://www.mozilla.org/en-CA/firefox/">
+      <a href="https://www.mozilla.org/en-CA/firefox/" class="browserLink">
         <img src="./IENotSupportedImg/firefoxBrowser.png" class="browserIcon" />
       </a>
     </div>
     <div class="column-3">
-      <a href="https://support.apple.com/downloads/safari">
+      <a href="https://support.apple.com/downloads/safari" class="browserLink">
         <img src="./IENotSupportedImg/safariIcon.png" class="browserIcon" />
       </a>
     </div>
