@@ -26,8 +26,8 @@ import {
 } from '../StyleComponents/htmlTags';
 import { NavBarContainer } from '../StyleComponents/pageContent';
 
-const mobileImg = require('../../images/logo-banner.png').default;
-const desktopImg = require('../../images/logo.png').default;
+const mobileImg = require('../../images/BCID_V_pms_rev.eps').default;
+const desktopImg = require('../../images/BCID_H_pms_rev.eps').default;
 
 function NavBar() {
   const history = useHistory();
