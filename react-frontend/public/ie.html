@@ -2,7 +2,7 @@
   .column {
     float: left;
     top: 50%;
-    width: 50%;
+    max-width: 50%;
   }
 
   .column-3 {
@@ -11,14 +11,13 @@
   }
 
   .coverImage {
-    width: 100%;
+    max-width: 80%;
+    max-height: 100%;
   }
 
   .browserIcon {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    /* Firefox 3.5+ */
     filter: gray;
-    /* IE6-9 */
     width: 100px;
   }
 
@@ -26,24 +25,35 @@
     filter: none;
   }
 
-  .row {
+  .row-top {
+    overflow: hidden;
     text-align: center;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+
+  .row-bottom {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px;
   }
 </style>
 
-<body style="background-color:#f2f2f2;">
-  <div class="row" style="height: 300;">
+<body style="background-color:#f2f2f2; min-width:600px;">
+  <div class="row-top" style="height: 300;">
     <div class=" column">
-      <h1>It’s not you - it’s your browser.</h1>
-      <p>We are sorry but your browser isn’t supported. To enjoy the best experience with our website, we recommend
-        using
-        any of the following browsers.</p>
+      <div style="padding: 16px;">
+        <h1>It’s not you - it’s your browser.</h1>
+        <p>We are sorry but your browser isn’t supported. To enjoy the best experience with our website, we recommend
+          using
+          any of the following browsers.</p>
+      </div>
     </div>
     <div class="column">
       <img src="./IENotSupportedImg/browserNotSupportedWhite.png" alt="Browser not supported" class='coverImage'>
     </div>
   </div>
-  <div class="row">
+  <div class="row-bottom">
     <div class="column-3">
       <a href="https://www.google.com/intl/en_ca/chrome/">
         <img src="./IENotSupportedImg/chromeIcon.png" class="browserIcon" />
