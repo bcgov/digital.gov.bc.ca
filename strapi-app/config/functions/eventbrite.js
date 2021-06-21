@@ -2,9 +2,6 @@ const axios = require('axios');
 
 const FORMAT_ID_FOR_COURSE = 9;
 
-//Handle Errors (send admin an alert or email, post a comment in the feedback page)
-//Handle the multiple pages if needed (MAKE SURE IT DOESN'T BREAK OTHER STUFF) DONE MAKE IT ONLY LIVE EVENTS ONCE EVERTHING IS WORKING
-
 // Populate a list of live eventbrite events 
 async function getEvents() {
   let events = [];
@@ -12,7 +9,6 @@ async function getEvents() {
 
   let continuationToken = null
   do {
-    // let baseURL = 'https://www.eventbriteapi.com/v3/organizations/228490647317/events'
     let baseURL = 'https://www.eventbriteapi.com/v3/organizations/228490647317/events?status=live';
     if (hasMoreItems && continuationToken) {
       baseURL = baseURL + `?continuation=${continuationToken}`;
