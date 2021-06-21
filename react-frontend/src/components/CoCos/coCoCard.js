@@ -86,13 +86,16 @@ function CoCoCard({
           {title}
         </CardTitle>
         <p>{nameAndMinistry}</p>
-        <CardDescription
+        {/* This is commented out until a design desision is made */}
+        {/* <CardDescription
           data-testid="description"
           style={{ marginBottom: '40px' }}
-        >
+        > */}
+        <CardDescription data-testid="description">
           {description}
         </CardDescription>
-        <Row
+        {/* This is commented out until a design desision is made  */}
+        {/* <Row
           start="xs"
           style={{ bottom: '20px', position: 'absolute', width: '90%' }}
         >
@@ -107,21 +110,19 @@ function CoCoCard({
             </Row>
             <Row center="xs">{cost}</Row>
           </IconCol>
-          <IconCol
-            data-testid="user-count"
-            xs={3}
-            title={
-              numberOfUsers
-                ? 'Number of Teams Using CoCo'
-                : 'Unknown number of Teams Using CoCo'
-            }
-          >
-            <Row center="xs" style={{ height: '18px' }}>
-              <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
-              {numberOfUsers ? numberOfUsers : ' ?'}
-            </Row>
-            <Row center="xs">Teams</Row>
-          </IconCol>
+          {numberOfUsers && (
+            <IconCol
+              data-testid="user-count"
+              xs={3}
+              title={'Number of Teams Using CoCo'}
+            >
+              <Row center="xs" style={{ height: '18px' }}>
+                <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
+                {numberOfUsers}
+              </Row>
+              <Row center="xs">Teams</Row>
+            </IconCol>
+          )}
           <IconCol
             data-testid="onboarding-time"
             xs={3}
@@ -142,7 +143,7 @@ function CoCoCard({
             </Row>
             <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
           </IconCol>
-        </Row>
+        </Row> */}
       </CardStyled>
     </Link>
   );

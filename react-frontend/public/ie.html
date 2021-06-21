@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<style>
+  .column {
+    float: left;
+    top: 50%;
+    width: 50%;
+    max-width: 500px;
+  }
+
+  .column-3 {
+    float: left;
+    width: 33%;
+    max-width: 333px;
+
+  }
+
+  .coverImage {
+    max-width: 400px;
+    max-height: 100%;
+  }
+
+  .browserIcon {
+    border: none;
+    width: 100px;
+  }
+
+
+  .browserLink {
+    border: none;
+  }
+
+  .row-top {
+    overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    max-width: 2000px;
+  }
+
+  .row-bottom {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 2000px;
+  }
+</style>
+<html>
+
+<body style="background-color:#f2f2f2; min-width:600px;">
+  <div class="row-top">
+    <div class="column">
+      <div style="padding: 16px;">
+        <h1 style="font-size=37px;">It’s not you - it’s your browser.</h1>
+        <p style="font-size=16px;">We are sorry but your browser isn’t supported. To enjoy the best experience with our
+          website, we recommend
+          using
+          any of the following browsers.</p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="./IENotSupportedImg/browserNotSupportedWhite.png" alt="Browser not supported" class='coverImage'>
+    </div>
+  </div>
+  <div class="row-bottom">
+    <div class="column-3">
+      <a href="https://www.google.com/intl/en_ca/chrome/" class="browserLink">
+        <img src="./IENotSupportedImg/chromeIcon.png" class="browserIcon" />
+      </a>
+    </div>
+    <div class="column-3">
+      <a href="https://www.mozilla.org/en-CA/firefox/" class="browserLink">
+        <img src="./IENotSupportedImg/firefoxBrowser.png" class="browserIcon" />
+      </a>
+    </div>
+    <div class="column-3">
+      <a href="https://support.apple.com/downloads/safari" class="browserLink">
+        <img src="./IENotSupportedImg/safariIcon.png" class="browserIcon" />
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventbrite_events",
+  "info": {
+    "name": "EventbriteEvent",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Url": {
+      "type": "string",
+      "required": true
+    },
+    "ImageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "EventID": {
+      "type": "uid",
+      "required": true
+    },
+    "IsCourse": {
+      "type": "boolean",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "StartTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "SeriesUID": {
+      "type": "string"
+    },
+    "IsSeries": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
