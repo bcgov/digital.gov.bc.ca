@@ -19,7 +19,8 @@ module.exports = {
   //
   // }
   // Run once a day at 7:27AM  UTC (Midle of night BC)
-  '27 7 * * *': function () {
+  // '27 7 * * *': function () {
+  '0 * * * *': function () {
     strapi.config.functions.eventbrite()
   }
 };

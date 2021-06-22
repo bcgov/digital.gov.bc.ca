@@ -93,6 +93,12 @@ module.exports = async () => {
             IsSeries: event.is_series,
             StartTime: event.start.utc,
             SeriesUID: event.series_id
+          }).catch(e => {
+            if (e.code == 11000) {
+              strapi.log.info("The event has already been uploaded.")
+            } else {
+              strapi.log.info(err)
+            }
           });
       }
 
