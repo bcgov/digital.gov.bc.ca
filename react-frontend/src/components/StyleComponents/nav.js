@@ -55,18 +55,11 @@ export const NavHamburgerButton = styled.div.attrs({
 export const NavImage = styled.img.attrs({
   className: 'navImage',
 })`
-  margin-right: 10px;
-  height: 100%;
-
-  @media screen and (max-width: ${navBarResize}px) {
-    height: 60px;
-    margin-top: -5px;
-  }
-
-  @media screen and (max-width: 400px) {
-    height: 60px;
-    margin-right: 0px;
-    margin-top: -5px;
+  height: 65px;
+  width: auto;
+  @media screen and (min-width: ${navBarResize}px) {
+    height: 100%;
+    width: 175px;
   }
 `;
 
@@ -92,12 +85,11 @@ export const NavTitle = styled.p.attrs({
 })`
   color: white;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 16px;
   font-weight: 700;
   margin: 0px 5px 0px 0px;
-  font-size: 20px;
-  @media screen and (max-width: 400px) {
-    font-size: 16px;
-    margin: 0px 5px 0px -5%;
+  @media screen and (min-width: 401px) {
+    font-size: 20px;
   }
 `;
 
