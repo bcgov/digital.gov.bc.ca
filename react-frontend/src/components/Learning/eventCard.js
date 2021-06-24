@@ -8,12 +8,13 @@ import {
   BlogCardStyled,
   CardTitle,
   CardDescription,
+  EventCardStyled,
 } from '../StyleComponents/card';
 import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
 
-function EventCard({ title, description, eventbriteUrl, coverImgSrc }) {
+function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
   return (
-    <BlogCardStyled>
+    <EventCardStyled>
       {coverImgSrc ? (
         <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
       ) : (
@@ -24,7 +25,7 @@ function EventCard({ title, description, eventbriteUrl, coverImgSrc }) {
           style={{ fontSize: '25.92px', clear: 'both' }}
           data-testid="title"
         >
-          {title}
+          {name}
         </CardTitle>
         <CardDescription data-testid="description">
           {description}
@@ -41,7 +42,7 @@ function EventCard({ title, description, eventbriteUrl, coverImgSrc }) {
           />
         </HrefLinkStandalone>
       </div>
-    </BlogCardStyled>
+    </EventCardStyled>
   );
 }
 

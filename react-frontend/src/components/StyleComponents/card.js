@@ -200,7 +200,8 @@ export const CommunityCardStyled = styled(Link).attrs({
   width: 100%;
   display: flex;
   flex-direction: column;
-  :hover, :focus {
+  :hover,
+  :focus {
     border-color: #fdb917;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.15s; /* These make the interaction less jumpy */
@@ -229,4 +230,26 @@ export const IconCol = styled(Col).attrs({
 })`
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-weight: 700;
+`;
+
+export const EventCardStyled = styled.div.attrs({
+  className: 'cardRound',
+})`
+  border: 6px solid transparent;
+  border-radius: ${cardBorderRadius};
+  height: 100%;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  :hover,
+  :focus {
+    border-color: #fdb917;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.15s; /* These make the interaction less jumpy */
+    transition-timing-function: ease-in-out;
+  }
+  :focus {
+    outline: -webkit-focus-ring-color auto 6px !important;
+  }
 `;

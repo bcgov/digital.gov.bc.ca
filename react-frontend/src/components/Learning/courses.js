@@ -3,6 +3,7 @@ import { Col, Row } from 'react-flexbox-grid';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { Heading } from '../StyleComponents/headings';
+import EventCards from './eventCards';
 
 // const fetchCourses = () => {
 //   // dispatch(eventsAreLoading);
@@ -36,7 +37,9 @@ function Courses() {
           <Heading>Courses</Heading>
         </Col>
       </Row>
-      <Row>{console.log(process.env.REACT_APP_EVENTBRITE_BEARER_TOKEN)}</Row>
+      <Row>
+        <EventCards isCourse={true} />
+      </Row>
     </ContentBlockContainer>
   );
 }

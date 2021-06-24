@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 const EVENTS_QUERY = gql`
-  query EventbriteEvents {
-    eventbriteEvents {
+  query EventbriteEvents($isClass: Boolean!) {
+    eventbriteEvents(where: { IsCourse: $isClass }) {
       Name
       Description
       Url
@@ -10,6 +10,7 @@ const EVENTS_QUERY = gql`
       IsCourse
       IsSeries
       SeriesUID
+      EventID
     }
   }
 `;
