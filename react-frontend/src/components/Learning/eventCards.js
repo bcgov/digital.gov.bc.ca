@@ -8,17 +8,33 @@ import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { Heading } from '../StyleComponents/headings';
 import { StyledP, HrefLinkStandalone } from '../StyleComponents/htmlTags';
 
+function filterBySeries(list) {
+  //the events are ordered by start date in the events query
+  //the first event mapped will be the soonest to start.
+  const seriesIDs = [];
+  const fliteredList = [];
+  list.map((event) => {
+    if (!event.SeriesUID) {
+      fliteredList.push(event);
+    }
+    if (seriesIDs.indexOf(event.SeriesUID) == -1) {
+      seriesIDs.push(event.SeriesUID);
+      fliteredList.push(event);
+    }
+  });
+  return fliteredList;
+}
+
 function EventCards({ isCourse }) {
   return (
     <Query query={EVENTS_QUERY} isClass={isCourse}>
       {({ data: { eventbriteEvents } }) => {
-        console.log(eventbriteEvents);
+        const filteredEvents = filterBySeries(eventbriteEvents);
         return (
           <Row style={{ marginBottom: '4px' }}>
-            {eventbriteEvents.map((event, i) => {
-              console.log(event);
+            {filteredEvents.map((event, i) => {
               return (
-                <Col sm={12} md={6} key={event.EventID}>
+                <Col sm={12} md={4} key={event.EventID}>
                   <EventCard
                     name={event?.Name}
                     description={event?.Description}

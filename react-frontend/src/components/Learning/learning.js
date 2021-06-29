@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContactUs from './podcast';
+import ContactUs from './contactUs';
 import Courses from './courses';
 import Events from './events';
 import Podcast from './podcast';

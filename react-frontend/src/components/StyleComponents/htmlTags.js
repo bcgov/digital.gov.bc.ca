@@ -167,7 +167,7 @@ export const FooterUL = styled.ul`
 `;
 
 export const HrefLink = styled.a.attrs({
-  className: 'productCardLink',
+  className: 'externalLink',
 })`
   color: #1a5a96;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;

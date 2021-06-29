@@ -235,6 +235,7 @@ export const IconCol = styled(Col).attrs({
 export const EventCardStyled = styled.div.attrs({
   className: 'cardRound',
 })`
+  background-color: white;
   border: 6px solid transparent;
   border-radius: ${cardBorderRadius};
   height: 100%;

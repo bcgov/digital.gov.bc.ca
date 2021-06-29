@@ -20,7 +20,7 @@ function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
       ) : (
         <BlogCardThumnailNullImg />
       )}
-      <div style={{ padding: '24px' }}>
+      <div style={{ padding: '24px', backgroundColor: 'white' }}>
         <CardTitle
           style={{ fontSize: '25.92px', clear: 'both' }}
           data-testid="title"
