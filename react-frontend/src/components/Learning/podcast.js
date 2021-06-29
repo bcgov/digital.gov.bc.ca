@@ -61,16 +61,20 @@ function Podcast() {
                   return (
                     <Row
                       style={{
-                        height: '200px',
-                        overflow: 'hidden',
                         marginBottom: '16px',
                       }}
                       key={i}
                     >
-                      <Col xs={12} md={4}>
+                      <Col
+                        xs={12}
+                        md={4}
+                        style={{
+                          height: '200px',
+                        }}
+                      >
                         <img
                           src={strapiMediaUrl + podcast?.CoverImage?.url}
-                          style={{ maxWidth: '100%' }}
+                          style={{ maxWidth: '100%', height: '100%' }}
                         />
                       </Col>
                       <Col xs={12} md={8}>
@@ -81,7 +85,7 @@ function Podcast() {
                             height: '100%',
                           }}
                         >
-                          <p>
+                          <p style={{ marginBottom: '0' }}>
                             {podcast.EpisodeNumber
                               ? `Episode ${podcast.EpisodeNumber} `
                               : ``}

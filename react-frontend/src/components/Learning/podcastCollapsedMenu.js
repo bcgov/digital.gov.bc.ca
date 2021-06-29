@@ -1,6 +1,13 @@
 import React from 'react';
 
 import { PanelStyled, CollapseStyled } from '../StyleComponents/collapseMenu';
+import { Col, Row } from 'react-flexbox-grid';
+
+import { SubSubHeading } from '../StyleComponents/headings';
+
+const iOSIcon = require('../../images/icons/podcastsiOS.svg').default;
+const googlePodcastIcon = require('../../images/icons/podcastsGoogle.svg')
+  .default;
 
 function PodcastCollapsedMenu() {
   const [expanded, setExpanded] = React.useState(['']);
@@ -16,13 +23,19 @@ function PodcastCollapsedMenu() {
       onChange={changeKeyState}
     >
       <PanelStyled header="How to Subscribe">
-        <div class="row text-white-50">
-          <div class="col-sm pr-sm-5">
-            <div class="d-flex align-items-center mb-3">
+        <Row>
+          <Col xs={12} lg={6}>
+            <div style={{ display: 'inline-flex' }}>
               <div>
-                <img class="podcast-icon" src="img/Icons/Podcasts_(iOS).svg" />
+                <img
+                  class="podcast-icon"
+                  src={iOSIcon}
+                  style={{ height: '48px' }}
+                />
               </div>
-              <h5 class="mb-0 ml-3">iOS</h5>
+              <SubSubHeading style={{ marginTop: '6px', marginLeft: '4px' }}>
+                iOS
+              </SubSubHeading>
             </div>
             <p>Open the Podcasts app on your phone:</p>
             <ul>
@@ -37,14 +50,17 @@ function PodcastCollapsedMenu() {
               <li>Tap the DONE button at the top right</li>
               <li>Tap on The Exchange Podcast logo to access the episodes</li>
             </ul>
-          </div>
-          <div class="col-sm pl-sm-5">
-            <div class="d-flex align-items-center mb-3">
+          </Col>
+          <Col xs={12} lg={6}>
+            <div style={{ display: 'inline-flex' }}>
               <img
                 class="podcast-icon"
-                src="img/Icons/Google_Podcasts_icon.svg"
+                src={googlePodcastIcon}
+                style={{ height: '48px' }}
               />
-              <h5 class="mb-0 ml-3">Android</h5>
+              <SubSubHeading style={{ marginTop: '6px', marginLeft: '4px' }}>
+                Android
+              </SubSubHeading>
             </div>
             <p>
               Visit the Google Play Store to find a podcast player that suits
@@ -61,11 +77,11 @@ function PodcastCollapsedMenu() {
               </li>
               <li>Tap "Add"</li>
             </ul>
-          </div>
-        </div>
+          </Col>
+        </Row>
         <hr />
-        <div class="row text-white-50">
-          <div class="col-sm-10 col-md-6 m-auto">
+        <Row>
+          <Col xs={10} lg={6}>
             <p>
               If using another podcast application, subscribe by visiting{' '}
               <a
@@ -80,8 +96,8 @@ function PodcastCollapsedMenu() {
                 https://bcdevexchange.libsyn.com/rss
               </span>
             </p>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </PanelStyled>
     </CollapseStyled>
   );
