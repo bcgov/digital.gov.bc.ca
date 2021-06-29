@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import Query from '../Query';
-import EVENTS_QUERY from '../../queries/eventbrite/events';
+import EVENTS_QUERY from '../../queries/learning/events';
 import EventCard from './eventCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';

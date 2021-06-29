@@ -8,7 +8,7 @@ import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import PodcastCollapsedMenu from './podcastCollapsedMenu';
 
 import Query from '../Query';
-import PODCASTS_QUERY from '../../queries/podcast/podcasts';
+import PODCASTS_QUERY from '../../queries/learning/podcasts';
 import { AppConfigContext } from '../../providers/AppConfig';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
