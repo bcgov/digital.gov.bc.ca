@@ -5,6 +5,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import dateFormat from 'dateformat';
 
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
+import PodcastBanner from './podcastBanner';
 import PodcastCollapsedMenu from './podcastCollapsedMenu';
 
 import Query from '../Query';
@@ -14,6 +15,7 @@ import { AppConfigContext } from '../../providers/AppConfig';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { SubHeading, SubSubHeading } from '../StyleComponents/headings';
 import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
+
 const podcastImage = require('../../images/pngIllustrations/podcastGray.png')
   .default;
 
@@ -23,20 +25,13 @@ function Podcast() {
   ];
   return (
     <div>
-      <BannerSideImage
-        title={'The Exchange Podcast'}
-        content={
-          'Ari Hershberg talks with members of the digital government community.'
-        }
-        image={podcastImage}
-      />
+      <PodcastBanner />
       <ContentBlockContainer id="courses">
         <Row>
           <Col sm={12}>
             <SubHeading style={{ display: 'inline-block' }}>
               Recent Episodes
             </SubHeading>
-
             <HrefLinkStandalone
               href="https://bcdevexchange.libsyn.com/"
               target="_blank"
@@ -59,19 +54,8 @@ function Podcast() {
               <div>
                 {podcasts.map((podcast, i) => {
                   return (
-                    <Row
-                      style={{
-                        marginBottom: '16px',
-                      }}
-                      key={i}
-                    >
-                      <Col
-                        xs={12}
-                        md={4}
-                        style={{
-                          height: '200px',
-                        }}
-                      >
+                    <Row style={{ marginBottom: '16px' }} key={i}>
+                      <Col xs={12} md={4} style={{ height: '200px' }}>
                         <img
                           src={strapiMediaUrl + podcast?.CoverImage?.url}
                           style={{ maxWidth: '100%', height: '100%' }}

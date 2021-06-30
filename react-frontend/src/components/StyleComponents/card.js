@@ -236,21 +236,29 @@ export const EventCardStyled = styled.div.attrs({
   className: 'cardRound',
 })`
   background-color: white;
-  border: 6px solid transparent;
   border-radius: ${cardBorderRadius};
   height: 100%;
   margin-bottom: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  :hover,
-  :focus {
-    border-color: #fdb917;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 0.15s; /* These make the interaction less jumpy */
-    transition-timing-function: ease-in-out;
-  }
-  :focus {
-    outline: -webkit-focus-ring-color auto 6px !important;
-  }
+`;
+export const EventCardThumnail = styled.img`
+  background: #003366;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  width: 100%;
+`;
+
+export const EventCardThumnailNullImg = styled.div`
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  background: #003366;
+`;
+
+export const EventCardTextBox = styled.div`
+  background-color: white;
+  border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
 `;

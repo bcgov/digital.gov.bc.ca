@@ -34,7 +34,13 @@ function EventCards({ isCourse }) {
           <Row style={{ marginBottom: '4px' }}>
             {filteredEvents.map((event, i) => {
               return (
-                <Col sm={12} md={4} key={event.EventID}>
+                <Col
+                  sm={12}
+                  md={6}
+                  lg={4}
+                  key={event.EventID}
+                  style={{ marginBottom: '20px' }}
+                >
                   <EventCard
                     name={event?.Name}
                     description={event?.Description}

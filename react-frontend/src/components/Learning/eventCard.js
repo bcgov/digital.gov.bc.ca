@@ -3,9 +3,9 @@ import 'antd/dist/antd.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import {
-  BlogCardThumnail,
-  BlogCardThumnailNullImg,
-  BlogCardStyled,
+  EventCardThumnail,
+  EventCardThumnailNullImg,
+  EventCardTextBox,
   CardTitle,
   CardDescription,
   EventCardStyled,
@@ -15,12 +15,14 @@ import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
 function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
   return (
     <EventCardStyled>
+      {/* <div style={{}} > */}
       {coverImgSrc ? (
-        <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+        <EventCardThumnail src={coverImgSrc} data-testid="thumbnail" />
       ) : (
-        <BlogCardThumnailNullImg />
+        <EventCardThumnailNullImg />
       )}
-      <div style={{ padding: '24px', backgroundColor: 'white' }}>
+      <EventCardTextBox>
+        {/* <div style={{ padding: '24px', backgroundColor: 'white', display: 'flex', flexDirection: 'column', height: '100%' }}> */}
         <CardTitle
           style={{ fontSize: '25.92px', clear: 'both' }}
           data-testid="title"
@@ -34,6 +36,7 @@ function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
           href={eventbriteUrl}
           target="_blank"
           rel="noopener noreferrer"
+          style={{ marginTop: 'auto' }}
         >
           View Details &amp; Register
           <FontAwesomeIcon
@@ -41,7 +44,8 @@ function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
             style={{ paddingLeft: '5px' }}
           />
         </HrefLinkStandalone>
-      </div>
+      </EventCardTextBox>
+      {/* </div> */}
     </EventCardStyled>
   );
 }
