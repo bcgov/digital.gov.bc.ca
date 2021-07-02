@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/eventbrite-events",
+      "handler": "eventbrite-event.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/eventbrite-events/count",
+      "handler": "eventbrite-event.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/eventbrite-events/:id",
+      "handler": "eventbrite-event.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/eventbrite-events",
+      "handler": "eventbrite-event.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/eventbrite-events/:id",
+      "handler": "eventbrite-event.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/eventbrite-events/:id",
+      "handler": "eventbrite-event.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

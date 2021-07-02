@@ -18,4 +18,10 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+  // Run once a day at 7:27AM  UTC (Midle of night BC)
+  '27 7 * * *': function () {
+    strapi.config.functions.eventbrite()
+  }
 };
+
+

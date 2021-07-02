@@ -47,7 +47,7 @@ function CoCoCards() {
           <ResourcePageHeading>Support</ResourcePageHeading>
           <StyledP>
             Contact the Common Components team:{' '}
-            <HrefLinkStandalone>
+            <HrefLinkStandalone href="mailto:digital.government@gov.bc.ca">
               Digital.Government@gov.bc.ca
             </HrefLinkStandalone>
             .

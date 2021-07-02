@@ -105,6 +105,11 @@ objects:
                     secretKeyRef:
                       name: strapi-jwt
                       key: admin-jwt
+                - name: EVENTBRITE_BEARER_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: eventbrite
+                      key: bearer-token
               resources: 
                 cpu:
                   requests: ${CPU_REQUEST}
