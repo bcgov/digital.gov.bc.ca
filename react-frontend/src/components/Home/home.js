@@ -14,7 +14,7 @@ const bannerContent = (
   </div>
 );
 
-const bannerTitle = 'Digital Government';
+const bannerTitle = 'Digital Government 2 The test';
 
 const homeImage = require('../../images/pngIllustrations/digitalHomePageWhite.png')
   .default;
