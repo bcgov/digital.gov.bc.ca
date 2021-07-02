@@ -243,7 +243,7 @@ export const EventCardStyled = styled.div.attrs({
   flex-direction: column;
 `;
 export const EventCardThumnail = styled.img`
-  background: #003366;
+  background: #E5E5E5;
   border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
   width: 100%;
 `;
