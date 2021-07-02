@@ -14,7 +14,9 @@
   - name: Delete route for {{ react_infra_name }} of PR {{ PR }} in {{ namespace }} namespace
     shell: >
       oc delete -n "{{ namespace }}" route --selector pr={{ PR }}
-  
+  - name: Delete configmaps for PR {{ PR }} in {{ namespace }} namespace
+    shell: >
+      oc delete -n "{{ namespace }}" configmap --selector pr={{ PR }}  
 
 
   
