@@ -6,7 +6,7 @@ import { AppConfig } from '../../providers/AppConfig';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
 import Progress from './progress';
-import { MockedProvider } from "@apollo/react-testing";
+import { MockedProvider } from '@apollo/react-testing';
 
 const originalError = console.error;
 

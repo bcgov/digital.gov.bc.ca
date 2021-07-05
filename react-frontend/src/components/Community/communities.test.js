@@ -6,7 +6,7 @@ import Communities from './communities';
 import { AppConfig } from '../../providers/AppConfig';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
-import { MockedProvider } from "@apollo/react-testing";
+import { MockedProvider } from '@apollo/react-testing';
 
 const originalError = console.error;
 

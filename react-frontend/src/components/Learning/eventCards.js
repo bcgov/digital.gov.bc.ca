@@ -29,7 +29,6 @@ function EventCards({ isCourse }) {
   return (
     <Query query={EVENTS_QUERY} isClass={isCourse}>
       {({ data: { eventbriteEvents } }) => {
-        console.log(eventbriteEvents)
         const filteredEvents = filterBySeries(eventbriteEvents);
         return (
           <Row style={{ marginBottom: '4px' }}>

@@ -6,7 +6,6 @@ import '@testing-library/jest-dom/extend-expect';
 import BlogCard from './blogCard';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-
 afterEach(cleanup);
 
 it('Renders without crashing if not props are passed in', () => {
