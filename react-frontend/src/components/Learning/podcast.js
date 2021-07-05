@@ -76,7 +76,13 @@ function Podcast() {
                             height: '100%',
                           }}
                         >
-                          <p style={{ marginBottom: '0' }}>
+                          <p
+                            style={{
+                              color: '#606060',
+                              fontSize: '13px',
+                              marginBottom: '4px',
+                            }}
+                          >
                             {podcast.EpisodeNumber
                               ? `Episode ${podcast.EpisodeNumber} `
                               : ``}
