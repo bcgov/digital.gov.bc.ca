@@ -28,7 +28,7 @@ afterAll(() => {
 
 afterEach(cleanup);
 
-it('Renders only the first card for each series.', async () => {
+it('Renders only the first card for each series of classes.', async () => {
   const events = [
     {
       Name: 'OpenShift 101',
@@ -83,6 +83,77 @@ it('Renders only the first card for each series.', async () => {
     <AppConfig>
       <MockedProvider mocks={mocks} addTypename={false}>
         <EventCards isCourse={true} />
+      </MockedProvider>
+    </AppConfig>
+  );
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  expect(getAllByTestId('title')[0]).toHaveTextContent('OpenShift 101');
+  expect(getAllByTestId('description')[0]).toHaveTextContent(
+    'test description 1'
+  );
+  expect(getAllByTestId('description').length).toBe(2);
+  expect(getAllByTestId('title')[1]).toHaveTextContent('UX 101');
+  expect(getAllByTestId('description')[1]).toHaveTextContent(
+    'test description 2'
+  );
+});
+
+it('Renders only the first card for each series of non classes.', async () => {
+  const events = [
+    {
+      Name: 'OpenShift 101',
+      Description: 'test description 1',
+      Url: 'https://www.eventbrite.ca/6176123',
+      ImageUrl: 'https://img.evbuc.com/51b8',
+      IsCourse: false,
+      IsSeries: true,
+      SeriesUID: '85533754763',
+      EventID: '157516176123',
+      StartTime: '2021-07-07T16:00:00.000Z',
+    },
+    {
+      Name: 'UX 101',
+      Description: 'test description 2',
+      Url: 'https://www.eventbrite.ca/',
+      ImageUrl: 'https://img.evbuc.com/cc824',
+      IsCourse: false,
+      IsSeries: true,
+      SeriesUID: '121444223943',
+      EventID: '154764407509',
+      StartTime: '2021-07-21T20:45:00.000Z',
+    },
+    {
+      Name: 'OpenShift 101',
+      Description: 'test description 3',
+      Url: 'https://www.eventbrite.ca/',
+      ImageUrl: 'https://img.evbuc.com/b8',
+      IsCourse: false,
+      IsSeries: true,
+      SeriesUID: '85533754763',
+      EventID: '157516402801',
+      StartTime: '2021-08-25T16:00:00.000Z',
+    },
+  ];
+
+  const mocks = [
+    {
+      request: {
+        query: EVENTS_QUERY,
+        variables: { isClass: false },
+      },
+      result: {
+        data: {
+          eventbriteEvents: events,
+        },
+      },
+    },
+  ];
+
+  const { getAllByTestId } = render(
+    <AppConfig>
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <EventCards isCourse={false} />
       </MockedProvider>
     </AppConfig>
   );
