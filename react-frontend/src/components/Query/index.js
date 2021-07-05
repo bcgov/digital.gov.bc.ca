@@ -2,11 +2,9 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 
 const Query = ({ children, query, id, uid, category, isClass }) => {
-  console.log(`THE ISCLASS VARIABLE IS ${isClass}`)
   const { data, loading, error } = useQuery(query, {
     variables: { id: id, uid: uid, category: category, isClass: isClass },
   });
-  console.log(error)
   if (loading) return <p>Loading...</p>;
   if (error) {
     if (error?.graphQLErrors[0]?.message === 'Forbidden') {
