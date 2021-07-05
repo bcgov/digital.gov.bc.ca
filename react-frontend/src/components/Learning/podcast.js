@@ -28,15 +28,23 @@ function Podcast() {
       <PodcastBanner />
       <ContentBlockContainer id="courses">
         <Row>
-          <Col sm={12}>
-            <SubHeading style={{ display: 'inline-block' }}>
+          <Col
+            style={{
+              alignItems: 'baseline',
+              display: 'flex',
+              marginBottom: '16px',
+              justifyContent: 'space-between',
+            }}
+            sm={12}
+          >
+            <SubHeading style={{ marginBottom: '0' }}>
               Recent Episodes
             </SubHeading>
             <HrefLinkStandalone
               href="https://bcdevexchange.libsyn.com/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ float: 'right' }}
+              style={{ marginBottom: '0' }}
             >
               View all {' >'}
               <FontAwesomeIcon
