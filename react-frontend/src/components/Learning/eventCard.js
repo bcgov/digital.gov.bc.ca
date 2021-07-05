@@ -7,7 +7,6 @@ import {
   EventCardThumnailNullImg,
   EventCardTextBox,
   CardTitle,
-  CardDescription,
   EventCardStyled,
 } from '../StyleComponents/card';
 import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
@@ -15,23 +14,19 @@ import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
 function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
   return (
     <EventCardStyled>
-      {/* <div style={{}} > */}
       {coverImgSrc ? (
         <EventCardThumnail src={coverImgSrc} data-testid="thumbnail" />
       ) : (
         <EventCardThumnailNullImg />
       )}
       <EventCardTextBox>
-        {/* <div style={{ padding: '24px', backgroundColor: 'white', display: 'flex', flexDirection: 'column', height: '100%' }}> */}
         <CardTitle
           style={{ fontSize: '25.92px', clear: 'both' }}
           data-testid="title"
         >
           {name}
         </CardTitle>
-        <CardDescription data-testid="description">
-          {description}
-        </CardDescription>
+        <p data-testid="description">{description}</p>
         <HrefLinkStandalone
           href={eventbriteUrl}
           target="_blank"
@@ -45,7 +40,6 @@ function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
           />
         </HrefLinkStandalone>
       </EventCardTextBox>
-      {/* </div> */}
     </EventCardStyled>
   );
 }
