@@ -28,7 +28,7 @@ function PodcastCollapsedMenu() {
             <div style={{ display: 'inline-flex' }}>
               <div>
                 <img
-                  class="podcast-icon"
+                  className="podcast-icon"
                   src={iOSIcon}
                   style={{ height: '48px' }}
                 />
@@ -42,7 +42,7 @@ function PodcastCollapsedMenu() {
               <li>Tap the LIBRARY button at the bottom of your app</li>
               <li>
                 Choose the option ADD A PODCAST BY URL and enter the RSS link:{' '}
-                <span class="text-blue">
+                <span className="text-blue">
                   https://bcdevexchange.libsyn.com/rss
                 </span>
               </li>
@@ -54,7 +54,7 @@ function PodcastCollapsedMenu() {
           <Col xs={12} lg={6}>
             <div style={{ display: 'inline-flex' }}>
               <img
-                class="podcast-icon"
+                className="podcast-icon"
                 src={googlePodcastIcon}
                 style={{ height: '48px' }}
               />
@@ -71,7 +71,7 @@ function PodcastCollapsedMenu() {
               <li>Select "Add an RSS Feed"</li>
               <li>
                 Enter the RSS link:{' '}
-                <span class="text-blue">
+                <span className="text-blue">
                   https://bcdevexchange.libsyn.com/rss
                 </span>
               </li>
@@ -92,7 +92,7 @@ function PodcastCollapsedMenu() {
                 https://bcdevexchange.libsyn.com/
               </a>{' '}
               and clicking the RSS icon, or entering the RSS link:{' '}
-              <span class="text-blue">
+              <span className="text-blue">
                 https://bcdevexchange.libsyn.com/rss
               </span>
             </p>

@@ -46,7 +46,7 @@ function ContactUs() {
                       <p style={{ marginBottom: '0', maxWidth: '300px' }}>
                         <b>{admin.Name}</b>
                         <a
-                          class="icon"
+                          className="icon"
                           href={`mailto:${admin.Email}`}
                           style={{ float: 'right' }}
                         >

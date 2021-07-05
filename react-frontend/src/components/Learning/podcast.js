@@ -49,7 +49,6 @@ function Podcast() {
         {/* PODCASTS_QUERY returns the 3 most recent episodes in Strapi  */}
         <Query query={PODCASTS_QUERY}>
           {({ data: { podcasts } }) => {
-            console.log(podcasts);
             return (
               <div>
                 {podcasts.map((podcast, i) => {

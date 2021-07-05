@@ -200,7 +200,8 @@ export const CommunityCardStyled = styled(Link).attrs({
   width: 100%;
   display: flex;
   flex-direction: column;
-  :hover, :focus {
+  :hover,
+  :focus {
     border-color: #fdb917;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.15s; /* These make the interaction less jumpy */
@@ -245,6 +246,7 @@ export const EventCardStyled = styled.div.attrs({
 export const EventCardThumnail = styled.img`
   background: #003366;
   border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  object-fit: contain;
   width: 100%;
 `;
 
