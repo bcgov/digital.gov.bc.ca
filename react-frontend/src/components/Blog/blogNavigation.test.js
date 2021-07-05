@@ -5,8 +5,6 @@ import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BlogNavigation, { PrevNextButton } from './blogNavigation';
 import { AppConfig } from '../../providers/AppConfig';
-import { ApolloProvider } from 'react-apollo';
-import ApolloClient from 'apollo-boost';
 import { MockedProvider } from '@apollo/react-testing';
 
 const originalError = console.error;
