@@ -46,7 +46,7 @@ function Podcast() {
               rel="noopener noreferrer"
               style={{ marginBottom: '0' }}
             >
-              View all {' >'}
+              View all
               <FontAwesomeIcon
                 icon={faExternalLinkAlt}
                 style={{ paddingLeft: '5px' }}
@@ -62,10 +62,15 @@ function Podcast() {
                 {podcasts.map((podcast, i) => {
                   return (
                     <Row style={{ marginBottom: '16px' }} key={i}>
-                      <Col xs={12} md={4} style={{ height: '200px' }}>
+                      <Col xs={12} md={4}>
                         <img
                           src={strapiMediaUrl + podcast?.CoverImage?.url}
-                          style={{ maxWidth: '100%', height: '100%' }}
+                          style={{
+                            width: '100%',
+                            maxHeight: '200px',
+                            maxWidth: '300px',
+                            objectFit: 'cover',
+                          }}
                         />
                       </Col>
                       <Col xs={12} md={8}>
@@ -86,7 +91,7 @@ function Podcast() {
                             {podcast.EpisodeNumber
                               ? `Episode ${podcast.EpisodeNumber} `
                               : ``}
-                            &#183; {dateFormat(podcast.AirDate, 'mmmm d,yyyy')}
+                            &#183; {dateFormat(podcast.AirDate, 'mmmm d, yyyy')}
                           </p>
                           <SubSubHeading>{podcast.Title}</SubSubHeading>
                           <p>{podcast.Description}</p>
