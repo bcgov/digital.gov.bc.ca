@@ -14,9 +14,7 @@ function Courses() {
           <Heading>Courses</Heading>
         </Col>
       </Row>
-      <Row>
-        <EventCards isCourse={true} />
-      </Row>
+      <EventCards isCourse={true} />
     </ContentBlockContainer>
   );
 }

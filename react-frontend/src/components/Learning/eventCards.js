@@ -4,10 +4,7 @@ import Query from '../Query';
 import EVENTS_QUERY from '../../queries/learning/events';
 import EventCard from './eventCard';
 
-import { ContentBlockContainer } from '../StyleComponents/pageContent';
-import { Heading } from '../StyleComponents/headings';
-import { StyledP, HrefLinkStandalone } from '../StyleComponents/htmlTags';
-
+//Only display one card per series.
 function filterBySeries(list) {
   //the events are ordered by start date in the events query
   //the first event mapped will be the soonest to start.

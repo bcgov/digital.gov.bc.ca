@@ -14,9 +14,7 @@ function Events() {
           <Heading>Events</Heading>
         </Col>
       </Row>
-      <Row>
-        <EventCards isCourse={false} />
-      </Row>
+      <EventCards isCourse={false} />
     </ContentBlockContainer>
   );
 }

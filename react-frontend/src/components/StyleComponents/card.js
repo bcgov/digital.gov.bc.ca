@@ -246,6 +246,7 @@ export const EventCardStyled = styled.div.attrs({
 export const EventCardThumnail = styled.img`
   background: #e5e5e5;
   border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  object-fit: contain;
   width: 100%;
 `;
 
