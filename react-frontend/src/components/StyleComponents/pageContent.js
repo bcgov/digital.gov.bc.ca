@@ -116,3 +116,11 @@ export const CovidAlert = styled(Alert)`
   textalign: center;
   width: 100%;
 `;
+
+// Learning Page
+export const LearningSideImageTextBox = styled.div`
+  text-align: left;
+  padding-bottom: 20px;
+  padding-right: 25px;
+  padding-top: 20px;
+`;
