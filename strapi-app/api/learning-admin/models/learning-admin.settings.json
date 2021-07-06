@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_admins",
+  "info": {
+    "name": "LearningAdmin",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Role": {
+      "type": "string",
+      "required": true
+    },
+    "HeadShot": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Office": {
+      "type": "string",
+      "default": "Exchange Lab",
+      "required": true
+    }
+  }
+}
