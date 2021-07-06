@@ -2,8 +2,8 @@
   "kind": "collectionType",
   "collectionName": "eventbrite_events",
   "info": {
-    "name": "EventbriteEvent",
-    "description": ""
+    "name": "Eventbrite Event",
+    "description": "Events are populated from the eventbrite API any changes will be overwritten by a cron job"
   },
   "options": {
     "increments": true,
