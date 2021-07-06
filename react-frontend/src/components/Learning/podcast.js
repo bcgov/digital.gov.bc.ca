@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import dateFormat from 'dateformat';
 
-import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import PodcastBanner from './podcastBanner';
 import PodcastCollapsedMenu from './podcastCollapsedMenu';
 
@@ -16,9 +15,6 @@ import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { SubHeading, SubSubHeading } from '../StyleComponents/headings';
 import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
 
-const podcastImage = require('../../images/pngIllustrations/podcastGray.png')
-  .default;
-
 function Podcast() {
   const strapiMediaUrl = useContext(AppConfigContext)['state'][
     'strapiMediaUrl'
@@ -26,7 +22,7 @@ function Podcast() {
   return (
     <div>
       <PodcastBanner />
-      <ContentBlockContainer id="courses">
+      <ContentBlockContainer id="podcasts">
         <Row>
           <Col
             style={{
