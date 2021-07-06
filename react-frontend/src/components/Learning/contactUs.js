@@ -41,6 +41,7 @@ function ContactUs() {
                           width: '100%',
                           borderRadius: '18px',
                           maxWidth: '300px',
+                          marginBottom: '16px',
                         }}
                       />
                       <p style={{ marginBottom: '0', maxWidth: '300px' }}>
