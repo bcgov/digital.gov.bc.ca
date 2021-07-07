@@ -1,0 +1,26 @@
+# Run the following command to (re)generate a CSR
+# openssl req -new -sha256 -nodes \
+# -out digital.gov.bc.ca.csr -newkey rsa:2048 \
+# -keyout digital.gov.bc.ca.key \
+# -config <(cat csr_details.txt)
+[req]
+default_bits=2048
+prompt=no
+default_md=sha256
+req_extensions=req_ext
+distinguished_name=dn
+
+[dn]
+C=CA
+ST=British Columbia
+L=Victoria
+O=Government of the Province of British Columbia
+OU=Citizens' Services
+CN=digital.gov.bc.ca
+emailAddress=jonathan.sharman@gov.bc.ca
+
+[req_ext]
+subjectAltName=@alt_names
+
+[alt_names]
+DNS.1=digital.gov.bc.ca
