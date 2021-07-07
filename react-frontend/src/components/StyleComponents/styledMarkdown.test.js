@@ -1,14 +1,28 @@
-import Item from 'antd/lib/list/Item';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import { StyleRichText } from './styledMarkdown';
-
+import { MockedProvider } from '@apollo/react-testing';
 import { AppConfig } from '../../providers/AppConfig';
-import { ApolloProvider } from 'react-apollo';
-import ApolloClient from 'apollo-boost';
+
+const originalError = console.error;
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (/Warning.*not wrapped in act/.test(args[0])) {
+      return;
+    }
+    if (/Error: connect ECONNREFUSED 127.0.0.1:80/.test(args[0])) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
+
 afterEach(cleanup);
 
 it('It returns a parsed markdown calss when a non-html string is passed in', () => {
@@ -16,11 +30,9 @@ it('It returns a parsed markdown calss when a non-html string is passed in', () 
   const testString = 'The rain in spain is awesome.';
   const { container } = render(
     <AppConfig>
-      <ApolloProvider
-        client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
-      >
+      <MockedProvider>
         <StyleRichText htmlOrMarkdown={testString} />
-      </ApolloProvider>
+      </MockedProvider>
     </AppConfig>,
     div
   );
@@ -33,11 +45,9 @@ it('It returns a parsed HTML calss when an html string is passed in', () => {
   const testString = '<p>The rain in spain is awesome.</p>';
   const { container } = render(
     <AppConfig>
-      <ApolloProvider
-        client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
-      >
+      <MockedProvider>
         <StyleRichText htmlOrMarkdown={testString} />
-      </ApolloProvider>
+      </MockedProvider>
     </AppConfig>,
     div
   );
@@ -51,11 +61,9 @@ it('It returns a parsed HTML calss when an html string is passed in', () => {
     "The the place <a href='www.afakewebsite.com' /> is awesome.</p>";
   const { container } = render(
     <AppConfig>
-      <ApolloProvider
-        client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
-      >
+      <MockedProvider>
         <StyleRichText htmlOrMarkdown={testString} />
-      </ApolloProvider>
+      </MockedProvider>
     </AppConfig>,
     div
   );

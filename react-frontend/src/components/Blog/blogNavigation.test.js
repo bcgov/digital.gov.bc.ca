@@ -14,7 +14,9 @@ beforeAll(() => {
     if (/Warning.*not wrapped in act/.test(args[0])) {
       return;
     }
-
+    if (/Error: connect ECONNREFUSED 127.0.0.1:80/.test(args[0])) {
+      return;
+    }
     originalError.call(console, ...args);
   };
 });

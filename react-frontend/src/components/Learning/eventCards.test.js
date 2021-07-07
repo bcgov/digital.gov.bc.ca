@@ -1,14 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render, cleanup } from '@testing-library/react';
+import { MockedProvider } from '@apollo/react-testing';
 import '@testing-library/jest-dom/extend-expect';
+
 import EventCards from './eventCards';
 import EVENTS_QUERY from '../../queries/learning/events';
 
 import { AppConfig } from '../../providers/AppConfig';
-
-import { MockedProvider } from '@apollo/react-testing';
-import TestRenderer from 'react-test-renderer';
 
 const originalError = console.error;
 
@@ -17,7 +15,9 @@ beforeAll(() => {
     if (/Warning.*not wrapped in act/.test(args[0])) {
       return;
     }
-
+    if (/Error: connect ECONNREFUSED 127.0.0.1:80/.test(args[0])) {
+      return;
+    }
     originalError.call(console, ...args);
   };
 });
