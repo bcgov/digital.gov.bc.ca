@@ -81,7 +81,7 @@ const CardList = () => {
         </Row>
 
         <Row>
-          <Col sm={12} md={4}>
+          <Col sm={12} md={6}>
             <InfoCard
               img={communityGrey}
               title={'Communities'}
@@ -90,7 +90,7 @@ const CardList = () => {
               routePath={'/communities'}
             />
           </Col>
-          <Col sm={12} md={4}>
+          <Col sm={12} md={6}>
             <InfoCard
               img={caseStudiesGrey}
               title={'Case Studies'}
@@ -99,7 +99,7 @@ const CardList = () => {
               routePath="/case-studies"
             />
           </Col>
-          <Col sm={12} md={4}>
+          <Col sm={12} md={8} lg={6} style={{ margin: 'auto' }}>
             <InfoCard
               img={learningGrey}
               title={'Learning'}
