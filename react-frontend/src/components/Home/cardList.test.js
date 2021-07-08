@@ -7,11 +7,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 afterEach(cleanup);
 
-it('Renders 6 cards on the home page', () => {
+it('Renders 7 cards on the home page', () => {
   const { getAllByTestId } = render(
     <Router>
       <CardList />
     </Router>
   );
-  expect(getAllByTestId('styled-card').length).toBe(6);
+  expect(getAllByTestId('styled-card').length).toBe(7);
 });

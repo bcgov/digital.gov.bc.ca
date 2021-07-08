@@ -151,6 +151,14 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
             <NavBarLi>
+              <NavBarLink
+                to="/learning"
+                className={activePage === '/learning' ? 'active' : 'notactive'}
+              >
+                Learning
+              </NavBarLink>
+            </NavBarLi>
+            <NavBarLi>
               <NavBarLinkExternal href="/marketplace" target="_blank">
                 Marketplace
                 <FontAwesomeIcon
