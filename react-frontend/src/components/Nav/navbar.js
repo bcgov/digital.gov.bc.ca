@@ -26,7 +26,7 @@ import {
 } from '../StyleComponents/htmlTags';
 import { NavBarContainer } from '../StyleComponents/pageContent';
 
-const mobileImg = require('../../images/logo-banner.png').default;
+const mobileImg = require('../../images/logo.svg').default;
 const desktopImg = require('../../images/logo.png').default;
 
 function NavBar() {
