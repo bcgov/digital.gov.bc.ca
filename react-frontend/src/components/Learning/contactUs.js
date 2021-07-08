@@ -34,14 +34,16 @@ function ContactUs() {
               {learningAdmins.map((admin, i) => {
                 return (
                   <Col xs={12} sm={6} lg={3} key={i}>
-                    <div style={{ textAlign: 'left', marginTop: '16px' }}>
+                    <div
+                      style={{ textAlign: 'left', marginTop: '16px' }}
+                      data-testid="learning-admin"
+                    >
                       <img
                         src={strapiMediaUrl + admin?.HeadShot?.url}
                         style={{
                           width: '100%',
                           borderRadius: '18px',
                           maxWidth: '300px',
-                          marginBottom: '16px',
                         }}
                       />
                       <p style={{ marginBottom: '0', maxWidth: '300px' }}>

@@ -5,8 +5,25 @@ import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BlogNavigation, { PrevNextButton } from './blogNavigation';
 import { AppConfig } from '../../providers/AppConfig';
-import { ApolloProvider } from 'react-apollo';
-import ApolloClient from 'apollo-boost';
+import { MockedProvider } from '@apollo/react-testing';
+
+const originalError = console.error;
+
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (/Warning.*not wrapped in act/.test(args[0])) {
+      return;
+    }
+    if (/Error: connect ECONNREFUSED 127.0.0.1:80/.test(args[0])) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
 
 // Using useParams makes testing difficult.  This fixes it.
 // https://medium.com/@aarling/mocking-a-react-router-match-object-in-your-component-tests-fa95904dcc55
@@ -23,13 +40,11 @@ export function renderWithRouterMatch(
   return {
     ...render(
       <AppConfig>
-        <ApolloProvider
-          client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
-        >
+        <MockedProvider>
           <Router history={history}>
             <Route path={path} component={ui} />
           </Router>
-        </ApolloProvider>
+        </MockedProvider>
       </AppConfig>
     ),
   };

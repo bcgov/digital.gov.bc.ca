@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders snapshot correctly 1`] = `
+<div>
+  <div
+    className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
+    id="main-content-anchor"
+  >
+    <div
+      className="row middle-xs"
+    >
+      <div
+        className="col-xs-12 col-lg-6"
+      >
+        <div
+          className="sc-llYToB foMvUF"
+        >
+          <h2
+            className="sc-dkPtyc bbmNIj heading"
+          >
+            The Exchange Podcast 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-microphone fa-w-11 "
+              data-icon="microphone"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 352 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </h2>
+          <p>
+            Ari Hershberg talks with members of the digital government community.
+          </p>
+        </div>
+      </div>
+      <div
+        className="col-xs-12 col-lg-6"
+      >
+        <img
+          alt=""
+          className="sc-bdvvaa gvfjxy sideImage"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
+    id="podcasts"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+        style={
+          Object {
+            "alignItems": "baseline",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "marginBottom": "16px",
+          }
+        }
+      >
+        <h3
+          className="sc-hKwCoD gNpiUY subHeading"
+          style={
+            Object {
+              "marginBottom": "0",
+            }
+          }
+        >
+          Recent Episodes
+        </h3>
+        <a
+          className="sc-gSQGeZ dricIh externalLink"
+          href="https://bcdevexchange.libsyn.com/"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "marginBottom": "0",
+            }
+          }
+          target="_blank"
+        >
+          View all
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-external-link-alt fa-w-16 "
+            data-icon="external-link-alt"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={
+              Object {
+                "paddingLeft": "5px",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <p>
+      Loading...
+    </p>
+    <div
+      className="ant-collapse ant-collapse-icon-position-right"
+      role={null}
+      style={
+        Object {
+          "background": "#f2f2f2",
+          "border": "none",
+        }
+      }
+    >
+      <div
+        className="ant-collapse-item sc-ezbkgU dlCRPK PanelStyled"
+      >
+        <div
+          aria-expanded={false}
+          className="ant-collapse-header"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-chevron-down fa-w-14 ant-collapse-arrow"
+            data-icon="chevron-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={
+              Object {
+                "fontSize": "35px",
+                "paddingBottom": "6px",
+                "paddingTop": "6px",
+                "top": "12px",
+              }
+            }
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+          How to Subscribe
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
