@@ -53,6 +53,12 @@ To have access to the testing features locally go to the react-frontend folder a
 
 This will install the npm packages outside the frontend container, allowing the user to access tests in their terminal and IDE without using `docker exec` to run the tests in the frontend container.  
 
+New npm packages they must be installed in the docker container.  Use the command:
+
+`docker exec -it frontend /bin/bash`
+
+to enter the container.  Then run `npm install`.
+
 If new npm packages have been installed by another developer the project may need to be rebuilt using.
 
 `docker-compose build --no-cache`
