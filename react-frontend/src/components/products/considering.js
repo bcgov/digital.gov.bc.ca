@@ -6,6 +6,7 @@ import HorizontalCoCoCard from './horizontalCoCoCard';
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
+import { consideringLinks } from '../../constants/urls';
 
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
@@ -28,7 +29,7 @@ const cards = [
   <div>
     <p>
       <HrefLink
-        href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
+        href={consideringLinks.serviceDesign}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -44,7 +45,7 @@ const cards = [
       Gain a better understanding of solutions that already exist in the
       marketplace before you decide what to buy or build with the{' '}
       <HrefLink
-        href="https://procurementconcierge.gov.bc.ca/"
+        href={consideringLinks.consierge}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -57,7 +58,7 @@ const cards = [
       If you are considering cloud storage or tools such as Salesforce, Service
       Now, MS Dynamics, or Microsoft Office, read about{' '}
       <HrefLink
-        href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/secure-cloud"
+        href={consideringLinks.cloud}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -80,7 +81,7 @@ const Considering = () => {
             of methods to discover appropriate solutions. If your challenge is
             complex, you should take an{' '}
             <HrefLink
-              href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
+              href={consideringLinks.agile}
               target="_blank"
               rel="noopener noreferrer"
             >

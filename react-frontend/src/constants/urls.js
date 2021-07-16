@@ -1,3 +1,11 @@
+export const assemblingLinks = {
+  exchangeLab: 'https://bcdevexchange.org/ExchangeLab',
+  digitalMarketplace: 'https://digital.gov.bc.ca/marketplace',
+  devops: 'https://bcdevexchange.org/DevOpsPlatform',
+  imit:
+    'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
+};
+
 export const collabToolUrls = {
   teams:
     'https://products.office.com/en-ca/microsoft-teams/group-chat-software',
@@ -25,6 +33,22 @@ export const collabResources = {
   zoom: 'https://blog.zoom.us/a-message-to-our-users/',
 };
 
+export const consideringLinks = {
+  serviceDesign:
+    'https://www2.gov.bc.ca/gov/content?id=4FB03369094247EF850BEFF8EFB201B3',
+  consierge: 'https://procurementconcierge.gov.bc.ca/',
+  cloud:
+    'https://www2.gov.bc.ca/gov/content?id=7AAEDC2846904CBD963838A3392840BB',
+  agile: 'https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html',
+};
+
+export const definingLinks = {
+  data:
+    'https://www2.gov.bc.ca/gov/content?id=1AE507FCE6A943199E9D2F8A7748B2B5',
+  lean:
+    'https://www2.gov.bc.ca/gov/content?id=80D954CD54704A4C99E27D5B35037149',
+};
+
 export const designersUrls = {
   VisualIdentityProgram:
     'https://www2.gov.bc.ca/gov/content?id=EADC5FB4D3BE4A6DB71C35A64CFECDFC',
@@ -47,12 +71,22 @@ export const designersUrls = {
     'https://www2.gov.bc.ca/gov/content?id=14FD003042FC422182796E84A6C343C9',
 };
 
+export const developerLinks = {
+  bcGovGitHub: 'https://github.com/bcgov',
+  developer: 'https://developer.gov.bc.ca/',
+};
+
 export const digitalPrincipleUrls = {
   standardsOfConduct:
     'https://www2.gov.bc.ca/gov/content?id=0F130A55BFDD4DA1B0ED7FA0AC8D3041',
   draftPrinciples:
     'https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf',
   gitHub: 'https://github.com/bcgov/digital-principles',
+};
+
+export const digitalCardLinks = {
+  imItStandards:
+    'https://www2.gov.bc.ca/gov/content?id=2A477231EF934E22B0FBC8C43A98B9D9',
 };
 
 export const footerLinks = {
