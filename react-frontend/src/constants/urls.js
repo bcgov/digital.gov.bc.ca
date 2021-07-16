@@ -21,6 +21,8 @@ export const collabResources = {
     'https://www2.gov.bc.ca/gov/content?id=C62B9503A7B34A4484AB96B554357803',
   guidanceMinisterialOrder:
     'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf',
+  openSchools: 'https://www.openschool.bc.ca/keeplearning/#sections',
+  zoom: 'https://blog.zoom.us/a-message-to-our-users/',
 };
 
 export const designersUrls = {
@@ -51,6 +53,21 @@ export const digitalPrincipleUrls = {
   draftPrinciples:
     'https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf',
   gitHub: 'https://github.com/bcgov/digital-principles',
+};
+
+export const footerLinks = {
+  disclaimer:
+    'https://www2.gov.bc.ca/gov/content?id=79F93E018712422FBC8E674A67A70535',
+  privacy:
+    'https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932',
+  accessibility:
+    'https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412',
+  copyright:
+    'https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA',
+};
+
+export const podcastUrls = {
+  bcDevExchangePodcast: 'https://bcdevexchange.libsyn.com/',
 };
 
 export const resourceLinks = {
