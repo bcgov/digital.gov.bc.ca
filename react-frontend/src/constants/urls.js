@@ -1,3 +1,28 @@
+export const collabToolUrls = {
+  teams:
+    'https://products.office.com/en-ca/microsoft-teams/group-chat-software',
+  zoom: 'https://zoom.us/',
+  gsuite: 'https://gsuite.google.ca/intl/en_ca/products/meet/',
+  whatsapp: 'https://www.whatsapp.com/',
+  gotomeeting: 'https://www.gotomeeting.com/',
+  mattermost: 'https://mattermost.com/',
+  slack: 'https://www.slack.com/',
+  skype: 'https://www.skype.com/',
+  webex: 'https://www.webex.com/',
+};
+
+export const collabResources = {
+  appropriateUsePolice:
+    'https://www2.gov.bc.ca/gov/content?id=33A6DE0643E54676B21033E5DA8E03CF',
+  bcLaw:
+    'https://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1',
+  bcLaw85: 'https://www.bclaws.ca/civix/document/id/mo/mo/2020_m085',
+  bestPractices:
+    'https://www2.gov.bc.ca/gov/content?id=C62B9503A7B34A4484AB96B554357803',
+  guidanceMinisterialOrder:
+    'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf',
+};
+
 export const designersUrls = {
   VisualIdentityProgram:
     'https://www2.gov.bc.ca/gov/content?id=EADC5FB4D3BE4A6DB71C35A64CFECDFC',
