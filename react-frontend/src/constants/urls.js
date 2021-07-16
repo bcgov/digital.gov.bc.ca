@@ -1,22 +1,3 @@
-export const standardsUrls = {
-  AccessiblityandInclusionToolkit:
-    'https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78',
-  MinistryIMITPoliciesAndStandards:
-    'https://www2.gov.bc.ca/gov/content?id=2AC548A48CD7445A9359AF7BB204B6F6',
-  WebStandards:
-    'https://www2.gov.bc.ca/gov/content?id=1AA28225F41347FE9F8D0B4F1733CEFE',
-  PrivacyManagementAccountabilityPolicy:
-    'https://www2.gov.bc.ca/gov/content?id=C962EFF559134B69A8A9ABB3C121D6C7',
-  PrivacyandPersonalInformation:
-    'https://www2.gov.bc.ca/gov/content?id=54A04E35FA854B298DECF17ABC94E943',
-  PrivacyImpactAssessments:
-    'https://www2.gov.bc.ca/gov/content?id=CFA561FF833D42B68FDD9A818ECAFFBE',
-  InformationSecurityPolicyandGuidelines:
-    'https://www2.gov.bc.ca/gov/content?id=BB7D7F3938634BF2973BDE1A899FB755',
-  SecurityThreatandRiskAssessments:
-    'https://www2.gov.bc.ca/gov/content?id=7175C19B66564EA3A343AB8B668BEFC2',
-};
-
 export const designersUrls = {
   VisualIdentityProgram:
     'https://www2.gov.bc.ca/gov/content?id=EADC5FB4D3BE4A6DB71C35A64CFECDFC',
@@ -37,4 +18,48 @@ export const designersUrls = {
     'https://www2.gov.bc.ca/gov/content?id=A9801C7B52CE481BBD36CAD87C297142',
   WebStyleGuide:
     'https://www2.gov.bc.ca/gov/content?id=14FD003042FC422182796E84A6C343C9',
+};
+
+export const digitalPrincipleUrls = {
+  standardsOfConduct:
+    'https://www2.gov.bc.ca/gov/content?id=0F130A55BFDD4DA1B0ED7FA0AC8D3041',
+  draftPrinciples:
+    'https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf',
+  gitHub: 'https://github.com/bcgov/digital-principles',
+};
+
+export const resourceLinks = {
+  bcMineInfo:
+    'https://www2.gov.bc.ca/gov/content?id=9F8D3F4D2F264F7FA278B528D2F08432',
+  mdsGitHub: 'https://github.com/bcgov/mds',
+  news1:
+    'https://vancouversun.com/business/local-business/b-c-ministry-change-gives-public-online-access-to-mine-inspections-and-dam-safety-information',
+  news2:
+    'https://vancouversun.com/business/local-business/b-c-announces-more-changes-resulting-from-mount-polley-mine-failure',
+  news3:
+    'https://bc.ctvnews.ca/mobile/british-columbia-proposes-reforms-to-strengthen-oversight-of-mining-industry-1.4605156?cache=yes?clipId=263414',
+};
+
+export const standardsUrls = {
+  AccessiblityandInclusionToolkit:
+    'https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78',
+  MinistryIMITPoliciesAndStandards:
+    'https://www2.gov.bc.ca/gov/content?id=2AC548A48CD7445A9359AF7BB204B6F6',
+  WebStandards:
+    'https://www2.gov.bc.ca/gov/content?id=1AA28225F41347FE9F8D0B4F1733CEFE',
+  PrivacyManagementAccountabilityPolicy:
+    'https://www2.gov.bc.ca/gov/content?id=C962EFF559134B69A8A9ABB3C121D6C7',
+  PrivacyandPersonalInformation:
+    'https://www2.gov.bc.ca/gov/content?id=54A04E35FA854B298DECF17ABC94E943',
+  PrivacyImpactAssessments:
+    'https://www2.gov.bc.ca/gov/content?id=CFA561FF833D42B68FDD9A818ECAFFBE',
+  InformationSecurityPolicyandGuidelines:
+    'https://www2.gov.bc.ca/gov/content?id=BB7D7F3938634BF2973BDE1A899FB755',
+  SecurityThreatandRiskAssessments:
+    'https://www2.gov.bc.ca/gov/content?id=7175C19B66564EA3A343AB8B668BEFC2',
+};
+
+export const videoLinks = {
+  healthServices: 'https://youtu.be/U5SecUbCtyE',
+  digitalFramework: 'https://www.youtube.com/watch?v=D4DhfV7splA',
 };

@@ -4,6 +4,7 @@ import CaseStudiesInfoCard from './caseStudiesInfocard';
 import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
 import FarmingBannerImage from '../../images/case-study-farming.jpg';
+import { resourceLinks, videoLinks } from '../../constants/urls';
 
 const jill = require('../../images/jill.png').default;
 const aaron = require('../../images/aaron.png').default;
@@ -153,11 +154,11 @@ const MiningContent = {
     '2019 CTV News article ‘British Columbia proposes reforms to strengthen oversight of mining industry’',
   ],
   resourceLinks: [
-    'https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/bc-mine-info',
-    'https://github.com/bcgov/mds',
-    'https://vancouversun.com/business/local-business/b-c-ministry-change-gives-public-online-access-to-mine-inspections-and-dam-safety-information',
-    'https://vancouversun.com/business/local-business/b-c-announces-more-changes-resulting-from-mount-polley-mine-failure',
-    'https://bc.ctvnews.ca/mobile/british-columbia-proposes-reforms-to-strengthen-oversight-of-mining-industry-1.4605156?cache=yes?clipId=263414',
+    resourceLinks.bcMineInfo,
+    resourceLinks.mdsGitHub,
+    resourceLinks.news1,
+    resourceLinks.news2,
+    resourceLinks.news3,
   ],
 };
 
@@ -400,7 +401,7 @@ const MedicalContent = {
       </ol>
     </div>
   ),
-  videoContent: 'https://youtu.be/U5SecUbCtyE',
+  videoContent: videoLinks.healthServices,
   outcomes: (
     <div>
       <p>
