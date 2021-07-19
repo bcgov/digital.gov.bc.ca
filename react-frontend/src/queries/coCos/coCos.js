@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const COCOS_QUERY = gql`
   query CoCos {
-    coCos {
+    coCos(sort: "Name:asc") {
       uid
       Name
       ShortDescription
