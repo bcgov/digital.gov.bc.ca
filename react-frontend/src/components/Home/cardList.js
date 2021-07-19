@@ -99,7 +99,7 @@ const CardList = () => {
               routePath="/case-studies"
             />
           </Col>
-          <Col sm={12} md={8} lg={6} style={{ margin: 'auto' }}>
+          <Col sm={12} md={6}>
             <InfoCard
               img={learningGrey}
               title={'Learning'}
