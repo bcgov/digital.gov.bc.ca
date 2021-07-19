@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "community_pages",
   "info": {
-    "name": "CommunityPage",
+    "name": "Community Page",
     "description": ""
   },
   "options": {

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "user_feedbacks",
   "info": {
-    "name": "UserFeedback",
+    "name": "User Feedback",
     "description": ""
   },
   "options": {

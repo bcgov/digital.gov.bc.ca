@@ -19,7 +19,6 @@ import { PageContainer } from '../StyleComponents/pageContent';
 function CoCoPage() {
   const params = useParams();
   const ScrollElement = Scroll.Element;
-
   return (
     <DocumentTitle title="Common Components - Digital Government - Province of British Columbia">
       <PageContainer>
@@ -73,6 +72,7 @@ function CoCoPage() {
                 <GetStarted
                   name={coCos[0]?.Name}
                   url={coCos[0]?.GetStartedURL}
+                  steps={coCos[0]?.GetStartedSteps}
                 />
                 <ScrollElement name="support" className="element" />
                 <Support contact={coCos[0]?.Support} />
