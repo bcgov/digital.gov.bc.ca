@@ -1,6 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import CollaborationTool from './collaborationTool';
+import { collabToolUrls, collabResources } from '../../../constants/urls';
 
 import {
   SimpleTextPageTitle,
@@ -70,7 +71,7 @@ function CollaborationTools() {
           increased demand and changing user needs.)
         </p>
         <CollaborationTool
-          url="http://www.skype.com/"
+          url={collabToolUrls.skype}
           name="Skype"
           cost="free"
           platform="Browser (Edge or Chrome), desktop or mobile"
@@ -78,7 +79,7 @@ function CollaborationTools() {
           features="Instant messaging, screensharing, recording calls (stored up to 30 days), no account required for external users"
         />
         <CollaborationTool
-          url="https://products.office.com/en-ca/microsoft-teams/group-chat-software"
+          url={collabToolUrls.teams}
           name="Microsoft Teams"
           cost="Free and paid versions (Essentials and Premium), bundled with Microsoft 365"
           platform="Browser, desktop or mobile app"
@@ -86,7 +87,7 @@ function CollaborationTools() {
           features="Screensharing, instant messaging, recording, document collaboration, user management tools"
         />
         <CollaborationTool
-          url="http://www.webex.com/"
+          url={collabToolUrls.webex}
           name="Cisco Webex"
           cost="Free and paid versions (Starter, Plus and Business)"
           platform="Browser, desktop or mobile app"
@@ -94,7 +95,7 @@ function CollaborationTools() {
           features="Screensharing, whiteboard, mute and remove participants at free level; edit users, recording, and transcriptions at paid levels"
         />
         <CollaborationTool
-          url="http://www.mattermost.com/"
+          url={collabToolUrls.mattermost}
           name="Mattermost"
           cost="Free and paid versions (Enterprise E10 and E20)"
           platform="Desktop or mobile app"
@@ -102,7 +103,7 @@ function CollaborationTools() {
           features="Messaging, screensharing, file sharing, guest accounts, integration with applications"
         />
         <CollaborationTool
-          url="http://www.slack.com/"
+          url={collabToolUrls.slack}
           name="Slack"
           cost="Free and paid versions (Standard, Plus and Enterprise Grid)"
           platform="Video calls only via desktop"
@@ -110,7 +111,7 @@ function CollaborationTools() {
           features="Screen sharing, streaming, annotations (mostly for desktop), integration for G Suite, Office 365 and others"
         />
         <CollaborationTool
-          url="http://www.gotomeeting.com/"
+          url={collabToolUrls.gotomeeting}
           name="GoToMeeting"
           cost="Paid only (Professional, Business and Enterprise)"
           platform="Browser, desktop or mobile app"
@@ -118,7 +119,7 @@ function CollaborationTools() {
           features="Screensharing, recording, transcripts, user management, integration with Microsoft 365, G Suite, Slack and others"
         />
         <CollaborationTool
-          url="https://zoom.us/"
+          url={collabToolUrls.zoom}
           name="Zoom"
           cost="Free and paid versions (Pro, Business, Enterprise)"
           platform="Browser, desktop or mobile app"
@@ -126,7 +127,7 @@ function CollaborationTools() {
           features="Annotation, screensharing, chat, local recording, user management, transcripts"
         />
         <CollaborationTool
-          url="http://www.whatsapp.com/"
+          url={collabToolUrls.whatsapp}
           name="WhatsApp"
           cost="Free"
           platform="Desktop or mobile app"
@@ -134,7 +135,7 @@ function CollaborationTools() {
           features="Instant messaging, sharing images and documents"
         />
         <CollaborationTool
-          url="https://gsuite.google.ca/intl/en_ca/products/meet/"
+          url={collabToolUrls.gsuite}
           name="Google Meet"
           cost="Paid only (Basic, Business and Enterprise)"
           platform="Browser, desktop or mobile app"
@@ -160,12 +161,12 @@ function CollaborationTools() {
         <p>
           Since many video communication platforms store data in the United
           States, using these platforms in B.C. may not comply with{' '}
-          <HrefLink href="http://www.bclaws.ca/civix/document/id/complete/statreg/96165_03#section30.1">
+          <HrefLink href={collabResources.bcLaw}>
             section 30.1 of the Freedom of Information and Protection of Privacy
             Act
           </HrefLink>{' '}
           (the data residency provision). However,{' '}
-          <HrefLink href="http://www.bclaws.ca/civix/document/id/mo/mo/2020_m085">
+          <HrefLink href={collabResources.bcLaw85}>
             Ministerial Order 085
           </HrefLink>{' '}
           – issued during the COVID-19 public health emergency – allows
@@ -185,12 +186,6 @@ function CollaborationTools() {
           from the tools or applications as soon as possible when the order
           expires (June 30, 2020, unless rescinded or extended); and records
           created using these tools or applications are managed appropriately.
-          For more information, please read the{' '}
-          <HrefLink href="https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf">
-            Guidance on Ministerial Order 085: Respecting Disclosures During
-            COVID-19 Emergency
-          </HrefLink>
-          .
         </p>
         <Title3>Security measures</Title3>
         <p>
@@ -472,7 +467,7 @@ function CollaborationTools() {
             <strong>Ensure the Zoom client app is the current version</strong>{' '}
             and regularly check for updates. For more information on installing
             apps, read the{' '}
-            <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/appropriate-use-policy">
+            <HrefLink href={collabResources.appropriateUsePolice}>
               Applications and Software Guide
             </HrefLink>
             .
@@ -490,7 +485,7 @@ function CollaborationTools() {
           </li>
           <li>
             Choose a strong password (see{' '}
-            <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-awareness/password-best-practices">
+            <HrefLink href={collabResources.bestPractices}>
               Password Best Practices
             </HrefLink>
             ) and change your password immediately if you think someone may have
@@ -605,7 +600,7 @@ function CollaborationTools() {
         </ul>
         <p>
           You can find training and tutorials on Zoom’s website in{' '}
-          <HrefLink href="https://blog.zoom.us/wordpress/2020/04/01/a-message-to-our-users/">
+          <HrefLink href={collabResources.zoom}>
             A Message to Our Users
           </HrefLink>
           .
@@ -619,9 +614,7 @@ function CollaborationTools() {
           in B.C. This version of Zoom has many features to enable secure
           meetings. Find more information and resources for teachers and school
           administrators on the ministry’s{' '}
-          <HrefLink href="https://www.openschool.bc.ca/keeplearning/#sections">
-            Keep Learning
-          </HrefLink>{' '}
+          <HrefLink href={collabResources.openSchools}>Keep Learning</HrefLink>{' '}
           website.
         </p>
         <Title2>

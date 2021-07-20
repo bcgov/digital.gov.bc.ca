@@ -8,6 +8,7 @@ import Query from '../Query';
 import FRAMEWORK_PROGRESS_QUERY from '../../queries/digitalFrameworkProgress/digitalFrameworkProgress';
 
 import { PageContainer } from '../StyleComponents/pageContent';
+import { videoLinks } from '../../constants/urls';
 
 const Progress = () => {
   return (
@@ -15,7 +16,7 @@ const Progress = () => {
       <PageContainer>
         <div style={{ textAlign: 'center' }}>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=D4DhfV7splA"
+            url={videoLinks.digitalFramework}
             controls
             width="auto"
             style={{

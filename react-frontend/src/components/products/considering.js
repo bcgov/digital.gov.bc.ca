@@ -6,6 +6,7 @@ import HorizontalCoCoCard from './horizontalCoCoCard';
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
+import { consideringLinks } from '../../constants/urls';
 
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
@@ -28,7 +29,7 @@ const cards = [
   <div>
     <p>
       <HrefLink
-        href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design"
+        href={consideringLinks.serviceDesign}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -44,7 +45,7 @@ const cards = [
       Gain a better understanding of solutions that already exist in the
       marketplace before you decide what to buy or build with the{' '}
       <HrefLink
-        href="https://procurementconcierge.gov.bc.ca/"
+        href={consideringLinks.consierge}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -57,7 +58,7 @@ const cards = [
       If you are considering cloud storage or tools such as Salesforce, Service
       Now, MS Dynamics, or Microsoft Office, read about{' '}
       <HrefLink
-        href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/secure-cloud"
+        href={consideringLinks.cloud}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -78,19 +79,11 @@ const Considering = () => {
           <p>
             Depending on the complexity of your problem, you may apply a variety
             of methods to discover appropriate solutions. If your challenge is
-            complex, you should take an{' '}
-            <HrefLink
-              href="https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Agile
-            </HrefLink>{' '}
-            approach—that is, form a small team to incrementally build your
-            solution, frequently testing it with users and reevaluating what
-            should be done next. On the other hand, if your challenge is simple
-            or complicated, adopting an existing solution with a bit of
-            customization may meet your needs..
+            complex, you should take an Agile approach—that is, form a small
+            team to incrementally build your solution, frequently testing it
+            with users and reevaluating what should be done next. On the other
+            hand, if your challenge is simple or complicated, adopting an
+            existing solution with a bit of customization may meet your needs..
           </p>
         </Col>
       </Row>
