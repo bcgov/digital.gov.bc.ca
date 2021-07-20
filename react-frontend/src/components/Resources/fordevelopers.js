@@ -4,6 +4,7 @@ import InfoCard from '../Home/infocard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageSubHeading } from '../StyleComponents/headings';
+import { developerLinks } from '../../constants/urls';
 
 function ForDevelopers() {
   return (
@@ -21,7 +22,7 @@ function ForDevelopers() {
               'Explore hundreds of open source code repositories that are being maintained by the teams who are building modern digital services in British Columbia.'
             }
             linkText={'Explore'}
-            linkPath={'https://github.com/bcgov'}
+            linkPath={developerLinks.bcGovGitHub}
             height="300px"
           />
         </Col>
@@ -32,7 +33,7 @@ function ForDevelopers() {
               'One place that brings together resources for developers building digital products for the BC Government.'
             }
             linkText={'Visit Site'}
-            linkPath={'https://developer.gov.bc.ca/'}
+            linkPath={developerLinks.developer}
             height="300px"
           />
         </Col>
