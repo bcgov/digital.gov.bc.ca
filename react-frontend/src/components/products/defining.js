@@ -8,11 +8,12 @@ import {
 } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
+import { consideringLinks, definingLinks } from '../../constants/urls';
 
 const cards = [
   <div>
     <p>
-      <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-design">
+      <HrefLink href={consideringLinks.serviceDesign}>
         The Service Design team
       </HrefLink>{' '}
       can help you discover and understand problems that currently exist with
@@ -22,20 +23,16 @@ const cards = [
   <div>
     <p>
       Consider if there are{' '}
-      <HrefLink href="https://www2.gov.bc.ca/gov/content/data">
-        data and data services
-      </HrefLink>{' '}
-      that can enhance your research, analysis, and decision-making.
+      <HrefLink href={definingLinks.data}>data and data services</HrefLink> that
+      can enhance your research, analysis, and decision-making.
     </p>
   </div>,
   <div>
     <p>
       If you are trying to improve a <b>process</b>,{' '}
-      <HrefLink href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/lean-bc">
-        LeanBC
-      </HrefLink>{' '}
-      can help you identify areas for improvement as you apply the Lean
-      continuous improvement philosophy.
+      <HrefLink href={definingLinks.lean}>LeanBC</HrefLink> can help you
+      identify areas for improvement as you apply the Lean continuous
+      improvement philosophy.
     </p>
   </div>,
 ];
