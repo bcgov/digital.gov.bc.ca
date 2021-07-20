@@ -186,12 +186,6 @@ function CollaborationTools() {
           from the tools or applications as soon as possible when the order
           expires (June 30, 2020, unless rescinded or extended); and records
           created using these tools or applications are managed appropriately.
-          For more information, please read the{' '}
-          <HrefLink href={collabResources.guidanceMinisterialOrder}>
-            Guidance on Ministerial Order 085: Respecting Disclosures During
-            COVID-19 Emergency
-          </HrefLink>
-          .
         </p>
         <Title3>Security measures</Title3>
         <p>

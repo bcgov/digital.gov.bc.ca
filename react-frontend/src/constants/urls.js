@@ -27,8 +27,6 @@ export const collabResources = {
   bcLaw85: 'https://www.bclaws.ca/civix/document/id/mo/mo/2020_m085',
   bestPractices:
     'https://www2.gov.bc.ca/gov/content?id=C62B9503A7B34A4484AB96B554357803',
-  guidanceMinisterialOrder:
-    'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/guidance_on_ministerial_order_085.pdf',
   openSchools: 'https://www.openschool.bc.ca/keeplearning/#sections',
   zoom: 'https://blog.zoom.us/a-message-to-our-users/',
 };
@@ -39,7 +37,6 @@ export const consideringLinks = {
   consierge: 'https://procurementconcierge.gov.bc.ca/',
   cloud:
     'https://www2.gov.bc.ca/gov/content?id=7AAEDC2846904CBD963838A3392840BB',
-  agile: 'https://bcgov.github.io/ExchangeLabOps/Agile-in-the-BCPS/readme.html',
 };
 
 export const definingLinks = {
@@ -80,7 +77,7 @@ export const digitalPrincipleUrls = {
   standardsOfConduct:
     'https://www2.gov.bc.ca/gov/content?id=0F130A55BFDD4DA1B0ED7FA0AC8D3041',
   draftPrinciples:
-    'https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/diversity-inclusion-respect/draft_principles.pdf',
+    'https://www2.gov.bc.ca/gov/content?id=D12D2516C5C04317B6CDF9868259E54F',
   gitHub: 'https://github.com/bcgov/digital-principles',
 };
 

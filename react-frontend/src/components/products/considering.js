@@ -79,19 +79,11 @@ const Considering = () => {
           <p>
             Depending on the complexity of your problem, you may apply a variety
             of methods to discover appropriate solutions. If your challenge is
-            complex, you should take an{' '}
-            <HrefLink
-              href={consideringLinks.agile}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Agile
-            </HrefLink>{' '}
-            approach—that is, form a small team to incrementally build your
-            solution, frequently testing it with users and reevaluating what
-            should be done next. On the other hand, if your challenge is simple
-            or complicated, adopting an existing solution with a bit of
-            customization may meet your needs..
+            complex, you should take an Agile approach—that is, form a small
+            team to incrementally build your solution, frequently testing it
+            with users and reevaluating what should be done next. On the other
+            hand, if your challenge is simple or complicated, adopting an
+            existing solution with a bit of customization may meet your needs..
           </p>
         </Col>
       </Row>
