@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "learning_admins",
   "info": {
-    "name": "LearningAdmin",
+    "name": "Learning Admin",
     "description": ""
   },
   "options": {

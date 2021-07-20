@@ -14,6 +14,7 @@ import { AppConfigContext } from '../../providers/AppConfig';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { SubHeading, SubSubHeading } from '../StyleComponents/headings';
 import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
+import { podcastUrls } from '../../constants/urls';
 
 function Podcast() {
   const strapiMediaUrl = useContext(AppConfigContext)['state'][
@@ -37,7 +38,7 @@ function Podcast() {
               Recent Episodes
             </SubHeading>
             <HrefLinkStandalone
-              href="https://bcdevexchange.libsyn.com/"
+              href={podcastUrls.bcDevExchangePodcast}
               target="_blank"
               rel="noopener noreferrer"
               style={{ marginBottom: '0' }}
