@@ -5,12 +5,13 @@ import ProductsCard from './productscard';
 import { ProductPageSubHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
+import { assemblingLinks } from '../../constants/urls';
 
 const cards = [
   <div>
     <p>
       <HrefLink
-        href="https://bcdevexchange.org/ExchangeLab"
+        href={assemblingLinks.exchangeLab}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -25,7 +26,7 @@ const cards = [
     <p>
       If you need to contract a team and want them to follow an Agile process,
       you can use the{' '}
-      <HrefLink href="https://digital.gov.bc.ca/marketplace" target="_blank">
+      <HrefLink href={assemblingLinks.digitalMarketplace} target="_blank">
         Digital Marketplace.
       </HrefLink>
     </p>
@@ -34,7 +35,7 @@ const cards = [
     <p>
       By requesting access to the B.C. Government’s{' '}
       <HrefLink
-        href="https://bcdevexchange.org/DevOpsPlatform"
+        href={assemblingLinks.devops}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -48,7 +49,7 @@ const cards = [
     <p>
       Learn about{' '}
       <HrefLink
-        href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
+        href={assemblingLinks.imit}
         target="_blank"
         rel="noopener noreferrer"
       >

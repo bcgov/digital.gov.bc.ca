@@ -4,6 +4,7 @@ import { PanelStyled, CollapseStyled } from '../StyleComponents/collapseMenu';
 import { Col, Row } from 'react-flexbox-grid';
 
 import { SubSubHeading } from '../StyleComponents/headings';
+import { podcastUrls } from '../../constants/urls';
 
 const iOSIcon = require('../../images/icons/podcastsiOS.svg').default;
 const googlePodcastIcon = require('../../images/icons/podcastsGoogle.svg')
@@ -43,7 +44,7 @@ function PodcastCollapsedMenu() {
               <li>
                 Choose the option ADD A PODCAST BY URL and enter the RSS link:{' '}
                 <span className="text-blue">
-                  https://bcdevexchange.libsyn.com/rss
+                  {podcastUrls.bcDevExchangePodcast + 'rss'}
                 </span>
               </li>
               <li>Tap SUBSCRIBE</li>
@@ -72,7 +73,7 @@ function PodcastCollapsedMenu() {
               <li>
                 Enter the RSS link:{' '}
                 <span className="text-blue">
-                  https://bcdevexchange.libsyn.com/rss
+                  {podcastUrls.bcDevExchangePodcast + 'rss'}
                 </span>
               </li>
               <li>Tap "Add"</li>
@@ -85,15 +86,15 @@ function PodcastCollapsedMenu() {
             <p>
               If using another podcast application, subscribe by visiting{' '}
               <a
-                href="https://bcdevexchange.libsyn.com/"
+                href={podcastUrls.bcDevExchangePodcast}
                 target="_blank"
                 rel="noreferrer"
               >
-                https://bcdevexchange.libsyn.com/
+                {podcastUrls.bcDevExchangePodcast}
               </a>{' '}
               and clicking the RSS icon, or entering the RSS link:{' '}
               <span className="text-blue">
-                https://bcdevexchange.libsyn.com/rss
+                {podcastUrls.bcDevExchangePodcast + 'rss'}
               </span>
             </p>
           </Col>
