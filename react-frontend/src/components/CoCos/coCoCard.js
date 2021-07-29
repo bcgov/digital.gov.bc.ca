@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 import { Badge, BadgeWrapper } from '../StyleComponents/badge';
 import {
-  CommonComponentCardDescription,
-  CommonComponentCardHeader,
-  CommonComponentCardStyled,
-  CommonComponentCardTitle,
+  CoCoCardDescription,
+  CoCoCardHeader,
+  CoCoCardStyled,
+  CoCoCardTitle,
   Icon,
   IconCol,
 } from '../StyleComponents/card';
@@ -81,22 +81,20 @@ function CoCoCard({
 }) {
   return (
     <Link to={`/common-components/${uid}`}>
-      <CommonComponentCardStyled>
-        <CommonComponentCardHeader>
+      <CoCoCardStyled>
+        <CoCoCardHeader>
           {Badges(status?.Status, status?.Maintenance, tags)}
-          <CommonComponentCardTitle data-testid="title">
-            {title}
-          </CommonComponentCardTitle>
+          <CoCoCardTitle data-testid="title">{title}</CoCoCardTitle>
           <p style={{ marginBottom: '0' }}>{nameAndMinistry}</p>
           {/* This is commented out until a design desision is made */}
           {/* <CardDescription
             data-testid="description"
             style={{ marginBottom: '40px' }}
           > */}
-        </CommonComponentCardHeader>
-        <CommonComponentCardDescription data-testid="description">
+        </CoCoCardHeader>
+        <CoCoCardDescription data-testid="description">
           {description}
-        </CommonComponentCardDescription>
+        </CoCoCardDescription>
         {/* This is commented out until a design desision is made  */}
         {/* <Row
           start="xs"
@@ -147,7 +145,7 @@ function CoCoCard({
             <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
           </IconCol>
         </Row> */}
-      </CommonComponentCardStyled>
+      </CoCoCardStyled>
     </Link>
   );
 }

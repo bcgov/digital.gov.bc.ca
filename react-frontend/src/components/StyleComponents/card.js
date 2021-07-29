@@ -208,27 +208,25 @@ export const CardTitle = styled.h5.attrs({
 `;
 
 //common components cards
-export const CommonComponentCardStyled = styled(CardClickable).attrs({
-  className: 'commonComponentCard',
+export const CoCoCardStyled = styled(CardClickable).attrs({
+  className: 'coCoCard',
 })``;
 
-export const CommonComponentCardHeader = styled(CardClickableHeader).attrs({
-  className: 'commonComponentCardHeader',
+export const CoCoCardHeader = styled(CardClickableHeader).attrs({
+  className: 'coCoCardHeader',
 })`
   background: #ffffff;
   padding: 24px 24px 0;
 `;
 
-export const CommonComponentCardDescription = styled(
-  CardClickableDescription
-).attrs({
-  className: 'commonComponentCardDescription',
+export const CoCoCardDescription = styled(CardClickableDescription).attrs({
+  className: 'coCoCardDescription',
 })`
   padding: 40px 24px 24px;
 `;
 
-export const CommonComponentCardTitle = styled(CardTitle).attrs({
-  className: 'commonComponentCardTitle',
+export const CoCoCardTitle = styled(CardTitle).attrs({
+  className: 'coCoCardTitle',
 })`
   font-size: 26px;
   margin-bottom: 0;
