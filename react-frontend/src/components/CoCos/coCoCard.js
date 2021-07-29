@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 
 import { Badge, BadgeWrapper } from '../StyleComponents/badge';
 import {
-  CardTitle,
-  CardDescription,
-  CardStyled,
+  CoCoCardDescription,
+  CoCoCardHeader,
+  CoCoCardStyled,
+  CoCoCardTitle,
   Icon,
   IconCol,
 } from '../StyleComponents/card';
@@ -80,20 +81,20 @@ function CoCoCard({
 }) {
   return (
     <Link to={`/common-components/${uid}`}>
-      <CardStyled>
-        {Badges(status?.Status, status?.Maintenance, tags)}
-        <CardTitle data-testid="title" style={{ marginBottom: '0' }}>
-          {title}
-        </CardTitle>
-        <p>{nameAndMinistry}</p>
-        {/* This is commented out until a design desision is made */}
-        {/* <CardDescription
-          data-testid="description"
-          style={{ marginBottom: '40px' }}
-        > */}
-        <CardDescription data-testid="description">
+      <CoCoCardStyled>
+        <CoCoCardHeader>
+          {Badges(status?.Status, status?.Maintenance, tags)}
+          <CoCoCardTitle data-testid="title">{title}</CoCoCardTitle>
+          <p style={{ marginBottom: '0' }}>{nameAndMinistry}</p>
+          {/* This is commented out until a design desision is made */}
+          {/* <CardDescription
+            data-testid="description"
+            style={{ marginBottom: '40px' }}
+          > */}
+        </CoCoCardHeader>
+        <CoCoCardDescription data-testid="description">
           {description}
-        </CardDescription>
+        </CoCoCardDescription>
         {/* This is commented out until a design desision is made  */}
         {/* <Row
           start="xs"
@@ -144,7 +145,7 @@ function CoCoCard({
             <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
           </IconCol>
         </Row> */}
-      </CardStyled>
+      </CoCoCardStyled>
     </Link>
   );
 }
