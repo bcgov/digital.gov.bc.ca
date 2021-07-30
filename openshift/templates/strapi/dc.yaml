@@ -77,7 +77,13 @@ objects:
           memory:
             request: 150Mi
             limits: 250Mi
-        type: Recreate
+        rollingParams:
+          intervalSeconds: 1
+          maxSurge: 25%
+          maxUnavailable: 25%
+          timeoutSeconds: 1000
+          updatePeriodSeconds: 1
+        type: Rolling
       template:
         metadata:
           annotations:
