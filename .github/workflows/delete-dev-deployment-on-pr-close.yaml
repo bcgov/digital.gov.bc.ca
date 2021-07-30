@@ -1,6 +1,8 @@
 name: Delete Dev Deployment on PR close
 on: 
   pull_request:
+    branches:
+      - develop
     types: [closed]
 jobs:
   run:
