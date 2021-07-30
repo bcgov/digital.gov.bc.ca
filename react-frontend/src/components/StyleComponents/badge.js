@@ -37,5 +37,5 @@ export const BadgeWrapper = styled.div.attrs({
 })`
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 40px;
+  padding-bottom: 18px;
 `;
