@@ -25,6 +25,7 @@ Contact the product owner, Heather.Remacle@gov.bc.ca, if you have questions.
 ## How to run the project locally
 
 NOTE: for full local development see next section.
+NOTE 2: Often the first time these commands are run the images take too long to download and the commands can time out.  You may need to run the `build` and `up` command multiple times to get everything working. 
 
 > requires docker
 1. `cp .env.example .env` and fill in details as needed
