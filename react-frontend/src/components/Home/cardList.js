@@ -16,6 +16,8 @@ const communityGrey = require('../../images/pngIllustrations/communityGrey.png')
   .default;
 const caseStudiesGrey = require('../../images/pngIllustrations/caseStudiesGrey.png')
   .default;
+const learningGrey = require('../../images/pngIllustrations/learningGrey.png')
+  .default;
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const descriptions = [
@@ -26,6 +28,7 @@ const descriptions = [
   'The digital delivery network within the BC Public Service is active and growing. Connect, learn, and contribute!',
   'See examples of how teams are improving digital services for British Columbians.',
   'Reusable building blocks to create your product or service',
+  'Understand and adopt new approaches to teamwork and technology.',
 ];
 
 const CardList = () => {
@@ -76,11 +79,7 @@ const CardList = () => {
             />
           </Col>
         </Row>
-        <Row style={{ paddingTop: '30px' }}>
-          <Col sm={12}>
-            <Title2>Learn from Others</Title2>
-          </Col>
-        </Row>
+
         <Row>
           <Col sm={12} md={6}>
             <InfoCard
@@ -98,6 +97,15 @@ const CardList = () => {
               description={descriptions[5]}
               linkText="Learn more"
               routePath="/case-studies"
+            />
+          </Col>
+          <Col sm={12} md={6}>
+            <InfoCard
+              img={learningGrey}
+              title={'Learning'}
+              description={descriptions[7]}
+              linkText="Courses, events and more"
+              routePath="/learning"
             />
           </Col>
         </Row>
