@@ -19,7 +19,7 @@ services:
     container_name: strapi
     build: 
       context: ./strapi-app
-      dockerfile: DockerfileLocalDev
+      dockerfile: local.Dockerfile
     restart: unless-stopped
     env_file: .env
     environment:
