@@ -10,14 +10,16 @@ services:
       - strapi-app-network
     volumes:
       - './react-frontend:/app'
-      - './react-frontend/node_modules:/app/node_modules'
+      - /app/node_modules
     ports:
       - "3000:3000"
     tty: true
     
   strapiexample:
-    image: strapi/strapi:3.0.0
     container_name: strapi
+    build: 
+      context: ./strapi-app
+      dockerfile: local.Dockerfile
     restart: unless-stopped
     env_file: .env
     environment:
