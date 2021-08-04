@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without crashing if not props are passed in 1`] = `
+<div
+  className="sc-iJKOzS sc-bYoCmx MZcsV fWYvnU horizontalAlignment contentBlockContainer container"
+  id="standards"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12"
+    >
+      <h2
+        className="sc-AjmZR cogaXh resourceHeading"
+      >
+        Explore
+      </h2>
+    </div>
+  </div>
+  <p>
+    Loading...
+  </p>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12"
+    >
+      <h2
+        className="sc-AjmZR cogaXh resourceHeading"
+      >
+        Support
+      </h2>
+      <p
+        className="sc-dFtzdE fKoUGp digitalParagraph"
+      >
+        Contact the Common Components team:
+         
+        <a
+          className="sc-dtMiey jeYPik externalLink"
+          href="mailto:digital.government@gov.bc.ca"
+        >
+          Digital.Government@gov.bc.ca
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+</div>
+`;
