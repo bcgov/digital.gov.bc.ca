@@ -84,6 +84,7 @@ export const digitalPrincipleUrls = {
 export const digitalCardLinks = {
   imItStandards:
     'https://www2.gov.bc.ca/gov/content?id=2A477231EF934E22B0FBC8C43A98B9D9',
+  IMBplaybook: 'https://github.com/bcgov/CITZ-IMB-playbook',
 };
 
 export const footerLinks = {
