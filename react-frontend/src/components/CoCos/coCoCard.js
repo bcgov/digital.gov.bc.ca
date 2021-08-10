@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 
 import { Badge, BadgeWrapper } from '../StyleComponents/badge';
 import {
-  CardTitle,
-  CardDescription,
-  CardStyled,
+  CoCoCardTitle,
+  CoCoCardDescription,
+  CoCoCardHeader,
+  CoCoCardStyled,
   Icon,
   IconCol,
 } from '../StyleComponents/card';
@@ -79,73 +80,73 @@ function CoCoCard({
   uid,
 }) {
   return (
-    <Link to={`/common-components/${uid}`}>
-      <CardStyled>
+    <CoCoCardStyled to={`/common-components/${uid}`}>
+      <CoCoCardHeader>
         {Badges(status?.Status, status?.Maintenance, tags)}
-        <CardTitle data-testid="title" style={{ marginBottom: '0' }}>
+        <CoCoCardTitle data-testid="title" style={{ marginBottom: '0' }}>
           {title}
-        </CardTitle>
+        </CoCoCardTitle>
         <p>{nameAndMinistry}</p>
-        {/* This is commented out until a design desision is made */}
-        {/* <CardDescription
-          data-testid="description"
-          style={{ marginBottom: '40px' }}
-        > */}
-        <CardDescription data-testid="description">
-          {description}
-        </CardDescription>
-        {/* This is commented out until a design desision is made  */}
-        {/* <Row
-          start="xs"
-          style={{ bottom: '20px', position: 'absolute', width: '90%' }}
+      </CoCoCardHeader>
+      {/* This is commented out until a design desision is made */}
+      {/* <CardDescription
+        data-testid="description"
+        style={{ marginBottom: '40px' }}
+      > */}
+      <CoCoCardDescription data-testid="description">
+        {description}
+      </CoCoCardDescription>
+      {/* This is commented out until a design desision is made  */}
+      {/* <Row
+        start="xs"
+        style={{ bottom: '20px', position: 'absolute', width: '90%' }}
+      >
+        <IconCol
+          data-testid="cost"
+          xs={3}
+          title="Cost Structure"
+          style={{ paddingLeft: '0' }}
         >
+          <Row center="xs" style={{ height: '18px' }}>
+            <Icon src={priceIcon} />
+          </Row>
+          <Row center="xs">{cost}</Row>
+        </IconCol>
+        {numberOfUsers && (
           <IconCol
-            data-testid="cost"
+            data-testid="user-count"
             xs={3}
-            title="Cost Structure"
-            style={{ paddingLeft: '0' }}
+            title={'Number of Teams Using CoCo'}
           >
             <Row center="xs" style={{ height: '18px' }}>
-              <Icon src={priceIcon} />
+              <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
+              {numberOfUsers}
             </Row>
-            <Row center="xs">{cost}</Row>
+            <Row center="xs">Teams</Row>
           </IconCol>
-          {numberOfUsers && (
-            <IconCol
-              data-testid="user-count"
-              xs={3}
-              title={'Number of Teams Using CoCo'}
-            >
-              <Row center="xs" style={{ height: '18px' }}>
-                <Icon src={peopleIcon} style={{ paddingRight: '2px' }} />
-                {numberOfUsers}
-              </Row>
-              <Row center="xs">Teams</Row>
-            </IconCol>
-          )}
-          <IconCol
-            data-testid="onboarding-time"
-            xs={3}
-            title="Estimate of Onboarding Time"
-          >
-            <Row center="xs" style={{ height: '18px' }}>
-              <Icon src={clockIcon} />
-            </Row>
-            <Row center="xs">{onboardingTime}</Row>
-          </IconCol>
-          <IconCol
-            data-testid="support-schedule"
-            xs={3}
-            title="Support Availability"
-          >
-            <Row center="xs" style={{ height: '18px' }}>
-              <Icon src={assistantIcon} />
-            </Row>
-            <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
-          </IconCol>
-        </Row> */}
-      </CardStyled>
-    </Link>
+        )}
+        <IconCol
+          data-testid="onboarding-time"
+          xs={3}
+          title="Estimate of Onboarding Time"
+        >
+          <Row center="xs" style={{ height: '18px' }}>
+            <Icon src={clockIcon} />
+          </Row>
+          <Row center="xs">{onboardingTime}</Row>
+        </IconCol>
+        <IconCol
+          data-testid="support-schedule"
+          xs={3}
+          title="Support Availability"
+        >
+          <Row center="xs" style={{ height: '18px' }}>
+            <Icon src={assistantIcon} />
+          </Row>
+          <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
+        </IconCol>
+      </Row> */}
+    </CoCoCardStyled>
   );
 }
 

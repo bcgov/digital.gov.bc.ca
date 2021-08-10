@@ -2,12 +2,13 @@ import React from 'react';
 import dateFormat from 'dateformat';
 import 'antd/dist/antd.css';
 import {
+  BlogCardAuthorLine,
+  BlogCardBody,
+  BlogCardDescription,
+  BlogCardStyled,
   BlogCardThumnail,
   BlogCardThumnailNullImg,
-  BlogCardAuthorLine,
-  BlogCardStyled,
-  CardTitle,
-  CardDescription,
+  BlogCardTitle,
   CommunityCardStyled,
 } from '../StyleComponents/card';
 
@@ -48,7 +49,7 @@ function BlogCard({
       ) : (
         <BlogCardThumnailNullImg />
       )}
-      <div style={{ padding: '24px' }}>
+      <BlogCardBody>
         <BlogCardAuthorLine>
           <span>{author}</span>
           <AuthorIcon url={authImg} />
@@ -56,16 +57,13 @@ function BlogCard({
             {dateFormat(date, 'mmm d,yyyy')}
           </span>
         </BlogCardAuthorLine>
-        <CardTitle
-          style={{ fontSize: '25.92px', clear: 'both' }}
-          data-testid="title"
-        >
+        <BlogCardTitle data-testid="title">
           {title}
-        </CardTitle>
-        <CardDescription data-testid="description">
+        </BlogCardTitle>
+        <BlogCardDescription data-testid="description">
           {description}
-        </CardDescription>
-      </div>
+        </BlogCardDescription>
+      </BlogCardBody>
     </BlogCardStyled>
   );
 }
