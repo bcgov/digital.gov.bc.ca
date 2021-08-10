@@ -4,7 +4,7 @@ import { Col } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 
 const cardBorderRadius = '21px';
-const cardBorderInsetRadius = '18px';
+const cardBorderInsetRadius = '16px';
 
 
 
@@ -191,7 +191,7 @@ export const CardTitle = styled.h5.attrs({
 export const CoCoCardDescription = styled(CardClickableDescription).attrs({
   className: 'coCoCardDescription',
  })`
-  padding: 40px 24px 24px;
+  padding: 24px;
  `;
 
 export const CoCoCardHeader = styled(CardClickableHeader).attrs({
@@ -254,7 +254,7 @@ export const BlogCardBody = styled.div.attrs({
 export const BlogCardDescription = styled(CardClickableDescription).attrs({
    className: 'blogCardDescription',
  })`
-   border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+   border-radius: 0;
    height: fit-content;
    margin-bottom: 0;
    padding: 0;
