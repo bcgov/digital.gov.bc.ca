@@ -1,0 +1,10 @@
+apiVersion: ops.gov.bc.ca/v1alpha1
+kind: SysdigTeam
+metadata:
+  name: c0cce6-sysdigteam
+spec:
+  team: 
+    description: The Sysdig Team for the Digital.gov Namespaces
+    users:
+    - name: jonathan.sharman@gov.bc.ca
+      role: ROLE_TEAM_MANAGER
