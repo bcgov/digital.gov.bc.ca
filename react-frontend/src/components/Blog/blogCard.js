@@ -24,7 +24,7 @@ function AuthorIcon({ url }) {
           height: '24px',
           verticalAlign: 'middle',
           width: '24px',
-          marginLeft: '4px',
+          marginRight: '6px',
         }}
         data-testid="authorImage"
       />
@@ -45,17 +45,23 @@ function BlogCard({
   return (
     <BlogCardStyled to={`/blog/${uid}`}>
       {coverImgSrc ? (
-        <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+        <div>
+          <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+        </div>
       ) : (
-        <BlogCardThumnailNullImg />
+        <div>
+          <BlogCardThumnailNullImg />
+        </div>
       )}
       <BlogCardBody>
         <BlogCardAuthorLine>
-          <span>{author}</span>
-          <AuthorIcon url={authImg} />
-          <span style={{ float: 'right' }}>
+          <div>
+            <AuthorIcon url={authImg}/>
+            <span>{author}</span>
+          </div>
+          <div>
             {dateFormat(date, 'mmm d,yyyy')}
-          </span>
+          </div>
         </BlogCardAuthorLine>
         <BlogCardTitle data-testid="title">
           {title}
