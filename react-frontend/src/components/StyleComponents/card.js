@@ -239,7 +239,7 @@ export const BlogCardAuthorLine = styled.div`
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 12px;
   justify-content: space-between;
-  padding-bottom: 6px;
+  padding-bottom: 12px;
   width: 100%;
 `;
 
