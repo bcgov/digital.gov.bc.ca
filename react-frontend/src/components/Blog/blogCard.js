@@ -60,7 +60,7 @@ function BlogCard({
             <span>{author}</span>
           </div>
           <div>
-            {dateFormat(date, 'mmm d,yyyy')}
+            {dateFormat(date, 'mmm d, yyyy')}
           </div>
         </BlogCardAuthorLine>
         <BlogCardTitle data-testid="title">
