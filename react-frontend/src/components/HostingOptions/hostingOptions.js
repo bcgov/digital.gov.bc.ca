@@ -1,25 +1,30 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
+import * as Scroll from 'react-scroll';
 
 import DocumentTitle from 'react-document-title';
-import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import InfoCard from '../Home/infocard';
 
-import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
-import { DigitalPrinciplesHeading } from '../StyleComponents/headings';
-import { HrefLink } from '../StyleComponents/htmlTags';
-import { BannerSideImgTitle } from '../StyleComponents/bannerWithImage';
-import { digitalPrincipleUrls } from '../../constants/urls';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
+import { PageContainer } from '../StyleComponents/pageContent';
+import { HrefLink, HrefLinkScrollTo } from '../StyleComponents/htmlTags';
+import { hostingOptionUrls } from '../../constants/urls';
+import { Title, Heading, SubSubHeading } from '../StyleComponents/headings';
+
 import HADSpdf from '../../documents/Hosting-and-Application-Development-Strategy.pdf';
 
 function HostingOptions() {
+  const ScrollElement = Scroll.Element;
+
   return (
     <DocumentTitle title="Hosting Options - Digital Government - Province of British Columbia">
       <div>
         <PageContainer>
           <Row middle="xs">
             <Col xs={12} lg={8}>
-              <BannerSideImgTitle>Hosting Options</BannerSideImgTitle>
+              <Title>Hosting Options</Title>
               <p>
                 Before you create your awesome digital service, you should
                 consider where it will live. The term “hosting” refers to the
@@ -28,18 +33,48 @@ function HostingOptions() {
               </p>
               <p>What is the solution you’re looking to deliver? </p>
               <ul>
-                <li>A modern web-based application? Use containers </li>
-                <li>Commercial off-the-shelf software? Use virtual servers </li>
+                <li>
+                  A modern web-based application? Use{' '}
+                  <HrefLinkScrollTo
+                    to="containers"
+                    spy={true}
+                    smooth={true}
+                    offset={-180}
+                  >
+                    containers
+                  </HrefLinkScrollTo>
+                </li>
+                <li>
+                  Commercial off-the-shelf software? Use{' '}
+                  <HrefLinkScrollTo
+                    to="virtualServers"
+                    spy={true}
+                    smooth={true}
+                    offset={-180}
+                  >
+                    virtual servers
+                  </HrefLinkScrollTo>
+                </li>
                 <li>
                   Big data warehouse for hosting and working with massive
-                  amounts of data? Use physical servers
+                  amounts of data? Use{' '}
+                  <HrefLinkScrollTo
+                    to="physicalServers"
+                    spy={true}
+                    smooth={true}
+                    offset={-180}
+                  >
+                    physical servers
+                  </HrefLinkScrollTo>
                 </li>
               </ul>
               <p>
                 The B.C. government has several hosting options, which are
-                further described below. If you’re not sure, contact
-                CITZAS@gov.bc.ca to discuss the option that best fits your
-                needs.
+                further described below. If you’re not sure, contact{' '}
+                <HrefLink href="mailto:CITZAS@gov.bc.ca">
+                  CITZAS@gov.bc.ca
+                </HrefLink>{' '}
+                to discuss the option that best fits your needs.
               </p>
             </Col>
             <Col xs={12} lg={4}>
@@ -54,8 +89,9 @@ function HostingOptions() {
           </Row>
           <Row>
             <Col xs={12}>
-              <h2>Containers </h2>
-              <h4>Overview</h4>
+              <ScrollElement name="containers" className="element" />
+              <Heading>Containers </Heading>
+              <SubSubHeading>Overview</SubSubHeading>
               <p>
                 Containers provide a way for several digital services to share a
                 single operating system. Digital teams can focus their efforts
@@ -65,7 +101,7 @@ function HostingOptions() {
                 increase or decrease the resources it requires based on demand
                 or even launch new instances of itself if something goes wrong.
               </p>
-              <h4>Pros </h4>
+              <SubSubHeading>Pros </SubSubHeading>
               <ul>
                 <li>Less maintenance</li>
                 <li>Lower costs </li>
@@ -74,7 +110,7 @@ function HostingOptions() {
                   Promotes good practices such as automation and portability{' '}
                 </li>
               </ul>
-              <h4>Cons </h4>
+              <SubSubHeading>Cons </SubSubHeading>
               <ul>
                 <li>
                   Steep learning curve, particularly among traditional teams{' '}
@@ -91,20 +127,24 @@ function HostingOptions() {
                 <li>Emerging service with evolving support </li>
               </ul>
 
-              <h4>Recommendation</h4>
+              <SubSubHeading>Recommendation</SubSubHeading>
               <p>
                 Containers are the recommended hosting option for new digital
                 services.{' '}
               </p>
-              <h4>How to onboard </h4>
+              <SubSubHeading>How to onboard </SubSubHeading>
               <p>
                 The container hosting options for the B.C. government are
                 evolving and include public and private cloud platforms. Contact
-                the platform services team to discuss the best option for your
-                service.
+                the{' '}
+                <HrefLink href="mailto:pathfinder@gov.bc.ca">
+                  platform services team
+                </HrefLink>{' '}
+                to discuss the best option for your service.
               </p>
-              <h2>Virtual servers </h2>
-              <h4>Overview</h4>
+              <ScrollElement name="virtualServers" className="element" />
+              <Heading>Virtual servers </Heading>
+              <SubSubHeading>Overview</SubSubHeading>
               <p>
                 A virtual server provides a way for several digital services to
                 share a single physical server. Virtual servers are an
@@ -112,59 +152,79 @@ function HostingOptions() {
                 more expensive than containers and require additional
                 maintenance.
               </p>
-              <h4>Pros </h4>
+              <SubSubHeading>Pros </SubSubHeading>
               <ul>
                 <li>Supports Windows Server </li>
                 <li>More resilient than physical servers </li>
                 <li>Established service with well-documented support</li>
               </ul>
-              <h4>Cons </h4>
+              <SubSubHeading>Cons </SubSubHeading>
               <ul>
                 <li>
                   Requires ongoing management and upgrades to operating system
                 </li>
               </ul>
 
-              <h4>Recommendation</h4>
+              <SubSubHeading>Recommendation</SubSubHeading>
               <p>
                 Virtual servers are recommended for off-the-shelf software and
                 small/medium databases.{' '}
               </p>
-              <h4>How to onboard</h4>
+              <SubSubHeading>How to onboard</SubSubHeading>
               <p>
                 The B.C. government offers virtual servers in its data centers
-                via the iStore order management tool.{' '}
+                via the{' '}
+                <HrefLink href={hostingOptionUrls.iStore}>
+                  iStore order management tool
+                  <FontAwesomeIcon
+                    icon={faExternalLinkAlt}
+                    style={{ paddingLeft: '5px' }}
+                  />
+                </HrefLink>
+                .{' '}
               </p>
               <p>
-                Virtual servers are also available to early adopters via the
-                Cloud Pathfinder team.
+                Virtual servers are also available to early adopters via the{' '}
+                <HrefLink href="mailto:Cloud.Questions@gov.bc.ca">
+                  Cloud Pathfinder team
+                </HrefLink>
+                .
               </p>
-              <h2>Physical servers</h2>
-              <h4>Overview</h4>
+              <ScrollElement name="physicalServers" className="element" />
+              <Heading>Physical servers</Heading>
+              <SubSubHeading>Overview</SubSubHeading>
               <p>
                 Physical servers represent the oldest hosting option currently
                 available for onboarding for B.C. government teams. When using
                 physical servers, teams need to be mindful that there is
                 significant maintenance overhead.
               </p>
-              <h4>Pros </h4>
+              <SubSubHeading>Pros </SubSubHeading>
               <ul>
                 <li>Established service with well-documented support</li>
                 <li>
                   Simplified licensing for certain types of legacy software
                 </li>
               </ul>
-              <h4>Cons </h4>
+              <SubSubHeading>Cons </SubSubHeading>
               <ul>
                 <li>Most expensive hosting option</li>
                 <li>Least resilient hosting option</li>
               </ul>
-              <h4>Recommendation</h4>
+              <SubSubHeading>Recommendation</SubSubHeading>
               <p>Physical servers are not recommended.</p>
-              <h4>How to onboard</h4>
+              <SubSubHeading>How to onboard</SubSubHeading>
               <p>
                 The B.C. government offers physical servers in its data centers
-                via the iStore order management tool.
+                via the{' '}
+                <HrefLink href={hostingOptionUrls.iStore}>
+                  iStore order management tool
+                  <FontAwesomeIcon
+                    icon={faExternalLinkAlt}
+                    style={{ paddingLeft: '5px' }}
+                  />
+                </HrefLink>
+                .
               </p>
             </Col>
           </Row>

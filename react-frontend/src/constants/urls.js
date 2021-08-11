@@ -98,6 +98,10 @@ export const footerLinks = {
     'https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA',
 };
 
+export const hostingOptionUrls = {
+  iStore: 'https://ssbc-client.gov.bc.ca/order/istore.htm',
+};
+
 export const podcastUrls = {
   bcDevExchangePodcast: 'https://bcdevexchange.libsyn.com/',
 };
