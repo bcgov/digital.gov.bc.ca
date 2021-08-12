@@ -6,49 +6,47 @@ import { Link } from 'react-router-dom';
 const cardBorderRadius = '21px';
 const cardBorderInsetRadius = '16px';
 
-
-
 //clickable cards
- export const CardClickable = styled(Link).attrs({
-   className: 'cardClickable',
- })`
-   border: 6px solid transparent;
-   border-radius: ${cardBorderRadius};
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-   padding: 0;
-   :hover,
-   :focus {
-     border-color: #fdb917;
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     cursor: pointer;
-     transition: 0.15s; /* These make the interaction less jumpy */
-     transition-timing-function: ease-in-out;
-   }
-   :focus {
-     outline: -webkit-focus-ring-color auto 6px !important;
-   }
- `;
+export const CardClickable = styled(Link).attrs({
+  className: 'cardClickable',
+})`
+  border: 6px solid transparent;
+  border-radius: ${cardBorderRadius};
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  :hover,
+  :focus {
+    border-color: #fdb917;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: 0.15s; /* These make the interaction less jumpy */
+    transition-timing-function: ease-in-out;
+  }
+  :focus {
+    outline: -webkit-focus-ring-color auto 6px !important;
+  }
+`;
 
- export const CardClickableDescription = styled.p.attrs({
-   className: 'cardClickableDescription',
- })`
-   background: #ffffff;
-   border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
-   height: 100%;
-   margin: 0;
-   overflow: hidden;
-   padding: 24px;
-   text-align: left;
- `;
+export const CardClickableDescription = styled.p.attrs({
+  className: 'cardClickableDescription',
+})`
+  background: #ffffff;
+  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 24px;
+  text-align: left;
+`;
 
- export const CardClickableHeader = styled.h5.attrs({
-   className: 'cardClickableHeader',
- })`
-   border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
-   margin: 0;
- `;
+export const CardClickableHeader = styled.h5.attrs({
+  className: 'cardClickableHeader',
+})`
+  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
+  margin: 0;
+`;
 
 //basic styled cards (with link)
 export const CardStyled = styled(Card).attrs({
@@ -190,23 +188,23 @@ export const CardTitle = styled.h5.attrs({
 // common component cards
 export const CoCoCardDescription = styled(CardClickableDescription).attrs({
   className: 'coCoCardDescription',
- })`
+})`
   padding: 24px;
- `;
+`;
 
 export const CoCoCardHeader = styled(CardClickableHeader).attrs({
- className: 'coCoCardHeader',
+  className: 'coCoCardHeader',
 })`
   background: #fff;
   padding: 24px 24px 0;
 `;
 
 export const CoCoCardStyled = styled(CardClickable).attrs({
-   className: 'coCoCardStyled',
- })``;
+  className: 'coCoCardStyled',
+})``;
 
 export const CoCoCardTitle = styled(CardTitle).attrs({
- className: 'coCoCardTitle',
+  className: 'coCoCardTitle',
 })`
   font-size: 26px;
   margin-bottom: 0;
@@ -243,8 +241,7 @@ export const BlogCardAuthorLine = styled.div`
   width: 100%;
 `;
 
-export const BlogCardBody = styled.div.attrs({
-})`
+export const BlogCardBody = styled.div.attrs({})`
   background: #fff;
   border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
   height: 100%;
@@ -252,13 +249,13 @@ export const BlogCardBody = styled.div.attrs({
 `;
 
 export const BlogCardDescription = styled(CardClickableDescription).attrs({
-   className: 'blogCardDescription',
- })`
-   border-radius: 0;
-   height: fit-content;
-   margin-bottom: 0;
-   padding: 0;
- `;
+  className: 'blogCardDescription',
+})`
+  border-radius: 0;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 0;
+`;
 
 export const BlogCardStyled = styled(CardClickable).attrs({
   className: 'blogCard',
