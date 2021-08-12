@@ -226,9 +226,9 @@ parameters:
 - name: MEMORY_REQUEST
   value: 50Mi 
 - name: CPU_LIMIT
-  value: 70m 
+  value: 80m 
 - name: MEMORY_LIMIT
-  value: 75Mi 
+  value: 100Mi 
 - name: SUFFIX
   required: true
   description: a suffix used in conjunction with NAME to further isolate different instances of these components
