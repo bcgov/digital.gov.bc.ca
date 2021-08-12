@@ -173,7 +173,7 @@ function DigitalPrinciples() {
           <hr></hr>
           <p>
             <em>
-              These Principles are being developed in the open on GitHub. If you
+              These Principles were developed in the open on GitHub. If you
               would like to comment,{' '}
               <HrefLink
                 href={digitalPrincipleUrls.gitHub}
@@ -183,8 +183,8 @@ function DigitalPrinciples() {
                 visit the GitHub repository
               </HrefLink>{' '}
               and open an Issue, or send an email to{' '}
-              <HrefLink href="mailto:Daniel.Pizarro@gov.bc.ca">
-                Daniel.Pizarro@gov.bc.ca
+              <HrefLink href="mailto:amy.kirtay@gov.bc.ca">
+                Amy.Kirtay@gov.bc.ca
               </HrefLink>
               .
             </em>
