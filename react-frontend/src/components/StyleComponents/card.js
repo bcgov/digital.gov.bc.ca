@@ -263,3 +263,30 @@ export const EventCardTextBox = styled.div`
   height: 100%;
   padding: 24px;
 `;
+
+export const ResourceCardStyled = styled.div.attrs({
+  className: 'cardRound',
+})`
+  background-color: white;
+  border-radius: ${cardBorderRadius};
+  height: 100%;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+export const ResourceCardThumnail = styled.img`
+  background: #e5e5e5;
+  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
+  object-fit: contain;
+  width: 100%;
+`;
+
+export const ResourceCardTextBox = styled.div`
+  background-color: white;
+  border-radius: 0 0 ${cardBorderRadius} ${cardBorderRadius};
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+`;

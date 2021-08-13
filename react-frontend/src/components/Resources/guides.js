@@ -1,9 +1,10 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
-import HorizontalInfoCard from '../CaseStudies/horizontalInfoCard';
+import InfoCard from '../Home/infocard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
+import { digitalCardLinks } from '../../constants/urls';
 
 const videoCommsImg = require('../../images/videocomms.png').default;
 
@@ -16,15 +17,22 @@ function Guides() {
         </Col>
       </Row>
       <Row>
-        <Col sm={24} md={12}>
-          <HorizontalInfoCard
-            title={'Video Communication Platforms'}
-            img={videoCommsImg}
-            description={
-              'When you can’t meet with your coworkers or clients face-to-face, communicating with them by video can be the next best thing. There are many options available for video communication platforms or tools, many of which can also be used for instant messaging or chat, screen sharing and transferring files.'
-            }
-            linkText={'More'}
-            routePath={'guides/communication-platforms'}
+        <Col sm={12} md={6}>
+          <InfoCard
+            title="Hosting Options"
+            description="Learn about the infrastructure technologies available for hosting your digital service."
+            linkText="View options for hosting"
+            routePath="/resources/hosting-options"
+            height="300px"
+          />
+        </Col>
+        <Col sm={12} md={6}>
+          <InfoCard
+            title="Modern Application Playbook"
+            description="A collection of references, tools, and best practices to help you navigate the development and support of government applications within an Agile framework."
+            linkText="Read the playbook"
+            linkPath={digitalCardLinks.IMBplaybook}
+            height="300px"
           />
         </Col>
       </Row>
