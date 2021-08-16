@@ -11,6 +11,7 @@ import CoCos from '../../components/CoCos/coCos';
 import CoCoPage from '../../components/CoCos/coCoPage';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
 import DigitalFramework from '../DigitalFramework/digitalFramework';
+import HostingOptions from '../HostingOptions/hostingOptions';
 import Learning from '../../components/Learning/learning';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
@@ -40,6 +41,11 @@ const Routes = () => {
           exact
           path="/resources/digital-principles"
           component={DigitalPrinciples}
+        />
+        <Route
+          exact
+          path="/resources/hosting-options"
+          component={HostingOptions}
         />
         <Route exact path="/blog" component={BlogHome} />
         <Route exact path="/blog/:uid" component={BlogPage} />
