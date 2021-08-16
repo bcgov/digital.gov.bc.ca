@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-gGCCur sc-dvQbkV bDMVfk kpPukW horizontalAlignment pageContainer container"
+    className="sc-hmjpBu sc-dtMiey hwLXKX unuLi horizontalAlignment pageContainer container"
   >
     <div
       className="row middle-xs"
@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
         className="col-xs-12 col-lg-8"
       >
         <h1
-          className="sc-eLwHGX gHEwfk"
+          className="sc-GEcJY buFiZz"
         >
           Hosting Options
         </h1>
@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
             A modern web-based application? Use
              
             <a
-              className="sc-khQdMy cHHQIT"
+              className="sc-ehCIER fbHnsV"
               onClick={[Function]}
             >
               containers
@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
             Commercial off-the-shelf software? Use
              
             <a
-              className="sc-khQdMy cHHQIT"
+              className="sc-ehCIER fbHnsV"
               onClick={[Function]}
             >
               virtual servers
@@ -47,7 +47,7 @@ exports[`renders correctly 1`] = `
             Big data warehouse for hosting and working with massive amounts of data? Use
              
             <a
-              className="sc-khQdMy cHHQIT"
+              className="sc-ehCIER fbHnsV"
               onClick={[Function]}
             >
               physical servers
@@ -58,7 +58,7 @@ exports[`renders correctly 1`] = `
           The B.C. government has several hosting options, which are further described below. If you’re not sure, contact
            
           <a
-            className="sc-dPiKHq iSJcXK externalLink"
+            className="sc-jeqYYF zjmip externalLink"
             href="mailto:CITZAS@gov.bc.ca"
           >
             CITZAS@gov.bc.ca
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
         className="col-xs-12 col-lg-4"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD gKhahH cardRound"
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
           data-testid="styled-card"
         >
           <div
@@ -92,7 +92,7 @@ exports[`renders correctly 1`] = `
               className="sc-crHlIS guojQY cardLink"
             >
               <a
-                className="sc-bBHHQT kcwmSh externalLink"
+                className="sc-eJwXpk hGQaAH externalLink"
                 href="Hosting-and-Application-Development-Strategy.pdf"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -136,12 +136,12 @@ exports[`renders correctly 1`] = `
           name="containers"
         />
         <h2
-          className="sc-bTfYlY hSCyFG heading"
+          className="sc-gsNhcj elzHSl heading"
         >
           Containers 
         </h2>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Overview
         </h4>
@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
           Containers provide a way for several digital services to share a single operating system. Digital teams can focus their efforts on the service they’re providing rather than installing or maintaining the infrastructure. Containers also support the idea of “infrastructure as code”, which means that a service can increase or decrease the resources it requires based on demand or even launch new instances of itself if something goes wrong.
         </p>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Pros 
         </h4>
@@ -169,7 +169,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Cons 
         </h4>
@@ -191,7 +191,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Recommendation
         </h4>
@@ -200,7 +200,7 @@ exports[`renders correctly 1`] = `
            
         </p>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           How to onboard 
         </h4>
@@ -208,7 +208,7 @@ exports[`renders correctly 1`] = `
           The container hosting options for the B.C. government are evolving and include public and private cloud platforms. Contact the
            
           <a
-            className="sc-dPiKHq iSJcXK externalLink"
+            className="sc-jeqYYF zjmip externalLink"
             href="mailto:pathfinder@gov.bc.ca"
           >
             platform services team
@@ -221,12 +221,12 @@ exports[`renders correctly 1`] = `
           name="virtualServers"
         />
         <h2
-          className="sc-bTfYlY hSCyFG heading"
+          className="sc-gsNhcj elzHSl heading"
         >
           Virtual servers 
         </h2>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Overview
         </h4>
@@ -234,7 +234,7 @@ exports[`renders correctly 1`] = `
           A virtual server provides a way for several digital services to share a single physical server. Virtual servers are an established hosting option for the B.C. government. They are more expensive than containers and require additional maintenance.
         </p>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Pros 
         </h4>
@@ -250,7 +250,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Cons 
         </h4>
@@ -260,7 +260,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Recommendation
         </h4>
@@ -269,7 +269,7 @@ exports[`renders correctly 1`] = `
            
         </p>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           How to onboard
         </h4>
@@ -277,7 +277,7 @@ exports[`renders correctly 1`] = `
           The B.C. government offers virtual servers in its data centers via the
            
           <a
-            className="sc-dPiKHq iSJcXK externalLink"
+            className="sc-jeqYYF zjmip externalLink"
             href="https://ssbc-client.gov.bc.ca/order/istore.htm"
           >
             iStore order management tool
@@ -310,7 +310,7 @@ exports[`renders correctly 1`] = `
           Virtual servers are also available to early adopters via the
            
           <a
-            className="sc-dPiKHq iSJcXK externalLink"
+            className="sc-jeqYYF zjmip externalLink"
             href="mailto:Cloud.Questions@gov.bc.ca"
           >
             Cloud Pathfinder team
@@ -322,12 +322,12 @@ exports[`renders correctly 1`] = `
           name="physicalServers"
         />
         <h2
-          className="sc-bTfYlY hSCyFG heading"
+          className="sc-gsNhcj elzHSl heading"
         >
           Physical servers
         </h2>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Overview
         </h4>
@@ -335,7 +335,7 @@ exports[`renders correctly 1`] = `
           Physical servers represent the oldest hosting option currently available for onboarding for B.C. government teams. When using physical servers, teams need to be mindful that there is significant maintenance overhead.
         </p>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Pros 
         </h4>
@@ -348,7 +348,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Cons 
         </h4>
@@ -361,7 +361,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           Recommendation
         </h4>
@@ -369,7 +369,7 @@ exports[`renders correctly 1`] = `
           Physical servers are not recommended.
         </p>
         <h4
-          className="sc-hOGjNT iVOdQb subSubHeading"
+          className="sc-eGRTUG kkDsPl subSubHeading"
         >
           How to onboard
         </h4>
@@ -377,7 +377,7 @@ exports[`renders correctly 1`] = `
           The B.C. government offers physical servers in its data centers via the
            
           <a
-            className="sc-dPiKHq iSJcXK externalLink"
+            className="sc-jeqYYF zjmip externalLink"
             href="https://ssbc-client.gov.bc.ca/order/istore.htm"
           >
             iStore order management tool

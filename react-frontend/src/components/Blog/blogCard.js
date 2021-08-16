@@ -45,27 +45,23 @@ function BlogCard({
   return (
     <BlogCardStyled to={`/blog/${uid}`}>
       {coverImgSrc ? (
-        <div>
+        <div style={{ height: '200px' }}>
           <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
         </div>
       ) : (
-        <div>
+        <div style={{ height: '200px' }}>
           <BlogCardThumnailNullImg />
         </div>
       )}
       <BlogCardBody>
         <BlogCardAuthorLine>
           <div>
-            <AuthorIcon url={authImg}/>
+            <AuthorIcon url={authImg} />
             <span>{author}</span>
           </div>
-          <div>
-            {dateFormat(date, 'mmm d, yyyy')}
-          </div>
+          <div>{dateFormat(date, 'mmm d, yyyy')}</div>
         </BlogCardAuthorLine>
-        <BlogCardTitle data-testid="title">
-          {title}
-        </BlogCardTitle>
+        <BlogCardTitle data-testid="title">{title}</BlogCardTitle>
         <BlogCardDescription data-testid="description">
           {description}
         </BlogCardDescription>
