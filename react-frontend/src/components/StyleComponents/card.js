@@ -263,23 +263,15 @@ export const BlogCardStyled = styled(CardClickable).attrs({
 
 export const BlogCardThumnail = styled.img`
   border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
   width: 100%;
-  -webkit-backface-visibility: hidden;
-  -ms-transform: translateZ(0); /* IE 9 */
-  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
-  transform: translateZ(0);
 `;
 
 export const BlogCardThumnailNullImg = styled.div`
   border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
   background: #003366;
   height: 200px;
-  -webkit-backface-visibility: hidden;
-  -ms-transform: translateZ(0); /* IE 9 */
-  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
-  transform: translateZ(0);
 `;
 
 export const BlogCardTitle = styled(CardTitle).attrs({

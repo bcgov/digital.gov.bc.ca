@@ -45,11 +45,11 @@ function BlogCard({
   return (
     <BlogCardStyled to={`/blog/${uid}`}>
       {coverImgSrc ? (
-        <div style={{ height: '200px' }}>
+        <div>
           <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
         </div>
       ) : (
-        <div style={{ height: '200px' }}>
+        <div>
           <BlogCardThumnailNullImg />
         </div>
       )}
