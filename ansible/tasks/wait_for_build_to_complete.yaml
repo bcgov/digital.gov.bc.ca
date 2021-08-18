@@ -1,4 +1,4 @@
-- name: Wait for "{{ kind }}" object {{ name }} pods to get into ready state in {{ namespace }} 
+- name: Wait for {{ react_infra_name }}-{{ version }} build to complete in {{ tools_namespace }} 
   shell: >
     oc -n c0cce6-tools get build --selector build=digital-gov-frontend-test -o custom-columns=:status.phase --no-headers | tail -1
   register: build_status
