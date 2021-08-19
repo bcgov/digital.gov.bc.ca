@@ -2,7 +2,7 @@
   shell: >
     oc -n c0cce6-tools get build --selector build=digital-gov-frontend-test -o custom-columns=:status.phase --no-headers | tail -1
   register: build_status
-  until: (build_status == "Complete")
-  delay: 30
+  until: (build_status.stdout == "Complete")
+  delay: 60
   retries: 5
   ignore_errors: True
