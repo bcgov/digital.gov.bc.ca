@@ -34,7 +34,7 @@
           - is_valid_author
 
       - name: Wait for build to complete
-        include: ./tasks/wait_for_build_to_complete.yaml
+        include: ./tasks/wait_for_build_to_complete_react.yaml
 
 
 
