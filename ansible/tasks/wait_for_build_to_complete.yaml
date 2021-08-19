@@ -5,4 +5,4 @@
   until: (build_status.stdout == "Complete")
   delay: 60
   retries: 5
-  ignore_errors: True
+  ignore_errors: False
