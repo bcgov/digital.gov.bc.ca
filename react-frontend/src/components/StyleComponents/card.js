@@ -3,30 +3,52 @@ import { Card } from 'antd';
 import { Col } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 
-const cardBorderRadius = '25px';
-const cardBorderInsetRadius = '21px';
+const cardBorderRadius = '21px';
+const cardBorderInsetRadius = '16px';
 
-export const BlogCardThumnail = styled.img`
-  background: #003366;
-  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
+//clickable cards
+export const CardClickable = styled(Link).attrs({
+  className: 'cardClickable',
+})`
+  border: 6px solid transparent;
+  border-radius: ${cardBorderRadius};
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  :hover,
+  :focus {
+    border-color: #fdb917;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: 0.15s; /* These make the interaction less jumpy */
+    transition-timing-function: ease-in-out;
+  }
+  :focus {
+    outline: -webkit-focus-ring-color auto 6px !important;
+  }
 `;
 
-export const BlogCardThumnailNullImg = styled.div`
-  border-radius: ${cardBorderRadius} ${cardBorderRadius} 0 0;
-  background: #003366;
-  height: 200px;
+export const CardClickableDescription = styled.p.attrs({
+  className: 'cardClickableDescription',
+})`
+  background: #ffffff;
+  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 24px;
+  text-align: left;
 `;
 
-export const BlogCardAuthorLine = styled.div`
-  color: #606060;
-  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  font-size: 12px;
-  width: 100%;
+export const CardClickableHeader = styled.h5.attrs({
+  className: 'cardClickableHeader',
+})`
+  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
+  margin: 0;
 `;
 
+//basic styled cards (with link)
 export const CardStyled = styled(Card).attrs({
   className: 'cardRound',
 })`
@@ -163,58 +185,99 @@ export const CardTitle = styled.h5.attrs({
   }
 `;
 
-//community cards
-export const CommunityCardDescription = styled.p.attrs({
-  className: 'cardHorizontalText',
+// common component cards
+export const CoCoCardDescription = styled(CardClickableDescription).attrs({
+  className: 'coCoCardDescription',
 })`
-  background: #ffffff;
-  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
   padding: 24px;
-  text-align: left;
 `;
 
-export const CommunityCardHeader = styled.h5.attrs({
-  className: 'cardHorizontalText',
+export const CoCoCardHeader = styled(CardClickableHeader).attrs({
+  className: 'coCoCardHeader',
+})`
+  background: #fff;
+  padding: 24px 24px 0;
+`;
+
+export const CoCoCardStyled = styled(CardClickable).attrs({
+  className: 'coCoCardStyled',
+})``;
+
+export const CoCoCardTitle = styled(CardTitle).attrs({
+  className: 'coCoCardTitle',
+})`
+  font-size: 26px;
+  margin-bottom: 0;
+`;
+
+//community cards
+export const CommunityCardDescription = styled(CardClickableDescription).attrs({
+  className: 'communityCardDescription',
+})``;
+
+export const CommunityCardHeader = styled(CardClickableHeader).attrs({
+  className: 'communityCardHeader',
 })`
   background: #003366;
-  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
   color: #ffffff;
   font-weight: 700;
   font-size: 21px;
-  height: fit-content;
-  margin: 0;
   padding: 24px;
-  text-align: left;
 `;
 
-export const CommunityCardStyled = styled(Link).attrs({
-  className: 'cardRound',
-})`
-  border: 6px solid transparent;
-  border-radius: ${cardBorderRadius};
-  height: 100%;
-  margin-bottom: 20px;
-  width: 100%;
+export const CommunityCardStyled = styled(CardClickable).attrs({
+  className: 'communityCard',
+})``;
+
+//blog cards
+export const BlogCardAuthorLine = styled.div`
+  align-items: center;
+  color: #606060;
   display: flex;
-  flex-direction: column;
-  :hover,
-  :focus {
-    border-color: #fdb917;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 0.15s; /* These make the interaction less jumpy */
-    transition-timing-function: ease-in-out;
-  }
-  :focus {
-    outline: -webkit-focus-ring-color auto 6px !important;
-  }
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  width: 100%;
 `;
 
-export const BlogCardStyled = styled(CommunityCardStyled)`
-  background: white;
-  display: block;
+export const BlogCardBody = styled.div.attrs({})`
+  background: #fff;
+  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+  height: 100%;
+  padding: 24px;
+`;
+
+export const BlogCardDescription = styled(CardClickableDescription).attrs({
+  className: 'blogCardDescription',
+})`
+  border-radius: 0;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 0;
+`;
+
+export const BlogCardStyled = styled(CardClickable).attrs({
+  className: 'blogCard',
+})``;
+
+export const BlogCardThumnail = styled.img`
+  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+`;
+
+export const BlogCardThumnailNullImg = styled.div`
+  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
+  background: #003366;
+  height: 200px;
+`;
+
+export const BlogCardTitle = styled(CardTitle).attrs({
+  className: 'blogCardTitle',
+})`
+  font-size: 24px;
 `;
 
 export const Icon = styled.img.attrs({
