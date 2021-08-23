@@ -84,6 +84,7 @@ export const digitalPrincipleUrls = {
 export const digitalCardLinks = {
   imItStandards:
     'https://www2.gov.bc.ca/gov/content?id=2A477231EF934E22B0FBC8C43A98B9D9',
+  IMBplaybook: 'https://github.com/bcgov/CITZ-IMB-playbook',
 };
 
 export const footerLinks = {
@@ -95,6 +96,10 @@ export const footerLinks = {
     'https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412',
   copyright:
     'https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA',
+};
+
+export const hostingOptionUrls = {
+  iStore: 'https://ssbc-client.gov.bc.ca/order/istore.htm',
 };
 
 export const podcastUrls = {

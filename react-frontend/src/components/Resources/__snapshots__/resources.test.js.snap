@@ -1,0 +1,1116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="sc-hmjpBu sc-eLwHGX hwLXKX eryfvo horizontalAlignment bannerCenterText container"
+    id="main-content-anchor"
+  >
+    <div
+      className="row middle-xs"
+    >
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="sc-jHkVfK htRvFC sideImageText"
+        >
+          <h1
+            className="sc-bQtJOP cAwshC bannerTitle"
+          >
+            Resources
+          </h1>
+          <div
+            className="sc-fXEqXD iyAbAK subTitle"
+          >
+             
+            Policy, standards, guides, and tools you can use right now to deliver excellent digital services.
+             
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <img
+          alt=""
+          className="sc-dVNiOx bQxqfS sideImage"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hmjpBu sc-kHOZQx hwLXKX oA-DQh horizontalAlignment contentBlockContainer container"
+    id="standards"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+      >
+        <h2
+          className="sc-dtDOJZ iwPAsw resourceHeading"
+        >
+          Standards & Policy
+        </h2>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              Digital Principles
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-nVjpj bWXCMc internalLink"
+                href="/resources/digital-principles"
+                onClick={[Function]}
+              >
+                Read the principles
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              IM/IT Standards
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              The IM/IT Standards promote consistent, appropriate management of government technology resources.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-eJwXpk hGQaAH externalLink"
+                href="https://www2.gov.bc.ca/gov/content?id=2A477231EF934E22B0FBC8C43A98B9D9"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Read the standards
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-external-link-alt fa-w-16 "
+                  data-icon="external-link-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={
+                    Object {
+                      "paddingLeft": "5px",
+                    }
+                  }
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hmjpBu sc-kHOZQx hwLXKX oA-DQh horizontalAlignment contentBlockContainer container"
+    id="standards"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12 col-lg-4"
+      >
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <h3
+            className="sc-dkYRiW hzLfDT resourceSubHeading"
+          >
+            Technical
+          </h3>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Accessiblity and Inclusion Toolkit
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=2AC548A48CD7445A9359AF7BB204B6F6"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ministry IM/IT Policies and Standards
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=1AA28225F41347FE9F8D0B4F1733CEFE"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Web Standards & Guides 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        className="col-md-12 col-lg-4"
+      >
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <h3
+            className="sc-dkYRiW hzLfDT resourceSubHeading"
+          >
+            Privacy
+          </h3>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=C962EFF559134B69A8A9ABB3C121D6C7"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Privacy Management & Accountability Policy
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=54A04E35FA854B298DECF17ABC94E943"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Privacy and Personal Information
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=CFA561FF833D42B68FDD9A818ECAFFBE"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Privacy Impact Assessments
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        className="col-md-12 col-lg-4"
+      >
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <h3
+            className="sc-dkYRiW hzLfDT resourceSubHeading"
+          >
+            Security
+          </h3>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=BB7D7F3938634BF2973BDE1A899FB755"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Information Security Policy and Guidelines
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=7175C19B66564EA3A343AB8B668BEFC2"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Security Threat and Risk Assessments
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hmjpBu sc-kHOZQx hwLXKX oA-DQh horizontalAlignment contentBlockContainer container"
+    id="guides"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+      >
+        <h2
+          className="sc-dtDOJZ iwPAsw resourceHeading"
+        >
+          Guides
+        </h2>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              Hosting Options
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              Learn about the infrastructure technologies available for hosting your digital service.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-nVjpj bWXCMc internalLink"
+                href="/resources/hosting-options"
+                onClick={[Function]}
+              >
+                View options for hosting
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              Modern Application Playbook
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              A collection of references, tools, and best practices to help you navigate the development and support of government applications within an Agile framework.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-eJwXpk hGQaAH externalLink"
+                href="https://github.com/bcgov/CITZ-IMB-playbook"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Read the playbook
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-external-link-alt fa-w-16 "
+                  data-icon="external-link-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={
+                    Object {
+                      "paddingLeft": "5px",
+                    }
+                  }
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hmjpBu sc-kHOZQx hwLXKX oA-DQh horizontalAlignment contentBlockContainer container"
+    id="forDesigners"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12 col-lg-6"
+      >
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <h3
+            className="sc-dkYRiW hzLfDT resourceSubHeading"
+          >
+            For Designers
+          </h3>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=EADC5FB4D3BE4A6DB71C35A64CFECDFC"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            B.C. Visual Identity Program (Gov Mark) 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=81BBC6221D42401EBCE13D4D8945F3A3"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            CMS Lite User's Manual 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=D5D182EF4D9F42B5997CCB2029068B5E"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Content Design & Strategy 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://bcgov.github.io/design-research-guide/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Design Research Guide 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://developer.gov.bc.ca/Design-System/About-the-Design-System"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Design System 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=250C67AD0B954DB9B0549EED6C36BDEF"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Plain Language Course 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=A9B5158C5DB5499A83BD046E94CBCBB1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Service Design Phases 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=B990ECA6DAB94CD0BE2C1AE7BD439ADC"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Writing Services for the Web 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=A9801C7B52CE481BBD36CAD87C297142"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Visual Design Guide 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          className="sc-dvQbkV jIqPUg row"
+        >
+          <a
+            className="sc-eJwXpk hGQaAH externalLink"
+            href="https://www2.gov.bc.ca/gov/content?id=14FD003042FC422182796E84A6C343C9"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Web Style Guide 
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div
+        className="col-sm-12 col-lg-6"
+      >
+        <div
+          className="sc-kLwgWK dvnVqf cardRound"
+        >
+          <img
+            className="sc-ikJzcn lkuAqi"
+            data-testid="thumbnail"
+          />
+          <div
+            className="sc-jJoQpE fkjRiz"
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+              data-testid="title"
+              style={
+                Object {
+                  "clear": "both",
+                  "fontSize": "25.92px",
+                }
+              }
+            >
+              Video Communication Platforms
+            </h5>
+            <p
+              data-testid="description"
+            >
+              When you can’t meet with your coworkers or clients face-to-face, communicating with them by video can be the next best thing. There are many options available for video communication platforms or tools, many of which can also be used for instant messaging or chat, screen sharing and transferring files.
+            </p>
+            <a
+              className="sc-hiwReK ejbacx internalLink"
+              href="/guides/communication-platforms"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginTop": "auto",
+                }
+              }
+            >
+              More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hmjpBu sc-kHOZQx hwLXKX oA-DQh horizontalAlignment contentBlockContainer container"
+    id="forDevelopers"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+      >
+        <h3
+          className="sc-dkYRiW hzLfDT resourceSubHeading"
+        >
+          For Developers
+        </h3>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              BCGov on GitHub
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              Explore hundreds of open source code repositories that are being maintained by the teams who are building modern digital services in British Columbia.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-eJwXpk hGQaAH externalLink"
+                href="https://github.com/bcgov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Explore
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-external-link-alt fa-w-16 "
+                  data-icon="external-link-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={
+                    Object {
+                      "paddingLeft": "5px",
+                    }
+                  }
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-sm-12 col-md-6"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              DevHub
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              One place that brings together resources for developers building digital products for the BC Government.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-eJwXpk hGQaAH externalLink"
+                href="https://developer.gov.bc.ca/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Visit Site
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-external-link-alt fa-w-16 "
+                  data-icon="external-link-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={
+                    Object {
+                      "paddingLeft": "5px",
+                    }
+                  }
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
