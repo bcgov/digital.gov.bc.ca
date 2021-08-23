@@ -1,0 +1,9 @@
+- name: Wait for {{ react_infra_name }}-{{ version }} build to complete in {{ tools_namespace }} 
+  shell: >
+    oc -n {{ tools_namespace }} get build --selector build={{ react_infra_name }}-{{ version }} -o custom-columns=:status.phase --no-headers | tail -1
+  register: build_status
+  until: (build_status.stdout == "Complete")
+  delay: 60
+  retries: 5
+  ignore_errors: False
+  
