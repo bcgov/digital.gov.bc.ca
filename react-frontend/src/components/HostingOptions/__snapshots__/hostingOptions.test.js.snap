@@ -81,7 +81,7 @@ exports[`renders correctly 1`] = `
             <h5
               className="sc-egiSv kfuvTV cardTitle"
             >
-              IM/IT Standards
+              Hosting and Application Development Strategy
             </h5>
             <p
               className="sc-jrQzUz kjzYZb cardDescription"
@@ -97,7 +97,7 @@ exports[`renders correctly 1`] = `
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Read the standards
+                Read the strategy
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-external-link-alt fa-w-16 "
@@ -137,6 +137,11 @@ exports[`renders correctly 1`] = `
         />
         <h2
           className="sc-gsNhcj elzHSl heading"
+          style={
+            Object {
+              "paddingTop": "44px",
+            }
+          }
         >
           Containers 
         </h2>
@@ -222,6 +227,11 @@ exports[`renders correctly 1`] = `
         />
         <h2
           className="sc-gsNhcj elzHSl heading"
+          style={
+            Object {
+              "paddingTop": "44px",
+            }
+          }
         >
           Virtual servers 
         </h2>
@@ -323,6 +333,11 @@ exports[`renders correctly 1`] = `
         />
         <h2
           className="sc-gsNhcj elzHSl heading"
+          style={
+            Object {
+              "paddingTop": "44px",
+            }
+          }
         >
           Physical servers
         </h2>
