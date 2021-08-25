@@ -13,6 +13,15 @@ export const Heading = styled.h2.attrs({
   line-height: 1.6;
 `;
 
+export const FAQHeading = styled.h2.attrs({
+  className: 'faq-heading',
+})`
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 20px;
+`;
+
 export const SubHeading = styled.h3.attrs({
   className: 'subHeading',
 })`
