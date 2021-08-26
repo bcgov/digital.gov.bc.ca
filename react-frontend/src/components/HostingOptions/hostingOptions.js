@@ -79,9 +79,9 @@ function HostingOptions() {
             </Col>
             <Col xs={12} lg={4}>
               <InfoCard
-                title={'IM/IT Standards'}
+                title={'Hosting and Application Development Strategy'}
                 description="A vision and approach for modernizing government’s efforts to provide excellent digital services by using best practices."
-                linkText="Read the standards"
+                linkText="Read the strategy"
                 linkPath={HADSpdf}
                 height="300px"
               />
@@ -90,7 +90,7 @@ function HostingOptions() {
           <Row>
             <Col xs={12}>
               <ScrollElement name="containers" className="element" />
-              <Heading>Containers </Heading>
+              <Heading style={{ paddingTop: '44px' }}>Containers </Heading>
               <SubSubHeading>Overview</SubSubHeading>
               <p>
                 Containers provide a way for several digital services to share a
@@ -143,7 +143,7 @@ function HostingOptions() {
                 to discuss the best option for your service.
               </p>
               <ScrollElement name="virtualServers" className="element" />
-              <Heading>Virtual servers </Heading>
+              <Heading style={{ paddingTop: '44px' }}>Virtual servers </Heading>
               <SubSubHeading>Overview</SubSubHeading>
               <p>
                 A virtual server provides a way for several digital services to
@@ -191,7 +191,7 @@ function HostingOptions() {
                 .
               </p>
               <ScrollElement name="physicalServers" className="element" />
-              <Heading>Physical servers</Heading>
+              <Heading style={{ paddingTop: '44px' }}>Physical servers</Heading>
               <SubSubHeading>Overview</SubSubHeading>
               <p>
                 Physical servers represent the oldest hosting option currently
