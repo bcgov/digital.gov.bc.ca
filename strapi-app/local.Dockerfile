@@ -26,4 +26,4 @@ RUN chmod -R 777 /app/public/uploads/
 
 RUN yarn build
 # start app
-CMD ["yarn","start"]  
+CMD ["strapi","develop"]  
