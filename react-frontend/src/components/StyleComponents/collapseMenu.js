@@ -7,12 +7,16 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const { Panel } = Collapse;
 
-export const CollapseButton = styled.span.attrs({
+export const CollapseButton = styled.button.attrs({
   className: 'collapseButton',
+  role: 'button',
 })`
+  background: transparent;
   border: none;
   color: #1a5a96;
+  cursor: pointer;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  margin: 10px 0;
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon).attrs({

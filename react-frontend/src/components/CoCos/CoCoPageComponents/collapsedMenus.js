@@ -37,7 +37,8 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
           <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>
             Expand All
           </CollapseButton>{' '}
-          | <CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
+          &nbsp; | &nbsp;
+          <CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
         </Col>
       </Row>
       <CollapseStyled
