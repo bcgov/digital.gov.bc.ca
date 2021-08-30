@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-jWUzTF leYYRU sideImageText"
+          className="sc-eFehXo hjvahh sideImageText"
         >
           <h1
-            className="sc-eFehXo jpSmlh bannerTitle"
+            className="sc-fmBDoT dLbsIe bannerTitle"
           >
             Learning
           </h1>
           <div
-            className="sc-fmBDoT ZXmWC subTitle"
+            className="sc-lkgURy bvBQza subTitle"
           >
              
             Understand and adopt new approaches to teamwork and technology.
@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-FNZbm gLNNNt sideImage"
+          className="sc-jWUzTF cZiBQA sideImage"
         />
       </div>
     </div>
@@ -135,7 +135,7 @@ exports[`renders correctly 1`] = `
         >
           <img
             alt=""
-            className="sc-eGPWxh dyvDcV sideImage"
+            className="sc-hAcGfq jIVVCO sideImage"
           />
         </div>
       </div>
@@ -169,7 +169,7 @@ exports[`renders correctly 1`] = `
             Recent Episodes
           </h3>
           <a
-            className="sc-ctqRej fteQIH externalLink"
+            className="sc-dFtzdE koHwGF externalLink"
             href="https://bcdevexchange.libsyn.com/"
             rel="noopener noreferrer"
             style={
@@ -218,7 +218,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="ant-collapse-item sc-xiKGw jTkApA PanelStyled"
+          className="ant-collapse-item sc-dVNiOx fJJFyg PanelStyled"
         >
           <div
             aria-expanded={false}

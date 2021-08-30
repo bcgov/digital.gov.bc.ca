@@ -33,12 +33,12 @@ exports[`Renders without crashing if not props are passed in 1`] = `
         Support
       </h2>
       <p
-        className="sc-kYHenr kozwur digitalParagraph"
+        className="sc-xiKGw eGZOJm digitalParagraph"
       >
         Contact the Common Components team:
          
         <a
-          className="sc-gIDmry dqBYPk externalLink"
+          className="sc-evcjBb hSmVHe externalLink"
           href="mailto:digital.government@gov.bc.ca"
         >
           Digital.Government@gov.bc.ca
