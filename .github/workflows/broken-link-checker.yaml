@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   schedule:
     - cron: 0 0 1 * * # run monthly
   repository_dispatch: # run manually
