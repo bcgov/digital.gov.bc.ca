@@ -3,6 +3,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 
 import { DisplayNames as routeDisplayNames } from '../Nav/routes';
 import {
+  BreadcrumbChevron,
   BreadcrumbLI,
   BreadcrumbUL,
   HrefLinkStandaloneInternal,
@@ -36,7 +37,7 @@ const BreadCrumbs = (props) => {
       <HrefLinkStandaloneInternal to="/">Home</HrefLinkStandaloneInternal>
     </BreadcrumbLI>
   );
-  listEntry.push(<BreadcrumbLI key="0->">{'>'}</BreadcrumbLI>);
+  listEntry.push(<BreadcrumbChevron key="0->">{'>'}</BreadcrumbChevron>);
   for (var i = 1; i < pathArray.length - 1; i++) {
     displayName = pathArray[i];
     listEntry.push(
@@ -46,7 +47,7 @@ const BreadCrumbs = (props) => {
         </HrefLinkStandaloneInternal>
       </BreadcrumbLI>
     );
-    listEntry.push(<BreadcrumbLI key={i + '->'}>{'>'}</BreadcrumbLI>);
+    listEntry.push(<BreadcrumbChevron key={i + '->'}>{'>'}</BreadcrumbChevron>);
   }
 
   let breadCrumb = props ? props.breadCrumb : false;
