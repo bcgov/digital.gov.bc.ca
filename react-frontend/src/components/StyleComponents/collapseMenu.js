@@ -64,10 +64,14 @@ export const PanelStyled = styled(Panel).attrs({
 
   .ant-collapse-header {
     background: white;
+    border: 4px solid #fff;
     color: #1a5a96 !important;
     font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
     font-size: 22px;
     font-weight: 700;
+    :focus {
+      border-color: #fdb917;
+    }
   }
   .ant-collapse-content > .ant-collapse-content-box {
     margin-left: 40px;
