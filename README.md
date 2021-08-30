@@ -37,11 +37,21 @@ NOTE 2: Often the first time these commands are run the images take too long to 
 
 `docker-compose build`
 
-4. If you want to run the containers in the background:
+4. To successfully build the pluggins in the strapi project, we must install the plugins' node modules in the running strapi container.
+To enter the container run:
+
+`docker exec -it strapi /bin/bash`
+
+Inside the container navigate to the pluggin directory and install them using yarn. (at the time of writing there is only a single pluggin)
+
+`cd plugins/wysiwyg/`
+`yarn`
+
+5. If you want to run the containers in the background:
 
 `docker-compose up -d`
 
-5. To bring down the containers
+6. To bring down the containers
 
 `docker-compose down`
 

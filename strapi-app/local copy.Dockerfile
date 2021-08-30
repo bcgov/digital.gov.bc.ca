@@ -7,7 +7,6 @@ FROM strapi/strapi:3.0.0
 # set working directory
 WORKDIR /app
 
-
 # install app dependencies
 COPY package.json ./
 
@@ -17,11 +16,8 @@ RUN mkdir plugin && \
   mkdir wysiwyg
 
 # add app
-# COPY ./plugins/wysiwyg/package.json ./plugins/wysiwyg/
-# COPY ./plugins/wysiwyg/yarn.lock ./plugins/wysiwyg/
-
-# # add app
-COPY . ./
+COPY ./plugins/wysiwyg/package.json ./plugins/wysiwyg/
+COPY ./plugins/wysiwyg/yarn.lock ./plugins/wysiwyg/
 
 # The default time out is far to short for openshift to install dependancies properly
 # Install the plugin npm packages
@@ -30,8 +26,8 @@ RUN cd plugins/wysiwyg/ && \
   cd ../../ && \
   yarn install --network-timeout=600000
 
-# RUN chmod -R 777 /app/public/uploads/
+RUN chmod -R 777 /app/public/uploads/
 
-# RUN yarn build
-# # start app
-# CMD ["strapi","develop"]  
+RUN yarn build
+# start app
+CMD ["strapi","develop"]  

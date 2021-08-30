@@ -16,8 +16,10 @@ services:
     tty: true
     
   strapiexample:
-    image: strapi/strapi:3.0.0
     container_name: strapi
+    build: 
+      context: ./strapi-app
+      dockerfile: local.Dockerfile
     restart: unless-stopped
     env_file: .env
     environment:
