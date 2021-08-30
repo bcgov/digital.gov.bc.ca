@@ -13,5 +13,11 @@ jobs:
     name: Broken Link Check
     runs-on: ubuntu-latest
     steps:
+      - name: Set target
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{github.token}}
+          script: |
+            core.exportVariable('TARGET', "https://github.com/bcgov/digital.gov.bc.ca/blob/develop/react-frontend/src/constants/urls.js");
       - name: Broken Link Check
         uses: technote-space/broken-link-checker-action@v2
