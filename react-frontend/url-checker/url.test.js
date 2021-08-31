@@ -1,5 +1,3 @@
-'use strict';
-
 import {
   videoLinks,
   standardsUrls,
@@ -15,15 +13,12 @@ import {
   consideringLinks,
   collabResources,
   collabToolUrls,
-  assemblingLinks
-} from '../src/constants/urls'
+  assemblingLinks,
+} from '../src/constants/urls';
 
 const linkCheck = require('link-check');
 
-
-
 it('Checks a link', () => {
-
   linkCheck(assemblingLinks.exchangeLab, function (err, result) {
     if (err) {
       console.error(err);
@@ -31,5 +26,4 @@ it('Checks a link', () => {
     }
     console.log(`${result.link} is ${result.status}`);
   });
-
 });
