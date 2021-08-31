@@ -1,5 +1,3 @@
-'use strict';
-
 import {
   videoLinks,
   standardsUrls,
@@ -15,21 +13,21 @@ import {
   consideringLinks,
   collabResources,
   collabToolUrls,
-  assemblingLinks
-} from './urls'
+  assemblingLinks,
+} from './urls';
 
 const linkCheck = require('link-check');
 
-
-
-it('Checks a link', () => {
-
-  linkCheck(assemblingLinks.exchangeLab, function (err, result) {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log(`${result.link} is ${result.status}`);
+for (const url in assemblingLinks) {
+  it(`Checks the url ${url}`, async () => {
+    await linkCheck(assemblingLinks[url], function (err, result) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log(`${result.link} is ${result.status}`);
+      expect(result.status).toBe('alive');
+    });
+    await new Promise((resolve) => setTimeout(resolve, 4000));
   });
-
-});
+}
