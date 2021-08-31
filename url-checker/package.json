@@ -1,0 +1,14 @@
+{
+  "name": "url-checker",
+  "version": "1.0.0",
+  "description": "This is a testing module for urls",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Jon Sharman",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.1.0",
+    "link-check": "^5.0.0"
+  }
+}
