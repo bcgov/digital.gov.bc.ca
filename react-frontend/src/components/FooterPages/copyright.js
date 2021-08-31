@@ -1,6 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 
+import { copyrightLinks } from '../../constants/urls';
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { Heading, Title } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
@@ -28,7 +29,10 @@ function Copyright() {
         <p>
           To request permission to reproduce all or part of any other materials
           on this website, please complete the{' '}
-          <HrefLink href="https://forms.gov.bc.ca/copyright-permission-request/">
+          <HrefLink
+            href={copyrightLinks.copyrightPermissionForm}
+            target="_blank"
+          >
             Copyright Permission Request Form
           </HrefLink>
           .
@@ -36,9 +40,11 @@ function Copyright() {
         <Heading>Exceptions</Heading>
         <p>
           For the reproduction of provincial legislation found on the{' '}
-          <HrefLink href="http://www.bclaws.ca/">BC Laws website</HrefLink>,
-          permission is subject to the terms of the{' '}
-          <HrefLink href="http://www.bclaws.ca/standards/2014/QP-License_1.0.html">
+          <HrefLink href={copyrightLinks.BCLaws} target="_blank">
+            BC Laws website
+          </HrefLink>
+          , permission is subject to the terms of the{' '}
+          <HrefLink href="copyrightLinks.QPlicence" target="_blank">
             Queen’s Printer License – British Columbia
           </HrefLink>
           .
@@ -46,25 +52,28 @@ function Copyright() {
         <p>
           For the reproduction of specified b-roll, interview and podium video
           footage found on the{' '}
-          <HrefLink href="https://news.gov.bc.ca/">
+          <HrefLink href={copyrightLinks.BCGovNews}>
             BC Gov News website
           </HrefLink>
           , permission is subject to the terms of the{' '}
-          <HrefLink href="https://news.gov.bc.ca/assets/license">
+          <HrefLink href={copyrightLinks.newsLicence}>
             News Footage License - British Columbia
           </HrefLink>
           .
         </p>
         <p>
           For the reproduction of materials found in the{' '}
-          <HrefLink href="http://catalogue.data.gov.bc.ca/">
+          <HrefLink href={copyrightLinks.dataCatalogue}>
             BC Data Catalogue
           </HrefLink>
           , either a license agreement (as specified in the BC Data Catalogue)
           will apply or the materials are “access only” and reproduction is not
           permitted without written permission. To request permission, please
           complete the{' '}
-          <HrefLink href="https://forms.gov.bc.ca/copyright-permission-request/">
+          <HrefLink
+            href={copyrightLinks.copyrightPermissionForm}
+            target="_blank"
+          >
             Copyright Permission Request Form
           </HrefLink>
           . If a license agreement applies, permission is subject to the terms
@@ -73,18 +82,18 @@ function Copyright() {
         <Heading>Questions or concerns?</Heading>
         <p>
           For more information, please read the{' '}
-          <HrefLink href="https://www2.gov.bc.ca/gov/content?id=96CA7A9D26024B1A9EE81637DED592B8">
+          <HrefLink href={copyrightLinks.FAQs}>
             Frequently Asked Questions
           </HrefLink>{' '}
           or contact the{' '}
-          <HrefLink href="https://www2.gov.bc.ca/gov/content?id=4F03158C0AF84EC08DBB5BE3E873C33E">
+          <HrefLink href={copyrightLinks.IPP}>
             Intellectual Property Program
           </HrefLink>
           .
         </p>
         <p>
           e-mail:{' '}
-          <HrefLink href="mailto:QPIPPCopyright@gov.bc.ca">
+          <HrefLink href={copyrightLinks.IPPemail} target="_blank">
             QPIPPCopyright@gov.bc.ca
           </HrefLink>
         </p>

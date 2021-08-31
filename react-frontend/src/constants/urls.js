@@ -1,3 +1,9 @@
+export const aboutLinks = {
+  Strapi: 'https://strapi.io',
+  gitHub: 'https://github.com/bcgov/digital.gov.bc.ca',
+  productOwner: 'mailto:Steve.Chapman@gov.bc.ca',
+};
+
 export const assemblingLinks = {
   exchangeLab: 'https://bcdevexchange.org/ExchangeLab',
   digitalMarketplace: 'https://digital.gov.bc.ca/marketplace',
@@ -37,6 +43,20 @@ export const consideringLinks = {
   consierge: 'https://procurementconcierge.gov.bc.ca/',
   cloud:
     'https://www2.gov.bc.ca/gov/content?id=7AAEDC2846904CBD963838A3392840BB',
+};
+
+export const copyrightLinks = {
+  copyrightPermissionForm:
+    'https://forms.gov.bc.ca/copyright-permission-request/',
+  BCLaws: 'http://www.bclaws.ca/',
+  QPlicence: 'http://www.bclaws.ca/standards/2014/QP-License_1.0.html',
+  BCGovNews: 'https://news.gov.bc.ca/',
+  newsLicence: 'https://news.gov.bc.ca/assets/license',
+  dataCatalogue: 'http://catalogue.data.gov.bc.ca/',
+  FAQs:
+    'https://www2.gov.bc.ca/gov/content?id=96CA7A9D26024B1A9EE81637DED592B8',
+  IPP: 'https://www2.gov.bc.ca/gov/content?id=4F03158C0AF84EC08DBB5BE3E873C33E',
+  IPPemail: 'mailto:QPIPPCopyright@gov.bc.ca',
 };
 
 export const definingLinks = {
@@ -87,23 +107,20 @@ export const digitalCardLinks = {
   IMBplaybook: 'https://github.com/bcgov/CITZ-IMB-playbook',
 };
 
-export const footerLinks = {
-  disclaimer:
-    'https://www2.gov.bc.ca/gov/content?id=79F93E018712422FBC8E674A67A70535',
-  privacy:
-    'https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932',
-  accessibility:
-    'https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412',
-  copyright:
-    'https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA',
-};
-
 export const hostingOptionUrls = {
   iStore: 'https://ssbc-client.gov.bc.ca/order/istore.htm',
 };
 
 export const podcastUrls = {
   bcDevExchangePodcast: 'https://bcdevexchange.libsyn.com/',
+};
+
+export const privacyLinks = {
+  FOIPPA:
+    'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96165_00',
+  retentionSchedules:
+    'https://www2.gov.bc.ca/gov/content?id=13E3360616904B38B0C0879FA572A103',
+  privacyHelpline: 'mailto:Privacy.Helpline@gov.bc.ca',
 };
 
 export const resourceLinks = {

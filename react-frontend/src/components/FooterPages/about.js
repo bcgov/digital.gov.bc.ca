@@ -1,9 +1,16 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { aboutLinks } from '../../constants/urls';
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { Heading, Title } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
+
+const linkIcon = (
+  <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
+);
 
 function About() {
   return (
@@ -48,10 +55,13 @@ function About() {
         <p>
           Our frontend is built in React and integrates an open-source, headless
           content management system microservice called{' '}
-          <HrefLink href="https://strapi.io">Strapi</HrefLink>. Please peruse
-          and reuse what we’ve built — it’s all shared in the open{' '}
-          <HrefLink href="https://github.com/bcgov/digital.gov.bc.ca">
-            here on GitHub
+          <HrefLink href={aboutLinks.Strapi} target="_blank">
+            Strapi{linkIcon}
+          </HrefLink>
+          . Please peruse and reuse what we’ve built — it’s all shared in the
+          open{' '}
+          <HrefLink href={aboutLinks.gitHub} target="_blank">
+            here on GitHub{linkIcon}
           </HrefLink>
           .
         </p>
@@ -59,7 +69,7 @@ function About() {
         <p>
           If you have insights, stories or resources you think should be offered
           on digital.gov.bc.ca, please reach out to our Product Owner,{' '}
-          <HrefLink href="mailto:Steve.Chapman@gov.bc.ca">
+          <HrefLink href={aboutLinks.productOwner} target="_blank">
             Steve.Chapman@gov.bc.ca
           </HrefLink>
           .

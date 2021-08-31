@@ -1,6 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 
+import { privacyLinks } from '../../constants/urls';
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { FAQHeading, Heading, Title } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
@@ -17,7 +18,7 @@ function Privacy() {
           The British Columbia (B.C.) government is committed to protecting your
           privacy. The B.C. Government collects, uses and discloses your
           personal information in accordance with the{' '}
-          <HrefLink href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96165_00">
+          <HrefLink href={privacyLinks.FOIPPA}>
             Freedom of Information and Protection of Privacy Act
           </HrefLink>{' '}
           (<em>FOIPPA</em>) and other applicable legislation. ‘Personal
@@ -140,7 +141,7 @@ function Privacy() {
           computer. Information collected as a part of a cookie or a security
           audit log is retained for 2 years. Information collected or created by
           the Government of B.C. is maintained in accordance with{' '}
-          <HrefLink href="https://www2.gov.bc.ca/gov/content?id=13E3360616904B38B0C0879FA572A103">
+          <HrefLink href={privacyLinks.retentionSchedules}>
             government's records retention schedules
           </HrefLink>{' '}
           and other legislative requirements.
@@ -179,7 +180,7 @@ function Privacy() {
           at the Privacy, Compliance and Training Branch in the Ministry of
           Citizens’ Services, PO Box 9406 Stn Prov Govt, Victoria BC, V8W9V1,
           telephone (250) 356-1851.{' '}
-          <HrefLink href="mailto:Privacy.Helpline@gov.bc.ca">
+          <HrefLink href={privacyLinks.privacyHelpline} target="_blank">
             Privacy.Helpline@gov.bc.ca
           </HrefLink>
           .
