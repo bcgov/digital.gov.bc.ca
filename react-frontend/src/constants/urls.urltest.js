@@ -1,5 +1,3 @@
-'use strict';
-
 import * as exports from './urls';
 
 const linkCheck = require('link-check');
@@ -11,14 +9,12 @@ for (const urlObject in exports) {
           console.error(err);
           return;
         }
-        console.log(`${result.link} in object ${urlObject} is ${result.status}`);
-        expect(result.status).toBe("alive")
+        console.log(
+          `${result.link} in object ${urlObject} is ${result.status}`
+        );
+        expect(result.status).toBe('alive');
       });
       await new Promise((resolve) => setTimeout(resolve, 4000));
     });
   }
 }
-
-
-
-
