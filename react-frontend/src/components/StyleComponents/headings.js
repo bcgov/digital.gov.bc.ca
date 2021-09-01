@@ -13,7 +13,7 @@ export const Heading = styled.h2.attrs({
   line-height: 1.6;
 `;
 
-export const FAQHeading = styled.h2.attrs({
+export const FAQHeading = styled.h3.attrs({
   className: 'faq-heading',
 })`
   font-size: 18px;
