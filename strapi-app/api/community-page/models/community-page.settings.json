@@ -60,9 +60,6 @@
     "YammerLink": {
       "type": "string"
     },
-    "AtWorkLink": {
-      "type": "string"
-    },
     "MSTeamsLink": {
       "type": "string"
     },
