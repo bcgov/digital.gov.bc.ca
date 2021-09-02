@@ -4,7 +4,6 @@ export const assemblingLinks = {
   devops: 'https://bcdevexchange.org/DevOpsPlatform',
   imit:
     'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
-  badURL: 'https://www2.gov.bc.ca/gov/content/homegerg',
 };
 
 export const collabToolUrls = {
@@ -28,7 +27,7 @@ export const collabResources = {
   bcLaw85: 'https://www.bclaws.ca/civix/document/id/mo/mo/2020_m085',
   bestPractices:
     'https://www2.gov.bc.ca/gov/content?id=C62B9503A7B34A4484AB96B554357803',
-  openSchools: 'https://www.openschool.bc.ca/keeplearning/#sections',
+  openSchools: 'https://www.openschool.bc.ca/keeplearning/',
   zoom: 'https://blog.zoom.us/a-message-to-our-users/',
 };
 
