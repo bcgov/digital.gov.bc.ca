@@ -4,7 +4,7 @@ on:
     - 'react-frontend/src'
     - 'react-frontend/package.json'
   schedule:
-    - cron: 0 0 1 * * # run monthly
+    - cron: 0 0 3 * * # run monthly on the 3rd day
   repository_dispatch: # run manually
     types: [check-link]
   # push:
@@ -30,12 +30,11 @@ jobs:
       with:
         assignees: "thegentlemanphysicist"
         labels: "bug"
-        column: "Backlog"
         title: "Broken urls found on site"
         body: |
           ### The broken link checker action found a broken link!
           Please check the action output in GitHub for details.
-        pinned: false
+        pinned: true
         close-previous: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
