@@ -30,7 +30,7 @@ jobs:
       with:
         assignees: "thegentlemanphysicist"
         labels: "bug"
-        pipelines: "Backlog"
+        column: "Backlog"
         title: "Broken urls found on site"
         body: |
           ### The broken link checker action found a broken link!
