@@ -25,6 +25,7 @@ jobs:
       run: npm run url-test
       working-directory: ${{env.working-directory}}
     - name: Create team issue
+      if: ${{failure()}}
       uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
       with:
         assignees: "thegentlemanphysicist"
