@@ -30,10 +30,11 @@ jobs:
       with:
         assignees: "thegentlemanphysicist"
         labels: "bug"
-        title: "Team sync"
+        pipelines: "Backlog"
+        title: "Broken urls found on site"
         body: |
-          ### test issue
-          - this should create an issur
+          ### The broken link checker action found a broken link!
+          Please check the action output in GitHub for details.
         pinned: false
         close-previous: false
       env:
