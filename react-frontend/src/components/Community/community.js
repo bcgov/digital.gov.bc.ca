@@ -117,11 +117,6 @@ function Community() {
                       icon={yammer}
                     />
                     <LinkWithIcon
-                      url={communityPage?.AtWorkLink}
-                      text="@Work"
-                      icon={atSymbol}
-                    />
-                    <LinkWithIcon
                       url={communityPage?.MSTeamsLink}
                       text="MS Teams"
                       icon={MSTeams}
