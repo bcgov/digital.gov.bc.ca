@@ -16,10 +16,8 @@ services:
     tty: true
     
   strapiexample:
+    image: strapi/strapi:3.0.0
     container_name: strapi
-    build: 
-      context: ./strapi-app
-      dockerfile: local.Dockerfile
     restart: unless-stopped
     env_file: .env
     environment:
@@ -29,8 +27,6 @@ services:
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-    #    links:
-    #      - mongo:mongo
     networks:
       - strapi-app-network
     volumes:
