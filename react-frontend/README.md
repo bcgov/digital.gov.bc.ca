@@ -21,6 +21,12 @@ To get a mesure of the code coverage run:
 
 `npm run test -- --coverage --watchAll=false`
 
+A percentage of our tests are snapshot based.  These will fail if the styling has changed on their corresponding pages.  To update them simply run the tests locally and when prompted, type the command `u`.  Make certain all broken tests do not reflect breaking changes.
+
+### `npm run url-test`
+
+This runs a test to see if the urls in the react-frontend are still live.  The test file is stored with the `url.js` file in the constants folder `./src/constants/`. These tests are also triggered by a cron job to run once a month.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
