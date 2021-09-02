@@ -25,15 +25,15 @@ jobs:
       run: npm run url-test
       working-directory: ${{env.working-directory}}
     - name: Create team issue
-        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
-        with:
-          assignees: "thegentlemanphysicist"
-          labels: "bug"
-          title: "Team sync"
-          body: |
-            ### test issue
-            - this should create an issur
-          pinned: false
-          close-previous: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+      with:
+        assignees: "thegentlemanphysicist"
+        labels: "bug"
+        title: "Team sync"
+        body: |
+          ### test issue
+          - this should create an issur
+        pinned: false
+        close-previous: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
