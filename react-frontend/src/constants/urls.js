@@ -10,6 +10,7 @@ export const assemblingLinks = {
   devops: 'https://bcdevexchange.org/DevOpsPlatform',
   imit:
     'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
+  badURL: 'https://www2.gov.bc.ca/gov/content/homegerg',
 };
 
 export const collabToolUrls = {
