@@ -180,7 +180,7 @@ function Privacy() {
           at the Privacy, Compliance and Training Branch in the Ministry of
           Citizens’ Services, PO Box 9406 Stn Prov Govt, Victoria BC, V8W9V1,
           telephone (250) 356-1851.{' '}
-          <HrefLink href={privacyLinks.privacyHelpline} target="_blank">
+          <HrefLink href="mailto:Privacy.Helpline@gov.bc.ca" target="_blank">
             Privacy.Helpline@gov.bc.ca
           </HrefLink>
           .

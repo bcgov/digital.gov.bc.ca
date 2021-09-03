@@ -93,7 +93,7 @@ function Copyright() {
         </p>
         <p>
           e-mail:{' '}
-          <HrefLink href={copyrightLinks.IPPemail} target="_blank">
+          <HrefLink href="mailto:QPIPPCopyright@gov.bc.ca" target="_blank">
             QPIPPCopyright@gov.bc.ca
           </HrefLink>
         </p>

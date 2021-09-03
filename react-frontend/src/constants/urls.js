@@ -1,7 +1,6 @@
 export const aboutLinks = {
   Strapi: 'https://strapi.io',
   gitHub: 'https://github.com/bcgov/digital.gov.bc.ca',
-  productOwner: 'mailto:Steve.Chapman@gov.bc.ca',
 };
 
 export const assemblingLinks = {
@@ -56,7 +55,6 @@ export const copyrightLinks = {
   FAQs:
     'https://www2.gov.bc.ca/gov/content?id=96CA7A9D26024B1A9EE81637DED592B8',
   IPP: 'https://www2.gov.bc.ca/gov/content?id=4F03158C0AF84EC08DBB5BE3E873C33E',
-  IPPemail: 'mailto:QPIPPCopyright@gov.bc.ca',
 };
 
 export const definingLinks = {
@@ -120,7 +118,6 @@ export const privacyLinks = {
     'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96165_00',
   retentionSchedules:
     'https://www2.gov.bc.ca/gov/content?id=13E3360616904B38B0C0879FA572A103',
-  privacyHelpline: 'mailto:Privacy.Helpline@gov.bc.ca',
 };
 
 export const resourceLinks = {
