@@ -3,8 +3,9 @@ import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import { Heading } from '../../StyleComponents/headings';
 import { CoCoLinkExternal } from '../../StyleComponents/htmlTags';
+import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
-function GetStarted({ name, url }) {
+function GetStarted({ name, url, steps }) {
   return (
     <div style={{ marginTop: '60px' }}>
       <Row>
@@ -13,7 +14,10 @@ function GetStarted({ name, url }) {
         </Col>
       </Row>
       <Row>
-        <Col xs={12}>
+        <Col xs={12} data-testid="how-to-start">
+          {steps && (
+            <StyleRichText htmlOrMarkdown={steps} data-testid="how-to-start" />
+          )}
           <p>
             Select the "Start Using Now" button to visit the {name} Onboarding
             guide.

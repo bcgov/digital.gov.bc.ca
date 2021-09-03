@@ -6,6 +6,7 @@ import {
   FooterListItem,
   FooterUL,
 } from '../StyleComponents/htmlTags';
+import { footerLinks } from '../../constants/urls';
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           </FooterListItem>
           <FooterListItem>
             <FooterLink
-              href="https://www2.gov.bc.ca/gov/content/home/disclaimer"
+              href={footerLinks.disclaimer}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -26,7 +27,7 @@ const Footer = () => {
           </FooterListItem>
           <FooterListItem>
             <FooterLink
-              href="https://www2.gov.bc.ca/gov/content/home/privacy"
+              href={footerLinks.privacy}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -35,7 +36,7 @@ const Footer = () => {
           </FooterListItem>
           <FooterListItem>
             <FooterLink
-              href="https://www2.gov.bc.ca/gov/content/home/accessible-government"
+              href={footerLinks.accessibility}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -44,7 +45,7 @@ const Footer = () => {
           </FooterListItem>
           <FooterListItem>
             <FooterLink
-              href="https://www2.gov.bc.ca/gov/content/home/copyright"
+              href={footerLinks.copyright}
               target="_blank"
               rel="noopener noreferrer"
             >

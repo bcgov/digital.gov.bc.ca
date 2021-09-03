@@ -11,6 +11,8 @@ import CoCos from '../../components/CoCos/coCos';
 import CoCoPage from '../../components/CoCos/coCoPage';
 import CollaborationTools from '../../components/Guides/CollaborationTools/collaborationTools';
 import DigitalFramework from '../DigitalFramework/digitalFramework';
+import HostingOptions from '../HostingOptions/hostingOptions';
+import Learning from '../../components/Learning/learning';
 import Products from '../products/products';
 import DigitalPrinciples from '../../components/DigitalPrinciples/digitalPrinciples';
 import BreadCrumbs from './breadcrumbs';
@@ -40,9 +42,15 @@ const Routes = () => {
           path="/resources/digital-principles"
           component={DigitalPrinciples}
         />
+        <Route
+          exact
+          path="/resources/hosting-options"
+          component={HostingOptions}
+        />
         <Route exact path="/blog" component={BlogHome} />
         <Route exact path="/blog/:uid" component={BlogPage} />
         <Route exact path="/resources" component={Resources} />
+        <Route exact path="/learning" component={Learning} />
         <Route exact path="/common-components" component={CoCos} />
         <Route exact path="/common-components/:uid" component={CoCoPage} />
         <Route exact path="/communities" component={Communities} />

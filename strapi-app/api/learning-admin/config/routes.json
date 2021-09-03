@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/learning-admins",
+      "handler": "learning-admin.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/learning-admins/count",
+      "handler": "learning-admin.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/learning-admins/:id",
+      "handler": "learning-admin.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/learning-admins",
+      "handler": "learning-admin.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/learning-admins/:id",
+      "handler": "learning-admin.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/learning-admins/:id",
+      "handler": "learning-admin.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

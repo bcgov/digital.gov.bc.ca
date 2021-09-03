@@ -21,6 +21,14 @@ export const SubHeading = styled.h3.attrs({
   line-height: 1.6;
 `;
 
+export const SubSubHeading = styled.h4.attrs({
+  className: 'subSubHeading',
+})`
+  font-size: 21.6px;
+  font-weight: 700;
+  line-height: 1.6;
+`;
+
 export const CaseStudyHeading = styled(Heading)`
   margin-bottom: 24px;
 `;

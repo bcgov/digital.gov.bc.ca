@@ -18,7 +18,6 @@ const COMMUNITY_QUERY = gql`
       }
       RocketChatLink
       YammerLink
-      AtWorkLink
       MSTeamsLink
       Website
       KeyResources

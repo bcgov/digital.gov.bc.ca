@@ -1,39 +1,29 @@
 import React from 'react';
-import { createMemoryHistory } from 'history';
-import { Router, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BlogNavigation, { PrevNextButton } from './blogNavigation';
 import { AppConfig } from '../../providers/AppConfig';
-import { ApolloProvider } from 'react-apollo';
-import ApolloClient from 'apollo-boost';
+import { MockedProvider } from '@apollo/react-testing';
+import { renderWithRouterMatch } from '../../tests/helperFunctions/routerWrapper';
 
-// Using useParams makes testing difficult.  This fixes it.
-// https://medium.com/@aarling/mocking-a-react-router-match-object-in-your-component-tests-fa95904dcc55
+const originalError = console.error;
 
-// // Helper function
-export function renderWithRouterMatch(
-  ui,
-  {
-    path = '/',
-    route = '/',
-    history = createMemoryHistory({ initialEntries: [route] }),
-  } = {}
-) {
-  return {
-    ...render(
-      <AppConfig>
-        <ApolloProvider
-          client={new ApolloClient({ uri: 'http://localhost:3000/graphql' })}
-        >
-          <Router history={history}>
-            <Route path={path} component={ui} />
-          </Router>
-        </ApolloProvider>
-      </AppConfig>
-    ),
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (/Warning.*not wrapped in act/.test(args[0])) {
+      return;
+    }
+    if (/Error: connect ECONNREFUSED 127.0.0.1:80/.test(args[0])) {
+      return;
+    }
+    originalError.call(console, ...args);
   };
-}
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
 
 afterEach(cleanup);
 

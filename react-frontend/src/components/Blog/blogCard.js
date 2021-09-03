@@ -2,12 +2,13 @@ import React from 'react';
 import dateFormat from 'dateformat';
 import 'antd/dist/antd.css';
 import {
+  BlogCardAuthorLine,
+  BlogCardBody,
+  BlogCardDescription,
+  BlogCardStyled,
   BlogCardThumnail,
   BlogCardThumnailNullImg,
-  BlogCardAuthorLine,
-  BlogCardStyled,
-  CardTitle,
-  CardDescription,
+  BlogCardTitle,
   CommunityCardStyled,
 } from '../StyleComponents/card';
 
@@ -23,7 +24,7 @@ function AuthorIcon({ url }) {
           height: '24px',
           verticalAlign: 'middle',
           width: '24px',
-          marginLeft: '4px',
+          marginRight: '6px',
         }}
         data-testid="authorImage"
       />
@@ -44,28 +45,27 @@ function BlogCard({
   return (
     <BlogCardStyled to={`/blog/${uid}`}>
       {coverImgSrc ? (
-        <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+        <div>
+          <BlogCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+        </div>
       ) : (
-        <BlogCardThumnailNullImg />
+        <div>
+          <BlogCardThumnailNullImg />
+        </div>
       )}
-      <div style={{ padding: '24px' }}>
+      <BlogCardBody>
         <BlogCardAuthorLine>
-          <span>{author}</span>
-          <AuthorIcon url={authImg} />
-          <span style={{ float: 'right' }}>
-            {dateFormat(date, 'mmm d,yyyy')}
-          </span>
+          <div>
+            <AuthorIcon url={authImg} />
+            <span>{author}</span>
+          </div>
+          <div>{dateFormat(date, 'mmm d, yyyy')}</div>
         </BlogCardAuthorLine>
-        <CardTitle
-          style={{ fontSize: '25.92px', clear: 'both' }}
-          data-testid="title"
-        >
-          {title}
-        </CardTitle>
-        <CardDescription data-testid="description">
+        <BlogCardTitle data-testid="title">{title}</BlogCardTitle>
+        <BlogCardDescription data-testid="description">
           {description}
-        </CardDescription>
-      </div>
+        </BlogCardDescription>
+      </BlogCardBody>
     </BlogCardStyled>
   );
 }

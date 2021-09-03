@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-hmjpBu sc-kHOZQx hwLXKX oA-DQh horizontalAlignment contentBlockContainer container"
+  id="standards"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12"
+    >
+      <h2
+        className="sc-gsNhcj elzHSl heading"
+      >
+        Events
+      </h2>
+    </div>
+  </div>
+  <p>
+    Loading...
+  </p>
+</div>
+`;
