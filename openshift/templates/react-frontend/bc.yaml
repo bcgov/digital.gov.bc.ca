@@ -31,15 +31,15 @@ objects:
           uri: ${GIT_REPO}
         type: Git
       strategy:
-        sourceStrategy:
+        dockerStrategy:
+          pullSecret:
+            name: artifactory-creds
           env:
           - name: BUILD_LOGLEVEL
-            value: "5"
-          from:
-            kind: ImageStreamTag
-            name: caddy-s2i-builder:latest
-          incremental: false
-        type: Source
+            value: '2'
+          - name: NPM_CONFIG_LOGLEVEL
+            value: notice
+        type: Docker
       successfulBuildsHistoryLimit: 5
       triggers:
         - type: ConfigChange
