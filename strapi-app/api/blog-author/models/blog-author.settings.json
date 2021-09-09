@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "blog_authors",
   "info": {
-    "name": "BlogAuthor",
+    "name": "Blog Author",
     "description": ""
   },
   "options": {

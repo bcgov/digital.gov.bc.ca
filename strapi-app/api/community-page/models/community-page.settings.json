@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "community_pages",
   "info": {
-    "name": "CommunityPage",
+    "name": "Community Page",
     "description": ""
   },
   "options": {
@@ -58,9 +58,6 @@
       "type": "string"
     },
     "YammerLink": {
-      "type": "string"
-    },
-    "AtWorkLink": {
       "type": "string"
     },
     "MSTeamsLink": {

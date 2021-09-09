@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="sc-hmjpBu sc-dtMiey hwLXKX unuLi horizontalAlignment pageContainer container"
+  >
+    <div
+      className="row middle-xs"
+    >
+      <div
+        className="col-xs-12 col-lg-8"
+      >
+        <h1
+          className="sc-GEcJY buFiZz"
+        >
+          Hosting Options
+        </h1>
+        <p>
+          Before you create your awesome digital service, you should consider where it will live. The term “hosting” refers to the collection of infrastructure technologies that provide a foundation for the digital service.
+        </p>
+        <p>
+          What is the solution you’re looking to deliver? 
+        </p>
+        <ul>
+          <li>
+            A modern web-based application? Use
+             
+            <a
+              className="sc-ehCIER fbHnsV"
+              onClick={[Function]}
+            >
+              containers
+            </a>
+          </li>
+          <li>
+            Commercial off-the-shelf software? Use
+             
+            <a
+              className="sc-ehCIER fbHnsV"
+              onClick={[Function]}
+            >
+              virtual servers
+            </a>
+          </li>
+          <li>
+            Big data warehouse for hosting and working with massive amounts of data? Use
+             
+            <a
+              className="sc-ehCIER fbHnsV"
+              onClick={[Function]}
+            >
+              physical servers
+            </a>
+          </li>
+        </ul>
+        <p>
+          The B.C. government has several hosting options, which are further described below. If you’re not sure, contact
+           
+          <a
+            className="sc-jeqYYF zjmip externalLink"
+            href="mailto:CITZAS@gov.bc.ca"
+          >
+            CITZAS@gov.bc.ca
+          </a>
+           
+          to discuss the option that best fits your needs.
+        </p>
+      </div>
+      <div
+        className="col-xs-12 col-lg-4"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-egiSv kfuvTV cardTitle"
+            >
+              Hosting and Application Development Strategy
+            </h5>
+            <p
+              className="sc-jrQzUz kjzYZb cardDescription"
+            >
+              A vision and approach for modernizing government’s efforts to provide excellent digital services by using best practices.
+            </p>
+            <div
+              className="sc-crHlIS guojQY cardLink"
+            >
+              <a
+                className="sc-eJwXpk hGQaAH externalLink"
+                href="Hosting-and-Application-Development-Strategy.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Read the strategy
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-external-link-alt fa-w-16 "
+                  data-icon="external-link-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={
+                    Object {
+                      "paddingLeft": "5px",
+                    }
+                  }
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-xs-12"
+      >
+        <div
+          className="element"
+          name="containers"
+        />
+        <h2
+          className="sc-gsNhcj elzHSl heading"
+          style={
+            Object {
+              "paddingTop": "44px",
+            }
+          }
+        >
+          Containers 
+        </h2>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Overview
+        </h4>
+        <p>
+          Containers provide a way for several digital services to share a single operating system. Digital teams can focus their efforts on the service they’re providing rather than installing or maintaining the infrastructure. Containers also support the idea of “infrastructure as code”, which means that a service can increase or decrease the resources it requires based on demand or even launch new instances of itself if something goes wrong.
+        </p>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Pros 
+        </h4>
+        <ul>
+          <li>
+            Less maintenance
+          </li>
+          <li>
+            Lower costs 
+          </li>
+          <li>
+            Most resilient of available hosting options 
+          </li>
+          <li>
+            Promotes good practices such as automation and portability
+             
+          </li>
+        </ul>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Cons 
+        </h4>
+        <ul>
+          <li>
+            Steep learning curve, particularly among traditional teams
+             
+          </li>
+          <li>
+            Requires increased diligence around how the service is designed to take full advantage of built-in resilience of containers
+             
+          </li>
+          <li>
+            Limited to systems able to use the Linux operating system, does not work well for Windows Server or large databases
+             
+          </li>
+          <li>
+            Emerging service with evolving support 
+          </li>
+        </ul>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Recommendation
+        </h4>
+        <p>
+          Containers are the recommended hosting option for new digital services.
+           
+        </p>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          How to onboard 
+        </h4>
+        <p>
+          The container hosting options for the B.C. government are evolving and include public and private cloud platforms. Contact the
+           
+          <a
+            className="sc-jeqYYF zjmip externalLink"
+            href="mailto:pathfinder@gov.bc.ca"
+          >
+            platform services team
+          </a>
+           
+          to discuss the best option for your service.
+        </p>
+        <div
+          className="element"
+          name="virtualServers"
+        />
+        <h2
+          className="sc-gsNhcj elzHSl heading"
+          style={
+            Object {
+              "paddingTop": "44px",
+            }
+          }
+        >
+          Virtual servers 
+        </h2>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Overview
+        </h4>
+        <p>
+          A virtual server provides a way for several digital services to share a single physical server. Virtual servers are an established hosting option for the B.C. government. They are more expensive than containers and require additional maintenance.
+        </p>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Pros 
+        </h4>
+        <ul>
+          <li>
+            Supports Windows Server 
+          </li>
+          <li>
+            More resilient than physical servers 
+          </li>
+          <li>
+            Established service with well-documented support
+          </li>
+        </ul>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Cons 
+        </h4>
+        <ul>
+          <li>
+            Requires ongoing management and upgrades to operating system
+          </li>
+        </ul>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Recommendation
+        </h4>
+        <p>
+          Virtual servers are recommended for off-the-shelf software and small/medium databases.
+           
+        </p>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          How to onboard
+        </h4>
+        <p>
+          The B.C. government offers virtual servers in its data centers via the
+           
+          <a
+            className="sc-jeqYYF zjmip externalLink"
+            href="https://ssbc-client.gov.bc.ca/order/istore.htm"
+          >
+            iStore order management tool
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          .
+           
+        </p>
+        <p>
+          Virtual servers are also available to early adopters via the
+           
+          <a
+            className="sc-jeqYYF zjmip externalLink"
+            href="mailto:Cloud.Questions@gov.bc.ca"
+          >
+            Cloud Pathfinder team
+          </a>
+          .
+        </p>
+        <div
+          className="element"
+          name="physicalServers"
+        />
+        <h2
+          className="sc-gsNhcj elzHSl heading"
+          style={
+            Object {
+              "paddingTop": "44px",
+            }
+          }
+        >
+          Physical servers
+        </h2>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Overview
+        </h4>
+        <p>
+          Physical servers represent the oldest hosting option currently available for onboarding for B.C. government teams. When using physical servers, teams need to be mindful that there is significant maintenance overhead.
+        </p>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Pros 
+        </h4>
+        <ul>
+          <li>
+            Established service with well-documented support
+          </li>
+          <li>
+            Simplified licensing for certain types of legacy software
+          </li>
+        </ul>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Cons 
+        </h4>
+        <ul>
+          <li>
+            Most expensive hosting option
+          </li>
+          <li>
+            Least resilient hosting option
+          </li>
+        </ul>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          Recommendation
+        </h4>
+        <p>
+          Physical servers are not recommended.
+        </p>
+        <h4
+          className="sc-eGRTUG kkDsPl subSubHeading"
+        >
+          How to onboard
+        </h4>
+        <p>
+          The B.C. government offers physical servers in its data centers via the
+           
+          <a
+            className="sc-jeqYYF zjmip externalLink"
+            href="https://ssbc-client.gov.bc.ca/order/istore.htm"
+          >
+            iStore order management tool
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              data-icon="external-link-alt"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "paddingLeft": "5px",
+                }
+              }
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

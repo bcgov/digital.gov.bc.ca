@@ -11,10 +11,8 @@ import { InfoCircleFilled } from '@ant-design/icons';
 function CovidBanner(props) {
   const [showBanner, setShowBanner] = useState(true);
 
-  const covidHealthLink =
-    'https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support/restrictions?utm_campaign=20201118_GCPE_AM_COVID_1_NOTIFICATION_BCGOV_BCGOV_EN_BC__NOTIFICATION';
-  const covidBCresponseLink =
-    'https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support?utm_campaign=20200506_GCPE_AM_COVID_9_NOTIFICATION_BCGOV_BCGOV_EN_BC__NOTIFICATION';
+  const covidHealthLink = '';
+  const covidBCresponseLink = '';
 
   const closeBanner = (event) => {
     event.preventDefault();
