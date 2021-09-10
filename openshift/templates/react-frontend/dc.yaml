@@ -233,13 +233,13 @@ parameters:
   description: the environment being deployed to
   value: digital-gov-frontend
 - name: CPU_REQUEST
-  value: 50m 
+  value: 65m 
 - name: MEMORY_REQUEST
-  value: 50Mi 
+  value: 100Mi 
 - name: CPU_LIMIT
-  value: 70m 
+  value: 120m 
 - name: MEMORY_LIMIT
-  value: 75Mi 
+  value: 200Mi 
 - name: SUFFIX
   required: true
   description: a suffix used in conjunction with NAME to further isolate different instances of these components
