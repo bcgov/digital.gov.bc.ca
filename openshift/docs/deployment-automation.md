@@ -58,11 +58,7 @@ The technology is __Github Actions__, __Github Apps__, __Ansible__, and of cours
 ## Service Account Roles
 
 The service account that is responsible for building and deploying has __very specific__ roles for each
-namespace, this provides it with the minimum amount of access it needs to do its work. The template `cicd.yaml` provides
-insight into what `Role` is created for each namespace. The template `cicdv2.yaml` provides insight into what `Role` with delete permissions is created for each namespace.
-
-*This is @thegentlemanphysicist's best understanding of the service account configuration, May 17 2021*
-`cicdv2.yaml` template generates a seccond service account.  This one is used by the workflow `/.github/workflows/delete-dev-deployment-on-pr-close.yaml`.  The workflow requires additional list an delete permissions that build and deploy workflows don't in order to function properly.
+namespace, this provides it with the minimum amount of access it needs to do its work. The template `cicd.yaml` provides insight into what `Role` is created for each namespace. 
 
 This template needs to be run **locally** in the base of the project using the oc command:
 
