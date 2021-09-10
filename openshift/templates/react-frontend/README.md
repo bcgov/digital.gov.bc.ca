@@ -8,11 +8,7 @@ In other words
 
 The deployment is fairly simple, caddy2 will recieve a __Caddyfile__ configmap and a deployment config manages its lifecycle. 
 
-The first time running this project in a new project tools namespace, we must generate the caddy-s2i-builder Build Config.
-
-```
-oc process -f https://raw.githubusercontent.com/bcgov/s2i-caddy-nodejs/caddy-version-2.4.5/openshift/templates/build.yaml -p GIT_REF=caddy-version-2.4.5 -p OUTPUT_IMAGE_TAG=2.4.5 | oc apply -f -
-```
+The first time running this project in a new project tools namespace, we must generate the caddy-s2i-builder Build Config. This is documented in `openshift/docs/caddy-deployment.md`.
 
 ## Reverse Proxy
 
