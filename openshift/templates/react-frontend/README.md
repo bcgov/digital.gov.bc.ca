@@ -8,6 +8,8 @@ In other words
 
 The deployment is fairly simple, caddy2 will recieve a __Caddyfile__ configmap and a deployment config manages its lifecycle. 
 
+The first time running this project in a new project tools namespace, we must generate the caddy-s2i-builder Build Config. This is documented in `openshift/docs/caddy-deployment.md`.
+
 ## Reverse Proxy
 
 Reverse proxy's are configured in the `./dc.yaml` file.
