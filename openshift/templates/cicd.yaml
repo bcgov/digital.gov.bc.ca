@@ -55,6 +55,7 @@ objects:
           - get
           - list
           - update
+          - delete
       - apiGroups:
           - image.openshift.io
           - ""
@@ -65,6 +66,7 @@ objects:
           - create
           - get
           - list
+          - delete
       - apiGroups:
           - image.openshift.io
           - ""
@@ -75,6 +77,7 @@ objects:
           - list
           - patch
           - create
+          - delete
       - apiGroups:
           - build.openshift.io
           - ""
@@ -170,6 +173,7 @@ objects:
           - services
         verbs:
           - get
+          - list
       - apiGroups:
           - ""
         attributeRestrictions: null
@@ -188,6 +192,7 @@ objects:
           - create
           - patch
           - delete
+          - list
       - apiGroups:
           - "route.openshift.io"
         attributeRestrictions: null
@@ -198,6 +203,7 @@ objects:
           - create
           - patch
           - delete
+          - list
       - apiGroups:
           - "apps.openshift.io"
         attributeRestrictions: null
