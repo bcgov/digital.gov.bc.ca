@@ -1,3 +1,14 @@
+{
+  # Server Options
+  servers {
+    timeouts {
+      read_body 1h
+      read_header 1h
+      write 1h
+      idle 5m
+    }
+  }
+}
 :4000
 handle /marketplace* {
   # handle path not working
