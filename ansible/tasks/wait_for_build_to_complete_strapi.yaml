@@ -4,6 +4,6 @@
   register: build_status
   until: (build_status.stdout == "Complete")
   delay: 60
-  retries: 10
+  retries: 20
   ignore_errors: False
   
