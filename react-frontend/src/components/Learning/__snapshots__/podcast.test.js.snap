@@ -81,7 +81,7 @@ exports[`renders snapshot correctly 1`] = `
           Recent Episodes
         </h3>
         <a
-          className="sc-lbhJmS iDDnCG externalLink"
+          className="sc-iNGGwv fSxCWu externalLink"
           href="https://bcdevexchange.libsyn.com/"
           rel="noopener noreferrer"
           style={
@@ -130,7 +130,7 @@ exports[`renders snapshot correctly 1`] = `
       }
     >
       <div
-        className="ant-collapse-item sc-ezbkgU kVBLCW PanelStyled"
+        className="ant-collapse-item sc-bYoCmx jJBkyw PanelStyled"
       >
         <div
           aria-expanded={false}
