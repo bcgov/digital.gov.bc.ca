@@ -12,7 +12,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-gGCCur UyWOY resourceHeading"
+        className="sc-clIAKW dIewvk resourceHeading"
       >
         Explore
       </h2>
@@ -28,17 +28,17 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-gGCCur UyWOY resourceHeading"
+        className="sc-clIAKW dIewvk resourceHeading"
       >
         Support
       </h2>
       <p
-        className="sc-kYHenr kozwur digitalParagraph"
+        className="sc-xiKGw eGZOJm digitalParagraph"
       >
         Contact the Common Components team:
          
         <a
-          className="sc-gIDmry dqBYPk externalLink"
+          className="sc-evcjBb hSmVHe externalLink"
           href="mailto:digital.government@gov.bc.ca"
         >
           Digital.Government@gov.bc.ca
