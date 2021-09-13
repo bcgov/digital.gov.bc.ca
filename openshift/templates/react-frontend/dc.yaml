@@ -68,7 +68,7 @@ objects:
               readinessProbe:
                 httpGet:
                   path: /
-                  port: 8080
+                  port: 4000
                   scheme: HTTP
                 initialDelaySeconds: 240
                 timeoutSeconds: 1
