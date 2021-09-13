@@ -65,6 +65,16 @@ objects:
                   name: caddyfile-volume
                   readOnly: true
                   subPath: Caddyfile
+              readinessProbe:
+                httpGet:
+                  path: /
+                  port: 8080
+                  scheme: HTTP
+                initialDelaySeconds: 240
+                timeoutSeconds: 1
+                periodSeconds: 30
+                successThreshold: 1
+                failureThreshold: 3
           dnsPolicy: ClusterFirst
           restartPolicy: Always
           schedulerName: default-scheduler
