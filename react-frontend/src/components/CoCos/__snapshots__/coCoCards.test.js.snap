@@ -12,7 +12,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-gGCCur UyWOY resourceHeading"
+        className="sc-clIAKW dIewvk resourceHeading"
       >
         Explore
       </h2>
@@ -28,7 +28,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-gGCCur UyWOY resourceHeading"
+        className="sc-clIAKW dIewvk resourceHeading"
       >
         Support
       </h2>

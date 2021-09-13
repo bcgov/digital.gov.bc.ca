@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-fFehDp sc-bkkfTU hMbWHm bZfnog horizontalAlignment bannerCenterText container"
+    className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-fFehDp sc-dJjZJu hMbWHm bPksUj horizontalAlignment contentBlockContainer container"
+    className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-fFehDp sc-dJjZJu hMbWHm bPksUj horizontalAlignment contentBlockContainer container"
+    className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-fFehDp sc-bkkfTU hMbWHm bZfnog horizontalAlignment bannerCenterText container"
+    className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <p>
@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="sc-fFehDp sc-bkkfTU hMbWHm bZfnog horizontalAlignment bannerCenterText container"
+      className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
       id="main-content-anchor"
     >
       <div
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
           className="col-xs-12 col-lg-6"
         >
           <div
-            className="sc-cxpRKc kZYmFQ"
+            className="sc-llYToB foMvUF"
           >
             <h2
               className="sc-gsDJrp hrOaUq heading"
@@ -141,7 +141,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="sc-fFehDp sc-dJjZJu hMbWHm bPksUj horizontalAlignment contentBlockContainer container"
+      className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
       id="podcasts"
     >
       <div
@@ -159,7 +159,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <h3
-            className="sc-dkPtyc iVhCGh subHeading"
+            className="sc-hKwCoD gNpiUY subHeading"
             style={
               Object {
                 "marginBottom": "0",
