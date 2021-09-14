@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-jHkVfK htRvFC sideImageText"
+          className="sc-bQtJOP imYTai sideImageText"
         >
           <h1
-            className="sc-bQtJOP cAwshC bannerTitle"
+            className="sc-fXEqXD hGzgRq bannerTitle"
           >
             Resources
           </h1>
           <div
-            className="sc-fXEqXD iyAbAK subTitle"
+            className="sc-FNZbm cgblXZ subTitle"
           >
              
             Policy, standards, guides, and tools you can use right now to deliver excellent digital services.
@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-dVNiOx bQxqfS sideImage"
+          className="sc-jHkVfK gUVwSq sideImage"
         />
       </div>
     </div>
@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-dtDOJZ iwPAsw resourceHeading"
+          className="sc-dkYRiW iIsHXR resourceHeading"
         >
           Standards & Policy
         </h2>
@@ -167,7 +167,7 @@ exports[`renders correctly 1`] = `
           className="sc-dvQbkV jIqPUg row"
         >
           <h3
-            className="sc-dkYRiW hzLfDT resourceSubHeading"
+            className="sc-XxOsz hTQVhH resourceSubHeading"
           >
             Technical
           </h3>
@@ -279,7 +279,7 @@ exports[`renders correctly 1`] = `
           className="sc-dvQbkV jIqPUg row"
         >
           <h3
-            className="sc-dkYRiW hzLfDT resourceSubHeading"
+            className="sc-XxOsz hTQVhH resourceSubHeading"
           >
             Privacy
           </h3>
@@ -391,7 +391,7 @@ exports[`renders correctly 1`] = `
           className="sc-dvQbkV jIqPUg row"
         >
           <h3
-            className="sc-dkYRiW hzLfDT resourceSubHeading"
+            className="sc-XxOsz hTQVhH resourceSubHeading"
           >
             Security
           </h3>
@@ -476,7 +476,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-dtDOJZ iwPAsw resourceHeading"
+          className="sc-dkYRiW iIsHXR resourceHeading"
         >
           Guides
         </h2>
@@ -593,7 +593,7 @@ exports[`renders correctly 1`] = `
           className="sc-dvQbkV jIqPUg row"
         >
           <h3
-            className="sc-dkYRiW hzLfDT resourceSubHeading"
+            className="sc-XxOsz hTQVhH resourceSubHeading"
           >
             For Designers
           </h3>
@@ -987,7 +987,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h3
-          className="sc-dkYRiW hzLfDT resourceSubHeading"
+          className="sc-XxOsz hTQVhH resourceSubHeading"
         >
           For Developers
         </h3>

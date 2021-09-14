@@ -37,7 +37,7 @@ objects:
             value: "5"
           from:
             kind: ImageStreamTag
-            name: caddy-s2i-builder:latest
+            name: caddy-s2i-builder:2.4.5
           incremental: false
         type: Source
       successfulBuildsHistoryLimit: 5

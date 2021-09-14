@@ -95,6 +95,17 @@ objects:
   - apiVersion: v1
     data:
       Caddyfile: |
+        {
+          # Server Options
+          servers {
+            timeouts {
+              read_body 1h
+              read_header 1h
+              write 1h
+              idle 5m
+            }
+          }
+        }
         :4000
         handle /marketplace* {
           # handle_path not working
