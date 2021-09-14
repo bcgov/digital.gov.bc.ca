@@ -128,6 +128,16 @@ objects:
               volumeMounts:
               - mountPath: /app/public/uploads
                 name: strapi-media-pv
+              readinessProbe:
+                httpGet:
+                  path: /
+                  port: 1337
+                  scheme: HTTP
+                initialDelaySeconds: 300
+                timeoutSeconds: 1
+                periodSeconds: 90
+                successThreshold: 1
+                failureThreshold: 6
           dnsPolicy: ClusterFirst
           restartPolicy: Always
           schedulerName: default-scheduler
