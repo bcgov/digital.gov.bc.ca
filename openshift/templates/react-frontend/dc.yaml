@@ -70,11 +70,11 @@ objects:
                   path: /
                   port: 4000
                   scheme: HTTP
-                initialDelaySeconds: 240
+                initialDelaySeconds: 300
                 timeoutSeconds: 1
-                periodSeconds: 30
+                periodSeconds: 90
                 successThreshold: 1
-                failureThreshold: 3
+                failureThreshold: 6
           dnsPolicy: ClusterFirst
           restartPolicy: Always
           schedulerName: default-scheduler
