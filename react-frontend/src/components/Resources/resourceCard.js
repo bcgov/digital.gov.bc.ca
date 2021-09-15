@@ -21,7 +21,7 @@ function ResourceCard({ title, description, route, imgSrc }) {
         </CardTitle>
         <p data-testid="description">{description}</p>
         <HrefLinkInternal to={route} style={{ marginTop: 'auto' }}>
-          More
+          Advice about videoconferencing
         </HrefLinkInternal>
       </ResourceCardTextBox>
     </ResourceCardStyled>
