@@ -3,7 +3,7 @@
 exports[`renders snapshot correctly 1`] = `
 <div>
   <div
-    className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
+    className="sc-ieebsP sc-dJjZJu kRXkfn kMfWlU horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,7 +13,7 @@ exports[`renders snapshot correctly 1`] = `
         className="col-xs-12 col-lg-6"
       >
         <div
-          className="sc-llYToB foMvUF"
+          className="sc-iJKOzS hupIEX"
         >
           <h2
             className="sc-dkPtyc bbmNIj heading"
@@ -53,7 +53,7 @@ exports[`renders snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
+    className="sc-ieebsP sc-dlVyqM kRXkfn iAcefx horizontalAlignment contentBlockContainer container"
     id="podcasts"
   >
     <div
@@ -71,7 +71,7 @@ exports[`renders snapshot correctly 1`] = `
         }
       >
         <h3
-          className="sc-hKwCoD gNpiUY subHeading"
+          className="sc-eCImvq oFYaZ subHeading"
           style={
             Object {
               "marginBottom": "0",
@@ -81,7 +81,7 @@ exports[`renders snapshot correctly 1`] = `
           Recent Episodes
         </h3>
         <a
-          className="sc-gSQGeZ dricIh externalLink"
+          className="sc-lbhJmS iDDnCG externalLink"
           href="https://bcdevexchange.libsyn.com/"
           rel="noopener noreferrer"
           style={
@@ -130,7 +130,7 @@ exports[`renders snapshot correctly 1`] = `
       }
     >
       <div
-        className="ant-collapse-item sc-ezbkgU dlCRPK PanelStyled"
+        className="ant-collapse-item sc-bYoCmx eAGHXk PanelStyled"
       >
         <div
           aria-expanded={false}
