@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
       A great description
     </p>
     <a
-      className="sc-eJwXpk hGQaAH externalLink"
+      className="sc-nVjpj bWXCMc externalLink"
       href="https://test.com"
       rel="noopener noreferrer"
       style={

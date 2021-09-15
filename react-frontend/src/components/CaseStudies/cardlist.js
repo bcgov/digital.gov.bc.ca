@@ -28,7 +28,7 @@ const CardList = () => {
             title={'Mines Digital Service'}
             img={caseStudiesMiningImg}
             description={descriptions[0]}
-            linkText={'Read more'}
+            linkText={'Read the case study'}
             routePath={url + '/mining-study'}
           />
         </Col>
@@ -39,7 +39,7 @@ const CardList = () => {
             title={'Helping farmers understand their soil'}
             img={caseStudiesFarmingImg}
             description={descriptions[1]}
-            linkText={'Read more'}
+            linkText={'Read the case study'}
             routePath={url + '/farming-study'}
           />
         </Col>
@@ -48,7 +48,7 @@ const CardList = () => {
             title={'Transforming the Medical Services Plan'}
             img={caseStudiesMSPImg}
             description={descriptions[2]}
-            linkText={'Read more'}
+            linkText={'Read the case study'}
             routePath={url + '/medical-study'}
           />
         </Col>
