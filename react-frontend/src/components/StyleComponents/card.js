@@ -202,6 +202,7 @@ export const CardTitle = styled.h5.attrs({
 export const CoCoCardDescription = styled(CardClickableDescription).attrs({
   className: 'coCoCardDescription',
 })`
+  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
   padding: 24px;
 `;
 
