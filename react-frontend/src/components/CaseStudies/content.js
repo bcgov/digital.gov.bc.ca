@@ -261,7 +261,19 @@ const FarmerContent = {
   ),
   others: (
     <Row>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/orgbook-study'}
+          linkText={'Read the case study'}
+          title={'OrgBook BC'}
+          description={
+            'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.'
+          }
+          img={caseStudiesOrgBookImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/mining-study'}
           linkText={'Read more'}
@@ -273,7 +285,7 @@ const FarmerContent = {
           height="650px"
         />
       </Col>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/medical-study'}
           linkText={'Read more'}
