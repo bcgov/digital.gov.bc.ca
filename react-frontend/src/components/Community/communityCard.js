@@ -2,6 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 
 import {
+  CardClickableBody,
   CommunityCardDescription,
   CommunityCardHeader,
   CommunityCardStyled,
@@ -11,7 +12,9 @@ function CommunityCard({ title, description, uid }) {
   return (
     <CommunityCardStyled to={`/communities/${uid}`}>
       <CommunityCardHeader>{title}</CommunityCardHeader>
-      <CommunityCardDescription>{description}</CommunityCardDescription>
+      <CardClickableBody>
+        <CommunityCardDescription>{description}</CommunityCardDescription>
+      </CardClickableBody>
     </CommunityCardStyled>
   );
 }
