@@ -15,9 +15,9 @@ import FarmingBannerImage from '../../images/case-study-farming.jpg';
 import OrgBookBannerImage from '../../images/case-study-orgbook.jpg';
 import { resourceLinks, videoLinks } from '../../constants/urls';
 
-const jill = require('../../images/jill.png').default;
-const aaron = require('../../images/aaron.png').default;
-const john = require('../../images/john.png').default;
+const jill = require('../../images/jill.jpg').default;
+const aaron = require('../../images/aaron.jpg').default;
+const john = require('../../images/john.jpg').default;
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg')
   .default;
 const caseStudiesMiningImg = require('../../images/case-study-mining.jpg')
