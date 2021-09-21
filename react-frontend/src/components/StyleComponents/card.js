@@ -203,6 +203,7 @@ export const CoCoCardDescription = styled(CardClickableDescription).attrs({
   className: 'coCoCardDescription',
 })`
   border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+  height: 100%;
   padding: 24px;
 `;
 
