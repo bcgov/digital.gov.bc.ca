@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/digital-bc-livestreams",
+      "handler": "digital-bc-livestream.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/digital-bc-livestreams/count",
+      "handler": "digital-bc-livestream.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/digital-bc-livestreams/:id",
+      "handler": "digital-bc-livestream.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/digital-bc-livestreams",
+      "handler": "digital-bc-livestream.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/digital-bc-livestreams/:id",
+      "handler": "digital-bc-livestream.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/digital-bc-livestreams/:id",
+      "handler": "digital-bc-livestream.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

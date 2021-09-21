@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "digital_livestream_contacts",
+  "info": {
+    "name": "Digital Livestream Contact",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "SubscriptionURL": {
+      "type": "string",
+      "required": true
+    },
+    "PastEpisodeURL": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
