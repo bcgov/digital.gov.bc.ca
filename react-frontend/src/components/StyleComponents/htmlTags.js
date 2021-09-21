@@ -27,8 +27,8 @@ export const BreadcrumbUL = styled.ul`
   padding-top: 16px;
 `;
 
-export const CoCoLinkExternal = styled.a.attrs({
-  className: 'CoCoLink',
+export const LinkExternalButton = styled.a.attrs({
+  className: 'ExetenalLinkButton',
 })`
   background-color: #003366;
   border: none;
