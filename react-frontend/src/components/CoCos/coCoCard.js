@@ -54,7 +54,7 @@ export const Badges = (status, maintenanceStatus, tags, colour) => {
       )}
       {/* Only display 3 tags */}
       {tags?.map((tag, i) => {
-        if (i > 2) {
+        if (i > 10) {
           return null;
         }
         return (
