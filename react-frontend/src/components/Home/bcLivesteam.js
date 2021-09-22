@@ -79,7 +79,48 @@ const BCLivestream = () => {
             </div>
           );
         }
-        return <div />;
+        return (
+          <div style={{ backgroundColor: '#fff' }}>
+            <PageContainer
+              style={{ backgroundColor: '#fff', paddingTop: '40px' }}
+            >
+              <Row center="xs">
+                <Col xs={12} style={{ textAlign: 'center' }}>
+                  <Heading>#DigitalBC Livestream</Heading>
+                  <p>
+                    Watch live broadcasts of monthly updates, webinars, sprint
+                    reviews, and more!
+                  </p>
+                  {/* Only render if the link is provided */}
+                  {digitalLivestreamContact?.SubscriptionURL && (
+                    <LinkExternalButton
+                      href={digitalLivestreamContact?.SubscriptionURL}
+                      style={{
+                        maxWidth: '160px',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                      }}
+                    >
+                      Subscribe
+                    </LinkExternalButton>
+                  )}
+                  {/* Only render if link provided */}
+                  {digitalLivestreamContact?.PastEpisodeURL && (
+                    <div>
+                      <p>Watch past broadcasts</p>
+                      <a href={digitalLivestreamContact?.PastEpisodeURL}>
+                        <img
+                          src={youTubeLogo}
+                          style={{ height: '20px', width: '80px' }}
+                        />
+                      </a>
+                    </div>
+                  )}
+                </Col>
+              </Row>
+            </PageContainer>
+          </div>
+        );
       }}
     </Query>
   );
