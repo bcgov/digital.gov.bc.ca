@@ -67,11 +67,22 @@ const BCLivestream = () => {
                 style={{ backgroundColor: '#fff', paddingTop: '40px' }}
               >
                 <Row between="xs">
-                  <Col sm={12} md={3} style={{ textAlign: 'center' }}>
+                  <Col
+                    sm={12}
+                    md={4}
+                    style={{ textAlign: 'center', paddingBottom: '20px' }}
+                  >
                     {subscriptionLink}
                   </Col>
-                  <Col sm={12} md={5}>
-                    <img src={imageSource} style={{ width: '100%' }} />
+                  <Col sm={12} md={4} style={{ paddingBottom: '20px' }}>
+                    <img
+                      src={imageSource}
+                      style={{
+                        width: '100%',
+                        paddingLeft: '10px',
+                        paddingRight: '10px',
+                      }}
+                    />
                   </Col>
                   <Col sm={12} md={4} style={{ textAlign: 'center' }}>
                     <p style={{ marginBottom: '4px' }}>
