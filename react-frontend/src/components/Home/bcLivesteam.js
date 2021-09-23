@@ -88,19 +88,22 @@ const BCLivestream = () => {
                     <p style={{ marginBottom: '4px' }}>
                       <b>Next broadcast</b>
                     </p>
-                    <p
+                    <b
                       style={{
+                        borderRadius: '3px',
+                        fontSize: '13px',
+                        padding: '0 4px',
+                        width: 'fit-content',
                         marginBottom: '8px',
                         backgroundColor: '#F2F2F2',
                       }}
                     >
-                      <b>
-                        {dateFormat(
-                          digitalBcLivestreams[0]?.BroadcastTime,
-                          'ddd, mmm d - hh:MM TT'
-                        ) + ' PST'}
-                      </b>
-                    </p>
+                      {dateFormat(
+                        digitalBcLivestreams[0]?.BroadcastTime,
+                        'ddd, mmm d - hh:MM TT'
+                      ) + ' PST'}
+                    </b>
+
                     <p style={{ textAlign: 'left', marginBottom: '40px' }}>
                       {digitalBcLivestreams[0]?.Description}
                     </p>
@@ -119,7 +122,7 @@ const BCLivestream = () => {
               <Row center="xs">
                 <Col xs={12} style={{ textAlign: 'center' }}>
                   {subscriptionLink}
-                  {pastBroadcastLink}
+                  <div style={{ marginTop: '16px' }}>{pastBroadcastLink}</div>
                 </Col>
               </Row>
             </PageContainer>
