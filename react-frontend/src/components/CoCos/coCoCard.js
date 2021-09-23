@@ -52,9 +52,9 @@ export const Badges = (status, maintenanceStatus, tags, colour) => {
           {maintenanceStatusObj[maintenanceStatus]}
         </Badge>
       )}
-      {/* Only display 3 tags */}
+      {/* Only display 10 tags */}
       {tags?.map((tag, i) => {
-        if (i > 10) {
+        if (i > 9) {
           return null;
         }
         return (

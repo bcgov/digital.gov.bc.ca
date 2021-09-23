@@ -232,7 +232,6 @@ export const CommunityCardHeading = styled.h5.attrs({
   color: #ffffff;
   font-weight: 700;
   font-size: 21px;
-  padding: 24px;
 `;
 
 export const CommunityCardStyled = styled(CardClickable).attrs({
