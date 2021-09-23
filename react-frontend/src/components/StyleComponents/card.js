@@ -41,7 +41,7 @@ export const CardClickableDescription = styled.p.attrs({
   text-align: left;
 `;
 
-export const CardClickableHeader = styled.h5.attrs({
+export const CardClickableHeader = styled.div.attrs({
   className: 'cardClickableHeader',
 })`
   border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
@@ -223,6 +223,15 @@ export const CommunityCardHeader = styled(CardClickableHeader).attrs({
   font-weight: 700;
   font-size: 21px;
   padding: 24px;
+`;
+
+export const CommunityCardHeading = styled.h5.attrs({
+  className: 'communityCardHeading',
+})`
+  background: #003366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 21px;
 `;
 
 export const CommunityCardStyled = styled(CardClickable).attrs({
