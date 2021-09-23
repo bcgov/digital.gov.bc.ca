@@ -38,6 +38,19 @@ const BCLivestream = () => {
           </div>
         );
 
+        const subscriptionLink = digitalLivestreamContact?.SubscriptionURL && (
+          <LinkExternalButton
+            href={digitalLivestreamContact?.SubscriptionURL}
+            style={{
+              maxWidth: '160px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            Subscribe
+          </LinkExternalButton>
+        );
+
         if (nextEventTime && nextEventTime > now) {
           return (
             <div style={{ backgroundColor: '#fff' }}>
@@ -45,21 +58,13 @@ const BCLivestream = () => {
                 style={{ backgroundColor: '#fff', paddingTop: '40px' }}
               >
                 <Row between="xs">
-                  <Col sm={12} md={3}>
+                  <Col sm={12} md={3} style={{ textAlign: 'center' }}>
                     <Heading>#DigitalBC Livestream</Heading>
                     <p>
                       Watch live broadcasts of monthly updates, webinars, sprint
                       reviews, and more!
                     </p>
-                    {/* Only render if the link is provided */}
-                    {digitalLivestreamContact?.SubscriptionURL && (
-                      <LinkExternalButton
-                        href={digitalLivestreamContact?.SubscriptionURL}
-                        style={{ maxWidth: '160px' }}
-                      >
-                        Subscribe
-                      </LinkExternalButton>
-                    )}
+                    {subscriptionLink}
                   </Col>
                   <Col sm={12} md={5}>
                     <img src={imageSource} style={{ width: '100%' }} />
@@ -103,19 +108,7 @@ const BCLivestream = () => {
                     Watch live broadcasts of monthly updates, webinars, sprint
                     reviews, and more!
                   </p>
-                  {/* Only render if the link is provided */}
-                  {digitalLivestreamContact?.SubscriptionURL && (
-                    <LinkExternalButton
-                      href={digitalLivestreamContact?.SubscriptionURL}
-                      style={{
-                        maxWidth: '160px',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                      }}
-                    >
-                      Subscribe
-                    </LinkExternalButton>
-                  )}
+                  {subscriptionLink}
                   {pastBroadcastLink}
                 </Col>
               </Row>
