@@ -22,6 +22,22 @@ const BCLivestream = () => {
         // if no next event is provided in strapi, this section will not render
         const now = new Date();
         const nextEventTime = new Date(digitalBcLivestreams[0]?.BroadcastTime);
+
+        {
+          /* Only render if link provided */
+        }
+        const pastBroadcastLink = digitalLivestreamContact?.PastEpisodeURL && (
+          <div>
+            <a href={digitalLivestreamContact?.PastEpisodeURL}>
+              <p style={{ marginBottom: '4px' }}>Watch past broadcasts</p>
+              <img
+                src={youTubeLogo}
+                style={{ height: '20px', width: '80px' }}
+              />
+            </a>
+          </div>
+        );
+
         if (nextEventTime && nextEventTime > now) {
           return (
             <div style={{ backgroundColor: '#fff' }}>
@@ -49,30 +65,26 @@ const BCLivestream = () => {
                     <img src={imageSource} style={{ width: '100%' }} />
                   </Col>
                   <Col sm={12} md={4} style={{ textAlign: 'center' }}>
-                    <p>
+                    <p style={{ marginBottom: '4px' }}>
                       <b>Next broadcast</b>
                     </p>
-                    <p>
-                      {dateFormat(
-                        digitalBcLivestreams[0]?.BroadcastTime,
-                        'ddd, mmm d - hh:MM TT'
-                      ) + ' PST'}
+                    <p
+                      style={{
+                        marginBottom: '8px',
+                        backgroundColor: '#F2F2F2',
+                      }}
+                    >
+                      <b>
+                        {dateFormat(
+                          digitalBcLivestreams[0]?.BroadcastTime,
+                          'ddd, mmm d - hh:MM TT'
+                        ) + ' PST'}
+                      </b>
                     </p>
-                    <p style={{ textAlign: 'left' }}>
+                    <p style={{ textAlign: 'left', marginBottom: '40px' }}>
                       {digitalBcLivestreams[0]?.Description}
                     </p>
-                    {/* Only render if link provided */}
-                    {digitalLivestreamContact?.PastEpisodeURL && (
-                      <div>
-                        <p>Watch past broadcasts</p>
-                        <a href={digitalLivestreamContact?.PastEpisodeURL}>
-                          <img
-                            src={youTubeLogo}
-                            style={{ height: '20px', width: '80px' }}
-                          />
-                        </a>
-                      </div>
-                    )}
+                    {pastBroadcastLink}
                   </Col>
                 </Row>
               </PageContainer>
@@ -104,18 +116,7 @@ const BCLivestream = () => {
                       Subscribe
                     </LinkExternalButton>
                   )}
-                  {/* Only render if link provided */}
-                  {digitalLivestreamContact?.PastEpisodeURL && (
-                    <div>
-                      <p>Watch past broadcasts</p>
-                      <a href={digitalLivestreamContact?.PastEpisodeURL}>
-                        <img
-                          src={youTubeLogo}
-                          style={{ height: '20px', width: '80px' }}
-                        />
-                      </a>
-                    </div>
-                  )}
+                  {pastBroadcastLink}
                 </Col>
               </Row>
             </PageContainer>
