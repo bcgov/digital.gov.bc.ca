@@ -40,7 +40,7 @@ export const BreadcrumbUL = styled.ul`
 `;
 
 export const LinkExternalButton = styled.a.attrs({
-  className: 'ExetenalLinkButton',
+  className: 'ExternalLinkButton',
 })`
   background-color: #003366;
   border: none;
