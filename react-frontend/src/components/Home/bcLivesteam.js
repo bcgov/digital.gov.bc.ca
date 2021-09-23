@@ -39,16 +39,25 @@ const BCLivestream = () => {
         );
 
         const subscriptionLink = digitalLivestreamContact?.SubscriptionURL && (
-          <LinkExternalButton
-            href={digitalLivestreamContact?.SubscriptionURL}
-            style={{
-              maxWidth: '160px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          >
-            Subscribe
-          </LinkExternalButton>
+          <>
+            <Heading style={{ lineHeight: '1.2' }}>
+              #DigitalBC Livestream
+            </Heading>
+            <p>
+              Watch live broadcasts of monthly updates, webinars, sprint
+              reviews, and more!
+            </p>
+            <LinkExternalButton
+              href={digitalLivestreamContact?.SubscriptionURL}
+              style={{
+                maxWidth: '160px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
+              Subscribe
+            </LinkExternalButton>
+          </>
         );
 
         if (nextEventTime && nextEventTime > now) {
@@ -59,11 +68,6 @@ const BCLivestream = () => {
               >
                 <Row between="xs">
                   <Col sm={12} md={3} style={{ textAlign: 'center' }}>
-                    <Heading>#DigitalBC Livestream</Heading>
-                    <p>
-                      Watch live broadcasts of monthly updates, webinars, sprint
-                      reviews, and more!
-                    </p>
                     {subscriptionLink}
                   </Col>
                   <Col sm={12} md={5}>
@@ -103,11 +107,6 @@ const BCLivestream = () => {
             >
               <Row center="xs">
                 <Col xs={12} style={{ textAlign: 'center' }}>
-                  <Heading>#DigitalBC Livestream</Heading>
-                  <p>
-                    Watch live broadcasts of monthly updates, webinars, sprint
-                    reviews, and more!
-                  </p>
                   {subscriptionLink}
                   {pastBroadcastLink}
                 </Col>
