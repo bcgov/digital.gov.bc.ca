@@ -201,11 +201,7 @@ export const CardTitle = styled.h5.attrs({
 // common component cards
 export const CoCoCardDescription = styled(CardClickableDescription).attrs({
   className: 'coCoCardDescription',
-})`
-  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
-  height: 100%;
-  padding: 24px;
-`;
+})``;
 
 export const CoCoCardHeader = styled(CardClickableHeader).attrs({
   className: 'coCoCardHeader',
@@ -247,6 +243,7 @@ export const CommunityCardHeading = styled.h5.attrs({
   color: #ffffff;
   font-weight: 700;
   font-size: 21px;
+  margin-bottom: 0;
 `;
 
 export const CommunityCardStyled = styled(CardClickable).attrs({

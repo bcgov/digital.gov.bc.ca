@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { Badge, BadgeWrapper } from '../StyleComponents/badge';
 import {
+  CardClickableBody,
   CoCoCardTitle,
   CoCoCardDescription,
   CoCoCardHeader,
@@ -93,11 +94,12 @@ function CoCoCard({
         data-testid="description"
         style={{ marginBottom: '40px' }}
       > */}
-      <CoCoCardDescription data-testid="description">
-        {description}
-      </CoCoCardDescription>
-      {/* This is commented out until a design desision is made  */}
-      {/* <Row
+      <CardClickableBody>
+        <CoCoCardDescription data-testid="description">
+          {description}
+        </CoCoCardDescription>
+        {/* This is commented out until a design desision is made  */}
+        {/* <Row
         start="xs"
         style={{ bottom: '20px', position: 'absolute', width: '90%' }}
       >
@@ -146,6 +148,7 @@ function CoCoCard({
           <Row center="xs">{supportStructureObj[supportSchedule]}</Row>
         </IconCol>
       </Row> */}
+      </CardClickableBody>
     </CoCoCardStyled>
   );
 }

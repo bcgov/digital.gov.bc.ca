@@ -15,7 +15,9 @@ function CommunityCard({ title, description, uid }) {
       <CommunityCardHeader>
         <CommunityCardHeading>{title}</CommunityCardHeading>
       </CommunityCardHeader>
-      <CommunityCardDescription>{description}</CommunityCardDescription>
+      <CardClickableBody>
+        <CommunityCardDescription>{description}</CommunityCardDescription>
+      </CardClickableBody>
     </CommunityCardStyled>
   );
 }
