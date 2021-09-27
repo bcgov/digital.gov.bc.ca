@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Col, Row } from 'react-flexbox-grid';
 import { Heading } from '../../StyleComponents/headings';
-import { CoCoLinkExternal } from '../../StyleComponents/htmlTags';
+import { LinkExternalButton } from '../../StyleComponents/htmlTags';
 import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
 function GetStarted({ name, url, steps }) {
@@ -26,7 +26,7 @@ function GetStarted({ name, url, steps }) {
       </Row>
       <Row style={{ marginTop: '30px' }}>
         <Col xs={12} style={{ flexBasis: 'auto' }}>
-          <CoCoLinkExternal href={url}>Start Using Now</CoCoLinkExternal>
+          <LinkExternalButton href={url}>Start Using Now</LinkExternalButton>
         </Col>
       </Row>
     </div>

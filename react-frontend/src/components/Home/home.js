@@ -2,6 +2,7 @@ import React from 'react';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import CardList from './cardList';
 import DocumentTitle from 'react-document-title';
+import BCLivestream from './bcLivesteam';
 
 const bannerContent = (
   <div>
@@ -28,6 +29,7 @@ function Home() {
           title={bannerTitle}
           image={homeImage}
         />
+        <BCLivestream />
         <CardList />
       </div>
     </DocumentTitle>
