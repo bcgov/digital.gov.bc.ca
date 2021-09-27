@@ -26,7 +26,7 @@ const CardList = () => {
   return (
     <PageContainer>
       <Row>
-        <Col sm={12} md={4}>
+        <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
           <CaseStudiesInfoCard
             title={'OrgBook BC'}
             img={caseStudiesOrgBookImg}
@@ -35,7 +35,7 @@ const CardList = () => {
             routePath={url + '/orgbook-study'}
           />
         </Col>
-        <Col sm={12} md={4}>
+        <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
           <CaseStudiesInfoCard
             title={'Mines Digital Service'}
             img={caseStudiesMiningImg}
@@ -44,7 +44,7 @@ const CardList = () => {
             routePath={url + '/mining-study'}
           />
         </Col>
-        <Col sm={12} md={4}>
+        <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
           <CaseStudiesInfoCard
             title={'Helping farmers understand their soil'}
             img={caseStudiesFarmingImg}
@@ -53,7 +53,7 @@ const CardList = () => {
             routePath={url + '/farming-study'}
           />
         </Col>
-        <Col xs={12} md={4}>
+        <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
           <CaseStudiesInfoCard
             title={'Transforming the Medical Services Plan'}
             img={caseStudiesMSPImg}
