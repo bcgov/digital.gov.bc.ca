@@ -46,7 +46,11 @@ export default function FeedbackForm() {
 
   return (
     <>
-      <ModalButton type="primary" onClick={showModal}>
+      <ModalButton
+        type="primary"
+        onClick={showModal}
+        alt="Provide feedback on this site"
+      >
         <FontAwesomeIcon icon={faSmile} style={{ color: '#fcba19' }} />
         <FontAwesomeIcon icon={faFrown} style={{ color: '#fcba19' }} />
       </ModalButton>
