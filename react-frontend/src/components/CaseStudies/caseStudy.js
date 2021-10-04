@@ -2,7 +2,12 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-import { MiningContent, FarmerContent, MedicalContent } from './content';
+import {
+  MiningContent,
+  FarmerContent,
+  MedicalContent,
+  OrgBookContent,
+} from './content';
 import BannerWithImage from '../PageElements/Banners/bannerWithImage';
 import NotFound from '../NotFoundPage/notFoundPage';
 import {
@@ -16,6 +21,7 @@ const routeMatch = {
   'farming-study': FarmerContent,
   'medical-study': MedicalContent,
   'mining-study': MiningContent,
+  'orgbook-study': OrgBookContent,
 };
 
 const titleMatch = {
@@ -25,6 +31,8 @@ const titleMatch = {
     'Medical Services Plan - Case Studies - Digital Government - Province of British Columbia',
   'mining-study':
     'Mines Digital Service - Case Studies - Digital Government - Province of British Columbia',
+  'orgbook-study':
+    'OrgBook BC - Case Studies - Digital Government - Province of British Columbia',
 };
 
 const CaseStudy = () => {
