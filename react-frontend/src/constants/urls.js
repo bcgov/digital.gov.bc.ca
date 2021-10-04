@@ -130,6 +130,8 @@ export const resourceLinks = {
     'https://vancouversun.com/business/local-business/b-c-announces-more-changes-resulting-from-mount-polley-mine-failure',
   news3:
     'https://bc.ctvnews.ca/mobile/british-columbia-proposes-reforms-to-strengthen-oversight-of-mining-industry-1.4605156?cache=yes?clipId=263414',
+  nutrientCalculator: 'https://nmp.apps.nrs.gov.bc.ca',
+  orgBookBC: 'https://orgbook.gov.bc.ca/en/home',
 };
 
 export const standardsUrls = {

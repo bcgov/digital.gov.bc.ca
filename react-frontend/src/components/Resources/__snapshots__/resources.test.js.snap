@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-bTfYlY sc-kHOZQx bWdbNj bTfpxy horizontalAlignment bannerCenterText container"
+    className="sc-fvxABq sc-fbyett bRwzrF diISFN horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-FNZbm dmrpyN sideImageText"
+          className="sc-htJSpn dGLRHn sideImageText"
         >
           <h1
-            className="sc-jWUzTF dvdGk bannerTitle"
+            className="sc-cbTAsW gRGwAc bannerTitle"
           >
             Resources
           </h1>
           <div
-            className="sc-eFehXo dTSQNh subTitle"
+            className="sc-hjGYWY hAPksq subTitle"
           >
              
             Policy, standards, guides, and tools you can use right now to deliver excellent digital services.
@@ -34,13 +34,13 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-fXEqXD kNbnfW sideImage"
+          className="sc-dUbuoE CwFqU sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-bTfYlY sc-dtMiey bWdbNj dbEpsW horizontalAlignment contentBlockContainer container"
+    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-ilftOa hivyaS resourceHeading"
+          className="sc-dVNiOx gIRUkV resourceHeading"
         >
           Standards & Policy
         </h2>
@@ -63,7 +63,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
           data-testid="styled-card"
         >
           <div
@@ -71,20 +71,20 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
             >
               Digital Principles
             </h5>
             <p
-              className="sc-jrQzUz kjzYZb cardDescription"
+              className="sc-cTApHj lejdDX cardDescription"
             >
               Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.
             </p>
             <div
-              className="sc-crHlIS guojQY cardLink"
+              className="sc-bBHHQT eprqeq cardLink"
             >
               <a
-                className="sc-ehCIER jRfDxM internalLink"
+                className="sc-dlVyqM dejlqz internalLink"
                 href="/resources/digital-principles"
                 onClick={[Function]}
               >
@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
           data-testid="styled-card"
         >
           <div
@@ -106,20 +106,20 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
             >
               IM/IT Standards
             </h5>
             <p
-              className="sc-jrQzUz kjzYZb cardDescription"
+              className="sc-cTApHj lejdDX cardDescription"
             >
               The IM/IT Standards promote consistent, appropriate management of government technology resources.
             </p>
             <div
-              className="sc-crHlIS guojQY cardLink"
+              className="sc-bBHHQT eprqeq cardLink"
             >
               <a
-                className="sc-hiwReK fcTxaO externalLink"
+                className="sc-hGPAah cvEMiL externalLink"
                 href="https://www2.gov.bc.ca/gov/content?id=2A477231EF934E22B0FBC8C43A98B9D9"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -154,7 +154,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bTfYlY sc-dtMiey bWdbNj dbEpsW horizontalAlignment contentBlockContainer container"
+    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -164,19 +164,19 @@ exports[`renders correctly 1`] = `
         className="col-md-12 col-lg-4"
       >
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-uoixf UNqM resourceSubHeading"
+            className="sc-jHkVfK bcXbMb resourceSubHeading"
           >
             Technical
           </h3>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78"
             rel="noopener noreferrer"
             target="_blank"
@@ -206,10 +206,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=2AC548A48CD7445A9359AF7BB204B6F6"
             rel="noopener noreferrer"
             target="_blank"
@@ -239,10 +239,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=1AA28225F41347FE9F8D0B4F1733CEFE"
             rel="noopener noreferrer"
             target="_blank"
@@ -276,19 +276,19 @@ exports[`renders correctly 1`] = `
         className="col-md-12 col-lg-4"
       >
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-uoixf UNqM resourceSubHeading"
+            className="sc-jHkVfK bcXbMb resourceSubHeading"
           >
             Privacy
           </h3>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=C962EFF559134B69A8A9ABB3C121D6C7"
             rel="noopener noreferrer"
             target="_blank"
@@ -318,10 +318,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=54A04E35FA854B298DECF17ABC94E943"
             rel="noopener noreferrer"
             target="_blank"
@@ -351,10 +351,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=CFA561FF833D42B68FDD9A818ECAFFBE"
             rel="noopener noreferrer"
             target="_blank"
@@ -388,19 +388,19 @@ exports[`renders correctly 1`] = `
         className="col-md-12 col-lg-4"
       >
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-uoixf UNqM resourceSubHeading"
+            className="sc-jHkVfK bcXbMb resourceSubHeading"
           >
             Security
           </h3>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=BB7D7F3938634BF2973BDE1A899FB755"
             rel="noopener noreferrer"
             target="_blank"
@@ -430,10 +430,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=7175C19B66564EA3A343AB8B668BEFC2"
             rel="noopener noreferrer"
             target="_blank"
@@ -466,7 +466,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bTfYlY sc-dtMiey bWdbNj dbEpsW horizontalAlignment contentBlockContainer container"
+    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
     id="guides"
   >
     <div
@@ -476,7 +476,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-ilftOa hivyaS resourceHeading"
+          className="sc-dVNiOx gIRUkV resourceHeading"
         >
           Guides
         </h2>
@@ -489,7 +489,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
           data-testid="styled-card"
         >
           <div
@@ -497,20 +497,20 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
             >
               Hosting Options
             </h5>
             <p
-              className="sc-jrQzUz kjzYZb cardDescription"
+              className="sc-cTApHj lejdDX cardDescription"
             >
               Learn about the infrastructure technologies available for hosting your digital service.
             </p>
             <div
-              className="sc-crHlIS guojQY cardLink"
+              className="sc-bBHHQT eprqeq cardLink"
             >
               <a
-                className="sc-ehCIER jRfDxM internalLink"
+                className="sc-dlVyqM dejlqz internalLink"
                 href="/resources/hosting-options"
                 onClick={[Function]}
               >
@@ -524,7 +524,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
           data-testid="styled-card"
         >
           <div
@@ -532,20 +532,20 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
             >
               Modern Application Playbook
             </h5>
             <p
-              className="sc-jrQzUz kjzYZb cardDescription"
+              className="sc-cTApHj lejdDX cardDescription"
             >
               A collection of references, tools, and best practices to help you navigate the development and support of government applications within an Agile framework.
             </p>
             <div
-              className="sc-crHlIS guojQY cardLink"
+              className="sc-bBHHQT eprqeq cardLink"
             >
               <a
-                className="sc-hiwReK fcTxaO externalLink"
+                className="sc-hGPAah cvEMiL externalLink"
                 href="https://github.com/bcgov/CITZ-IMB-playbook"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -580,7 +580,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bTfYlY sc-dtMiey bWdbNj dbEpsW horizontalAlignment contentBlockContainer container"
+    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
     id="forDesigners"
   >
     <div
@@ -590,19 +590,19 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-lg-6"
       >
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-uoixf UNqM resourceSubHeading"
+            className="sc-jHkVfK bcXbMb resourceSubHeading"
           >
             For Designers
           </h3>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=EADC5FB4D3BE4A6DB71C35A64CFECDFC"
             rel="noopener noreferrer"
             target="_blank"
@@ -632,10 +632,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=81BBC6221D42401EBCE13D4D8945F3A3"
             rel="noopener noreferrer"
             target="_blank"
@@ -665,10 +665,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=D5D182EF4D9F42B5997CCB2029068B5E"
             rel="noopener noreferrer"
             target="_blank"
@@ -698,10 +698,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://bcgov.github.io/design-research-guide/"
             rel="noopener noreferrer"
             target="_blank"
@@ -731,10 +731,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://developer.gov.bc.ca/Design-System/About-the-Design-System"
             rel="noopener noreferrer"
             target="_blank"
@@ -764,10 +764,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=250C67AD0B954DB9B0549EED6C36BDEF"
             rel="noopener noreferrer"
             target="_blank"
@@ -797,10 +797,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=A9B5158C5DB5499A83BD046E94CBCBB1"
             rel="noopener noreferrer"
             target="_blank"
@@ -830,10 +830,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=B990ECA6DAB94CD0BE2C1AE7BD439ADC"
             rel="noopener noreferrer"
             target="_blank"
@@ -863,10 +863,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=A9801C7B52CE481BBD36CAD87C297142"
             rel="noopener noreferrer"
             target="_blank"
@@ -896,10 +896,10 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="sc-jIkYaL fevKYM row"
+          className="sc-ezbkgU hNpwhk row"
         >
           <a
-            className="sc-hiwReK fcTxaO externalLink"
+            className="sc-hGPAah cvEMiL externalLink"
             href="https://www2.gov.bc.ca/gov/content?id=14FD003042FC422182796E84A6C343C9"
             rel="noopener noreferrer"
             target="_blank"
@@ -933,17 +933,17 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-lg-6"
       >
         <div
-          className="sc-ikJzcn bFYmEP cardRound"
+          className="sc-ZOsLE lmjOfT cardRound"
         >
           <img
-            className="sc-jJoQpE kXfjLi"
+            className="sc-jOxuqd bjHTTw"
             data-testid="thumbnail"
           />
           <div
-            className="sc-hiCivh mfmrd"
+            className="sc-hmjpBu dghYnM"
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
               data-testid="title"
               style={
                 Object {
@@ -960,7 +960,7 @@ exports[`renders correctly 1`] = `
               When you can’t meet with your coworkers or clients face-to-face, communicating with them by video can be the next best thing. There are many options available for video communication platforms or tools, many of which can also be used for instant messaging or chat, screen sharing and transferring files.
             </p>
             <a
-              className="sc-lcequs bpoUQG internalLink"
+              className="sc-kfPtPH hkWpFi internalLink"
               href="/guides/communication-platforms"
               onClick={[Function]}
               style={
@@ -977,7 +977,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bTfYlY sc-dtMiey bWdbNj dbEpsW horizontalAlignment contentBlockContainer container"
+    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
     id="forDevelopers"
   >
     <div
@@ -987,7 +987,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h3
-          className="sc-uoixf UNqM resourceSubHeading"
+          className="sc-jHkVfK bcXbMb resourceSubHeading"
         >
           For Developers
         </h3>
@@ -1000,7 +1000,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
           data-testid="styled-card"
         >
           <div
@@ -1008,20 +1008,20 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
             >
               BCGov on GitHub
             </h5>
             <p
-              className="sc-jrQzUz kjzYZb cardDescription"
+              className="sc-cTApHj lejdDX cardDescription"
             >
               Explore hundreds of open source code repositories that are being maintained by the teams who are building modern digital services in British Columbia.
             </p>
             <div
-              className="sc-crHlIS guojQY cardLink"
+              className="sc-bBHHQT eprqeq cardLink"
             >
               <a
-                className="sc-hiwReK fcTxaO externalLink"
+                className="sc-hGPAah cvEMiL externalLink"
                 href="https://github.com/bcgov"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -1057,7 +1057,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="ant-card ant-card-bordered sc-hKwCoD fApqXv cardRound"
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
           data-testid="styled-card"
         >
           <div
@@ -1065,20 +1065,20 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           >
             <h5
-              className="sc-egiSv kfuvTV cardTitle"
+              className="sc-cNKpQo bbRmzX cardTitle"
             >
               DevHub
             </h5>
             <p
-              className="sc-jrQzUz kjzYZb cardDescription"
+              className="sc-cTApHj lejdDX cardDescription"
             >
               One place that brings together resources for developers building digital products for the BC Government.
             </p>
             <div
-              className="sc-crHlIS guojQY cardLink"
+              className="sc-bBHHQT eprqeq cardLink"
             >
               <a
-                className="sc-hiwReK fcTxaO externalLink"
+                className="sc-hGPAah cvEMiL externalLink"
                 href="https://developer.gov.bc.ca/"
                 rel="noopener noreferrer"
                 target="_blank"
