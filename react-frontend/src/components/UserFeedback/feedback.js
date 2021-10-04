@@ -49,7 +49,7 @@ export default function FeedbackForm() {
       <ModalButton
         type="primary"
         onClick={showModal}
-        alt="Provide feedback on this site"
+        ariaLabel="Provide feedback on this site"
       >
         <FontAwesomeIcon icon={faSmile} style={{ color: '#fcba19' }} />
         <FontAwesomeIcon icon={faFrown} style={{ color: '#fcba19' }} />
