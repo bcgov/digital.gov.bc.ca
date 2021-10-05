@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/digital-livestream-contact",
+      "handler": "digital-livestream-contact.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/digital-livestream-contact",
+      "handler": "digital-livestream-contact.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/digital-livestream-contact",
+      "handler": "digital-livestream-contact.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

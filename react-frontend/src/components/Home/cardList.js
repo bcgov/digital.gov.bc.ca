@@ -86,7 +86,7 @@ const CardList = () => {
               img={communityGrey}
               title={'Communities'}
               description={descriptions[4]}
-              linkText={'Connect'}
+              linkText={'Connect with a community of practice'}
               routePath={'/communities'}
             />
           </Col>
@@ -95,7 +95,7 @@ const CardList = () => {
               img={caseStudiesGrey}
               title={'Case Studies'}
               description={descriptions[5]}
-              linkText="Learn more"
+              linkText="Read case studies"
               routePath="/case-studies"
             />
           </Col>

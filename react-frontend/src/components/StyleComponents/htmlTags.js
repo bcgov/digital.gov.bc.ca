@@ -5,6 +5,18 @@ import { Row, Col } from 'react-flexbox-grid';
 import { navBarResize } from './nav';
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
+export const BreadcrumbChevron = styled.span`
+  color: grey;
+  display: flex;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0 6px 0 6px;
+  text-decoration: none;
+  @media only screen and (max-width: 800px) {
+    font-size: 14px;
+  }
+`;
+
 export const BreadcrumbLI = styled.li`
   color: black;
   display: flex;
@@ -27,8 +39,8 @@ export const BreadcrumbUL = styled.ul`
   padding-top: 16px;
 `;
 
-export const CoCoLinkExternal = styled.a.attrs({
-  className: 'CoCoLink',
+export const LinkExternalButton = styled.a.attrs({
+  className: 'ExternalLinkButton',
 })`
   background-color: #003366;
   border: none;
