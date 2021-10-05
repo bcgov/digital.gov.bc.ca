@@ -11,4 +11,4 @@
   - name: Delete imagestream for {{ strapi_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
     shell: >
       oc -n "{{ image_namespace }}" delete istag/{{strapi_infra_name}}:pr-{{ PR }}
-      ignore_errors: yes
+    ignore_errors: yes
