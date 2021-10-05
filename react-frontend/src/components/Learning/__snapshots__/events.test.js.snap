@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-eLwHGX sc-hOGjNT hHgEma ixIGfm horizontalAlignment contentBlockContainer container"
+  className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
   id="standards"
 >
   <div
@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-bXTfsO cMcdXG heading"
+        className="sc-dtDOJZ cfPryl heading"
       >
         Events
       </h2>

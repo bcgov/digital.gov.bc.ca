@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_bc_livestreams",
+  "info": {
+    "name": "DigitalBCLivestream",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "BroadcastTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "EventImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

@@ -1,18 +1,30 @@
 import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
+import {
+  CardContact,
+  ContactAvatar,
+  ContactName,
+  ContactTitle,
+  ContactEmail,
+} from '../StyleComponents/card';
+import { HrefLink } from '../StyleComponents/htmlTags';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
 import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
 import FarmingBannerImage from '../../images/case-study-farming.jpg';
+import OrgBookBannerImage from '../../images/case-study-orgbook.jpg';
 import { resourceLinks, videoLinks } from '../../constants/urls';
 
-const jill = require('../../images/jill.png').default;
-const aaron = require('../../images/aaron.png').default;
+const jill = require('../../images/jill.jpg').default;
+const aaron = require('../../images/aaron.jpg').default;
+const john = require('../../images/john.jpg').default;
 const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg')
   .default;
 const caseStudiesMiningImg = require('../../images/case-study-mining.jpg')
   .default;
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
+const caseStudiesOrgBookImg = require('../../images/case-study-orgbook.jpg')
+  .default;
 
 const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',
@@ -20,24 +32,37 @@ const MiningContent = {
   contacts: (
     <Row>
       <Col sm={12} md={6}>
-        <CaseStudiesInfoCard
-          title={'Aaron Unger'}
-          description={
-            'Product Owner, Mines Digital Services - Aaron.Unger@gov.bc.ca'
-          }
-          img={aaron}
-          height="550px"
-        />
+        <CardContact>
+          <div>
+            <ContactAvatar src={aaron} />
+          </div>
+          <div>
+            <ContactName>Aaron Unger</ContactName>
+            <ContactTitle>Product Owner, Mines Digital Services</ContactTitle>
+            <ContactEmail href="mailto:Aaron.Unger@gov.bc.ca" target="_blank">
+              Aaron.Unger@gov.bc.ca
+            </ContactEmail>
+          </div>
+        </CardContact>
       </Col>
       <Col sm={12} md={6}>
-        <CaseStudiesInfoCard
-          title={'Jillian Carruthers'}
-          description={
-            'Director, Digital Services - Jillian.Carruthers@gov.bc.ca'
-          }
-          img={jill}
-          height="550px"
-        />
+        <CardContact>
+          <div>
+            <ContactAvatar src={jill} />
+          </div>
+          <div>
+            <ContactName>Jillian Carruthers</ContactName>
+            <ContactTitle>
+              Executive Director, Service Transformation
+            </ContactTitle>
+            <ContactEmail
+              href="mailto:Jillian.Carruthers@gov.bc.ca"
+              target="_blank"
+            >
+              Jillian.Carruthers@gov.bc.ca
+            </ContactEmail>
+          </div>
+        </CardContact>
       </Col>
     </Row>
   ),
@@ -88,25 +113,37 @@ const MiningContent = {
   ),
   others: (
     <Row>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/orgbook-study'}
+          linkText={'Read the case study'}
+          title={'OrgBook BC'}
+          description={
+            'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.'
+          }
+          img={caseStudiesOrgBookImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/farming-study'}
           linkText={'Read more'}
           title={'Helping farmers understand their soil'}
           description={
-            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
+            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.'
           }
           img={caseStudiesFarmingImg}
           height="650px"
         />
       </Col>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/medical-study'}
           linkText={'Read more'}
-          title={'Transforming the medical services plan'}
+          title={'Transforming the Medical Services Plan'}
           description={
-            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
+            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the Ministry of Health wanted to introduce a digital self-serve product, an online enrolment form.'
           }
           img={caseStudiesMSPImg}
           height="650px"
@@ -224,7 +261,19 @@ const FarmerContent = {
   ),
   others: (
     <Row>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/orgbook-study'}
+          linkText={'Read the case study'}
+          title={'OrgBook BC'}
+          description={
+            'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.'
+          }
+          img={caseStudiesOrgBookImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/mining-study'}
           linkText={'Read more'}
@@ -236,13 +285,13 @@ const FarmerContent = {
           height="650px"
         />
       </Col>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/medical-study'}
           linkText={'Read more'}
-          title={'Transforming the medical services plan'}
+          title={'Transforming the Medical Services Plan'}
           description={
-            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the...'
+            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the Ministry of Health wanted to introduce a digital self-serve product, an online enrolment form.'
           }
           img={caseStudiesMSPImg}
           height="650px"
@@ -281,7 +330,7 @@ const FarmerContent = {
     </div>
   ),
   resourceText: ['Nutrient Management Calculator'],
-  resourceLinks: ['.'],
+  resourceLinks: [resourceLinks.nutrientCalculator],
 };
 
 const MedicalContent = {
@@ -292,7 +341,7 @@ const MedicalContent = {
       In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance
       applications. Thirty percent of application forms were returned due to
       errors. To improve the process, the Ministry of Health wanted to introduce
-      a digital self-serve product, an online enrolment form.'
+      a digital self-serve product, an online enrolment form.
     </p>
   ),
   context: (
@@ -338,7 +387,7 @@ const MedicalContent = {
   ),
   others: (
     <Row>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/mining-study'}
           linkText={'Read more'}
@@ -350,15 +399,27 @@ const MedicalContent = {
           height="650px"
         />
       </Col>
-      <Col sm={12} md={6}>
+      <Col sm={12} md={4}>
         <CaseStudiesInfoCard
           routePath={'/case-studies/farming-study'}
           linkText={'Read more'}
           title={'Helping farmers understand their soil'}
           description={
-            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to...'
+            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.'
           }
           img={caseStudiesFarmingImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/orgbook-study'}
+          linkText={'Read the case study'}
+          title={'OrgBook BC'}
+          description={
+            'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.'
+          }
+          img={caseStudiesOrgBookImg}
           height="650px"
         />
       </Col>
@@ -430,4 +491,197 @@ const MedicalContent = {
   ),
 };
 
-export { MiningContent, FarmerContent, MedicalContent };
+const OrgBookContent = {
+  title: 'OrgBook BC',
+  backgroundImage: OrgBookBannerImage,
+  contacts: (
+    <Row>
+      <Col sm={12} md={6}>
+        <CardContact>
+          <div>
+            <ContactAvatar src={john} />
+          </div>
+          <div>
+            <ContactName>John Jordan</ContactName>
+            <ContactTitle>
+              Executive Director, Emerging Digital Initiatives
+            </ContactTitle>
+            <ContactEmail href="mailto:John.Jordan@gov.bc.ca" target="_blank">
+              John.Jordan@gov.bc.ca
+            </ContactEmail>
+          </div>
+        </CardContact>
+      </Col>
+    </Row>
+  ),
+  description: (
+    <div>
+      <p>
+        Organizations and citizens need easy access to verified information
+        about registered BC organizations. To streamline and modernize this
+        access, the OrgBook BC digital service was developed by the Government
+        of British Columbia using proven technologies in Digital Trust.
+      </p>
+    </div>
+  ),
+  context: (
+    <div>
+      <p>
+        As part of a strong digital economy, citizens and organizations need
+        confidence in online data that’s accurate, up-to-date, and trustworthy.
+        The Government of British Columbia is continually exploring new ways to
+        build that confidence and trust in government through improving the
+        integrity of information.
+      </p>
+      <p>
+        The official registry of BC organizations is an obvious candidate for
+        those efforts. By providing easy access to those records, citizens can
+        be reassured about their business interactions, legal entities can
+        validate key organization details, government departments can streamline
+        and simplify processes, and organizations can monitor and assess updates
+        as an indicator of economic activity.
+      </p>
+      <p>
+        This led to the origin of OrgBook BC. The BC Digital Trust Services and
+        BC Registries teams identified an opportunity to collaborate, delivering
+        registered organizations’ details online using a new digital trust
+        technology called Verifiable Credentials (VCs). The OrgBook BC service
+        was designed to be the intersection between the modernization of access
+        to verified organization information, and the exploration of VC
+        technology that could form part of a new digital trust ecosystem.
+      </p>
+      <p>
+        VCs are like physical credentials—driving licenses and the like—we hold
+        in our wallets, but are digital and are stored in digital wallets. They
+        also go beyond just being digital equivalents of physical credentials. A
+        verifier can prove who’s meant to hold a VC, who issued it, that it
+        hasn’t been tampered with (which makes forging it impossible), and that
+        it hasn’t been revoked. This means that VCs support confidentiality,
+        information integrity, and the overall building of trust online.
+      </p>
+    </div>
+  ),
+  others: (
+    <Row>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/mining-study'}
+          linkText={'Read more'}
+          title={'Mines Digital Service'}
+          description={
+            'BC’s mining industry is an integral part of the economy, with over $9 billion dollars in annual revenue. Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.'
+          }
+          img={caseStudiesMiningImg}
+        />
+      </Col>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/farming-study'}
+          linkText={'Read more'}
+          title={'Helping farmers understand their soil'}
+          description={
+            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.'
+          }
+          img={caseStudiesFarmingImg}
+        />
+      </Col>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/medical-study'}
+          linkText={'Read more'}
+          title={'Transforming the Medical Services Plan'}
+          description={
+            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the Ministry of Health wanted to introduce a digital self-serve product, an online enrolment form.'
+          }
+          img={caseStudiesMSPImg}
+        />
+      </Col>
+    </Row>
+  ),
+  approach: (
+    <div>
+      <p>
+        BC Registries collaborated with Digital Trust Services to issue (that
+        is, create and send) organization VCs to OrgBook BC as part of the
+        organization registration process. In fact, any registration updates,
+        including revocations and new business relationships, trigger a VC
+        update to OrgBook BC. This step also laid the foundation for BC
+        Registries to potentially issue VCs directly to organizations in the
+        future.
+      </p>
+      <p>
+        Digital Trust Services was able to leverage this functionality and
+        further develop OrgBook BC to access the information in those VCs.
+        Specifically, they developed the public-facing OrgBook BC website with
+        an advanced search feature, an API for integrating OrgBook BC data into
+        other services, and a notification feature so anyone can be notified
+        about additions and updates. All the software is open source for others
+        to use or adapt as desired.
+      </p>
+      <p>
+        Taking advantage of VCs’ potential, OrgBook BC was also developed to
+        allow other authorities to issue VCs. For example, BC’s Liquor and
+        Cannabis Regulation Branch issues permit and license VCs against
+        registered organizations. Those VCs have a relationship to the
+        organizations in OrgBook BC.
+      </p>
+      <p>
+        BC Government’s Digital Trust Services team has also been contributing
+        to worldwide VC tools and technologies for several years, reducing this
+        project’s risk and simplifying its execution.
+      </p>
+      <p>
+        OrgBook BC was built on Hyperledger Aries and Indy, open-source Digital
+        Trust technologies with many worldwide contributors including the
+        Government of BC. It was deployed on a modern IT platform (Kubernetes)
+        that supported the service’s goals of robustness and scale.
+      </p>
+    </div>
+  ),
+  outcomes: (
+    <div>
+      <p>
+        OrgBook BC is a progression towards digital trust, yet is not the whole
+        answer. All teams involved have learned much from this practical
+        deployment of VCs. Our hope is that this work continues to evolve and be
+        shaped by an ecosystem that continues to grow and learn. This is the
+        beginning of a story, built on partnerships, collaboration and a shared
+        vision.
+      </p>
+      <p>Specific outcomes include:</p>
+      <ul>
+        <li>
+          As of June 2021 OrgBook BC has over 1.4 million active legal entities,
+          has over 3.8 million VCs, and is usually updated within minutes of a
+          new or changed registration. This has proved its ability, and
+          Hyperledger Aries’ and Indy’s abilities, to scale and support
+          real-world scenarios.
+        </li>
+        <li>
+          Multiple practical uses are already possible, including verifying if
+          an organization is legally registered in BC, searching for business
+          numbers, and finding “Doing business as” names registered by
+          corporations. An automatic business lookup field is built into several
+          government COVID-related forms that cover 18 business areas. Many
+          citizens have also provided feedback on OrgBook BC’s value to their
+          work.
+        </li>
+        <li>
+          VC technology, as used by OrgBook BC, is flexible enough to expand
+          further and support ecosystem-like connections. For example, OrgBook
+          BC might present VCs of registered organization information to aid in
+          businesses obtaining a loan or for a government department processing
+          subsidies. Businesses may even hold and present their registered
+          organization VCs themselves rather than requesting proof from OrgBook
+          BC or resorting to emailing a fallible document. VCs become the secure
+          building blocks for seamless, confidential and trustworthy exchanges
+          between parties.
+        </li>
+      </ul>
+    </div>
+  ),
+  resourceText: ['Live OrgBook BC service'],
+  resourceLinks: [resourceLinks.orgBookBC],
+};
+
+export { MiningContent, FarmerContent, MedicalContent, OrgBookContent };

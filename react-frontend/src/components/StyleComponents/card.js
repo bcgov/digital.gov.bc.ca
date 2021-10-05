@@ -3,6 +3,8 @@ import { Card } from 'antd';
 import { Col } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 
+import { HrefLinkStandalone } from './htmlTags';
+
 const cardBorderRadius = '21px';
 const cardBorderInsetRadius = '16px';
 
@@ -29,23 +31,34 @@ export const CardClickable = styled(Link).attrs({
   }
 `;
 
+export const CardClickableBody = styled.div.attrs({
+  className: 'cardBody',
+})`
+  background: #fff;
+  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
+  height: 100%;
+  padding: 24px;
+`;
+
 export const CardClickableDescription = styled.p.attrs({
   className: 'cardClickableDescription',
 })`
   background: #ffffff;
-  border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
-  height: 100%;
   margin: 0;
-  overflow: hidden;
-  padding: 24px;
-  text-align: left;
 `;
 
-export const CardClickableHeader = styled.h5.attrs({
+export const CardClickableHeader = styled.div.attrs({
   className: 'cardClickableHeader',
 })`
   border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
   margin: 0;
+`;
+
+export const CardClickableThumnail = styled.img`
+  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
 `;
 
 //basic styled cards (with link)
@@ -188,9 +201,7 @@ export const CardTitle = styled.h5.attrs({
 // common component cards
 export const CoCoCardDescription = styled(CardClickableDescription).attrs({
   className: 'coCoCardDescription',
-})`
-  padding: 24px;
-`;
+})``;
 
 export const CoCoCardHeader = styled(CardClickableHeader).attrs({
   className: 'coCoCardHeader',
@@ -225,6 +236,16 @@ export const CommunityCardHeader = styled(CardClickableHeader).attrs({
   padding: 24px;
 `;
 
+export const CommunityCardHeading = styled.h5.attrs({
+  className: 'communityCardHeading',
+})`
+  background: #003366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 0;
+`;
+
 export const CommunityCardStyled = styled(CardClickable).attrs({
   className: 'communityCard',
 })``;
@@ -241,11 +262,10 @@ export const BlogCardAuthorLine = styled.div`
   width: 100%;
 `;
 
-export const BlogCardBody = styled.div.attrs({})`
-  background: #fff;
+export const BlogCardBody = styled(CardClickableBody).attrs({
+  className: 'cardBody',
+})`
   border-radius: 0 0 ${cardBorderInsetRadius} ${cardBorderInsetRadius};
-  height: 100%;
-  padding: 24px;
 `;
 
 export const BlogCardDescription = styled(CardClickableDescription).attrs({
@@ -261,12 +281,7 @@ export const BlogCardStyled = styled(CardClickable).attrs({
   className: 'blogCard',
 })``;
 
-export const BlogCardThumnail = styled.img`
-  border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-`;
+export const BlogCardThumnail = styled(CardClickableThumnail)``;
 
 export const BlogCardThumnailNullImg = styled.div`
   border-radius: ${cardBorderInsetRadius} ${cardBorderInsetRadius} 0 0;
@@ -352,4 +367,40 @@ export const ResourceCardTextBox = styled.div`
   flex-direction: column;
   height: 100%;
   padding: 24px;
+`;
+
+//employee contact card
+export const CardContact = styled.div.attrs({
+  className: 'cardContact',
+})`
+  align-items: center;
+  display: flex;
+`;
+
+export const ContactAvatar = styled.img.attrs({
+  className: 'contactAvatar',
+})`
+  border-radius: 50%;
+  height: 90px;
+  margin-right: 12px;
+`;
+
+export const ContactName = styled.p.attrs({
+  className: 'contactName',
+})`
+  font-weight: bold;
+  margin-bottom: 0;
+`;
+
+export const ContactTitle = styled.p.attrs({
+  className: 'contactTitle',
+})`
+  font-size: 0.9em;
+  margin-bottom: 0;
+`;
+
+export const ContactEmail = styled(HrefLinkStandalone).attrs({
+  className: 'contactEmail',
+})`
+  font-size: 0.9em;
 `;
