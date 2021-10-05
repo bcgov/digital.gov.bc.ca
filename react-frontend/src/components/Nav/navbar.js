@@ -159,12 +159,8 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
             <NavBarLi>
-              <NavBarLinkExternal href="/marketplace" target="_blank">
+              <NavBarLinkExternal href="/marketplace">
                 Marketplace
-                <FontAwesomeIcon
-                  icon={faExternalLinkAlt}
-                  style={{ paddingLeft: '5px', height: '25px' }}
-                />
               </NavBarLinkExternal>
             </NavBarLi>
           </NavBarUl>
