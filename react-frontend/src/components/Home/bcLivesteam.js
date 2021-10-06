@@ -27,10 +27,11 @@ const BCLivestream = () => {
           /* Only render if link provided */
         }
         const pastBroadcastLink = digitalLivestreamContact?.PastEpisodeURL && (
-          <div>
+          <div style={{ width: 'fit-content', margin: '0 auto' }}>
             <a href={digitalLivestreamContact?.PastEpisodeURL}>
-              <p style={{ marginBottom: '4px' }}>Watch past broadcasts</p>
+              <p style={{ marginBottom: '4px' }}>Watch past broadcasts on</p>
               <img
+                alt="YouTube"
                 src={youTubeLogo}
                 style={{ height: '20px', width: '80px' }}
               />
@@ -43,14 +44,12 @@ const BCLivestream = () => {
             <Heading style={{ lineHeight: '1.2' }}>
               #DigitalBC Livestream
             </Heading>
-            <p>
-              Watch live broadcasts of monthly updates, webinars, sprint
-              reviews, and more!
-            </p>
+            <p>Get calendar invitations to livestream broadcasts.</p>
             <LinkExternalButton
               href={digitalLivestreamContact?.SubscriptionURL}
               style={{
                 maxWidth: '160px',
+                marginBottom: '60px',
                 marginLeft: 'auto',
                 marginRight: 'auto',
               }}
@@ -64,28 +63,39 @@ const BCLivestream = () => {
           return (
             <div style={{ backgroundColor: '#fff' }}>
               <PageContainer
-                style={{ backgroundColor: '#fff', paddingTop: '40px' }}
+                style={{
+                  backgroundColor: '#fff',
+                  paddingBottom: '40px',
+                  paddingTop: '40px',
+                }}
               >
-                <Row between="xs">
+                <Row
+                  between="xs"
+                  style={{ display: 'flex', alignItems: 'center' }}
+                >
                   <Col
                     sm={12}
-                    md={4}
-                    style={{ textAlign: 'center', paddingBottom: '20px' }}
+                    md={6}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      textAlign: 'center',
+                      paddingBottom: '20px',
+                    }}
                   >
                     {subscriptionLink}
+                    {pastBroadcastLink}
                   </Col>
-                  <Col sm={12} md={4} style={{ paddingBottom: '20px' }}>
+                  <Col sm={12} md={6} style={{ textAlign: 'center' }}>
                     <img
                       src={imageSource}
                       style={{
+                        borderRadius: '4px',
                         width: '100%',
-                        paddingLeft: '10px',
-                        paddingRight: '10px',
+                        marginBottom: '16px',
                       }}
                     />
-                  </Col>
-                  <Col sm={12} md={4} style={{ textAlign: 'center' }}>
-                    <p style={{ marginBottom: '4px' }}>
+                    <p style={{ marginBottom: '0' }}>
                       <b>Next broadcast</b>
                     </p>
                     <b
@@ -104,10 +114,9 @@ const BCLivestream = () => {
                       ) + ' PST'}
                     </b>
 
-                    <p style={{ textAlign: 'left', marginBottom: '40px' }}>
+                    <p style={{ marginBottom: '0', padding: '8px 0 0' }}>
                       {digitalBcLivestreams[0]?.Description}
                     </p>
-                    {pastBroadcastLink}
                   </Col>
                 </Row>
               </PageContainer>
@@ -117,7 +126,11 @@ const BCLivestream = () => {
         return (
           <div style={{ backgroundColor: '#fff' }}>
             <PageContainer
-              style={{ backgroundColor: '#fff', paddingTop: '40px' }}
+              style={{
+                backgroundColor: '#fff',
+                paddingBottom: '40px',
+                paddingTop: '40px',
+              }}
             >
               <Row center="xs">
                 <Col xs={12} style={{ textAlign: 'center' }}>
