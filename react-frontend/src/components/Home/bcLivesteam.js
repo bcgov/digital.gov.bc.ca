@@ -28,7 +28,11 @@ const BCLivestream = () => {
         }
         const pastBroadcastLink = digitalLivestreamContact?.PastEpisodeURL && (
           <div style={{ width: 'fit-content', margin: '0 auto' }}>
-            <a href={digitalLivestreamContact?.PastEpisodeURL}>
+            <a
+              href={digitalLivestreamContact?.PastEpisodeURL}
+              target="_blank"
+              rel="noreferrer"
+            >
               <p style={{ marginBottom: '4px' }}>Watch past broadcasts on</p>
               <img
                 alt="YouTube"
@@ -44,7 +48,7 @@ const BCLivestream = () => {
             <Heading style={{ lineHeight: '1.2' }}>
               #DigitalBC Livestream
             </Heading>
-            <p>Get calendar invitations to livestream broadcasts.</p>
+            <p>Click subscribe to attend future livestream events.</p>
             <LinkExternalButton
               href={digitalLivestreamContact?.SubscriptionURL}
               style={{
@@ -53,6 +57,7 @@ const BCLivestream = () => {
                 marginLeft: 'auto',
                 marginRight: 'auto',
               }}
+              target="_blank"
             >
               Subscribe
             </LinkExternalButton>
