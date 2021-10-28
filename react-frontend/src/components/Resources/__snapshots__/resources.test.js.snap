@@ -965,7 +965,9 @@ exports[`renders correctly 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "marginRight": "auto",
                   "marginTop": "auto",
+                  "width": "fit-content",
                 }
               }
             >
