@@ -22,6 +22,7 @@ import NotFound from '../NotFoundPage/notFoundPage';
 import Privacy from '../../components/FooterPages/privacy';
 import Products from '../products/products';
 import Resources from '../../components/Resources/resources';
+import Saas from '../LowTouchSaas/lowTouchSaas';
 
 const DisplayNames = {
   blog: 'Blog',
@@ -75,6 +76,7 @@ const Routes = () => {
           <NotFound standards />
         </Route>
         <Route component={NotFound} />
+        <Route exact path="/resources/low-touch-saas" component={Saas} />
       </Switch>
     </div>
   );
