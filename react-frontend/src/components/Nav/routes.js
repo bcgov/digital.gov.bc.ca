@@ -68,6 +68,7 @@ const Routes = () => {
           path="/resources/hosting-options"
           component={HostingOptions}
         />
+        <Route exact path="/resources/low-touch-saas" component={Saas} />
         <Route exact path="/learning" component={Learning} />
         <Route exact path="/products-services" component={Products} />
         <Route exact path="/resources" component={Resources} />
@@ -76,7 +77,6 @@ const Routes = () => {
           <NotFound standards />
         </Route>
         <Route component={NotFound} />
-        <Route exact path="/resources/low-touch-saas" component={Saas} />
       </Switch>
     </div>
   );
