@@ -542,13 +542,14 @@ const OrgBookContent = {
         as an indicator of economic activity.
       </p>
       <p>
-        This led to the origin of OrgBook BC. The BC Digital Trust Services and
-        BC Registries teams identified an opportunity to collaborate, delivering
-        registered organizations’ details online using a new digital trust
-        technology called Verifiable Credentials (VCs). The OrgBook BC service
-        was designed to be the intersection between the modernization of access
-        to verified organization information, and the exploration of VC
-        technology that could form part of a new digital trust ecosystem.
+        This led to the origin of OrgBook BC. The BC Digital Identity and Trust
+        Program and BC Registries teams identified an opportunity to
+        collaborate, delivering registered organizations’ details online using a
+        new digital trust technology called Verifiable Credentials (VCs). The
+        OrgBook BC service was designed to be the intersection between the
+        modernization of access to verified organization information, and the
+        exploration of VC technology that could form part of a new digital trust
+        ecosystem.
       </p>
       <p>
         VCs are like physical credentials—driving licenses and the like—we hold
@@ -601,22 +602,22 @@ const OrgBookContent = {
   approach: (
     <div>
       <p>
-        BC Registries collaborated with Digital Trust Services to issue (that
-        is, create and send) organization VCs to OrgBook BC as part of the
-        organization registration process. In fact, any registration updates,
-        including revocations and new business relationships, trigger a VC
-        update to OrgBook BC. This step also laid the foundation for BC
+        BC Registries collaborated with the Digital Identity and Trust Program
+        to issue (that is, create and send) organization VCs to OrgBook BC as
+        part of the organization registration process. In fact, any registration
+        updates, including revocations and new business relationships, trigger a
+        VC update to OrgBook BC. This step also laid the foundation for BC
         Registries to potentially issue VCs directly to organizations in the
         future.
       </p>
       <p>
-        Digital Trust Services was able to leverage this functionality and
-        further develop OrgBook BC to access the information in those VCs.
-        Specifically, they developed the public-facing OrgBook BC website with
-        an advanced search feature, an API for integrating OrgBook BC data into
-        other services, and a notification feature so anyone can be notified
-        about additions and updates. All the software is open source for others
-        to use or adapt as desired.
+        The Digital Identity and Trust Program was able to leverage this
+        functionality and further develop OrgBook BC to access the information
+        in those VCs. Specifically, they developed the public-facing OrgBook BC
+        website with an advanced search feature, an API for integrating OrgBook
+        BC data into other services, and a notification feature so anyone can be
+        notified about additions and updates. All the software is open source
+        for others to use or adapt as desired.
       </p>
       <p>
         Taking advantage of VCs’ potential, OrgBook BC was also developed to
@@ -626,9 +627,9 @@ const OrgBookContent = {
         organizations in OrgBook BC.
       </p>
       <p>
-        BC Government’s Digital Trust Services team has also been contributing
-        to worldwide VC tools and technologies for several years, reducing this
-        project’s risk and simplifying its execution.
+        BC Government’s Digital Identity and Trust Program has also been
+        contributing to worldwide VC tools and technologies for several years,
+        reducing this project’s risk and simplifying its execution.
       </p>
       <p>
         OrgBook BC was built on Hyperledger Aries and Indy, open-source Digital
