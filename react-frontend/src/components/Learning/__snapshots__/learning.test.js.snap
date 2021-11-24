@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
+    className="sc-dJjZJu sc-hGPAah kJpHSy hAFvAe horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-fXeWgy iBYpDK sideImageText"
+          className="sc-fmcixO dUuIaC sideImageText"
         >
           <h1
-            className="sc-fIoroj fRnmJr bannerTitle"
+            className="sc-eXlDFz bkmfCt bannerTitle"
           >
             Learning
           </h1>
           <div
-            className="sc-gyEloo ixskKT subTitle"
+            className="sc-iFMAoI iiyHZd subTitle"
           >
              
             Understand and adopt new approaches to teamwork and technology.
@@ -34,13 +34,13 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-gUQueJ bZgmeB sideImage"
+          className="sc-gjNGvZ fBqtMs sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
+    className="sc-dJjZJu sc-kfPtPH kJpHSy lhgYiX horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
+    className="sc-dJjZJu sc-kfPtPH kJpHSy lhgYiX horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
+    className="sc-dJjZJu sc-hGPAah kJpHSy hAFvAe horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <p>
@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="sc-bkkfTU sc-ieebsP bimnMu heKdGt horizontalAlignment bannerCenterText container"
+      className="sc-dJjZJu sc-hGPAah kJpHSy hAFvAe horizontalAlignment bannerCenterText container"
       id="main-content-anchor"
     >
       <div
@@ -101,7 +101,7 @@ exports[`renders correctly 1`] = `
           className="col-xs-12 col-lg-6"
         >
           <div
-            className="sc-llYToB foMvUF"
+            className="sc-giYgFv elqVuN"
           >
             <h2
               className="sc-gsDJrp hrOaUq heading"
@@ -135,13 +135,13 @@ exports[`renders correctly 1`] = `
         >
           <img
             alt=""
-            className="sc-eFehXo iDxunh sideImage"
+            className="sc-lkgURy gknzKS sideImage"
           />
         </div>
       </div>
     </div>
     <div
-      className="sc-bkkfTU sc-hGPAah bimnMu cSyaHd horizontalAlignment contentBlockContainer container"
+      className="sc-dJjZJu sc-kfPtPH kJpHSy lhgYiX horizontalAlignment contentBlockContainer container"
       id="podcasts"
     >
       <div
@@ -169,7 +169,7 @@ exports[`renders correctly 1`] = `
             Recent Episodes
           </h3>
           <a
-            className="sc-hUpaWb egPhbN externalLink"
+            className="sc-gSQGeZ dricIh externalLink"
             href="https://bcdevexchange.libsyn.com/"
             rel="noopener noreferrer"
             style={
@@ -218,7 +218,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="ant-collapse-item sc-jlRMkV dZniLm PanelStyled"
+          className="ant-collapse-item sc-cbTAsW fFpTvq PanelStyled"
         >
           <div
             aria-expanded={false}
