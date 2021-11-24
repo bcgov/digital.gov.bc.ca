@@ -134,6 +134,23 @@ export const resourceLinks = {
   orgBookBC: 'https://orgbook.gov.bc.ca/en/home',
 };
 
+export const saasGuideUrls = {
+  CloudComputing:
+    'https://www2.gov.bc.ca/gov/content?id=7AAEDC2846904CBD963838A3392840BB',
+  CPPM:
+    'https://www2.gov.bc.ca/gov/content?id=8EF95776E6774C02866381D6C5015913',
+  FRCR:
+    'https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/policies/financial-systems-and-controls#1341',
+  MPO:
+    'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
+  Privacy:
+    'https://www2.gov.bc.ca/gov/content?id=A749F080FC794D82A2CBD96BABA2ABEC',
+  Procurement:
+    'https://www2.gov.bc.ca/gov/content?id=FD32D0C0D1D54211A952B987DBF071C8',
+  Security:
+    'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
+};
+
 export const standardsUrls = {
   AccessiblityandInclusionToolkit:
     'https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78',

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import Query from '../Query';
