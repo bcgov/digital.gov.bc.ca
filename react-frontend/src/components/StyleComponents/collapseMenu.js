@@ -81,3 +81,15 @@ export const PanelStyled = styled(Panel).attrs({
     border-top-color: #f2f2f2;
   }
 `;
+
+export const PanelStyledNoMargin = styled(PanelStyled).attrs({
+  className: 'PanelStyled',
+})`
+  .ant-collapse-content > .ant-collapse-content-box {
+    margin-left: 5px;
+  }
+  .ant-collapse-content {
+    font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+    font-size: 1rem;
+  }
+`;

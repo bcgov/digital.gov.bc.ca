@@ -137,10 +137,16 @@ export const resourceLinks = {
 export const saasGuideUrls = {
   CloudComputing:
     'https://www2.gov.bc.ca/gov/content?id=7AAEDC2846904CBD963838A3392840BB',
+  CloudPrivacySchedule:
+    'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/policies-guidelines/cloud_privacy_protection_schedule.docx',
+  CloudSecuritySchedule:
+    'https://www2.gov.bc.ca/gov/content?id=0F19651F63554381BB9D8364196671FB',
   CPPM:
     'https://www2.gov.bc.ca/gov/content?id=8EF95776E6774C02866381D6C5015913',
   FRCR:
     'https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/policies/financial-systems-and-controls#1341',
+  ISCS:
+    'https://www2.gov.bc.ca/assets/gov/government/services-for-government-and-broader-public-sector/information-technology-services/standards-files/information_security_classification_standard_july_17_2018.pdf',
   MPO:
     'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
   Privacy:
