@@ -6,7 +6,14 @@ import {
   PanelStyledNoMargin,
 } from '../StyleComponents/collapseMenu';
 import { StyleRichText } from '../StyleComponents/styledMarkdown';
+
 import Planning from './planning';
+import Selection from './selection';
+import PrivacyReview from './privacyReview';
+import SecurityReview from './securityReview';
+import LegalReview from './legalReview';
+import RiskManagementReview from './riskManagementReview';
+import ProcurementAndImplementation from './procurementAndImplementation';
 
 function CollapsedMenus({
   planning,
@@ -33,31 +40,35 @@ function CollapsedMenus({
 
   return (
     <div style={{ marginTop: '60px' }}>
+      <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>
+        Expand All
+      </CollapseButton>{' '}
+      |<CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
       <CollapseStyled
         defaultActiveKey={['1']}
         activeKey={expanded}
         onChange={changeKeyState}
       >
         <PanelStyledNoMargin header="Planning" key="1">
-          {Planning}
+          <Planning />
         </PanelStyledNoMargin>
         <PanelStyledNoMargin header="Selection" key="2">
-          <div>Planning content...</div>
+          <Selection />
         </PanelStyledNoMargin>
         <PanelStyledNoMargin header="Privacy review" key="3">
-          <div>Planning content...</div>
+          <PrivacyReview />
         </PanelStyledNoMargin>
         <PanelStyledNoMargin header="Security review" key="4">
-          <div>Planning content...</div>
+          <SecurityReview />
         </PanelStyledNoMargin>
         <PanelStyledNoMargin header="Legal review" key="5">
-          <div>Planning content...</div>
+          <LegalReview />
         </PanelStyledNoMargin>
         <PanelStyledNoMargin header="Risk management review" key="6">
-          <div>Planning content...</div>
+          <RiskManagementReview />
         </PanelStyledNoMargin>
         <PanelStyledNoMargin header="Procurement and implementation" key="7">
-          <div>Planning content...</div>
+          <ProcurementAndImplementation />
         </PanelStyledNoMargin>
       </CollapseStyled>
     </div>

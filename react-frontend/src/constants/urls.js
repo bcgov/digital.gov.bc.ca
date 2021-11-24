@@ -147,14 +147,15 @@ export const saasGuideUrls = {
     'https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/policies/financial-systems-and-controls#1341',
   ISCS:
     'https://www2.gov.bc.ca/assets/gov/government/services-for-government-and-broader-public-sector/information-technology-services/standards-files/information_security_classification_standard_july_17_2018.pdf',
-  MPO:
-    'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
-  Privacy:
-    'https://www2.gov.bc.ca/gov/content?id=A749F080FC794D82A2CBD96BABA2ABEC',
+  MPO: 'https://www2.gov.bc.ca/gov/content?id=A749F080FC794D82A2CBD96BABA2ABEC',
   Procurement:
     'https://www2.gov.bc.ca/gov/content?id=FD32D0C0D1D54211A952B987DBF071C8',
-  Security:
+  MISO:
     'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
+  PIATemplate:
+    'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/privacy-impact-assessments/pia_template_ministries.doc',
+  SOARTemplate:
+    'https://intranet.gov.bc.ca/assets/intranet/mtics/ocio/enterprise-services-division/information-security-branch/stra/statement_of_acceptable_risk_soar_-_corporate_-_template.docx',
 };
 
 export const standardsUrls = {

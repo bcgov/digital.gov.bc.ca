@@ -74,7 +74,7 @@ const Planning = () => {
         <li>What minimum functionality and service levels are required?</li>
         <li>
           What types of information are you collecting and what is its security
-          classification (see the
+          classification (see the{' '}
           <HrefLink
             href={saasGuideUrls.ISCS}
             target="_blank"
@@ -134,7 +134,7 @@ const Planning = () => {
         </li>
         <li>
           Privacy and security compliance: Do the vendor and solution comply
-          with the government’s
+          with the government’s{' '}
           <HrefLink
             href={saasGuideUrls.CloudPrivacySchedule}
             target="_blank"
@@ -142,7 +142,7 @@ const Planning = () => {
           >
             Cloud Privacy Schedule
           </HrefLink>{' '}
-          and
+          and{' '}
           <HrefLink
             href={saasGuideUrls.CloudSecuritySchedule}
             target="_blank"
@@ -187,9 +187,8 @@ const Planning = () => {
       </p>
       <p>
         Contact your Legal Service Branch representative to ask if a legal
-        review has been completed for any of your SaaS solution candidates
+        review has been completed for any of your SaaS solution candidates.
       </p>
-      .
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { Heading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { PanelStyled, CollapseStyled } from '../StyleComponents/collapseMenu';
 import { PageContainer } from '../StyleComponents/pageContent';
-import { LearningHeaderImg } from '../StyleComponents/images';
+import { InlineImg } from '../StyleComponents/images';
 import { saasGuideUrls } from '../../constants/urls';
 
 const saasProcessIllustration = require('../../images/pngIllustrations/saasProcess.png')
@@ -27,7 +27,7 @@ const Process = () => {
           Branch, Risk Management Branch and your ministry or organization’s
           information{' '}
           <HrefLink
-            href={saasGuideUrls.Privacy}
+            href={saasGuideUrls.MPO}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,7 +35,7 @@ const Process = () => {
           </HrefLink>
           ,{' '}
           <HrefLink
-            href={saasGuideUrls.Security}
+            href={saasGuideUrls.MISO}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -52,7 +52,7 @@ const Process = () => {
           specialists to ensure compliance with the government’s privacy,
           security and procurement policies, procedures and standards.
         </p>
-        <img src={saasProcessIllustration} width="90%" />
+        <InlineImg src={saasProcessIllustration} />
         <p>
           As described later in more detail, you must complete the following
           compliance steps before procuring and implementing your solution:
@@ -106,7 +106,7 @@ const Process = () => {
           You must also ensure that your process complies with the procurement
           policies outlined in the{' '}
           <HrefLink
-            href={saasGuideUrls.MPO}
+            href={saasGuideUrls.CPPM}
             target="_blank"
             rel="noopener noreferrer"
           >
