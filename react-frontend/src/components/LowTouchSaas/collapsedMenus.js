@@ -15,15 +15,7 @@ import LegalReview from './legalReview';
 import RiskManagementReview from './riskManagementReview';
 import ProcurementAndImplementation from './procurementAndImplementation';
 
-function CollapsedMenus({
-  planning,
-  selection,
-  privacyReview,
-  securityReview,
-  legalReview,
-  riskManagementReview,
-  procurementAndImplementation,
-}) {
+function CollapsedMenus() {
   const [expanded, setExpanded] = React.useState(['1']);
 
   const expandAll = () => {
