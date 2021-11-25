@@ -4,7 +4,6 @@ import DocumentTitle from 'react-document-title';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { DigitalBlock } from '../StyleComponents/pageContent';
 import { Heading } from '../StyleComponents/headings';
 
 import { saasGuideUrls } from '../../constants/urls';

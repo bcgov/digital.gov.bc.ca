@@ -5,7 +5,6 @@ import {
   CollapseStyled,
   PanelStyledNoMargin,
 } from '../StyleComponents/collapseMenu';
-import { StyleRichText } from '../StyleComponents/styledMarkdown';
 
 import Planning from './planning';
 import Selection from './selection';
