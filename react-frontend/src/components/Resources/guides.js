@@ -17,7 +17,16 @@ function Guides() {
         </Col>
       </Row>
       <Row>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={4}>
+          <InfoCard
+            title="Low-Touch SaaS"
+            description="How to acquire a low-touch Software as a Service (SaaS) solution."
+            linkText="Read the guide"
+            routePath="/resources/low-touch-saas"
+            height="300px"
+          />
+        </Col>
+        <Col sm={12} md={4}>
           <InfoCard
             title="Hosting Options"
             description="Learn about the infrastructure technologies available for hosting your digital service."
@@ -26,7 +35,7 @@ function Guides() {
             height="300px"
           />
         </Col>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={4}>
           <InfoCard
             title="Modern Application Playbook"
             description="A collection of references, tools, and best practices to help you navigate the development and support of government applications within an Agile framework."

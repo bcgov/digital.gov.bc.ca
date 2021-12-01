@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-fvxABq sc-fbyett bRwzrF diISFN horizontalAlignment bannerCenterText container"
+    className="sc-fbyett sc-GEcJY exjaab gLxHMX horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-htJSpn dGLRHn sideImageText"
+          className="sc-hjGYWY ufDGO sideImageText"
         >
           <h1
-            className="sc-cbTAsW gRGwAc bannerTitle"
+            className="sc-gUQueJ kJUjWZ bannerTitle"
           >
             Resources
           </h1>
           <div
-            className="sc-hjGYWY hAPksq subTitle"
+            className="sc-fXeWgy iRWqAq subTitle"
           >
              
             Policy, standards, guides, and tools you can use right now to deliver excellent digital services.
@@ -34,13 +34,13 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-dUbuoE CwFqU sideImage"
+          className="sc-cbTAsW xArys sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
+    className="sc-fbyett sc-bXTfsO exjaab cuqkTW horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-dVNiOx gIRUkV resourceHeading"
+          className="sc-bQtJOP iBuyQF resourceHeading"
         >
           Standards & Policy
         </h2>
@@ -154,7 +154,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
+    className="sc-fbyett sc-bXTfsO exjaab cuqkTW horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -167,7 +167,7 @@ exports[`renders correctly 1`] = `
           className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-jHkVfK bcXbMb resourceSubHeading"
+            className="sc-fXEqXD etCbqD resourceSubHeading"
           >
             Technical
           </h3>
@@ -279,7 +279,7 @@ exports[`renders correctly 1`] = `
           className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-jHkVfK bcXbMb resourceSubHeading"
+            className="sc-fXEqXD etCbqD resourceSubHeading"
           >
             Privacy
           </h3>
@@ -391,7 +391,7 @@ exports[`renders correctly 1`] = `
           className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-jHkVfK bcXbMb resourceSubHeading"
+            className="sc-fXEqXD etCbqD resourceSubHeading"
           >
             Security
           </h3>
@@ -466,7 +466,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
+    className="sc-fbyett sc-bXTfsO exjaab cuqkTW horizontalAlignment contentBlockContainer container"
     id="guides"
   >
     <div
@@ -476,7 +476,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-dVNiOx gIRUkV resourceHeading"
+          className="sc-bQtJOP iBuyQF resourceHeading"
         >
           Guides
         </h2>
@@ -486,7 +486,42 @@ exports[`renders correctly 1`] = `
       className="row"
     >
       <div
-        className="col-sm-12 col-md-6"
+        className="col-sm-12 col-md-4"
+      >
+        <div
+          className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
+          data-testid="styled-card"
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h5
+              className="sc-cNKpQo bbRmzX cardTitle"
+            >
+              Low-Touch SaaS
+            </h5>
+            <p
+              className="sc-cTApHj lejdDX cardDescription"
+            >
+              How to acquire a low-touch Software as a Service (SaaS) solution.
+            </p>
+            <div
+              className="sc-bBHHQT eprqeq cardLink"
+            >
+              <a
+                className="sc-dlVyqM dejlqz internalLink"
+                href="/resources/low-touch-saas"
+                onClick={[Function]}
+              >
+                Read the guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-sm-12 col-md-4"
       >
         <div
           className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
@@ -521,7 +556,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="col-sm-12 col-md-6"
+        className="col-sm-12 col-md-4"
       >
         <div
           className="ant-card ant-card-bordered sc-cCcYRi eGdcty cardRound"
@@ -580,7 +615,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
+    className="sc-fbyett sc-bXTfsO exjaab cuqkTW horizontalAlignment contentBlockContainer container"
     id="forDesigners"
   >
     <div
@@ -593,7 +628,7 @@ exports[`renders correctly 1`] = `
           className="sc-ezbkgU hNpwhk row"
         >
           <h3
-            className="sc-jHkVfK bcXbMb resourceSubHeading"
+            className="sc-fXEqXD etCbqD resourceSubHeading"
           >
             For Designers
           </h3>
@@ -977,7 +1012,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-fvxABq sc-gsNhcj bRwzrF bfXzmB horizontalAlignment contentBlockContainer container"
+    className="sc-fbyett sc-bXTfsO exjaab cuqkTW horizontalAlignment contentBlockContainer container"
     id="forDevelopers"
   >
     <div
@@ -987,7 +1022,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h3
-          className="sc-jHkVfK bcXbMb resourceSubHeading"
+          className="sc-fXEqXD etCbqD resourceSubHeading"
         >
           For Developers
         </h3>

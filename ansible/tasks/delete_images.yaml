@@ -5,3 +5,10 @@
   - name: Delete build for {{ react_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
     shell: >
       oc delete -n "{{ image_namespace }}" build --selector version=pr-{{ PR }}
+  - name: Delete imagestream for {{ react_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
+    shell: >
+      oc -n "{{ image_namespace }}" delete istag/{{react_infra_name}}:pr-{{ PR }}
+  - name: Delete imagestream for {{ strapi_infra_name }} of PR {{ PR }} in {{ image_namespace }} namespace
+    shell: >
+      oc -n "{{ image_namespace }}" delete istag/{{strapi_infra_name}}:pr-{{ PR }}
+    ignore_errors: yes

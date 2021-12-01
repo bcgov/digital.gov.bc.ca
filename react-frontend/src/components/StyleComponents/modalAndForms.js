@@ -62,7 +62,9 @@ export const FormText = styled.p`
 const buttonWidth = '30px';
 const modalBottom = '24px';
 
-export const ModalButton = styled.button`
+export const ModalButton = styled.button.attrs({
+  'aria-label': 'Provide feedback on this site',
+})`
   border: none;
   border-radius: 8px 0 0 8px;
   background: #003366;

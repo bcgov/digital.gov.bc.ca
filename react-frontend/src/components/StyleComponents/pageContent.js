@@ -9,6 +9,16 @@ export const GlobaStyleSize = createGlobalStyle`
  }
 `;
 
+export const Callout = styled.div.attrs({
+  className: 'callout',
+})`
+  border-left: 8px solid #fdb917;
+  font-style: italic;
+  font-weight: bold;
+  margin: 36px 0;
+  padding: 0 24px;
+`;
+
 // Used for the Digital Framework page
 export const DigitalBlock = styled.div.attrs({
   className: 'digitalBlock',
