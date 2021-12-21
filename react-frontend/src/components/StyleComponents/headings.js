@@ -42,6 +42,10 @@ export const CaseStudyHeading = styled(Heading)`
   margin-bottom: 24px;
 `;
 
+export const CollapseContentHeading = styled.h4`
+  font-weight: bold;
+`;
+
 export const DigitalFrameworkHeading = styled(Heading)`
   margin-bottom: 5px;
 `;

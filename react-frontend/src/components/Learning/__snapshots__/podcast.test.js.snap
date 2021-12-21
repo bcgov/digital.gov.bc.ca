@@ -3,7 +3,7 @@
 exports[`renders snapshot correctly 1`] = `
 <div>
   <div
-    className="sc-ieebsP sc-dJjZJu kRXkfn kMfWlU horizontalAlignment bannerCenterText container"
+    className="sc-dlVyqM sc-kfPtPH gZTVxM jQxowc horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,10 +13,10 @@ exports[`renders snapshot correctly 1`] = `
         className="col-xs-12 col-lg-6"
       >
         <div
-          className="sc-iJKOzS hupIEX"
+          className="sc-bYoCmx cCSSon"
         >
           <h2
-            className="sc-dkPtyc bbmNIj heading"
+            className="sc-hKwCoD hXFUby heading"
           >
             The Exchange Podcast 
             <svg
@@ -53,7 +53,7 @@ exports[`renders snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-ieebsP sc-dlVyqM kRXkfn iAcefx horizontalAlignment contentBlockContainer container"
+    className="sc-dlVyqM sc-bBHwJV gZTVxM MbeQB horizontalAlignment contentBlockContainer container"
     id="podcasts"
   >
     <div
@@ -71,7 +71,7 @@ exports[`renders snapshot correctly 1`] = `
         }
       >
         <h3
-          className="sc-eCImvq oFYaZ subHeading"
+          className="sc-jRQAMF eYVVhz subHeading"
           style={
             Object {
               "marginBottom": "0",
@@ -81,7 +81,7 @@ exports[`renders snapshot correctly 1`] = `
           Recent Episodes
         </h3>
         <a
-          className="sc-iNGGwv fSxCWu externalLink"
+          className="sc-hiwReK fcTxaO externalLink"
           href="https://bcdevexchange.libsyn.com/"
           rel="noopener noreferrer"
           style={
@@ -130,7 +130,7 @@ exports[`renders snapshot correctly 1`] = `
       }
     >
       <div
-        className="ant-collapse-item sc-bYoCmx jJBkyw PanelStyled"
+        className="ant-collapse-item sc-jJoQpE eynyVZ PanelStyled"
       >
         <div
           aria-expanded={false}
