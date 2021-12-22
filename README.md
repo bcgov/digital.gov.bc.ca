@@ -101,6 +101,10 @@ TODO:  These steps could be automated by creating a script to seed the local dat
 - [Building and Deploying React](./docs/react-frontend-startup.md)
 - [Building and Deploying Strapi](./docs/strapi-startup.md)
 
+## Action docs
+
+- Zap scanner docs can be found [Here](docs/zapScanning.md)
+- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 
 
 ## Other docs
 
