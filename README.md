@@ -100,3 +100,13 @@ TODO:  These steps could be automated by creating a script to seed the local dat
 
 - [Building and Deploying React](./docs/react-frontend-startup.md)
 - [Building and Deploying Strapi](./docs/strapi-startup.md)
+
+
+## Other docs
+
+There is more documentation in the forllowing places
+
+- `/docs/` folder
+- `/react-frontend/README.md` 
+- `/strapi-app/README.md`
+- `/ansible/README.md`
