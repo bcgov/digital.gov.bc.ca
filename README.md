@@ -91,6 +91,8 @@ However two things must be done before the local strapi development environment 
 
 When the strapi and react containers are all running, navigate to [http://localhost:1337/admin/](http://localhost:1337/admin/).  You will be prompted to create a first admin user.  The strapi app will prompt the steps to take.
 
+#### Set the permissions on the content types
+
 When creating content types the permissions for `count`, `create`, `delete`, `find`, `findone`, and `update` are set to false.  You will need to set these before the front end is able to render them.  To do this, navigate to settings->USERS & PERMISSIONS PLUGIN -> roles -> public. (Strapi docs go into more detail on these permissions). If you are unsure of which permissions are needed for the app to work properly, navigate to the same screen in  the`dev` or `test` strapi instance and copy them.
 
 TODO:  These steps could be automated by creating a script to seed the local database.  
