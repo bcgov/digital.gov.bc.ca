@@ -1,6 +1,6 @@
 # Using zap to scan the codebase.
 
-The zap scanner has been set up to scan the codebase when manually triggered.  The results can be read in the GitHub Action run's logs under the Baseline Zap Scan and Full Zap Scan logs.
+The zap scanner has been set up to scan the react frontend deployments when manually triggered.  The results can be read in the GitHub Action run's logs under the Baseline Zap Scan and Full Zap Scan logs.
 
 To run the scan, navigate to the github actions tab and select the `Run Zap Scan` action.
 
