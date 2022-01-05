@@ -2,6 +2,7 @@ apiVersion: ops.gov.bc.ca/v1alpha1
 kind: SysdigTeam
 metadata:
   name: c0cce6-sysdigteam
+  namespace: c0cce6-tools
 spec:
   team: 
     description: The Sysdig Team for the Digital.gov Namespaces
