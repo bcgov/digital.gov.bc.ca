@@ -102,6 +102,7 @@ TODO:  These steps could be automated by creating a script to seed the local dat
 
 - [Building and Deploying React](./docs/react-frontend-startup.md)
 - [Building and Deploying Strapi](./docs/strapi-startup.md)
+- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
 
 ## Action docs
 
