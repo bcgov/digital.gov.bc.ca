@@ -38,7 +38,7 @@
             Accept: application/vnd.github.ant-man-preview+json
         register: deployment
 
-      - name: "Setting deployment status of deployment {{ deployment.json.id }} to pending"
+      - name: Setting deployment status of deployment "{{ deployment.json.id }}" to pending
         uri:
           url: "https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses"
           method: POST
