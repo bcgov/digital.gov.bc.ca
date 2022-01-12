@@ -7,7 +7,7 @@ __TL;DR__
 - PR code is pushed into a production environment
 - Prior to being merged into master, the source code in master therefor can be defined as always 100% working
 and deployable code. 
-- Each PR will deploy a running instance of the code in the development openshift namespace
+- Each PR will deploy a running instance of the react code in the development openshift namespace (strapi code must be manually deployed using the action)
 - Each PR's is subsequently promoted to test/prod
 - Not more than 1 PR may be promoted to an environment at the same time
 
