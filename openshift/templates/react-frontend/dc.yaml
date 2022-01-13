@@ -127,7 +127,6 @@ objects:
         }
     
         handle /digital-trust* {
-          # handle_path not working
           uri strip_prefix /digital-trust
           reverse_proxy https://bcdigitaltrust.info {
             header_up Host {http.reverse_proxy.upstream.host}
