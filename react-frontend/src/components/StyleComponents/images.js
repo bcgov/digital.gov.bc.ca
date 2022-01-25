@@ -13,3 +13,10 @@ export const LearningHeaderImg = styled.img.attrs({
   padding-bottom: 20px;
   padding-top: 20px;
 `;
+
+export const InlineImg = styled.img.attrs({
+  className: 'inlineImage',
+})`
+  width: 90%;
+  margin: 24px auto;
+`;

@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-fvxABq sc-eGRTUG bRwzrF fEhBlM horizontalAlignment pageContainer container"
+    className="sc-fbyett sc-ctqRej exjaab dPvsMh horizontalAlignment pageContainer container"
   >
     <div
       className="row middle-xs"
@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
         className="col-xs-12 col-lg-8"
       >
         <h1
-          className="sc-fHeRAw krWIYG"
+          className="sc-dtDOJZ hzYsRW"
         >
           Hosting Options
         </h1>
@@ -136,7 +136,7 @@ exports[`renders correctly 1`] = `
           name="containers"
         />
         <h2
-          className="sc-dtDOJZ cfPryl heading"
+          className="sc-dkYRiW bQcciQ heading"
           style={
             Object {
               "paddingTop": "44px",
@@ -146,7 +146,7 @@ exports[`renders correctly 1`] = `
           Containers 
         </h2>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Overview
         </h4>
@@ -154,7 +154,7 @@ exports[`renders correctly 1`] = `
           Containers provide a way for several digital services to share a single operating system. Digital teams can focus their efforts on the service they’re providing rather than installing or maintaining the infrastructure. Containers also support the idea of “infrastructure as code”, which means that a service can increase or decrease the resources it requires based on demand or even launch new instances of itself if something goes wrong.
         </p>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Pros 
         </h4>
@@ -174,7 +174,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Cons 
         </h4>
@@ -196,7 +196,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Recommendation
         </h4>
@@ -205,7 +205,7 @@ exports[`renders correctly 1`] = `
            
         </p>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           How to onboard 
         </h4>
@@ -226,7 +226,7 @@ exports[`renders correctly 1`] = `
           name="virtualServers"
         />
         <h2
-          className="sc-dtDOJZ cfPryl heading"
+          className="sc-dkYRiW bQcciQ heading"
           style={
             Object {
               "paddingTop": "44px",
@@ -236,7 +236,7 @@ exports[`renders correctly 1`] = `
           Virtual servers 
         </h2>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Overview
         </h4>
@@ -244,7 +244,7 @@ exports[`renders correctly 1`] = `
           A virtual server provides a way for several digital services to share a single physical server. Virtual servers are an established hosting option for the B.C. government. They are more expensive than containers and require additional maintenance.
         </p>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Pros 
         </h4>
@@ -260,7 +260,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Cons 
         </h4>
@@ -270,7 +270,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Recommendation
         </h4>
@@ -279,7 +279,7 @@ exports[`renders correctly 1`] = `
            
         </p>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           How to onboard
         </h4>
@@ -332,7 +332,7 @@ exports[`renders correctly 1`] = `
           name="physicalServers"
         />
         <h2
-          className="sc-dtDOJZ cfPryl heading"
+          className="sc-dkYRiW bQcciQ heading"
           style={
             Object {
               "paddingTop": "44px",
@@ -342,7 +342,7 @@ exports[`renders correctly 1`] = `
           Physical servers
         </h2>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Overview
         </h4>
@@ -350,7 +350,7 @@ exports[`renders correctly 1`] = `
           Physical servers represent the oldest hosting option currently available for onboarding for B.C. government teams. When using physical servers, teams need to be mindful that there is significant maintenance overhead.
         </p>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Pros 
         </h4>
@@ -363,7 +363,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Cons 
         </h4>
@@ -376,7 +376,7 @@ exports[`renders correctly 1`] = `
           </li>
         </ul>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           Recommendation
         </h4>
@@ -384,7 +384,7 @@ exports[`renders correctly 1`] = `
           Physical servers are not recommended.
         </p>
         <h4
-          className="sc-ilftOa gUEPWa subSubHeading"
+          className="sc-uoixf iXvwhy subSubHeading"
         >
           How to onboard
         </h4>

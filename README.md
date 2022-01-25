@@ -60,6 +60,8 @@ Inside the container navigate to the pluggin directory and install them using ya
 
 ## Local development
 
+### React Frontend
+
 To have access to the testing features locally go to the react-frontend folder and run
 
 `rm -R node_modules/` 
@@ -79,8 +81,39 @@ If new npm packages have been installed by another developer the project may nee
 
 to insure that all npm packages are up to date.
 
+### Strapi
+
+We will not document how to work with strapi here. The strapi [docs](https://docs.strapi.io/) are far more complete. They cover how to create graphql queries, how to create new content types, ets.  We recommend following any one of the many tutorials or introductions to strapi found online to become comfortable with the development/configuration techniques used.
+
+However two things must be done before the local strapi development environment can mimic the deployments in dev, test and prod.
+
+#### Create the first admin user
+
+When the strapi and react containers are all running, navigate to [http://localhost:1337/admin/](http://localhost:1337/admin/).  You will be prompted to create a first admin user.  The strapi app will prompt the steps to take.
+
+#### Set the permissions on the content types
+
+When creating content types the permissions for `count`, `create`, `delete`, `find`, `findone`, and `update` are set to false.  You will need to set these before the front end is able to render them.  To do this, navigate to settings->USERS & PERMISSIONS PLUGIN -> roles -> public. (Strapi docs go into more detail on these permissions). If you are unsure of which permissions are needed for the app to work properly, navigate to the same screen in  the`dev` or `test` strapi instance and copy them.
+
+TODO:  These steps could be automated by creating a script to seed the local database.  
+
 
 ## Build, Deploy and Operation of this Project
 
 - [Building and Deploying React](./docs/react-frontend-startup.md)
 - [Building and Deploying Strapi](./docs/strapi-startup.md)
+- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
+
+## Action docs
+
+- Zap scanner docs can be found [Here](docs/zapScanning.md)
+- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 
+
+## Other docs
+
+There is more documentation in the forllowing places
+
+- `/docs/` folder
+- `/react-frontend/README.md` 
+- `/strapi-app/README.md`
+- `/ansible/README.md`
