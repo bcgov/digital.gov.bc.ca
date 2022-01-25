@@ -39,9 +39,9 @@ exports[`Renders without crashing if not props are passed in 1`] = `
          
         <a
           className="sc-fKVsgm gjNLZe externalLink"
-          href="mailto:digital.government@gov.bc.ca"
+          href="mailto:CITZAS@gov.bc.ca"
         >
-          Digital.Government@gov.bc.ca
+          CITZAS@gov.bc.ca
         </a>
         .
       </p>
