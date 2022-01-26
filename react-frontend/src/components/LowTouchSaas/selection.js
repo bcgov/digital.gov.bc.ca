@@ -80,7 +80,9 @@ const Selection = () => {
           procurement
         </HrefLink>{' '}
         specialists to ensure compliance with the government’s privacy, security
-        and procurement policies, procedures and standards.
+        and procurement policies, procedures and standards. In the unlikely
+        event that your first choice SaaS solution can't pass these compliance
+        reviews, you'll need to try again with the next best option.
       </p>
     </div>
   );

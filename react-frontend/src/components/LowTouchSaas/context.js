@@ -16,7 +16,7 @@ const Context = () => {
           <Heading>About this wayfinding guide</Heading>
           <p>
             This Wayfinding Guide provides a high-level overview of how to
-            procure a low-touch Software as a Service (SaaS) solution. Low-touch
+            acquire a low-touch Software as a Service (SaaS) solution. Low-touch
             SaaS is designed for the majority of customers to purchase it
             without sustained one-on-one interaction with a human being.
           </p>
@@ -24,7 +24,7 @@ const Context = () => {
             In your personal life, you have probably purchased SaaS by simply
             providing your billing information and quickly clicking on a box to
             acknowledge that you have read and agree to the provider’s terms of
-            use. It’s more complicated when procuring SaaS within the BC Public
+            use. It’s more complicated when acquiring SaaS within the BC Public
             Service, as the stakes are higher, with risks including:
           </p>
           <ul>
@@ -67,7 +67,7 @@ const Context = () => {
             and policy requirements – and minimize risk to the Province – when
             acquiring SaaS.
           </p>
-          <Heading>About this wayfinding guide</Heading>
+          <Heading>When you need to use this guide</Heading>
           <p>
             Software that is licensed at the enterprise level is outside the
             scope of this guide. Please see{' '}
