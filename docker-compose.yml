@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  reactexample:
+  react:
     container_name: frontend
     build: 
       context: ./react-frontend
@@ -15,7 +15,7 @@ services:
       - "3000:3000"
     tty: true
     
-  strapiexample:
+  strapi:
     image: strapi/strapi:3.0.0
     container_name: strapi
     restart: unless-stopped
@@ -34,7 +34,7 @@ services:
     ports:
       - "1337:1337"
 
-  mongoexample:
+  mongo:
     image: mongo:3.6.18-xenial
     container_name: mongo
     restart: unless-stopped

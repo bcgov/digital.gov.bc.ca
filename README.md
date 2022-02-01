@@ -29,32 +29,12 @@ NOTE 2: Often the first time these commands are run the images take too long to 
 
 > requires docker
 1. `cp .env.example .env` and fill in details as needed
+
 2. In the root of the project run the command:
 
-`docker-compose pull`
+`docker-compose up --build` 
 
-3. Then to build the project
-
-`docker-compose build`
-
-4. To successfully build the pluggins in the strapi project, we must install the plugins' node modules in the running strapi container.
-To enter the container run:
-
-`docker-compose up`
-
-`docker exec -it strapi /bin/bash`
-
-Inside the container navigate to the pluggin directory and install them using yarn. (at the time of writing there is only a single pluggin)
-
-`cd plugins/wysiwyg/`
-
-`yarn`
-
-5. If you want to run the containers in the background:
-
-`docker-compose up -d`
-
-6. To bring down the containers
+3. To bring down the containers
 
 `docker-compose down`
 
@@ -62,12 +42,15 @@ Inside the container navigate to the pluggin directory and install them using ya
 
 ### React Frontend
 
-To have access to the testing features locally go to the react-frontend folder and run
+To have access to the testing features locally (and not in containers), ensure your node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run:
 
-`rm -R node_modules/` 
-`npm install`
+```bash
+cd react-frontend
+rm -R node_modules/ 
+npm install
+```
 
-This will install the npm packages outside the frontend container, allowing the user to access tests in their terminal and IDE without using `docker exec` to run the tests in the frontend container.  
+This will install the npm packages outside the frontend container, where tests can be in the terminal and IDE without using `docker exec` to run the tests in the frontend container.  
 
 New npm packages they must be installed in the docker container.  Use the command:
 
