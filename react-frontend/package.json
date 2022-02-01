@@ -2,6 +2,9 @@
   "name": "digital-government",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=12.17.0"
+  },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@apollo/react-hooks": "^4.0.0",
