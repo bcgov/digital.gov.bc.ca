@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDJrp hrOaUq heading"
+          className="sc-gsDJrp sEzgf heading"
         >
           Courses
         </h2>
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDJrp hrOaUq heading"
+          className="sc-gsDJrp sEzgf heading"
         >
           Events
         </h2>
@@ -104,7 +104,7 @@ exports[`renders correctly 1`] = `
             className="sc-giYgFv elqVuN"
           >
             <h2
-              className="sc-gsDJrp hrOaUq heading"
+              className="sc-gsDJrp sEzgf heading"
             >
               The Exchange Podcast 
               <svg
@@ -159,7 +159,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <h3
-            className="sc-hKwCoD gNpiUY subHeading"
+            className="sc-hKwCoD eBjOip subHeading"
             style={
               Object {
                 "marginBottom": "0",

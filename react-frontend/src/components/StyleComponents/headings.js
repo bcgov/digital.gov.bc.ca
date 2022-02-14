@@ -10,7 +10,7 @@ export const Heading = styled.h2.attrs({
 })`
   font-size: 31px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.3;
 `;
 
 export const FAQHeading = styled.h3.attrs({
@@ -27,7 +27,7 @@ export const SubHeading = styled.h3.attrs({
 })`
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.3;
 `;
 
 export const SubSubHeading = styled.h4.attrs({
@@ -35,7 +35,7 @@ export const SubSubHeading = styled.h4.attrs({
 })`
   font-size: 21.6px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.3;
 `;
 
 export const CaseStudyHeading = styled(Heading)`
