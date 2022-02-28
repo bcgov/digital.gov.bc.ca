@@ -102,6 +102,20 @@ objects:
         pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
       name: ${NAME}-${SUFFIX}
+  - apiVersion: autoscaling/v1
+    kind: HorizontalPodAutoscaler
+    metadata:
+      labels:
+        app: ${NAME}
+      name: ${NAME}
+    spec:
+      maxReplicas: 3
+      minReplicas: 1
+      scaleTargetRef:
+        apiVersion: v1
+        kind: DeploymentConfig
+        name: ${NAME}
+      targetCPUUtilizationPercentage: 60
   - apiVersion: v1
     data:
       Caddyfile: |
@@ -251,13 +265,13 @@ parameters:
   description: the environment being deployed to
   value: digital-gov-frontend
 - name: CPU_REQUEST
-  value: 65m 
+  value: 30m 
 - name: MEMORY_REQUEST
-  value: 100Mi 
+  value: 50Mi 
 - name: CPU_LIMIT
-  value: 120m 
+  value: 90m 
 - name: MEMORY_LIMIT
-  value: 200Mi 
+  value: 150Mi 
 - name: SUFFIX
   required: true
   description: a suffix used in conjunction with NAME to further isolate different instances of these components

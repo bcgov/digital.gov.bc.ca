@@ -72,11 +72,11 @@ objects:
         activeDeadlineSeconds: 21600
         resources:
           cpu:
-            requests: 250m
-            limits: 500m
+            requests: 125m
+            limits: 375m
           memory:
-            request: 150Mi
-            limits: 250Mi
+            request: 165Mi
+            limits: 495Mi
         rollingParams:
           intervalSeconds: 1
           maxSurge: 25%
