@@ -109,8 +109,8 @@ objects:
         app: ${NAME}
       name: ${NAME}
     spec:
-      maxReplicas: 3
-      minReplicas: 1
+      maxReplicas: 6
+      minReplicas: 2
       scaleTargetRef:
         apiVersion: v1
         kind: DeploymentConfig
