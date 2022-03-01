@@ -16,7 +16,7 @@ exports[`renders snapshot correctly 1`] = `
           className="sc-bYoCmx cCSSon"
         >
           <h2
-            className="sc-hKwCoD hXFUby heading"
+            className="sc-hKwCoD cVkmff heading"
           >
             The Exchange Podcast 
             <svg
@@ -71,7 +71,7 @@ exports[`renders snapshot correctly 1`] = `
         }
       >
         <h3
-          className="sc-jRQAMF eYVVhz subHeading"
+          className="sc-jRQAMF jExREi subHeading"
           style={
             Object {
               "marginBottom": "0",

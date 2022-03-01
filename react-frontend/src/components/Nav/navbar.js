@@ -159,8 +159,21 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
             <NavBarLi>
+              <NavBarLinkExternal href="/digital-trust">
+                Digital Trust
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px', height: '25px' }}
+                />
+              </NavBarLinkExternal>
+            </NavBarLi>
+            <NavBarLi>
               <NavBarLinkExternal href="/marketplace">
                 Marketplace
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  style={{ paddingLeft: '5px', height: '25px' }}
+                />
               </NavBarLinkExternal>
             </NavBarLi>
           </NavBarUl>
