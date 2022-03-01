@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  react:
-    container_name: frontend
+  frontend:
+    container_name: digital_frontend
     build: 
       context: ./react-frontend
       dockerfile: Dockerfile
@@ -15,11 +15,11 @@ services:
       - "3000:3000"
     tty: true
     
-  strapi:
+  backend:
     build: 
       context: ./strapi-app
       dockerfile: Dockerfile
-    container_name: strapi
+    container_name: digital_backend
     restart: unless-stopped
     env_file: .env
     environment:
@@ -35,10 +35,13 @@ services:
       - ./strapi-app:/srv/app
     ports:
       - "1337:1337"
+    depends_on: 
+      mongo:
+        condition: service_started
 
   mongo:
     image: mongo:3.6.18-xenial
-    container_name: mongo
+    container_name: digital_mongo
     restart: unless-stopped
     env_file: .env
     environment:

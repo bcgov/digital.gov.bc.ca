@@ -23,7 +23,7 @@ The Exchange Lab Operations team has been deployed to build this website and ass
 
 You can see our backlog in the open by clicking on the issues tab above.
 
-Contact the product owner, Heather.Remacle@gov.bc.ca, if you have questions.
+Contact the product owner, Steve.Chapman@gov.bc.ca, if you have questions.
 
 
 ## Components
@@ -43,15 +43,18 @@ cp .env.example .env
 cp strapi-app/.env.example strapi-app/.env
 ```
 
-2. Start:
+2. Build, (re)create, start and attach containers:
 
-`docker-compose up --build`
+`docker-compose up`
 
-To run without a console log (detached mode) add the `-d` flag. When new npm packages have been installed by another developer the project may need to be rebuilt using:
+To run without a console log (detached mode) add the `-d` flag. When new npm/yarn packages have been installed the project may need to be rebuilt using:
 
-`docker-compose up --build --no-cache`
+```
+docker-compose build --no-cache
+docker-compose up
+```
 
-3. To bring down the containers
+3. To stop and remove containers, networks and images created by `up`
 
 `docker-compose down`
 
