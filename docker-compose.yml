@@ -16,7 +16,9 @@ services:
     tty: true
     
   strapi:
-    image: strapi/strapi:3.0.0
+    build: 
+      context: ./strapi-app
+      dockerfile: Dockerfile
     container_name: strapi
     restart: unless-stopped
     env_file: .env
