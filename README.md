@@ -5,7 +5,16 @@ Learn how the Government of British Columbia is building teams and using modern 
 
 
 ## Contents
+- [What's happening?](#what-is-happening-here)
 - [Locally Running the project](#how-to-run-the-project-locally)
+- [Components](#components)
+- [Quick Start, Local Deployment](#how-to-run-the-project-locally)
+- [Local Development](#local-development)
+    - [Front-end](#react-frontend)
+    - [Back-end](#strapi)
+        - [Create admin user](#create-the-first-admin-user)
+        - [Set permissions](#set-the-permissions-on-the-content-types)
+- [Other Documentation](#other-docs)
 
 ## What is happening here?
 We are building the next version of [Digital.gov.bc.ca](https://digital.gov.bc.ca/) based on user research and in alignment with directives to support the BC Public Service to improve service delivery using digital methods and tools.
@@ -24,15 +33,23 @@ Contact the product owner, Heather.Remacle@gov.bc.ca, if you have questions.
 
 ## How to run the project locally
 
-NOTE: for full local development see next section.
+NOTE: For full local development see [next section](#local-development).
 NOTE 2: Often the first time these commands are run the images take too long to download and the commands can time out.  You may need to run the `build` and `up` command multiple times to get everything working. 
 
-> requires docker
-1. `cp .env.example .env` and fill in details as needed
+> requires Docker (or Podman) and docker-compose
+1. Environment variables, adjust as necessary for your environment. At the root of the project run the following: 
+```
+cp .env.example .env
+cp strapi-app/.env.example strapi-app/.env
+```
 
-2. In the root of the project run the command:
+2. Start:
 
-`docker-compose up --build` 
+`docker-compose up --build`
+
+To run without a console log (detached mode) add the `-d` flag. When new npm packages have been installed by another developer the project may need to be rebuilt using:
+
+`docker-compose up --build --no-cache`
 
 3. To bring down the containers
 
@@ -42,7 +59,7 @@ NOTE 2: Often the first time these commands are run the images take too long to 
 
 ### React Frontend
 
-To have access to the testing features locally (and not in containers), ensure your node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run:
+To have access to the testing features locally (and not in containers), ensure your Node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run:
 
 ```bash
 cd react-frontend
@@ -50,19 +67,7 @@ rm -R node_modules/
 npm install
 ```
 
-This will install the npm packages outside the frontend container, where tests can be in the terminal and IDE without using `docker exec` to run the tests in the frontend container.  
-
-New npm packages they must be installed in the docker container.  Use the command:
-
-`docker exec -it frontend /bin/bash`
-
-to enter the container.  Then run `npm install`.
-
-If new npm packages have been installed by another developer the project may need to be rebuilt using.
-
-`docker-compose build --no-cache`
-
-to insure that all npm packages are up to date.
+This will install the npm packages outside the frontend container, where tests can be run locally in the terminal/IDE.
 
 ### Strapi
 
@@ -80,23 +85,22 @@ When creating content types the permissions for `count`, `create`, `delete`, `fi
 
 TODO:  These steps could be automated by creating a script to seed the local database.  
 
-
-## Build, Deploy and Operation of this Project
-
-- [Building and Deploying React](./docs/react-frontend-startup.md)
-- [Building and Deploying Strapi](./docs/strapi-startup.md)
-- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
-
-## Action docs
-
-- Zap scanner docs can be found [Here](docs/zapScanning.md)
-- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 
-
 ## Other docs
 
-There is more documentation in the forllowing places
+There is more documentation in the following places
 
 - `/docs/` folder
 - `/react-frontend/README.md` 
 - `/strapi-app/README.md`
 - `/ansible/README.md`
+
+### Build, Deploy and Operation of this Project
+
+- [Building and Deploying React](./docs/react-frontend-startup.md)
+- [Building and Deploying Strapi](./docs/strapi-startup.md)
+- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
+
+### Action docs
+
+- Zap scanner docs can be found [Here](docs/zapScanning.md)
+- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 

@@ -6,5 +6,5 @@ build
 .cache
 exports
 README.md
-.env_example
+.env.example
 .gitignore
