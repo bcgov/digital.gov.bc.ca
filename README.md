@@ -62,15 +62,16 @@ docker-compose up
 
 ### React Frontend
 
-To have access to the testing features locally (and not in containers), ensure your Node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run:
+Assuming `docker-compose up` was run previously and the development preference is to install the frontend on bare metal, ensure your Node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run the following:
 
-```bash
+```
+docker stop digital_frontend
 cd react-frontend
-rm -R node_modules/ 
 npm install
+npm start
 ```
 
-This will install the npm packages outside the frontend container, where tests can be run locally in the terminal/IDE.
+Frontend tests can be now be run locally in the terminal/IDE.
 
 ### Strapi
 

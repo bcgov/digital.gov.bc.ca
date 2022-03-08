@@ -24,11 +24,11 @@ services:
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
-      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_NAME: ${MONGODB_DATABASE}
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: ${DATABASE_PORT}
-      DATABASE_USERNAME: ${DATABASE_USERNAME}
-      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_USERNAME: ${MONGODB_USER}
+      DATABASE_PASSWORD: ${MONGODB_PASSWORD}
     networks:
       - strapi-app-network
     volumes:
@@ -40,13 +40,12 @@ services:
         condition: service_started
 
   mongo:
-    image: mongo:3.6.18-xenial
+    image: registry.redhat.io/rhscl/mongodb-36-rhel7
     container_name: digital_mongo
     restart: unless-stopped
     env_file: .env
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ADMIN_PASSWORD}
     networks:
       - strapi-app-network
     volumes:

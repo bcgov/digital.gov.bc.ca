@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:12.22.7-alpine
+FROM registry.redhat.io/rhel8/nodejs-12:latest
 
 # set working directory
 WORKDIR /app
@@ -11,9 +11,6 @@ WORKDIR /app
 COPY ["package.json", "package-lock.json", "./"]
 
 RUN npm install --silent
-
-# add bash to the image
-RUN apk add --no-cache bash
 
 # add app
 COPY . ./
