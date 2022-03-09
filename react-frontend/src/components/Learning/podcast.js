@@ -98,7 +98,10 @@ function Podcast() {
                             href={podcast.Link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ marginTop: 'auto' }}
+                            style={{
+                              width: 'fit-content',
+                              marginRight: 'auto',
+                            }}
                           >
                             Listen on Libsyn
                             <FontAwesomeIcon
