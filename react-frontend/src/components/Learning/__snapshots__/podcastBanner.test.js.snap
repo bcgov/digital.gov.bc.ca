@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-dlVyqM sc-kfPtPH gZTVxM jQxowc horizontalAlignment bannerCenterText container"
+  className="sc-dlVxhl sc-kfPuZi cNvmXg ljPGar horizontalAlignment bannerCenterText container"
   id="main-content-anchor"
 >
   <div
@@ -12,15 +12,15 @@ exports[`renders correctly 1`] = `
       className="col-xs-12 col-lg-6"
     >
       <div
-        className="sc-bYoCmx cCSSon"
+        className="sc-bYoBSM fHabKU"
       >
         <h2
-          className="sc-hKwCoD cVkmff heading"
+          className="sc-hKwDye bzJXaO heading"
         >
           The Exchange Podcast 
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-microphone fa-w-11 "
+            className="svg-inline--fa fa-microphone "
             data-icon="microphone"
             data-prefix="fas"
             focusable="false"
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt=""
-        className="sc-bdvvaa gvfjxy sideImage"
+        className="sc-bdvvtL kOJjJb sideImage"
       />
     </div>
   </div>
