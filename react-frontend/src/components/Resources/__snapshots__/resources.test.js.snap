@@ -127,14 +127,14 @@ exports[`renders correctly 1`] = `
                 Read the standards
                 <svg
                   aria-hidden="true"
-                  className="svg-inline--fa fa-external-link-alt "
+                  className="svg-inline--fa fa-external-link-alt fa-xs"
                   data-icon="external-link-alt"
                   data-prefix="fas"
                   focusable="false"
                   role="img"
                   style={
                     Object {
-                      "paddingLeft": "5px",
+                      "marginLeft": "0.3em",
                     }
                   }
                   viewBox="0 0 512 512"
@@ -184,14 +184,14 @@ exports[`renders correctly 1`] = `
             Accessiblity and Inclusion Toolkit
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -217,14 +217,14 @@ exports[`renders correctly 1`] = `
             Ministry IM/IT Policies and Standards
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -250,14 +250,14 @@ exports[`renders correctly 1`] = `
             Web Standards & Guides 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -296,14 +296,14 @@ exports[`renders correctly 1`] = `
             Privacy Management & Accountability Policy
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -329,14 +329,14 @@ exports[`renders correctly 1`] = `
             Privacy and Personal Information
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -362,14 +362,14 @@ exports[`renders correctly 1`] = `
             Privacy Impact Assessments
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -408,14 +408,14 @@ exports[`renders correctly 1`] = `
             Information Security Policy and Guidelines
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -441,14 +441,14 @@ exports[`renders correctly 1`] = `
             Security Threat and Risk Assessments
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -588,14 +588,14 @@ exports[`renders correctly 1`] = `
                 Read the playbook
                 <svg
                   aria-hidden="true"
-                  className="svg-inline--fa fa-external-link-alt "
+                  className="svg-inline--fa fa-external-link-alt fa-xs"
                   data-icon="external-link-alt"
                   data-prefix="fas"
                   focusable="false"
                   role="img"
                   style={
                     Object {
-                      "paddingLeft": "5px",
+                      "marginLeft": "0.3em",
                     }
                   }
                   viewBox="0 0 512 512"
@@ -645,14 +645,14 @@ exports[`renders correctly 1`] = `
             B.C. Visual Identity Program (Gov Mark) 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -678,14 +678,14 @@ exports[`renders correctly 1`] = `
             CMS Lite User's Manual 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -711,14 +711,14 @@ exports[`renders correctly 1`] = `
             Content Design & Strategy 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -744,14 +744,14 @@ exports[`renders correctly 1`] = `
             Design Research Guide 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -777,14 +777,14 @@ exports[`renders correctly 1`] = `
             Design System 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -810,14 +810,14 @@ exports[`renders correctly 1`] = `
             Plain Language Course 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -843,14 +843,14 @@ exports[`renders correctly 1`] = `
             Service Design Phases 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -876,14 +876,14 @@ exports[`renders correctly 1`] = `
             Writing Services for the Web 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -909,14 +909,14 @@ exports[`renders correctly 1`] = `
             Visual Design Guide 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -942,14 +942,14 @@ exports[`renders correctly 1`] = `
             Web Style Guide 
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -1066,14 +1066,14 @@ exports[`renders correctly 1`] = `
                 Explore
                 <svg
                   aria-hidden="true"
-                  className="svg-inline--fa fa-external-link-alt "
+                  className="svg-inline--fa fa-external-link-alt fa-xs"
                   data-icon="external-link-alt"
                   data-prefix="fas"
                   focusable="false"
                   role="img"
                   style={
                     Object {
-                      "paddingLeft": "5px",
+                      "marginLeft": "0.3em",
                     }
                   }
                   viewBox="0 0 512 512"
@@ -1123,14 +1123,14 @@ exports[`renders correctly 1`] = `
                 Visit Site
                 <svg
                   aria-hidden="true"
-                  className="svg-inline--fa fa-external-link-alt "
+                  className="svg-inline--fa fa-external-link-alt fa-xs"
                   data-icon="external-link-alt"
                   data-prefix="fas"
                   focusable="false"
                   role="img"
                   style={
                     Object {
-                      "paddingLeft": "5px",
+                      "marginLeft": "0.3em",
                     }
                   }
                   viewBox="0 0 512 512"

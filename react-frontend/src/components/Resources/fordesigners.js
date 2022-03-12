@@ -17,7 +17,11 @@ import ResourceCard from './resourceCard';
 const videoCommsImg = require('../../images/videocomms.png').default;
 
 const linkIcon = (
-  <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
+  <FontAwesomeIcon
+    icon={faExternalLinkAlt}
+    className="fa-xs"
+    style={{ marginLeft: '0.3em' }}
+  />
 );
 
 function ForDesigners() {

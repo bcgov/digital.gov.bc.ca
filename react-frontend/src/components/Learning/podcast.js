@@ -17,9 +17,8 @@ import { HrefLinkStandalone } from '../StyleComponents/htmlTags';
 import { podcastUrls } from '../../constants/urls';
 
 function Podcast() {
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
   return (
     <div>
       <PodcastBanner />
@@ -46,7 +45,8 @@ function Podcast() {
               View all
               <FontAwesomeIcon
                 icon={faExternalLinkAlt}
-                style={{ paddingLeft: '5px' }}
+                className="fa-xs"
+                style={{ marginLeft: '0.3em' }}
               />
             </HrefLinkStandalone>
           </Col>
@@ -106,7 +106,8 @@ function Podcast() {
                             Listen on Libsyn
                             <FontAwesomeIcon
                               icon={faExternalLinkAlt}
-                              style={{ paddingLeft: '5px' }}
+                              className="fa-xs"
+                              style={{ marginLeft: '0.3em' }}
                             />
                           </HrefLinkStandalone>
                         </div>
