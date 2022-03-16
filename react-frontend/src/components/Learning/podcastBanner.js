@@ -9,8 +9,8 @@ import {
   LearningSideImageTextBox,
 } from '../StyleComponents/pageContent';
 
-const podcastImage = require('../../images/pngIllustrations/podcastGray.png')
-  .default;
+const podcastImage =
+  require('../../images/pngIllustrations/podcastGray.png').default;
 
 function PodcastBanner() {
   return (

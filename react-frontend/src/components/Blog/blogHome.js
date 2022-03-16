@@ -10,13 +10,12 @@ import BlogCard from './blogCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
-const blogImage = require('../../images/pngIllustrations/blogWhite.png')
-  .default;
+const blogImage =
+  require('../../images/pngIllustrations/blogWhite.png').default;
 
 function BlogHome() {
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
 
   return (
     <DocumentTitle title="Blog - Digital Government - Province of British Columbia">

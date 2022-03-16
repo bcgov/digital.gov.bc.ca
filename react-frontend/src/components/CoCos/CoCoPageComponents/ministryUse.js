@@ -3,14 +3,14 @@ import { Col } from 'react-flexbox-grid';
 import { ministryNames } from '../../../constants/ministryDictionary';
 
 function MinistryUse({ acronym, summary }) {
-  let ministryImage = require(`../../../images/ministryMarks/BCID_H_rgb_pos.png`)
-    .default;
+  let ministryImage =
+    require(`../../../images/ministryMarks/BCID_H_rgb_pos.png`).default;
   let altText = 'Invalid ministry acronym provided';
 
   if (ministryNames[acronym]) {
     try {
-      ministryImage = require(`../../../images/ministryMarks/BC_${acronym}_H_RGB_pos.png`)
-        .default;
+      ministryImage =
+        require(`../../../images/ministryMarks/BC_${acronym}_H_RGB_pos.png`).default;
     } catch (e) {
       console.log('Image not found.');
     }
