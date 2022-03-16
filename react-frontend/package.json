@@ -1,6 +1,6 @@
 {
   "name": "digital-government",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "engines": {
     "node": ">=12.22.7",
@@ -75,8 +75,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "eslint . --fix",
-      "git add"
+      "eslint . --fix"
     ]
   },
   "husky": {
