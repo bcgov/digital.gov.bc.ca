@@ -30,9 +30,9 @@ echo "Source directory contents ..."
 ls -lah
 
 if [ -f "package-lock.json" ]; then
-  npm ci
+  npm ci --production 
 else
-  npm i 
+  npm i --production
 fi
 
 echo "---> Running build ..."
