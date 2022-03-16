@@ -12,8 +12,8 @@ import {
 import { BannerSideImgTitle } from '../../StyleComponents/bannerWithImage';
 import { StyleRichText } from '../../StyleComponents/styledMarkdown';
 
-const defaultImage = require('../../../images/pngIllustrations/coCoWhite.png')
-  .default;
+const defaultImage =
+  require('../../../images/pngIllustrations/coCoWhite.png').default;
 
 function CoCoBannerSideImage({
   name,
@@ -24,9 +24,8 @@ function CoCoBannerSideImage({
   tags,
   coCoLink,
 }) {
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
 
   const imageSource = imageurl ? strapiMediaUrl + imageurl : defaultImage;
 

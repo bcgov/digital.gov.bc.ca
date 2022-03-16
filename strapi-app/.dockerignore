@@ -1,0 +1,10 @@
+.DS_STORE
+node_modules
+Dockerfile
+.dockerignore
+build
+.cache
+exports
+README.md
+.env.example
+.gitignore

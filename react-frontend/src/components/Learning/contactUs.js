@@ -13,9 +13,8 @@ import {
 } from '../StyleComponents/pageContent';
 
 function ContactUs() {
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
   return (
     <BannerHorizontalContainer>
       <Query query={LEARNING_ADMINS_QUERY}>

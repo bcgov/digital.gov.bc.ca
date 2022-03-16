@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-dJjZJu sc-hGPAah kJpHSy hAFvAe horizontalAlignment bannerCenterText container"
+    className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-fmcixO dUuIaC sideImageText"
+          className="sc-fmciRz lMhlw sideImageText"
         >
           <h1
-            className="sc-eXlDFz bkmfCt bannerTitle"
+            className="sc-eXlEPa iuukFs bannerTitle"
           >
             Learning
           </h1>
           <div
-            className="sc-iFMAoI iiyHZd subTitle"
+            className="sc-iFMAIt iaa-drX subTitle"
           >
              
             Understand and adopt new approaches to teamwork and technology.
@@ -34,13 +34,13 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-gjNGvZ fBqtMs sideImage"
+          className="sc-gjNHFA iFVmcx sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-dJjZJu sc-kfPtPH kJpHSy lhgYiX horizontalAlignment contentBlockContainer container"
+    className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDJrp sEzgf heading"
+          className="sc-gsDKAQ jZzBlZ heading"
         >
           Courses
         </h2>
@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-dJjZJu sc-kfPtPH kJpHSy lhgYiX horizontalAlignment contentBlockContainer container"
+    className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDJrp sEzgf heading"
+          className="sc-gsDKAQ jZzBlZ heading"
         >
           Events
         </h2>
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-dJjZJu sc-hGPAah kJpHSy hAFvAe horizontalAlignment bannerCenterText container"
+    className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <p>
@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="sc-dJjZJu sc-hGPAah kJpHSy hAFvAe horizontalAlignment bannerCenterText container"
+      className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
       id="main-content-anchor"
     >
       <div
@@ -101,15 +101,15 @@ exports[`renders correctly 1`] = `
           className="col-xs-12 col-lg-6"
         >
           <div
-            className="sc-giYgFv elqVuN"
+            className="sc-giYglK dRdoNf"
           >
             <h2
-              className="sc-gsDJrp sEzgf heading"
+              className="sc-gsDKAQ jZzBlZ heading"
             >
               The Exchange Podcast 
               <svg
                 aria-hidden="true"
-                className="svg-inline--fa fa-microphone fa-w-11 "
+                className="svg-inline--fa fa-microphone "
                 data-icon="microphone"
                 data-prefix="fas"
                 focusable="false"
@@ -135,13 +135,13 @@ exports[`renders correctly 1`] = `
         >
           <img
             alt=""
-            className="sc-lkgURy gknzKS sideImage"
+            className="sc-lkgTHX kcCZtl sideImage"
           />
         </div>
       </div>
     </div>
     <div
-      className="sc-dJjZJu sc-kfPtPH kJpHSy lhgYiX horizontalAlignment contentBlockContainer container"
+      className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
       id="podcasts"
     >
       <div
@@ -159,7 +159,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <h3
-            className="sc-hKwCoD eBjOip subHeading"
+            className="sc-hKwDye fbmtGU subHeading"
             style={
               Object {
                 "marginBottom": "0",
@@ -169,7 +169,7 @@ exports[`renders correctly 1`] = `
             Recent Episodes
           </h3>
           <a
-            className="sc-gSQGeZ dricIh externalLink"
+            className="sc-gSQFLo bsvMNh externalLink"
             href="https://bcdevexchange.libsyn.com/"
             rel="noopener noreferrer"
             style={
@@ -182,14 +182,14 @@ exports[`renders correctly 1`] = `
             View all
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-external-link-alt fa-w-16 "
+              className="svg-inline--fa fa-external-link-alt fa-xs"
               data-icon="external-link-alt"
               data-prefix="fas"
               focusable="false"
               role="img"
               style={
                 Object {
-                  "paddingLeft": "5px",
+                  "marginLeft": "0.3em",
                 }
               }
               viewBox="0 0 512 512"
@@ -218,7 +218,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="ant-collapse-item sc-cbTAsW fFpTvq PanelStyled"
+          className="ant-collapse-item sc-cbTzjv gdJPRA PanelStyled"
         >
           <div
             aria-expanded={false}
@@ -228,30 +228,32 @@ exports[`renders correctly 1`] = `
             role="button"
             tabIndex={0}
           >
-            <svg
-              aria-hidden="true"
-              className="svg-inline--fa fa-chevron-down fa-w-14 ant-collapse-arrow"
-              data-icon="chevron-down"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              style={
-                Object {
-                  "fontSize": "35px",
-                  "paddingBottom": "6px",
-                  "paddingTop": "6px",
-                  "top": "12px",
+            <div>
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-chevron-down ant-collapse-arrow"
+                data-icon="chevron-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={
+                  Object {
+                    "fontSize": "35px",
+                    "paddingBottom": "6px",
+                    "paddingTop": "6px",
+                    "top": "12px",
+                  }
                 }
-              }
-              viewBox="0 0 448 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                fill="currentColor"
-                style={Object {}}
-              />
-            </svg>
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </div>
             How to Subscribe
           </div>
         </div>

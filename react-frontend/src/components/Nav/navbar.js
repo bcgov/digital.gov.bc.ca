@@ -163,7 +163,8 @@ function NavBar() {
                 Digital Trust
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
-                  style={{ paddingLeft: '5px', height: '25px' }}
+                  className="fa-xs"
+                  pull="right"
                 />
               </NavBarLinkExternal>
             </NavBarLi>
@@ -172,7 +173,8 @@ function NavBar() {
                 Marketplace
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
-                  style={{ paddingLeft: '5px', height: '25px' }}
+                  className="fa-xs"
+                  pull="right"
                 />
               </NavBarLinkExternal>
             </NavBarLi>

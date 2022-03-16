@@ -8,8 +8,8 @@ import { HrefLink } from '../StyleComponents/htmlTags';
 
 import { digitalPrincipleUrls } from '../../constants/urls';
 
-const digitalPrinciplesImage = require('../../images/pngIllustrations/digitalPrinciplesWhite.png')
-  .default;
+const digitalPrinciplesImage =
+  require('../../images/pngIllustrations/digitalPrinciplesWhite.png').default;
 
 function DigitalPrinciples() {
   return (

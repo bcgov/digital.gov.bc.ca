@@ -36,7 +36,8 @@ function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
           View Details &amp; Register
           <FontAwesomeIcon
             icon={faExternalLinkAlt}
-            style={{ paddingLeft: '5px' }}
+            className="fa-xs"
+            style={{ marginLeft: '0.3em' }}
           />
         </HrefLinkStandalone>
       </EventCardTextBox>

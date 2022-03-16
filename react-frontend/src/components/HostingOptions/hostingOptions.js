@@ -178,7 +178,8 @@ function HostingOptions() {
                   iStore order management tool
                   <FontAwesomeIcon
                     icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px' }}
+                    className="fa-xs"
+                    style={{ marginLeft: '0.3em' }}
                   />
                 </HrefLink>
                 .{' '}
@@ -221,7 +222,8 @@ function HostingOptions() {
                   iStore order management tool
                   <FontAwesomeIcon
                     icon={faExternalLinkAlt}
-                    style={{ paddingLeft: '5px' }}
+                    className="fa-xs"
+                    style={{ marginLeft: '0.3em' }}
                   />
                 </HrefLink>
                 .

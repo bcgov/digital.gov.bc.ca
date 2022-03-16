@@ -6,13 +6,13 @@ import HorizontalInfoCard from './horizontalInfoCard';
 
 import { PageContainer } from '../StyleComponents/pageContent';
 
-const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg')
-  .default;
-const caseStudiesMiningImg = require('../../images/case-study-mining.jpg')
-  .default;
+const caseStudiesFarmingImg =
+  require('../../images/case-study-farming.jpg').default;
+const caseStudiesMiningImg =
+  require('../../images/case-study-mining.jpg').default;
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
-const caseStudiesOrgBookImg = require('../../images/case-study-orgbook.jpg')
-  .default;
+const caseStudiesOrgBookImg =
+  require('../../images/case-study-orgbook.jpg').default;
 
 const descriptions = [
   'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.',
