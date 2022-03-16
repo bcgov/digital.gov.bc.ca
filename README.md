@@ -62,7 +62,7 @@ docker-compose up
 
 ### React Frontend
 
-Assuming `docker-compose up` was run previously and the development preference is to install the frontend on bare metal, ensure your Node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run the following:
+Assuming `docker-compose up` was run previously and the development preference is to install the frontend on bare metal, ensure your local Node version matches what is used in `react-frontend/Dockerfile` and `react-frontend/package.json` and run the following:
 
 ```
 docker stop digital_frontend
@@ -75,7 +75,7 @@ Frontend tests can be now be run locally in the terminal/IDE.
 
 ### Strapi
 
-We will not document how to work with strapi here. The strapi [docs](https://docs.strapi.io/) are far more complete. They cover how to create graphql queries, how to create new content types, ets.  We recommend following any one of the many tutorials or introductions to strapi found online to become comfortable with the development/configuration techniques used.
+The strapi [docs](https://docs-v3.strapi.io/) are thorough; they cover how to create [graphql queries](https://docs-v3.strapi.io/developer-docs/latest/development/plugins/graphql.html), how to [create new content types](https://docs-v3.strapi.io/user-docs/latest/content-types-builder/creating-new-content-type.html), etc.  We recommend following any one of the many tutorials or introductions to strapi found online to become comfortable with the development/configuration techniques used.
 
 However two things must be done before the local strapi development environment can mimic the deployments in dev, test and prod.
 
@@ -102,9 +102,9 @@ There is more documentation in the following places
 
 - [Building and Deploying React](./docs/react-frontend-startup.md)
 - [Building and Deploying Strapi](./docs/strapi-startup.md)
-- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
+- [Sysdig template docs](./openshift/templates/sysdig/README.md)
 
 ### Action docs
 
-- Zap scanner docs can be found [Here](docs/zapScanning.md)
-- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 
+- Zap scanner docs can be found [Here](./docs/zap-scanning.md)
+- Broken Link Checker documentation [Here](./docs/front-end/broken-link-checker.md) 
