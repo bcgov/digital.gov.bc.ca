@@ -7,6 +7,7 @@ import EventCards from './eventCards';
 import EVENTS_QUERY from '../../queries/learning/events';
 
 import { AppConfig } from '../../providers/AppConfig';
+import { get } from 'react-scroll/modules/mixins/scroller';
 
 const originalError = console.error;
 
@@ -63,6 +64,17 @@ it('Renders only the first card for each series of classes.', async () => {
       EventID: '157516402801',
       StartTime: '2021-08-25T16:00:00.000Z',
     },
+    {
+      Name: 'OpenShift 101',
+      Description: 'test description 4',
+      Url: 'https://www.eventbrite.ca/',
+      ImageUrl: 'https://img.evbuc.com/b8',
+      IsCourse: true,
+      IsSeries: true,
+      SeriesUID: '',
+      EventID: '157516402802',
+      StartTime: '2021-09-25T16:00:00.000Z',
+    },
   ];
 
   const mocks = [
@@ -92,10 +104,13 @@ it('Renders only the first card for each series of classes.', async () => {
   expect(getAllByTestId('description')[0]).toHaveTextContent(
     'test description 1'
   );
-  expect(getAllByTestId('description').length).toBe(2);
+  expect(getAllByTestId('description').length).toBe(3);
   expect(getAllByTestId('title')[1]).toHaveTextContent('UX 101');
   expect(getAllByTestId('description')[1]).toHaveTextContent(
     'test description 2'
+  );
+  expect(getAllByTestId('description')[2]).toHaveTextContent(
+    'test description 4'
   );
 });
 
@@ -134,6 +149,17 @@ it('Renders only the first card for each series of non classes.', async () => {
       EventID: '157516402801',
       StartTime: '2021-08-25T16:00:00.000Z',
     },
+    {
+      Name: 'OpenShift 101',
+      Description: 'test description 4',
+      Url: 'https://www.eventbrite.ca/',
+      ImageUrl: 'https://img.evbuc.com/b8',
+      IsCourse: false,
+      IsSeries: true,
+      SeriesUID: '',
+      EventID: '157516402802',
+      StartTime: '2021-09-25T16:00:00.000Z',
+    },
   ];
 
   const mocks = [
@@ -163,9 +189,12 @@ it('Renders only the first card for each series of non classes.', async () => {
   expect(getAllByTestId('description')[0]).toHaveTextContent(
     'test description 1'
   );
-  expect(getAllByTestId('description').length).toBe(2);
+  expect(getAllByTestId('description').length).toBe(3);
   expect(getAllByTestId('title')[1]).toHaveTextContent('UX 101');
   expect(getAllByTestId('description')[1]).toHaveTextContent(
     'test description 2'
+  );
+  expect(getAllByTestId('description')[2]).toHaveTextContent(
+    'test description 4'
   );
 });
