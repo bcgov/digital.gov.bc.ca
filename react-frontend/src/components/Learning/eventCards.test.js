@@ -7,7 +7,6 @@ import EventCards from './eventCards';
 import EVENTS_QUERY from '../../queries/learning/events';
 
 import { AppConfig } from '../../providers/AppConfig';
-import { get } from 'react-scroll/modules/mixins/scroller';
 
 const originalError = console.error;
 
