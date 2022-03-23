@@ -5,7 +5,16 @@ Learn how the Government of British Columbia is building teams and using modern 
 
 
 ## Contents
+- [What's happening?](#what-is-happening-here)
 - [Locally Running the project](#how-to-run-the-project-locally)
+- [Components](#components)
+- [Quick Start, Local Deployment](#how-to-run-the-project-locally)
+- [Local Development](#local-development)
+    - [Front-end](#react-frontend)
+    - [Back-end](#strapi)
+        - [Create admin user](#create-the-first-admin-user)
+        - [Set permissions](#set-the-permissions-on-the-content-types)
+- [Other Documentation](#other-docs)
 
 ## What is happening here?
 We are building the next version of [Digital.gov.bc.ca](https://digital.gov.bc.ca/) based on user research and in alignment with directives to support the BC Public Service to improve service delivery using digital methods and tools.
@@ -14,7 +23,7 @@ The Exchange Lab Operations team has been deployed to build this website and ass
 
 You can see our backlog in the open by clicking on the issues tab above.
 
-Contact the product owner, Heather.Remacle@gov.bc.ca, if you have questions.
+Contact the product owner, Steve.Chapman@gov.bc.ca, if you have questions.
 
 
 ## Components
@@ -24,37 +33,28 @@ Contact the product owner, Heather.Remacle@gov.bc.ca, if you have questions.
 
 ## How to run the project locally
 
-NOTE: for full local development see next section.
+NOTE: For full local development see [next section](#local-development).
 NOTE 2: Often the first time these commands are run the images take too long to download and the commands can time out.  You may need to run the `build` and `up` command multiple times to get everything working. 
 
-> requires docker
-1. `cp .env.example .env` and fill in details as needed
-2. In the root of the project run the command:
+> requires Docker (or Podman) and docker-compose
+1. Environment variables, adjust as necessary for your environment. At the root of the project run the following: 
+```
+cp .env.example .env
+cp strapi-app/.env.example strapi-app/.env
+```
 
-`docker-compose pull`
-
-3. Then to build the project
-
-`docker-compose build`
-
-4. To successfully build the pluggins in the strapi project, we must install the plugins' node modules in the running strapi container.
-To enter the container run:
+2. Build, (re)create, start and attach containers:
 
 `docker-compose up`
 
-`docker exec -it strapi /bin/bash`
+To run without a console log (detached mode) add the `-d` flag. When new npm/yarn packages have been installed the project may need to be rebuilt using:
 
-Inside the container navigate to the pluggin directory and install them using yarn. (at the time of writing there is only a single pluggin)
+```
+docker-compose build --no-cache
+docker-compose up
+```
 
-`cd plugins/wysiwyg/`
-
-`yarn`
-
-5. If you want to run the containers in the background:
-
-`docker-compose up -d`
-
-6. To bring down the containers
+3. To stop and remove containers, networks and images created by `up`
 
 `docker-compose down`
 
@@ -62,24 +62,16 @@ Inside the container navigate to the pluggin directory and install them using ya
 
 ### React Frontend
 
-To have access to the testing features locally go to the react-frontend folder and run
+Assuming `docker-compose up` was run previously and the development preference is to install the frontend on bare metal, ensure your Node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run the following:
 
-`rm -R node_modules/` 
-`npm install`
+```
+docker stop digital_frontend
+cd react-frontend
+npm install
+npm start
+```
 
-This will install the npm packages outside the frontend container, allowing the user to access tests in their terminal and IDE without using `docker exec` to run the tests in the frontend container.  
-
-New npm packages they must be installed in the docker container.  Use the command:
-
-`docker exec -it frontend /bin/bash`
-
-to enter the container.  Then run `npm install`.
-
-If new npm packages have been installed by another developer the project may need to be rebuilt using.
-
-`docker-compose build --no-cache`
-
-to insure that all npm packages are up to date.
+Frontend tests can be now be run locally in the terminal/IDE.
 
 ### Strapi
 
@@ -97,23 +89,22 @@ When creating content types the permissions for `count`, `create`, `delete`, `fi
 
 TODO:  These steps could be automated by creating a script to seed the local database.  
 
-
-## Build, Deploy and Operation of this Project
-
-- [Building and Deploying React](./docs/react-frontend-startup.md)
-- [Building and Deploying Strapi](./docs/strapi-startup.md)
-- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
-
-## Action docs
-
-- Zap scanner docs can be found [Here](docs/zapScanning.md)
-- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 
-
 ## Other docs
 
-There is more documentation in the forllowing places
+There is more documentation in the following places
 
 - `/docs/` folder
 - `/react-frontend/README.md` 
 - `/strapi-app/README.md`
 - `/ansible/README.md`
+
+### Build, Deploy and Operation of this Project
+
+- [Building and Deploying React](./docs/react-frontend-startup.md)
+- [Building and Deploying Strapi](./docs/strapi-startup.md)
+- [Sysdig template docs](./openshift/templates/sysdig/Readme.md)
+
+### Action docs
+
+- Zap scanner docs can be found [Here](docs/zapScanning.md)
+- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 

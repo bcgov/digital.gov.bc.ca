@@ -8,8 +8,8 @@ import { DigitalFrameworkToggle } from '../StyleComponents/htmlTags';
 import Process from './process';
 import Context from './context';
 
-const saasGuideIllustration = require('../../images/pngIllustrations/saasGuide.png')
-  .default;
+const saasGuideIllustration =
+  require('../../images/pngIllustrations/saasGuide.png').default;
 
 const Saas = () => {
   const [contextToggled, setContextToggled] = useState(true);

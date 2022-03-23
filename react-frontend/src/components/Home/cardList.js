@@ -4,20 +4,20 @@ import { Col, Row } from 'react-flexbox-grid';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { Title2 } from '../StyleComponents/headings';
 
-const digitalFrameworkGrey = require('../../images/pngIllustrations/digitalFrameworkGrey.png')
-  .default;
-const digitalPrinciplesGrey = require('../../images/pngIllustrations/digitalPrinciplesGrey.png')
-  .default;
-const productsGrey = require('../../images/pngIllustrations/productsServicesGrey.png')
-  .default;
-const resourcesGrey = require('../../images/pngIllustrations/resourcesGrey.png')
-  .default;
-const communityGrey = require('../../images/pngIllustrations/communityGrey.png')
-  .default;
-const caseStudiesGrey = require('../../images/pngIllustrations/caseStudiesGrey.png')
-  .default;
-const learningGrey = require('../../images/pngIllustrations/learningGrey.png')
-  .default;
+const digitalFrameworkGrey =
+  require('../../images/pngIllustrations/digitalFrameworkGrey.png').default;
+const digitalPrinciplesGrey =
+  require('../../images/pngIllustrations/digitalPrinciplesGrey.png').default;
+const productsGrey =
+  require('../../images/pngIllustrations/productsServicesGrey.png').default;
+const resourcesGrey =
+  require('../../images/pngIllustrations/resourcesGrey.png').default;
+const communityGrey =
+  require('../../images/pngIllustrations/communityGrey.png').default;
+const caseStudiesGrey =
+  require('../../images/pngIllustrations/caseStudiesGrey.png').default;
+const learningGrey =
+  require('../../images/pngIllustrations/learningGrey.png').default;
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const descriptions = [

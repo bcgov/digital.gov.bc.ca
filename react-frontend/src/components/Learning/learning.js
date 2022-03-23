@@ -8,8 +8,8 @@ import Podcast from './podcast';
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
-const learningImage = require('../../images/pngIllustrations/learningWhite.png')
-  .default;
+const learningImage =
+  require('../../images/pngIllustrations/learningWhite.png').default;
 
 function Learning() {
   return (

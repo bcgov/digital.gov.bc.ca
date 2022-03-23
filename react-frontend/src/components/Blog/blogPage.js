@@ -48,9 +48,8 @@ function AuthorIcon({ url }) {
 
 function BlogPage() {
   const params = useParams();
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
   return (
     <PageContainer>
       <Query query={BLOG_QUERY} uid={params.uid}>

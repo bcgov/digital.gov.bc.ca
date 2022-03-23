@@ -11,9 +11,8 @@ import { AppConfigContext } from '../../providers/AppConfig';
 const youTubeLogo = require('../../images/icons/yt_logo_rgb_light.png').default;
 
 const BCLivestream = () => {
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
   return (
     <Query query={LIVESTREAM_QUERY}>
       {({ data: { digitalLivestreamContact, digitalBcLivestreams } }) => {

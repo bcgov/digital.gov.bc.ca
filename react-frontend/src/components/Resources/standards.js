@@ -12,7 +12,11 @@ import {
 import { standardsUrls } from '../../constants/urls';
 
 const linkIcon = (
-  <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
+  <FontAwesomeIcon
+    icon={faExternalLinkAlt}
+    className="fa-xs"
+    style={{ marginLeft: '0.3em' }}
+  />
 );
 
 function Standards() {

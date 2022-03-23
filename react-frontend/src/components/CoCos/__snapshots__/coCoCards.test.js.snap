@@ -2,7 +2,7 @@
 
 exports[`Renders without crashing if not props are passed in 1`] = `
 <div
-  className="sc-bXTfsO sc-dFtzdE esjtFX hckWov horizontalAlignment contentBlockContainer container"
+  className="sc-bXTejn sc-dFtzxp eWHalB kwCcRj horizontalAlignment contentBlockContainer container"
   id="standards"
 >
   <div
@@ -12,7 +12,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-jWUzTF CITuv resourceHeading"
+        className="sc-jWUzzU kUeAgr resourceHeading"
       >
         Explore
       </h2>
@@ -28,17 +28,17 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-jWUzTF CITuv resourceHeading"
+        className="sc-jWUzzU kUeAgr resourceHeading"
       >
         Support
       </h2>
       <p
-        className="sc-jJoQpE fvraOj digitalParagraph"
+        className="sc-jJoQJp euzhSN digitalParagraph"
       >
         Contact the Common Components team:
          
         <a
-          className="sc-fKVsgm gjNLZe externalLink"
+          className="sc-fKVqWL OCgbU externalLink"
           href="mailto:CITZAS@gov.bc.ca"
         >
           CITZAS@gov.bc.ca

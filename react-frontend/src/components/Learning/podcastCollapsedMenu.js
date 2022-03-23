@@ -7,8 +7,8 @@ import { SubSubHeading } from '../StyleComponents/headings';
 import { podcastUrls } from '../../constants/urls';
 
 const iOSIcon = require('../../images/icons/podcastsiOS.svg').default;
-const googlePodcastIcon = require('../../images/icons/podcastsGoogle.svg')
-  .default;
+const googlePodcastIcon =
+  require('../../images/icons/podcastsGoogle.svg').default;
 
 function PodcastCollapsedMenu() {
   const [expanded, setExpanded] = React.useState(['']);
