@@ -4,17 +4,28 @@ import Query from '../Query';
 import EVENTS_QUERY from '../../queries/learning/events';
 import EventCard from './eventCard';
 
-//Only display one card per series.
+/**
+ * Creates a unique list of events
+ * 1. without SeriesUIDs
+ * 2. the soonest to start of multiple events with the same SeriesUID
+ * 3. events with a SeriesUID key, but empty or null value
+ *
+ * @param {Object} list
+ * @returns {Object}
+ */
 function filterBySeries(list) {
-  //the events are ordered by start date in the events query
-  //the first event mapped will be the soonest to start.
+  // the events are ordered by start date in EVENTS_QUERY
+  // the first event mapped will be the soonest to start.
   const seriesIDs = [];
   const fliteredList = [];
+
   list.map((event) => {
     if (!event.SeriesUID) {
       fliteredList.push(event);
-    }
-    if (seriesIDs.indexOf(event.SeriesUID) == -1) {
+    } else if (
+      seriesIDs.indexOf(event.SeriesUID) === -1 &&
+      event.SeriesUID != false
+    ) {
       seriesIDs.push(event.SeriesUID);
       fliteredList.push(event);
     }

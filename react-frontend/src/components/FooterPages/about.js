@@ -9,7 +9,11 @@ import { Heading, Title } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 
 const linkIcon = (
-  <FontAwesomeIcon icon={faExternalLinkAlt} style={{ paddingLeft: '5px' }} />
+  <FontAwesomeIcon
+    icon={faExternalLinkAlt}
+    className="fa-xs"
+    style={{ marginLeft: '0.3em' }}
+  />
 );
 
 function About() {

@@ -6,9 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import parse from 'html-react-parser';
 
 export const StyleRichText = ({ htmlOrMarkdown }) => {
-  const strapiMediaUrl = useContext(AppConfigContext)['state'][
-    'strapiMediaUrl'
-  ];
+  const strapiMediaUrl =
+    useContext(AppConfigContext)['state']['strapiMediaUrl'];
   // Detect html tags
   const re = /<.+?>/;
 

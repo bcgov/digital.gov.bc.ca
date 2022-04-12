@@ -8,8 +8,8 @@ import { PageContainer } from '../StyleComponents/pageContent';
 import { InlineImg } from '../StyleComponents/images';
 import { saasGuideUrls } from '../../constants/urls';
 
-const saasProcessIllustration = require('../../images/pngIllustrations/saasProcess.png')
-  .default;
+const saasProcessIllustration =
+  require('../../images/pngIllustrations/saasProcess.png').default;
 
 const Process = () => {
   return (

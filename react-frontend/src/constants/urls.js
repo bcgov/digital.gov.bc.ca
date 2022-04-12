@@ -7,8 +7,7 @@ export const assemblingLinks = {
   exchangeLab: 'https://bcdevexchange.org/ExchangeLab',
   digitalMarketplace: 'https://digital.gov.bc.ca/marketplace',
   devops: 'https://bcdevexchange.org/DevOpsPlatform',
-  imit:
-    'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
+  imit: 'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
 };
 
 export const collabToolUrls = {
@@ -52,16 +51,13 @@ export const copyrightLinks = {
   BCGovNews: 'https://news.gov.bc.ca/',
   newsLicence: 'https://news.gov.bc.ca/assets/license',
   dataCatalogue: 'http://catalogue.data.gov.bc.ca/',
-  FAQs:
-    'https://www2.gov.bc.ca/gov/content?id=96CA7A9D26024B1A9EE81637DED592B8',
+  FAQs: 'https://www2.gov.bc.ca/gov/content?id=96CA7A9D26024B1A9EE81637DED592B8',
   IPP: 'https://www2.gov.bc.ca/gov/content?id=4F03158C0AF84EC08DBB5BE3E873C33E',
 };
 
 export const definingLinks = {
-  data:
-    'https://www2.gov.bc.ca/gov/content?id=1AE507FCE6A943199E9D2F8A7748B2B5',
-  lean:
-    'https://www2.gov.bc.ca/gov/content?id=80D954CD54704A4C99E27D5B35037149',
+  data: 'https://www2.gov.bc.ca/gov/content?id=1AE507FCE6A943199E9D2F8A7748B2B5',
+  lean: 'https://www2.gov.bc.ca/gov/content?id=80D954CD54704A4C99E27D5B35037149',
 };
 
 export const designersUrls = {
@@ -141,17 +137,13 @@ export const saasGuideUrls = {
     'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/resources/templates/privacy_protection_schedule_for_cloud_services.docx',
   CloudSecuritySchedule:
     'https://www2.gov.bc.ca/gov/content?id=0F19651F63554381BB9D8364196671FB',
-  CPPM:
-    'https://www2.gov.bc.ca/gov/content?id=8EF95776E6774C02866381D6C5015913',
-  FRCR:
-    'https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/policies/financial-systems-and-controls#1341',
-  ISCS:
-    'https://www2.gov.bc.ca/assets/gov/government/services-for-government-and-broader-public-sector/information-technology-services/standards-files/information_security_classification_standard_july_17_2018.pdf',
+  CPPM: 'https://www2.gov.bc.ca/gov/content?id=8EF95776E6774C02866381D6C5015913',
+  FRCR: 'https://www2.gov.bc.ca/gov/content/governments/policies-for-government/core-policy/policies/financial-systems-and-controls#1341',
+  ISCS: 'https://www2.gov.bc.ca/assets/gov/government/services-for-government-and-broader-public-sector/information-technology-services/standards-files/information_security_classification_standard_july_17_2018.pdf',
   MPO: 'https://www2.gov.bc.ca/gov/content?id=A749F080FC794D82A2CBD96BABA2ABEC',
   Procurement:
     'https://www2.gov.bc.ca/gov/content/bc-procurement-resources/sell-to-government/understand-government-processes/ministry-contacts',
-  MISO:
-    'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
+  MISO: 'https://intranet.gov.bc.ca/intranet/content?id=DC4623F6F1944065B83F70297ED419D7',
   PIATemplate:
     'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-privacy/privacy-impact-assessments/privacy-impact-assessment-for-ministries/privacy_impact_assessment_template_for_ministries.docx',
   SOARTemplate:

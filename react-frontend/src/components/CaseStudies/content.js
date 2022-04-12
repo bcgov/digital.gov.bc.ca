@@ -18,13 +18,13 @@ import { resourceLinks, videoLinks } from '../../constants/urls';
 const jill = require('../../images/jill.jpg').default;
 const aaron = require('../../images/aaron.jpg').default;
 const john = require('../../images/john.jpg').default;
-const caseStudiesFarmingImg = require('../../images/case-study-farming.jpg')
-  .default;
-const caseStudiesMiningImg = require('../../images/case-study-mining.jpg')
-  .default;
+const caseStudiesFarmingImg =
+  require('../../images/case-study-farming.jpg').default;
+const caseStudiesMiningImg =
+  require('../../images/case-study-mining.jpg').default;
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
-const caseStudiesOrgBookImg = require('../../images/case-study-orgbook.jpg')
-  .default;
+const caseStudiesOrgBookImg =
+  require('../../images/case-study-orgbook.jpg').default;
 
 const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',
