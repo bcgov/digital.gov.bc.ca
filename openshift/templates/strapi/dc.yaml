@@ -208,6 +208,7 @@ parameters:
   displayName: name
   description: the name for the dc and container
   value: strapi
+# @see docs/openshift/resource-requests-limits.md
 - name: CPU_REQUEST
   value: 10m 
 - name: MEMORY_REQUEST

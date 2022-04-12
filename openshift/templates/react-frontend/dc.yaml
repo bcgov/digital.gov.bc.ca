@@ -264,11 +264,12 @@ parameters:
   displayName: Environment
   description: the environment being deployed to
   value: digital-gov-frontend
+# @see docs/openshift/resource-requests-limits.md
 - name: CPU_REQUEST
   value: 10m 
 - name: MEMORY_REQUEST
   value: 50Mi 
-  - name: CPU_LIMIT
+- name: CPU_LIMIT
   value: 30m 
 - name: MEMORY_LIMIT
   value: 100Mi 

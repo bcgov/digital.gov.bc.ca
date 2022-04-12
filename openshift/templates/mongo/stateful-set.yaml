@@ -42,6 +42,7 @@ parameters:
     description: "Name of the MongoDB database accessed."
     value: digitalgov
     required: true
+  # @see docs/openshift/resource-requests-limits.md
   - name: MEMORY_REQUEST
     description: Amount of Memory to Request.
     displayName: Memory Request
