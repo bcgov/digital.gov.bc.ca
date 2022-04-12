@@ -208,17 +208,10 @@ parameters:
   displayName: name
   description: the name for the dc and container
   value: strapi
-  # MAX CPU REQUEST 4000m | MAX CPU LIMIT 8000m
-  # MAX MEMORY REQUEST 16384 Mi | MAX MEMORY LIMIT 32768 Mi
-  # Sysdig reports:
-  # AVG CPU usage to be 0.01
-  # AVG MEMORY usage 163Mi
 - name: CPU_REQUEST
   value: 10m 
 - name: MEMORY_REQUEST
   value: 165Mi 
-  # Platform team recommendation: 
-  # (Best Effort) Limits be a ratio (either 3x or 2x) of Requests
 - name: CPU_LIMIT
   value: 200m 
 - name: MEMORY_LIMIT
