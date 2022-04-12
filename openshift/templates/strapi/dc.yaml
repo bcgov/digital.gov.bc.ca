@@ -60,7 +60,20 @@ objects:
       type: ClusterIP
     status:
       loadBalancer: {}
-
+  - apiVersion: autoscaling/v1
+    kind: HorizontalPodAutoscaler
+    metadata:
+      labels:
+        app: ${NAME}
+      name: ${NAME}
+    spec:
+      maxReplicas: 6
+      minReplicas: 3
+      scaleTargetRef:
+        apiVersion: v1
+        kind: DeploymentConfig
+        name: ${NAME}
+      targetCPUUtilizationPercentage: 65
   - apiVersion: apps.openshift.io/v1
     kind: DeploymentConfig
     spec:
@@ -195,14 +208,19 @@ parameters:
   displayName: name
   description: the name for the dc and container
   value: strapi
+  # Sysdig reports:
+  # AVG CPU usage to be 0.01
+  # AVG MEMORY usage 163Mi
 - name: CPU_REQUEST
-  value: 50m 
+  value: 10m 
 - name: MEMORY_REQUEST
-  value: 50Mi 
+  value: 165Mi 
+  # Platform team recommendation: 
+  # (Best Effort) Limits be a ratio (either 3x or 2x) of Requests
 - name: CPU_LIMIT
-  value: 70m 
+  value: 200m 
 - name: MEMORY_LIMIT
-  value: 75Mi 
+  value: 330Mi 
 - name: SUFFIX
   required: true
   description: a suffix used in conjunction with NAME to further isolate different instances of these components
@@ -212,5 +230,3 @@ parameters:
   required: false 
   description: The pull request number associated with this object
   displayName: Pull Request Number
-
-

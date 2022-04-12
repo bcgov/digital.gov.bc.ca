@@ -228,3 +228,17 @@ objects:
             resources:
               requests:
                 storage: "${VOLUME_CAPACITY}"
+                  - apiVersion: autoscaling/v1
+  - kind: HorizontalPodAutoscaler
+    metadata:
+      labels:
+        app: ${MONGODB_SERVICE_NAME}
+      name: ${MONGODB_SERVICE_NAME}
+    spec:
+      maxReplicas: 6
+      minReplicas: 3
+      scaleTargetRef:
+        apiVersion: v1
+        kind: StatefulSet
+        name: ${MONGODB_SERVICE_NAME}
+      targetCPUUtilizationPercentage: 65 

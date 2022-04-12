@@ -110,12 +110,12 @@ objects:
       name: ${NAME}
     spec:
       maxReplicas: 6
-      minReplicas: 2
+      minReplicas: 3
       scaleTargetRef:
         apiVersion: v1
         kind: DeploymentConfig
         name: ${NAME}
-      targetCPUUtilizationPercentage: 60
+      targetCPUUtilizationPercentage: 65
   - apiVersion: v1
     data:
       Caddyfile: |
@@ -264,14 +264,19 @@ parameters:
   displayName: Environment
   description: the environment being deployed to
   value: digital-gov-frontend
+  # Sysdig reports:
+  # AVG CPU usage 0.01
+  # AVG MEMORY usage 50Mi
 - name: CPU_REQUEST
-  value: 30m 
+  value: 10m 
 - name: MEMORY_REQUEST
   value: 50Mi 
-- name: CPU_LIMIT
-  value: 90m 
+  # Platform team recommendation: 
+  # (Best Effort) Limits be a ratio (either 3x or 2x) of Requests
+  - name: CPU_LIMIT
+  value: 30m 
 - name: MEMORY_LIMIT
-  value: 150Mi 
+  value: 100Mi 
 - name: SUFFIX
   required: true
   description: a suffix used in conjunction with NAME to further isolate different instances of these components
