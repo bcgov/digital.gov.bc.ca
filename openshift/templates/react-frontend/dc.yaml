@@ -264,6 +264,8 @@ parameters:
   displayName: Environment
   description: the environment being deployed to
   value: digital-gov-frontend
+  # MAX CPU REQUEST 4000m | MAX CPU LIMIT 8000m
+  # MAX MEMORY REQUEST 16384 Mi | MAX MEMORY LIMIT 32768 Mi
   # Sysdig reports:
   # AVG CPU usage 0.01
   # AVG MEMORY usage 50Mi
