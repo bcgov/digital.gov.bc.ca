@@ -13,8 +13,7 @@ AVG CPU usage 0.01
 AVG MEMORY usage 50Mi
 
 Platform team recommendation: 
-(Best Effort) Limits be a ratio (either 3x or 2x) of Requests
-
+[Burstable](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-burstable) Limits be a ratio (either 3x or 2x) of Requests
 ### Backend
 Sysdig reports:
 AVG CPU usage to be 0.01
@@ -26,4 +25,4 @@ AVG CPU usage 0.01
 AVG MEMORY usage 340Mi
 
 Platform team recommendation: 
-(Best Effort) Limits be a ratio (either 3x or 2x) of Requests
+[Burstable](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/#create-a-pod-that-gets-assigned-a-qos-class-of-burstable) Limits be a ratio (either 3x or 2x) of Requests

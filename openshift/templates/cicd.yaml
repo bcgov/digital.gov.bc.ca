@@ -216,6 +216,19 @@ objects:
           - patch
           - delete
           - update
+      - apiGroups:
+        - "autoscaling.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - horizontalpodautoscalers
+        verbs:
+          - create
+          - delete
+          - patch
+          - update
+          - get
+          - list
+          - watch
   - apiVersion: authorization.openshift.io/v1
     kind: RoleBinding
     metadata:

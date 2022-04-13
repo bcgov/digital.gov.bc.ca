@@ -64,4 +64,8 @@ This template needs to be run **locally** in the base of the project using the o
 
 `oc process -f openshift/templates/cicd.yaml -p DEV_NAMESPACE=c0cce6-dev -p TEST_NAMESPACE=c0cce6-test -p PROD_NAMESPACE=c0cce6-prod | oc apply -f -`
 
-An extra parameter `NAME` can also be set.
+An extra parameter `NAME` can also be set, though a default value is currently set.
+
+For a [list of verbs](https://docs.openshift.com/container-platform/4.8/authentication/using-rbac.html#viewing-cluster-roles_using-rbac) that can be assigned to specific resources
+
+To list api resources available `oc api-resources`
