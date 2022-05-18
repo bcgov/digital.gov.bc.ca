@@ -2,7 +2,7 @@
 
 exports[`renders snapshot correctly 1`] = `
 <div
-  className="sc-eCImPb sc-iCfMLu gaEhyy gZbdOj horizontalAlignment contentBlockContainer container"
+  className="sc-eCYdqJ sc-iBkjds czusFY ghuWcs horizontalAlignment contentBlockContainer container"
   id="courses"
 >
   <div
@@ -12,7 +12,7 @@ exports[`renders snapshot correctly 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-ksdxgE lnpvcA heading"
+        className="sc-ksZaOG kJCYuj heading"
       >
         Courses
       </h2>

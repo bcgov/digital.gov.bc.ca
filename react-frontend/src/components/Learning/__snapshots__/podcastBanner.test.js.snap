@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-dlVxhl sc-kfPuZi cNvmXg ljPGar horizontalAlignment bannerCenterText container"
+  className="sc-dmRaPn sc-kgflAQ kihIuQ dcMYAs horizontalAlignment bannerCenterText container"
   id="main-content-anchor"
 >
   <div
@@ -12,10 +12,10 @@ exports[`renders correctly 1`] = `
       className="col-xs-12 col-lg-6"
     >
       <div
-        className="sc-bYoBSM fHabKU"
+        className="sc-bZkfAO jfxjvN"
       >
         <h2
-          className="sc-hKwDye bzJXaO heading"
+          className="sc-hKMtZM jAqLqV heading"
         >
           The Exchange Podcast 
           <svg
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt=""
-        className="sc-bdvvtL kOJjJb sideImage"
+        className="sc-bczRLJ gquPqQ sideImage"
       />
     </div>
   </div>
