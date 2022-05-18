@@ -31,7 +31,7 @@
           oc -n {{ namespace }} tag "{{ tools_namespace }}/{{ react_infra_name }}:{{ IMAGE_TAG }}" {{ react_infra_name }}:{{ new_imagetag }}
 
       - name: Reconfiguring deployment config in environment {{ namespace }}
-        include: ./tasks/deploy_react.yaml
+        include_tasks: ./tasks/deploy_react.yaml
 
     # TODO this task needs to sync up with github. We should not allow a PR to be promoted if it is out of sync with master
     # in addition we should not allow multiple rollouts to test or prod at the same time

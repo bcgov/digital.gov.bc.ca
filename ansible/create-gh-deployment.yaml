@@ -13,7 +13,7 @@
 
     tasks:
       - name: Checking PR existence
-        include: ./tasks/check_pr_exists.yaml
+        include_tasks: ./tasks/check_pr_exists.yaml
       - name: Get PR data
         uri:
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
@@ -25,7 +25,7 @@
         set_fact:
           ref: "{{pull_request.json.head.ref}}"
       - name: Canceling previous deployments
-        include: ./tasks/cancel_previous_gh_deployments.yaml
+        include_tasks: ./tasks/cancel_previous_gh_deployments.yaml
       - name: Creating Deployment for "{{ gh_env }}" for "{{ ref }}"
         uri: 
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/deployments
@@ -53,7 +53,7 @@
             Accept: application/vnd.github.ant-man-preview+json
 
       - name: waiting for deployment
-        include: ./tasks/wait_for_rollout.yaml
+        include_tasks: ./tasks/wait_for_rollout.yaml
         vars:
           kind: DeploymentConfig
           name: "{{ react_infra_name }}-{{ suffix }}"

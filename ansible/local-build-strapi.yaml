@@ -10,10 +10,10 @@
       infra_name: "{{ strapi_infra_name }}"
     tasks:
       - name: Pre checks
-        include: ./tasks/check_pr_exists.yaml
+        include_tasks: ./tasks/check_pr_exists.yaml
 
       - name: Check if should build 
-        include: ./tasks/check_if_should_build.yaml
+        include_tasks: ./tasks/check_if_should_build.yaml
         when: not force_build
 
       - debug:
@@ -22,5 +22,5 @@
         when: not should_build
 
       - name: Build React Project
-        include: ./tasks/build_strapi.yaml
+        include_tasks: ./tasks/build_strapi.yaml
         when: should_build
