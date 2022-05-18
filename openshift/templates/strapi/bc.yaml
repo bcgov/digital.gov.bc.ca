@@ -14,13 +14,13 @@ objects:
       local: false
     tags:
     - annotations:
-        openshift.io/imported-from: node:14.19.1-alpine3.15
+        openshift.io/imported-from: nodejs-14.19.1
       from:
         kind: DockerImage
         name: docker.io/node:14.19.1-alpine3.15
       generation: null
       importPolicy: {}
-      name: node:14.19.1-alpine3.1
+      name: node:14.19.1-alpine3.15
       referencePolicy:
         type: ""
   status:
