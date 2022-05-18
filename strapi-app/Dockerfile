@@ -1,4 +1,4 @@
-FROM docker.io/node:12.22.7-alpine3.12
+FROM docker.io/node:14.19.1-alpine3.15
 # The openshift pipeline requires an image pulled through artifactory
 # FROM docker-remote.artifacts.developer.gov.bc.ca/node:lts-alpine
 
