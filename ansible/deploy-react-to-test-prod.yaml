@@ -11,6 +11,6 @@
       image_namespace: "{{ tools_namespace }}"
     tasks:
       - name: check images
-        include: ./tasks/check_image_exists-test-prod.yaml
+        include_tasks: ./tasks/check_image_exists-test-prod.yaml
       - name: Deploying to test/prod
-        include: ./tasks/deploy_react_test_prod.yaml
+        include_tasks: ./tasks/deploy_react_test_prod.yaml
