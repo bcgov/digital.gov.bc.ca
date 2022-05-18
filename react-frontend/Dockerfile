@@ -1,5 +1,5 @@
 # pull official base image
-FROM registry.redhat.io/rhel8/nodejs-12:latest
+FROM registry.redhat.io/rhel8/nodejs-14:1-72
 
 # set working directory
 WORKDIR /app

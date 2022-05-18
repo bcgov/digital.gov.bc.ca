@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
+    className="sc-dIouRR sc-hHLeRK dwnlAr coahBq horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-fmciRz lMhlw sideImageText"
+          className="sc-fmrZth ckYlac sideImageText"
         >
           <h1
-            className="sc-eXlEPa iuukFs bannerTitle"
+            className="sc-eXBvqI dZHLHi bannerTitle"
           >
             Learning
           </h1>
           <div
-            className="sc-iFMAIt iaa-drX subTitle"
+            className="sc-iFwKgL bNgAfr subTitle"
           >
              
             Understand and adopt new approaches to teamwork and technology.
@@ -34,13 +34,13 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-gjNHFA iFVmcx sideImage"
+          className="sc-gkJlnC eawdqc sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
@@ -50,7 +50,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDKAQ jZzBlZ heading"
+          className="sc-gsnTZi hgaMBt heading"
         >
           Courses
         </h2>
@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDKAQ jZzBlZ heading"
+          className="sc-gsnTZi hgaMBt heading"
         >
           Events
         </h2>
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
+    className="sc-dIouRR sc-hHLeRK dwnlAr coahBq horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <p>
@@ -91,7 +91,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
+      className="sc-dIouRR sc-hHLeRK dwnlAr coahBq horizontalAlignment bannerCenterText container"
       id="main-content-anchor"
     >
       <div
@@ -101,10 +101,10 @@ exports[`renders correctly 1`] = `
           className="col-xs-12 col-lg-6"
         >
           <div
-            className="sc-giYglK dRdoNf"
+            className="sc-gicCDI iXnOfF"
           >
             <h2
-              className="sc-gsDKAQ jZzBlZ heading"
+              className="sc-gsnTZi hgaMBt heading"
             >
               The Exchange Podcast 
               <svg
@@ -135,13 +135,13 @@ exports[`renders correctly 1`] = `
         >
           <img
             alt=""
-            className="sc-lkgTHX kcCZtl sideImage"
+            className="sc-lkwKjF hzdYTE sideImage"
           />
         </div>
       </div>
     </div>
     <div
-      className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
+      className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
       id="podcasts"
     >
       <div
@@ -159,7 +159,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <h3
-            className="sc-hKwDye fbmtGU subHeading"
+            className="sc-hKMtZM jXKzWj subHeading"
             style={
               Object {
                 "marginBottom": "0",
@@ -169,7 +169,7 @@ exports[`renders correctly 1`] = `
             Recent Episodes
           </h3>
           <a
-            className="sc-gSQFLo bsvMNh externalLink"
+            className="sc-gSAPjG dkZUmn externalLink"
             href="https://bcdevexchange.libsyn.com/"
             rel="noopener noreferrer"
             style={
@@ -218,7 +218,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="ant-collapse-item sc-cbTzjv gdJPRA PanelStyled"
+          className="ant-collapse-item sc-caXVBt gMNYij PanelStyled"
         >
           <div
             aria-expanded={false}
