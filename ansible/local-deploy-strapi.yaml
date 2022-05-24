@@ -8,7 +8,7 @@
       infra_name: "{{ strapi_infra_name }}"
     tasks:
       - name: check images
-        include: ./tasks/check_image_exists.yaml
+        include_tasks: ./tasks/check_image_exists.yaml
 
       - name: Deploying to dev
-        include: ./tasks/deploy_strapi.yaml
+        include_tasks: ./tasks/deploy_strapi.yaml

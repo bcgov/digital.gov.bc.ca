@@ -1,7 +1,7 @@
 {
   "name": "app",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "slugify": "^1.4.5",
+    "slugify": "^1.6.5",
     "strapi": "3.2.5",
     "strapi-admin": "3.2.5",
     "strapi-connector-mongoose": "3.2.5",
@@ -30,8 +30,8 @@
     "uuid": "ed929bb6-ad2a-4d3e-a162-35ada7b58757"
   },
   "engines": {
-    "node": ">=12.22.7",
-    "npm": ">=6.14.15"
+    "node": ">=14.19.1",
+    "npm": ">=6.14.16"
   },
   "license": "MIT"
 }

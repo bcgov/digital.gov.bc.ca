@@ -7,8 +7,8 @@
       image_namespace: "{{ tools_namespace }}"
     tasks:
       - name: check images
-        include: ./tasks/check_image_exists.yaml
+        include_tasks: ./tasks/check_image_exists.yaml
       - name: Delete PR Deployment
-        include: ./tasks/delete_deployment.yaml
+        include_tasks: ./tasks/delete_deployment.yaml
       - name: Delete PR images in tools name space.
-        include: ./tasks/delete_images.yaml
+        include_tasks: ./tasks/delete_images.yaml

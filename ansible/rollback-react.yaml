@@ -5,9 +5,9 @@
       deploy: yes
     tasks:
       - name: Build React Project
-        include: ./tasks/build_react.yaml
+        include_tasks: ./tasks/build_react.yaml
 
       - name: deploying to {{ dev_namespace}}
-        include: ./tasks/deploy_react_to_dev.yaml
+        include_tasks: ./tasks/deploy_react_to_dev.yaml
         when: deploy
 
