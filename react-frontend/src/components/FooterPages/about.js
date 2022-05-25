@@ -50,10 +50,8 @@ function About() {
         </p>
         <ul>
           <li>Steve Chapman – Product Owner</li>
-          <li>Jonathan Sharman – Full-Stack Developer</li>
-          <li>Nanthini Mathavan – Scrum Master</li>
+          <li>Brad Payne – Senior Application Architect</li>
           <li>Inderdeep Singh – UX Designer</li>
-          <li>Mark Wilson – Researcher, Service Designer</li>
         </ul>
         <Heading>Technology</Heading>
         <p>

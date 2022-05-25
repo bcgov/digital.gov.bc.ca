@@ -3,17 +3,52 @@ import CoCoCard from './coCoCard';
 import { Col, Row } from 'react-flexbox-grid';
 import Query from '../Query';
 import COCOS_QUERY from '../../queries/coCos/coCos';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { commonComponentLinks } from '../../constants/urls';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
-import { StyledP, HrefLinkStandalone } from '../StyleComponents/htmlTags';
+import {
+  StyledP,
+  HrefLinkStandalone,
+  FloatParagraphRight,
+  HrefLink,
+} from '../StyleComponents/htmlTags';
+import {
+  faPlusCircle,
+  faExternalLinkAlt,
+} from '@fortawesome/free-solid-svg-icons';
+
+const linkIcon = (
+  <FontAwesomeIcon
+    icon={faExternalLinkAlt}
+    className="fa-xs"
+    style={{ marginLeft: '0.3em' }}
+  />
+);
 
 function CoCoCards() {
   return (
     <ContentBlockContainer id="standards">
       <Row>
-        <Col sm={12}>
+        <Col sm={4}>
           <ResourcePageHeading>Explore</ResourcePageHeading>
+        </Col>
+        <Col sm={8}>
+          <FloatParagraphRight>
+            <HrefLinkStandalone
+              href={commonComponentLinks.ccForm}
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faPlusCircle}
+                className="fa-lg"
+                style={{ marginRight: '0.3em' }}
+              />
+              Add your Common Component
+              {linkIcon}
+            </HrefLinkStandalone>
+          </FloatParagraphRight>
         </Col>
       </Row>
       <Query query={COCOS_QUERY}>
@@ -42,6 +77,20 @@ function CoCoCards() {
           );
         }}
       </Query>
+      <Row>
+        <Col sm={12}>
+          <ResourcePageHeading>
+            Don't see what you are looking for?
+          </ResourcePageHeading>
+          <StyledP>
+            Share your request in the &nbsp;
+            <HrefLink href={commonComponentLinks.ccRCChannel}>
+              Common Components Channel{linkIcon}
+            </HrefLink>
+            &nbsp; on Rocket.Chat (requires IDIR or GitHub account to login).
+          </StyledP>
+        </Col>
+      </Row>
       <Row>
         <Col sm={12}>
           <ResourcePageHeading>Support</ResourcePageHeading>

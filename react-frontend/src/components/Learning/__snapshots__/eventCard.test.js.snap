@@ -2,18 +2,18 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-fXynhf hqrXNc cardRound"
+  className="sc-dwLEzm bgUFjW cardRound"
 >
   <img
-    className="sc-dwLEzm klZtPz"
+    className="sc-TRNrF khZgWS"
     data-testid="thumbnail"
     src="https://testIMG.com"
   />
   <div
-    className="sc-jIAOiI gOoGDe"
+    className="sc-ZyCDH Clqln"
   >
     <h5
-      className="sc-cOFTSb dFmFQT cardTitle"
+      className="sc-BeQoi idkimQ cardTitle"
       data-testid="title"
       style={
         Object {
@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
       A great description
     </p>
     <a
-      className="sc-hHLeRK cmYKSv externalLink"
+      className="sc-dmRaPn eLfiBv externalLink"
       href="https://test.com"
       rel="noopener noreferrer"
       style={
