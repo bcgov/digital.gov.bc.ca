@@ -8,10 +8,7 @@ import {
   CardHorizontalTitle,
 } from '../StyleComponents/card';
 
-import {
-  HrefLinkStandalone,
-  HrefLinkStandaloneInternal,
-} from '../StyleComponents/htmlTags';
+import { HrefLinkStandaloneInternal } from '../StyleComponents/htmlTags';
 
 const HorizontalCoCoCard = ({
   img,

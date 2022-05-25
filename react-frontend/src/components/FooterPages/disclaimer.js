@@ -3,7 +3,6 @@ import DocumentTitle from 'react-document-title';
 
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { Heading, Title } from '../StyleComponents/headings';
-import { HrefLink } from '../StyleComponents/htmlTags';
 
 function Disclaimer() {
   return (

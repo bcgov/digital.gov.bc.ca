@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Alert } from 'antd';
 import { Grid } from 'react-flexbox-grid';
 

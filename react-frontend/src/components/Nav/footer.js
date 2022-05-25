@@ -1,12 +1,10 @@
 import React from 'react';
 import { FooterStyled, FooterContainer } from '../StyleComponents/pageContent';
 import {
-  FooterLink,
   FooterLinkInternal,
   FooterListItem,
   FooterUL,
 } from '../StyleComponents/htmlTags';
-import { footerLinks } from '../../constants/urls';
 
 const Footer = () => {
   return (
