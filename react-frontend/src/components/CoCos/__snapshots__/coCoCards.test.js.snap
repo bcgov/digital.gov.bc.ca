@@ -21,7 +21,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-8"
     >
       <p
-        className="sc-idiyUo hrMMXz"
+        className="sc-idiyUo iDnwWh"
       >
         <a
           className="sc-bBrHrO bEUVrU externalLink"
@@ -84,11 +84,11 @@ exports[`Renders without crashing if not props are passed in 1`] = `
     <div
       className="col-sm-12"
     >
-      <h2
-        className="sc-eEOqmf hsYsop resourceHeading"
+      <h3
+        className="sc-fmRtwQ csgYhl resourceSubHeading"
       >
         Don't see what you are looking for?
-      </h2>
+      </h3>
       <p
         className="sc-himrzO dSCwLQ digitalParagraph"
       >
