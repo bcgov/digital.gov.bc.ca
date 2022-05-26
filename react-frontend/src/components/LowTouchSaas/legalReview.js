@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { CollapseContentHeading } from '../StyleComponents/headings';
-import { HrefLink } from '../StyleComponents/htmlTags';
-import { saasGuideUrls } from '../../constants/urls';
 
 const LegalReview = () => {
   return (

@@ -4,9 +4,8 @@ import DigitalTable from './digitalFrameworkTable';
 import * as Scroll from 'react-scroll';
 import DocumentTitle from 'react-document-title';
 
-import { PageContainer } from '../StyleComponents/pageContent';
+import { PageContainer, DigitalBlock } from '../StyleComponents/pageContent';
 import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
-import { DigitalBlock } from '../StyleComponents/pageContent';
 
 const titles = [
   'Our Vision',

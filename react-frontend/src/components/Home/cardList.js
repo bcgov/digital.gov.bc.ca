@@ -2,7 +2,6 @@ import React from 'react';
 import InfoCard from './infocard';
 import { Col, Row } from 'react-flexbox-grid';
 import { PageContainer } from '../StyleComponents/pageContent';
-import { Title2 } from '../StyleComponents/headings';
 
 const digitalFrameworkGrey =
   require('../../images/pngIllustrations/digitalFrameworkGrey.png').default;

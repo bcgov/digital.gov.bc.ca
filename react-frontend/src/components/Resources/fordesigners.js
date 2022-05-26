@@ -2,7 +2,6 @@ import React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import HorizontalInfoCard from '../CaseStudies/horizontalInfoCard';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageSubHeading } from '../StyleComponents/headings';

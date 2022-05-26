@@ -62,10 +62,17 @@ docker-compose up
 
 ### React Frontend
 
-Assuming `docker-compose up` was run previously and the development preference is to install the frontend on bare metal, ensure your Node version matches what is used in `react-frontend/Dockerfile` and `package.json` and run the following:
+If `docker-compose up` was *not* run in the previous steps and the development preference is to install the frontend on bare metal, first ensure your Node version (`node --version`) matches what is used in [react-frontend/Dockerfile](react-frontend/Dockerfile) and [package.json](./react-frontend/package.json) and run the following: 
 
-```
-docker stop digital_frontend
+`docker-compose up mongo backend`
+
+Assuming `docker-compose up` *was* run previously :
+
+`docker stop digital_frontend`
+
+Open a new terminal: 
+
+```bash
 cd react-frontend
 npm install
 npm start
