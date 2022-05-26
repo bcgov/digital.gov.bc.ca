@@ -122,6 +122,7 @@ export const DigitalFrameworkToggle = styled.button.attrs({
 
 export const FloatParagraphRight = styled.p`
   float: right;
+  margin-top: 1em;
 `;
 
 export const FooterLink = styled.a.attrs({

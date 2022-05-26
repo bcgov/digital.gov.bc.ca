@@ -7,7 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { commonComponentLinks } from '../../constants/urls';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
-import { ResourcePageHeading } from '../StyleComponents/headings';
+import {
+  ResourcePageHeading,
+  ResourcePageSubHeading,
+} from '../StyleComponents/headings';
 import {
   StyledP,
   HrefLinkStandalone,
@@ -54,7 +57,7 @@ function CoCoCards() {
       <Query query={COCOS_QUERY}>
         {({ data: { coCos } }) => {
           return (
-            <Row style={{ marginBottom: '4px' }}>
+            <Row style={{ marginBottom: '1em' }}>
               {coCos.map((coCo, i) => {
                 return (
                   <Col sm={12} md={6} key={coCo.uid}>
@@ -79,9 +82,9 @@ function CoCoCards() {
       </Query>
       <Row>
         <Col sm={12}>
-          <ResourcePageHeading>
+          <ResourcePageSubHeading>
             Don't see what you are looking for?
-          </ResourcePageHeading>
+          </ResourcePageSubHeading>
           <StyledP>
             Share your request in the &nbsp;
             <HrefLink href={commonComponentLinks.ccRCChannel}>
