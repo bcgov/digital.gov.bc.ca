@@ -35,6 +35,12 @@ export const collabResources = {
   zoom: 'https://blog.zoom.us/a-message-to-our-users/',
 };
 
+export const commonComponentLinks = {
+  ccForm:
+    'https://chefs.nrs.gov.bc.ca/app/form/submit?f=7d6f623b-3def-4832-a29e-e35c1353aa1a',
+  ccRCChannel: 'https://chat.developer.gov.bc.ca/channel/common-components',
+};
+
 export const consideringLinks = {
   serviceDesign:
     'https://www2.gov.bc.ca/gov/content?id=4FB03369094247EF850BEFF8EFB201B3',

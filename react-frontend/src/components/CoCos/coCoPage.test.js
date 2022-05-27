@@ -1,18 +1,16 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { MockedProvider } from '@apollo/react-testing';
+import { cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import CoCoPage from './coCoPage';
 import COCO_QUERY from '../../queries/coCos/coCo';
 
-import { AppConfig } from '../../providers/AppConfig';
 import { renderWithRouterMatch } from '../../tests/helperFunctions/routerWrapper';
 
 const originalError = console.error;
 
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args) => {
     if (/Warning.*not wrapped in act/.test(args[0])) {
       return;
     }

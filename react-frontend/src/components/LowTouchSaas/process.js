@@ -3,7 +3,6 @@ import React from 'react';
 import CollapsedMenus from './collapsedMenus';
 import { Heading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
-import { PanelStyled, CollapseStyled } from '../StyleComponents/collapseMenu';
 import { PageContainer } from '../StyleComponents/pageContent';
 import { InlineImg } from '../StyleComponents/images';
 import { saasGuideUrls } from '../../constants/urls';

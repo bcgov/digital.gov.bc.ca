@@ -24,7 +24,7 @@ function filterBySeries(list) {
       fliteredList.push(event);
     } else if (
       seriesIDs.indexOf(event.SeriesUID) === -1 &&
-      event.SeriesUID != false
+      event.SeriesUID !== false
     ) {
       seriesIDs.push(event.SeriesUID);
       fliteredList.push(event);
