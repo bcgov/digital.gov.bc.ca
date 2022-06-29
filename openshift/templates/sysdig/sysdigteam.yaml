@@ -11,3 +11,5 @@ spec:
       role: ROLE_TEAM_MANAGER  
     - name: steve.chapman@gov.bc.ca
       role: ROLE_TEAM_READ
+    - name: kaegan.mandryk@gov.bc.ca
+      role: ROLE_TEAM_MANAGER
