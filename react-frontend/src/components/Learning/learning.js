@@ -30,14 +30,15 @@ function Learning() {
           <Row>
             <Col sm={12}>
               <SubHeading>Digital Academy LearningHub</SubHeading>
-              Visit the <HrefLink>Digital Academy LearningHub</HrefLink> page to sign-up for scheduled:
-              <StyledP>
+              <StyledP>Visit the <HrefLink href="https://learningcentre.gww.gov.bc.ca/learninghub/learning_partner/digital-academy/">Digital Academy LearningHub</HrefLink> page to sign-up for scheduled:
+              
                 <ul>
                   <li>internal courses related to Agile, OpenShift, Scrum Master, and Scrum Product Owner</li>
                   <li>external partner learning opportunities on a variety of topics</li>
                 </ul>
-              </StyledP>
+              
               For more information contact <HrefLink href="mailto:DigitalAcademy@gov.bc.ca">DigitalAcademy@gov.bc.ca</HrefLink>
+              </StyledP>
             </Col>
           </Row>
         </ContentBlockContainer>
