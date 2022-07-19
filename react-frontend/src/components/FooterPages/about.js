@@ -74,8 +74,8 @@ function About() {
         <p>
           If you have insights, stories or resources you think should be offered
           on digital.gov.bc.ca, please reach out to our Product Owner,{' '}
-          <HrefLink href="mailto:Arlen.Tees@gov.bc.ca" target="_blank">
-          Arlen.Tees@gov.bc.ca
+          <HrefLink href="mailto:Steve.Chapman@gov.bc.ca" target="_blank">
+            Steve.Chapman@gov.bc.ca
           </HrefLink>
           .
         </p>

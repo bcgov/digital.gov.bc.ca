@@ -79,7 +79,7 @@ export const designersUrls = {
   PlainLanguageGuide:
     'https://www2.gov.bc.ca/gov/content?id=250C67AD0B954DB9B0549EED6C36BDEF',
   ServiceDesignPhases:
-    'https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-content-design',
+    'https://www2.gov.bc.ca/gov/content?id=A9B5158C5DB5499A83BD046E94CBCBB1',
   ServiceWritingGuide:
     'https://www2.gov.bc.ca/gov/content?id=B990ECA6DAB94CD0BE2C1AE7BD439ADC',
   VisualDesignGuide:
