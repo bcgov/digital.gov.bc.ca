@@ -49,9 +49,12 @@ function About() {
           are:
         </p>
         <ul>
-          <li>Steve Chapman – Product Owner</li>
-          <li>Brad Payne – Senior Application Architect</li>
-          <li>Inderdeep Singh – UX Designer</li>
+          <li>Arlen Tees – Product Owner</li>
+          <li>Alex Struk – Senior Full Stack Developer</li>
+          <li>Jacklyn Pham – Lead, Human Centered Design</li>
+          <li>Joanne Li – UX &amp; Service Design Lead</li>
+          <li>Kaegan Mandryk – Full Stack Developer</li>
+          <li>Tejiri Emuveyan – Scrum Master</li>
         </ul>
         <Heading>Technology</Heading>
         <p>
