@@ -41,6 +41,51 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
+    id="digitalacademy"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+      >
+        <h3
+          className="sc-hKMtZM jXKzWj subHeading"
+        >
+          Digital Academy LearningHub
+        </h3>
+        <p
+          className="sc-GVOUr eBizha digitalParagraph"
+        >
+          Visit the 
+          <a
+            className="sc-gSAPjG jURRju externalLink"
+            href="https://learningcentre.gww.gov.bc.ca/learninghub/learning_partner/digital-academy/"
+          >
+            Digital Academy LearningHub
+          </a>
+           page to sign-up for scheduled:
+          <ul>
+            <li>
+              internal courses related to Agile, OpenShift, Scrum Master, and Scrum Product Owner
+            </li>
+            <li>
+              external partner learning opportunities on a variety of topics
+            </li>
+          </ul>
+          For more information contact 
+          <a
+            className="sc-gSAPjG jURRju externalLink"
+            href="mailto:DigitalAcademy@gov.bc.ca"
+          >
+            DigitalAcademy@gov.bc.ca
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
