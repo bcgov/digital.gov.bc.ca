@@ -6,7 +6,6 @@ on:
     types: [closed]
 jobs:
   if_merged:
-    if: github.event.pull_request.merged == true
     run:
       runs-on: ubuntu-18.04
       steps:
