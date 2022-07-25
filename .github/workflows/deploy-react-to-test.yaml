@@ -6,6 +6,7 @@ on:
     types: [closed]
 jobs:
   if_merged:
+    if: github.event.pull_request.merged == true
     run:
       runs-on: ubuntu-18.04
       steps:
@@ -17,7 +18,6 @@ jobs:
         uses: actions/github-script@v3
         with:
           github-token: ${{github.token}}
-          script: |
           script: |
             const prNumber = context.payload.number;
             core.exportVariable('PULL_NUMBER', prNumber);
