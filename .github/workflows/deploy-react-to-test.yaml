@@ -6,16 +6,15 @@ on:
     types: [closed]
 jobs:
   if_merged:
-    run:
-      runs-on: ubuntu-18.04
-      steps:
-        - uses: actions/checkout@v1
-        - uses: actions/setup-python@v2
-          with:
-            python-version: '3.8.1'
-        - uses: actions/github-script@v3
-          with:
-            github-token: ${{github.token}}
-            script: |
-              const prNumber = context.payload.number;
-              core.exportVariable('PULL_NUMBER', prNumber);
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.1'
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{github.token}}
+          script: |
+            const prNumber = context.payload.number;
+            core.exportVariable('PULL_NUMBER', prNumber);
