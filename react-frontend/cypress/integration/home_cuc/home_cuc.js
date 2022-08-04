@@ -1,4 +1,5 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps'
+
 When('I visit home screen', () => {
     cy.visit('/');
 })
