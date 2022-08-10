@@ -7,6 +7,10 @@
   * [Building react-frontend in OpenShift Local](#building-react-frontend-in-openshift-local)
   * [Deploying react-frontend in Openshift Local](#deploying-react-frontend-in-openshift-local)
   * [Debugging site going down on re-deployment](#debugging-site-going-down-on-re-deployment)
+  * [Running MongoDB server and Strapi in OpenShift Local](#running-mongodb-server-and-strapi-in-openshift-local)
+    + [Build Strapi](#build-strapi)
+    + [Deploy Strapi](#deploy-strapi)
+    + [Deploy Mongo](#deploy-mongo)
 - [Useful commands](#useful-commands)
 
 ## Running in OpenShift Local
