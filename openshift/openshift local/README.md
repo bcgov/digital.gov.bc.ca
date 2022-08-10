@@ -430,6 +430,143 @@ Note the presence of `Scaled older deployment digital-gov-frontend-prod-xxy down
 The events cannot be viewed as they expired. Will need to re-publish to see the events for more clues, but it's clear it's a failure of a replication controller caused by "newer deployment was found running".
 
 
+### Running MongoDB server and Strapi in OpenShift Local
+#### Build Strapi
+From build_strapi.yaml:
+
+```
+oc process -n "{{ tools_namespace }}" -f "../openshift/templates/strapi/bc.yaml" {{ build_params }} | oc apply -n "{{ tools_namespace }}" -f -
+...
+- name: start build
+  shell: oc -n "{{ tools_namespace }}" start-build {{ strapi_infra_name }}-{{ version }}
+```
+Becomes:
+
+```
+oc process -n "c0cce6-tools" -f "../openshift/templates/strapi/bc.yaml" -p IMAGE_TAG={{ version }} \
+-p GIT_REF={{ GIT_REF }} \
+-p NAME={{ strapi_infra_name }} \
+-p SUFFIX={{ version }} \
+-p GIT_REPO=https://github.com/{{ github_owner}}/{{ github_repo}} \
+-p PULL_REQUEST_NUMBER={{ PR }}  | oc apply -n "c0cce6-tools" -f -
+```
+
+Becomes:
+```
+oc process -n "c0cce6-tools" -f "openshift/templates/strapi/bc.yaml" -p IMAGE_TAG=prod -p GIT_REF=pull/1077/head -p NAME=strapi -p SUFFIX=prod -p GIT_REPO=https://github.com/bcgov/digital.gov.bc.ca -p PULL_REQUEST_NUMBER=1077  | oc apply -n "c0cce6-tools" -f -
+```
+
+Should output:
+```
+imagestream.image.openshift.io/node created
+buildconfig.build.openshift.io/strapi-prod created
+imagestream.image.openshift.io/strapi created
+```
+#### Deploy Strapi
+From tasks/deploy_strapi_dev_test_prod.yaml
+
+```
+oc process -n "{{ image_namespace }}" -f "../openshift/templates/strapi/dc.yaml" {{ deploy_params }} | 
+      oc apply -n "{{ namespace }}" -f -
+```
+
+Becomes:
+
+```
+oc process -n "c0cce6-tools" -f "../openshift/templates/strapi/dc.yaml" -p NAME={{ strapi_infra_name }} \
+-p IMAGE_NAMESPACE={{ image_namespace }} \
+-p IMAGE_STREAM={{ strapi_infra_name }} \
+-p IMAGE_TAG={{ version }} \
+-p SUFFIX={{ suffix }} \
+-p MONGO_SECRET_NAME=mongodb-creds \
+-p PULL_REQUEST_NUMBER={{ PR }} | oc apply -n "c0cce6-prod" -f -
+```
+Becomes:
+
+```
+oc process -n "c0cce6-tools" -f "openshift/templates/strapi/dc.yaml" -p NAME=strapi -p IMAGE_NAMESPACE=c0cce6-tools -p IMAGE_STREAM=strapi -p IMAGE_TAG=prod -p SUFFIX=prod -p MONGO_SECRET_NAME=mongodb-creds -p PULL_REQUEST_NUMBER=1077 | oc apply -n "c0cce6-prod" -f -
+```
+
+Should output:
+```
+route.route.openshift.io/strapi-prod created
+persistentvolumeclaim/strapi-media-pvc created
+service/strapi-prod created
+deploymentconfig.apps.openshift.io/strapi-prod created
+```
+
+Before we can build strapi image, we need to create a secret to access 
+
+Now build strapi image:
+```
+oc -n "{{ tools_namespace }}" start-build {{ strapi_infra_name }}-{{ version }}
+```
+
+Becomes:
+```
+oc -n "c0cce6-tools" start-build strapi-prod --follow
+```
+
+View build status:
+oc describe build strapi-prod -n "c0cce6-tools"
+
+
+May get out of memory error, reduce memory required in buildconfig through the webui (check events tab for build for errors).
+
+#### Deploy Mongo
+From deploy-mongo.yaml:
+
+```
+- name: deploy {{ infra_name }} of PR {{ PR }} in {{ namespace }} namespace
+  shell: >
+    oc process -n "{{ namespace }}" -f "../openshift/templates/mongo/stateful-set.yaml" {{ deploy_params }} | 
+    oc apply -n "{{ namespace }}" -f -
+  vars:
+    deploy_params: "{{ lookup('template', './templates/deploy_mongo.param.j2') }}"
+```
+
+Becomes:
+```
+oc process -n "{{ namespace }}" -f "openshift/templates/mongo/stateful-set.yaml" {{ deploy_params }} | 
+    oc apply -n "{{ namespace }}" -f -
+```
+
+Becomes:
+```
+oc process -n "c0cce6-prod" -f "openshift/templates/mongo/stateful-set.yaml" -p MEMORY_REQUEST=256Mi \
+-p MEMORY_LIMIT=512Mi \
+-p CPU_REQUEST=500m \
+-p CPU_LIMIT=1 \
+-p VOLUME_CAPACITY=512Mi \
+-p SC_MONGO=netapp-file-standard \
+-p MONGODB_SERVICE_NAME={{ infra_name }} \
+-p MONGODB_SECRET_NAME={{ infra_name }} \
+-p MONGODB_REPLICAS=3 \
+-p MONGODB_IMAGE=docker-registry.default.svc:5000/openshift/mongodb \
+-p MONGODB_IMAGE_TAG=3.6 \
+-p SUFFIX={{ suffix }} \
+-p PULL_REQUEST_NUMBER={{ PR }} | 
+    oc apply -n "c0cce6-prod" -f -
+```
+
+Becomes:
+```
+oc process -n "c0cce6-prod" -f "openshift/templates/mongo/stateful-set.yaml" -p MEMORY_REQUEST=256Mi -p MEMORY_LIMIT=512Mi -p CPU_REQUEST=500m -p CPU_LIMIT=1 -p VOLUME_CAPACITY=512Mi -p MONGODB_SERVICE_NAME=mongo-ha -p MONGODB_SECRET_NAME=mongo-ha -p MONGODB_REPLICAS=3 -p MONGODB_IMAGE=docker-registry.default.svc:5000/openshift/mongodb -p MONGODB_IMAGE_TAG=3.6 -p VOLUME_STORAGE_CLASS="" | oc apply -n "c0cce6-prod" -f -
+```
+
+Should output:
+```
+secret/mongo-ha created
+service/mongo-ha created
+service/mongo-ha-internal created
+statefulset.apps/mongo-ha created
+```
+
+Rollout strapi:
+
+`oc rollout latest dc/strapi-prod`
+
+
 ## Useful commands
 
 View imagestream:
