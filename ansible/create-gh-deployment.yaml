@@ -12,6 +12,8 @@
       # the amount of replicas to look for when considered ready!
 
     tasks:
+      - name: Checking PR existence
+        include_tasks: ./tasks/check_pr_exists.yaml
       - name: Get PR data
         uri:
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
@@ -35,7 +37,13 @@
             Authorization: token {{ GITHUB_TOKEN }}
             Accept: application/vnd.github.ant-man-preview+json
         register: deployment
+      - name: print to stdout
+        command: echo "{{ deployment.json }}"
+        register: hello
 
+      - debug: msg="{{ hello.stdout }}"
+
+      - debug: msg="{{ hello.stderr }}"
       - name: Setting deployment status of deployment "{{ deployment.json.id }}" to pending
         uri:
           url: "https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses"
