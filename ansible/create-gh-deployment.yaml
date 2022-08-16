@@ -12,8 +12,6 @@
       # the amount of replicas to look for when considered ready!
 
     tasks:
-      - name: Checking PR existence
-        include_tasks: ./tasks/check_pr_exists.yaml
       - name: Get PR data
         uri:
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
