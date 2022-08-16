@@ -52,6 +52,8 @@ cp apple-silicon.override.yml docker-compose.override.yml
 
 `docker-compose up`
 
+NOTE: for development on a computer using apple silicon chips, add `--build-arg applem1=1`
+
 To run without a console log (detached mode) add the `-d` flag. When new npm/yarn packages have been installed the project may need to be rebuilt using:
 
 ```
