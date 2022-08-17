@@ -7,9 +7,11 @@ spec:
   team: 
     description: The Sysdig Team for the Digital.gov Namespaces
     users:
-    - name: jonathan.sharman@gov.bc.ca
-      role: ROLE_TEAM_MANAGER
     - name: brad.payne@gov.bc.ca
       role: ROLE_TEAM_MANAGER  
-    - name: steve.chapman@gov.bc.ca
+    - name: arlen.tees@gov.bc.ca
       role: ROLE_TEAM_READ
+    - name: kaegan.mandryk@gov.bc.ca
+      role: ROLE_TEAM_MANAGER
+    - name: alex.struk@gov.bc.ca
+      role: ROLE_TEAM_MANAGER

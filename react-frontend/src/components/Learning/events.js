@@ -4,7 +4,6 @@ import EventCards from './eventCards';
 
 import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { Heading } from '../StyleComponents/headings';
-import { StyledP, HrefLinkStandalone } from '../StyleComponents/htmlTags';
 
 function Events() {
   return (

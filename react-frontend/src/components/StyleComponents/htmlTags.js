@@ -120,6 +120,11 @@ export const DigitalFrameworkToggle = styled.button.attrs({
   padding-right: 0;
 `;
 
+export const FloatParagraphRight = styled.p`
+  float: right;
+  margin-top: 1em;
+`;
+
 export const FooterLink = styled.a.attrs({
   className: 'internalLink',
 })`

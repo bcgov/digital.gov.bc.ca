@@ -33,7 +33,7 @@ oc apply -f -
 The OCP `builder` will need to pull a base image from the RedHat Container Registry; you'll see it as the first line in the [Dockerfile](./Dockerfile):
 
 ```console
-FROM registry.redhat.io/rhel8/nodejs-12:latest
+FROM registry.redhat.io/rhel8/nodejs-14:1-72
 ```
 
 To let your `builder` do this, sign-up for a *free* RedHat Developer to [this site](https://catalog.redhat.com/software/containers/search). Once you have credentials, [create a secret](https://docs.openshift.com/container-platform/3.11/dev_guide/managing_images.html#allowing-pods-to-reference-images-from-other-secured-registries) the builder can use to pull image from the catalog:

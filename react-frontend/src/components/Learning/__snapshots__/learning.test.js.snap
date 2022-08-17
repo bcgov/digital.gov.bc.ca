@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
+    className="sc-dIouRR sc-hHLeRK dwnlAr coahBq horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,15 +13,15 @@ exports[`renders correctly 1`] = `
         className="col-sm-12 col-md-6"
       >
         <div
-          className="sc-fmciRz lMhlw sideImageText"
+          className="sc-eXBvqI ixCBHy sideImageText"
         >
           <h1
-            className="sc-eXlEPa iuukFs bannerTitle"
+            className="sc-iFwKgL mHHRz bannerTitle"
           >
             Learning
           </h1>
           <div
-            className="sc-iFMAIt iaa-drX subTitle"
+            className="sc-iqGgem iAeeNr subTitle"
           >
              
             Understand and adopt new approaches to teamwork and technology.
@@ -34,13 +34,58 @@ exports[`renders correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-gjNHFA iFVmcx sideImage"
+          className="sc-fmrZth cWMxDw sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
+    id="digitalacademy"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+      >
+        <h3
+          className="sc-hKMtZM jXKzWj subHeading"
+        >
+          Digital Academy LearningHub
+        </h3>
+        <p
+          className="sc-GVOUr eBizha digitalParagraph"
+        >
+          Visit the 
+          <a
+            className="sc-gSAPjG jURRju externalLink"
+            href="https://learningcentre.gww.gov.bc.ca/learninghub/learning_partner/digital-academy/"
+          >
+            Digital Academy LearningHub
+          </a>
+           page to sign-up for scheduled:
+          <ul>
+            <li>
+              internal courses related to Agile, OpenShift, Scrum Master, and Scrum Product Owner
+            </li>
+            <li>
+              external partner learning opportunities on a variety of topics
+            </li>
+          </ul>
+          For more information contact 
+          <a
+            className="sc-gSAPjG jURRju externalLink"
+            href="mailto:DigitalAcademy@gov.bc.ca"
+          >
+            DigitalAcademy@gov.bc.ca
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
@@ -50,7 +95,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDKAQ jZzBlZ heading"
+          className="sc-gsnTZi hgaMBt heading"
         >
           Courses
         </h2>
@@ -61,7 +106,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
     id="standards"
   >
     <div
@@ -71,7 +116,7 @@ exports[`renders correctly 1`] = `
         className="col-sm-12"
       >
         <h2
-          className="sc-gsDKAQ jZzBlZ heading"
+          className="sc-gsnTZi hgaMBt heading"
         >
           Events
         </h2>
@@ -82,7 +127,7 @@ exports[`renders correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
+    className="sc-dIouRR sc-hHLeRK dwnlAr coahBq horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <p>
@@ -91,7 +136,7 @@ exports[`renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="sc-dJjYzT sc-hGPBjI gTcTjh jgRVyK horizontalAlignment bannerCenterText container"
+      className="sc-dIouRR sc-hHLeRK dwnlAr coahBq horizontalAlignment bannerCenterText container"
       id="main-content-anchor"
     >
       <div
@@ -101,10 +146,10 @@ exports[`renders correctly 1`] = `
           className="col-xs-12 col-lg-6"
         >
           <div
-            className="sc-giYglK dRdoNf"
+            className="sc-gicCDI iXnOfF"
           >
             <h2
-              className="sc-gsDKAQ jZzBlZ heading"
+              className="sc-gsnTZi hgaMBt heading"
             >
               The Exchange Podcast 
               <svg
@@ -135,13 +180,13 @@ exports[`renders correctly 1`] = `
         >
           <img
             alt=""
-            className="sc-lkgTHX kcCZtl sideImage"
+            className="sc-jmNpzm nUyQZ sideImage"
           />
         </div>
       </div>
     </div>
     <div
-      className="sc-dJjYzT sc-kfPuZi gTcTjh bJtakY horizontalAlignment contentBlockContainer container"
+      className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
       id="podcasts"
     >
       <div
@@ -159,7 +204,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <h3
-            className="sc-hKwDye fbmtGU subHeading"
+            className="sc-hKMtZM jXKzWj subHeading"
             style={
               Object {
                 "marginBottom": "0",
@@ -169,7 +214,7 @@ exports[`renders correctly 1`] = `
             Recent Episodes
           </h3>
           <a
-            className="sc-gSQFLo bsvMNh externalLink"
+            className="sc-lbxAil djTiYF externalLink"
             href="https://bcdevexchange.libsyn.com/"
             rel="noopener noreferrer"
             style={
@@ -218,7 +263,7 @@ exports[`renders correctly 1`] = `
         }
       >
         <div
-          className="ant-collapse-item sc-cbTzjv gdJPRA PanelStyled"
+          className="ant-collapse-item sc-hjriPb cDDwZC PanelStyled"
         >
           <div
             aria-expanded={false}

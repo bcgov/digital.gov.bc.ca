@@ -2,14 +2,14 @@
   - hosts: localhost
     gather_facts: no
     vars:
-      version: "{{ lookup('template', './templates/pr_tag.j2') }}"
-      deploy: false
       image_namespace: "{{ tools_namespace }}"
-      suffix: "{{ version }}"
+      namespace: "{{ test_namespace }}"
+      # in test and prod namespaces they only house one tag: prod | test
+      new_image_tag: "{{ test_image_tag }}"
+      suffix: "{{ new_image_tag }}"
+      version: "{{ new_image_tag }}"
       infra_name: "{{ react_infra_name }}"
     tasks:
-      - name: Pre checks
-        include_tasks: ./tasks/check_pr_exists.yaml
 
       - name: Check if valid author
         include_tasks: ./tasks/check_if_valid_pr_author.yaml
@@ -28,4 +28,9 @@
         when: 
           - should_build
           - is_valid_author
+
+      - name: Wait for build to complete
+        include_tasks: ./tasks/wait_for_build_to_complete_react.yaml
+
+
 

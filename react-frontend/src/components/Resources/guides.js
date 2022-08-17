@@ -6,8 +6,6 @@ import { ContentBlockContainer } from '../StyleComponents/pageContent';
 import { ResourcePageHeading } from '../StyleComponents/headings';
 import { digitalCardLinks } from '../../constants/urls';
 
-const videoCommsImg = require('../../images/videocomms.png').default;
-
 function Guides() {
   return (
     <ContentBlockContainer id="guides">

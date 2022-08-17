@@ -2,20 +2,77 @@
 
 exports[`Renders without crashing if not props are passed in 1`] = `
 <div
-  className="sc-bXTejn sc-dFtzxp eWHalB kwCcRj horizontalAlignment contentBlockContainer container"
+  className="sc-eFWqGp sc-brCFrO kSdxHO JiLeV horizontalAlignment contentBlockContainer container"
   id="standards"
 >
   <div
     className="row"
   >
     <div
-      className="col-sm-12"
+      className="col-sm-4"
     >
       <h2
-        className="sc-jWUzzU kUeAgr resourceHeading"
+        className="sc-eEOqmf hsYsop resourceHeading"
       >
         Explore
       </h2>
+    </div>
+    <div
+      className="col-sm-8"
+    >
+      <p
+        className="sc-idiyUo iDnwWh"
+      >
+        <a
+          className="sc-bBrHrO bEUVrU externalLink"
+          href="https://chefs.nrs.gov.bc.ca/app/form/submit?f=7d6f623b-3def-4832-a29e-e35c1353aa1a"
+          target="_blank"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-plus-circle fa-lg"
+            data-icon="plus-circle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={
+              Object {
+                "marginRight": "0.3em",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+          Add your Common Component
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-external-link-alt fa-xs"
+            data-icon="external-link-alt"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={
+              Object {
+                "marginLeft": "0.3em",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </a>
+      </p>
     </div>
   </div>
   <p>
@@ -27,18 +84,64 @@ exports[`Renders without crashing if not props are passed in 1`] = `
     <div
       className="col-sm-12"
     >
+      <h3
+        className="sc-fmRtwQ csgYhl resourceSubHeading"
+      >
+        Don't see what you are looking for?
+      </h3>
+      <p
+        className="sc-himrzO dSCwLQ digitalParagraph"
+      >
+        Share your request in the  
+        <a
+          className="sc-fLlhyt jpdgkl externalLink"
+          href="https://chat.developer.gov.bc.ca/channel/common-components"
+        >
+          Common Components Channel
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-external-link-alt fa-xs"
+            data-icon="external-link-alt"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={
+              Object {
+                "marginLeft": "0.3em",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </a>
+          on Rocket.Chat (requires IDIR or GitHub account to login).
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12"
+    >
       <h2
-        className="sc-jWUzzU kUeAgr resourceHeading"
+        className="sc-eEOqmf hsYsop resourceHeading"
       >
         Support
       </h2>
       <p
-        className="sc-jJoQJp euzhSN digitalParagraph"
+        className="sc-himrzO dSCwLQ digitalParagraph"
       >
         Contact the Common Components team:
          
         <a
-          className="sc-fKVqWL OCgbU externalLink"
+          className="sc-bBrHrO bEUVrU externalLink"
           href="mailto:CITZAS@gov.bc.ca"
         >
           CITZAS@gov.bc.ca

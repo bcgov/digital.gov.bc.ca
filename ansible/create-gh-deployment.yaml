@@ -12,8 +12,6 @@
       # the amount of replicas to look for when considered ready!
 
     tasks:
-      - name: Checking PR existence
-        include: ./tasks/check_pr_exists.yaml
       - name: Get PR data
         uri:
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/pulls/{{ PR }}
@@ -25,7 +23,7 @@
         set_fact:
           ref: "{{pull_request.json.head.ref}}"
       - name: Canceling previous deployments
-        include: ./tasks/cancel_previous_gh_deployments.yaml
+        include_tasks: ./tasks/cancel_previous_gh_deployments.yaml
       - name: Creating Deployment for "{{ gh_env }}" for "{{ ref }}"
         uri: 
           url: https://api.github.com/repos/{{ github_owner }}/{{ github_repo }}/deployments
@@ -37,13 +35,19 @@
             Authorization: token {{ GITHUB_TOKEN }}
             Accept: application/vnd.github.ant-man-preview+json
         register: deployment
+      - name: print to stdout
+        command: echo "{{ deployment.json }}"
+        register: hello
 
+      - debug: msg="{{ hello.stdout }}"
+
+      - debug: msg="{{ hello.stderr }}"
       - name: Setting deployment status of deployment "{{ deployment.json.id }}" to pending
         uri:
           url: "https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses"
           method: POST
           body: 
-            description: "Deployment of {{ ref }} is now pending, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            description: "Deployment is now pending, you can view the logs in detail with oc logs dc/'react_infra_name'-'suffix'"
             state: pending
             environment: "{{ gh_env }}"
           status_code: 201
@@ -53,7 +57,7 @@
             Accept: application/vnd.github.ant-man-preview+json
 
       - name: waiting for deployment
-        include: ./tasks/wait_for_rollout.yaml
+        include_tasks: ./tasks/wait_for_rollout.yaml
         vars:
           kind: DeploymentConfig
           name: "{{ react_infra_name }}-{{ suffix }}"
@@ -78,7 +82,7 @@
           url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses
           method: POST
           body: 
-            description: "Deployment of {{ ref }} is now succeeded, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            description: "Deployment is now succeeded, you can view the logs in detail with oc logs dc/'react_infra_name'-'suffix'"
             state: success
             environment: "{{ gh_env }}"
             environment_url: "https://{{ react_infra_name }}-{{ suffix }}-{{ namespace }}.apps.silver.devops.gov.bc.ca"

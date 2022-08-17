@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Row, Col } from 'react-flexbox-grid';
 
 import {

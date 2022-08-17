@@ -49,11 +49,12 @@ function About() {
           are:
         </p>
         <ul>
-          <li>Steve Chapman – Product Owner</li>
-          <li>Jonathan Sharman – Full-Stack Developer</li>
-          <li>Nanthini Mathavan – Scrum Master</li>
-          <li>Inderdeep Singh – UX Designer</li>
-          <li>Mark Wilson – Researcher, Service Designer</li>
+          <li>Arlen Tees – Product Owner</li>
+          <li>Alex Struk – Senior Full Stack Developer</li>
+          <li>Jacklyn Pham – Lead, Human Centered Design</li>
+          <li>Joanne Li – UX &amp; Service Design Lead</li>
+          <li>Kaegan Mandryk – Full Stack Developer</li>
+          <li>Tejiri Emuveyan – Scrum Master</li>
         </ul>
         <Heading>Technology</Heading>
         <p>
@@ -73,8 +74,8 @@ function About() {
         <p>
           If you have insights, stories or resources you think should be offered
           on digital.gov.bc.ca, please reach out to our Product Owner,{' '}
-          <HrefLink href="mailto:Steve.Chapman@gov.bc.ca" target="_blank">
-            Steve.Chapman@gov.bc.ca
+          <HrefLink href="mailto:Arlen.Tees@gov.bc.ca" target="_blank">
+          Arlen.Tees@gov.bc.ca
           </HrefLink>
           .
         </p>

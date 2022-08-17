@@ -3,7 +3,7 @@
 exports[`renders snapshot correctly 1`] = `
 <div>
   <div
-    className="sc-dlVxhl sc-kfPuZi cNvmXg ljPGar horizontalAlignment bannerCenterText container"
+    className="sc-dmRaPn sc-kgflAQ kihIuQ dcMYAs horizontalAlignment bannerCenterText container"
     id="main-content-anchor"
   >
     <div
@@ -13,10 +13,10 @@ exports[`renders snapshot correctly 1`] = `
         className="col-xs-12 col-lg-6"
       >
         <div
-          className="sc-bYoBSM fHabKU"
+          className="sc-bZkfAO jfxjvN"
         >
           <h2
-            className="sc-hKwDye bzJXaO heading"
+            className="sc-hKMtZM jAqLqV heading"
           >
             The Exchange Podcast 
             <svg
@@ -47,13 +47,13 @@ exports[`renders snapshot correctly 1`] = `
       >
         <img
           alt=""
-          className="sc-bdvvtL kOJjJb sideImage"
+          className="sc-bczRLJ gquPqQ sideImage"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-dlVxhl sc-bBHxTw cNvmXg iMqnzo horizontalAlignment contentBlockContainer container"
+    className="sc-dmRaPn sc-bBrHrO kihIuQ ipZLua horizontalAlignment contentBlockContainer container"
     id="podcasts"
   >
     <div
@@ -71,7 +71,7 @@ exports[`renders snapshot correctly 1`] = `
         }
       >
         <h3
-          className="sc-jRQBWg fyGIbv subHeading"
+          className="sc-jSMfEi betwMs subHeading"
           style={
             Object {
               "marginBottom": "0",
@@ -81,7 +81,7 @@ exports[`renders snapshot correctly 1`] = `
           Recent Episodes
         </h3>
         <a
-          className="sc-hiwPVj keygff externalLink"
+          className="sc-ehmTmK kLStQV externalLink"
           href="https://bcdevexchange.libsyn.com/"
           rel="noopener noreferrer"
           style={
@@ -130,7 +130,7 @@ exports[`renders snapshot correctly 1`] = `
       }
     >
       <div
-        className="ant-collapse-item sc-jJoQJp dahDuX PanelStyled"
+        className="ant-collapse-item sc-jIZahH jPgYvh PanelStyled"
       >
         <div
           aria-expanded={false}

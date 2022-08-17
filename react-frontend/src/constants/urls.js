@@ -35,6 +35,12 @@ export const collabResources = {
   zoom: 'https://blog.zoom.us/a-message-to-our-users/',
 };
 
+export const commonComponentLinks = {
+  ccForm:
+    'https://chefs.nrs.gov.bc.ca/app/form/submit?f=7d6f623b-3def-4832-a29e-e35c1353aa1a',
+  ccRCChannel: 'https://chat.developer.gov.bc.ca/channel/common-components',
+};
+
 export const consideringLinks = {
   serviceDesign:
     'https://www2.gov.bc.ca/gov/content?id=4FB03369094247EF850BEFF8EFB201B3',
@@ -73,7 +79,7 @@ export const designersUrls = {
   PlainLanguageGuide:
     'https://www2.gov.bc.ca/gov/content?id=250C67AD0B954DB9B0549EED6C36BDEF',
   ServiceDesignPhases:
-    'https://www2.gov.bc.ca/gov/content?id=A9B5158C5DB5499A83BD046E94CBCBB1',
+    'https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/service-content-design',
   ServiceWritingGuide:
     'https://www2.gov.bc.ca/gov/content?id=B990ECA6DAB94CD0BE2C1AE7BD439ADC',
   VisualDesignGuide:
