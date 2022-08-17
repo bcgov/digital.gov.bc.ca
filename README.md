@@ -34,18 +34,25 @@ Contact the product owner, Arlen.Tees@gov.bc.ca, if you have questions.
 ## How to run the project locally
 
 NOTE: For full local development see [next section](#local-development).
-NOTE 2: Often the first time these commands are run the images take too long to download and the commands can time out.  You may need to run the `build` and `up` command multiple times to get everything working. 
+NOTE 2: Often the first time these commands are run the images take too long to download and the commands can time out.  You may need to run the `build` and `up` command multiple times to get everything working.
 
 > requires Docker (or Podman) and docker-compose
-1. Environment variables, adjust as necessary for your environment. At the root of the project run the following: 
+1. Environment variables, adjust as necessary for your environment. At the root of the project run the following:
 ```
 cp .env.example .env
 cp strapi-app/.env.example strapi-app/.env
 ```
 
+NOTE: for development on a computer using apple silicon chips, do the following:
+```
+cp apple-silicon.override.yml docker-compose.override.yml
+```
+
 2. Build, (re)create, start and attach containers:
 
 `docker-compose up`
+
+NOTE: for development on a computer using apple silicon chips, add `--build-arg applem1=1`
 
 To run without a console log (detached mode) add the `-d` flag. When new npm/yarn packages have been installed the project may need to be rebuilt using:
 
@@ -62,7 +69,7 @@ docker-compose up
 
 ### React Frontend
 
-If `docker-compose up` was *not* run in the previous steps and the development preference is to install the frontend on bare metal, first ensure your Node version (`node --version`) matches what is used in [react-frontend/Dockerfile](react-frontend/Dockerfile) and [package.json](./react-frontend/package.json) and run the following: 
+If `docker-compose up` was *not* run in the previous steps and the development preference is to install the frontend on bare metal, first ensure your Node version (`node --version`) matches what is used in [react-frontend/Dockerfile](react-frontend/Dockerfile) and [package.json](./react-frontend/package.json) and run the following:
 
 `docker-compose up mongo backend`
 
@@ -70,7 +77,7 @@ Assuming `docker-compose up` *was* run previously :
 
 `docker stop digital_frontend`
 
-Open a new terminal: 
+Open a new terminal:
 
 ```bash
 cd react-frontend
@@ -94,14 +101,14 @@ When the strapi and react containers are all running, navigate to [http://localh
 
 When creating content types the permissions for `count`, `create`, `delete`, `find`, `findone`, and `update` are set to false.  You will need to set these before the front end is able to render them.  To do this, navigate to settings->USERS & PERMISSIONS PLUGIN -> roles -> public. (Strapi docs go into more detail on these permissions). If you are unsure of which permissions are needed for the app to work properly, navigate to the same screen in  the`dev` or `test` strapi instance and copy them.
 
-TODO:  These steps could be automated by creating a script to seed the local database.  
+TODO:  These steps could be automated by creating a script to seed the local database.
 
 ## Other docs
 
 There is more documentation in the following places
 
 - `/docs/` folder
-- `/react-frontend/README.md` 
+- `/react-frontend/README.md`
 - `/strapi-app/README.md`
 - `/ansible/README.md`
 
@@ -114,4 +121,4 @@ There is more documentation in the following places
 ### Action docs
 
 - Zap scanner docs can be found [Here](docs/zapScanning.md)
-- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md) 
+- Broken Link Checker documentation [Here](docs/BrokenLinkCheckerDocs.md)
