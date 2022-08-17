@@ -47,7 +47,7 @@
           url: "https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses"
           method: POST
           body: 
-            description: "Deployment of {{ ref }} is now pending, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            description: "Deployment is now pending, you can view the logs in detail with oc logs dc/'react_infra_name'-'suffix'"
             state: pending
             environment: "{{ gh_env }}"
           status_code: 201
@@ -82,7 +82,7 @@
           url: https://api.github.com/repos/bcgov/digital.gov.bc.ca/deployments/{{ deployment.json.id }}/statuses
           method: POST
           body: 
-            description: "Deployment of {{ ref }} is now succeeded, you can view the logs in detail with oc logs dc/{{ react_infra_name }}-{{ suffix }}"
+            description: "Deployment is now succeeded, you can view the logs in detail with oc logs dc/'react_infra_name'-'suffix'"
             state: success
             environment: "{{ gh_env }}"
             environment_url: "https://{{ react_infra_name }}-{{ suffix }}-{{ namespace }}.apps.silver.devops.gov.bc.ca"
