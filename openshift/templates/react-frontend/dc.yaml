@@ -130,7 +130,7 @@ objects:
         handle /digital-trust/demo* {
           uri strip_prefix /digital-trust/demo
           reverse_proxy https://bc-wallet-demo.apps.silver.devops.gov.bc.ca {
-            header_up Host {http.reverse_proxy.upstream.host}
+            header_up Host bc-wallet-demo.apps.silver.devops.gov.bc.ca
             flush_interval -1
           }
         }  
