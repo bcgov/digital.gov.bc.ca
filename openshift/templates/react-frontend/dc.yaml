@@ -125,7 +125,15 @@ objects:
             flush_interval -1
           }
         }
-    
+
+
+        handle /digital-trust/showcase* {
+          reverse_proxy https://bc-wallet-demo.apps.silver.devops.gov.bc.ca {
+            header_up Host {http.reverse_proxy.upstream.host}
+            flush_interval -1
+          }
+        }  
+
         handle /digital-trust* {
           uri strip_prefix /digital-trust
           reverse_proxy https://bcdigitaltrust.info {
