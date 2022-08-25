@@ -59,8 +59,11 @@ function About() {
         <Heading>Documentation</Heading>
         <p>
           Curious about the work we're engaging in? Visit our{' '}
-          <HrefLink href={aboutLinks.Jira} target="_blank">
-            Jira{linkIcon}
+          <HrefLink href={aboutLinks.JiraDashboard} target="_blank">
+            Jira Dashboard{linkIcon}
+          </HrefLink> to view our current sprint progress, or view our current issue list{' '}
+          <HrefLink href={aboutLinks.JiraIssues} target="_blank">
+            here{linkIcon}
           </HrefLink>
           . Our documentation is open too - check out our {' '}
           <HrefLink href={aboutLinks.Confluence} target="_blank">
