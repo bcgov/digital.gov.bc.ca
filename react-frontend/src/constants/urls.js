@@ -1,6 +1,8 @@
 export const aboutLinks = {
   Strapi: 'https://strapi.io',
   gitHub: 'https://github.com/bcgov/digital.gov.bc.ca',
+  Jira:   'https://bcdevex.atlassian.net/jira/software/c/projects/DIGIMOD/issues',
+  Confluence: 'https://bcdevex.atlassian.net/wiki/spaces/CCP/pages/957415446/Modernization+Acceleration'
 };
 
 export const assemblingLinks = {
