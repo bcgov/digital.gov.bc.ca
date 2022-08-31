@@ -21,7 +21,7 @@ We are building the next version of [Digital.gov.bc.ca](https://digital.gov.bc.c
 
 The project is currently being maintained by the Digital Modernization and Acceleration team who continues to build this website and associated resources in collaboration with partners across the public service. We are taking an Agile Scrum product delivery approach.
 
-You can see our backlog in the open by clicking on the issues tab above.
+You can see our backlog in the open by checking out our [Jira](https://bcdevex.atlassian.net/jira/software/c/projects/DIGIMOD/issues) and see our current sprint progress [here](https://bcdevex.atlassian.net/jira/dashboards/10105). Any additional documentation can be found on [Confluence](https://bcdevex.atlassian.net/wiki/spaces/CCP/pages/957415446/Modernization+Acceleration)
 
 Contact the product owner, Arlen.Tees@gov.bc.ca, if you have questions.
 
