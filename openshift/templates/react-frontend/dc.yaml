@@ -236,25 +236,7 @@ objects:
         pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
       name: ${NAME}-${SUFFIX}
-  - apiVersion: route.openshift.io/v1
-    kind: Route
-    spec:
-      host: bcdevexchange.org
-      port:
-        targetPort: 4040-4040
-      to:
-        kind: Service
-        name: ${NAME}-${SUFFIX}
-        weight: 100
-      wildcardPolicy: None
-    metadata:
-      annotations:
-        openshift.io/host.generated: 'true'
-      labels:
-        app: ${NAME}-${SUFFIX}
-        version: ${IMAGE_TAG}
-        group: ${NAME}
-      name: bcdevexchange
+  
 parameters:
 - name: NAMESPACE
   required: true
