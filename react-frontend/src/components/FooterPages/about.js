@@ -56,6 +56,21 @@ function About() {
           <li>Kaegan Mandryk – Full Stack Developer</li>
           <li>Tejiri Emuveyan – Scrum Master</li>
         </ul>
+        <Heading>Documentation</Heading>
+        <p>
+          Curious about the work we're engaging in? Visit our{' '}
+          <HrefLink href={aboutLinks.JiraDashboard} target="_blank">
+            Jira Dashboard{linkIcon}
+          </HrefLink> to view our current sprint progress, or view our current issue list{' '}
+          <HrefLink href={aboutLinks.JiraIssues} target="_blank">
+            here{linkIcon}
+          </HrefLink>
+          . Our documentation is open too - check out our {' '}
+          <HrefLink href={aboutLinks.Confluence} target="_blank">
+            Confluence site{linkIcon}
+          </HrefLink>
+          .
+        </p>        
         <Heading>Technology</Heading>
         <p>
           Our frontend is built in React and integrates an open-source, headless
