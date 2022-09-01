@@ -28,6 +28,16 @@ const CardList = () => {
       <Row>
         <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
           <CaseStudiesInfoCard
+            title={'Energy & Mines Digital Trust'}
+            img={caseStudiesOrgBookImg}
+            description={descriptions[0]}
+            linkText={'Read the case study'}
+            routePath={url + '/emdt'}
+          />
+        </Col>
+
+        <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
+          <CaseStudiesInfoCard
             title={'OrgBook BC'}
             img={caseStudiesOrgBookImg}
             description={descriptions[0]}
