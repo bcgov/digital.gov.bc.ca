@@ -123,9 +123,9 @@ objects:
         }
         :4000 {
           handle /emdt* {
-            redir https://digital.gov.bc.ca permanent
+            redir /case-studies/emdt permanent
           }
-          
+
           handle /marketplace* {
             # handle_path not working
             uri strip_prefix /marketplace
