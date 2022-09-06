@@ -13,8 +13,11 @@ const caseStudiesMiningImg =
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
 const caseStudiesOrgBookImg =
   require('../../images/case-study-orgbook.jpg').default;
+  const emdtBanner =
+  require('../../images/emdtCaseStudy/banner.jpg').default;
 
 const descriptions = [
+  'EMDT is enabling and accelerating the B.C. government\'s entry into a digital trust ecosystem by creating a simple and secure way to share sustainability data, certifications, and credentials.',
   'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.',
   'Following the collapse of a mine tailings dam in 2014, the Ministry of Energy, Mines and Petroleum Resources (EMPR) sought to improve the way it used technology for record management, mine oversight, and to provide information to the public.',
   'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations between soil management pending, the research aimed to provide farmers with the support and resources they needed.',
@@ -29,7 +32,7 @@ const CardList = () => {
         <Col sm={12} md={6} lg={4} style={{ margin: '8px 0' }}>
           <CaseStudiesInfoCard
             title={'Energy & Mines Digital Trust'}
-            img={caseStudiesOrgBookImg}
+            img={emdtBanner}
             description={descriptions[0]}
             linkText={'Read the case study'}
             routePath={url + '/emdt'}
@@ -40,7 +43,7 @@ const CardList = () => {
           <CaseStudiesInfoCard
             title={'OrgBook BC'}
             img={caseStudiesOrgBookImg}
-            description={descriptions[0]}
+            description={descriptions[1]}
             linkText={'Read the case study'}
             routePath={url + '/orgbook-study'}
           />
@@ -49,7 +52,7 @@ const CardList = () => {
           <CaseStudiesInfoCard
             title={'Mines Digital Service'}
             img={caseStudiesMiningImg}
-            description={descriptions[1]}
+            description={descriptions[2]}
             linkText={'Read the case study'}
             routePath={url + '/mining-study'}
           />
@@ -58,7 +61,7 @@ const CardList = () => {
           <CaseStudiesInfoCard
             title={'Helping farmers understand their soil'}
             img={caseStudiesFarmingImg}
-            description={descriptions[2]}
+            description={descriptions[3]}
             linkText={'Read the case study'}
             routePath={url + '/farming-study'}
           />
@@ -67,7 +70,7 @@ const CardList = () => {
           <CaseStudiesInfoCard
             title={'Transforming the Medical Services Plan'}
             img={caseStudiesMSPImg}
-            description={descriptions[3]}
+            description={descriptions[4]}
             linkText={'Read the case study'}
             routePath={url + '/medical-study'}
           />

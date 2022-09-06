@@ -24,6 +24,7 @@ import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
 import FarmingBannerImage from '../../images/case-study-farming.jpg';
 import OrgBookBannerImage from '../../images/case-study-orgbook.jpg';
+import EmdtBannerImage from '../../images/emdtCaseStudy/banner.jpg';
 
 import EfficientreportingImage from '../../images/emdtCaseStudy/Efficientreporting.svg';
 import ImprovedTrustImage from '../../images/emdtCaseStudy/ImprovedTrust.svg';
@@ -33,6 +34,7 @@ import MaximizedMarketsImage from '../../images/emdtCaseStudy/MaximizedMarkets.s
 import PrivacyPreservingImage from '../../images/emdtCaseStudy/PrivacyPreserving.svg';
 
 import emdtDiagram from '../../images/emdtCaseStudy/diagram.svg';
+import emdtDiagramFull from '../../images/emdtCaseStudy/diagramFull.svg';
 import emdtLegendTraction from '../../images/emdtCaseStudy/legend_traction.svg';
 import emdtLegendSpherity from '../../images/emdtCaseStudy/legend_spherity.svg';
 import emdtLegendRegBus from '../../images/emdtCaseStudy/legend_regBus.svg';
@@ -122,6 +124,12 @@ const css = `
   .legendImage img{
     width: 50px;
   }
+  .legendImage2 img{
+    height: 100%;
+  }
+  .legendImage2{
+    text-align: center;
+  }
   .legendElement {
     clear: both;
     overflow: hidden;
@@ -135,12 +143,21 @@ const css = `
     padding: 12px;
     float:left;
     width: 236px;
+    font-size:85%;
   }
   .legendTitle{
     font-size:138%;
+    text-transform:uppercase;
+    color: #284077;
+    margin: 0;
+  }
+  .legendSubTitle{
+    margin-top: 10px;
+    display: block;
+    margin-bottom:5px;
   }
   .diagram img{
-    width: 700px;
+    width: 681px;
   }
   .diagram{
     float:left;
@@ -149,10 +166,67 @@ const css = `
     clear:both;
     overflow:hidden;
   }
+  .emdtDiagram{
+    background:white;
+    border-radius:7px;
+    margin-bottom:10px;
+  }
+  .emdtDiagramTitle{
+    color: #284077;
+    font-weight: bold;
+    font-size: 140%;
+    margin-bottom: 0px;
+  }
+  .emdtDiagramSubTitle{
+    color: #788fc4;
+    font-size: 120%;
+    margin-bottom:10px;
+  }
+  .emdtDiagram {
+    background: white;
+    padding: 15px 0 15px 15px;
+  }
+  .legendImage2{
+    border: 3px solid;
+    height: 35px;
+    width: 63px;
+    margin: 5px 10px 5px 0;
+  }
+  #legendImage3{
+    border-color: #9ac21c;
+  }
+  #legendImage4{
+    border-color: #3fa5ff;
+  }
+  #legendImage5{
+    border-color: #284077;
+  }
+  #legendImage6{
+    border-color: #395236;
+  }
+  @media (max-width: 1199px) {
+    .diagramAndLegend {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .diagram img{
+      width:100%;
+    }
+  }
+  .columnContents::before{
+    content: ''
+  }
 `
 const EnergyAndMinesDigitalTrustContent = {
   title: 'Energy & Mines Digital Trust',
-  backgroundImage: MiningBannerImage,
+  backgroundImage: EmdtBannerImage,
+  description: (
+    <p>
+      EMDT is enabling and accelerating the B.C. government's entry into a digital trust 
+      ecosystem by creating a simple and secure way to share sustainability data, certifications, 
+      and credentials. 
+    </p>
+  ),
   others: (
     <Row>
       <Col sm={12} md={4}>
@@ -206,7 +280,7 @@ const EnergyAndMinesDigitalTrustContent = {
         The Energy &amp; Mines Digital Trust (EMDT) pilot project was initiated in November 2020 by 
         the British Columbia Ministry of Energy, Mines and Low Carbon Innovation to facilitate the 
         transition to a resilient, clean economy. This pilot coordinates <strong>a collaborative digital 
-        trust ecosystem between the B.C. government, natural resource companies, and global organizations</strong> 
+        trust ecosystem between the B.C. government, natural resource companies, and global organizations </strong>
         that improves current processes, making it simple and secure to share sustainability data in the 
         form of digital credentials.
       </p>
@@ -345,35 +419,6 @@ const EnergyAndMinesDigitalTrustContent = {
         </FlexWithGraphicCol>
       </FlexWithGraphicRow>
       </div>
-      <ul>
-        <li>
-          Efficient Reporting: A digital trust ecosystem makes it quick and easy to share data 
-          that proves natural resource products were responsibly sourced.
-        </li>
-        <li>
-          Increased Accuracy: Digital credentials ensure that sustainability data has not been 
-          tampered with and that the credential is still valid. There is no risk of data 
-          manipulation when digital credentials are shared.
-        </li>
-        <li>
-          Improved Trust: Digital credentials are easily authenticated, and the data cannot be 
-          manipulated during transmission. Purchasers, suppliers, and investors can trust the 
-          information they receive.
-        </li>
-        <li>
-          Maximized Markets: Natural resource companies that can prove their products are 
-          responsibly sourced can compete in a global market that prioritizes sustainability, 
-          stimulating B.C.'s economy.
-        </li>
-        <li>
-          Innovative Technology: Cutting edge technology positions B.C. as a global leader in 
-          climate solutions and provides a digital trust framework with endless business applications.
-        </li>
-        <li>
-          Privacy Preserving:  With digital credentials, users share only the information they 
-          choose. It is easy to customize data for specific requests.
-        </li>
-      </ul>
       <CaseStudyHeading>Carbon Accounting Use Case</CaseStudyHeading>
       <p>
         EMDT is coordinating several pilots to demonstrate how sustainability reporting can be 
@@ -386,43 +431,45 @@ const EnergyAndMinesDigitalTrustContent = {
         to demonstrate how leveraging a digital ecosystem improves current reporting processes 
         while building trust.
       </p>
-      <h3>Digital Trust Ecosystem</h3>
-      <div role="doc-subtitle">Greenhouse Gas Mining Pilot</div>
-      <div className="diagramAndLegend">
-        <div className="legend">
-          <h3 className="legendTitle">Legend</h3>
-          <b className="legendSubTitle">Digital Credentials</b>
-          <div className="legendElement">
-            <div className="legendImage"><img src={emdtLegendGreenhouse}></img></div>
-            <div className="legendText">Greenhouse Gas Emissions Report Credentials</div>
+      <div className="emdtDiagram">
+        <h3 className="emdtDiagramTitle">Digital Trust Ecosystem</h3>
+        <div role="doc-subtitle" className="emdtDiagramSubTitle">Greenhouse Gas Mining Pilot</div>
+        <div className="diagramAndLegend">
+          <div className="legend">
+            <h3 className="legendTitle">Legend</h3>
+            <b className="legendSubTitle">Digital Credentials</b>
+            <div className="legendElement">
+              <div className="legendImage" id="legendImage1"><img src={emdtLegendGreenhouse}></img></div>
+              <div className="legendText">Greenhouse Gas Emissions Report Credentials</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage" id="legendImage2"><img src={emdtLegendRegBus}></img></div>
+              <div className="legendText">Registered Business Credential</div>
+            </div>
+            <b className="legendSubTitle">Digital Wallet Technology</b>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage3"><img src={emdtLegendTraction}></img></div>
+              <div className="legendText">Traction</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage4"><img src={emdtLegendNorthernBlock}></img></div>
+              <div className="legendText">Northern Block</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage5"><img src={emdtLegendSpherity}></img></div>
+              <div className="legendText">Spherity</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage6"><img src={emdtLegendHyperledger}></img></div>
+              <div className="legendText">ACA-Py integration</div>
+            </div>
           </div>
-          <div className="legendElement">
-            <div className="legendImage"><img src={emdtLegendRegBus}></img></div>
-            <div className="legendText">Registered Business Credential</div>
+          <div className="diagram">
+            <a href={emdtDiagramFull} target="_blank"><img alt="Digital Trust Ecosystem Diagram" src={emdtDiagram}></img></a>
           </div>
-          <b className="legendSubTitle">Digital Wallet Technology</b>
-          <div className="legendElement">
-            <div className="legendImage"><img src={emdtLegendTraction}></img></div>
-            <div className="legendText">Traction</div>
-          </div>
-          <div className="legendElement">
-            <div className="legendImage"><img src={emdtLegendNorthernBlock}></img></div>
-            <div className="legendText">Northern Block</div>
-          </div>
-          <div className="legendElement">
-            <div className="legendImage"><img src={emdtLegendSpherity}></img></div>
-            <div className="legendText">Spherity</div>
-          </div>
-          <div className="legendElement">
-            <div className="legendImage"><img src={emdtLegendHyperledger}></img></div>
-            <div className="legendText">ACA-Py integration</div>
-          </div>
-        </div>
-        <div className="diagram">
-          <img src={emdtDiagram}></img>
         </div>
       </div>
-      <ul>
+      {/* <ul>
         <li>
           B.C. Registry Services issues Copper Mountain Mining Corporation a digital 
           credential of their B.C. business registration.
@@ -448,7 +495,7 @@ const EnergyAndMinesDigitalTrustContent = {
           Copper Mountain owns these digital credentials and can use them to fulfill other 
           stakeholder requests.
         </li>
-      </ul>
+      </ul> */}
       <CaseStudyHeading>Traction</CaseStudyHeading>
       <p>
         EMDT's technology, Traction, is open-source software built on open-source 
