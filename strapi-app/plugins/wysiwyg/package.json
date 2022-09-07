@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^27.0.0",
-    "@ckeditor/ckeditor5-react": "^3.0.2"
+    "@ckeditor/ckeditor5-react": "^3.0.3"
   },
   "author": {
     "name": "A Strapi developer",
