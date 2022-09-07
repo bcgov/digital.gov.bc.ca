@@ -7,17 +7,48 @@ import {
   ContactTitle,
   ContactEmail,
 } from '../StyleComponents/card';
+
+import{
+  FlexWithGraphicCol,
+  FlexWithGraphicRow
+} from '../StyleComponents/flexColumnsWithGraphicAndBorder'
+
+import {
+  ContentBlockContainer,
+} from '../StyleComponents/pageContent';
+import { CaseStudyHeading } from '../StyleComponents/headings';
+
 import { HrefLink } from '../StyleComponents/htmlTags';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
 import MiningBannerImage from '../../images/case-study-mining.jpg';
 import MedicalBannerImage from '../../images/case-study-msp.jpg';
 import FarmingBannerImage from '../../images/case-study-farming.jpg';
 import OrgBookBannerImage from '../../images/case-study-orgbook.jpg';
+import EmdtBannerImage from '../../images/emdtCaseStudy/banner.jpg';
+
+import EfficientreportingImage from '../../images/emdtCaseStudy/Efficientreporting.svg';
+import ImprovedTrustImage from '../../images/emdtCaseStudy/ImprovedTrust.svg';
+import IncreasedAccuracyImage from '../../images/emdtCaseStudy/IncreasedAccuracy.svg';
+import InnovativeTechnologyImage from '../../images/emdtCaseStudy/InnovativeTechnology.svg';
+import MaximizedMarketsImage from '../../images/emdtCaseStudy/MaximizedMarkets.svg';
+import PrivacyPreservingImage from '../../images/emdtCaseStudy/PrivacyPreserving.svg';
+
+import emdtDiagram from '../../images/emdtCaseStudy/diagram.svg';
+import emdtDiagramFull from '../../images/emdtCaseStudy/diagramFull.svg';
+import emdtLegendTraction from '../../images/emdtCaseStudy/legend_traction.svg';
+import emdtLegendSpherity from '../../images/emdtCaseStudy/legend_spherity.svg';
+import emdtLegendRegBus from '../../images/emdtCaseStudy/legend_regBus.svg';
+import emdtLegendNorthernBlock from '../../images/emdtCaseStudy/legend_northernBlock.svg';
+import emdtLegendHyperledger from '../../images/emdtCaseStudy/legend_hyperledger.svg';
+import emdtLegendGreenhouse from '../../images/emdtCaseStudy/legend_greenhouse.svg';
+
 import { resourceLinks, videoLinks } from '../../constants/urls';
 
 const jill = require('../../images/jill.jpg').default;
 const aaron = require('../../images/aaron.jpg').default;
 const john = require('../../images/john.jpg').default;
+const KyleRobinson = require('../../images/emdtCaseStudy/KyleRobinson.jpg').default;
+const NancyNorris = require('../../images/emdtCaseStudy/NancyNorris.jpg').default;
 const caseStudiesFarmingImg =
   require('../../images/case-study-farming.jpg').default;
 const caseStudiesMiningImg =
@@ -25,6 +56,514 @@ const caseStudiesMiningImg =
 const caseStudiesMSPImg = require('../../images/case-study-msp.jpg').default;
 const caseStudiesOrgBookImg =
   require('../../images/case-study-orgbook.jpg').default;
+
+const css = `
+.flexWithGraphicRow {
+  margin-left:-5px !important;
+  margin-right:-5px !important;
+  margin-bottom:1em;
+}
+.flexWithGraphicCol{
+  padding-right: 5px;
+  padding-left: 5px;
+  flex-grow: initial !important;
+}
+  .columnWrapper{
+      border: 3px solid;
+      border-radius: 12px;
+      margin-top:48px;
+      text-align: center;
+      background: white;
+      width:148px;
+  }
+  .columnContents{
+    height: 250px;
+    padding: 5px 5px;
+  }
+  .columnImage{
+    width:99px;
+    height:99px;
+    object-fit:none;
+    margin-top:-48px
+  }
+  .bc1{
+    border-color:#284077
+  }
+  .bc2{
+    border-color:#788fc4
+  }
+  .bc3{
+    border-color:#57688d
+  }
+  .bc4{
+    border-color:#9ac21c
+  }
+  .bc5{
+    border-color:#3aa3ff
+  }
+  .bc6{
+    border-color:#8acffe
+  }
+  .columnTitle{
+    text-transform:uppercase;
+    color: #284077;
+    font-size:100%;
+    font-weight:bold;
+  }
+  .contentText{
+    font-size:83%;
+  }
+
+  .legendElement {
+    clear: both;
+    overflow: hidden;
+  }
+  .legendImage {
+    float: left;
+  }
+  .legendImage img{
+    width: 50px;
+  }
+  .legendImage2 img{
+    height: 100%;
+  }
+  .legendImage2{
+    text-align: center;
+  }
+  .legendElement {
+    clear: both;
+    overflow: hidden;
+  }
+  .legendText {
+    margin-top: 8px;
+  }
+  .legend{
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 12px;
+    float:left;
+    width: 236px;
+    font-size:85%;
+  }
+  .legendTitle{
+    font-size:138%;
+    text-transform:uppercase;
+    color: #284077;
+    margin: 0;
+  }
+  .legendSubTitle{
+    margin-top: 10px;
+    display: block;
+    margin-bottom:5px;
+  }
+  .diagram img{
+    width: 681px;
+  }
+  .diagram{
+    float:left;
+  }
+  .diagramAndLegend{
+    clear:both;
+    overflow:hidden;
+  }
+  .emdtDiagram{
+    background:white;
+    border-radius:7px;
+    margin-bottom:10px;
+  }
+  .emdtDiagramTitle{
+    color: #284077;
+    font-weight: bold;
+    font-size: 140%;
+    margin-bottom: 0px;
+  }
+  .emdtDiagramSubTitle{
+    color: #788fc4;
+    font-size: 120%;
+    margin-bottom:10px;
+  }
+  .emdtDiagram {
+    background: white;
+    padding: 15px 0 15px 15px;
+  }
+  .legendImage2{
+    border: 3px solid;
+    height: 35px;
+    width: 63px;
+    margin: 5px 10px 5px 0;
+  }
+  #legendImage3{
+    border-color: #9ac21c;
+  }
+  #legendImage4{
+    border-color: #3fa5ff;
+  }
+  #legendImage5{
+    border-color: #284077;
+  }
+  #legendImage6{
+    border-color: #395236;
+  }
+  @media (max-width: 1199px) {
+    .diagramAndLegend {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .diagram img{
+      width:100%;
+    }
+  }
+  .columnContents::before{
+    content: ''
+  }
+`
+const EnergyAndMinesDigitalTrustContent = {
+  title: 'Energy & Mines Digital Trust',
+  backgroundImage: EmdtBannerImage,
+  description: (
+    <p>
+      EMDT is enabling and accelerating the B.C. government's entry into a digital trust 
+      ecosystem by creating a simple and secure way to share sustainability data, certifications, 
+      and credentials. 
+    </p>
+  ),
+  others: (
+    <Row>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/orgbook-study'}
+          linkText={'Read the case study'}
+          title={'OrgBook BC'}
+          description={
+            'Organizations and citizens need easy access to verified information about registered BC organizations. To streamline and modernize this access, the OrgBook BC digital service was developed by the Government of British Columbia using proven technologies in Digital Trust.'
+          }
+          img={caseStudiesOrgBookImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/farming-study'}
+          linkText={'Read more'}
+          title={'Helping farmers understand their soil'}
+          description={
+            'The Ministry of Agriculture wanted to understand how farmers monitor and manage their soils. With new environmental regulations around soil management pending, the research aimed to provide farmers with the support and resources they needed.'
+          }
+          img={caseStudiesFarmingImg}
+          height="650px"
+        />
+      </Col>
+      <Col sm={12} md={4}>
+        <CaseStudiesInfoCard
+          routePath={'/case-studies/medical-study'}
+          linkText={'Read more'}
+          title={'Transforming the Medical Services Plan'}
+          description={
+            'In 2016, MSP received 130,000 enrolment and 147,680 Premium Assistance applications. Thirty percent of application forms were returned due to errors. To improve the process, the Ministry of Health wanted to introduce a digital self-serve product, an online enrolment form.'
+          }
+          img={caseStudiesMSPImg}
+          height="650px"
+        />
+      </Col>
+    </Row>
+  ),
+  raw:(
+    <ContentBlockContainer>
+      <style>
+        {css}
+      </style>
+      <p>As a global movement builds towards low-carbon and net-zero environmental strategies, 
+        more emphasis is placed on responsibly sourced natural resource products. B.C. companies 
+        have the opportunity to prove they are globally competitive, environmentally-leading, and 
+        socially responsible. </p>
+      <p>
+        The Energy &amp; Mines Digital Trust (EMDT) pilot project was initiated in November 2020 by 
+        the British Columbia Ministry of Energy, Mines and Low Carbon Innovation to facilitate the 
+        transition to a resilient, clean economy. This pilot coordinates <strong>a collaborative digital 
+        trust ecosystem between the B.C. government, natural resource companies, and global organizations </strong>
+        that improves current processes, making it simple and secure to share sustainability data in the 
+        form of digital credentials.
+      </p>
+      <CaseStudyHeading>Data Security: Why use Digital Credentials?</CaseStudyHeading>
+      <p>
+        Digital credentials are the digital equivalent to a physical credential, like a driver's 
+        license or a business registration document. Digital credentials are cryptographically protected 
+        to prevent the data from being altered and are exchanged with just a few clicks using digital wallets. 
+      </p>
+      <p>
+        Natural resource companies can bypass the need for physical documentation and instead use digital 
+        credentials to share sustainability data, certifications, and credentials safely and easily with 
+        investors, purchasers, regulators, and anyone else interested in their data. Since digital 
+        credentials are secure and checked in real-time, anyone viewing the credential can trust that 
+        the data has not been tampered with during the exchange. 
+      </p>
+      <CaseStudyHeading>Building a Digital Trust Ecosystem</CaseStudyHeading>
+      <p>
+        A digital trust ecosystem builds confidence between organizations, businesses, and 
+        individuals when interacting online. When information is shared using digital credentials, 
+        everyone can trust that the information is current and hasn't been tampered with, even without 
+        pre-existing business relationships. For natural resource companies, this means it is possible 
+        to easily share trustworthy data to prove their sustainability efforts.
+      </p>
+      <p>
+        This improved method for exchanging data allows governments and organizations to: 
+      </p>
+      <ul>
+        <li>Prove they are aligning with provincial, national, and international sustainability goals.</li>
+        <li>Streamline business processes to improve efficiency and increase data security.</li>
+        <li>Provide trustworthy and transparent information to all interested parties.</li>
+      </ul>
+
+      <CaseStudyHeading>EMDT Enhancing Sustainability Reporting </CaseStudyHeading>
+      <p>
+        Reporting environmental impact data can be complicated and laborious process. Data is difficult 
+        to exchange internationally, and consumers cannot always access, or trust, reported data. 
+      </p>
+      <p>
+        As B.C. works towards a cleaner, more resilient economy, it is important to make it easier 
+        and more efficient for the natural resource sector to share sustainability data. 
+      </p>
+      <p>
+        Improved sustainability reporting benefits everyone in B.C. 
+      </p>
+      
+      <div>
+      
+      <FlexWithGraphicRow>
+        <FlexWithGraphicCol xs>
+          <div className="columnWrapper bc1">
+            <img className="columnImage" src={EfficientreportingImage}></img>
+            <div className="columnContents">
+              <h3 className="columnTitle">
+                Efficient Reporting
+              </h3>
+              <p className="contentText">
+                A digital trust ecosystem makes it quick and easy to share data that proves 
+                natural resource products were responsibly sourced.
+              </p>
+            </div>
+          </div>
+        </FlexWithGraphicCol>
+
+        <FlexWithGraphicCol xs>
+        <div className="columnWrapper bc2">
+            <img className="columnImage" src={IncreasedAccuracyImage}></img>
+            <div className="columnContents">
+          <h3 className="columnTitle">
+            Increased Accuracy
+          </h3>
+          <p className="contentText">
+            Digital credentials are checked in real-time and there is no risk of 
+            data manipulation when shared.
+          </p>
+          </div>
+          </div>
+        </FlexWithGraphicCol>
+
+        <FlexWithGraphicCol xs>
+        <div className="columnWrapper bc3">
+            <img className="columnImage" src={ImprovedTrustImage}></img>
+            <div className="columnContents">
+          <h3 className="columnTitle">
+            Improved Trust
+          </h3>
+          <p className="contentText">
+            Digital credentials are tamper-proof so data cannot be manipulated 
+            during transmission. Information can be trusted.
+          </p>
+          </div>
+          </div>
+        </FlexWithGraphicCol>
+
+        <FlexWithGraphicCol xs>
+          <div className="columnWrapper bc4">
+            <img className="columnImage" src={PrivacyPreservingImage}></img>
+            <div className="columnContents">
+            <h3 className="columnTitle">
+              Privacy Preserving
+            </h3>
+            <p className="contentText">
+              Organizations share only the information they choose. Digital 
+              credentials make it easy to customize specific data requests.
+            </p>
+          </div></div>
+        </FlexWithGraphicCol>
+
+        <FlexWithGraphicCol xs>
+          <div className="columnWrapper bc5">
+          <img className="columnImage" src={MaximizedMarketsImage}></img>
+          <div className="columnContents">
+          <h3 className="columnTitle">
+            Maximized Markets
+          </h3>
+          <p className="contentText">
+            Natural resource companies that verify responsibly-sourced 
+            products can compete in a global market that values sustainability.
+          </p>
+          </div>
+          </div>
+        </FlexWithGraphicCol>
+
+        <FlexWithGraphicCol xs>
+          <div className="columnWrapper bc6">
+            <img className="columnImage" src={InnovativeTechnologyImage}></img>
+            <div className="columnContents">
+          <h3 className="columnTitle">
+            Innovative Technology
+          </h3>
+          <p className="contentText">
+            This cutting edge technology positions B.C. as a global leader and 
+            enables a digital trust framework with many business applications.
+          </p>
+          </div></div>
+        </FlexWithGraphicCol>
+      </FlexWithGraphicRow>
+      </div>
+      <CaseStudyHeading>Carbon Accounting Use Case</CaseStudyHeading>
+      <p>
+        EMDT is coordinating several pilots to demonstrate how sustainability reporting can be 
+        made more efficient and trustworthy in a digital trust ecosystem.
+      </p>
+      <p>
+        The carbon accounting pilot explores regulatory and voluntary greenhouse gas 
+        emissions (GHG) reporting in the mining sector. Companies test sending and receiving 
+        sustainability data in the form of digital credentials with assured GHG emissions data 
+        to demonstrate how leveraging a digital ecosystem improves current reporting processes 
+        while building trust.
+      </p>
+      <div className="emdtDiagram">
+        <h3 className="emdtDiagramTitle">Digital Trust Ecosystem</h3>
+        <div role="doc-subtitle" className="emdtDiagramSubTitle">Greenhouse Gas Mining Pilot</div>
+        <div className="diagramAndLegend">
+          <div className="legend">
+            <h3 className="legendTitle">Legend</h3>
+            <b className="legendSubTitle">Digital Credentials</b>
+            <div className="legendElement">
+              <div className="legendImage" id="legendImage1"><img src={emdtLegendGreenhouse}></img></div>
+              <div className="legendText">Greenhouse Gas Emissions Report Credentials</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage" id="legendImage2"><img src={emdtLegendRegBus}></img></div>
+              <div className="legendText">Registered Business Credential</div>
+            </div>
+            <b className="legendSubTitle">Digital Wallet Technology</b>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage3"><img src={emdtLegendTraction}></img></div>
+              <div className="legendText">Traction</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage4"><img src={emdtLegendNorthernBlock}></img></div>
+              <div className="legendText">Northern Block</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage5"><img src={emdtLegendSpherity}></img></div>
+              <div className="legendText">Spherity</div>
+            </div>
+            <div className="legendElement">
+              <div className="legendImage legendImage2" id="legendImage6"><img src={emdtLegendHyperledger}></img></div>
+              <div className="legendText">ACA-Py integration</div>
+            </div>
+          </div>
+          <div className="diagram">
+            <a href={emdtDiagramFull}><img alt="Digital Trust Ecosystem Diagram" src={emdtDiagram}></img></a>
+          </div>
+        </div>
+      </div>
+      {/* <ul>
+        <li>
+          B.C. Registry Services issues Copper Mountain Mining Corporation a digital 
+          credential of their B.C. business registration.
+        </li>
+        <li>
+          PricewaterhouseCoopers audits Copper Mountain's self-reported Greenhouse Gas Emissions 
+          (GHG) data and issues a digital credential of their GHG Report.
+        </li>
+        <li>
+          Copper Mountain now holds two digital credentials. 
+        </li>
+        <li>
+          Climate Action Secretariat requests Copper Mountain's GHG Report and business 
+          registration to meet regulatory reporting requirements. Copper Mountain shares the 
+          required information using digital credentials.  
+        </li>
+        <li>
+          Open Earth Foundation requests emissions data from Copper Mountain for inclusion on 
+          the Open Climate portal, a global carbon accounting platform. Copper Mountain voluntarily 
+          supplies a subset of data using their GHG Report digital credential. 
+        </li>
+        <li>
+          Copper Mountain owns these digital credentials and can use them to fulfill other 
+          stakeholder requests.
+        </li>
+      </ul> */}
+      <CaseStudyHeading>Traction</CaseStudyHeading>
+      <p>
+        EMDT's technology, Traction, is open-source software built on open-source 
+        components from Hyperledger. 
+      </p>
+      <p>
+        Open-source software maximizes Traction's potential and accelerates 
+        participation in a digital trust ecosystem. 
+      </p>
+      <ul>
+        <li>
+          <strong>Broader Compatibility:</strong> Open-source software makes possible for the B.C. 
+          government to connect to the technologies that companies and organizations 
+          are already using.
+        </li>
+        <li>
+          <strong>Safer data exchange:</strong> Traction uses blockchain technology to protect data 
+          and information. Credentials exchanged using Traction are not vulnerable 
+          to fraud or phishing.
+        </li>
+        <li>
+          <strong>Accelerated Adoption:</strong> Open-source software enables Traction to be 
+          released and adopted more quickly.
+        </li>
+      </ul>
+      <p>
+        Visit Traction  on the BC Digital Trust website to learn more about Traction. 
+      </p>
+    </ContentBlockContainer>
+  ),
+  contacts: (
+    <Row>
+      <Col sm={12} md={6}>
+        <CardContact>
+          <div>
+            <ContactAvatar src={NancyNorris} />
+          </div>
+          <div>
+            <ContactName>Nancy Norris</ContactName>
+            <ContactTitle>Senior Director – ESG &amp; Digital Trust</ContactTitle>
+            <ContactEmail href="mailto:Nancy.Norris@gov.bc.ca" target="_blank">
+              Nancy.Norris@gov.bc.ca
+            </ContactEmail>
+          </div>
+        </CardContact>
+      </Col>
+      <Col sm={12} md={6}>
+        <CardContact>
+          <div>
+            <ContactAvatar src={KyleRobinson} />
+          </div>
+          <div>
+            <ContactName>Kyle Robinson</ContactName>
+            <ContactTitle>
+              Senior Strategic Advisor – Digital Trust Ecosystems 
+            </ContactTitle>
+            <ContactEmail
+              href="mailto:kyle.robinson@briartech.ca"
+              target="_blank"
+            >
+              kyle.robinson@briartech.ca
+            </ContactEmail>
+          </div>
+        </CardContact>
+      </Col>
+    </Row>
+  )
+};
 
 const MiningContent = {
   title: 'Monitoring Mining Operations in B.C.',
@@ -685,4 +1224,4 @@ const OrgBookContent = {
   resourceLinks: [resourceLinks.orgBookBC],
 };
 
-export { MiningContent, FarmerContent, MedicalContent, OrgBookContent };
+export {EnergyAndMinesDigitalTrustContent, MiningContent, FarmerContent, MedicalContent, OrgBookContent };
