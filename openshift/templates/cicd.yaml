@@ -216,6 +216,18 @@ objects:
           - patch
           - delete
           - update
+      - apiGroups:
+          - "apps.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - poddisruptionbudget
+        verbs:
+          - get
+          - list
+          - create
+          - patch
+          - delete
+          - update
   - apiVersion: authorization.openshift.io/v1
     kind: RoleBinding
     metadata:
@@ -373,6 +385,18 @@ objects:
           - create
           - patch
           - delete
+          - update      
+      - apiGroups:
+          - "apps.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - poddisruptionbudget
+        verbs:
+          - get
+          - list
+          - create
+          - patch
+          - delete
           - update
   - apiVersion: authorization.openshift.io/v1
     kind: RoleBinding
@@ -509,6 +533,18 @@ objects:
         attributeRestrictions: null
         resources:
           - deploymentconfigs
+        verbs:
+          - get
+          - list
+          - create
+          - patch
+          - delete
+          - update
+      - apiGroups:
+          - "apps.openshift.io"
+        attributeRestrictions: null
+        resources:
+          - poddisruptionbudget
         verbs:
           - get
           - list
