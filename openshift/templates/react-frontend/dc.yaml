@@ -119,7 +119,7 @@ objects:
 
         :4040 {
           handle /* {
-            redir https://digital.gov.bc.ca
+            redir https://digital.gov.bc.ca permanent
           }
         }
         :4000 {
