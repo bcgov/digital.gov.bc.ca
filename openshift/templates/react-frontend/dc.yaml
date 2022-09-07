@@ -241,7 +241,18 @@ objects:
         pr: ${PULL_REQUEST_NUMBER}
         group: ${NAME}
       name: ${NAME}-${SUFFIX}
-  
+  - apiVersion: policy/v1 
+    kind: PodDisruptionBudget
+    metadata:
+      name: pdb-${SUFFIX}
+    spec:
+      minAvailable: 1   
+      selector:
+        app: ${NAME}-${SUFFIX}
+        version: ${IMAGE_TAG}
+        pr: ${PULL_REQUEST_NUMBER}
+        group: ${NAME} 
+        
 parameters:
 - name: NAMESPACE
   required: true
