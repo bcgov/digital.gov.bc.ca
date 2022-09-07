@@ -465,7 +465,7 @@ const EnergyAndMinesDigitalTrustContent = {
             </div>
           </div>
           <div className="diagram">
-            <a href={emdtDiagramFull} target="_blank"><img alt="Digital Trust Ecosystem Diagram" src={emdtDiagram}></img></a>
+            <a href={emdtDiagramFull}><img alt="Digital Trust Ecosystem Diagram" src={emdtDiagram}></img></a>
           </div>
         </div>
       </div>

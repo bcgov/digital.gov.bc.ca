@@ -116,15 +116,15 @@ objects:
             }
           }
         }
-        
+
         :4040 {
           handle /* {
             redir https://digital.gov.bc.ca
           }
         }
         :4000 {
-          handle /emdt* {
-            redir /case-studies/emdt permanent
+          handle /emdt {
+            redir case-studies/emdt permanent
           }
 
           handle /marketplace* {
