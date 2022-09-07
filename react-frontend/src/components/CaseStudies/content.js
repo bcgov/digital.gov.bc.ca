@@ -41,6 +41,9 @@ import emdtLegendRegBus from '../../images/emdtCaseStudy/legend_regBus.svg';
 import emdtLegendNorthernBlock from '../../images/emdtCaseStudy/legend_northernBlock.svg';
 import emdtLegendHyperledger from '../../images/emdtCaseStudy/legend_hyperledger.svg';
 import emdtLegendGreenhouse from '../../images/emdtCaseStudy/legend_greenhouse.svg';
+import digramDescIcon1 from '../../images/emdtCaseStudy/digramDescIcon1.svg';
+import digramDescIcon2 from '../../images/emdtCaseStudy/digramDescIcon2.svg';
+import digramDescIcon3 from '../../images/emdtCaseStudy/digramDescIcon3.svg';
 
 import { resourceLinks, videoLinks } from '../../constants/urls';
 
@@ -113,11 +116,6 @@ const css = `
   .contentText{
     font-size:83%;
   }
-
-  .legendElement {
-    clear: both;
-    overflow: hidden;
-  }
   .legendImage {
     float: left;
   }
@@ -132,24 +130,30 @@ const css = `
   }
   .legendElement {
     clear: both;
-    overflow: hidden;
   }
   .legendText {
     margin-top: 8px;
   }
+  .legendText2{
+    white-space:nowrap;
+  }
+  .legendContent{
+    display:flex;
+  }
   .legend{
-    border: 1px solid black;
-    border-radius: 30px;
+    border: 2px solid #7b94c5;
+    border-radius: 60px;
     padding: 12px;
     float:left;
-    width: 236px;
     font-size:85%;
+    padding-right:31px;
   }
   .legendTitle{
     font-size:138%;
     text-transform:uppercase;
     color: #284077;
     margin: 0;
+    text-align:center;
   }
   .legendSubTitle{
     margin-top: 10px;
@@ -157,7 +161,7 @@ const css = `
     margin-bottom:5px;
   }
   .diagram img{
-    width: 681px;
+    width: 100%;
   }
   .diagram{
     float:left;
@@ -175,46 +179,90 @@ const css = `
     color: #284077;
     font-weight: bold;
     font-size: 140%;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    padding-left:31px;
   }
-  .emdtDiagramSubTitle{
-    color: #788fc4;
+  .diagramDescColumn h3{
+    color: #52688c;
     font-size: 120%;
-    margin-bottom:10px;
+    font-weight:bold;
+    padding-left: 32px;
+    white-space:nowrap;
   }
   .emdtDiagram {
     background: white;
-    padding: 15px 0 15px 15px;
+    padding: 15px;
   }
   .legendImage2{
-    border: 3px solid;
+    border: 4px solid;
     height: 35px;
     width: 63px;
     margin: 5px 10px 5px 0;
   }
   #legendImage3{
-    border-color: #9ac21c;
+    border-color: #788fc4;
   }
   #legendImage4{
-    border-color: #3fa5ff;
+    border-color: #284077;
   }
   #legendImage5{
     border-color: #284077;
   }
   #legendImage6{
-    border-color: #395236;
+    border-color: #44a63c;
   }
   @media (max-width: 1199px) {
     .diagramAndLegend {
-      display: flex;
-      flex-direction: column-reverse;
+      display: block;
     }
     .diagram img{
       width:100%;
     }
   }
+ 
   .columnContents::before{
     content: ''
+  }
+  .imageWrap img{
+    width:60px;
+  }
+  .diagramDescColumn{
+    padding-right: 14px;
+  }
+  .diagramDescColumns{
+    display:flex;
+  }
+  .diagramDescContent
+  {
+    display:flex;
+  }
+  .imageWrap{
+    margin: -17px -9px 0 -20px;
+  }
+  .diagramDescContent .small{
+    font-size:90%;
+  }
+  @media (max-width: 991px) {
+    .diagramDescColumns{
+      display:block;
+    }
+    .diagramDescColumn{
+      margin-bottom:10px;
+    }
+    .diagramDescColumn h3{
+      margin-bottom:10px;
+    }
+  }
+  @media (max-width: 575px) {
+    .legendContent{
+      display:block;
+    }
+    .legend{
+      border-radius: 34px;
+    }
+  }
+  #legendImage1{
+    margin-left:-8px;
   }
 `
 const EnergyAndMinesDigitalTrustContent = {
@@ -419,54 +467,97 @@ const EnergyAndMinesDigitalTrustContent = {
         </FlexWithGraphicCol>
       </FlexWithGraphicRow>
       </div>
-      <CaseStudyHeading>Carbon Accounting Use Case</CaseStudyHeading>
+      <CaseStudyHeading>EMDT Pilot Projects</CaseStudyHeading>
       <p>
         EMDT is coordinating several pilots to demonstrate how sustainability reporting can be 
         made more efficient and trustworthy in a digital trust ecosystem.
       </p>
       <p>
-        The carbon accounting pilot explores regulatory and voluntary greenhouse gas 
-        emissions (GHG) reporting in the mining sector. Companies test sending and receiving 
-        sustainability data in the form of digital credentials with assured GHG emissions data 
-        to demonstrate how leveraging a digital ecosystem improves current reporting processes 
-        while building trust.
+        Two pilot projects explore greenhouse gas emissions reporting in the mining sector 
+        and the natural gas sector. These pilots allow participants to test sharing and 
+        receiving digital credentials that include verified GHG emissions data for a specific 
+        mine site or natural gas facility.
       </p>
       <div className="emdtDiagram">
-        <h3 className="emdtDiagramTitle">Digital Trust Ecosystem</h3>
-        <div role="doc-subtitle" className="emdtDiagramSubTitle">Greenhouse Gas Mining Pilot</div>
+        <h3 className="emdtDiagramTitle">Greenhouse Gas Mining Pilot</h3>
+
+        <div className='diagramDescColumns'>
+          <div className="diagramDescColumn">
+            
+            
+            <h3>3rd Party Validation</h3>
+            <div className='diagramDescContent'>
+              <div className="imageWrap">
+                <img src={digramDescIcon3}></img>
+              </div>
+                Having verified Copper mountain's self-reported Greenhouse Gas Emissions (GHG) data, 
+                PricewaterhouseCoopers issues a digital credential containing GHG data.
+            </div>
+          </div>
+          <div className="diagramDescColumn">
+            
+            <h3>Regulatory Reporting</h3>
+            <div  className='diagramDescContent'>
+              <div className="imageWrap">
+                <img src={digramDescIcon2}></img>
+              </div>
+              <div>
+              Copper mountain uses a verification statement as part of their GHG emissions 
+              report to the Climate Action Secretariat.
+                <div className="small">
+                  *The process depicted in this diagram does not satisfy or replace 
+                  existing regulatory reporting obligations.
+                </div></div>
+              </div>
+            
+          </div>
+          <div className="diagramDescColumn">
+            
+            <h3>Voluntary Reporting</h3>
+            <div className='diagramDescContent'>
+              
+              <div className="imageWrap">
+                <img src={digramDescIcon1}></img>
+              </div>
+                Open Earth Foundation requests GHG emissions data from Copper Mountain 
+                for inclusion on the Open Climate portal, a global carbon accounting platform
+              </div>
+          </div>
+        </div>
+
         <div className="diagramAndLegend">
+          <div className="diagram">
+            <img alt="Digital Trust Ecosystem Diagram" src={emdtDiagram}></img>
+          </div>
           <div className="legend">
             <h3 className="legendTitle">Legend</h3>
-            <b className="legendSubTitle">Digital Credentials</b>
-            <div className="legendElement">
-              <div className="legendImage" id="legendImage1"><img src={emdtLegendGreenhouse}></img></div>
-              <div className="legendText">Greenhouse Gas Emissions Report Credentials</div>
+            <div className='legendContent'>
+              <div className='legendColumn'>
+                <b className="legendSubTitle">Digital Credentials</b>
+                <div className="legendElement">
+                  <div className="legendImage" id="legendImage1"><img src={emdtLegendGreenhouse}></img></div>
+                  <div className="legendText">Greenhouse Gas Emissions Report Credentials</div>
+                </div>
+              </div>
+              <div className='legendColumn'>
+                <b className="legendSubTitle">Digital Wallet Technology</b>
+                <div className="legendElement">
+                  <div className="legendImage legendImage2" id="legendImage3"><img src={emdtLegendTraction}></img></div>
+                  <div className="legendText2">Traction</div>
+                </div>
+                <div className="legendElement">
+                  <div className="legendImage legendImage2" id="legendImage4"><img src={emdtLegendNorthernBlock}></img></div>
+                  <div className="legendText2">Northern Block</div>
+                </div>
+                <div className="legendElement">
+                  <div className="legendImage legendImage2" id="legendImage6"><img src={emdtLegendHyperledger}></img></div>
+                  <div className="legendText2">ACA-Py integration</div>
+                </div>
+              </div>
             </div>
-            <div className="legendElement">
-              <div className="legendImage" id="legendImage2"><img src={emdtLegendRegBus}></img></div>
-              <div className="legendText">Registered Business Credential</div>
-            </div>
-            <b className="legendSubTitle">Digital Wallet Technology</b>
-            <div className="legendElement">
-              <div className="legendImage legendImage2" id="legendImage3"><img src={emdtLegendTraction}></img></div>
-              <div className="legendText">Traction</div>
-            </div>
-            <div className="legendElement">
-              <div className="legendImage legendImage2" id="legendImage4"><img src={emdtLegendNorthernBlock}></img></div>
-              <div className="legendText">Northern Block</div>
-            </div>
-            <div className="legendElement">
-              <div className="legendImage legendImage2" id="legendImage5"><img src={emdtLegendSpherity}></img></div>
-              <div className="legendText">Spherity</div>
-            </div>
-            <div className="legendElement">
-              <div className="legendImage legendImage2" id="legendImage6"><img src={emdtLegendHyperledger}></img></div>
-              <div className="legendText">ACA-Py integration</div>
-            </div>
+              
           </div>
-          <div className="diagram">
-            <a href={emdtDiagramFull}><img alt="Digital Trust Ecosystem Diagram" src={emdtDiagram}></img></a>
-          </div>
+          
         </div>
       </div>
       {/* <ul>
