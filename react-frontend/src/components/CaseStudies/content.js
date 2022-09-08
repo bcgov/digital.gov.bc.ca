@@ -630,7 +630,8 @@ const EnergyAndMinesDigitalTrustContent = {
         </li>
       </ul>
       <p>
-        Visit Traction  on the BC Digital Trust website to learn more about Traction. 
+      
+        Visit <HrefLink href="https://digital.gov.bc.ca/digital-trust/tools/traction/">Traction</HrefLink> on the BC Digital Trust website to learn more about Traction. 
       </p>
     </ContentBlockContainer>
   ),
