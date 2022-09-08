@@ -33,13 +33,13 @@ import InnovativeTechnologyImage from '../../images/emdtCaseStudy/InnovativeTech
 import MaximizedMarketsImage from '../../images/emdtCaseStudy/MaximizedMarkets.svg';
 import PrivacyPreservingImage from '../../images/emdtCaseStudy/PrivacyPreserving.svg';
 
-import emdtDiagram from '../../images/emdtCaseStudy/diagram.svg';
+import emdtDiagram from '../../images/emdtCaseStudy/diagram.png';
 import emdtDiagramFull from '../../images/emdtCaseStudy/diagramFull.svg';
-import emdtLegendTraction from '../../images/emdtCaseStudy/legend_traction.svg';
+import emdtLegendTraction from '../../images/emdtCaseStudy/legend_traction.PNG';
 import emdtLegendSpherity from '../../images/emdtCaseStudy/legend_spherity.svg';
 import emdtLegendRegBus from '../../images/emdtCaseStudy/legend_regBus.svg';
-import emdtLegendNorthernBlock from '../../images/emdtCaseStudy/legend_northernBlock.svg';
-import emdtLegendHyperledger from '../../images/emdtCaseStudy/legend_hyperledger.svg';
+import emdtLegendNorthernBlock from '../../images/emdtCaseStudy/legend_northernBlock.PNG';
+import emdtLegendHyperledger from '../../images/emdtCaseStudy/legend_hyperledger.PNG';
 import emdtLegendGreenhouse from '../../images/emdtCaseStudy/legend_greenhouse.svg';
 import digramDescIcon1 from '../../images/emdtCaseStudy/digramDescIcon1.svg';
 import digramDescIcon2 from '../../images/emdtCaseStudy/digramDescIcon2.svg';
@@ -122,9 +122,6 @@ const css = `
   .legendImage img{
     width: 50px;
   }
-  .legendImage2 img{
-    height: 100%;
-  }
   .legendImage2{
     text-align: center;
   }
@@ -133,6 +130,9 @@ const css = `
   }
   .legendText {
     margin-top: 8px;
+    clear:both;
+    width: 169px;
+    margin-right: 10px;
   }
   .legendText2{
     white-space:nowrap;
@@ -141,12 +141,14 @@ const css = `
     display:flex;
   }
   .legend{
-    border: 2px solid #7b94c5;
+    border: 3px solid #7b94c5;
     border-radius: 60px;
     padding: 12px;
     float:left;
     font-size:85%;
     padding-right:31px;
+    margin-left: 31px;
+    margin-top: -54px;
   }
   .legendTitle{
     font-size:138%;
@@ -165,6 +167,7 @@ const css = `
   }
   .diagram{
     float:left;
+    padding-left: 28px;
   }
   .diagramAndLegend{
     clear:both;
@@ -201,6 +204,10 @@ const css = `
   }
   #legendImage3{
     border-color: #788fc4;
+  }
+  #legendImage3 img{
+    width:auto;
+    height:100%;
   }
   #legendImage4{
     border-color: #284077;
@@ -242,7 +249,7 @@ const css = `
   .diagramDescContent .small{
     font-size:90%;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 991.5px) {
     .diagramDescColumns{
       display:block;
     }
@@ -259,6 +266,15 @@ const css = `
     }
     .legend{
       border-radius: 34px;
+    }
+  }
+  @media (max-width: 767.5px) {
+    .diagram {
+      padding-left: 0px;
+    }
+    .legend {
+      margin-top: -19px;
+      margin-left: 0px;
     }
   }
   #legendImage1{
@@ -490,8 +506,8 @@ const EnergyAndMinesDigitalTrustContent = {
               <div className="imageWrap">
                 <img src={digramDescIcon3}></img>
               </div>
-                Having verified Copper mountain's self-reported Greenhouse Gas Emissions (GHG) data, 
-                PricewaterhouseCoopers issues a digital credential containing GHG data.
+              Having verified Copper Mountain's self-reported Greenhouse Gas Emissions (GHG) data, 
+              PricewaterhouseCoopers issues a digital credential containing GHG data.
             </div>
           </div>
           <div className="diagramDescColumn">
@@ -502,11 +518,11 @@ const EnergyAndMinesDigitalTrustContent = {
                 <img src={digramDescIcon2}></img>
               </div>
               <div>
-              Copper mountain uses a verification statement as part of their GHG emissions 
-              report to the Climate Action Secretariat.
+              Copper Mountain uses a verification statement as part of 
+              their GHG emissions report to the Climate Action Secretariat.
                 <div className="small">
-                  *The process depicted in this diagram does not satisfy or replace 
-                  existing regulatory reporting obligations.
+                *Because this is a pilot, the process depicted in this diagram 
+                does not satisfy or replace existing regulatory reporting obligations.
                 </div></div>
               </div>
             
@@ -519,8 +535,9 @@ const EnergyAndMinesDigitalTrustContent = {
               <div className="imageWrap">
                 <img src={digramDescIcon1}></img>
               </div>
-                Open Earth Foundation requests GHG emissions data from Copper Mountain 
-                for inclusion on the Open Climate portal, a global carbon accounting platform
+              Open Earth Foundation requests GHG emissions data from Copper Mountain for inclusion on the Open Climate portal, 
+              a global carbon accounting platform. Copper Mountain voluntarily supplies a subset of data using their 
+              GHG Emissions Report Verification Credential.
               </div>
           </div>
         </div>
