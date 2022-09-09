@@ -44,6 +44,6 @@ jobs:
       - name: build react app
         run: ansible-playbook ansible/build-react-for-test.yaml -e PR=$PULL_NUMBER -e ENV=test -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v
       - name: deploy react app
-        run: ansible-playbook ansible/deploy-react-to-test-prod.yaml -e PR=$PULL_NUMBER -e ENV=test -v
+        run: ansible-playbook ansible/deploy-react-to-test-prod.yaml -e PR='' -e ENV=test -v
       - name: create github deployment to test/prod
         run: ansible-playbook ansible/create-gh-deployment.yaml -e PR=$PULL_NUMBER -e ENV=test -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -e OPENSHIFT_SERVER_URL=${{ secrets.OPENSHIFT_SERVER_URL_OC4 }} -v
