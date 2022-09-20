@@ -181,4 +181,5 @@ export const standardsUrls = {
 export const videoLinks = {
   healthServices: 'https://youtu.be/U5SecUbCtyE',
   digitalFramework: 'https://www.youtube.com/watch?v=D4DhfV7splA',
+  emdt: 'https://www.youtube.com/watch?v=GYDh9ACiDNw'
 };
