@@ -11,7 +11,7 @@ import { HrefLinkInternal } from '../StyleComponents/htmlTags';
 function ResourceCard({ title, description, route, imgSrc }) {
   return (
     <ResourceCardStyled>
-      <ResourceCardThumnail src={imgSrc} data-testid="thumbnail" />
+      <ResourceCardThumnail src={imgSrc} data-testid="thumbnail" alt="" />
       <ResourceCardTextBox>
         <CardTitle
           style={{ fontSize: '25.92px', clear: 'both' }}

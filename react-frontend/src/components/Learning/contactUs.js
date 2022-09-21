@@ -39,6 +39,7 @@ function ContactUs() {
                     >
                       <img
                         src={strapiMediaUrl + admin?.HeadShot?.url}
+                        alt={"Photo of "+admin.Name}
                         style={{
                           width: '100%',
                           borderRadius: '18px',
