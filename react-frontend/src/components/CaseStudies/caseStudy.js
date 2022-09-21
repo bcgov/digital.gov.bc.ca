@@ -90,7 +90,7 @@ const CaseStudy = () => {
         {content.videoContent && (
           <ContentBlockContainer>
             <CaseStudyHeading>
-              Transforming the Medical Services Plan
+              {content.videoContentTitle}
             </CaseStudyHeading>
             <ReactPlayer url={content.videoContent} width="auto" controls />
           </ContentBlockContainer>
