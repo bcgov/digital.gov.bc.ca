@@ -116,12 +116,17 @@ objects:
             }
           }
         }
+
         :4040 {
           handle /* {
-            redir https://digital.gov.bc.ca
+            redir https://digital.gov.bc.ca permanent
           }
         }
         :4000 {
+          handle /emdt {
+            redir case-studies/emdt permanent
+          }
+
           handle /marketplace* {
             # handle_path not working
             uri strip_prefix /marketplace

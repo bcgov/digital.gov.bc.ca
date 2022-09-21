@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import {
+  EnergyAndMinesDigitalTrustContent,
   MiningContent,
   FarmerContent,
   MedicalContent,
@@ -18,6 +19,7 @@ import { CaseStudyHeading } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
 
 const routeMatch = {
+  'emdt': EnergyAndMinesDigitalTrustContent,
   'farming-study': FarmerContent,
   'medical-study': MedicalContent,
   'mining-study': MiningContent,
@@ -25,6 +27,8 @@ const routeMatch = {
 };
 
 const titleMatch = {
+  'emdt':
+    'Energy & Mines Digital Trust  - Case Studies - Digital Government - Province of British Columbia',
   'farming-study':
     'Nutrient Management Calculator - Case Studies - Digital Government - Province of British Columbia',
   'medical-study':
@@ -66,16 +70,23 @@ const CaseStudy = () => {
           title={content.title}
           image={content.backgroundImage}
         />
+        {content.raw && (
+          <div>{content.raw}</div>
+        )}
+
         {content.context && (
           <ContentBlockContainer>
             <CaseStudyHeading>Context and Questions</CaseStudyHeading>
             {content.context}
           </ContentBlockContainer>
         )}
-        <ContentBlockContainer>
+        {!content.raw && (
+          <ContentBlockContainer>
           <CaseStudyHeading>The Approach</CaseStudyHeading>
           {content.approach}
         </ContentBlockContainer>
+        )}
+        
         {content.videoContent && (
           <ContentBlockContainer>
             <CaseStudyHeading>
@@ -84,10 +95,12 @@ const CaseStudy = () => {
             <ReactPlayer url={content.videoContent} width="auto" controls />
           </ContentBlockContainer>
         )}
-        <ContentBlockContainer>
-          <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
-          {content.outcomes}
-        </ContentBlockContainer>
+        {!content.raw && (
+          <ContentBlockContainer>
+            <CaseStudyHeading>Outcomes that Matter</CaseStudyHeading>
+            {content.outcomes}
+          </ContentBlockContainer>
+        )}
         {content.additional && (
           <ContentBlockContainer>{content.additional}</ContentBlockContainer>
         )}
