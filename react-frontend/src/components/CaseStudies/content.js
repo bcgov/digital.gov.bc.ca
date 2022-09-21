@@ -291,6 +291,8 @@ const EnergyAndMinesDigitalTrustContent = {
       and credentials. 
     </p>
   ),
+  videoContent: videoLinks.emdt,
+  videoContentTitle: 'Greenhouse Gas Mining Pilot Demonstration',
   others: (
     <Row>
       <Col sm={12} md={4}>
@@ -1111,6 +1113,7 @@ const MedicalContent = {
     </div>
   ),
   videoContent: videoLinks.healthServices,
+  videoContentTitle: 'Transforming the Medical Services Plan',
   outcomes: (
     <div>
       <p>

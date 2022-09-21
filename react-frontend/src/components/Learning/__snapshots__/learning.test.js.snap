@@ -86,6 +86,36 @@ exports[`renders correctly 1`] = `
   </div>
   <div
     className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
+    id="newsletter"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-12"
+      >
+        <h3
+          className="sc-hKMtZM jXKzWj subHeading"
+        >
+          Newsletter
+        </h3>
+        <p
+          className="sc-GVOUr eBizha digitalParagraph"
+        >
+          Subscribe to the 
+          <a
+            className="sc-gSAPjG jURRju externalLink"
+            href="https://us3.list-manage.com/subscribe?u=2cd8863adab4f39ade7cbee34&id=b331c22b50"
+          >
+            BCDevExchange Newsletter
+          </a>
+           to stay up-to-date on events, learning opportunities, and what's happening at the Exchange Lab.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-dIouRR sc-kgflAQ dwnlAr eaTDxv horizontalAlignment contentBlockContainer container"
     id="courses"
   >
     <div
