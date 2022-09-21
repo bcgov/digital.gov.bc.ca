@@ -7,9 +7,9 @@ export const aboutLinks = {
 };
 
 export const assemblingLinks = {
-  exchangeLab: 'https://bcdevexchange.org/ExchangeLab',
+  exchangeLab: 'https://digital.gov.bc.ca/communities/bcdevexchange',
   digitalMarketplace: 'https://digital.gov.bc.ca/marketplace',
-  devops: 'https://bcdevexchange.org/DevOpsPlatform',
+  devops: 'https://developer.gov.bc.ca/Beginner-Guide-to-Developing-on-the-Platform/What-Is-OpenShift',
   imit: 'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
 };
 

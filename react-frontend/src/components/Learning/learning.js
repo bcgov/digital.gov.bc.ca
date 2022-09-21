@@ -42,6 +42,15 @@ function Learning() {
             </Col>
           </Row>
         </ContentBlockContainer>
+        <ContentBlockContainer id="newsletter">
+          <Row>
+            <Col sm={12}>
+              <SubHeading>Newsletter</SubHeading>
+              <StyledP>Subscribe to the <HrefLink href="https://us3.list-manage.com/subscribe?u=2cd8863adab4f39ade7cbee34&id=b331c22b50">BCDevExchange Newsletter</HrefLink> to stay up-to-date on events, learning opportunities, and what's happening at the Exchange Lab.
+              </StyledP>
+            </Col>
+          </Row>
+        </ContentBlockContainer>
         <Courses />
         <Events />
         <ContactUs />
