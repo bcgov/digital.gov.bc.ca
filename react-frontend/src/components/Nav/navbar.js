@@ -179,7 +179,7 @@ function NavBar() {
             </NavBarLi>
             <NavBarLi>
               <NavBarLinkExternal href="https://digital-feedback.apps.silver.devops.gov.bc.ca">
-                Feedback
+                Feedback 
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   className="fa-xs"
