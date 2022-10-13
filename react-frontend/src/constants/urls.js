@@ -7,9 +7,9 @@ export const aboutLinks = {
 };
 
 export const assemblingLinks = {
-  exchangeLab: 'https://bcdevexchange.org/ExchangeLab',
+  exchangeLab: 'https://digital.gov.bc.ca/communities/bcdevexchange',
   digitalMarketplace: 'https://digital.gov.bc.ca/marketplace',
-  devops: 'https://bcdevexchange.org/DevOpsPlatform',
+  devops: 'https://developer.gov.bc.ca/Beginner-Guide-to-Developing-on-the-Platform/What-Is-OpenShift',
   imit: 'https://www2.gov.bc.ca/gov/content?id=392A1445BD4E43DEA2B001ABBD77865E',
 };
 
@@ -181,4 +181,5 @@ export const standardsUrls = {
 export const videoLinks = {
   healthServices: 'https://youtu.be/U5SecUbCtyE',
   digitalFramework: 'https://www.youtube.com/watch?v=D4DhfV7splA',
+  emdt: 'https://www.youtube.com/watch?v=GYDh9ACiDNw'
 };

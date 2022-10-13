@@ -177,6 +177,16 @@ function NavBar() {
                 />
               </NavBarLinkExternal>
             </NavBarLi>
+            <NavBarLi>
+              <NavBarLinkExternal href="https://digital-feedback.apps.silver.devops.gov.bc.ca">
+                Feedback 
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  className="fa-xs"
+                  pull="right"
+                />
+              </NavBarLinkExternal>
+            </NavBarLi>
           </NavBarUl>
         </NavBarContainer>
       </NavMain>
