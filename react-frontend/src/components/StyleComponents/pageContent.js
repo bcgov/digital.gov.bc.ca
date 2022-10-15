@@ -101,7 +101,7 @@ export const NavBarContainer = styled(HorizontalContainer).attrs({
   className: 'navBar',
 })`
   z-index: 0;
-  max-width: 1200px;
+  max-width: 1200px; 
 `;
 
 export const RouteBody = styled.div.attrs({
