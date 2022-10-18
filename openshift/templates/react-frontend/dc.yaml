@@ -128,7 +128,7 @@ objects:
           }
 
           handle /marketplace* {
-            redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca
+            redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca permanent
           }
 
 
