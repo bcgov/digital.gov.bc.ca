@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import DocumentTitle from 'react-document-title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,8 @@ import { aboutLinks } from '../../constants/urls';
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { Heading, Title } from '../StyleComponents/headings';
 import { HrefLink } from '../StyleComponents/htmlTags';
+import ReactMarkdown from 'react-markdown'
+import ReactDom from 'react-dom'
 
 const linkIcon = (
   <FontAwesomeIcon
@@ -17,11 +19,27 @@ const linkIcon = (
 );
 
 function About() {
+  const [content, setContent] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:8080/api/content')
+       .then((response) => response.json())
+       .then((data) => {
+          console.log('API CONTENT:')
+          console.log(data);
+          setContent(data);
+       })
+       .catch((err) => {
+          console.log(err.message);
+       });
+ }, []);
+
   return (
     <DocumentTitle title="About - Digital Government - Province of British Columbia">
       <PageContainer>
         <GlobaStyleSize />
         <Title>About</Title>
+        <ReactMarkdown># Hello, *world*!</ReactMarkdown>
+        <div>{content.contents}</div>
         <p>
           We are working to make digital.gov.bc.ca into the comprehensive
           directory of information to help the B.C. Public Service adopt modern
