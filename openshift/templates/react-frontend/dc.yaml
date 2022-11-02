@@ -128,7 +128,8 @@ objects:
           }
 
           @prod expression `"${ENV}" == "prod"`
-          handle /marketplace* {
+          #handle_path strips the prefix
+          handle_path /marketplace* {
             redir @prod https://marketplace.digital.gov.bc.ca{path}?{query} permanent
             redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca{path}?{query} permanent
           }
