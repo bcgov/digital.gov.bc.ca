@@ -21,12 +21,12 @@ const linkIcon = (
 function About() {
   const [content, setContent] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:8080/api/content')
+    fetch('http://127.0.0.1:8080/api/content/about')
        .then((response) => response.json())
        .then((data) => {
           console.log('API CONTENT:')
           console.log(data);
-          setContent(data);
+          setContent(data.content);
        })
        .catch((err) => {
           console.log(err.message);
@@ -38,9 +38,12 @@ function About() {
       <PageContainer>
         <GlobaStyleSize />
         <Title>About</Title>
-        <ReactMarkdown># Hello, *world*!</ReactMarkdown>
-        <div>{content.contents}</div>
-        <p>
+        <ReactMarkdown
+         components ={{
+          'h2':Heading
+        }} children={content}></ReactMarkdown>
+
+        {/* <p>
           We are working to make digital.gov.bc.ca into the comprehensive
           directory of information to help the B.C. Public Service adopt modern
           technology and ways of working and deliver better digital services for
@@ -149,7 +152,7 @@ function About() {
             show you around the CMS to make sure you're confident in how to
             publish and maintain your content.
           </li>
-        </ol>
+        </ol> */}
       </PageContainer>
     </DocumentTitle>
   );
