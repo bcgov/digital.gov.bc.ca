@@ -129,8 +129,8 @@ objects:
 
           @prod expression `"${ENV}" == "prod"`
           handle /marketplace* {
-            redir @prod https://marketplace.digital.gov.bc.ca permanent
-            redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca permanent
+            redir @prod https://marketplace.digital.gov.bc.ca/{path}?{query} permanent
+            redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca/{path}?{query} permanent
           }
 
           handle /digital-trust/showcase* {
