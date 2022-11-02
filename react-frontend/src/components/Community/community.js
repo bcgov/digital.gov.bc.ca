@@ -76,8 +76,9 @@ function Contact({ communityPage }) {
                 
               </p>
               <p>
-                For reaching out to the community and attending meetups, or coordinating a meetup between communities
-                who are working on related projects, please email:&nbsp;
+              For reaching out to the community and attending meetups, 
+              or coordinating a meetup between communities who are working on related projects, 
+              please use the Jira link above or email:&nbsp;
                 <HrefLink href={`mailto:${email.Email}`}>
                   {email.Email}
                 </HrefLink>
