@@ -64,8 +64,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "cypress": "^4.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint-plugin-prettier": "^3.4.1",
     "husky": "^4.3.8",
+    "jest-cucumber": "^3.0.1",
     "lint-staged": "^10.5.3",
     "prettier": "^2.6.2",
     "pretty-quick": "^2.0.1",
@@ -84,5 +86,8 @@
         "lint-staged"
       ]
     }
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
