@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-flexbox-grid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import Query from '../Query';
 import COMMUNITY_QUERY from '../../queries/community/community';
@@ -48,6 +50,65 @@ function CommunityImage({ url }) {
   return <div />;
 }
 
+function Contact({ communityPage }) {
+  const isArcGis = communityPage.uid === "arc-gis-online";
+
+  if (isArcGis) {
+    return (
+      <div>
+        <Heading style={{ fontSize: '22px' }}>
+          Contact the community
+        </Heading>
+
+        {communityPage?.CommunityEmail?.map((email, i) => {
+          return (
+            <div>
+              <p key={i}>
+                For community-related requests, please select the General Requests option:
+                <HrefLink href={`mailto:${email.Name}`} style={{ display: 'flex' }}>
+                  Data Systems & Services - Jira
+                  <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  className="fa-xs"
+                  pull="right"
+                />
+                </HrefLink>
+                
+              </p>
+              <p>
+              For reaching out to the community and attending meetups, 
+              or coordinating a meetup between communities who are working on related projects, 
+              please use the Jira link above or email:&nbsp;
+                <HrefLink href={`mailto:${email.Email}`}>
+                  {email.Email}
+                </HrefLink>
+                </p>
+            </div>
+          );
+        })}
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <Heading style={{ fontSize: '22px' }}>
+          Community Managers
+        </Heading>
+
+        {communityPage?.CommunityEmail?.map((email, i) => {
+          return (
+            <p key={i}>
+              <HrefLink href={`mailto:${email.Email}`}>
+                {email.Name}
+              </HrefLink>
+            </p>
+          );
+        })}
+      </div>
+    )
+  }
+}
+
 function Community() {
   const params = useParams();
   return (
@@ -89,20 +150,7 @@ function Community() {
                   )}
                 </Col>
                 <Col xs={12} md={4}>
-                  <Heading style={{ fontSize: '22px' }}>
-                    Community Managers
-                  </Heading>
-                  <div>
-                    {communityPage?.CommunityEmail?.map((email, i) => {
-                      return (
-                        <p key={i}>
-                          <HrefLink href={`mailto:${email.Email}`}>
-                            {email.Name}
-                          </HrefLink>
-                        </p>
-                      );
-                    })}
-                  </div>
+                  <Contact communityPage={communityPage} />
                   <div>
                     <Heading style={{ fontSize: '22px' }}>Links</Heading>
                     <LinkWithIcon
