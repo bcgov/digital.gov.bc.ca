@@ -64,7 +64,7 @@ function Contact({ communityPage }) {
           return (
             <div>
               <p key={i}>
-                For community-related requests, please select the General Requests option:
+                For community-related requests, please select the General Requests option: 
                 <HrefLink href={`mailto:${email.Name}`} style={{ display: 'flex' }}>
                   Data Systems & Services - Jira
                   <FontAwesomeIcon
