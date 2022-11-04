@@ -350,7 +350,7 @@ const EnergyAndMinesDigitalTrustContent = {
 
       <p>If you plan on being in Egypt for COP, please reach out to <ContactEmail href="mailto:Nancy.Norris@gov.bc.ca" target="_blank">Nancy.Norris@gov.bc.ca</ContactEmail> to organize an opportunity to meet in-person. We'd be thrilled to connect to discuss digital trust solutions in the climate action space.</p>
 
-      <br/> <br/>
+      <CaseStudyHeading>Energy &amp; Mines Digital Trust Pilot</CaseStudyHeading>
         
       <p>As a global movement builds towards low-carbon and net-zero environmental strategies, 
         more emphasis is placed on responsibly sourced natural resource products. B.C. companies 
