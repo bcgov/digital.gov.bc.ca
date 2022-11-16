@@ -19,17 +19,17 @@ const linkIcon = (
 );
 
 function About() {
-  const [content, setContent] = useState([]);
+  const [content, setContent] = useState('');
   useEffect(() => {
-    fetch('http://127.0.0.1:8080/api/content/about')
+    fetch('http://markdown-flow-api-c0cce6-dev.apps.silver.devops.gov.bc.ca/api/content/about')
        .then((response) => response.json())
        .then((data) => {
-          console.log('API CONTENT:')
-          console.log(data);
+          // console.log('API CONTENT:')
+          // console.log(data);
           setContent(data.content);
        })
        .catch((err) => {
-          console.log(err.message);
+          // console.log(err.message);
        });
  }, []);
 
