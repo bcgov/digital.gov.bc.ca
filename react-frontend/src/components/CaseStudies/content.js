@@ -338,6 +338,20 @@ const EnergyAndMinesDigitalTrustContent = {
       <style>
         {css}
       </style>
+      <p>Energy &amp; Mines Digital Trust will be sharing their work with climate leaders at the <HrefLink href="https://unfccc.int/ugih-innovation-cop27">UN Climate Change Global Innovation Hub</HrefLink> at <HrefLink href="https://cop27.eg/#/">COP27</HrefLink>.</p>
+
+      <p>You can <strong>watch these sessions live</strong> on the <HrefLink href="https://www.youtube.com/c/UnfcccInt/videos" >United Nations Climate Change Events YouTube channel</HrefLink>. Sessions will also be available on the channel for viewing after the livestream ends.</p>
+
+      <ul>
+        <li><strong>UN Global Innovation Hub (UGIH) Pavilion Opening Session - Core Partner Introductory Remarks (November 7, 10:00-11:00 GMT+2)</strong>: In this session, EMLI's Assistant Deputy Minister, Nathaniel Amann-Blake, will join other core partners to highlight the value of engagement and participation with UGIH. Assistant Deputy Amann-Blake will detail how our work with UGIH has supported the growth of EMDT's digital trust ecosystem.</li>
+        <li><strong>UGIH City-focused Innovation and Implementation Sessions - Focusing on Goyang City Demonstration Pilot and Extension of Methodology Toward Global Cities (November 7, 17:00-18:00 GMT+2)</strong>: Representatives from Goyang City, South Korea, and Assistant Deputy Minister Amann-Blake will outline the collaborative work being facilitated by EMLI and undertaken by the <HrefLink href="https://www.ubc.ca/">University of British Columbia</HrefLink> and the <HrefLink href="https://en.snu.ac.kr/">Seoul National University</HrefLink> to conduct Life Cycle Analysis and consumption-based greenhouse gas (GHG) accounting.</li>
+        <li><strong>Collectively Building the OpenClimate Network: Integrating Non-State Actor Climate Actions from UGIH (eg. cities and corporations) into NDC Progress via Nested Climate Accounting (November 10, 11:00-12:00 GMT+2)</strong>: In this session, I will join representatives from the <HrefLink href="https://www.openearth.org/" >Open Earth Foundation</HrefLink>, the <HrefLink href="https://www.unc.edu/" >University of North Carolina</HrefLink>, and <HrefLink href="https://os-climate.org/">OS-Climate</HrefLink> to discuss how EMDT's digital trust work alongside the Open Earth Foundation <strong>has the capacity to improve access to transparent climate data and address challenges in city-level carbon accounting and climate action</strong>.</li>
+      </ul>
+
+      <p>If you plan on being in Egypt for COP, please reach out to <ContactEmail href="mailto:Nancy.Norris@gov.bc.ca" target="_blank">Nancy.Norris@gov.bc.ca</ContactEmail> to organize an opportunity to meet in-person. We'd be thrilled to connect to discuss digital trust solutions in the climate action space.</p>
+
+      <CaseStudyHeading>Energy &amp; Mines Digital Trust Pilot</CaseStudyHeading>
+        
       <p>As a global movement builds towards low-carbon and net-zero environmental strategies, 
         more emphasis is placed on responsibly sourced natural resource products. B.C. companies 
         have the opportunity to prove they are globally competitive, environmentally-leading, and 

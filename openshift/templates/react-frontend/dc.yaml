@@ -127,10 +127,12 @@ objects:
             redir case-studies/emdt permanent
           }
 
-          handle /marketplace* {
-            redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca permanent
+          @prod expression `"${ENV}" == "prod"`
+          #handle_path strips the prefix
+          handle_path /marketplace* {
+            redir @prod https://marketplace.digital.gov.bc.ca{uri} permanent
+            redir https://app-digmkt-${ENV}.apps.silver.devops.gov.bc.ca{uri} permanent
           }
-
 
           handle /digital-trust/showcase* {
             reverse_proxy https://bc-wallet-demo.apps.silver.devops.gov.bc.ca {
