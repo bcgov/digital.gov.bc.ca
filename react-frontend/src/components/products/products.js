@@ -185,7 +185,7 @@ const productsImage =
 const Products = () => {
   const [content, setContent] = useState('');
   useEffect(() => {
-    fetch('http://wordpress-c0cce6-dev.apps.silver.devops.gov.bc.ca/wp-json/wp/v2/pages?slug=products_and_services')
+    fetch('https://markdown-flow-api-c0cce6-dev.apps.silver.devops.gov.bc.ca/api/content/products_and_services')//'http://wordpress-c0cce6-dev.apps.silver.devops.gov.bc.ca/wp-json/wp/v2/pages?slug=products_and_services')
        .then((response) => response.json())
        .then((data) => {
           // console.log('API CONTENT:')

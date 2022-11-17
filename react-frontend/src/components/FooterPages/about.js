@@ -21,7 +21,7 @@ const linkIcon = (
 function About() {
   const [content, setContent] = useState('');
   useEffect(() => {
-    fetch('http://markdown-flow-api-c0cce6-dev.apps.silver.devops.gov.bc.ca/api/content/about')
+    fetch('https://markdown-flow-api-c0cce6-dev.apps.silver.devops.gov.bc.ca/api/content/about')
        .then((response) => response.json())
        .then((data) => {
           // console.log('API CONTENT:')
