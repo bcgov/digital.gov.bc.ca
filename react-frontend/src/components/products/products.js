@@ -43,8 +43,8 @@ const productsImage =
 
 .itMmZS {
     margin: auto;
-    max-width: 1065px !important; /* important to override editor */
-    padding-left: 30px  !important; /* important to override editor */
+    max-width: 1065px;
+    padding-left: 30px;
     padding-right: 20px;
     z-index: -2;
 }
@@ -52,7 +52,7 @@ const productsImage =
 @media screen and (min-width: 800px){
 
 	.itMmZS {
-		padding-left: 107px  !important; /* important to override editor */
+		padding-left: 107px;
 	}
 }
 
@@ -179,7 +179,11 @@ const productsImage =
     margin-bottom: 10px;
     text-align: left;
 }
-
+/* todo: this should not be needed (messes up the header without it) */
+.gAXiAc {
+  z-index: 0;
+  max-width: 1200px !important;
+}
 `;
 
 const Products = () => {
