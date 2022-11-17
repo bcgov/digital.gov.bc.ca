@@ -191,7 +191,9 @@ const Products = () => {
           // console.log('API CONTENT:')
           // console.log(data);
           // let setC = sanitizeHtml(data[0].content.rendered);
-          let setC = data[0].content.rendered;
+          let jsn = JSON.parse(data.content);
+          // console.log('jsn: ', jsn);
+          let setC = jsn[0].content.rendered;
           // console.log('setC: ', setC);
           setContent(setC);
        })
