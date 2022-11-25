@@ -23,6 +23,7 @@ import Privacy from '../../components/FooterPages/privacy';
 import Products from '../products/products';
 import Resources from '../../components/Resources/resources';
 import Saas from '../LowTouchSaas/lowTouchSaas';
+import DCOP from '../DCOP/DCOP';
 
 const DisplayNames = {
   blog: 'Blog',
@@ -31,6 +32,7 @@ const DisplayNames = {
   'digital-framework': 'Digital Framework',
   'digital-principles': 'Digital Principles',
   'products-services': 'Products and Services',
+  'digital-code-of-practice':"Digital Code of Practice",
   resources: 'Resources',
   'common-components': 'Common Components',
   communities: 'Communities',
@@ -76,6 +78,10 @@ const Routes = () => {
         <Route path="/standards-and-guides">
           <NotFound standards />
         </Route>
+
+        <Route exact path="/digital-code-of-practice" component={DCOP} />
+        <Route exact path="/digital-code-of-practice/:uid" component={DCOP} />
+
         <Route component={NotFound} />
       </Switch>
     </div>
