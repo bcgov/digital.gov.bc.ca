@@ -23,6 +23,7 @@ import Privacy from '../../components/FooterPages/privacy';
 import Products from '../products/products';
 import Resources from '../../components/Resources/resources';
 import Saas from '../LowTouchSaas/lowTouchSaas';
+import MarkdownContent from '../MarkdownContent/MarkdownContent'
 
 const DisplayNames = {
   blog: 'Blog',
@@ -34,6 +35,7 @@ const DisplayNames = {
   resources: 'Resources',
   'common-components': 'Common Components',
   communities: 'Communities',
+  'digital-code-of-practice': 'Digital Code of Practice'
 };
 
 const Routes = () => {
@@ -76,6 +78,7 @@ const Routes = () => {
         <Route path="/standards-and-guides">
           <NotFound standards />
         </Route>
+        <Route exact path="/digital-code-of-practice/*" component={MarkdownContent} />
         <Route component={NotFound} />
       </Switch>
     </div>
