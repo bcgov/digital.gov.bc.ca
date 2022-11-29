@@ -18,8 +18,10 @@ const caseStudiesGrey =
 const learningGrey =
   require('../../images/pngIllustrations/learningGrey.png').default;
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
+const dcop = require('../../images/pngIllustrations/dcop_transparent.png').default;
 
 const descriptions = [
+  'The Digital Code of Practice (DCOP) expands on BC’s by showing what good digital products and services look like.',
   'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
   'Supports to help you create or improve a digital service.',
@@ -36,64 +38,79 @@ const CardList = () => {
       <PageContainer style={{ paddingTop: '90px' }}>
         <Row>
           <Col sm={12} md={6}>
+          <InfoCard
+              img={dcop}
+              title={'Digital Code of Practice'}
+              description={descriptions[0]}
+              linkText="Read the Code of Practice"
+              routePath="/digital-code-of-practice"
+              height="300px"
+            />
+          </Col>
+          <Col sm={12} md={6}>
             <InfoCard
               img={digitalFrameworkGrey}
               title={'Digital Framework'}
-              description={descriptions[0]}
+              description={descriptions[1]}
               linkText="Read the framework"
               routePath="/digital-framework"
               height="300px"
             />
           </Col>
+        </Row>
+        <Row>
+          
           <Col sm={12} md={6}>
             <InfoCard
               img={digitalPrinciplesGrey}
               title={'Digital Principles'}
-              description={descriptions[1]}
+              description={descriptions[2]}
               linkText="Read the principles"
               routePath={'/resources/digital-principles'}
               height="300px"
             />
           </Col>
-        </Row>
-        <Row>
           <Col sm={12} md={6}>
             <InfoCard
               img={coCoGrey}
               title={'Common Components'}
-              description={descriptions[6]}
+              description={descriptions[7]}
               linkText="View the collection"
               routePath={'/common-components'}
               height="300px"
             />
           </Col>
+        </Row>
+        <Row>
+          
           <Col sm={12} md={6}>
             <InfoCard
               img={resourcesGrey}
               title={'Resources'}
-              description={descriptions[3]}
+              description={descriptions[4]}
               linkText="Find resources"
               routePath="/resources"
               height="300px"
             />
           </Col>
-        </Row>
-
-        <Row>
-          <Col sm={12} md={6}>
+           <Col sm={12} md={6}>
             <InfoCard
               img={communityGrey}
               title={'Communities'}
-              description={descriptions[4]}
+              description={descriptions[5]}
               linkText={'Connect with a community of practice'}
               routePath={'/communities'}
             />
           </Col>
+        </Row>
+
+        <Row>
+         
           <Col sm={12} md={6}>
             <InfoCard
               img={caseStudiesGrey}
               title={'Case Studies'}
-              description={descriptions[5]}
+              description={descriptions[6]}
               linkText="Read case studies"
               routePath="/case-studies"
             />
@@ -102,7 +119,7 @@ const CardList = () => {
             <InfoCard
               img={learningGrey}
               title={'Learning'}
-              description={descriptions[7]}
+              description={descriptions[8]}
               linkText="Courses, events and more"
               routePath="/learning"
             />
