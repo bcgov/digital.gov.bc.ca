@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
+
 import { Col, Row } from 'react-flexbox-grid';
 import {
   CardContact,
@@ -8,7 +10,7 @@ import {
   ContactEmail,
 } from '../StyleComponents/card';
 
-import{
+import {
   FlexWithGraphicCol,
   FlexWithGraphicRow
 } from '../StyleComponents/flexColumnsWithGraphicAndBorder'
@@ -16,7 +18,7 @@ import{
 import {
   ContentBlockContainer,
 } from '../StyleComponents/pageContent';
-import { CaseStudyHeading } from '../StyleComponents/headings';
+import { CaseStudyHeading,SubHeading } from '../StyleComponents/headings';
 
 import { HrefLink } from '../StyleComponents/htmlTags';
 import CaseStudiesInfoCard from './caseStudiesInfocard';
@@ -286,9 +288,9 @@ const EnergyAndMinesDigitalTrustContent = {
   backgroundImage: EmdtBannerImage,
   description: (
     <p>
-      EMDT is enabling and accelerating the B.C. government's entry into a digital trust 
-      ecosystem by creating a simple and secure way to share sustainability data, certifications, 
-      and credentials. 
+      EMDT is enabling and accelerating the B.C. government's entry into a digital trust
+      ecosystem by creating a simple and secure way to share sustainability data, certifications,
+      and credentials.
     </p>
   ),
   videoContent: videoLinks.emdt,
@@ -333,60 +335,48 @@ const EnergyAndMinesDigitalTrustContent = {
       </Col>
     </Row>
   ),
-  raw:(
+  raw: (
     <ContentBlockContainer>
       <style>
         {css}
       </style>
-      <p>Energy &amp; Mines Digital Trust will be sharing their work with climate leaders at the <HrefLink href="https://unfccc.int/ugih-innovation-cop27">UN Climate Change Global Innovation Hub</HrefLink> at <HrefLink href="https://cop27.eg/#/">COP27</HrefLink>.</p>
-
-      <p>You can <strong>watch these sessions live</strong> on the <HrefLink href="https://www.youtube.com/c/UnfcccInt/videos" >United Nations Climate Change Events YouTube channel</HrefLink>. Sessions will also be available on the channel for viewing after the livestream ends.</p>
-
-      <ul>
-        <li><strong>UN Global Innovation Hub (UGIH) Pavilion Opening Session - Core Partner Introductory Remarks (November 7, 10:00-11:00 GMT+2)</strong>: In this session, EMLI's Assistant Deputy Minister, Nathaniel Amann-Blake, will join other core partners to highlight the value of engagement and participation with UGIH. Assistant Deputy Amann-Blake will detail how our work with UGIH has supported the growth of EMDT's digital trust ecosystem.</li>
-        <li><strong>UGIH City-focused Innovation and Implementation Sessions - Focusing on Goyang City Demonstration Pilot and Extension of Methodology Toward Global Cities (November 7, 17:00-18:00 GMT+2)</strong>: Representatives from Goyang City, South Korea, and Assistant Deputy Minister Amann-Blake will outline the collaborative work being facilitated by EMLI and undertaken by the <HrefLink href="https://www.ubc.ca/">University of British Columbia</HrefLink> and the <HrefLink href="https://en.snu.ac.kr/">Seoul National University</HrefLink> to conduct Life Cycle Analysis and consumption-based greenhouse gas (GHG) accounting.</li>
-        <li><strong>Collectively Building the OpenClimate Network: Integrating Non-State Actor Climate Actions from UGIH (eg. cities and corporations) into NDC Progress via Nested Climate Accounting (November 10, 11:00-12:00 GMT+2)</strong>: In this session, I will join representatives from the <HrefLink href="https://www.openearth.org/" >Open Earth Foundation</HrefLink>, the <HrefLink href="https://www.unc.edu/" >University of North Carolina</HrefLink>, and <HrefLink href="https://os-climate.org/">OS-Climate</HrefLink> to discuss how EMDT's digital trust work alongside the Open Earth Foundation <strong>has the capacity to improve access to transparent climate data and address challenges in city-level carbon accounting and climate action</strong>.</li>
-      </ul>
-
-      <p>If you plan on being in Egypt for COP, please reach out to <ContactEmail href="mailto:Nancy.Norris@gov.bc.ca" target="_blank">Nancy.Norris@gov.bc.ca</ContactEmail> to organize an opportunity to meet in-person. We'd be thrilled to connect to discuss digital trust solutions in the climate action space.</p>
-
       <CaseStudyHeading>Energy &amp; Mines Digital Trust Pilot</CaseStudyHeading>
-        
-      <p>As a global movement builds towards low-carbon and net-zero environmental strategies, 
-        more emphasis is placed on responsibly sourced natural resource products. B.C. companies 
-        have the opportunity to prove they are globally competitive, environmentally-leading, and 
+
+      <p>As a global movement builds towards low-carbon and net-zero environmental strategies,
+        more emphasis is placed on responsibly sourced natural resource products. B.C. companies
+        have the opportunity to prove they are globally competitive, environmentally-leading, and
         socially responsible. </p>
       <p>
-        The Energy &amp; Mines Digital Trust (EMDT) pilot project was initiated in November 2020 by 
-        the British Columbia Ministry of Energy, Mines and Low Carbon Innovation to facilitate the 
-        transition to a resilient, clean economy. This pilot coordinates <strong>a collaborative digital 
-        trust ecosystem between the B.C. government, natural resource companies, and global organizations </strong>
-        that improves current processes, making it simple and secure to share sustainability data in the 
+        The Energy &amp; Mines Digital Trust (EMDT) pilot project was initiated in November 2020 by
+        the British Columbia Ministry of Energy, Mines and Low Carbon Innovation to facilitate the
+        transition to a resilient, clean economy. This pilot coordinates <strong>a collaborative digital
+          trust ecosystem between the B.C. government, natural resource companies, and global organizations </strong>
+        that improves current processes, making it simple and secure to share sustainability data in the
         form of digital credentials.
       </p>
       <CaseStudyHeading>Data Security: Why use Digital Credentials?</CaseStudyHeading>
       <p>
-        Digital credentials are the digital equivalent to a physical credential, like a driver's 
-        license or a business registration document. Digital credentials are cryptographically protected 
-        to prevent the data from being altered and are exchanged with just a few clicks using digital wallets. 
+        Digital credentials are the digital equivalent to a physical credential, like a driver's
+        license or a business registration document. Digital credentials are cryptographically protected
+        to prevent the data from being altered and are exchanged with just a few clicks using digital wallets.
       </p>
       <p>
-        Natural resource companies can bypass the need for physical documentation and instead use digital 
-        credentials to share sustainability data, certifications, and credentials safely and easily with 
-        investors, purchasers, regulators, and anyone else interested in their data. Since digital 
-        credentials are secure and checked in real-time, anyone viewing the credential can trust that 
-        the data has not been tampered with during the exchange. 
+        Natural resource companies can bypass the need for physical documentation and instead use digital
+        credentials to share sustainability data, certifications, and credentials safely and easily with
+        investors, purchasers, regulators, and anyone else interested in their data. Since digital
+        credentials are secure and checked in real-time, anyone viewing the credential can trust that
+        the data has not been tampered with during the exchange.
       </p>
       <CaseStudyHeading>Building a Digital Trust Ecosystem</CaseStudyHeading>
       <p>
-        A digital trust ecosystem builds confidence between organizations, businesses, and 
-        individuals when interacting online. When information is shared using digital credentials, 
-        everyone can trust that the information is current and hasn't been tampered with, even without 
-        pre-existing business relationships. For natural resource companies, this means it is possible 
+        A digital trust ecosystem builds confidence between organizations, businesses, and
+        individuals when interacting online. When information is shared using digital credentials,
+        everyone can trust that the information is current and hasn't been tampered with, even without
+        pre-existing business relationships. For natural resource companies, this means it is possible
         to easily share trustworthy data to prove their sustainability efforts.
       </p>
       <p>
-        This improved method for exchanging data allows governments and organizations to: 
+        This improved method for exchanging data allows governments and organizations to:
       </p>
       <ul>
         <li>Prove they are aligning with provincial, national, and international sustainability goals.</li>
@@ -396,118 +386,118 @@ const EnergyAndMinesDigitalTrustContent = {
 
       <CaseStudyHeading>EMDT Enhancing Sustainability Reporting </CaseStudyHeading>
       <p>
-        Reporting environmental impact data can be complicated and laborious process. Data is difficult 
-        to exchange internationally, and consumers cannot always access, or trust, reported data. 
+        Reporting environmental impact data can be complicated and laborious process. Data is difficult
+        to exchange internationally, and consumers cannot always access, or trust, reported data.
       </p>
       <p>
-        As B.C. works towards a cleaner, more resilient economy, it is important to make it easier 
-        and more efficient for the natural resource sector to share sustainability data. 
+        As B.C. works towards a cleaner, more resilient economy, it is important to make it easier
+        and more efficient for the natural resource sector to share sustainability data.
       </p>
       <p>
-        Improved sustainability reporting benefits everyone in B.C. 
+        Improved sustainability reporting benefits everyone in B.C.
       </p>
-      
+
       <div>
-      
-      <FlexWithGraphicRow>
-        <FlexWithGraphicCol xs>
-          <div className="columnWrapper bc1">
-            <img className="columnImage" src={EfficientreportingImage}></img>
-            <div className="columnContents">
-              <h3 className="columnTitle">
-                Efficient Reporting
-              </h3>
-              <p className="contentText">
-                A digital trust ecosystem makes it quick and easy to share data that proves 
-                natural resource products were responsibly sourced.
-              </p>
+
+        <FlexWithGraphicRow>
+          <FlexWithGraphicCol xs>
+            <div className="columnWrapper bc1">
+              <img className="columnImage" src={EfficientreportingImage}></img>
+              <div className="columnContents">
+                <h3 className="columnTitle">
+                  Efficient Reporting
+                </h3>
+                <p className="contentText">
+                  A digital trust ecosystem makes it quick and easy to share data that proves
+                  natural resource products were responsibly sourced.
+                </p>
+              </div>
             </div>
-          </div>
-        </FlexWithGraphicCol>
+          </FlexWithGraphicCol>
 
-        <FlexWithGraphicCol xs>
-        <div className="columnWrapper bc2">
-            <img className="columnImage" src={IncreasedAccuracyImage}></img>
-            <div className="columnContents">
-          <h3 className="columnTitle">
-            Increased Accuracy
-          </h3>
-          <p className="contentText">
-            Digital credentials are checked in real-time and there is no risk of 
-            data manipulation when shared.
-          </p>
-          </div>
-          </div>
-        </FlexWithGraphicCol>
+          <FlexWithGraphicCol xs>
+            <div className="columnWrapper bc2">
+              <img className="columnImage" src={IncreasedAccuracyImage}></img>
+              <div className="columnContents">
+                <h3 className="columnTitle">
+                  Increased Accuracy
+                </h3>
+                <p className="contentText">
+                  Digital credentials are checked in real-time and there is no risk of
+                  data manipulation when shared.
+                </p>
+              </div>
+            </div>
+          </FlexWithGraphicCol>
 
-        <FlexWithGraphicCol xs>
-        <div className="columnWrapper bc3">
-            <img className="columnImage" src={ImprovedTrustImage}></img>
-            <div className="columnContents">
-          <h3 className="columnTitle">
-            Improved Trust
-          </h3>
-          <p className="contentText">
-            Digital credentials are tamper-proof so data cannot be manipulated 
-            during transmission. Information can be trusted.
-          </p>
-          </div>
-          </div>
-        </FlexWithGraphicCol>
+          <FlexWithGraphicCol xs>
+            <div className="columnWrapper bc3">
+              <img className="columnImage" src={ImprovedTrustImage}></img>
+              <div className="columnContents">
+                <h3 className="columnTitle">
+                  Improved Trust
+                </h3>
+                <p className="contentText">
+                  Digital credentials are tamper-proof so data cannot be manipulated
+                  during transmission. Information can be trusted.
+                </p>
+              </div>
+            </div>
+          </FlexWithGraphicCol>
 
-        <FlexWithGraphicCol xs>
-          <div className="columnWrapper bc4">
-            <img className="columnImage" src={PrivacyPreservingImage}></img>
-            <div className="columnContents">
-            <h3 className="columnTitle">
-              Privacy Preserving
-            </h3>
-            <p className="contentText">
-              Organizations share only the information they choose. Digital 
-              credentials make it easy to customize specific data requests.
-            </p>
-          </div></div>
-        </FlexWithGraphicCol>
+          <FlexWithGraphicCol xs>
+            <div className="columnWrapper bc4">
+              <img className="columnImage" src={PrivacyPreservingImage}></img>
+              <div className="columnContents">
+                <h3 className="columnTitle">
+                  Privacy Preserving
+                </h3>
+                <p className="contentText">
+                  Organizations share only the information they choose. Digital
+                  credentials make it easy to customize specific data requests.
+                </p>
+              </div></div>
+          </FlexWithGraphicCol>
 
-        <FlexWithGraphicCol xs>
-          <div className="columnWrapper bc5">
-          <img className="columnImage" src={MaximizedMarketsImage}></img>
-          <div className="columnContents">
-          <h3 className="columnTitle">
-            Maximized Markets
-          </h3>
-          <p className="contentText">
-            Natural resource companies that verify responsibly-sourced 
-            products can compete in a global market that values sustainability.
-          </p>
-          </div>
-          </div>
-        </FlexWithGraphicCol>
+          <FlexWithGraphicCol xs>
+            <div className="columnWrapper bc5">
+              <img className="columnImage" src={MaximizedMarketsImage}></img>
+              <div className="columnContents">
+                <h3 className="columnTitle">
+                  Maximized Markets
+                </h3>
+                <p className="contentText">
+                  Natural resource companies that verify responsibly-sourced
+                  products can compete in a global market that values sustainability.
+                </p>
+              </div>
+            </div>
+          </FlexWithGraphicCol>
 
-        <FlexWithGraphicCol xs>
-          <div className="columnWrapper bc6">
-            <img className="columnImage" src={InnovativeTechnologyImage}></img>
-            <div className="columnContents">
-          <h3 className="columnTitle">
-            Innovative Technology
-          </h3>
-          <p className="contentText">
-            This cutting edge technology positions B.C. as a global leader and 
-            enables a digital trust framework with many business applications.
-          </p>
-          </div></div>
-        </FlexWithGraphicCol>
-      </FlexWithGraphicRow>
+          <FlexWithGraphicCol xs>
+            <div className="columnWrapper bc6">
+              <img className="columnImage" src={InnovativeTechnologyImage}></img>
+              <div className="columnContents">
+                <h3 className="columnTitle">
+                  Innovative Technology
+                </h3>
+                <p className="contentText">
+                  This cutting edge technology positions B.C. as a global leader and
+                  enables a digital trust framework with many business applications.
+                </p>
+              </div></div>
+          </FlexWithGraphicCol>
+        </FlexWithGraphicRow>
       </div>
       <CaseStudyHeading>EMDT Pilot Projects</CaseStudyHeading>
       <p>
-        EMDT is coordinating several pilots to demonstrate how sustainability reporting can be 
+        EMDT is coordinating several pilots to demonstrate how sustainability reporting can be
         made more efficient and trustworthy in a digital trust ecosystem.
       </p>
       <p>
-        Two pilot projects explore greenhouse gas emissions reporting in the mining sector 
-        and the natural gas sector. These pilots allow participants to test sharing and 
-        receiving digital credentials that include verified GHG emissions data for a specific 
+        Two pilot projects explore greenhouse gas emissions reporting in the mining sector
+        and the natural gas sector. These pilots allow participants to test sharing and
+        receiving digital credentials that include verified GHG emissions data for a specific
         mine site or natural gas facility.
       </p>
       <div className="emdtDiagram">
@@ -515,46 +505,46 @@ const EnergyAndMinesDigitalTrustContent = {
 
         <div className='diagramDescColumns'>
           <div className="diagramDescColumn">
-            
-            
+
+
             <h3>3rd Party Validation</h3>
             <div className='diagramDescContent'>
               <div className="imageWrap">
                 <img src={digramDescIcon3}></img>
               </div>
-              Having verified Copper Mountain's self-reported Greenhouse Gas Emissions (GHG) data, 
+              Having verified Copper Mountain's self-reported Greenhouse Gas Emissions (GHG) data,
               PricewaterhouseCoopers issues a digital credential containing GHG data.
             </div>
           </div>
           <div className="diagramDescColumn">
-            
+
             <h3>Regulatory Reporting</h3>
-            <div  className='diagramDescContent'>
+            <div className='diagramDescContent'>
               <div className="imageWrap">
                 <img src={digramDescIcon2}></img>
               </div>
               <div>
-              Copper Mountain uses a verification statement as part of 
-              their GHG emissions report to the Climate Action Secretariat.
+                Copper Mountain uses a verification statement as part of
+                their GHG emissions report to the Climate Action Secretariat.
                 <div className="small">
-                *Because this is a pilot, the process depicted in this diagram 
-                does not satisfy or replace existing regulatory reporting obligations.
+                  *Because this is a pilot, the process depicted in this diagram
+                  does not satisfy or replace existing regulatory reporting obligations.
                 </div></div>
-              </div>
-            
+            </div>
+
           </div>
           <div className="diagramDescColumn">
-            
+
             <h3>Voluntary Reporting</h3>
             <div className='diagramDescContent'>
-              
+
               <div className="imageWrap">
                 <img src={digramDescIcon1}></img>
               </div>
-              Open Earth Foundation requests GHG emissions data from Copper Mountain for inclusion on the Open Climate portal, 
-              a global carbon accounting platform. Copper Mountain voluntarily supplies a subset of data using their 
+              Open Earth Foundation requests GHG emissions data from Copper Mountain for inclusion on the Open Climate portal,
+              a global carbon accounting platform. Copper Mountain voluntarily supplies a subset of data using their
               GHG Emissions Report Verification Credential.
-              </div>
+            </div>
           </div>
         </div>
 
@@ -588,9 +578,9 @@ const EnergyAndMinesDigitalTrustContent = {
                 </div>
               </div>
             </div>
-              
+
           </div>
-          
+
         </div>
       </div>
       {/* <ul>
@@ -622,33 +612,50 @@ const EnergyAndMinesDigitalTrustContent = {
       </ul> */}
       <CaseStudyHeading>Traction</CaseStudyHeading>
       <p>
-        EMDT's technology, Traction, is open-source software built on open-source 
-        components from Hyperledger. 
+        EMDT's technology, Traction, is open-source software built on open-source
+        components from Hyperledger.
       </p>
       <p>
-        Open-source software maximizes Traction's potential and accelerates 
-        participation in a digital trust ecosystem. 
+        Open-source software maximizes Traction's potential and accelerates
+        participation in a digital trust ecosystem.
       </p>
       <ul>
         <li>
-          <strong>Broader Compatibility:</strong> Open-source software makes possible for the B.C. 
-          government to connect to the technologies that companies and organizations 
+          <strong>Broader Compatibility:</strong> Open-source software makes possible for the B.C.
+          government to connect to the technologies that companies and organizations
           are already using.
         </li>
         <li>
-          <strong>Safer data exchange:</strong> Traction uses blockchain technology to protect data 
-          and information. Credentials exchanged using Traction are not vulnerable 
+          <strong>Safer data exchange:</strong> Traction uses blockchain technology to protect data
+          and information. Credentials exchanged using Traction are not vulnerable
           to fraud or phishing.
         </li>
         <li>
-          <strong>Accelerated Adoption:</strong> Open-source software enables Traction to be 
+          <strong>Accelerated Adoption:</strong> Open-source software enables Traction to be
           released and adopted more quickly.
         </li>
       </ul>
       <p>
-      
-        Visit <HrefLink href="https://digital.gov.bc.ca/digital-trust/tools/traction/">Traction</HrefLink> on the BC Digital Trust website to learn more about Traction. 
+
+        Visit <HrefLink href="https://digital.gov.bc.ca/digital-trust/tools/traction/">Traction</HrefLink> on the BC Digital Trust website to learn more about Traction.
       </p>
+      <CaseStudyHeading>EMDT at COP27</CaseStudyHeading>
+      <SubHeading>The Value of a Digital Trust Ecosystem – Energy & Mines Digital Trust</SubHeading>
+      <div style={{'margin-bottom':'24px'}}>
+      <ReactPlayer url={"https://www.youtube.com/watch?v=IBDPJEI0O_8"} width="auto" controls  />
+      </div>
+      <p>Energy &amp; Mines Digital Trust shared their work with climate leaders at the <HrefLink href="https://unfccc.int/ugih-innovation-cop27">UN Climate Change Global Innovation Hub</HrefLink> and the Digital Innovation and DigitalArt4Climate Pavilion at <HrefLink href="https://cop27.eg/#/">COP27</HrefLink>.</p>
+
+      <p>The recordings of these sessions are available to watch on the <HrefLink href="https://www.youtube.com/c/UnfcccInt/videos" >United Nations Climate Change Events YouTube channel</HrefLink>.</p>
+
+      <ul>
+        <li><HrefLink href="https://www.youtube.com/watch?v=I0YnlfjZjO4">UGIH City-focused Innovation and Implementation Sessions - Focusing on Goyang City Demonstration Pilot and Extension of Methodology Toward Global Cities</HrefLink>: Representatives from Goyang City, South Korea, and Assistant Deputy Minister Amann-Blake will outline the collaborative work being facilitated by EMLI and undertaken by the <HrefLink href="https://www.ubc.ca/">University of British Columbia</HrefLink> and the <HrefLink href="https://en.snu.ac.kr/">Seoul National University</HrefLink> to conduct Life Cycle Analysis and consumption-based greenhouse gas (GHG) accounting.</li>
+        <li><HrefLink href="https://www.youtube.com/watch?v=CbVGPB2ge5U">Collectively Building the OpenClimate Network: Integrating Non-State Actor Climate Actions from UGIH (eg. cities and corporations) into NDC Progress via Nested Climate Accounting</HrefLink>: In this session, Nancy Norris will join representatives from the <HrefLink href="https://www.openearth.org/" >Open Earth Foundation</HrefLink>, the <HrefLink href="https://www.unc.edu/" >University of North Carolina</HrefLink>, and <HrefLink href="https://os-climate.org/">OS-Climate</HrefLink> to discuss how EMDT's digital trust work alongside the Open Earth Foundation <strong>has the capacity to improve access to transparent climate data and address challenges in city-level carbon accounting and climate action</strong>.</li>
+        <li><HrefLink href="https://www.youtube.com/watch?v=JVluuCe8fyY">The Power of Open Source and Digital Public Goods for Climate Action</HrefLink>: Transparent development of global assets for climate action is key for decision making. In this discussion Nancy Norris will join representatives from the Open Earth Foundation, OS-Climate, the Hyperledger Foundation, and the Green Digital Finance Alliance to showcase Energy & Mines Digital Trust as an example of a project using open source technology to make sustainability reporting more secure and efficient for private and public sector organizations worldwide.</li>
+      </ul>
+
+      <ReactPlayer url={"https://www.youtube.com/watch?v=2umAlZJZKcU"} width="auto" controls />
+
     </ContentBlockContainer>
   ),
   contacts: (
@@ -675,7 +682,7 @@ const EnergyAndMinesDigitalTrustContent = {
           <div>
             <ContactName>Kyle Robinson</ContactName>
             <ContactTitle>
-              Senior Strategic Advisor – Digital Trust Ecosystems 
+              Senior Strategic Advisor – Digital Trust Ecosystems
             </ContactTitle>
             <ContactEmail
               href="mailto:kyle.robinson@briartech.ca"
@@ -1350,4 +1357,4 @@ const OrgBookContent = {
   resourceLinks: [resourceLinks.orgBookBC],
 };
 
-export {EnergyAndMinesDigitalTrustContent, MiningContent, FarmerContent, MedicalContent, OrgBookContent };
+export { EnergyAndMinesDigitalTrustContent, MiningContent, FarmerContent, MedicalContent, OrgBookContent };
