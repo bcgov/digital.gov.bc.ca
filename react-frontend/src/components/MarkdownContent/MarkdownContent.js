@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 
-import { PageContainer, GlobaStyleSize, ContentBlockContainer } from '../StyleComponents/pageContent';
+import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { HrefLink, HrefLinkInternal } from '../StyleComponents/htmlTags';
 import { Heading, Title } from '../StyleComponents/headings';
 
@@ -40,9 +40,7 @@ function MarkdownContent() {
 }
 `
   const location = useLocation();
-  console.log(location.pathname);
   const path = location.pathname;
-  let title = "hello";
   let titleWas = '';
   let processedTitleBlock=false;
   let processSideImageBanner = function(t){
@@ -70,8 +68,7 @@ function MarkdownContent() {
                 <div style={{ marginBottom: '4px' }}>
                   {markdownContents?.map((markdownContent, i) => {
                     let tokens = markdownContent.Markdown.split("\n"); // extract page title by looking at first line of markdown and dropping "# "
-                    title = tokens[0].substring(1);
-                    console.log(title);
+                    let title = tokens[0].substring(1);
                     //(markdownContent.Markdown);
                     let md = "hello world!";
                     return (
@@ -80,8 +77,6 @@ function MarkdownContent() {
                         <ReactMarkdown components={{
                           // 'h1':Title,
                           'p': ({ node, ...props }) => {
-                            console.log(props.children[0]);
-                            console.log("abc");
                             if (path != '/digital-code-of-practice/Introduction') { // not on landing page
                               return <p>{props.children}</p>
                             } else { // is on landing page
@@ -100,12 +95,11 @@ function MarkdownContent() {
                             }
                           },
                           'h1': ({ node, ...props }) => {
-                            console.log(path)
                             if (path == '/digital-code-of-practice/Introduction') { // on landing page
-                              processSideImageBanner(props.children[0]);
+                              processSideImageBanner(title);
                               return false; // do not render title at all - will handle when first paragraph is received
                             } else { // not on landing page
-                              return <Title>{props.children[0]}</Title>
+                              return <Title>{title}</Title>
                             }
                           },
                           'h2': ({ node, ...props }) => {
