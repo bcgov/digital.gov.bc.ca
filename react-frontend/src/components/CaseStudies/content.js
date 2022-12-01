@@ -294,7 +294,7 @@ const EnergyAndMinesDigitalTrustContent = {
     </p>
   ),
   videoContent: videoLinks.emdt,
-  videoContentTitle: 'Greenhouse Gas Mining Pilot Demonstration',
+  videoContentTitle: 'EMDT and Spherity at COP27',
   others: (
     <Row>
       <Col sm={12} md={4}>
@@ -610,6 +610,10 @@ const EnergyAndMinesDigitalTrustContent = {
           stakeholder requests.
         </li>
       </ul> */}
+            <CaseStudyHeading>Greenhouse Gas Mining Pilot Demonstration</CaseStudyHeading>
+
+            <ReactPlayer url={"https://www.youtube.com/watch?v=TSZQ5GHq7mw"} width="auto" controls style={{'margin-bottom':'24px'}} />
+
       <CaseStudyHeading>Traction</CaseStudyHeading>
       <p>
         EMDT's technology, Traction, is open-source software built on open-source
@@ -641,20 +645,16 @@ const EnergyAndMinesDigitalTrustContent = {
       </p>
       <CaseStudyHeading>EMDT at COP27</CaseStudyHeading>
       <SubHeading>The Value of a Digital Trust Ecosystem – Energy & Mines Digital Trust</SubHeading>
-      <div style={{'margin-bottom':'24px'}}>
-      <ReactPlayer url={"https://www.youtube.com/watch?v=IBDPJEI0O_8"} width="auto" controls  />
-      </div>
+      <ReactPlayer url={"https://www.youtube.com/watch?v=IBDPJEI0O_8"} width="auto" controls  style={{'margin-bottom':'24px'}} />
       <p>Energy &amp; Mines Digital Trust shared their work with climate leaders at the <HrefLink href="https://unfccc.int/ugih-innovation-cop27">UN Climate Change Global Innovation Hub</HrefLink> and the Digital Innovation and DigitalArt4Climate Pavilion at <HrefLink href="https://cop27.eg/#/">COP27</HrefLink>.</p>
 
       <p>The recordings of these sessions are available to watch on the <HrefLink href="https://www.youtube.com/c/UnfcccInt/videos" >United Nations Climate Change Events YouTube channel</HrefLink>.</p>
 
       <ul>
-        <li><HrefLink href="https://www.youtube.com/watch?v=I0YnlfjZjO4">UGIH City-focused Innovation and Implementation Sessions - Focusing on Goyang City Demonstration Pilot and Extension of Methodology Toward Global Cities</HrefLink>: Representatives from Goyang City, South Korea, and Assistant Deputy Minister Amann-Blake will outline the collaborative work being facilitated by EMLI and undertaken by the <HrefLink href="https://www.ubc.ca/">University of British Columbia</HrefLink> and the <HrefLink href="https://en.snu.ac.kr/">Seoul National University</HrefLink> to conduct Life Cycle Analysis and consumption-based greenhouse gas (GHG) accounting.</li>
-        <li><HrefLink href="https://www.youtube.com/watch?v=CbVGPB2ge5U">Collectively Building the OpenClimate Network: Integrating Non-State Actor Climate Actions from UGIH (eg. cities and corporations) into NDC Progress via Nested Climate Accounting</HrefLink>: In this session, Nancy Norris will join representatives from the <HrefLink href="https://www.openearth.org/" >Open Earth Foundation</HrefLink>, the <HrefLink href="https://www.unc.edu/" >University of North Carolina</HrefLink>, and <HrefLink href="https://os-climate.org/">OS-Climate</HrefLink> to discuss how EMDT's digital trust work alongside the Open Earth Foundation <strong>has the capacity to improve access to transparent climate data and address challenges in city-level carbon accounting and climate action</strong>.</li>
-        <li><HrefLink href="https://www.youtube.com/watch?v=JVluuCe8fyY">The Power of Open Source and Digital Public Goods for Climate Action</HrefLink>: Transparent development of global assets for climate action is key for decision making. In this discussion Nancy Norris will join representatives from the Open Earth Foundation, OS-Climate, the Hyperledger Foundation, and the Green Digital Finance Alliance to showcase Energy & Mines Digital Trust as an example of a project using open source technology to make sustainability reporting more secure and efficient for private and public sector organizations worldwide.</li>
+        <li><HrefLink href="https://www.youtube.com/watch?v=I0YnlfjZjO4">UGIH City-focused Innovation and Implementation Sessions - Focusing on Goyang City Demonstration Pilot and Extension of Methodology Toward Global Cities</HrefLink>: Representatives from Goyang City, South Korea, and Assistant Deputy Minister Amann-Blake outlines the collaborative work being facilitated by EMLI and undertaken by the <HrefLink href="https://www.ubc.ca/">University of British Columbia</HrefLink> and the <HrefLink href="https://en.snu.ac.kr/">Seoul National University</HrefLink> to conduct Life Cycle Analysis and consumption-based greenhouse gas (GHG) accounting.</li>
+        <li><HrefLink href="https://www.youtube.com/watch?v=CbVGPB2ge5U">Collectively Building the OpenClimate Network: Integrating Non-State Actor Climate Actions from UGIH (eg. cities and corporations) into NDC Progress via Nested Climate Accounting</HrefLink>: In this session, Nancy Norris joins representatives from the <HrefLink href="https://www.openearth.org/" >Open Earth Foundation</HrefLink>, the <HrefLink href="https://www.unc.edu/" >University of North Carolina</HrefLink>, and <HrefLink href="https://os-climate.org/">OS-Climate</HrefLink> to discuss how EMDT's digital trust work alongside the Open Earth Foundation <strong>has the capacity to improve access to transparent climate data and address challenges in city-level carbon accounting and climate action</strong>.</li>
+        <li><HrefLink href="https://www.youtube.com/watch?v=JVluuCe8fyY">The Power of Open Source and Digital Public Goods for Climate Action</HrefLink>: Transparent development of global assets for climate action is key for decision making. In this discussion Nancy Norris joins representatives from the Open Earth Foundation, OS-Climate, the Hyperledger Foundation, and the Green Digital Finance Alliance to showcase Energy & Mines Digital Trust as an example of a project using open source technology to make sustainability reporting more secure and efficient for private and public sector organizations worldwide.</li>
       </ul>
-
-      <ReactPlayer url={"https://www.youtube.com/watch?v=2umAlZJZKcU"} width="auto" controls />
 
     </ContentBlockContainer>
   ),
