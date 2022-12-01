@@ -180,9 +180,9 @@ function NavBar() {
 
             <NavBarLi className="mainNav2">
               <NavBarLink
-                to="/digital-framework"
+                to="/common-components"
                 className={
-                  activePage === '/digital-framework' ? 'active' : 'notactive'
+                  activePage === '/common-components' ? 'active' : 'notactive'
                 }
               >
                 Common Components
