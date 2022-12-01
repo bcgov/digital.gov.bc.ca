@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const navBarResize = 1000;
+export const navBarResize = 1200;
 
 export const NavBarWrapper = styled.div.attrs()`
   border: none;
