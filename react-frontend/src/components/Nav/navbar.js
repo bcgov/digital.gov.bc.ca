@@ -168,7 +168,7 @@ function NavBar() {
               </NavBarLinkExternal>
             </NavBarLi>
             <NavBarLi>
-              <NavBarLinkExternal href="/marketplace">
+              <NavBarLinkExternal href="https://marketplace.digital.gov.bc.ca">
                 Marketplace
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
