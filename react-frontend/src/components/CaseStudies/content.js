@@ -625,7 +625,7 @@ const EnergyAndMinesDigitalTrustContent = {
       </p>
       <ul>
         <li>
-          <strong>Broader Compatibility:</strong> Open-source software makes possible for the B.C.
+          <strong>Broader Compatibility:</strong> Open-source software makes it possible for the B.C.
           government to connect to the technologies that companies and organizations
           are already using.
         </li>
