@@ -101,7 +101,7 @@ function Home() {
                   <Heading style={{ lineHeight: '1.2' }}>
                     Feedback
                   </Heading>
-                  <p>Understanding your experience with digital.gov.bc.ca will help us develop it into a trusted wayfinding service. Please <HrefLink href="https://marketplace.digital.gov.bc.ca/">give us your feedback</HrefLink>.</p>
+                  <p>Understanding your experience with digital.gov.bc.ca will help us develop it into a trusted wayfinding service. Please <HrefLink href="https://digital-feedback.apps.silver.devops.gov.bc.ca/">give us your feedback</HrefLink>.</p>
                 </CardStyled>
               </Col>
             </Row>
