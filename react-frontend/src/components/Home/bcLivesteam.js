@@ -20,7 +20,7 @@ const BCLivestream = () => {
           #DigitalBC Livestream
         </Heading>
         <LinkExternalButton
-          href="google.com"
+          href="https://eepurl.us3.list-manage.com/subscribe?u=2cd8863adab4f39ade7cbee34&id=b331c22b50"
           style={{
             maxWidth: '160px',
             marginBottom: '0px',
@@ -35,7 +35,7 @@ const BCLivestream = () => {
       const pastBroadcastLink = 
         <div style={{ width: 'fit-content' }}>
           <a
-            href="google.com"
+            href="https://www.youtube.com/playlist?list=PL9CV_8JBQHiqpIJZd7V4stSAwo4jxfJ9b"
             target="_blank"
             rel="noreferrer"
           >
