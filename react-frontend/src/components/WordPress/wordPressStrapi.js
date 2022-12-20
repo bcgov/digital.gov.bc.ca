@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import DocumentTitle from 'react-document-title';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
@@ -16,6 +17,7 @@ import '../../wordpress.css'
 
 
 function WordPressStrapi() {
+  const params = useParams();
   const slug=params.slug;
   return (
       <div>
@@ -24,9 +26,16 @@ function WordPressStrapi() {
           <Query query={WORDPRESS_QUERY} uid={slug}>
 
             {({ data: { wordpressContents } }) => {
-              return (
-                <div dangerouslySetInnerHTML={{__html: wordpressContents}}></div>
-              );
+                return(
+                    <div>
+                        {wordpressContents?.map((wordpressContent, i) => {
+                            return (
+                                <div dangerouslySetInnerHTML={{__html: wordpressContent.HTML}}></div>
+                            );
+                        })}
+                    </div>
+                )
+                 
             }}
           </Query>
         </PageContainer>

@@ -37,6 +37,7 @@ const DisplayNames = {
   resources: 'Resources',
   'common-components': 'Common Components',
   communities: 'Communities',
+  guides: 'Guides'
 };
 
 const Routes = () => {
