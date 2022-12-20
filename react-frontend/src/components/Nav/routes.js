@@ -23,6 +23,9 @@ import Privacy from '../../components/FooterPages/privacy';
 import Products from '../products/products';
 import Resources from '../../components/Resources/resources';
 import Saas from '../LowTouchSaas/lowTouchSaas';
+import WordPressPageDirect from '../WordPress/wordPressPageDirect';
+import WordPressStrapi from '../WordPress/wordPressStrapi';
+
 
 const DisplayNames = {
   blog: 'Blog',
@@ -54,6 +57,9 @@ const Routes = () => {
         />
         <Route exact path="/communities" component={Communities} />
         <Route exact path="/communities/:uid" component={Community} />
+        <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} />
+        <Route exact path="/guides/:slug" component={WordPressStrapi} />
+
         <Route exact path="/copyright" component={Copyright} />
         <Route exact path="/digital-framework" component={DigitalFramework} />
         <Route
