@@ -1,6 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-
+import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
 import About from '../../components/FooterPages/about';
 import BlogHome from '../../components/Blog/blogHome';
 import BlogPage from '../../components/Blog/blogPage';
@@ -24,6 +23,7 @@ import Products from '../products/products';
 import Resources from '../../components/Resources/resources';
 import Saas from '../LowTouchSaas/lowTouchSaas';
 
+
 const DisplayNames = {
   blog: 'Blog',
   'case-studies': 'Case Studies',
@@ -37,7 +37,21 @@ const DisplayNames = {
 };
 
 const Routes = () => {
+  // for screen reader assistive technology:
+  // when user navigates between views, set focus on first H1
+  // this way the user gets an announcement that the page has changed
+  // see https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/ for more info
+  const location = useLocation();
+  React.useEffect(() => {
+    let h1 = document.getElementsByTagName("h1")
+    if (h1.length>0){
+      h1[0].setAttribute('tabindex',"-1")
+      h1[0].focus();
+    }
+  }, [location]);
+
   return (
+    
     <div>
       <BreadCrumbs />
       <Switch>
