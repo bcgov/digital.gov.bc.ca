@@ -17,7 +17,7 @@ function App() {
           <Routes />
         </RouteBody>
         <Footer />
-        <FeedbackForm />
+        {/* <FeedbackForm /> */}
       </Router>
     </div>
   );

@@ -79,6 +79,61 @@ function NavBar() {
 
   return (
     <NavBarWrapper>
+      <style>
+        {
+          `
+          @media screen and (min-width: 1200px){  
+        
+            .navBarUl{
+              display:grid;
+              grid-template-areas:
+                "........ ........ ........ ........ headerNav1 headerNav2 headerNav3"
+                "mainNav1 mainNav2 mainNav3 mainNav4 mainNav5 mainNav6 mainNav7";
+            }
+            .mainNav1{
+              grid-area: mainNav1;
+            }
+            .mainNav2{
+              grid-area: mainNav2;
+            }
+            .mainNav3{
+              grid-area: mainNav3;
+            }
+            .mainNav4{
+              grid-area: mainNav4;
+            }
+            .mainNav5{
+              grid-area: mainNav5;
+            }
+            .mainNav6{
+              grid-area: mainNav6;
+            }
+            .mainNav7{
+              grid-area: mainNav7;
+            }
+
+            .headerNav1{
+              grid-area: headerNav1;
+            }
+            .headerNav2{
+              grid-area: headerNav2;
+            }
+            .headerNav3{
+              grid-area: headerNav3;
+            }
+          
+            .headerNav1, .headerNav2, .headerNav3{
+              margin-top:-44px;
+            }
+
+            .navBarLink{
+              text-align: center;
+              display: block;
+            }
+          }
+          `
+        }
+      </style>
       {/* If a site banner is needed in the future, add the component here. (see CovidBanner code) */}
       <NavBarHeader>
         <NavBarContainer>
@@ -111,17 +166,30 @@ function NavBar() {
       <NavMain>
         <NavBarContainer>
           <NavBarUl>
-            <NavBarLi>
+
+            <NavBarLi className="mainNav1">
               <NavBarLinkFirst
-                to="/communities"
+                to="/digital-framework"
                 className={
-                  activePage === '/communities' ? 'active' : 'notactive'
+                  activePage === '/digital-framework' ? 'active' : 'notactive'
                 }
               >
-                Communities
+                Digital Framework
               </NavBarLinkFirst>
             </NavBarLi>
-            <NavBarLi>
+
+            <NavBarLi className="mainNav2">
+              <NavBarLink
+                to="/common-components"
+                className={
+                  activePage === '/common-components' ? 'active' : 'notactive'
+                }
+              >
+                Common Components
+              </NavBarLink>
+            </NavBarLi>
+
+            <NavBarLi className="mainNav3">
               <NavBarLink
                 to="/resources"
                 className={activePage === '/resources' ? 'active' : 'notactive'}
@@ -129,17 +197,19 @@ function NavBar() {
                 Resources
               </NavBarLink>
             </NavBarLi>
-            <NavBarLi>
+
+            <NavBarLi className="mainNav4">
               <NavBarLink
-                to="/products-services"
+                to="/communities"
                 className={
-                  activePage === '/products-services' ? 'active' : 'notactive'
+                  activePage === '/communities' ? 'active' : 'notactive'
                 }
               >
-                Products & Services
-              </NavBarLink>
+                Communities
+            </NavBarLink>
             </NavBarLi>
-            <NavBarLi>
+
+            <NavBarLi className="mainNav5">
               <NavBarLink
                 to="/case-studies"
                 className={
@@ -149,15 +219,30 @@ function NavBar() {
                 Case Studies
               </NavBarLink>
             </NavBarLi>
-            <NavBarLi>
+
+            
+            <NavBarLi className="mainNav6">
+              <NavBarLink
+                to="/products-services"
+                className={
+                  activePage === '/products-services' ? 'active' : 'notactive'
+                }
+              >
+                Services
+              </NavBarLink>
+            </NavBarLi>
+
+            
+            <NavBarLi className="mainNav7">
               <NavBarLink
                 to="/learning"
                 className={activePage === '/learning' ? 'active' : 'notactive'}
               >
-                Learning
+                Learn
               </NavBarLink>
             </NavBarLi>
-            <NavBarLi>
+
+            <NavBarLi className="headerNav1">
               <NavBarLinkExternal href="/digital-trust">
                 Digital Trust
                 <FontAwesomeIcon
@@ -167,9 +252,19 @@ function NavBar() {
                 />
               </NavBarLinkExternal>
             </NavBarLi>
-            <NavBarLi>
-              <NavBarLinkExternal href="/marketplace">
+            <NavBarLi className="headerNav2">
+              <NavBarLinkExternal href="https://marketplace.digital.gov.bc.ca">
                 Marketplace
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  className="fa-xs"
+                  pull="right"
+                />
+              </NavBarLinkExternal>
+            </NavBarLi>
+            <NavBarLi className="headerNav3">
+              <NavBarLinkExternal href="https://digital-feedback.apps.silver.devops.gov.bc.ca">
+                Feedback 
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   className="fa-xs"
