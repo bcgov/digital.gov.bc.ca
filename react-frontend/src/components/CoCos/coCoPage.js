@@ -19,6 +19,13 @@ import { PageContainer } from '../StyleComponents/pageContent';
 function CoCoPage() {
   const params = useParams();
   const ScrollElement = Scroll.Element;
+  const ScrollEvents = Scroll.Events
+  
+  ScrollEvents.scrollEvent.register('end', function(to, element) {
+    console.log('end', element);
+    element.focus();
+  });
+
   return (
     <DocumentTitle title="Common Components - Digital Government - Province of British Columbia">
       <PageContainer>
@@ -39,7 +46,17 @@ function CoCoPage() {
                   location6="whyUse"
                   name={coCos[0]?.Name}
                 />
-                <ScrollElement name="overview" className="element" />
+                <style>
+                  {
+                    `
+                    .element{
+                      height:0;
+                      overflow:hidden; /* screen reader accessibility: want contents inside the focusable element to be read out when user scrolls to the element */
+                    }
+                    `
+                  }
+                </style>
+                <ScrollElement name="overview" className="element" tabIndex="-1">overview</ScrollElement>
                 <CoCoBannerSideImage
                   name={coCos[0]?.Name}
                   description={coCos[0]?.Description}
@@ -49,18 +66,18 @@ function CoCoPage() {
                   tags={coCos[0]?.Tags}
                   coCoLink={coCos[0]?.CoCoWebsite}
                 />
-                <ScrollElement name="whyUse" className="element" />
+                <ScrollElement name="whyUse" className="element" tabIndex="-1">why should i use this?</ScrollElement>
                 <WhyShouldIUseThis
                   whyShouldIUseThis={coCos[0]?.WhyShouldIUseThis}
                 />
-                <ScrollElement name="whoIsUsing" className="element" />
+                <ScrollElement name="whoIsUsing" className="element" tabIndex="-1">who else is using this?</ScrollElement>
                 <Analytics
                   coCoName={coCos[0]?.Name}
                   numberOfUsers={coCos[0]?.NumberOfUsers}
                   creationDate={coCos[0]?.MonthAndYearCreated}
                   whoIsUsingThis={coCos[0]?.WhoIsUsingThis}
                 />
-                <ScrollElement name="about" className="element" />
+                <ScrollElement name="about" className="element" tabIndex="-1">about {coCos[0]?.Name}</ScrollElement>
                 <CollapsedMenus
                   name={coCos[0]?.name}
                   price={coCos[0]?.CostStructure?.PaymentStructure}
@@ -68,13 +85,13 @@ function CoCoPage() {
                   technicalInfo={coCos[0]?.AdditionalTechnicalInformation}
                   requirements={coCos[0]?.RequirementsAndRestrictions}
                 />
-                <ScrollElement name="getStarted" className="element" />
+                <ScrollElement name="getStarted" className="element" tabIndex="-1">getting started</ScrollElement>
                 <GetStarted
                   name={coCos[0]?.Name}
                   url={coCos[0]?.GetStartedURL}
                   steps={coCos[0]?.GetStartedSteps}
                 />
-                <ScrollElement name="support" className="element" />
+                <ScrollElement name="support" className="element" tabIndex="-1">support</ScrollElement>
                 <Support contact={coCos[0]?.Support} />
               </div>
             );

@@ -25,6 +25,14 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
     setExpanded(key);
   };
 
+  const toggleExpandAll = () => {
+    if (expanded.length==4){
+      collapseAll();
+    }else{
+      expandAll();
+    }
+  }
+
   return (
     <div style={{ marginTop: '60px' }}>
       <Row>
@@ -34,10 +42,13 @@ function CollapsedMenus({ price, service, technicalInfo, requirements, name }) {
       </Row>
       <Row>
         <Col xs={12}>
-          <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>
+          {/* <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>
             Expand All
           </CollapseButton>{' '}
-          | <CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
+          | <CollapseButton onClick={collapseAll}>Collapse All</CollapseButton> */}
+          <CollapseButton aria-expanded={expanded.length==4?'true':'false'} onClick={toggleExpandAll} style={{ paddingLeft: '0' }}>
+            {expanded.length==4?'Collapse All':'Expand All'}
+          </CollapseButton>
         </Col>
       </Row>
       <CollapseStyled

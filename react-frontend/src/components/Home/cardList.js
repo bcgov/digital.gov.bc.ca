@@ -40,7 +40,7 @@ const CardList = () => {
               img={digitalFrameworkGrey}
               title={'Digital Framework'}
               description={descriptions[0]}
-              linkText="Read the framework"
+              linkText="Read the Digital Framework"
               routePath="/digital-framework"
               height="300px"
             />
@@ -50,7 +50,7 @@ const CardList = () => {
               img={digitalPrinciplesGrey}
               title={'Digital Principles'}
               description={descriptions[1]}
-              linkText="Read the principles"
+              linkText="Read the Digital Principles"
               routePath={'/resources/digital-principles'}
               height="300px"
             />
@@ -62,7 +62,7 @@ const CardList = () => {
               img={coCoGrey}
               title={'Common Components'}
               description={descriptions[6]}
-              linkText="View the collection"
+              linkText="View Common Components"
               routePath={'/common-components'}
               height="300px"
             />

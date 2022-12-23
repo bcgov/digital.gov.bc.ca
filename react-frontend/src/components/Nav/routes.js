@@ -51,47 +51,49 @@ const Routes = () => {
   }, [location]);
 
   return (
-    
     <div>
       <BreadCrumbs />
-      <Switch>
-        <Route exact path="/about" component={About} />
-        <Route exact path="/blog" component={BlogHome} />
-        <Route exact path="/blog/:uid" component={BlogPage} />
-        <Route path="/case-studies" component={CaseStudies} />
-        <Route exact path="/common-components" component={CoCos} />
-        <Route exact path="/common-components/:uid" component={CoCoPage} />
-        <Route
-          exact
-          path="/guides/communication-platforms"
-          component={CollaborationTools}
-        />
-        <Route exact path="/communities" component={Communities} />
-        <Route exact path="/communities/:uid" component={Community} />
-        <Route exact path="/copyright" component={Copyright} />
-        <Route exact path="/digital-framework" component={DigitalFramework} />
-        <Route
-          exact
-          path="/resources/digital-principles"
-          component={DigitalPrinciples}
-        />
-        <Route exact path="/disclaimer" component={Disclaimer} />
-        <Route exact path="/" component={Home} />
-        <Route
-          exact
-          path="/resources/hosting-options"
-          component={HostingOptions}
-        />
-        <Route exact path="/resources/low-touch-saas" component={Saas} />
-        <Route exact path="/learning" component={Learning} />
-        <Route exact path="/products-services" component={Products} />
-        <Route exact path="/resources" component={Resources} />
-        <Route exact path="/privacy" component={Privacy} />
-        <Route path="/standards-and-guides">
-          <NotFound standards />
-        </Route>
-        <Route component={NotFound} />
-      </Switch>
+      <div role="main">
+        
+        <Switch>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/blog" component={BlogHome} />
+          <Route exact path="/blog/:uid" component={BlogPage} />
+          <Route path="/case-studies" component={CaseStudies} />
+          <Route exact path="/common-components" component={CoCos} />
+          <Route exact path="/common-components/:uid" component={CoCoPage} />
+          <Route
+            exact
+            path="/guides/communication-platforms"
+            component={CollaborationTools}
+          />
+          <Route exact path="/communities" component={Communities} />
+          <Route exact path="/communities/:uid" component={Community} />
+          <Route exact path="/copyright" component={Copyright} />
+          <Route exact path="/digital-framework" component={DigitalFramework} />
+          <Route
+            exact
+            path="/resources/digital-principles"
+            component={DigitalPrinciples}
+          />
+          <Route exact path="/disclaimer" component={Disclaimer} />
+          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/resources/hosting-options"
+            component={HostingOptions}
+          />
+          <Route exact path="/resources/low-touch-saas" component={Saas} />
+          <Route exact path="/learning" component={Learning} />
+          <Route exact path="/products-services" component={Products} />
+          <Route exact path="/resources" component={Resources} />
+          <Route exact path="/privacy" component={Privacy} />
+          <Route path="/standards-and-guides">
+            <NotFound standards />
+          </Route>
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     </div>
   );
 };

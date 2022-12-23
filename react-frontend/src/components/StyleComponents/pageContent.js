@@ -63,6 +63,22 @@ const HorizontalContainer = styled(Grid).attrs({
   }
 `;
 
+const HorizontalNavContainer = styled.nav.attrs({
+  className: 'horizontalAlignment',
+})`
+  margin: auto;
+  max-width: 1065px;
+  padding-left: 30px;
+  padding-right: 20px;
+  z-index: -2;
+  @media screen and (min-width: 800px) {
+    padding-left: 107px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: 15px;
+  }
+`;
+
 export const BannerHorizontalContainer = styled(HorizontalContainer).attrs({
   className: 'bannerCenterText',
   id: 'main-content-anchor',
@@ -70,8 +86,9 @@ export const BannerHorizontalContainer = styled(HorizontalContainer).attrs({
   text-align: center;
 `;
 
-export const BreadcrumbContainer = styled(HorizontalContainer).attrs({
+export const BreadcrumbContainer = styled(HorizontalNavContainer).attrs({
   className: 'breadcrumb',
+  "aria-label":'breadcrumbs'
 })`
   background-color: #f2f2f2;
 `;

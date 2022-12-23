@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <RouteBody role="main">
+        <RouteBody>
           <Routes />
         </RouteBody>
         <Footer />
