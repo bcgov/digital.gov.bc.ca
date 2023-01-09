@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "markdown_content",
+  "info": {
+    "name": "Markdown",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Path": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Markdown": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
