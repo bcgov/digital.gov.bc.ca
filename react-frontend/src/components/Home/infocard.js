@@ -22,7 +22,7 @@ function InfoCard({
   linkText,
   linkPath,
   title,
-  description,
+  description
 }) {
   var isRouteCard = false;
 

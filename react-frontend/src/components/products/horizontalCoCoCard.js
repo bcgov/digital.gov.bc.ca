@@ -20,7 +20,7 @@ const HorizontalCoCoCard = ({
   return (
     <CardHorizontal style={{ width: '100%' }}>
       <CardHorizontalCoCoImage>
-        <img src={img} style={{ height: '200px', margin: '20px' }} />
+        <img src={img} alt="" style={{ height: '200px', margin: '20px' }} />
       </CardHorizontalCoCoImage>
       <CardHorizontalText style={{ height: 'auto' }}>
         <CardHorizontalTitle>{title}</CardHorizontalTitle>

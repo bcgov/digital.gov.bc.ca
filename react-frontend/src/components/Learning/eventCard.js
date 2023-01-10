@@ -15,7 +15,7 @@ function EventCard({ name, description, eventbriteUrl, coverImgSrc }) {
   return (
     <EventCardStyled>
       {coverImgSrc ? (
-        <EventCardThumnail src={coverImgSrc} data-testid="thumbnail" />
+        <EventCardThumnail alt="" src={coverImgSrc} data-testid="thumbnail" />
       ) : (
         <EventCardThumnailNullImg />
       )}

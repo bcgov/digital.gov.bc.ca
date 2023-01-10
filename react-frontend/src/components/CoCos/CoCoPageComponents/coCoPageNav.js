@@ -15,15 +15,16 @@ function CoCoPageNav({
   name,
 }) {
   return (
-    <div>
+    <div role="navigation" aria-label="on this page">
       <Row>
         <Col xs={12}>
-          <Heading>On this page</Heading>
+          <Heading aria-hidden="true">On this page</Heading>
         </Col>
       </Row>
       <Row between="xs">
         <Col sm={2}>
           <HrefLinkScrollTo
+            href="#"
             to={location1}
             spy={true}
             smooth={true}
@@ -34,6 +35,7 @@ function CoCoPageNav({
         </Col>
         <Col sm={2}>
           <HrefLinkScrollTo
+            href="#"
             to={location6}
             spy={true}
             smooth={true}
@@ -44,6 +46,7 @@ function CoCoPageNav({
         </Col>
         <Col sm={2}>
           <HrefLinkScrollTo
+            href="#"
             to={location2}
             spy={true}
             smooth={true}
@@ -54,6 +57,7 @@ function CoCoPageNav({
         </Col>
         <Col sm={2}>
           <HrefLinkScrollTo
+            href="#"
             to={location3}
             spy={true}
             smooth={true}
@@ -64,6 +68,7 @@ function CoCoPageNav({
         </Col>
         <Col sm={2}>
           <HrefLinkScrollTo
+            href="#"
             to={location4}
             spy={true}
             smooth={true}
@@ -74,6 +79,7 @@ function CoCoPageNav({
         </Col>
         <Col sm={2}>
           <HrefLinkScrollTo
+            href="#"
             to={location5}
             spy={true}
             smooth={true}

@@ -184,7 +184,7 @@ export const CardLinkDiv = styled.div.attrs({
   position: absolute;
 `;
 
-export const CardTitle = styled.h5.attrs({
+export const CardTitle = styled.h2.attrs({
   className: 'cardTitle',
 })`
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
