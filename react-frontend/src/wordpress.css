@@ -1,41 +1,20 @@
 /* MANUAL COPY */
-.hhA-dJm {
+.content-banner-short-text {
     color: rgb(49, 49, 50);
     font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
     font-size: 19px;
     text-align: left;
 }
-.iQLvBu {
-    color: rgb(49, 49, 50);
-    font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
-    font-size: 37px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 10px;
-    text-align: left;
-}
-.bUqtBz {
-    border: none;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-}
-.gNSzXF {
-    background-color: rgb(242, 242, 242);
-    z-index: -2;
-}
-.clMozd {
-    background-color: rgb(242, 242, 242);
-}
-.itMmZS {
+.content-banner-wrapper {
     margin: auto;
     max-width: 1065px;
     padding-left: 30px;
     padding-right: 20px;
     z-index: -2;
+    padding-bottom: 60px;
 }
 @media screen and (min-width: 800px){
-	.itMmZS {
+	.content-banner-wrapper {
 		padding-left: 107px;
 	}
 }
@@ -43,7 +22,7 @@
     display: table;
     content: "";
 }
-.bGtrCL {
+.dm-card {
     border-radius: 21px;
     height: 95%;
     margin-bottom: 20px;
@@ -52,58 +31,51 @@
 *, :after, :before {
     box-sizing: border-box;
 }
-.iISgDu {
+.h2-heading {
     margin-bottom: 5px;
-}
-.iwFZjo {
     font-size: 31px;
     font-weight: 700;
     line-height: 1.3;
 }
-.fdhstP {
+.h3-heading {
     margin-bottom: 5px;
-}
-.clKDgz {
     font-size: 26px;
     font-weight: 700;
     line-height: 1.3;
 }
-.fHWvXR {
-    padding-bottom: 60px;
-}
-.inylga {
+.h5-heading {
     font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
     font-size: 31px;
     font-weight: 700;
     line-height: 1.2;
     position: relative;
 }
-.fXvxkj {
+.card-with-image-header-content {
     display: block;
     margin-bottom: 20px;
 }
 @media only screen and (min-width: 768px){
-	.fXvxkj {
+	.card-with-image-header-content {
 		-webkit-box-align: stretch;
 		align-items: stretch;
 		display: flex;
 		width: 100%;
 	}
 }
-.ehcsox {
+.card-with-image-header-content-image {
     background: center center / cover white;
     border-radius: 21px 21px 0px 0px;
     text-align: center;
     width: 100%;
 }
 @media only screen and (min-width: 768px){
-.ehcsox {
+.card-with-image-header-content-image {
     border-radius: 21px 0px 0px 21px;
     height: initial;
     width: 50%;
 }
 }
-.gFRdeg {
+.card-with-image-header-content-text {
     border-radius: 0px 0px 21px 21px;
     background: rgb(255, 255, 255);
     height: fit-content;
@@ -112,7 +84,7 @@
 	height:auto; /*note: may not always apply - should apply on image container on "Common components" block at the bottom of resources page */
 }
 @media only screen and (min-width: 768px){
-	.gFRdeg {
+	.card-with-image-header-content-text {
 		border-radius: 0px 21px 21px 0px;
 		width: 50%;
 	}
@@ -125,13 +97,13 @@
   box-sizing: border-box;
 }
 /* INLINE STYLES PORTS */
-.cardHorizontalImage img{
+.card-with-image-header-content-image img{
 	height: 200px;
     margin: 20px;
 	width: auto; /* required because wordpress hard-codes deminsions into html attributes */
 }
 /* can't apply classes on image directly (maybe) */
-.bannerCenterText img{
+.content-banner-wrapper img{
     background: rgb(242, 242, 242);
     display: block;
     max-width: 100%;
@@ -140,7 +112,7 @@
     padding-top: 20px;
 }
 /* page title component is used, and must be styled like in old v2 */
-.bannerCenterText .wp-block-post-title{
+.content-banner-wrapper .wp-block-post-title{
 	color: rgb(49, 49, 50);
     font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
     font-size: 37px;
@@ -155,7 +127,7 @@
   max-width: 1200px !important;
 }
 /* PAGE TITLE H1 */
-.bGhVVJ {
+.h1-heading {
     font-size: 37.32px;
     font-weight: 700;
 }
