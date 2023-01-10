@@ -37,7 +37,8 @@ const DisplayNames = {
   resources: 'Resources',
   'common-components': 'Common Components',
   communities: 'Communities',
-  guides: 'Guides'
+  guides: 'Guides',
+  'digital-code-of-practice': 'Digital Code of Practice'
 };
 
 const Routes = () => {
@@ -60,7 +61,7 @@ const Routes = () => {
         <Route exact path="/communities/:uid" component={Community} />
         <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} />
         <Route exact path="/guides/:slug" component={WordPressStrapi} />
-
+        <Route exact path="/digital-code-of-practice/:slug" component={WordPressStrapi} />
         <Route exact path="/copyright" component={Copyright} />
         <Route exact path="/digital-framework" component={DigitalFramework} />
         <Route

@@ -12,7 +12,7 @@ import Query from '../Query';
 import ReactMarkdown from 'react-markdown';
 
 import WORDPRESS_QUERY from '../../queries/wordpressContent/wordpress';
-
+import { StringToJSX } from '../Utils/StringToJSX';
 import '../../wordpress.css'
 
 
@@ -30,7 +30,7 @@ function WordPressStrapi() {
                     <div>
                         {wordpressContents?.map((wordpressContent, i) => {
                             return (
-                                <div dangerouslySetInnerHTML={{__html: wordpressContent.HTML}}></div>
+                              <StringToJSX domString={wordpressContent.HTML}></StringToJSX>
                             );
                         })}
                     </div>

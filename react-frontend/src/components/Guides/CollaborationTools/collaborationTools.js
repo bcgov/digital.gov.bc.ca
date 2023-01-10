@@ -19,7 +19,7 @@ import { HrefLink } from '../../StyleComponents/htmlTags';
 function CollaborationTools() {
   return (
     <DocumentTitle title="Video Communication Platforms - Digital Government - Province of British Columbia">
-      <PageContainer id="main-content-anchor">
+      <PageContainer>
         <GlobaStyleSize />
         <SimpleTextPageTitle>
           Video Communication Platforms – Information for the Broader Public
