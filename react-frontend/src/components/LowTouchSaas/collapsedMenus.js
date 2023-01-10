@@ -29,12 +29,23 @@ function CollapsedMenus() {
     setExpanded(key);
   };
 
+  const toggleExpandAll = () => {
+    if (expanded.length==7){
+      collapseAll();
+    }else{
+      expandAll();
+    }
+  }
+
   return (
     <div style={{ marginTop: '60px' }}>
-      <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>
+      {/* <CollapseButton onClick={expandAll} style={{ paddingLeft: '0' }}>
         Expand All
       </CollapseButton>{' '}
-      |<CollapseButton onClick={collapseAll}>Collapse All</CollapseButton>
+      |<CollapseButton onClick={collapseAll}>Collapse All</CollapseButton> */}
+      <CollapseButton aria-expanded={expanded.length==7?'true':'false'} onClick={toggleExpandAll} style={{ paddingLeft: '0' }}>
+            {expanded.length==7?'Collapse All':'Expand All'}
+          </CollapseButton>
       <CollapseStyled
         defaultActiveKey={['1']}
         activeKey={expanded}

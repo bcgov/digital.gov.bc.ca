@@ -44,7 +44,7 @@ function Copyright() {
             BC Laws website
           </HrefLink>
           , permission is subject to the terms of the{' '}
-          <HrefLink href="copyrightLinks.QPlicence" target="_blank">
+          <HrefLink href={copyrightLinks.QPlicence} target="_blank">
             Queen’s Printer License – British Columbia
           </HrefLink>
           .

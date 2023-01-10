@@ -5,7 +5,9 @@ import { Row, Col } from 'react-flexbox-grid';
 import { navBarResize } from './nav';
 // This file contains styling for Link, a, ul, li, col, row, p html tags
 
-export const BreadcrumbChevron = styled.span`
+export const BreadcrumbChevron = styled.span.attrs({
+  'aria-hidden':"true"
+})`
   color: grey;
   display: flex;
   font-size: 16px;
@@ -29,7 +31,7 @@ export const BreadcrumbLI = styled.li`
   }
 `;
 
-export const BreadcrumbUL = styled.ul`
+export const BreadcrumbUL = styled.ol`
   color: #fff;
   display: flex;
   flex-direction: row;

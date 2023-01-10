@@ -51,7 +51,7 @@ const Process = () => {
           specialists to ensure compliance with the government’s privacy,
           security and procurement policies, procedures and standards.
         </p>
-        <InlineImg src={saasProcessIllustration} />
+        <InlineImg src={saasProcessIllustration} alt="Diagram of SaaS service acquisition process"/>
         <p>
           As described later in more detail, you must complete the following
           compliance steps before procuring and implementing your solution:
