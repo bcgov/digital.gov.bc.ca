@@ -24,6 +24,7 @@ import Resources from '../../components/Resources/resources';
 import Saas from '../LowTouchSaas/lowTouchSaas';
 import WordPressPageDirect from '../WordPress/wordPressPageDirect';
 import WordPressStrapi from '../WordPress/wordPressStrapi';
+import Policy from '../Policy/Policy';
 
 
 
@@ -38,7 +39,8 @@ const DisplayNames = {
   'common-components': 'Common Components',
   communities: 'Communities',
   guides: 'Guides',
-  'digital-code-of-practice': 'Digital Code of Practice'
+  'digital-code-of-practice': 'Digital Code of Practice',
+  "policy": "Policies and Standards"
 };
 
 const Routes = () => {
@@ -69,7 +71,7 @@ const Routes = () => {
           <Route exact path="/common-components/:uid" component={CoCoPage} />
           <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} />
           <Route exact path="/guides/:slug" component={WordPressStrapi} />
-          <Route exact path="/digital-code-of-practice/:slug" component={WordPressStrapi} />
+          <Route exact path="/policy/digital-code-of-practice/:slug" component={WordPressStrapi} />
           <Route
             exact
             path="/guides/communication-platforms"
@@ -78,10 +80,10 @@ const Routes = () => {
           <Route exact path="/communities" component={Communities} />
           <Route exact path="/communities/:uid" component={Community} />
           <Route exact path="/copyright" component={Copyright} />
-          <Route exact path="/digital-framework" component={DigitalFramework} />
+          <Route exact path="/policy/digital-framework" component={DigitalFramework} />
           <Route
             exact
-            path="/resources/digital-principles"
+            path="/policy/digital-principles"
             component={DigitalPrinciples}
           />
           <Route exact path="/disclaimer" component={Disclaimer} />
@@ -96,6 +98,7 @@ const Routes = () => {
           <Route exact path="/products-services" component={Products} />
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/privacy" component={Privacy} />
+          <Route exact path="/policy" component={Policy} />
           <Route path="/standards-and-guides">
             <NotFound standards />
           </Route>

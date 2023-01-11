@@ -26,7 +26,7 @@ function DigitalCards() {
             title={'Digital Principles'}
             description={descriptions[0]}
             linkText="Read the principles"
-            routePath="/resources/digital-principles"
+            routePath="/policy/digital-principles"
             height="300px"
           />
         </Col>
