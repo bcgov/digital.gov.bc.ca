@@ -2,7 +2,7 @@
 
 exports[`Renders without crashing if not props are passed in 1`] = `
 <div
-  className="sc-eFWqGp sc-brCFrO kSdxHO JiLeV horizontalAlignment contentBlockContainer container"
+  className="sc-eFWqGp sc-gITdmR kSdxHO ioinAo horizontalAlignment contentBlockContainer container"
   id="standards"
 >
   <div
@@ -12,7 +12,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-4"
     >
       <h2
-        className="sc-eEOqmf hsYsop resourceHeading"
+        className="sc-fmRtwQ fEjOqz resourceHeading"
       >
         Explore
       </h2>
@@ -85,7 +85,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h3
-        className="sc-fmRtwQ csgYhl resourceSubHeading"
+        className="sc-lkwKjF iRDkil resourceSubHeading"
       >
         Don't see what you are looking for?
       </h3>
@@ -131,7 +131,7 @@ exports[`Renders without crashing if not props are passed in 1`] = `
       className="col-sm-12"
     >
       <h2
-        className="sc-eEOqmf hsYsop resourceHeading"
+        className="sc-fmRtwQ fEjOqz resourceHeading"
       >
         Support
       </h2>

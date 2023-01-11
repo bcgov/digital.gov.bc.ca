@@ -58,7 +58,7 @@ const Routes = () => {
   return (
     <div>
       <BreadCrumbs />
-      <div role="main">
+      <div id="main-content-anchor" role="main">
         
         <Switch>
           <Route exact path="/about" component={About} />
