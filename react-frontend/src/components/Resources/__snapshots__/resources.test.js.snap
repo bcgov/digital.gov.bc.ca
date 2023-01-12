@@ -84,7 +84,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="sc-kgflAQ fFEeOJ internalLink"
-                href="/policy/digital-principles"
+                href="/policies-and-standards/digital-principles"
                 onClick={[Function]}
               >
                 Read the principles

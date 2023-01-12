@@ -169,9 +169,9 @@ function NavBar() {
 
             <NavBarLi className="mainNav1">
               <NavBarLinkFirst
-                to="/policy"
+                to="/policies-and-standards"
                 className={
-                  activePage === '/policy' ? 'active' : 'notactive'
+                  activePage === '/policies-and-standards' ? 'active' : 'notactive'
                 }
               >
                 Policies and Standards

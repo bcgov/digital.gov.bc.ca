@@ -48,7 +48,7 @@ function Policy() {
                   title={'Digital Code of Practice'}
                   description={descriptions[0]}
                   linkText="Read the Digital Code of Practice"
-                  routePath={"/policy/digital-code-of-practice/Introduction"}
+                  routePath={"/policies-and-standards/digital-code-of-practice/Introduction"}
                   height="300px"
                 />
               </Col>
@@ -57,7 +57,7 @@ function Policy() {
                   title={'Digital Framework'}
                   description={descriptions[1]}
                   linkText="Read the Framework"
-                  routePath={"/policy/digital-framework"}
+                  routePath={"/policies-and-standards/digital-framework"}
                   height="300px"
                 />
 
@@ -67,7 +67,7 @@ function Policy() {
                   title={'Digtal Principles'}
                   description={descriptions[2]}
                   linkText="Read the principles"
-                  routePath={"/policy/digital-principles"}
+                  routePath={"/policies-and-standards/digital-principles"}
                   height="300px"
                 />
               </Col>

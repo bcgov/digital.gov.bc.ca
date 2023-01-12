@@ -20,7 +20,7 @@ const learningGrey =
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const descriptions = [
-  'Policies and Standards you can use to deliver excellent digital services.',
+  'Policies and standards you can use to deliver excellent digital services.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
   'Supports to help you create or improve a digital service.',
   'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.',
@@ -38,10 +38,10 @@ const CardList = () => {
           <Col sm={12} md={6}>
             <InfoCard
               img={digitalFrameworkGrey}
-              title={'Policy'}
+              title={'Policies and Standards'}
               description={descriptions[0]}
-              linkText="Policies and Standards"
-              routePath="/policy"
+              linkText="Read about policies and standards"
+              routePath="policies-and-standards"
               height="300px"
             />
           </Col>

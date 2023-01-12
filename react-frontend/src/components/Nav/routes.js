@@ -40,7 +40,7 @@ const DisplayNames = {
   communities: 'Communities',
   guides: 'Guides',
   'digital-code-of-practice': 'Digital Code of Practice',
-  "policy": "Policies and Standards"
+  "policies-and-standards": "Policies and Standards"
 };
 
 const Routes = () => {
@@ -69,9 +69,9 @@ const Routes = () => {
           <Route path="/case-studies" component={CaseStudies} />
           <Route exact path="/common-components" component={CoCos} />
           <Route exact path="/common-components/:uid" component={CoCoPage} />
-          <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} />
+          {/* <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} /> */}
           <Route exact path="/guides/:slug" component={WordPressStrapi} />
-          <Route exact path="/policy/digital-code-of-practice/:slug" component={WordPressStrapi} />
+          <Route exact path="/policies-and-standards/digital-code-of-practice/:slug" component={WordPressStrapi} />
           <Route
             exact
             path="/guides/communication-platforms"
@@ -80,10 +80,10 @@ const Routes = () => {
           <Route exact path="/communities" component={Communities} />
           <Route exact path="/communities/:uid" component={Community} />
           <Route exact path="/copyright" component={Copyright} />
-          <Route exact path="/policy/digital-framework" component={DigitalFramework} />
+          <Route exact path="/policies-and-standards/digital-framework" component={DigitalFramework} />
           <Route
             exact
-            path="/policy/digital-principles"
+            path="/policies-and-standards/digital-principles"
             component={DigitalPrinciples}
           />
           <Route exact path="/disclaimer" component={Disclaimer} />
@@ -98,7 +98,7 @@ const Routes = () => {
           <Route exact path="/products-services" component={Products} />
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/privacy" component={Privacy} />
-          <Route exact path="/policy" component={Policy} />
+          <Route exact path="/policies-and-standards" component={Policy} />
           <Route path="/standards-and-guides">
             <NotFound standards />
           </Route>
