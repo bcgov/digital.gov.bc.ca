@@ -2,8 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-dmRaPn sc-kgflAQ kihIuQ dcMYAs horizontalAlignment bannerCenterText container"
-  id="main-content-anchor"
+  className="sc-dmRaPn sc-fLlhyt kihIuQ kGmaYh horizontalAlignment bannerCenterText container"
 >
   <div
     className="row middle-xs"
@@ -12,7 +11,7 @@ exports[`renders correctly 1`] = `
       className="col-xs-12 col-lg-6"
     >
       <div
-        className="sc-bZkfAO jfxjvN"
+        className="sc-kLLXSd dHbJkm"
       >
         <h2
           className="sc-hKMtZM jAqLqV heading"

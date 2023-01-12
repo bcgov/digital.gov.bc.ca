@@ -1,0 +1,52 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/content",
+        "handler": "wordpress-content.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/content/count",
+        "handler": "wordpress-content.count",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/content/:id",
+        "handler": "wordpress-content.findOne",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/content",
+        "handler": "wordpress-content.create",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/content/:id",
+        "handler": "wordpress-content.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/content/:id",
+        "handler": "wordpress-content.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

@@ -81,7 +81,6 @@ const HorizontalNavContainer = styled.nav.attrs({
 
 export const BannerHorizontalContainer = styled(HorizontalContainer).attrs({
   className: 'bannerCenterText',
-  id: 'main-content-anchor',
 })`
   text-align: center;
 `;
