@@ -13,5 +13,5 @@ it('Renders 7 cards on the home page', () => {
       <CardList />
     </Router>
   );
-  expect(getAllByTestId('styled-card').length).toBe(7);
+  expect(getAllByTestId('styled-card').length).toBe(6);
 });

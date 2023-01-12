@@ -4,7 +4,6 @@ exports[`renders correctly 1`] = `
 <div>
   <div
     className="sc-HzFiz sc-bWXABl hegFND aZnLA horizontalAlignment bannerCenterText container"
-    id="main-content-anchor"
   >
     <div
       className="row middle-xs"
@@ -85,7 +84,7 @@ exports[`renders correctly 1`] = `
             >
               <a
                 className="sc-kgflAQ fFEeOJ internalLink"
-                href="/resources/digital-principles"
+                href="/policy/digital-principles"
                 onClick={[Function]}
               >
                 Read the principles

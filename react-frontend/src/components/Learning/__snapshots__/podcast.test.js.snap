@@ -4,7 +4,6 @@ exports[`renders snapshot correctly 1`] = `
 <div>
   <div
     className="sc-dmRaPn sc-fLlhyt kihIuQ kGmaYh horizontalAlignment bannerCenterText container"
-    id="main-content-anchor"
   >
     <div
       className="row middle-xs"
