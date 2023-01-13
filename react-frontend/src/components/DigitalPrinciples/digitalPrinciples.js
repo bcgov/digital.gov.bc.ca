@@ -1,6 +1,8 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-import BannerSideImage from '../PageElements/Banners/bannerSideImage';
+import {
+  BannerSideImgTitle
+} from '../StyleComponents/bannerWithImage';
 
 import { PageContainer, GlobaStyleSize } from '../StyleComponents/pageContent';
 import { DigitalPrinciplesHeading } from '../StyleComponents/headings';
@@ -8,21 +10,13 @@ import { HrefLink } from '../StyleComponents/htmlTags';
 
 import { digitalPrincipleUrls } from '../../constants/urls';
 
-const digitalPrinciplesImage =
-  require('../../images/pngIllustrations/digitalPrinciplesWhite.png').default;
-
 function DigitalPrinciples() {
   return (
     <DocumentTitle title="Digital Principles - Digital Government - Province of British Columbia">
       <div>
         <GlobaStyleSize />
-        <BannerSideImage
-          title={
-            'Digital Principles for the Government of British Columbia (Version 1.0)'
-          }
-          image={digitalPrinciplesImage}
-        />
         <PageContainer>
+        <BannerSideImgTitle>Digital Principles for the Government of British Columbia (Version 1.0)</BannerSideImgTitle>
           <p>
             The Digital Principles are meant to guide the work of individual
             public servants and vendor partners as the Province of British

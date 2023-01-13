@@ -17,7 +17,7 @@ import { digitalCardLinks } from '../../constants/urls';
 
 
 const digitalFrameworkImage =
-  require('../../images/pngIllustrations/digitalFrameworkGrey.png').default;
+  require('../../images/pngIllustrations/digitalFrameworkWhite.png').default;
 
 const descriptions = [
   'The Digital Code of Practice (DCOP) serves as a guide for what good digital products and services look like.',
