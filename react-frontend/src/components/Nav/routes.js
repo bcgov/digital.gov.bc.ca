@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
+import { Switch, Route, Redirect, useLocation, useHistory } from 'react-router-dom';
 import About from '../../components/FooterPages/about';
 import BlogHome from '../../components/Blog/blogHome';
 import BlogPage from '../../components/Blog/blogPage';
@@ -71,6 +71,9 @@ const Routes = () => {
           <Route exact path="/common-components/:uid" component={CoCoPage} />
           {/* <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} /> */}
           <Route exact path="/guides/:slug" component={WordPressStrapi} />
+          <Route exact path="/digital-code-of-practice/">
+          <Redirect to="/policies-and-standards/digital-code-of-practice/Introduction" />
+          </Route>
           <Route exact path="/policies-and-standards/digital-code-of-practice/:slug" component={WordPressStrapi} />
           <Route
             exact
