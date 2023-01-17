@@ -14,6 +14,9 @@ let createJSX = nodeArray => {
       childNodes,
       nodeValue
     } = node;
+    if (localName === "h1"){
+        document.title = node.innerText +" - Digital Government - Province of British Columbia";
+    }
     if (attributes) {
       Array.from(attributes).forEach(attribute => {
         if (attribute.name === "style") {

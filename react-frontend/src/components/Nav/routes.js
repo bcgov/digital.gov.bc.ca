@@ -72,9 +72,16 @@ const Routes = () => {
           {/* <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} /> */}
           <Route exact path="/guides/:slug" component={WordPressStrapi} />
           <Route exact path="/digital-code-of-practice/">
-          <Redirect to="/policies-and-standards/digital-code-of-practice/Introduction" />
+          <Redirect to="/policies-and-standards/digital-code-of-practice" />
           </Route>
           <Route exact path="/policies-and-standards/digital-code-of-practice/:slug" component={WordPressStrapi} />
+          <Route exact path="/policies-and-standards/digital-framework" component={DigitalFramework} />
+          <Route
+            exact
+            path="/policies-and-standards/digital-principles"
+            component={DigitalPrinciples}
+          />
+          <Route  path="/policies-and-standards/:slug" component={WordPressStrapi} />
           <Route
             exact
             path="/guides/communication-platforms"
@@ -83,12 +90,7 @@ const Routes = () => {
           <Route exact path="/communities" component={Communities} />
           <Route exact path="/communities/:uid" component={Community} />
           <Route exact path="/copyright" component={Copyright} />
-          <Route exact path="/policies-and-standards/digital-framework" component={DigitalFramework} />
-          <Route
-            exact
-            path="/policies-and-standards/digital-principles"
-            component={DigitalPrinciples}
-          />
+
           <Route exact path="/disclaimer" component={Disclaimer} />
           <Route exact path="/" component={Home} />
           <Route

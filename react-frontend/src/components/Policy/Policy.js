@@ -17,7 +17,7 @@ import { digitalCardLinks } from '../../constants/urls';
 
 
 const digitalFrameworkImage =
-  require('../../images/pngIllustrations/digitalFrameworkGrey.png').default;
+  require('../../images/pngIllustrations/digitalFrameworkWhite.png').default;
 
 const descriptions = [
   'The Digital Code of Practice (DCOP) serves as a guide for what good digital products and services look like.',
@@ -48,7 +48,7 @@ function Policy() {
                   title={'Digital Code of Practice'}
                   description={descriptions[0]}
                   linkText="Read the Digital Code of Practice"
-                  routePath={"/policies-and-standards/digital-code-of-practice/Introduction"}
+                  routePath={"/policies-and-standards/digital-code-of-practice"}
                   height="300px"
                 />
               </Col>
