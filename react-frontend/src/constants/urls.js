@@ -40,7 +40,7 @@ export const collabResources = {
 
 export const commonComponentLinks = {
   ccForm:
-    'https://chefs.nrs.gov.bc.ca/app/form/submit?f=7d6f623b-3def-4832-a29e-e35c1353aa1a',
+    'https://submit.digital.gov.bc.ca/app/form/submit?f=7d6f623b-3def-4832-a29e-e35c1353aa1a',
   ccRCChannel: 'https://chat.developer.gov.bc.ca/channel/common-components',
 };
 
