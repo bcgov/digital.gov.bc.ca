@@ -64,7 +64,7 @@ function Policy() {
               </Col>
               <Col md={6} lg={6}>
               <InfoCard
-                  title={'Digtal Principles'}
+                  title={'Digital Principles'}
                   description={descriptions[2]}
                   linkText="Read the principles"
                   routePath={"/policies-and-standards/digital-principles"}
