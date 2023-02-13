@@ -69,7 +69,7 @@ const Routes = () => {
           <Route path="/case-studies" component={CaseStudies} />
           <Route exact path="/common-components" component={CoCos} />
           <Route exact path="/common-components/:uid" component={CoCoPage} />
-          {/* <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} /> */}
+          <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} />
           <Route exact path="/digital-code-of-practice/">
           <Redirect to="/policies-and-standards/digital-code-of-practice" />
           </Route>

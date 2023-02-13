@@ -3,9 +3,17 @@ import { AppConfigContext } from '../../providers/AppConfig';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import { PageContainer} from '../StyleComponents/pageContent';
+import { Redirect } from "react-router-dom";
 import '../../wordpress.css'
 
 function WordPressPageDirect() {
+    let hostName = window.location.hostname;
+    // enable this route only for dev/test
+    console.log('hostName: ', hostName);
+    if(hostName!='localhost' && hostName!='digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca'){
+        return <Redirect to="/404" />
+    }
+
     const [content, setContent] = useState('');
     const params = useParams();
     const slug=params.slug;
