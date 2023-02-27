@@ -41,7 +41,7 @@ function Policy() {
         />
         <div >
 
-          <PageContainer className="fourColBanner" style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#f2f2f2' }}>
+          <PageContainer style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#f2f2f2' }}>
             <Row>
               <Col md={6} lg={6}>
               <InfoCard

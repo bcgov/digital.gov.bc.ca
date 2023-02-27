@@ -9,7 +9,7 @@ import '../../wordpress.css'
 function WordPressPageDirect() {
     let hostName = window.location.hostname;
     // enable this route only for dev/test
-    console.log('hostName: ', hostName);
+    // console.log('hostName: ', hostName);
     if(hostName!='localhost' && hostName!='digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca'){
         return <Redirect to="/404" />
     }
@@ -42,9 +42,9 @@ function WordPressPageDirect() {
 
   return     (
     <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
-        <PageContainer>
+        {/* <PageContainer> */}
             <div dangerouslySetInnerHTML={{__html: content}}></div>
-        </PageContainer>
+        {/* </PageContainer> */}
     </DocumentTitle>
   );
 }
