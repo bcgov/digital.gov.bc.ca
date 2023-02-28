@@ -3,9 +3,18 @@ import { AppConfigContext } from '../../providers/AppConfig';
 import { useParams } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import { PageContainer} from '../StyleComponents/pageContent';
+import { Redirect } from "react-router-dom";
 import '../../wordpress.css'
+import { StringToJSX } from '../Utils/StringToJSX';
 
 function WordPressPageDirect() {
+    let hostName = window.location.hostname;
+    // enable this route only for dev/test
+    console.log('hostName: ', hostName);
+    if(hostName!='localhost' && hostName!='digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca'){
+        return <Redirect to="/404" />
+    }
+
     const [content, setContent] = useState('');
     const params = useParams();
     const slug=params.slug;
@@ -35,7 +44,10 @@ function WordPressPageDirect() {
   return     (
     <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
         <PageContainer>
-            <div dangerouslySetInnerHTML={{__html: content}}></div>
+            {/* <div dangerouslySetInnerHTML={{__html: content}}></div> */}
+            <div>
+            <StringToJSX domString={content}></StringToJSX>
+            </div>
         </PageContainer>
     </DocumentTitle>
   );
@@ -43,3 +55,45 @@ function WordPressPageDirect() {
 
 
 export default WordPressPageDirect;
+
+
+
+// import React, { useState, useEffect, useContext } from 'react';
+// import { useParams } from 'react-router-dom';
+
+
+// // import Query from '../Query';
+
+// // import WORDPRESS_QUERY from '../../queries/wordpressContent/wordpress';
+// import { StringToJSX } from '../Utils/StringToJSX';
+// // import '../../wordpress.css'
+
+
+// function WordPressStrapi() {
+//   const params = useParams();
+//   const slug=params.slug;
+//   return (
+//       <div>
+//         <PageContainer>
+//           <GlobaStyleSize />
+//           <Query query={WORDPRESS_QUERY} uid={slug}>
+
+//             {({ data: { wordpressContents } }) => {
+//                 return(
+//                     <div>
+//                         {wordpressContents?.map((wordpressContent, i) => {
+//                             return (
+//                               <StringToJSX domString={wordpressContent.HTML}></StringToJSX>
+//                             );
+//                         })}
+//                     </div>
+//                 )
+                 
+//             }}
+//           </Query>
+//         </PageContainer>
+//       </div>
+//   );
+// }
+
+// export default WordPressStrapi;

@@ -3,6 +3,7 @@ import React from "react";
 import { CollapseStyled, PanelStyled } from "../StyleComponents/collapseMenu";
 import { HrefLink, HrefLinkInternal } from '../StyleComponents/htmlTags';
 import { StyleRichText } from "../StyleComponents/styledMarkdown";
+import ScrollspyNav from "../WordPress/ScrollspyNav";
 
 let getNodes = function (str) {
   return new DOMParser().parseFromString(str, "text/html").body.childNodes;
@@ -42,6 +43,7 @@ let createJSX = nodeArray => {
       "CollapseStyled": CollapseStyled,
       "PanelStyled": PanelStyled,
       "StyleRichText": StyleRichText,
+      "ScrollspyNav":ScrollspyNav
     };
     console.log(attributeObj);
     let cNodes = childNodes;
@@ -70,7 +72,7 @@ let createJSX = nodeArray => {
     }
     switch (localName) {
       case "a":
-        if (attributeObj["href"].substring(0, 1) == "/")
+        if (attributeObj["href"].substring(0, 1) == "/"){
           // internal  links need to be handled differently in order for SPA experience to work, otherwise reloads the page
           return (
             <HrefLinkInternal to={attributeObj["href"]}>
@@ -78,13 +80,28 @@ let createJSX = nodeArray => {
             </HrefLinkInternal>
 
           )
-        else
-          return (
-            <HrefLink href={attributeObj["href"]}>
-              {childNodes[0].data}
-            </HrefLink>
+        }else{
+          return React.createElement(
+            HrefLink,
+            attributeObj,
+            childNodes && Array.isArray(Array.from(childNodes)) ?
+              createJSX(Array.from(childNodes)) :
+              []
           )
+          // return (
+          //   <HrefLink href={attributeObj["href"]}>
+          //     {childNodes[0].data}
+          //   </HrefLink>
+          // )
+        }
     }
+
+    if (localName=="hr")
+      return React.createElement(
+        'hr',
+        attributeObj
+      ) ;
+
     return localName ?
       React.createElement(
         customReactNode[localName] ?? localName,
