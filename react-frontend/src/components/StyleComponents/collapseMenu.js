@@ -29,9 +29,12 @@ export const StyledIcon = styled(FontAwesomeIcon).attrs({
 `;
 
 export function CollapseStyled(props) {
+  console.log("children");
+  console.log(props.children);
+  if(props.activeKey) {
   return (
     <Collapse
-      defaultActiveKey={props.defaultActiveKey}
+      defaultActiveKey={[props.defaultActiveKey]}
       activeKey={props.activeKey}
       onChange={props.onChange}
       expandIconPosition="right"
@@ -51,7 +54,28 @@ export function CollapseStyled(props) {
     >
       {props.children}
     </Collapse>
-  );
+  ); } else {
+   return <Collapse
+    defaultActiveKey={[props.defaultActiveKey]}
+    onChange={props.onChange}
+    expandIconPosition="right"
+    expandIcon={({ isActive }) => (
+      <FontAwesomeIcon
+        icon={faChevronDown}
+        flip={isActive ? 'vertical' : null}
+        style={{
+          fontSize: '35px',
+          paddingTop: '6px',
+          paddingBottom: '6px',
+          top: '12px',
+        }}
+      />
+    )}
+    style={{ background: '#f2f2f2', border: 'none' }}
+  >
+    {props.children}
+  </Collapse>
+  }
 }
 
 export const PanelStyled = styled(Panel).attrs({
