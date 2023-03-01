@@ -342,6 +342,10 @@ ol.no-indent-list{
   list-style-position: inside;
 }
 
+.indent-list{
+  list-style-position: outside;
+}
+
 .list-style-type-disc{
   list-style-type: disc;
 }
@@ -2025,6 +2029,7 @@ padding-top: 20px;
   }
   .active-scrollspy .scrollSpyLinkContent{
     margin-left:-5px;
+    display: inline-block;
   }
   .scrollSpyButtonWrapper{
     margin-top: 60px;
