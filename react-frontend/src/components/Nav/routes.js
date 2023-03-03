@@ -40,7 +40,8 @@ const DisplayNames = {
   communities: 'Communities',
   guides: 'Guides',
   'digital-code-of-practice': 'Digital Code of Practice',
-  "policies-and-standards": "Policies and Standards"
+  "policies-and-standards": "Policies and Standards",
+  "wordpress-preview": "WordPress Preview"
 };
 
 const Routes = () => {
