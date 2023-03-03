@@ -184,7 +184,7 @@ objects:
       StrapiConfig: |
         {
           "strapiApiUrl": "https://strapi-${SUFFIX}-${NAMESPACE}.apps.silver.devops.gov.bc.ca/graphql",
-          "wordpressUrl": "https://wordpress-${SUFFIX}.apps.silver.devops.gov.bc.ca/"
+          "wordpressUrl": "https://wordpress-prod.apps.silver.devops.gov.bc.ca/"
         }
     kind: ConfigMap
     metadata:
