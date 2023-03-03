@@ -96,9 +96,9 @@ let createJSX = nodeArray => {
         }
     }
 
-    if (localName=="hr")
+    if (localName=="hr" || localName=="br")
       return React.createElement(
-        'hr',
+        localName,
         attributeObj
       ) ;
 
