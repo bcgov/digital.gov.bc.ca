@@ -16,6 +16,8 @@ function WordPressPageDirect() {
     }
 
     const [content, setContent] = useState('');
+    const [pageTitle, setPageTitle] = useState('');
+    
     const params = useParams();
     const slug=params.slug;
     // console.log('slug: ', slug);
@@ -36,13 +38,14 @@ function WordPressPageDirect() {
                     .then(data  => {
                         console.log('response: ', data);
                         setContent(data.content.rendered);
+                        setPageTitle(data['title']['rendered']);
             })
         }
         fetchData();
     },[config])
 
   return     (
-    <DocumentTitle title="Products & Services - Digital Government - Province of British Columbia">
+    <DocumentTitle title={pageTitle+" - Digital Government - Province of British Columbia"}>
         <PageContainer>
             {/* <div dangerouslySetInnerHTML={{__html: content}}></div> */}
             <div>
