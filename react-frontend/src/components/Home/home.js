@@ -106,6 +106,46 @@ function Home() {
           </PageContainer>
         </div> */}
         <CardList />
+
+        <div style={{ backgroundColor: '#fff' }}>
+          <PageContainer className="fourColBanner" style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#fff' }}>
+            <Row>
+              <Col md={4} lg={4}>
+                <CardStyled>
+                  <Heading style={{ lineHeight: '1.2' }}>
+                    Join the Exchange Lab community
+                  </Heading>
+                  <p>Learn from digital leaders through <HrefLink href="https://www.youtube.com/playlist?list=PL9CV_8JBQHiqpIJZd7V4stSAwo4jxfJ9b">#DigitalBC livestreams</HrefLink>, Collaborate and Coffee, <HrefLink href="https://www.eventbrite.ca/e/experts-in-residence-tickets-109220948798">Experts in Residence</HrefLink>, podcasts, newsletters and events.</p>
+
+                  Explore your digital interests
+
+
+                </CardStyled>
+              </Col>
+              <Col md={4} lg={4}>
+                <CardStyled>
+                  <Heading style={{ lineHeight: '1.2' }}>
+                    Build Digital Trust
+                  </Heading>
+                  <p>Explore the latest ways to safely, securely and confidently share information and communicate online.</p>
+
+                  Learn about Digital Trust
+
+                </CardStyled>
+              </Col>
+              <Col md={4} lg={4}>
+                <CardStyled>
+                  <Heading style={{ lineHeight: '1.2' }}>
+                    Marketplace
+                  </Heading>
+                  <p>Discover unique opportunities to collaborate with the BC Public Sector.</p>
+                  <p>Visit the <HrefLink href="https://marketplace.digital.gov.bc.ca/">Digital Marketplace</HrefLink> to find Code with Us and Sprint with Us opportunities</p>
+                </CardStyled>
+              </Col>
+            </Row>
+          </PageContainer>
+        </div>
+
       </div>
     </DocumentTitle>
   );
