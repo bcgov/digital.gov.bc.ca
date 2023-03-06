@@ -7,6 +7,10 @@ import { PageContainer } from '../StyleComponents/pageContent';
 import { Col, Row } from 'react-flexbox-grid';
 import { HrefLink } from '../StyleComponents/htmlTags';
 import { Heading } from '../StyleComponents/headings';
+import {
+  HrefLinkStandalone,
+  HrefLinkStandaloneInternal,
+} from '../StyleComponents/htmlTags';
 
 import {
   CardTitle,
@@ -117,8 +121,11 @@ function Home() {
                   </Heading>
                   <p>Learn from digital leaders through <HrefLink href="https://www.youtube.com/playlist?list=PL9CV_8JBQHiqpIJZd7V4stSAwo4jxfJ9b">#DigitalBC livestreams</HrefLink>, Collaborate and Coffee, <HrefLink href="https://www.eventbrite.ca/e/experts-in-residence-tickets-109220948798">Experts in Residence</HrefLink>, podcasts, newsletters and events.</p>
 
-                  Explore your digital interests
-
+                  <HrefLinkStandalone
+                    href="https://eepurl.us3.list-manage.com/subscribe?u=2cd8863adab4f39ade7cbee34&id=b331c22b50"
+                  >
+                    Explore your digital interests
+                  </HrefLinkStandalone>
 
                 </CardStyled>
               </Col>
@@ -129,17 +136,29 @@ function Home() {
                   </Heading>
                   <p>Explore the latest ways to safely, securely and confidently share information and communicate online.</p>
 
-                  Learn about Digital Trust
+                  <HrefLinkStandalone
+                    href="https://digital.gov.bc.ca/digital-trust"
+                  >
+                    Learn about Digital Trust
+                  </HrefLinkStandalone>
+
+                  
 
                 </CardStyled>
               </Col>
               <Col md={4} lg={4}>
                 <CardStyled>
                   <Heading style={{ lineHeight: '1.2' }}>
-                    Marketplace
+                    Procure with the Digital Marketplace
                   </Heading>
-                  <p>Discover unique opportunities to collaborate with the BC Public Sector.</p>
-                  <p>Visit the <HrefLink href="https://marketplace.digital.gov.bc.ca/">Digital Marketplace</HrefLink> to find Code with Us and Sprint with Us opportunities</p>
+                  <p>We're connecting talented digital resources with the public service to build digital products with Sprint with Us and Code with Us.</p>
+
+                  <HrefLinkStandalone
+                    href="https://digital.gov.bc.ca/digital-trust"
+                  >
+                    Post or find an opportunity
+                  </HrefLinkStandalone>
+
                 </CardStyled>
               </Col>
             </Row>
