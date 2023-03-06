@@ -85,7 +85,7 @@ function NavBar() {
           @media screen and (min-width: 1200px){  
         
             .navBarUl{
-              display:grid;
+              display:grid !important;
               grid-template-areas:
                 "........ ........ ........ ........ headerNav1 headerNav2 headerNav3"
                 "mainNav1 mainNav2 mainNav3 mainNav4 mainNav5 mainNav6 mainNav7";
@@ -123,7 +123,7 @@ function NavBar() {
             }
           
             .headerNav1, .headerNav2, .headerNav3{
-              margin-top:-44px;
+              margin-top:-44px !important;
             }
 
             .navBarLink{

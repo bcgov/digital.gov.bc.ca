@@ -10,7 +10,7 @@ import { StringToJSX } from '../Utils/StringToJSX';
 function WordPressPageDirect() {
     let hostName = window.location.hostname;
     // enable this route only for dev/test
-    console.log('hostName: ', hostName);
+    // console.log('hostName: ', hostName);
     if(hostName!='localhost' && hostName!='digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca'){
         return <Redirect to="/404" />
     }

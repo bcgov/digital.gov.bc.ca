@@ -35,50 +35,51 @@ export const StyleRichText = ({ htmlOrMarkdown }) => {
 };
 
 export const ParsedHTMLStyled = styled.div.attrs({
-  className: 'parsedHTML',
+  className: 'parsedHTML styled-parsed-html',
 })`
-  a {
+  &.styled-parsed-html a {
     color: #1a5a96;
     text-decoration: underline;
-    :focus {
+  }
+  &.styled-parsed-html a:focus {
       outline: -webkit-focus-ring-color auto 5px;
     }
-    :hover {
+    &.styled-parsed-html a:hover {
       color: blue;
       text-decoration: none;
     }
-  }
 
-  h2 {
+  &.styled-parsed-html h2 {
     font-size: 31px;
     font-weight: 700;
     line-height: 1.6;
   }
 
-  h3 {
+  &.styled-parsed-html h3 {
     font-size: 26px;
     font-weight: 700;
     line-height: 1.6;
   }
 
-  h4 {
+  &.styled-parsed-html h4 {
     font-size: 21.6px;
     font-weight: 700;
     line-height: 1.6;
   }
 
-  blockquote {
+  &.styled-parsed-html blockquote {
     border-left: 4px solid #000;
     font-size: 22px;
     font-style: italic;
     font-weight: 700;
     padding-left: 16px;
-    p {
+  }
+  &.styled-parsed-html blockquote p {
       font-size: 22px;
     }
-  }
+  
 
-  figcaption {
+  &.styled-parsed-html figcaption {
     color: #606060;
     text-align: center;
     font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
@@ -87,25 +88,27 @@ export const ParsedHTMLStyled = styled.div.attrs({
     margin: 16px 0;
   }
 
-  img {
+  &.styled-parsed-html img {
     width: 100%;
   }
 `;
 
 export const ReactMarkdownStyled = styled(ReactMarkdown).attrs({
-  className: 'parsedMarkdown',
+  className: 'parsedMarkdown styled-react-mkd-styled',
 })`
+&.styled-react-mkd-styled{
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
-  a {
+}
+&.styled-react-mkd-styled a {
     color: #1a5a96;
-
     text-decoration: underline;
-    :focus {
+}
+   
+&.styled-react-mkd-styled a:focus {
       outline: -webkit-focus-ring-color auto 5px;
     }
-    :hover {
+    &.styled-react-mkd-styled a:hover {
       color: blue;
       text-decoration: none;
     }
-  }
 `;
