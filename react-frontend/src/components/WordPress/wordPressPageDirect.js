@@ -7,11 +7,11 @@ import { Redirect } from "react-router-dom";
 import '../../wordpress.css'
 import { StringToJSX } from '../Utils/StringToJSX';
 
-function WordPressPageDirect() {
+function WordPressPageDirect({id}) {
     let hostName = window.location.hostname;
     // enable this route only for dev/test
     // console.log('hostName: ', hostName);
-    if(hostName!='localhost' && hostName!='digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca'){
+    if(hostName!='localhost' && hostName!='digital-gov-frontend-test-c0cce6-test.apps.silver.devops.gov.bc.ca' && !id){
         return <Redirect to="/404" />
     }
 
@@ -19,7 +19,11 @@ function WordPressPageDirect() {
     const [pageTitle, setPageTitle] = useState('');
     
     const params = useParams();
-    const slug=params.slug;
+    let slug=params.slug;
+
+    if (!slug)
+        slug = id;
+        
     // console.log('slug: ', slug);
     const config = useContext(AppConfigContext);
     

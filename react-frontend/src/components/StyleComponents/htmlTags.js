@@ -85,6 +85,36 @@ export const LinkExternalButton = styled.a.attrs({
   }
 `;
 
+export const LinkInternalButton = styled(Link).attrs({
+  className: 'ExternalLinkButton styled-line-external-button',
+})`
+&.styled-line-external-button{
+  background-color: #003366;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+&.styled-line-external-button:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  &.styled-line-external-button:hover {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+  }
+`;
+
+
 export const CovidCol = styled(Col).attrs({
   className: 'styled-covid-col',
 })`
@@ -441,6 +471,15 @@ export const NavBarUl = styled.ul.attrs({
   margin: 0;
   padding-left: 0;
   padding-top: 8px;
+}
+&.styled-nav-bar-ul li::after {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 1px;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
 }
 &.styled-nav-bar-ul .active {
     font-weight: 700;

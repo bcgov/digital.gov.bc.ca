@@ -65,6 +65,8 @@ const Routes = () => {
         
         <Switch>
           <Route exact path="/about" component={About} />
+          <Route exact path="/digital-plan" component={() => <WordPressPageDirect id={'616'} />} />
+
           <Route exact path="/blog" component={BlogHome} />
           <Route exact path="/blog/:uid" component={BlogPage} />
           <Route path="/case-studies" component={CaseStudies} />

@@ -106,7 +106,7 @@ export const NavMain = styled.nav.attrs({
 export const NavTitle = styled.p.attrs({
   className: 'navTitle styled-nav-title',
 })`
-&.styled-skip-to-main-cnt{
+&.styled-nav-title{
   color: white;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-size: 16px;
@@ -114,7 +114,7 @@ export const NavTitle = styled.p.attrs({
   margin: 0px 5px 0px 0px;
 }
   @media screen and (min-width: 401px) {
-    &.styled-skip-to-main-cnt{
+    &.styled-nav-title{
       font-size: 20px;
     }
   }

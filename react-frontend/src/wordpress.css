@@ -7,23 +7,23 @@
   text-align: left;
 }
 .page-content-wrapper {
-    background-color: rgb(242, 242, 242);
-    z-index: -2;
+  background-color: rgb(242, 242, 242);
+  z-index: -2;
 }
 
 .content-banner-wrapper {
-    margin: auto;
-    max-width: 1065px !important; /* important to override editor */
-    padding-left: 30px  !important; /* important to override editor */
-    padding-right: 20px;
-    z-index: -2;
-    padding-bottom: 60px;
+  margin: auto;
+  max-width: 1065px !important; /* important to override editor */
+  padding-left: 30px  !important; /* important to override editor */
+  padding-right: 20px;
+  z-index: -2;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 800px){
-	.content-banner-wrapper {
-		padding-left: 107px  !important; /* important to override editor */
-	}
+.content-banner-wrapper {
+  padding-left: 107px  !important; /* important to override editor */
+}
 }
 
 .ant-card-body:before {
@@ -31,111 +31,115 @@
   content: "";
 }
 .dm-card {
-    border-radius: 21px;
-    margin-bottom: 20px;
-    width: 100%;
+  border-radius: 21px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 *, :after, :before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .h2-heading, h2 {
-    margin-bottom: 5px;
-    font-size: 31px;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-h4{
-  font-size: 21.6px;
+  margin-bottom: 5px;
+  font-size: 31px;
   font-weight: 700;
   line-height: 1.3;
 }
 
+h4{
+font-size: 21.6px;
+font-weight: 700;
+line-height: 1.3;
+}
+
 .h3-heading, h3 {
-    margin-bottom: 5px;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.3;
+  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 .h5-heading {
-    font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
-    font-size: 31px;
-    font-weight: 700;
-    line-height: 1.2;
-    position: relative;
+  font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
 }
 
 .card-with-image-header-content {
-    display: block;
-    margin-bottom: 20px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px){
-	.card-with-image-header-content {
-		-webkit-box-align: stretch;
-		align-items: stretch;
-		display: flex;
-		width: 100%;
-	}
+.card-with-image-header-content {
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
 }
 
 .card-with-image-header-content-image {
-    background: center center / cover white;
-    border-radius: 21px 21px 0px 0px;
-    text-align: center;
-    width: 100%;
+  background: center center / cover white;
+  border-radius: 21px 21px 0px 0px;
+  text-align: center;
+  width: 100%;
 }
 @media only screen and (min-width: 768px){
 .card-with-image-header-content-image {
-    border-radius: 21px 0px 0px 21px;
-    height: initial;
-    width: 50%;
+  border-radius: 21px 0px 0px 21px;
+  height: initial;
+  width: 50%;
 }
 }
 
 .card-with-image-header-content-text {
-    border-radius: 0px 0px 21px 21px;
-    background: rgb(255, 255, 255);
-    height: fit-content;
-    padding: 24px;
-    text-align: left;
-	height:auto; /*note: may not always apply - should apply on image container on "Common components" block at the bottom of resources page */
+  border-radius: 0px 0px 21px 21px;
+  background: rgb(255, 255, 255);
+  height: fit-content;
+  padding: 24px;
+  text-align: left;
+height:auto; /*note: may not always apply - should apply on image container on "Common components" block at the bottom of resources page */
 }
 
 @media only screen and (min-width: 768px){
-	.card-with-image-header-content-text {
-		border-radius: 0px 21px 21px 0px;
-		width: 50%;
-	}
+.card-with-image-header-content-text {
+  border-radius: 0px 21px 21px 0px;
+  width: 50%;
+}
 }
 /* EDITOR PATCHES */
+.no-indent-list [role="textbox"]{
+  display:inline;
+}
+
 .row>.block-editor-inner-blocks, .row>.wp-block-multiple-blocks-plugin-columns{ /* Edit 2 - new wordpress version? had to expand this container to 100% */
-    width: 100%;
+  width: 100%;
 }
 
 .row>.block-editor-inner-blocks>.block-editor-block-list__layout{
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -8px;
-    margin-left: -8px;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
 }
 
 .wp-block-post-content, .edit-site-block-editor__block-list{
-	background-color: rgb(242, 242, 242) !important;
+background-color: rgb(242, 242, 242) !important;
 }
 .edit-site-block-editor__block-list{
-    padding: 0 200px;
+  padding: 0 200px;
 }
 .edit-site-block-editor__block-list .row{
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .col-sm-12.col-md-3>.block-editor-inner-blocks, .col-sm-12.col-md-3>.block-editor-inner-blocks>.block-editor-block-list__layout,
@@ -143,25 +147,25 @@ h4{
 .col-sm-12>.block-editor-inner-blocks, .col-md-10>.block-editor-inner-blocks>.block-editor-block-list__layout,
 .col-md-2>.block-editor-inner-blocks
 {
-	height:100%;
+height:100%;
 }
 
 .card-with-image-header-content>.block-editor-inner-blocks{
-	width:100%;
+width:100%;
 }
 
 .card-with-image-header-content>.block-editor-inner-blocks>.block-editor-block-list__layout {
-    display: block;
-    margin-bottom: 20px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px){
-	.card-with-image-header-content>.block-editor-inner-blocks>.block-editor-block-list__layout {
-		-webkit-box-align: stretch;
-		align-items: stretch;
-		display: flex;
-		width: 100%;
-	}
+.card-with-image-header-content>.block-editor-inner-blocks>.block-editor-block-list__layout {
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
 }
 
 
@@ -196,9 +200,9 @@ color: rgb(49, 49, 50);
 }
 
 hr{
-    border: none !important;
-    border-top: 1px solid #afafaf !important;
-  }
+  border: none !important;
+  border-top: 1px solid #afafaf !important;
+}
 
 /* PROS/CONS TABLE bullet styles */
 .prosList li:before{
@@ -220,12 +224,12 @@ hr{
 }
 
 .prosList, .consList {
-    list-style: none;
+  list-style: none;
 }
 
 /* pros-cons editor fix */
 .prosList li>div, .consList li>div{
-    display: inline;
+  display: inline;
 }
 
 /* EDITOR ANNOTATE BLOCK FEATURE */
@@ -254,68 +258,81 @@ hr{
 
 /* PAGE TITLE H1 */
 .h1-heading, h1 {
-    font-size: 37.32px;
-    font-weight: 700;
+  font-size: 37.32px;
+  font-weight: 700;
 }
 
 /* EDITOR OVERRIDES */
 /* hide default "page title" entry box */
 .edit-post-visual-editor__post-title-wrapper{
-    display:none;
+  display:none;
 }
 .dmAccordian {
-    background: rgb(242, 242, 242); 
-    border: none;
+  background: rgb(242, 242, 242); 
+  border: none;
 }
 .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.styled-nav-title{
+  color: white;
+  font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0px 5px 0px 0px;
+}
+@media screen and (min-width: 401px) {
+  .styled-nav-title{
+    font-size: 20px;
   }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-  }
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion .active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
 
 .dmCaret {
-    height: 2em;
-    font-size: 35px; 
-    padding-top: 6px; 
-    padding-bottom: 6px; 
-    top: 12px;
+  height: 2em;
+  font-size: 35px; 
+  padding-top: 6px; 
+  padding-bottom: 6px; 
+  top: 12px;
 }
 
 
 /* LINK BUTTON */
 .ExternalLinkButton{
-    background-color: rgb(0, 51, 102);
-    border: none;
-    border-radius: 4px;
-    color: white;
-    padding: 12px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 18px;
-    font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    cursor: pointer;
+  background-color: rgb(0, 51, 102);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 /* GENERIC */
@@ -339,7 +356,7 @@ ol.no-indent-list{
 }
 
 .indent-list{
-  list-style-position: outside;
+list-style-position: outside;
 }
 
 .list-style-type-disc{
@@ -1433,7 +1450,7 @@ text-decoration: underline;
   text-decoration: none;
 }
 
-.styled-nav-bar-header-link{
+.styled-nav-bar-header-link, .styled-nav-bar-header-link p{
 -webkit-font-smoothing: antialiased;
 color: white;
 font-size: 1.4em;
@@ -1998,7 +2015,40 @@ padding-top: 20px;
       box-sizing: content-box;
   }
   
-   /* SCROLLSPY */
+  
+.ExternalLink {
+    color: rgb(26, 90, 150);
+    font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-decoration: underline;
+}
+.podcastImage > img {
+  width: 100%;
+  max-height: 200px;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.cardRound {
+  background-color: white;
+  border-radius: 21px;
+  height: 100%;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-family: "BC Sans", "Noto Sans", Verdana, Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+}
+  /* SCROLLSPY */
 
   
 .scrollspy{
@@ -2016,30 +2066,12 @@ padding-top: 20px;
   transition:none !important;
 }
 
-/* Add animation (Chrome, Safari, Opera) */
-@-webkit-keyframes example {
-  from {opacity: 0;}
-  to {opacity:1;}
-}
-
-/* Add animation (Standard syntax) */
-/* @keyframes example {
-  from {opacity: 0;}
-  to {opacity:1;}
-} */
-
-
 @media only screen and (min-width: 768px){
   a.active-scrollspy{
     background:rgb(9 109 217 / 10%) !important;
     border-left: 5px solid #003366;
     color:#003366 !important;
     font-weight: bold;
-
-    /*
-    -webkit-animation-duration: 0.5s; 
-    animation-name: example;
-    animation-duration: 0.5s; */
   }
   .active-scrollspy .scrollSpyLinkContent{
     margin-left:-5px;

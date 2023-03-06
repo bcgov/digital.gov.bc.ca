@@ -18,16 +18,11 @@ import {
 
 const bannerContent = (
   <div>
-    In this digital age, people expect fast and easy access to information and
-    services.
-    <br />
-    Learn how the British Columbia Public Service is building teams and using
-    modern technology to meet those expectations and deliver better government
-    services.
+    The BC Public Sector is creating modern teams and using technology to achieve the next phase of digital transformation in government.  
   </div>
 );
 
-const bannerTitle = 'Digital Government';
+const bannerTitle = "We're building a digital government, join us";
 
 const homeImage =
   require('../../images/pngIllustrations/digitalHomePageWhite.png').default;
@@ -68,9 +63,12 @@ function Home() {
           content={bannerContent}
           title={bannerTitle}
           image={homeImage}
+          homeButton ={true}
         />
-
-        <div style={{ backgroundColor: '#fff' }}>
+        <PageContainer style={{ paddingTop: '20px', paddingBottom: '0px' }}>
+          <Heading>What you need to get started</Heading>
+        </PageContainer>
+        {/* <div style={{ backgroundColor: '#fff' }}>
           <PageContainer className="fourColBanner" style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#fff' }}>
             <Row>
               <Col md={6} lg={6}>
@@ -106,7 +104,7 @@ function Home() {
               </Col>
             </Row>
           </PageContainer>
-        </div>
+        </div> */}
         <CardList />
       </div>
     </DocumentTitle>

@@ -20,13 +20,13 @@ const learningGrey =
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const descriptions = [
-  'Policies and standards you can use to deliver excellent digital services.',
+  'Understand policies and standards so you can deliver the best possible digital services to help people.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
   'Supports to help you create or improve a digital service.',
   'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.',
-  'The digital delivery network within the BC Public Service is active and growing. Connect, learn, and contribute!',
+  'Our digital network is active and growing. Connect with your peers and contribute!',
   'See examples of how teams are improving digital services for British Columbians.',
-  'Reusable building blocks to create your product or service',
+  'Reusable building blocks to help you create your product or service.',
   'Understand and adopt new approaches to teamwork and technology.',
 ];
 
@@ -40,7 +40,7 @@ const CardList = () => {
               img={digitalFrameworkGrey}
               title={'Policies and Standards'}
               description={descriptions[0]}
-              linkText="Read about policies and standards"
+              linkText="Review policies and standards"
               routePath="policies-and-standards"
               height="300px"
             />
@@ -50,12 +50,12 @@ const CardList = () => {
               img={coCoGrey}
               title={'Common Components'}
               description={descriptions[6]}
-              linkText="View Common Components"
+              linkText="Explore common components"
               routePath={'/common-components'}
               height="300px"
             />
           </Col>
-          <Col sm={12} md={6}>
+          {/* <Col sm={12} md={6}>
             <InfoCard
               img={resourcesGrey}
               title={'Resources'}
@@ -64,17 +64,17 @@ const CardList = () => {
               routePath="/resources"
               height="300px"
             />
-          </Col>
+          </Col> */}
           <Col sm={12} md={6}>
             <InfoCard
               img={communityGrey}
-              title={'Communities'}
+              title={'Communities of practice'}
               description={descriptions[4]}
-              linkText={'Connect with a community of practice'}
+              linkText={'Find a community of practice'}
               routePath={'/communities'}
             />
           </Col>
-          <Col sm={12} md={6}>
+          {/* <Col sm={12} md={6}>
             <InfoCard
               img={caseStudiesGrey}
               title={'Case Studies'}
@@ -82,13 +82,13 @@ const CardList = () => {
               linkText="Read case studies"
               routePath="/case-studies"
             />
-          </Col>
+          </Col> */}
           <Col sm={12} md={6}>
             <InfoCard
               img={learningGrey}
-              title={'Learning'}
+              title={'Continuous learning'}
               description={descriptions[7]}
-              linkText="Courses, events and more"
+              linkText="Develop your skills"
               routePath="/learning"
             />
           </Col>
