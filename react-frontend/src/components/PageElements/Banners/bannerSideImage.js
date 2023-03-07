@@ -29,6 +29,9 @@ const BannerSideImage = (props) => {
       <style>
         {
         `
+        .readPlanButton{
+          margin-top: 15px;
+        }
         @media only screen and (min-width: 992px){
           .readPlanButton {
             justify-content:left !important;

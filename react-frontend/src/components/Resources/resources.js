@@ -6,6 +6,14 @@ import DocumentTitle from 'react-document-title';
 import Guides from './guides';
 import BannerSideImage from '../PageElements/Banners/bannerSideImage';
 import Standards from './standards';
+import { HrefLinkInternal } from '../StyleComponents/htmlTags';
+import { Col, Row } from 'react-flexbox-grid';
+import {
+  HrefLinkStandalone,
+  ResourceLinkRow,
+} from '../StyleComponents/htmlTags';
+import { ResourcePageSubHeading } from '../StyleComponents/headings';
+import { ContentBlockContainer } from '../StyleComponents/pageContent';
 
 const resourcesImage =
   require('../../images/pngIllustrations/resourcesWhite.png').default;
@@ -17,14 +25,17 @@ function Resources() {
         <BannerSideImage
           title={'Resources'}
           content={
-            'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.'
+            'Guides and tools you can use right now to deliver excellent digital services.'
           }
           image={resourcesImage}
         />
-        <DigitalCards />
+        {/* <DigitalCards /> */}
         <Standards />
-        <Guides />
         <ForDesigners />
+
+        
+
+        <Guides />
         <ForDevelopers />
       </div>
     </DocumentTitle>

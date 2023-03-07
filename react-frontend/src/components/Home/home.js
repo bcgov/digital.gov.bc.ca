@@ -22,7 +22,7 @@ import {
 
 const bannerContent = (
   <div>
-    The BC Public Sector is creating modern teams and using technology to achieve the next phase of digital transformation in government.  
+    The BC Public Service is creating modern teams and using technology to achieve the next phase of digital transformation in government.  
   </div>
 );
 
@@ -52,6 +52,9 @@ function Home() {
               .fourColBannerSmall{
                 display:block;
               }
+              .fourColBanner{
+                padding-top: 10px !important;
+              }
             }
             @media screen and (min-width: 768px){  
               .fourColBanner .ant-card-body{
@@ -67,6 +70,21 @@ function Home() {
 
             .fourColBannerSmall .col-md-4.col-lg-4{
               margin-top:30px;
+            }
+
+            .fourColBannerLarge .col-md-4.col-lg-4:first-of-type{
+              padding-left:0px;
+              padding-right:60px;
+            }
+
+            .fourColBannerLarge .col-md-4.col-lg-4:last-of-type{
+              padding-left:60px;
+              padding-right:0px;
+            }
+
+            .fourColBannerLarge .col-md-4.col-lg-4{
+              padding-left:30px;
+              padding-right:30px;
             }
 
             /*
@@ -128,34 +146,34 @@ function Home() {
         <CardList />
 
         <div style={{ backgroundColor: '#fff' }}>
-          <PageContainer className="fourColBanner" style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#fff' }}>
+          <PageContainer className="fourColBanner" style={{ paddingTop: '50px', paddingBottom: '50px', backgroundColor: '#fff' }}>
           <div class="fourColBannerLarge">
           <Row>
+            
               <Col md={4} lg={4}>
                 <CardStyled>
                   <Heading style={{ lineHeight: '1.2' }}>
                     Join the Exchange Lab community
                   </Heading>
-
                 </CardStyled>
               </Col>
+
               <Col md={4} lg={4}>
                 <CardStyled>
-                  <Heading style={{ lineHeight: '1.2', 'maxWidth': '272px' }}>
-                    Build Digital Trust
+                  <Heading style={{ lineHeight: '1.2' }}>
+                    Build confidence through Digital Trust
                   </Heading>
-
-
                 </CardStyled>
               </Col>
+
               <Col md={4} lg={4}>
                 <CardStyled>
                   <Heading style={{ lineHeight: '1.2' }}>
                     Procure with the Digital Marketplace
                   </Heading>
-
                 </CardStyled>
               </Col>
+
             </Row>
 
             <Row>
@@ -239,7 +257,7 @@ function Home() {
               <Col md={4} lg={4}>
                 <CardStyled>
                   <Heading style={{ lineHeight: '1.2' }}>
-                    Build Digital Trust
+                    Build confidence through Digital Trust
                   </Heading>
                   <p>Explore the latest ways to safely, securely and confidently share information and communicate online.</p>
 

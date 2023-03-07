@@ -23,7 +23,7 @@ const descriptions = [
   'Learn what good digital products and services look like. Use when designing, building, buying or running technology and digital services.',
   'Our plan has four missions to achieve the next phase of digital transformation in government. Are you ready to level up your work?',
   'Our digital principles are set in policy. Use them to guide your day-to-day work.',
-  'The IM/IT Standards promote consistent, appropriate management of government technology resources.'
+  'The IM/IT standards promote consistent, appropriate management of government technology resources.'
 
 ];
 
@@ -76,7 +76,7 @@ function Policy() {
 
               <Col md={6} lg={6}>
                 <InfoCard
-                  title={'IM/IT Standards'}
+                  title={'IM/IT standards'}
                   description={descriptions[3]}
                   linkText="Read the standards"
                   linkPath={digitalCardLinks.imItStandards}

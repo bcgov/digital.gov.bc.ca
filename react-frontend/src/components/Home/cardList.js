@@ -44,12 +44,12 @@ const CardList = () => {
         `
         }
       </style>
-      <PageContainer className="cardListContainer" style={{ paddingTop: '20px' }}>
+      <PageContainer className="cardListContainer" style={{ paddingTop: '20px', paddingBottom:'20px' }}>
         <Row>
           <Col sm={12} md={6}>
             <InfoCard
               img={digitalFrameworkGrey}
-              title={'Policies and Standards'}
+              title={'Policies and standards'}
               description={descriptions[0]}
               linkText="Review policies and standards"
               routePath="policies-and-standards"
@@ -59,7 +59,7 @@ const CardList = () => {
           <Col sm={12} md={6}>
             <InfoCard
               img={coCoGrey}
-              title={'Common Components'}
+              title={'Common components'}
               description={descriptions[6]}
               linkText="Explore common components"
               routePath={'/common-components'}

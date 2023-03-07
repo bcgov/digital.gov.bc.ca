@@ -50,7 +50,7 @@ function WordPressPageDirect({id}) {
 
   return     (
     <DocumentTitle title={pageTitle+" - Digital Government - Province of British Columbia"}>
-        <PageContainer>
+        <PageContainer style={{'paddingBottom':'0'}}>
             {/* <div dangerouslySetInnerHTML={{__html: content}}></div> */}
             <div>
             <StringToJSX domString={content}></StringToJSX>
