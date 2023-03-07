@@ -47,13 +47,13 @@ const Footer = () => {
         <div style={{'overflow':'hidden'}}>
           <div style={{
                 'background': 'white',
-                'borderRadius': '52px',
+                'borderRadius': '27px',
                 'textAlign': 'center',
-                'width': '336px',
-                'margin': 'auto',
+                'width': '352px',
                 'color': '#003366',
-                'padding': '24px 20px 61px 20px',
-                'margin': '20px auto -46px'
+                'padding': '12px 20px 74px',
+                'margin': '20px auto -66px',
+                'fontSize': '14px'
           }}>
 
             Help us decide what to work on next <br/>

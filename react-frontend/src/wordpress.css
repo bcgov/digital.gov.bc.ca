@@ -2104,6 +2104,9 @@ padding-top: 20px;
 }
 
 @media only screen and (max-width: 767px){
+  .scrollspy{
+    position:static;
+  }
   .scrollspyOnThisPage{
     display:block;
   }
