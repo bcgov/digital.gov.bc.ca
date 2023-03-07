@@ -176,6 +176,20 @@ objects:
               Cache-Control "public, max-age=0, must-revalidate"
             }
           }
+          
+          handle /digital-plan* {
+            # for app
+            root * /opt/app-root/src
+            file_server 
+            encode gzip
+      
+            try_files {path} {path}/ /index-digital-plan.html
+      
+            header / {
+              # prevent any static html from being cached
+              Cache-Control "public, max-age=0, must-revalidate"
+            }
+          }
       
           log {
             output stderr
