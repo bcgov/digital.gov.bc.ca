@@ -1983,12 +1983,12 @@ padding-top: 20px;
     }
     @media screen and (max-width: 767px){  
       .fourColBanner .ant-card-body{
-        padding:24px 24px 10px 24px;
+        padding:0 !important;
       }
     }
     @media screen and (min-width: 767px){  
       .fourColBanner .ant-card-body{
-        padding:24px 0 24px 0;
+        padding:0 !important;
       }
     }
 
@@ -2067,9 +2067,11 @@ padding-top: 20px;
 }
 
 @media only screen and (min-width: 768px){
-  a.active-scrollspy{
+  li.active-scrollspy{
     background:rgb(9 109 217 / 10%) !important;
     border-left: 5px solid #003366;
+  }
+  li.active-scrollspy a{
     color:#003366 !important;
     font-weight: bold;
   }

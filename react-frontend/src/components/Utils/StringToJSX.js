@@ -4,13 +4,17 @@ import { CollapseStyled, PanelStyled } from "../StyleComponents/collapseMenu";
 import { HrefLink, HrefLinkInternal } from '../StyleComponents/htmlTags';
 import { StyleRichText } from "../StyleComponents/styledMarkdown";
 import ScrollspyNav from "../WordPress/ScrollspyNav";
+import { HrefLinkScrollTo } from '../StyleComponents/htmlTags';
 
 let getNodes = function (str) {
   return new DOMParser().parseFromString(str, "text/html").body.childNodes;
 }
 
 let createJSX = nodeArray => {
+  
   return nodeArray.map((node) => {
+    let debug = false;
+
     let attributeObj = {};
     const {
       attributes,
@@ -18,6 +22,10 @@ let createJSX = nodeArray => {
       childNodes,
       nodeValue
     } = node;
+
+    if (debug)
+      console.log('=== node: ', node);
+
     if (localName === "h1") {
       document.title = node.innerText + " - Digital Government - Province of British Columbia";
     }
@@ -43,35 +51,52 @@ let createJSX = nodeArray => {
       "CollapseStyled": CollapseStyled,
       "PanelStyled": PanelStyled,
       "StyleRichText": StyleRichText,
-      "ScrollspyNav":ScrollspyNav
+      "ScrollspyNav":ScrollspyNav,
+      "HrefLinkScrollTo":HrefLinkScrollTo
     };
-    console.log(attributeObj);
+
+    if (debug)
+      console.log('attrs: ', attributeObj);
+
     let cNodes = childNodes;
     if ("react-component" in attributeObj) {
-       // console.log(attributeObj["react-component"]);
+        // console.log(attributeObj["react-component"]);
+        if ("assign-inner-content-to-prop" in attributeObj) {
+            if (attributeObj["assign-inner-content-to-prop"] === "htmlOrMarkdown") {
+                attributeObj["htmlOrMarkdown"] = node.innerHTML;
+                cNodes = null;
+            }
+        }
+        //attributeObj["defaultActiveKey"] = ['1'];
+        // console.log(customReactNode[attributeObj["react-component"]]);
+    
+        if(attributeObj["react-component"]=="HrefLinkScrollTo"){
+          attributeObj['offset']=parseInt(attributeObj['offset']);
+          attributeObj['smooth']= (attributeObj['smooth']=='true');
+          attributeObj['spy']= (attributeObj['spy']=='true');
+        }
 
+        cNodes = cNodes && Array.isArray(Array.from(cNodes)) ?
+            createJSX(Array.from(cNodes)) : [];
+        
+        if (debug){
+          console.log('CREATING react component: ');
+          console.log(attributeObj["react-component"]);
+        }
 
-      if ("assign-inner-content-to-prop" in attributeObj) {
-      if (attributeObj["assign-inner-content-to-prop"] === "htmlOrMarkdown") {
-        attributeObj["htmlOrMarkdown"] = node.innerHTML;
-        cNodes = null;
-      }
-    }
-    //attributeObj["defaultActiveKey"] = ['1'];
-    console.log(customReactNode[attributeObj["react-component"]]);
-    cNodes = cNodes && Array.isArray(Array.from(cNodes)) ?
-    createJSX(Array.from(cNodes)) :
-    [];
-      return  React.createElement(
-        customReactNode[attributeObj["react-component"]],
-          attributeObj,
-          cNodes
-
+        return React.createElement(
+            customReactNode[attributeObj["react-component"]],
+            attributeObj,
+            cNodes
+    
         )
-
+    
     }
-    switch (localName) {
-      case "a":
+    switch (localName ) {
+      case ("a"):
+        if (debug)
+          console.log('CREATING regular  link..');
+
         if (attributeObj["href"].substring(0, 1) == "/"){
           // internal  links need to be handled differently in order for SPA experience to work, otherwise reloads the page
           return (
@@ -102,6 +127,11 @@ let createJSX = nodeArray => {
         attributeObj
       ) ;
 
+    
+
+    if (debug)
+      console.log('CREATING: ', localName);
+      
     return localName ?
       React.createElement(
         customReactNode[localName] ?? localName,

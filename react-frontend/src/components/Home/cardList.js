@@ -33,7 +33,7 @@ const descriptions = [
 const CardList = () => {
   return (
     <div>
-      <PageContainer style={{ paddingTop: '20px' }}>
+      <PageContainer style={{ paddingTop: '20px', paddingBottom:'0' }}>
         <Row>
           <Col sm={12} md={6}>
             <InfoCard

@@ -41,7 +41,11 @@ export default class ScrollspyNav extends Component {
 	 *  target sections. It highlights the nav link when scrolling to a corresponding section
 	 */
 	onScroll() {
-		// console.log('===scroll!')
+		let debug = false;
+
+	  if (debug)
+	  	console.log('===scroll!')
+
 	  let scrollSectionOffsetTop;
 	  let scrollSectionOffsetTop_link;
 	  let offset = null;
@@ -62,7 +66,8 @@ export default class ScrollspyNav extends Component {
 
       let candidates =[];
 	  this.scrollTargetIds.forEach((sectionID, index) => {
-		// console.log('====scroll target: ', sectionID, index);
+		if (debug)
+			console.log('====scroll target: ', sectionID, index);
 		if (!document.getElementById(sectionID)) {
 		  console.warn(`${SCROLLSPY_NAV_NAMESPACE}: no element with id ${sectionID} present in the DOM`);
 		  return;
@@ -83,30 +88,33 @@ export default class ScrollspyNav extends Component {
 
             // Calculate the top and left positions
             // this calculates position relative to scrollable container (typically window)
-            // console.log('targetRect.top: ', targetRect.top);
-			// console.log('linkRect.top: ', linkRect.top);
-            // console.log(' scrollingElementRect.top: ', scrollingElementRect.top);
+			if (debug){
+				console.log('targetRect.top: ', targetRect.top);
+				console.log('linkRect.top: ', linkRect.top);
+				console.log(' scrollingElementRect.top: ', scrollingElementRect.top);
+			}
 
             scrollSectionOffsetTop = targetRect.top - scrollingElementRect.top;
             scrollSectionOffsetTop_link = linkRect.top - scrollingElementRect.top;
-			// console.log('scrollSectionOffsetTop_link: ', scrollSectionOffsetTop_link);
+			if (debug)
+				console.log('scrollSectionOffsetTop_link: ', scrollSectionOffsetTop_link);
         }else{
             scrollSectionOffsetTop = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
         }
 		
-	
-		// console.log('vars: ')
-        // console.log('scrollHeight: ', scrollHeight);
-        // console.log('height: ', height);
-		// console.log('offset: ', offset)
-		// console.log('this.offset: ', this.offset)
-		// console.log('scrollSectionOffsetTop: ', scrollSectionOffsetTop)
-		// console.log(' document.getElementById(sectionID).scrollHeight: ',  document.getElementById(sectionID).scrollHeight)
-		// console.log('offset - this.offset',offset - this.offset);
-		// console.log(' scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight', scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight);
-		// console.log('isBrowser && offset - this.offset >= scrollSectionOffsetTop: ', isBrowser && offset - this.offset >= scrollSectionOffsetTop)
-		// console.log(' offset < scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight: ',  offset < scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight)
-
+		if (debug){
+			console.log('vars: ')
+			console.log('scrollHeight: ', scrollHeight);
+			console.log('height: ', height);
+			console.log('offset: ', offset)
+			console.log('this.offset: ', this.offset)
+			console.log('scrollSectionOffsetTop: ', scrollSectionOffsetTop)
+			console.log(' document.getElementById(sectionID).scrollHeight: ',  document.getElementById(sectionID).scrollHeight)
+			console.log('offset - this.offset',offset - this.offset);
+			console.log(' scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight', scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight);
+			console.log('isBrowser && offset - this.offset >= scrollSectionOffsetTop: ', isBrowser && offset - this.offset >= scrollSectionOffsetTop)
+			console.log(' offset < scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight: ',  offset < scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight)
+		}
         // highlight the last element visible in the viewport
         // if scrollSectionOffsetTop < 0, then we scrolled past it (element is outside of view, above)
         // it will be active if it's the last to meet this condition + there is no element currently in viewport
@@ -116,7 +124,16 @@ export default class ScrollspyNav extends Component {
         // }else if(scrollSectionOffsetTop>0 && scrollSectionOffsetTop<height){
         //     candidates.push(sectionID);
         // }
+		if (debug){
+			console.log('CONDITION: ');
+			console.log('targetRect.top<=linkRect.top || index==0')
+			console.log('targetRect.top: ', targetRect.top);
+			console.log('linkRect.top: ', linkRect.top);
+		}
 		if (targetRect.top<=linkRect.top || index==0){ // if it's first, it should always be a candidate
+			if(debug)
+				console.log("PICK")
+
 			candidates.push(sectionID);
 		}
 
@@ -139,59 +156,64 @@ export default class ScrollspyNav extends Component {
     //   console.log('candidates: ', candidates);
       this.scrollTargetIds.forEach((sectionID, index) => {
         if (candidates.at(-1)==sectionID){
+			if(debug)
+				console.log('add class to: ', sectionID)
             this.getNavLinkElement(sectionID).classList.add(this.activeNavClass);
         }else{
+			if(debug)
+				console.log('remove class from: ', sectionID)
+
             this.getNavLinkElement(sectionID).classList.remove(this.activeNavClass);
         }
       })
 	}
 
-    isInViewport(element,parent) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+    // isInViewport(element,parent) {
+    //     const rect = element.getBoundingClientRect();
+    //     return (
+    //         rect.top >= 0 &&
+    //         rect.left >= 0 &&
+    //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    //     );
+    // }
   
-	easeInOutQuad(current_time, start, change, duration) {
-		current_time /= duration/2;
-		if (current_time < 1) return change/2*current_time*current_time + start;
-		current_time--;
-		return -change/2 * (current_time*(current_time-2) - 1) + start;
-	};
+	// easeInOutQuad(current_time, start, change, duration) {
+	// 	current_time /= duration/2;
+	// 	if (current_time < 1) return change/2*current_time*current_time + start;
+	// 	current_time--;
+	// 	return -change/2 * (current_time*(current_time-2) - 1) + start;
+	// };
   
-	/**
-	 * Perform scroll animation with given start place, end place and duration
-	 * @param {Number} start
-	 * @param {Number} to
-	 * @param {Number} duration
-	 */
-	scrollTo(start, to, duration) {
-	  let change = to - start,
-		  currentTime = 0,
-		  increment = 10;
+	// /**
+	//  * Perform scroll animation with given start place, end place and duration
+	//  * @param {Number} start
+	//  * @param {Number} to
+	//  * @param {Number} duration
+	//  */
+	// scrollTo(start, to, duration) {
+	//   let change = to - start,
+	// 	  currentTime = 0,
+	// 	  increment = 10;
   
-	  let animateScroll = () => {
-		  currentTime += increment;
-		  let val = this.easeInOutQuad(currentTime, start, change, duration);
-		  isBrowser && window.scrollTo(0, val);
-		  if(currentTime < duration) {
-			  setTimeout(animateScroll, increment);
-		  }
-	  };
+	//   let animateScroll = () => {
+	// 	  currentTime += increment;
+	// 	  let val = this.easeInOutQuad(currentTime, start, change, duration);
+	// 	  isBrowser && window.scrollTo(0, val);
+	// 	  if(currentTime < duration) {
+	// 		  setTimeout(animateScroll, increment);
+	// 	  }
+	//   };
   
-	  animateScroll();
-	}
+	//   animateScroll();
+	// }
   
 	/**
 	 * Get the nav link element with a given sectionID that the nav link links to
 	 * @param {String} sectionID
 	 */
 	getNavLinkElement(sectionID) {
-	  return document.querySelector(`a[href='${this.hashIdentifier}${sectionID}']`);
+	  return document.querySelector(`a[href='${this.hashIdentifier}${sectionID}']`).parentElement;
 	}
   
 	/**
@@ -206,42 +228,42 @@ export default class ScrollspyNav extends Component {
 	 * Clear the highlight style on the non-current viewed nav elements
 	 * @param {String} excludeSectionID 
 	 */
-	clearOtherNavLinkActiveStyle(excludeSectionID) {
-	  this.scrollTargetIds.map((sectionID, index) => {
-		if (sectionID !== excludeSectionID) {
-		  this.getNavLinkElement(sectionID).classList.remove(this.activeNavClass);
-		}
-	  });
-	}
+	// clearOtherNavLinkActiveStyle(excludeSectionID) {
+	//   this.scrollTargetIds.map((sectionID, index) => {
+	// 	if (sectionID !== excludeSectionID) {
+	// 	  this.getNavLinkElement(sectionID).classList.remove(this.activeNavClass);
+	// 	}
+	//   });
+	// }
   
 	componentDidMount() {
-	  if (document.querySelector(`a[href='${this.homeDefaultLink}#']`)) {
-		document.querySelector(`a[href='${this.homeDefaultLink}#']`).addEventListener("click", (event) => {
-		  event.preventDefault();
-		  isBrowser && this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
-		  if (isBrowser) {
-			window.location.hash = "";
-		  }
-		});
-	  }
+	//   if (document.querySelector(`a[href='${this.homeDefaultLink}#']`)) {
+	// 	document.querySelector(`a[href='${this.homeDefaultLink}#']`).addEventListener("click", (event) => {
+	// 	  event.preventDefault();
+	// 	  isBrowser && this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
+	// 	  if (isBrowser) {
+	// 		window.location.hash = "";
+	// 	  }
+	// 	});
+	//   }
   
-	  document.querySelector("div[data-nav='list']").querySelectorAll("a").forEach( (navLink) => {
-		navLink.addEventListener("click", (event) => {
-		  event.preventDefault();
-		  let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
+	//   document.querySelector("div[data-nav='list']").querySelectorAll("a").forEach( (navLink) => {
+	// 	navLink.addEventListener("click", (event) => {
+	// 	  event.preventDefault();
+	// 	  let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
   
-		  if(sectionID) {
-			if (document.getElementById(sectionID)) {
-			  let scrollTargetPosition = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
-			  isBrowser && this.scrollTo(window.pageYOffset, scrollTargetPosition + this.offset, this.scrollDuration);
-			} else {
-			  console.warn(`${SCROLLSPY_NAV_NAMESPACE}: no element with id ${sectionID} present in the DOM`);
-			}
-		  } else {
-			isBrowser && this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
-		  }
-		});
-	  })
+	// 	  if(sectionID) {
+	// 		if (document.getElementById(sectionID)) {
+	// 		  let scrollTargetPosition = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
+	// 		  isBrowser && this.scrollTo(window.pageYOffset, scrollTargetPosition + this.offset, this.scrollDuration);
+	// 		} else {
+	// 		  console.warn(`${SCROLLSPY_NAV_NAMESPACE}: no element with id ${sectionID} present in the DOM`);
+	// 		}
+	// 	  } else {
+	// 		isBrowser && this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
+	// 	  }
+	// 	});
+	//   })
   
 	  let element = null;
 	  if (isBrowser){
