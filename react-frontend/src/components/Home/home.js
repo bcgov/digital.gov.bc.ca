@@ -53,7 +53,7 @@ function Home() {
                 display:block;
               }
             }
-            @media screen and (min-width: 767px){  
+            @media screen and (min-width: 768px){  
               .fourColBanner .ant-card-body{
                 padding:24px 0 24px 0;
               }
@@ -141,7 +141,7 @@ function Home() {
               </Col>
               <Col md={4} lg={4}>
                 <CardStyled>
-                  <Heading style={{ lineHeight: '1.2' }}>
+                  <Heading style={{ lineHeight: '1.2', 'maxWidth': '272px' }}>
                     Build Digital Trust
                   </Heading>
 

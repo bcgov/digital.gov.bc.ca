@@ -33,7 +33,18 @@ const descriptions = [
 const CardList = () => {
   return (
     <div>
-      <PageContainer style={{ paddingTop: '20px', paddingBottom:'0' }}>
+      <style>
+        {
+        `
+        @media screen and (max-width: 767px){  
+          .cardListContainer{
+            padding-bottom:0px !important;
+          }
+        }
+        `
+        }
+      </style>
+      <PageContainer className="cardListContainer" style={{ paddingTop: '20px' }}>
         <Row>
           <Col sm={12} md={6}>
             <InfoCard
