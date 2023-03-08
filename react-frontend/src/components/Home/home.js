@@ -103,7 +103,7 @@ function Home() {
           image={homeImage}
           homeButton ={true}
         />
-        <PageContainer style={{ paddingTop: '20px', paddingBottom: '0px' }}>
+        <PageContainer style={{ paddingTop: '40px', paddingBottom: '0px' }}>
           <Heading>What you need to get started</Heading>
         </PageContainer>
         {/* <div style={{ backgroundColor: '#fff' }}>
