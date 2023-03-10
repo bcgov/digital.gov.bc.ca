@@ -279,7 +279,7 @@ function Home() {
                   <p>We're connecting talented digital resources with the public service to build digital products with Sprint with Us and Code with Us.</p>
 
                   <HrefLinkStandalone
-                    href="https://digital.gov.bc.ca/digital-trust"
+                    href="https://marketplace.digital.gov.bc.ca/"
                   >
                     Post or find an opportunity
                   </HrefLinkStandalone>
