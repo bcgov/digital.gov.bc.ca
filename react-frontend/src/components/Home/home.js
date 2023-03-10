@@ -227,7 +227,7 @@ function Home() {
                 <CardStyled>
 
                   <HrefLinkStandalone
-                    href="https://digital.gov.bc.ca/digital-trust"
+                    href="https://marketplace.digital.gov.bc.ca/"
                   >
                     Post or find an opportunity
                   </HrefLinkStandalone>
