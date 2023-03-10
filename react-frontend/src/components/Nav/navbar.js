@@ -85,7 +85,7 @@ function NavBar() {
           @media screen and (min-width: 1200px){  
         
             .navBarUl{
-              display:grid;
+              display:grid !important;
               grid-template-areas:
                 "........ ........ ........ ........ headerNav1 headerNav2 headerNav3"
                 "mainNav1 mainNav2 mainNav3 mainNav4 mainNav5 mainNav6 mainNav7";
@@ -123,12 +123,12 @@ function NavBar() {
             }
           
             .headerNav1, .headerNav2, .headerNav3{
-              margin-top:-44px;
+              margin-top:-44px !important;
             }
 
             .navBarLink{
               text-align: center;
-              display: block;
+              display: block !important;
             }
           }
           `
@@ -167,25 +167,27 @@ function NavBar() {
         <NavBarContainer>
           <NavBarUl>
 
-            <NavBarLi className="mainNav1">
+            <NavBarLi className="mainNav1" >
               <NavBarLinkFirst
+                
                 to="/policies-and-standards"
                 className={
                   activePage === '/policies-and-standards' ? 'active' : 'notactive'
                 }
               >
-                Policies and Standards
+                Policies and standards
               </NavBarLinkFirst>
             </NavBarLi>
 
             <NavBarLi className="mainNav2">
               <NavBarLink
+                
                 to="/common-components"
                 className={
                   activePage === '/common-components' ? 'active' : 'notactive'
                 }
               >
-                Common Components
+                Common components
               </NavBarLink>
             </NavBarLi>
 
@@ -216,7 +218,7 @@ function NavBar() {
                   activePage === '/case-studies' ? 'active' : 'notactive'
                 }
               >
-                Case Studies
+                Case studies
               </NavBarLink>
             </NavBarLi>
 
@@ -242,7 +244,7 @@ function NavBar() {
               </NavBarLink>
             </NavBarLi>
 
-            <NavBarLi className="headerNav1">
+            <NavBarLi className="headerNav2">
               <NavBarLinkExternal href="/digital-trust">
                 Digital Trust
                 <FontAwesomeIcon
@@ -252,7 +254,7 @@ function NavBar() {
                 />
               </NavBarLinkExternal>
             </NavBarLi>
-            <NavBarLi className="headerNav2">
+            <NavBarLi className="headerNav3">
               <NavBarLinkExternal href="https://marketplace.digital.gov.bc.ca">
                 Marketplace
                 <FontAwesomeIcon
@@ -262,7 +264,7 @@ function NavBar() {
                 />
               </NavBarLinkExternal>
             </NavBarLi>
-            <NavBarLi className="headerNav3">
+            {/* <NavBarLi className="headerNav3">
               <NavBarLinkExternal href="https://digital-feedback.apps.silver.devops.gov.bc.ca">
                 Feedback 
                 <FontAwesomeIcon
@@ -271,7 +273,7 @@ function NavBar() {
                   pull="right"
                 />
               </NavBarLinkExternal>
-            </NavBarLi>
+            </NavBarLi> */}
           </NavBarUl>
         </NavBarContainer>
       </NavMain>

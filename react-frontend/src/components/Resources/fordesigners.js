@@ -31,6 +31,18 @@ function ForDesigners() {
           <ResourceLinkRow>
             <ResourcePageSubHeading>For Designers</ResourcePageSubHeading>
           </ResourceLinkRow>
+
+          <ResourceLinkRow>
+            <HrefLinkStandalone
+              target="_blank"
+              rel="noopener noreferrer"
+              href={designersUrls.AccessiblityandInclusionToolkit}
+            >
+              Accessiblity and Inclusion Toolkit
+              {linkIcon}
+            </HrefLinkStandalone>
+          </ResourceLinkRow>
+
           <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
@@ -76,6 +88,9 @@ function ForDesigners() {
               Design System {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
+          </Col>
+          
+          <Col sm={12} lg={6} style={{'paddingTop':"38px"}}>
           <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
@@ -121,16 +136,22 @@ function ForDesigners() {
               Web Style Guide {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
+          
         </Col>
-        <Col sm={12} lg={6}>
-          <ResourceCard
-            title="Video Communication Platforms"
-            description="When you can’t meet with your coworkers or clients face-to-face, communicating with them by video can be the next best thing. There are many options available for video communication platforms or tools, many of which can also be used for instant messaging or chat, screen sharing and transferring files."
-            route="guides/communication-platforms"
-            imgSrc={videoCommsImg}
-          />
-        </Col>
+        
       </Row>
+
+      {/* <Row>
+        <Col sm={12} lg={6}>
+            <ResourceCard
+              title="Video Communication Platforms"
+              description="When you can’t meet with your coworkers or clients face-to-face, communicating with them by video can be the next best thing. There are many options available for video communication platforms or tools, many of which can also be used for instant messaging or chat, screen sharing and transferring files."
+              route="guides/communication-platforms"
+              imgSrc={videoCommsImg}
+            />
+        </Col>
+      </Row> */}
+
     </ContentBlockContainer>
   );
 }

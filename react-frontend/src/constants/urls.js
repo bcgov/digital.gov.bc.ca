@@ -70,6 +70,7 @@ export const definingLinks = {
 };
 
 export const designersUrls = {
+  AccessiblityandInclusionToolkit:'https://www2.gov.bc.ca/gov/content?id=5D5C4759BC7E494AB9E8EDB7AD3D3D78',
   VisualIdentityProgram:
     'https://www2.gov.bc.ca/gov/content?id=EADC5FB4D3BE4A6DB71C35A64CFECDFC',
   CMSLiteUsersManual:

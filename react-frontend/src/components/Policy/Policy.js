@@ -20,10 +20,10 @@ const digitalFrameworkImage =
   require('../../images/pngIllustrations/digitalFrameworkWhite.png').default;
 
 const descriptions = [
-  'The Digital Code of Practice (DCOP) serves as a guide for what good digital products and services look like.',
-  'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
-  'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
-  'The IM/IT Standards promote consistent, appropriate management of government technology resources.'
+  'Learn what good digital products and services look like. Use when designing, building, buying or running technology and digital services.',
+  'Our plan has four missions to achieve the next phase of digital transformation in government. Are you ready to level up your work?',
+  'Our digital principles are set in policy. Use them to guide your day-to-day work.',
+  'The IM/IT standards promote consistent, appropriate management of government technology resources.'
 
 ];
 
@@ -33,53 +33,57 @@ function Policy() {
       <div >
         <GlobaStyleSize />
         <BannerSideImage
-          title={'Digital Policies and Standards'}
+          title={'Policies and standards'}
           content={
-            'Policies and Standards you can use to deliver excellent digital services.'
+            'Understand policies and standards so you can deliver the best possible digital services to help people.'
           }
           image={digitalFrameworkImage}
         />
         <div >
 
-          <PageContainer className="fourColBanner" style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#f2f2f2' }}>
+          <PageContainer style={{ paddingTop: '20px', paddingBottom: '15px', backgroundColor: '#f2f2f2' }}>
             <Row>
+             
               <Col md={6} lg={6}>
               <InfoCard
-                  title={'Digital Code of Practice'}
-                  description={descriptions[0]}
-                  linkText="Read the Digital Code of Practice"
-                  routePath={"/policies-and-standards/digital-code-of-practice"}
-                  height="300px"
-                />
-              </Col>
-              <Col md={6} lg={6}>
-              <InfoCard
-                  title={'Digital Framework'}
+                  title={'Digital Plan'}
                   description={descriptions[1]}
-                  linkText="Read the Framework"
-                  routePath={"/policies-and-standards/digital-framework"}
+                  linkText="Explore the Digital Plan"
+                  routePath={"/digital-plan"}
                   height="300px"
                 />
 
               </Col>
               <Col md={6} lg={6}>
               <InfoCard
-                  title={'Digital Principles'}
+                  title={'Core policy principles'}
                   description={descriptions[2]}
-                  linkText="Read the principles"
+                  linkText="Learn about the principles"
                   routePath={"/policies-and-standards/digital-principles"}
                   height="300px"
                 />
               </Col>
+
+              <Col md={6} lg={6}>
+              <InfoCard
+                  title={'Digital Code of Practice'}
+                  description={descriptions[0]}
+                  linkText="Understand the Code of Practice"
+                  routePath={"/policies-and-standards/digital-code-of-practice"}
+                  height="300px"
+                />
+              </Col>
+
               <Col md={6} lg={6}>
                 <InfoCard
-                  title={'IM/IT Standards'}
+                  title={'IM/IT standards'}
                   description={descriptions[3]}
                   linkText="Read the standards"
                   linkPath={digitalCardLinks.imItStandards}
                   height="300px"
                 />
               </Col>
+              
             </Row>
           </PageContainer>
         </div>
