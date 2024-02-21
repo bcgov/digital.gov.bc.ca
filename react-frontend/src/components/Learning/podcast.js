@@ -62,6 +62,7 @@ function Podcast() {
                       <Col xs={12} md={4}>
                         <img
                           src={strapiMediaUrl + podcast?.CoverImage?.url}
+                          alt=""
                           style={{
                             width: '100%',
                             maxHeight: '200px',

@@ -1,3 +1,4 @@
 {
-  "strapiApiUrl": "http://localhost:1337/graphql"
+  "strapiApiUrl": "http://localhost:1337/graphql",
+  "wordpressUrl": "http://localhost:8888/"
 }

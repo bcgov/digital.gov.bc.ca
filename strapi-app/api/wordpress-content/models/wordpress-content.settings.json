@@ -1,0 +1,24 @@
+{
+    "kind": "collectionType",
+    "collectionName": "wordpress_content",
+    "info": {
+      "name": "Wordpress HTML",
+      "description": ""
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "uid": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+      "HTML": {
+        "type": "text",
+        "required": true
+      }
+    }
+  }

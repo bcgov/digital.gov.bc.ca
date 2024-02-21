@@ -20,6 +20,10 @@ const BreadCrumbs = (props) => {
     });
   }, [history, props]);
 
+  useEffect(() => {
+    setPathName(location.pathname);
+  }, [pathName]);
+
   if (pathName === '/') {
     return (
       <BreadcrumbContainer>

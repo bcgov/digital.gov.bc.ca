@@ -5,6 +5,7 @@ import { Col, Row } from 'react-flexbox-grid';
 
 import { SubSubHeading } from '../StyleComponents/headings';
 import { podcastUrls } from '../../constants/urls';
+import { HrefLink } from '../StyleComponents/htmlTags';
 
 const iOSIcon = require('../../images/icons/podcastsiOS.svg').default;
 const googlePodcastIcon =
@@ -29,6 +30,7 @@ function PodcastCollapsedMenu() {
             <div style={{ display: 'inline-flex' }}>
               <div>
                 <img
+                  alt=""
                   className="podcast-icon"
                   src={iOSIcon}
                   style={{ height: '48px' }}
@@ -55,6 +57,7 @@ function PodcastCollapsedMenu() {
           <Col xs={12} lg={6}>
             <div style={{ display: 'inline-flex' }}>
               <img
+                alt=""
                 className="podcast-icon"
                 src={googlePodcastIcon}
                 style={{ height: '48px' }}
@@ -85,13 +88,17 @@ function PodcastCollapsedMenu() {
           <Col xs={10} lg={6}>
             <p>
               If using another podcast application, subscribe by visiting{' '}
-              <a
+              <HrefLink href={podcastUrls.bcDevExchangePodcast} target="_blank"
+                rel="noreferrer">
+              {podcastUrls.bcDevExchangePodcast}
+            </HrefLink> {' '}
+              {/* <a
                 href={podcastUrls.bcDevExchangePodcast}
                 target="_blank"
                 rel="noreferrer"
               >
                 {podcastUrls.bcDevExchangePodcast}
-              </a>{' '}
+              </a>{' '} */}
               and clicking the RSS icon, or entering the RSS link:{' '}
               <span className="text-blue">
                 {podcastUrls.bcDevExchangePodcast + 'rss'}

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Badge = styled.span.attrs({
   className: 'customBadge',
+  role:'listitem'
 })`
   z-index: auto;
   min-width: 20px;
@@ -22,7 +23,7 @@ export const Badge = styled.span.attrs({
 `;
 
 export const BadgeDot = styled.div.attrs({
-  className: 'badgeDot',
+  className: 'badgeDot'
 })`
   height: 14px;
   width: 14px;
@@ -34,6 +35,8 @@ export const BadgeDot = styled.div.attrs({
 
 export const BadgeWrapper = styled.div.attrs({
   className: 'badgeWrapper',
+  role:'list',
+  'aria-label':'tags'
 })`
   display: flex;
   flex-wrap: wrap;

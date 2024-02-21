@@ -20,7 +20,7 @@ const learningGrey =
 const coCoGrey = require('../../images/pngIllustrations/coCoGrey.png').default;
 
 const descriptions = [
-  'The Digital Framework provides a high level vision and some expectations for how we work and what we deliver to enable digital ways of working.',
+  'Policies and standards you can use to deliver excellent digital services.',
   'Principles to guide the day-to-day work of BC Public Servants and contractors who are designing, developing, and delivering digital services.',
   'Supports to help you create or improve a digital service.',
   'Policy, standards, guides, and tools you can use right now to deliver excellent digital services.',
@@ -38,31 +38,19 @@ const CardList = () => {
           <Col sm={12} md={6}>
             <InfoCard
               img={digitalFrameworkGrey}
-              title={'Digital Framework'}
+              title={'Policies and Standards'}
               description={descriptions[0]}
-              linkText="Read the framework"
-              routePath="/digital-framework"
+              linkText="Read about policies and standards"
+              routePath="policies-and-standards"
               height="300px"
             />
           </Col>
-          <Col sm={12} md={6}>
-            <InfoCard
-              img={digitalPrinciplesGrey}
-              title={'Digital Principles'}
-              description={descriptions[1]}
-              linkText="Read the principles"
-              routePath={'/resources/digital-principles'}
-              height="300px"
-            />
-          </Col>
-        </Row>
-        <Row>
           <Col sm={12} md={6}>
             <InfoCard
               img={coCoGrey}
               title={'Common Components'}
               description={descriptions[6]}
-              linkText="View the collection"
+              linkText="View Common Components"
               routePath={'/common-components'}
               height="300px"
             />
@@ -77,9 +65,6 @@ const CardList = () => {
               height="300px"
             />
           </Col>
-        </Row>
-
-        <Row>
           <Col sm={12} md={6}>
             <InfoCard
               img={communityGrey}

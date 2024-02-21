@@ -169,12 +169,12 @@ function NavBar() {
 
             <NavBarLi className="mainNav1">
               <NavBarLinkFirst
-                to="/digital-framework"
+                to="/policies-and-standards"
                 className={
-                  activePage === '/digital-framework' ? 'active' : 'notactive'
+                  activePage === '/policies-and-standards' ? 'active' : 'notactive'
                 }
               >
-                Digital Framework
+                Policies and Standards
               </NavBarLinkFirst>
             </NavBarLi>
 

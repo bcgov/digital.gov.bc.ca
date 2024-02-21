@@ -48,7 +48,7 @@ function CoCoBannerSideImage({
           <BannerSideImageImg
             src={coCoImage}
             onError={onError}
-            alt="CoCo Cover Image"
+            alt=""
           />
         </a>
       </Col>

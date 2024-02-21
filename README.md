@@ -1,8 +1,24 @@
-[![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+Repository Archived: Outdated Version
+=====================================
+
+Important Notice
+----------------
+
+As of 2024-02-21, this repository has been moved to read-only mode. This change has been made because the repository contains the code for an outdated version of our site/application.
+
+### Why Is This Repository Archived?
+
+-   Outdated Codebase: The code in this repository reflects an older version of our site/application and is no longer actively maintained.
+-   Avoid Confusion: To prevent any confusion with the current version, we've decided to archive this repository.
+-   Historical Reference: This repository remains available for historical reference and understanding of our development journey.
+
+### Looking for the Latest Version?
+
+If you're interested in the latest version of our site/application, please visit the new repository at: [https://github.com/bcgov/wordpress-digimod](https://github.com/bcgov/wordpress-digimod)
+
 
 # digital.gov.bc.ca
 Learn how the Government of British Columbia is building teams and using modern technology to deliver better services.
-
 
 ## Contents
 - [What's happening?](#what-is-happening-here)

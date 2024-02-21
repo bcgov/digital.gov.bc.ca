@@ -1,6 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-
+import { Switch, Route, Redirect, useLocation, useHistory } from 'react-router-dom';
 import About from '../../components/FooterPages/about';
 import BlogHome from '../../components/Blog/blogHome';
 import BlogPage from '../../components/Blog/blogPage';
@@ -23,6 +22,11 @@ import Privacy from '../../components/FooterPages/privacy';
 import Products from '../products/products';
 import Resources from '../../components/Resources/resources';
 import Saas from '../LowTouchSaas/lowTouchSaas';
+import WordPressPageDirect from '../WordPress/wordPressPageDirect';
+import WordPressStrapi from '../WordPress/wordPressStrapi';
+import Policy from '../Policy/Policy';
+
+
 
 const DisplayNames = {
   blog: 'Blog',
@@ -34,50 +38,77 @@ const DisplayNames = {
   resources: 'Resources',
   'common-components': 'Common Components',
   communities: 'Communities',
+  guides: 'Guides',
+  'digital-code-of-practice': 'Digital Code of Practice',
+  "policies-and-standards": "Policies and Standards"
 };
 
 const Routes = () => {
+  // for screen reader assistive technology:
+  // when user navigates between views, set focus on first H1
+  // this way the user gets an announcement that the page has changed
+  // see https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/ for more info
+  const location = useLocation();
+  React.useEffect(() => {
+    let h1 = document.getElementsByTagName("h1")
+    if (h1.length>0){
+      h1[0].setAttribute('tabindex',"-1")
+      h1[0].focus();
+    }
+  }, [location]);
+
   return (
     <div>
       <BreadCrumbs />
-      <Switch>
-        <Route exact path="/about" component={About} />
-        <Route exact path="/blog" component={BlogHome} />
-        <Route exact path="/blog/:uid" component={BlogPage} />
-        <Route path="/case-studies" component={CaseStudies} />
-        <Route exact path="/common-components" component={CoCos} />
-        <Route exact path="/common-components/:uid" component={CoCoPage} />
-        <Route
-          exact
-          path="/guides/communication-platforms"
-          component={CollaborationTools}
-        />
-        <Route exact path="/communities" component={Communities} />
-        <Route exact path="/communities/:uid" component={Community} />
-        <Route exact path="/copyright" component={Copyright} />
-        <Route exact path="/digital-framework" component={DigitalFramework} />
-        <Route
-          exact
-          path="/resources/digital-principles"
-          component={DigitalPrinciples}
-        />
-        <Route exact path="/disclaimer" component={Disclaimer} />
-        <Route exact path="/" component={Home} />
-        <Route
-          exact
-          path="/resources/hosting-options"
-          component={HostingOptions}
-        />
-        <Route exact path="/resources/low-touch-saas" component={Saas} />
-        <Route exact path="/learning" component={Learning} />
-        <Route exact path="/products-services" component={Products} />
-        <Route exact path="/resources" component={Resources} />
-        <Route exact path="/privacy" component={Privacy} />
-        <Route path="/standards-and-guides">
-          <NotFound standards />
-        </Route>
-        <Route component={NotFound} />
-      </Switch>
+      <div id="main-content-anchor" role="main">
+        
+        <Switch>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/blog" component={BlogHome} />
+          <Route exact path="/blog/:uid" component={BlogPage} />
+          <Route path="/case-studies" component={CaseStudies} />
+          <Route exact path="/common-components" component={CoCos} />
+          <Route exact path="/common-components/:uid" component={CoCoPage} />
+          <Route exact path="/wordpress-preview/:slug" component={WordPressPageDirect} />
+          <Route exact path="/digital-code-of-practice/">
+          <Redirect to="/policies-and-standards/digital-code-of-practice" />
+          </Route>
+          <Route exact path="/policies-and-standards/digital-code-of-practice/:slug" component={WordPressStrapi} />
+          <Route exact path="/policies-and-standards/digital-framework" component={DigitalFramework} />
+          <Route
+            exact
+            path="/policies-and-standards/digital-principles"
+            component={DigitalPrinciples}
+          />
+          <Route  path="/policies-and-standards/:slug" component={WordPressStrapi} />
+          <Route
+            exact
+            path="/guides/communication-platforms"
+            component={CollaborationTools}
+          />
+          <Route exact path="/communities" component={Communities} />
+          <Route exact path="/communities/:uid" component={Community} />
+          <Route exact path="/copyright" component={Copyright} />
+
+          <Route exact path="/disclaimer" component={Disclaimer} />
+          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/resources/hosting-options"
+            component={HostingOptions}
+          />
+          <Route exact path="/resources/low-touch-saas" component={Saas} />
+          <Route exact path="/learning" component={Learning} />
+          <Route exact path="/products-services" component={Products} />
+          <Route exact path="/resources" component={Resources} />
+          <Route exact path="/privacy" component={Privacy} />
+          <Route exact path="/policies-and-standards" component={Policy} />
+          <Route path="/standards-and-guides">
+            <NotFound standards />
+          </Route>
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     </div>
   );
 };

@@ -402,7 +402,7 @@ const EnergyAndMinesDigitalTrustContent = {
         <FlexWithGraphicRow>
           <FlexWithGraphicCol xs>
             <div className="columnWrapper bc1">
-              <img className="columnImage" src={EfficientreportingImage}></img>
+              <img className="columnImage" src={EfficientreportingImage} alt=""></img>
               <div className="columnContents">
                 <h3 className="columnTitle">
                   Efficient Reporting
@@ -417,7 +417,7 @@ const EnergyAndMinesDigitalTrustContent = {
 
           <FlexWithGraphicCol xs>
             <div className="columnWrapper bc2">
-              <img className="columnImage" src={IncreasedAccuracyImage}></img>
+              <img className="columnImage" src={IncreasedAccuracyImage} alt=""></img>
               <div className="columnContents">
                 <h3 className="columnTitle">
                   Increased Accuracy
@@ -432,7 +432,7 @@ const EnergyAndMinesDigitalTrustContent = {
 
           <FlexWithGraphicCol xs>
             <div className="columnWrapper bc3">
-              <img className="columnImage" src={ImprovedTrustImage}></img>
+              <img className="columnImage" src={ImprovedTrustImage} alt=""></img>
               <div className="columnContents">
                 <h3 className="columnTitle">
                   Improved Trust
@@ -447,7 +447,7 @@ const EnergyAndMinesDigitalTrustContent = {
 
           <FlexWithGraphicCol xs>
             <div className="columnWrapper bc4">
-              <img className="columnImage" src={PrivacyPreservingImage}></img>
+              <img className="columnImage" src={PrivacyPreservingImage} alt=""></img>
               <div className="columnContents">
                 <h3 className="columnTitle">
                   Privacy Preserving
@@ -461,7 +461,7 @@ const EnergyAndMinesDigitalTrustContent = {
 
           <FlexWithGraphicCol xs>
             <div className="columnWrapper bc5">
-              <img className="columnImage" src={MaximizedMarketsImage}></img>
+              <img className="columnImage" src={MaximizedMarketsImage} alt=""></img>
               <div className="columnContents">
                 <h3 className="columnTitle">
                   Maximized Markets
@@ -476,7 +476,7 @@ const EnergyAndMinesDigitalTrustContent = {
 
           <FlexWithGraphicCol xs>
             <div className="columnWrapper bc6">
-              <img className="columnImage" src={InnovativeTechnologyImage}></img>
+              <img className="columnImage" src={InnovativeTechnologyImage} alt=""></img>
               <div className="columnContents">
                 <h3 className="columnTitle">
                   Innovative Technology
@@ -510,7 +510,7 @@ const EnergyAndMinesDigitalTrustContent = {
             <h3>3rd Party Validation</h3>
             <div className='diagramDescContent'>
               <div className="imageWrap">
-                <img src={digramDescIcon3}></img>
+                <img src={digramDescIcon3} alt=""></img>
               </div>
               Having verified Copper Mountain's self-reported Greenhouse Gas Emissions (GHG) data,
               PricewaterhouseCoopers issues a digital credential containing GHG data.
@@ -521,7 +521,7 @@ const EnergyAndMinesDigitalTrustContent = {
             <h3>Regulatory Reporting</h3>
             <div className='diagramDescContent'>
               <div className="imageWrap">
-                <img src={digramDescIcon2}></img>
+                <img src={digramDescIcon2} alt=""></img>
               </div>
               <div>
                 Copper Mountain uses a verification statement as part of
@@ -539,7 +539,7 @@ const EnergyAndMinesDigitalTrustContent = {
             <div className='diagramDescContent'>
 
               <div className="imageWrap">
-                <img src={digramDescIcon1}></img>
+                <img src={digramDescIcon1} alt=""></img>
               </div>
               Open Earth Foundation requests GHG emissions data from Copper Mountain for inclusion on the Open Climate portal,
               a global carbon accounting platform. Copper Mountain voluntarily supplies a subset of data using their
@@ -558,22 +558,22 @@ const EnergyAndMinesDigitalTrustContent = {
               <div className='legendColumn'>
                 <b className="legendSubTitle">Digital Credentials</b>
                 <div className="legendElement">
-                  <div className="legendImage" id="legendImage1"><img src={emdtLegendGreenhouse}></img></div>
+                  <div className="legendImage" id="legendImage1"><img src={emdtLegendGreenhouse} alt=""></img></div>
                   <div className="legendText">Greenhouse Gas Emissions Report Credentials</div>
                 </div>
               </div>
               <div className='legendColumn'>
                 <b className="legendSubTitle">Digital Wallet Technology</b>
                 <div className="legendElement">
-                  <div className="legendImage legendImage2" id="legendImage3"><img src={emdtLegendTraction}></img></div>
+                  <div className="legendImage legendImage2" id="legendImage3"><img src={emdtLegendTraction} alt=""></img></div>
                   <div className="legendText2">Traction</div>
                 </div>
                 <div className="legendElement">
-                  <div className="legendImage legendImage2" id="legendImage4"><img src={emdtLegendNorthernBlock}></img></div>
+                  <div className="legendImage legendImage2" id="legendImage4"><img src={emdtLegendNorthernBlock} alt=""></img></div>
                   <div className="legendText2">Northern Block</div>
                 </div>
                 <div className="legendElement">
-                  <div className="legendImage legendImage2" id="legendImage6"><img src={emdtLegendHyperledger}></img></div>
+                  <div className="legendImage legendImage2" id="legendImage6"><img src={emdtLegendHyperledger} alt=""></img></div>
                   <div className="legendText2">ACA-Py integration</div>
                 </div>
               </div>
@@ -663,7 +663,7 @@ const EnergyAndMinesDigitalTrustContent = {
       <Col sm={12} md={6}>
         <CardContact>
           <div>
-            <ContactAvatar src={NancyNorris} />
+            <ContactAvatar src={NancyNorris} alt="Photo of Nancy Norris" />
           </div>
           <div>
             <ContactName>Nancy Norris</ContactName>
@@ -677,7 +677,7 @@ const EnergyAndMinesDigitalTrustContent = {
       <Col sm={12} md={6}>
         <CardContact>
           <div>
-            <ContactAvatar src={KyleRobinson} />
+            <ContactAvatar src={KyleRobinson}  alt="Photo of Kyle Robinson"/>
           </div>
           <div>
             <ContactName>Kyle Robinson</ContactName>
@@ -705,7 +705,7 @@ const MiningContent = {
       <Col sm={12} md={6}>
         <CardContact>
           <div>
-            <ContactAvatar src={aaron} />
+            <ContactAvatar src={aaron} alt="Photo of Aaron Unger" />
           </div>
           <div>
             <ContactName>Aaron Unger</ContactName>
@@ -719,7 +719,7 @@ const MiningContent = {
       <Col sm={12} md={6}>
         <CardContact>
           <div>
-            <ContactAvatar src={jill} />
+            <ContactAvatar src={jill} alt="Photo of Jillian Carruthers" />
           </div>
           <div>
             <ContactName>Jillian Carruthers</ContactName>
@@ -1171,7 +1171,7 @@ const OrgBookContent = {
       <Col sm={12} md={6}>
         <CardContact>
           <div>
-            <ContactAvatar src={john} />
+            <ContactAvatar src={john} alt="Photo of John Jordan" />
           </div>
           <div>
             <ContactName>John Jordan</ContactName>
