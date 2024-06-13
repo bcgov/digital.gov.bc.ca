@@ -1,0 +1,15 @@
+{
+    "name": "digital-government cypress",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+      "node": ">=14.19.1",
+      "npm": ">=6.14.16"
+    },
+    "devDependencies": {
+        "cypress-cucumber-preprocessor": "^4.3.1"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    }
+}
