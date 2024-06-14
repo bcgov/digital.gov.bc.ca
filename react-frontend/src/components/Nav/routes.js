@@ -40,7 +40,8 @@ const DisplayNames = {
   communities: 'Communities',
   guides: 'Guides',
   'digital-code-of-practice': 'Digital Code of Practice',
-  "policies-and-standards": "Policies and Standards"
+  "policies-and-standards": "Policies and Standards",
+  "wordpress-preview": "WordPress Preview"
 };
 
 const Routes = () => {
@@ -64,6 +65,8 @@ const Routes = () => {
         
         <Switch>
           <Route exact path="/about" component={About} />
+          <Route exact path="/digital-plan" component={() => <WordPressPageDirect id={'616'} />} />
+
           <Route exact path="/blog" component={BlogHome} />
           <Route exact path="/blog/:uid" component={BlogPage} />
           <Route path="/case-studies" component={CaseStudies} />

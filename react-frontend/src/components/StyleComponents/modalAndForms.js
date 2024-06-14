@@ -2,12 +2,16 @@ import styled from 'styled-components';
 
 import { Button } from 'antd';
 
-export const FormButton = styled(Button)`
+export const FormButton = styled(Button).attrs({
+  className: 'styled-form-button',
+})`
+&.styled-form-button{
   background: #39598c;
   color: #fff;
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   font-weight: 700;
-  :hover {
+}
+  &.styled-form-button:hover {
     background: #39598c;
     color: #fff;
     text-decoration: underline;
@@ -15,18 +19,29 @@ export const FormButton = styled(Button)`
   }
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.div.attrs({
+  className: 'styled-form-container',
+})`
+&.styled-form-container{
   background: #f2f2f2;
   text-align: center;
+}
 `;
 
-export const FormError = styled.p`
+export const FormError = styled.p.attrs({
+  className: 'styled-form-error',
+})`
+&.styled-form-error{
   color: red;
   font-weight: 700;
   margin-bottom: 0;
+}
 `;
 
-export const FormInputButton = styled.input`
+export const FormInputButton = styled.input.attrs({
+  className: 'styled-form-input-button',
+})`
+&.styled-form-input-button{
   background: #39598c;
   border-style: none;
   color: #fff;
@@ -36,35 +51,50 @@ export const FormInputButton = styled.input`
   height: 32px;
   margin-top: 16px;
   padding: 4px 15px 4px 15px;
-  :hover {
+}
+  &.styled-form-input-button:hover {
     background: #39598c;
     color: #fff;
     text-decoration: underline;
     opacity: 0.8;
   }
 `;
-export const FormInputTextArea = styled.textarea`
+export const FormInputTextArea = styled.textarea.attrs({
+  className: 'styled-form-input-textarea',
+})`
+&.styled-form-input-textarea{
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   height: 80px;
   margin-bottom: 16px;
   width: 100%;
+}
 `;
 
-export const FormInputText = styled.input`
+export const FormInputText = styled.input.attrs({
+  className: 'styled-form-input-text',
+})`
+&.styled-form-input-text{
   font-family: BC Sans, Noto Sans, Verdana, Arial, sans-serif;
   width: 100%;
+}
 `;
 
-export const FormText = styled.p`
+export const FormText = styled.p.attrs({
+  className: 'styled-form-text',
+})`
+&.styled-form-text{
   font-weight: 700;
+}
 `;
 
 const buttonWidth = '30px';
 const modalBottom = '24px';
 
 export const ModalButton = styled.button.attrs({
+  className: 'styled-modal-button',
   'aria-label': 'Provide feedback on this site',
 })`
+&.styled-modal-button{
   border: none;
   border-radius: 8px 0 0 8px;
   background: #003366;
@@ -74,20 +104,25 @@ export const ModalButton = styled.button.attrs({
   right: 0;
   bottom: ${modalBottom};
   z-index: 1;
-  :hover {
+}
+  &.styled-modal-button:hover {
     background: #39598c;
     color: #fff;
     opacity: 0.8;
   }
 `;
 
-export const ModalButtonClose = styled.button`
+export const ModalButtonClose = styled.button.attrs({
+  className: 'styled-modal-button-close',
+})`
+&.styled-modal-button-close{
   border: none;
   background: #f2f2f2;
   position: relative;
   top: -10px;
   right: -10px;
-  :hover {
+}
+  &.styled-modal-button-close:hover {
     background: #f2f2f2;
     color: #000;
   }

@@ -10,6 +10,7 @@ import {
   ResourceLinkRow,
 } from '../StyleComponents/htmlTags';
 import { standardsUrls } from '../../constants/urls';
+import { HrefLinkInternal } from '../StyleComponents/htmlTags';
 
 const linkIcon = (
   <FontAwesomeIcon
@@ -23,20 +24,11 @@ function Standards() {
   return (
     <ContentBlockContainer id="standards">
       <Row>
-        <Col md={12} lg={4}>
+        {/* <Col md={12} lg={4}>
           <ResourceLinkRow>
             <ResourcePageSubHeading>Technical</ResourcePageSubHeading>
           </ResourceLinkRow>
-          <ResourceLinkRow>
-            <HrefLinkStandalone
-              target="_blank"
-              rel="noopener noreferrer"
-              href={standardsUrls.AccessiblityandInclusionToolkit}
-            >
-              Accessiblity and Inclusion Toolkit
-              {linkIcon}
-            </HrefLinkStandalone>
-          </ResourceLinkRow>
+          
           <ResourceLinkRow>
             <HrefLinkStandalone
               target="_blank"
@@ -56,8 +48,9 @@ function Standards() {
               Web Standards & Guides {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
-        </Col>
-        <Col md={12} lg={4}>
+        </Col> */}
+
+        <Col md={12} lg={6}>
           <ResourceLinkRow>
             <ResourcePageSubHeading>Privacy</ResourcePageSubHeading>
           </ResourceLinkRow>
@@ -92,7 +85,8 @@ function Standards() {
             </HrefLinkStandalone>
           </ResourceLinkRow>
         </Col>
-        <Col md={12} lg={4}>
+
+        <Col md={12} lg={6}>
           <ResourceLinkRow>
             <ResourcePageSubHeading>Security</ResourcePageSubHeading>
           </ResourceLinkRow>
@@ -116,8 +110,22 @@ function Standards() {
               {linkIcon}
             </HrefLinkStandalone>
           </ResourceLinkRow>
+          <ResourceLinkRow>
+              <HrefLinkInternal
+              to={'guides/communication-platforms'}
+              style={{
+                marginRight: 'auto',
+                marginTop: 'auto',
+                width: 'fit-content',
+              }}
+            >
+              Advice about videoconferencing
+            </HrefLinkInternal>
+            </ResourceLinkRow>
         </Col>
       </Row>
+
+     
     </ContentBlockContainer>
   );
 }

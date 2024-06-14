@@ -3,8 +3,9 @@ import styled from 'styled-components';
 // Learning Page
 
 export const LearningHeaderImg = styled.img.attrs({
-  className: 'sideImage',
+  className: 'sideImage styled-learning-header-img',
 })`
+&.styled-learning-header-img{
   background: transparent;
   background-color: #f2f2f2;
   display: block;
@@ -12,11 +13,14 @@ export const LearningHeaderImg = styled.img.attrs({
   max-height: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
+}
 `;
 
 export const InlineImg = styled.img.attrs({
-  className: 'inlineImage',
+  className: 'inlineImage styled-inline-img',
 })`
+&.styled-inline-img{
   width: 90%;
   margin: 24px auto;
+}
 `;
